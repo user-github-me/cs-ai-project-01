@@ -1,4 +1,5 @@
 # Blue Impulse — AI Project Plan
+# Hardware, Networks & Behaviorist AI
 
 University team assignment for the **CS & AI** course.
 
