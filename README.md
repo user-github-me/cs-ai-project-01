@@ -12,8 +12,8 @@ University team assignment for the **CS & AI** course.
 
 | Name | Chinese name | ID | Email | Role |
 | --- | --- | --- | --- | --- |
-| Nazif | 纳齐夫 | 1820262003 | [abdullahnajif5@gmail.com](mailto:abdullahnajif5@gmail.com) | PPT and Video |
-| Tian | 刘天美 | 1820262008 | [pichanyakan@gmail.com](mailto:pichanyakan@gmail.com) | PPT and Video Lead |
+| Nazif | 纳齐夫 | 1820262003 | [abdullahnajif5@gmail.com](mailto:abdullahnajif5@gmail.com) | Visual Design |
+| Tian | 刘天美 | 1820262008 | [pichanyakan@gmail.com](mailto:pichanyakan@gmail.com) | Visual Design Lead |
 | Edzel | 黄金贤 | 1820262009 | [edzellahbodo@gmail.com](mailto:edzellahbodo@gmail.com) | Research / Content |
 | Safa | 那第武 | 1820262016 | [safa-nadeem@outlook.com](mailto:safa-nadeem@outlook.com) | Submission + Research |
 | Danial | 达尼亚 | 1820262025 | [danialkhanmay@gmail.com](mailto:danialkhanmay@gmail.com) | Research / Content |
