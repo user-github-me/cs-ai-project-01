@@ -34,3 +34,37 @@ By the end of the learning experience, learners should be able to:
 - **Apply** their knowledge to simple, everyday technology scenarios.
 - **Demonstrate** improvement through interactive exercises, repeated practice, and assessments.
 - **Learn** at their own pace through behaviorist AI that provides immediate feedback, reinforcement, and additional practice when needed.
+
+## Repository Structure
+
+```text
+cs-ai-project-01/
+├── README.md
+├── task.md
+├── content/
+│   ├── chapter-01/
+│   │   ├── README.md
+│   │   ├── draft.md
+│   │   ├── exercises.md
+│   │   └── solutions.md
+│   └── chapter-02/
+│       ├── README.md
+│       ├── draft.md
+│       ├── exercises.md
+│       └── solutions.md
+├── drafts/
+│   ├── chapter-01-outline.md
+│   ├── development-plan.md
+│   └── meeting-notes.md
+└── assets/
+    ├── images/
+    ├── diagrams/
+    └── references/
+```
+
+- [task.md](task.md): Task assignments and progress tracking.
+- [content/](content/): Study material being developed or ready for use. Repeat the chapter folder layout for each new chapter.
+- [drafts/](drafts/): Early ideas, outlines, research notes, and development plans.
+- [assets/](assets/): Images, diagrams, and reference material used in the chapters.
+
+Empty asset folders contain `.gitkeep` files so they are tracked by Git.
