@@ -47,7 +47,12 @@ cs-ai-project-01/
 │   │   ├── draft.md
 │   │   ├── exercises.md
 │   │   └── solutions.md
-│   └── chapter-02/
+│   ├── chapter-02/
+│   │   ├── README.md
+│   │   ├── draft.md
+│   │   ├── exercises.md
+│   │   └── solutions.md
+│   └── chapter-03/
 │       ├── README.md
 │       ├── draft.md
 │       ├── exercises.md
@@ -55,7 +60,7 @@ cs-ai-project-01/
 ├── drafts/
 │   ├── chapter-01-outline.md
 │   ├── development-plan.md
-│   └── meeting-notes.md
+│   ├── meeting-notes.md
 │   └── presentations/
 └── assets/
     ├── images/
