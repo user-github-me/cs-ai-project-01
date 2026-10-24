@@ -61,11 +61,16 @@ cs-ai-project-01/
 │   ├── chapter-01-outline.md
 │   ├── development-plan.md
 │   ├── meeting-notes.md
-│   └── presentations/
+│   
 └── assets/
     ├── images/
     ├── diagrams/
-    └── references/
+    ├──references/
+    └── presentation/
+        └──visual-concept/
+            └──visual-concept/
+                ├──1.png
+                └──2.png
 ```
 
 - [task.md](task.md): Task assignments and progress tracking.
