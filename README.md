@@ -41,6 +41,12 @@ By the end of the learning experience, learners should be able to:
 cs-ai-project-01/
 ├── README.md
 ├── task.md
+├── Personal_logs/
+│   ├── Personal_Logs_DANIAL.md
+│   ├── Personal_Logs_EDZEL.md
+│   ├── Personal_Logs_NAZIF.md
+│   ├── Personal_Logs_SAFA.md
+│   └── Personal_Logs_TIAN.md
 ├── content/
 │   ├── chapter-01/
 │   │   ├── README.md
@@ -61,10 +67,14 @@ cs-ai-project-01/
 │   ├── chapter-01-outline.md
 │   ├── development-plan.md
 │   ├── meeting-notes.md
+│   ├── Content_Outline.md
+│   ├── Learning Goals.md
+│   └── Learning Methods.md
 │   
 └── assets/
     ├── images/
     ├── diagrams/
+    │   └── Flowchart.png
     ├──references/
     └── presentation/
         └──visual-concept/
