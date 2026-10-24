@@ -56,6 +56,7 @@ cs-ai-project-01/
 │   ├── chapter-01-outline.md
 │   ├── development-plan.md
 │   └── meeting-notes.md
+│   └── presentations/
 └── assets/
     ├── images/
     ├── diagrams/
