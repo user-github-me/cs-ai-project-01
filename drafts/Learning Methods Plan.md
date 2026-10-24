@@ -1,4 +1,4 @@
-Teaching Methods and Study Material Execution Plan
+# Teaching Methods and Study Material Execution Plan
 1. Chapter Structure for Study Material
 Every chapter in our study material follows a simple, fixed 4-step structure to keep learning clear, visual, and easy to follow:
 Step 1: Brief Explanation - Provide a short, simple explanation of the concept using plain text. Avoid long paragraphs or overly complex technical words.
