@@ -1,57 +1,12 @@
-PERSONAL
- 
-LEARNING
- 
-AND
- 
-WORK
- 
-LOG
+* PERSONAL LEARNING AND WORK LOG
  
 Name:  Edzel  黄 金 贤  Student  ID:  1820262009  Team  Name:  BlueImpulse  Project  Title:  Hardware,  Networks  &  Behaviourist  AI  Course:  Computer  Science  and  Artificial  Intelligence  Instructor:  赵 丰 年 /Randy  Reporting  Period:  October  21st,  2026  to  October  24th,  2026.   Activity  and  Purpose  I  worked  on  the  Team  Project  Log  from  beginning  to  end,  making  the  Project  Log  File,  and  
-contributing
+contributing during the team's project activities+meeting summaries.
  
-during
- 
-the
- 
-team's
- 
-project
- 
-activities+meeting
- 
-summaries.
- 
-I
- 
-also
- 
-participated
- 
-in
- 
-the
- 
-second
- 
-team
- 
-meeting
- 
-held
- 
-on
- 
-October
- 
-21,
- 
-2026.
+  I also participated in the second team meeting held on October 21, 2026.
+  
   Personal  Contribution  I  was  responsible  for  preparing  and  completing  the  Project  Log,  ensuring  that  the  documented  
-activities
- 
-and
+activities and
  
 decisions
  
