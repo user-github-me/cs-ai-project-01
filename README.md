@@ -41,6 +41,12 @@ By the end of the learning experience, learners should be able to:
 cs-ai-project-01/
 ├── README.md
 ├── task.md
+├── Personal_logs/
+│   ├── Personal_Logs_DANIAL.md
+│   ├── Personal_Logs_EDZEL.md
+│   ├── Personal_Logs_NAZIF.md
+│   ├── Personal_Logs_SAFA.md
+│   └── Personal_Logs_TIAN.md
 ├── content/
 │   ├── chapter-01/
 │   │   ├── README.md
@@ -61,11 +67,29 @@ cs-ai-project-01/
 │   ├── chapter-01-outline.md
 │   ├── development-plan.md
 │   ├── meeting-notes.md
-│   └── presentations/
+│   ├── Content_Outline.md
+│   ├── Learning Goals.md
+│   ├── Learning Methods.md
+│   ├── Meetings_and_Rehersals.md
+│   ├── Members_strengths.md
+│   ├── Responsibilities.md
+│   ├── Scope_Boundaries.md
+│   ├── Target audience.md
+│   ├── chapter-01-outline.md
+│   ├── development-plan.md
+│   ├── meeting-notes.md
+│   └── use-of-github.md
+│   
 └── assets/
     ├── images/
     ├── diagrams/
-    └── references/
+    │   └── Flowchart.png
+    ├── references/
+    └── presentation/
+        └── visual-concept/
+            └── visual-concept/
+                ├── 1.png
+                └── 2.png
 ```
 
 - [task.md](task.md): Task assignments and progress tracking.
