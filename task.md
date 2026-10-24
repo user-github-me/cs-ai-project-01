@@ -25,8 +25,8 @@
 - [ ] Submit a self-contributed package
   -	Name it BlueImpulse_Stage1_GitHub_Markdown_V1.zip
     -	Item: Submission Report (Word or PDF)
-    -	Markdown source files: README.md and all currrent files in the folder structure
-    -	Readable content copy (PDF) of thr study material.
+    -	Markdown source files: README.md and all current files in the folder structure
+    -	Readable content copy (PDF) of the study material.
    	-	Include AI use and project log
 
 ## Project log and meeting summaries:
