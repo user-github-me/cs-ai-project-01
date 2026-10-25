@@ -12,17 +12,17 @@
 ## GitHub:
 - [X] All members join the GitHub repository
 - [X] Insert information on README.md
-- [ ] Organize folders: content/, drafts/, assets/, logs/
+- [X] Organize folders: content/, drafts/, assets/, logs/
 - [ ] Pull requests (optional)
-- [ ] Draft the module outline (at least one chapter)
-- [ ] Write substantive markdown content:
+- [X] Draft the module outline (at least one chapter)
+- [X] Write substantive markdown content:
   -	Terminology
   -	Example and demonstration
   -	Explanation
   -	Activity
   -	Expected outcome
   -	Reference
-- [ ] Submit a self-contributed package
+- [X] Submit a self-contributed package
   -	Name it BlueImpulse_Stage1_GitHub_Markdown_V1.zip
     -	Item: Submission Report (Word or PDF)
     -	Markdown source files: README.md and all current files in the folder structure
@@ -38,10 +38,12 @@
 
 ## Personal Learning and Work log (done individually)
 
-## Live Status Report (Class presentation)
+## Live Status Report (Class presentation) Due 30th Oct
 - [ ] Update current progress: what has been developed, what remains unfinished
 - [ ] Identify project direction
 - [ ] Demonstrate representative examples: diagram, worked example, or learner activity
 - [ ] Identify difficulties or weakness
 - [ ] Include Stage2 priorities
 - [ ] PPT
+
+# Stage 2 Task lists
