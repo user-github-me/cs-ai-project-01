@@ -96,5 +96,6 @@ cs-ai-project-01/
 - [content/](content/): Study material being developed or ready for use. Repeat the chapter folder layout for each new chapter.
 - [drafts/](drafts/): Early ideas, outlines, research notes, and development plans.
 - [assets/](assets/): Images, diagrams, and reference material used in the chapters.
+- [Personal_Logs/](Personal_Logs/): Individually written contributions by each of the Blue Impulse member
 
 Empty asset folders contain `.gitkeep` files so they are tracked by Git.
