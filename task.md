@@ -7,7 +7,7 @@
 - [X] Describe the target audience
 - [X] List contents, chapters, topics, and lessons of the study material
 - [X] Mention the use of AI and GitHub
-- [ ] Plan out the designs
+- [X] Plan out the designs
 
 ## GitHub:
 - [X] All members join the GitHub repository
@@ -39,11 +39,11 @@
 ## Personal Learning and Work log (done individually)
 
 ## Live Status Report (Class presentation) Due 30th Oct
-- [ ] Update current progress: what has been developed, what remains unfinished
-- [ ] Identify project direction
-- [ ] Demonstrate representative examples: diagram, worked example, or learner activity
-- [ ] Identify difficulties or weakness
-- [ ] Include Stage2 priorities
-- [ ] PPT
+- [X] Update current progress: what has been developed, what remains unfinished
+- [X] Identify project direction
+- [X] Demonstrate representative examples: diagram, worked example, or learner activity
+- [X] Identify difficulties or weakness
+- [X] Include Stage2 priorities
+- [X] PPT
 
 # Stage 2 Task lists
