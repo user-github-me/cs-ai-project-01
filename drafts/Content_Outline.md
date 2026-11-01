@@ -1,11 +1,18 @@
 # Content:
 ## Content outline:
-A)	Quick recap – What behaviorism is
-i)	Observable responses to stimuli
-ii)	Behavior robotics
+A)	Intro—An overview
+i)	Number systems (such as binary systems)
+ii) Data storage(number, text, images, audio, video, etc.)
+iii) Von Neuman model
+iv) Computer hardware components
+v) Program execution (how components work together to accomplish tasks)
+vi) A simple computer
 
-B)	Definition of Behaviorist AI
+B)	Introduction to Behaviorist AI
 i)	Intelligence advancing due to sensory input, not creating complex models of the world
+iii)	Basics of Reinforcement Learning
+iv)	RL Algorithms and Techniques
+v)	Markov Decision Processes (MDPs)
 
 C)	Core hardware requirements:
 i)	Input hardware
