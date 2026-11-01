@@ -41,15 +41,18 @@ By the end of the learning experience, learners should be able to:
 cs-ai-project-01/
 ├── README.md
 ├── task.md
+├── Learning and Development/
+│   └── .gitkeep
 ├── Personal_logs/
-│   ├── Personal_Logs_DANIAL.md
-│   ├── Personal_Logs_EDZEL.md
-│   ├── Personal_Logs_NAZIF.md
-│   ├── Personal_Logs_SAFA.md
-│   └── Personal_Logs_TIAN.md
+│   ├── Personal_logs_Danial.md
+│   ├── Personal_logs_EDZEL.md
+│   ├── Personal_logs_NAZIF.md
+│   ├── Personal_logs_SAFA.md
+│   └── Personal_logs_TIAN.md
 ├── content/
 │   ├── chapter-01/
 │   │   ├── README.md
+│   │   ├── Chapter-01-sample.md
 │   │   ├── draft.md
 │   │   ├── exercises.md
 │   │   └── solutions.md
@@ -64,38 +67,40 @@ cs-ai-project-01/
 │       ├── exercises.md
 │       └── solutions.md
 ├── drafts/
-│   ├── chapter-01-outline.md
-│   ├── development-plan.md
-│   ├── meeting-notes.md
-│   ├── Content_Outline.md
-│   ├── Learning Goals.md
-│   ├── Learning Methods.md
-│   ├── Meetings_and_Rehersals.md
-│   ├── Members_strengths.md
-│   ├── Responsibilities.md
-│   ├── Scope_Boundaries.md
-│   ├── Target audience.md
-│   ├── chapter-01-outline.md
-│   ├── development-plan.md
-│   ├── meeting-notes.md
-│   └── use-of-github.md
-│   
+│   ├── Learning Methods Plan.docx
+│   └── stage 1/
+│       ├── Content_Outline.md
+│       ├── Learning Goal.md
+│       ├── Learning_methods.md
+│       ├── Meetings_and_Rehearsals.md
+│       ├── Members_strengths.md
+│       ├── Responsibilities.md
+│       ├── Scope_Boundaries.md
+│       ├── Target audience.md
+│       ├── development-plan.md
+│       ├── meeting-notes.md
+│       ├── significance-use-of-AI.md
+│       └── use-of-github.md
 └── assets/
     ├── images/
     ├── diagrams/
     │   └── Flowchart.png
     ├── references/
-    └── presentation/
+    └── presentations/
+        ├── live-status/
+        ├── slides-draft/
+        │   └── BlueImpulse_Stage1_StatusReport.pptx
         └── visual-concept/
-            └── visual-concept/
-                ├── 1.png
-                └── 2.png
+            ├── blueim1.png
+            └── blueim2.png
 ```
 
 - [task.md](task.md): Task assignments and progress tracking.
+- [Learning and Development/](Learning%20and%20Development/): Shared learning and development materials.
 - [content/](content/): Study material being developed or ready for use. Repeat the chapter folder layout for each new chapter.
-- [drafts/](drafts/): Early ideas, outlines, research notes, and development plans.
+- [drafts/](drafts/): Early ideas, outlines, research notes, and development plans. Stage 1 Markdown files are in [drafts/stage 1/](drafts/stage%201/).
 - [assets/](assets/): Images, diagrams, and reference material used in the chapters.
-- [Personal_Logs/](Personal_Logs/): Individually written contributions by each of the Blue Impulse member
+- [assets/presentations/slides-draft/](assets/presentations/slides-draft/): Draft presentations, including the [Blue Impulse Stage 1 status-report template](assets/presentations/slides-draft/BlueImpulse_Stage1_StatusReport.pptx). The template contains placeholders for the team to complete.
+- [Personal_logs/](Personal_logs/): Individual learning and work logs for each Blue Impulse member.
 
-Empty asset folders contain `.gitkeep` files so they are tracked by Git.
+Empty folders contain `.gitkeep` files so they are tracked by Git.
