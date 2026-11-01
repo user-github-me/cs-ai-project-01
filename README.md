@@ -87,7 +87,7 @@ cs-ai-project-01/
     │   └── Flowchart.png
     ├── references/
     └── presentations/
-        ├── live-status/
+        ├── final-presentation/
         ├── slides-draft/
         │   └── BlueImpulse_Stage1_StatusReport.pptx
         └── visual-concept/
