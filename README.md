@@ -89,7 +89,12 @@ cs-ai-project-01/
     └── presentations/
         ├── final-presentation/
         ├── slides-draft/
-        │   └── BlueImpulse_Stage1_StatusReport.pptx
+        │   ├── BlueImpulse_Stage1_StatusReport.pptx
+        │   ├── BlueImpulse_Stage2_Sojourner.pptx
+        │   ├── BlueImpulse_Stage2_Sojourner.pdf
+        │   ├── BlueImpulse_Stage2_Overview.jpg
+        │   ├── stage2-slide-outline.md
+        │   └── stage2-sojourner/
         └── visual-concept/
             ├── blueim1.png
             └── blueim2.png
@@ -101,6 +106,7 @@ cs-ai-project-01/
 - [drafts/](drafts/): Early ideas, outlines, research notes, and development plans. Stage 1 Markdown files are in [drafts/stage 1/](drafts/stage%201/).
 - [assets/](assets/): Images, diagrams, and reference material used in the chapters.
 - [assets/presentations/slides-draft/](assets/presentations/slides-draft/): Draft presentations, including the [Blue Impulse Stage 1 status-report template](assets/presentations/slides-draft/BlueImpulse_Stage1_StatusReport.pptx). The template contains placeholders for the team to complete.
+- [Stage 2 Sojourner slide draft](assets/presentations/slides-draft/stage2-sojourner/README.md): Editable PowerPoint, PDF preview, artwork and source for the retro Mars presentation. Detailed content remains blank according to the team's outline.
 - [Personal_logs/](Personal_logs/): Individual learning and work logs for each Blue Impulse member.
 
 Empty folders contain `.gitkeep` files so they are tracked by Git.

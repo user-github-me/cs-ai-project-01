@@ -1,0 +1,224 @@
+[
+  {
+    "number": 1,
+    "topic": "Blue Impulse",
+    "transition": "fade",
+    "notes": "Opening title. The rocket is an original illustration; the planets are NASA photographs."
+  },
+  {
+    "number": 2,
+    "topic": "Meet Sojourner",
+    "transition": "morph",
+    "notes": "Introduce Sojourner and its connection to the three chapter topics. Leave detailed claims for the next content pass."
+  },
+  {
+    "number": 3,
+    "topic": "LEAVING EARTH",
+    "transition": "fade",
+    "notes": "Symbolic rocket journey, not a historical reconstruction of Pathfinder. Sojourner did not return to Earth. Advance through the adjacent slides in desktop PowerPoint to play the matched-object Morph movement."
+  },
+  {
+    "number": 4,
+    "topic": "NEXT STOP: MARS",
+    "transition": "morph",
+    "notes": "Symbolic rocket journey, not a historical reconstruction of Pathfinder. Sojourner did not return to Earth. Advance through the adjacent slides in desktop PowerPoint to play the matched-object Morph movement."
+  },
+  {
+    "number": 5,
+    "topic": "TOUCHDOWN",
+    "transition": "morph",
+    "notes": "Symbolic rocket journey, not a historical reconstruction of Pathfinder. Sojourner did not return to Earth. Advance through the adjacent slides in desktop PowerPoint to play the matched-object Morph movement."
+  },
+  {
+    "number": 6,
+    "topic": "01 / HARDWARE",
+    "transition": "fade",
+    "notes": "Chapter divider. No explanatory content is included."
+  },
+  {
+    "number": 7,
+    "topic": "Sojourner overall body",
+    "transition": "morph",
+    "notes": "Leave the lower-left text area empty for the team to add content."
+  },
+  {
+    "number": 8,
+    "topic": "Information collection",
+    "transition": "morph",
+    "notes": "Leave the lower-left text area empty for the team to add content."
+  },
+  {
+    "number": 9,
+    "topic": "The lander",
+    "transition": "morph",
+    "notes": "Leave the lower-left text area empty for the team to add content."
+  },
+  {
+    "number": 10,
+    "topic": "Lander hardware",
+    "transition": "morph",
+    "notes": "The three instrument headings come directly from the outline. Do not add specifications yet."
+  },
+  {
+    "number": 11,
+    "topic": "Cameras",
+    "transition": "morph",
+    "notes": "Leave the lower-left text area empty for the team to add content."
+  },
+  {
+    "number": 12,
+    "topic": "The rear: APXS",
+    "transition": "morph",
+    "notes": "Leave the lower-left text area empty for the team to add content."
+  },
+  {
+    "number": 13,
+    "topic": "Wheels and wheel abrasion experiment",
+    "transition": "morph",
+    "notes": "Leave the lower-left text area empty for the team to add content."
+  },
+  {
+    "number": 14,
+    "topic": "Antenna and UHF radio",
+    "transition": "morph",
+    "notes": "Leave the lower-left text area empty for the team to add content."
+  },
+  {
+    "number": 15,
+    "topic": "02 / NETWORKS",
+    "transition": "fade",
+    "notes": "Chapter divider. No explanatory content is included."
+  },
+  {
+    "number": 16,
+    "topic": "Communication path",
+    "transition": "fade",
+    "notes": "Communication-path structure only. Future explanatory text belongs in the notes or the blank area, at 28 pt or larger."
+  },
+  {
+    "number": 17,
+    "topic": "Earth to Sojourner (1)",
+    "transition": "morph",
+    "notes": "Part 1 of a two-slide communication sequence. The moving point is a visual cue only; add transmission details later."
+  },
+  {
+    "number": 18,
+    "topic": "Earth to Sojourner (2)",
+    "transition": "morph",
+    "notes": "Part 2 of a two-slide communication sequence. The moving point is a visual cue only; add transmission details later."
+  },
+  {
+    "number": 19,
+    "topic": "Sojourner to Earth (1)",
+    "transition": "morph",
+    "notes": "Part 1 of a two-slide communication sequence. The moving point is a visual cue only; add transmission details later."
+  },
+  {
+    "number": 20,
+    "topic": "Sojourner to Earth (2)",
+    "transition": "morph",
+    "notes": "Part 2 of a two-slide communication sequence. The moving point is a visual cue only; add transmission details later."
+  },
+  {
+    "number": 21,
+    "topic": "UHF radio link",
+    "transition": "morph",
+    "notes": "Leave the lower-left text area empty for the team to add content."
+  },
+  {
+    "number": 22,
+    "topic": "Half-duplex",
+    "transition": "morph",
+    "notes": "Two directional visual lanes. Leave detailed explanation blank."
+  },
+  {
+    "number": 23,
+    "topic": "Heartbeat and communication checks",
+    "transition": "morph",
+    "notes": "Heartbeat motif only. The intended checks and details remain to be added."
+  },
+  {
+    "number": 24,
+    "topic": "Communication limitations",
+    "transition": "morph",
+    "notes": "Leave the lower-left text area empty for the team to add content."
+  },
+  {
+    "number": 25,
+    "topic": "How Sojourner made decisions",
+    "transition": "morph",
+    "notes": "Transition into the behaviorist-AI discussion. Do not assert that Sojourner used reinforcement learning."
+  },
+  {
+    "number": 26,
+    "topic": "03 / BEHAVIORIST AI",
+    "transition": "fade",
+    "notes": "Chapter divider. No explanatory content is included."
+  },
+  {
+    "number": 27,
+    "topic": "Can Sojourner be an example for behaviorist AI?",
+    "transition": "fade",
+    "notes": "This is deliberately a question, not an assertion that Sojourner learned using reinforcement learning."
+  },
+  {
+    "number": 28,
+    "topic": "Safa vs Nazif",
+    "transition": "fade",
+    "notes": "Introduce Safa and Nazif’s argument, points and claims. The two text areas are intentionally empty. No position has been invented for either person."
+  },
+  {
+    "number": 29,
+    "topic": "Stimulus and response (1)",
+    "transition": "morph",
+    "notes": "Leave the stimulus and response examples blank for the content pass."
+  },
+  {
+    "number": 30,
+    "topic": "Stimulus and response (2)",
+    "transition": "morph",
+    "notes": "Leave the stimulus and response examples blank for the content pass."
+  },
+  {
+    "number": 31,
+    "topic": "Rover behavior video",
+    "transition": "fade",
+    "notes": "Video placeholder only. No video has been fabricated or embedded. Replace the empty video frame with the selected real rover clip."
+  },
+  {
+    "number": 32,
+    "topic": "Comparison with Curiosity and Perseverance",
+    "transition": "fade",
+    "notes": "Comparison headings only. The right-side NASA photo shows engineering models of Curiosity and Perseverance, not Sojourner. Do not add comparative claims yet."
+  },
+  {
+    "number": 33,
+    "topic": "How everything comes together",
+    "transition": "fade",
+    "notes": "Structural integration diagram: Input → Process → Output, with Networking and Decision Making. The arrows are organisational scaffolding, not a detailed architecture."
+  },
+  {
+    "number": 34,
+    "topic": "Game",
+    "transition": "fade",
+    "notes": "Intentionally blank game slide. Add the game only after its content is agreed."
+  },
+  {
+    "number": 35,
+    "topic": "HOMEWARD BOUND",
+    "transition": "fade",
+    "notes": "Symbolic rocket journey, not a historical reconstruction of Pathfinder. Sojourner did not return to Earth. Advance through the adjacent slides in desktop PowerPoint to play the matched-object Morph movement."
+  },
+  {
+    "number": 36,
+    "topic": "BACK TO EARTH",
+    "transition": "morph",
+    "notes": "Symbolic rocket journey, not a historical reconstruction of Pathfinder. Sojourner did not return to Earth. Advance through the adjacent slides in desktop PowerPoint to play the matched-object Morph movement."
+  },
+  {
+    "number": 37,
+    "topic": "Thank you",
+    "transition": "morph",
+    "notes": "Closing slide. The return rocket is a storytelling device; Sojourner remained on Mars."
+  }
+]

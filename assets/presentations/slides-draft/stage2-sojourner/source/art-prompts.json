@@ -1,0 +1,25 @@
+{
+  "attempted_engine": "neoimg / Azure gpt-image-2",
+  "generation_result": "All three requests returned Azure HTTP 401. No AI-generated images were produced or used.",
+  "actual_artwork": "NASA photography; original deterministic liquid-ink texture and starfield; original SVG rocket; manually traced Sojourner cutout. See prepare_art.py.",
+  "reference_roles": {
+    "Image 1": "Colour palette only",
+    "Image 2": "Retro Mars collage, grain and dramatic scale",
+    "Image 3": "Flowing, psychedelic colour ribbons",
+    "Image 4": "Cinematic composition and large type layered with a foreground subject"
+  },
+  "prompts": [
+    {
+      "file": "mars-landscape.png",
+      "prompt": "Use case: stylized-concept. Asset type: text-free 16:9 background for a cinematic retro space-program PowerPoint. Create an original 1970s Mars expedition poster landscape, rich photographic collage meets hand-airbrushed screenprint. A sweeping low ridge of rocky burnt-orange Martian dunes occupies ONLY the bottom quarter of the frame, with a few tactile foreground rocks at the bottom-right edge. Above it, a vast nearly black aubergine starfield fills three quarters of the image, with very sparse tiny stars, plenty of quiet negative space for large cream type. Warm terracotta, fiery orange #E94E00, golden amber #FBB32A, dusty rose #B34566, deep plum #3C0042 and almost-black #1C0421. Subtle analog paper grain and halation, rich dark shadows, beautiful warm grazing light on the terrain. Atmospheric, editorial, bold and sophisticated, not cartoon corporate illustration. No planet in the sky, no rover, no rocket, no people, no text, no letters, no logos, no border, no watermark. Keep the central and upper-left sky dark and uncluttered. Landscape widescreen 16:9."
+    },
+    {
+      "file": "molten-ribbons.png",
+      "prompt": "Use case: stylized-concept. Asset type: original text-free 16:9 retro psychedelic texture for a space presentation. Dramatic liquid-marble ribbons like a melted 1970s Mars travel poster: long sweeping bands of fiery orange #E94E00, golden ochre #FBB32A, dusty coral #C76160, muted magenta #B34566, cream #F4C394, and deep violet #3C0042, surrounded by nearly black aubergine #1C0421. The colourful flow curls around the RIGHT half and bottom edge, leaving the LEFT half and upper-left region a calm almost-black plum field for large cream headlines. Striated analog ink texture, fine paper grain, flowing organic distortion, richly tactile, purposeful large gestures, very high contrast. Sophisticated experimental editorial art with a cosmic 1970s feel. Not smooth corporate gradients, not corporate abstract vector art. No text, letters, planets, faces, logos or watermark. Widescreen 16:9 composition."
+    },
+    {
+      "file": "rocket-green.png",
+      "prompt": "Use case: stylized-concept. Asset type: isolated retro rocket cutout to animate between presentation slides. One elegant vintage space-program rocket, pointing straight UP, completely visible with generous space around its fins and exhaust. Long ivory-white brushed-metal fuselage, rounded red-orange nose cone, three red-orange tail fins, a single small dark plum circular porthole with a thin brass rim, a restrained golden-orange exhaust plume. 1960s/1970s science-fiction travel-poster airbrush painting with beautiful dimensional shading and subtle grain, clean decisive silhouette, premium editorial collage aesthetic. No insignia, no writing, no logos, no letters. Place the entire rocket on a perfectly flat uniform bright chroma-key green background #00FF00, no gradient and no shadow on the background. Absolutely no green anywhere on the rocket itself. Rocket fills 85 percent of the height and about 45 percent of the width. Single isolated subject, no scenery, no stars."
+    }
+  ]
+}

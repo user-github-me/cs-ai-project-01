@@ -20,3 +20,13 @@ What I did:
 ## Difficulties:
 
 - My contribution initially did not appear in GitHub's Contributors list because the commit email was not linked to my account. This was resolved by correcting the commit email and configuring the repository so future contributions would be credited to me.
+
+## STAGE 2
+
+### Presentation design — 3 November 2026
+
+- I used Neogpt to turn the team's Stage 2 slide outline and visual references into an editable 37-slide Sojourner presentation draft.
+- I followed the retro space and Mars direction, using warm orange, magenta, plum and cream, with Horizon titles and Quicksand text at 28 pt or larger.
+- I added NASA rover and planet imagery, a rocket journey, and Morph transitions for the presentation's movement.
+- I kept detailed explanations, the debate claims, video and game content empty, as requested in the outline, so the team can add them later.
+- I saved the PowerPoint, preview and editable design source in `assets/presentations/slides-draft/` and recorded the artwork sources and AI assistance.

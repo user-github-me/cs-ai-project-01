@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1440" viewBox="0 0 720 1440">
+<defs><linearGradient id="body"><stop stop-color="#B88062"/><stop offset=".3" stop-color="#F8DFBD"/><stop offset=".5" stop-color="#FFF0D4"/><stop offset=".72" stop-color="#E7B17C"/><stop offset="1" stop-color="#9B4C37"/></linearGradient>
+<linearGradient id="fin"><stop stop-color="#F47524"/><stop offset=".5" stop-color="#D54113"/><stop offset="1" stop-color="#7D0101"/></linearGradient>
+<linearGradient id="flame" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#FFF5D4"/><stop offset=".25" stop-color="#FBB32A"/><stop offset=".6" stop-color="#E94E00"/><stop offset="1" stop-color="#B34566" stop-opacity="0"/></linearGradient></defs>
+<path d="M290 1002 C238 1120 305 1287 358 1422 C414 1300 486 1126 430 1002 Z" fill="url(#flame)"/>
+<path d="M330 1012 C297 1125 327 1233 360 1307 C390 1215 424 1098 390 1012 Z" fill="#FFF0BE" opacity=".85"/>
+<path d="M265 642 C154 746 133 874 129 1014 L283 918 Z" fill="url(#fin)" stroke="#4F1722" stroke-width="8"/>
+<path d="M455 642 C566 746 587 874 591 1014 L437 918 Z" fill="url(#fin)" stroke="#4F1722" stroke-width="8"/>
+<path d="M360 43 C255 204 243 351 247 673 L271 966 Q360 1007 449 966 L473 673 C477 351 465 204 360 43 Z" fill="url(#body)" stroke="#4F1722" stroke-width="8"/>
+<path d="M360 43 C305 128 278 196 263 274 Q360 304 457 274 C442 196 415 128 360 43 Z" fill="url(#fin)"/>
+<path d="M281 356 Q295 272 321 220" fill="none" stroke="#FFF2DA" stroke-width="12" stroke-linecap="round" opacity=".7"/>
+<circle cx="360" cy="442" r="77" fill="#A9602D" stroke="#542519" stroke-width="7"/><circle cx="360" cy="442" r="59" fill="#24122F"/>
+<path d="M323 438 Q328 407 355 405" stroke="#C76160" stroke-width="10" fill="none" stroke-linecap="round"/>
+<path d="M262 841 Q360 871 458 841 L453 899 Q360 935 267 899 Z" fill="#B34566"/>
+<path d="M278 957 Q360 983 442 957 L428 1017 Q360 1034 292 1017 Z" fill="#371525" stroke="#4F1722" stroke-width="6"/>
+<path d="M350 774 L360 1130 L385 911 L368 767 Z" fill="#E94E00" stroke="#7D0101" stroke-width="5"/>
+</svg>
