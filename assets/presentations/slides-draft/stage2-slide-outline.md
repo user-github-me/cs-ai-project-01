@@ -7,7 +7,7 @@ I'll give the reference
 
 - font: Bernoru/Horizon for title, Quicksand for text, 
 text must be 28pt size ++ cuz the prof said
-❌❌❌NO CORPORATE ART❌❌❌
+- ❌❌❌NO CORPORATE ART❌❌❌
 
 - structure: DO NOT PUT ANY INFO DETAIL YET
 - *sojourner main focus
