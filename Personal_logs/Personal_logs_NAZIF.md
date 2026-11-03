@@ -30,3 +30,7 @@ What I did:
 - I added NASA rover and planet imagery, a rocket journey, and Morph transitions for the presentation's movement.
 - I kept detailed explanations, the debate claims, video and game content empty, as requested in the outline, so the team can add them later.
 - I saved the PowerPoint, preview and editable design source in `assets/presentations/slides-draft/` and recorded the artwork sources and AI assistance.
+
+### Team meeting — 3 November 2026
+
+- We had a meeting today and discussed whether Sojourner had AI.
