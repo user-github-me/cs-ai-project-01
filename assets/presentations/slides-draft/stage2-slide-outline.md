@@ -13,9 +13,9 @@ text must be 28pt size ++ cuz the prof said
 - *sojourner main focus
 
 ### Intro
->	Title Blue Impulse with a rocket ("we're aerospace student, why not?")
->	Introduce sojourner and how bro is related to our topic
->	animation of the rocket leaving earth and landing on mars
+>	- Title Blue Impulse with a rocket ("we're aerospace student, why not?")
+>	- Introduce sojourner and how bro is related to our topic
+>	- animation of the rocket leaving earth and landing on mars
 
 ### ️1. What make Sojourner's work? (Hardware)
 >	Sojourner's overall body
