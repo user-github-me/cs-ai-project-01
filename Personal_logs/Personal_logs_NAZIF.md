@@ -34,3 +34,9 @@ What I did:
 ### Team meeting — 3 November 2026
 
 - We had a meeting today and discussed whether Sojourner had AI.
+
+### Chapter folder setup — 4 November 2026
+
+- I added `content/chapter-04/`, `content/chapter-05/`, and `content/chapter-06/` for the next three chapters.
+- I included `README.md`, `draft.md`, `exercises.md`, and `solutions.md` in each folder, following the existing chapter layout.
+- I updated the repository README's folder structure and uploaded the new chapter folders to GitHub.
