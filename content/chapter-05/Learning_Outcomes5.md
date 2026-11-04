@@ -1,4 +1,4 @@
-Chapter 5: Applications
+## Chapter 5: Applications
 You will:
 -	Discover how hardware, networks, and behaviorist AI are used in real-world applications.
 -	Understand how physical devices, communication systems, and intelligent algorithms work together.
