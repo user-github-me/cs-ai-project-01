@@ -61,7 +61,22 @@ cs-ai-project-01/
 │   │   ├── draft.md
 │   │   ├── exercises.md
 │   │   └── solutions.md
-│   └── chapter-03/
+│   ├── chapter-03/
+│   │   ├── README.md
+│   │   ├── draft.md
+│   │   ├── exercises.md
+│   │   └── solutions.md
+│   ├── chapter-04/
+│   │   ├── README.md
+│   │   ├── draft.md
+│   │   ├── exercises.md
+│   │   └── solutions.md
+│   ├── chapter-05/
+│   │   ├── README.md
+│   │   ├── draft.md
+│   │   ├── exercises.md
+│   │   └── solutions.md
+│   └── chapter-06/
 │       ├── README.md
 │       ├── draft.md
 │       ├── exercises.md

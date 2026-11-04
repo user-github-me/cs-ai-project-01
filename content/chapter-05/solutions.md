@@ -1,0 +1,3 @@
+# Chapter 05 — Solutions
+
+Add answers and explanations for the [exercises](exercises.md), using matching exercise numbers.
