@@ -12,3 +12,19 @@ You will learn:
 - IP addresses
 - The use of the uniform resource locator (URL) to locate a resource on the world wide web
 - The role of the Domain Name Service (DNS)
+- The need for protocols during communication
+- The implementation of protocols such as a stack
+- TCP/IP protocols including the 4 layers (Application, Transport, Internet and Link)
+- HTTP, POP3, FTP, IMAP, etc
+- Circuit switching
+- Benefits and drawbacks of packet switching
+- Function of a router in packet switching
+- Use of packet switching to pass messages along a network
+- How encryption works, including the use of public and private keys, plaintext and ciphertext, symmetric key cryptography and asymmetric key cryptography
+- How keys can be used to send verified messages
+- How data is encrypted using symmetric and asymmetric cryptography
+- quantum cryptography and QKD
+- SSL and TLS
+- Examples of where SSL and TLS would be used
+- How digital certificates are acquired
+- how digital certificates are used to produce digital signatures
