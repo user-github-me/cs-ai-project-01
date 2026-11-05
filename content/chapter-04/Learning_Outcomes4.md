@@ -16,6 +16,12 @@ You will learn:
 - The implementation of protocols such as a stack
 - TCP/IP protocols including the 4 layers (Application, Transport, Internet and Link)
 - HTTP, POP3, FTP, IMAP, etc
+- The terms security, privacy, integrity of data
+- security to protect computer systems such as user accounts, passwords, digital signatures, firewalls, antivirus and anti spyware software and encryption
+- security threats such as viruses and spyware, hacking, phishing, and pharming
+- methods to reduce security risks such as encryption and access rights
+- use of validation to protect data integrity
+- use of verification during data entry and data transfer to reduce or eliminate errors.
 - Circuit switching
 - Benefits and drawbacks of packet switching
 - Function of a router in packet switching
