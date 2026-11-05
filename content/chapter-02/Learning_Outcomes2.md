@@ -1,4 +1,5 @@
 ## Chapter 2: Behaviorism and Behaviorist AI:
+You will learn about:
 - What behaviorism is and its main principles.
 - How behavior is influenced by external stimuli and environmental interactions.
 - How observable responses to stimuli explain learning and behavioral changes.
