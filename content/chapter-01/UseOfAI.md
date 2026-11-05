@@ -1,0 +1,3 @@
+## Chapter 1: Intro to Fundamentals
+The content for this chapter as in the learning material itself was generated through multiple runs with AI tools such as Gemini, Claude and ChatGPT. The Learning Outcomes were LARGELY constructed manually, by looking at the learning outcomes mentioned in the book "Cambridge International AS & A level Computer Science".
+The key terms were also similarly compiled manually by looking at the book and the typing them out. Lastly the end of chapter exercises were created using Gemini, with the prompt telling it about the scope of the lesson, the learning outcomes, the key terms to be used in that chapter, etc. Then copy pasted the questions here. 
