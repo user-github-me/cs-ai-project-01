@@ -1,0 +1,27 @@
+Chapter 2:
+-	Behaviorism: A theory of learning that focuses on observable behavior and how it is influenced by external stimuli and environmental interactions.
+-	Stimulus: An external event or change in the environment that triggers a response from an organism or agent.
+-	Response: An observable reaction or behavior produced in response to a stimulus.
+-	Stimulus-Response (S-R): The relationship between an external stimulus and the observable response it produces.
+-	Environmental Interaction: The process through which an organism or agent senses and responds to changes in its surroundings.
+-	Behavior-Based Robotics: An approach to robotics in which robots use sensory input and simple behavioral rules to interact with and respond to their environment.
+-	Behaviorist AI: An approach to artificial intelligence that develops intelligent behavior through sensory input and environmental interaction rather than relying primarily on complex internal representations of the world.
+-	Sensory Input: Information collected from the environment through sensors, allowing an AI system or robot to detect and respond to external conditions.
+-	Reinforcement Learning (RL): A machine learning approach in which an agent learns to make decisions through trial and error by receiving rewards or penalties.
+-	Agent: The learner or decision-maker in reinforcement learning that interacts with an environment.
+-	Environment: The external setting in which an agent operates, takes actions, and receives feedback.
+-	State: A representation of the current situation or condition of the environment.
+-	Action: A decision or movement made by an agent that affects the environment.
+-	Reward: Feedback received by an agent that indicates how desirable the outcome of an action is.
+-	Penalty: Negative feedback or a negative reward that discourages undesirable actions or outcomes.
+-	Policy: A strategy or rule that determines which action an agent should take in a given state.
+-	Value Function: A function that estimates the expected future rewards an agent can obtain from a particular state or state-action pair.
+-	Q-Learning: A model-free reinforcement learning algorithm that learns the expected value of taking specific actions in particular states.
+-	Exploration: The process of trying different actions to discover potentially better strategies or rewards.
+-	Exploitation: The process of choosing actions based on existing knowledge to maximize expected rewards.
+-	Markov Decision Process (MDP): A mathematical framework for modeling decision-making in situations where outcomes are partly uncertain and depend on the current state and chosen action.
+-	Transition Probability: The probability that an action will move an agent from one state to another in an environment.
+-	Discount Factor: A value that determines how much an agent prioritizes future rewards compared with immediate rewards.
+-	Trial and Error: A learning process in which an agent tries different actions, evaluates their outcomes, and adjusts its behavior based on feedback.
+-	Adaptive Behavior: The ability of an AI system to adjust its responses based on feedback or changing conditions
+-	Feedback loop: A process where an AI system uses the result of its actions to adjust future behavior. 
