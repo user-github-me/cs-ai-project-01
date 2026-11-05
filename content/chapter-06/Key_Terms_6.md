@@ -1,0 +1,15 @@
+## Chapter 6
+- Sensor integration: Connecting physical sensors to AI systems
+- Hardware constraints: Physical and technical limitations
+- Reliability: Consistency of hardware performance
+- Resource optimization: Efficient use of computing resources
+- Scalability: Ability to handle increasing workloads
+- Interoperability: Ability of different systems to work together
+- Throughput: Actual rate of successful data transfer
+- Network Resilience: Ability to maintain operation during disruption
+- Adaptive intelligence: Adjusting behaviour based on new information
+- Predictive analytics: Forecasting potential outcomes
+- Behavioural modelling: Representing and analysing behavioural patterns
+- Autonomy: Ability to operate with limited human intervention
+- Explainability: Understanding how AI reaches decisions
+- Bias: Systematic distortion in AI outputs 
