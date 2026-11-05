@@ -1,0 +1,32 @@
+Chapter 1: Intro
+- Binary: Base two number system based on the values 0 and 1 only
+-	Bit: Abbreviation for binary digit
+-	One’s complement: Each binary digit in a number is reversed to allow both negative and positive numbers to be represented.
+-	Two’s complement: Each binary digit is reversed and 1 is added in right-most position to produce another method of representing positive and negative numbers.
+-	Sign and magnitude: Binary number system where left-most bit is used to represent the sign; the remaining bits represent the binary value.
+-	Hexadecimal: A number system based on the value 16(uses the denary digits 0-9 and the letters A to F)
+-	Memory dump: contents of a computer memory output to screen or printer
+-	Binary-coded decimal (BCD): number system that uses 4 bits to represent each denary digit
+-	ASCII code: coding system for all the characters on a keyboard and control codes
+-	Character set: A list of characters that have been defined by computer hardware and software. It is necessary to have a method of coding, so that the computer can understand human characters.
+-	Unicode: coding system which represents all the languages of the world (first 128 characters are the same as ASCII code.)
+-	Von Neumann architecture: computer architecture which introduced the concept of the stored program in the 1940s.
+- Arithmetic logic unit (ALU) – component in the processor which carries out all arithmetic and logical operations.
+- Control unit – ensures synchronisation of data flow and programs throughout the computer by sending out control signals along the control bus.
+- System clock – produces timing signals on the control bus to ensure synchronisation takes place.
+- Immediate access store (IAS) – holds all data and programs needed to be accessed by the control unit.
+- Accumulator – temporary general purpose register which stores numerical values at any part of a given operation.
+- Register – temporary component in the processor which can be general or specific in its use that holds data or instructions as part of the fetch-execute cycle.
+- Status register – used when an instruction requires some form of arithmetic or logical processing.
+- Flag – indicates the status of a bit in the status register, for example, N = 1 indicates the result of an addition gives a negative value.
+- Address bus – carries the addresses throughout the computer system.
+- Data bus – allows data to be carried from processor to memory (and vice versa) or to and from input/output devices.
+- Control bus – carries signals from control unit to all other computer components.
+- Unidirectional – used to describe a bus in which bits can travel in one direction only.
+- Bidirectional – used to describe a bus in which bits can travel in both directions.
+- Word : group of bits used by a computer to represent a single unit.
+- Clock cycle: clock speeds are measured in terms of GHz; this is the vibrational frequency of the clock which sends out pulses along the control bus – a 3.5 GHZ clock cycle means 3.5 billion clock cycles a second.
+- Overclocking: changing the clock speed of a system clock to a value higher than the factory/recommended setting.
+- BIOS: basic input/output system.
+- Cache memory: a high speed auxiliary memory which permits high speed data transfer and retrieval.
+
