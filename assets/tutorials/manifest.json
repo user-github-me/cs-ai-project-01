@@ -1,0 +1,32 @@
+[
+  {
+    "number": 1,
+    "file": "BlueImpulse_Video01_Basic_Reinforcement_Learning_Tutorial.pdf",
+    "pages": 13,
+    "video_seconds": 515.666667
+  },
+  {
+    "number": 2,
+    "file": "BlueImpulse_Video02_How_Hardware_Enables_AI_Tutorial.pdf",
+    "pages": 13,
+    "video_seconds": 544.833333
+  },
+  {
+    "number": 3,
+    "file": "BlueImpulse_Video03_Network_Challenges_Tutorial.pdf",
+    "pages": 13,
+    "video_seconds": 554.066667
+  },
+  {
+    "number": 4,
+    "file": "BlueImpulse_Video04_Networking_for_Behaviorist_AI_Tutorial.pdf",
+    "pages": 13,
+    "video_seconds": 578.066667
+  },
+  {
+    "number": 5,
+    "file": "BlueImpulse_Video05_Program_Execution_Tutorial.pdf",
+    "pages": 13,
+    "video_seconds": 572.4
+  }
+]

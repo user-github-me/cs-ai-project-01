@@ -1,0 +1,417 @@
+1
+00:00:00,300 --> 00:00:06,807
+Have you ever wondered how a prediction inside a computer
+becomes a robot moving across a room?
+
+2
+00:00:06,977 --> 00:00:14,891
+A model cannot see, remember, calculate, or turn a wheel without
+physical components doing those jobs.
+
+3
+00:00:15,061 --> 00:00:21,717
+Today we will follow one observation through the hardware, all
+the way to an action and new feedback.
+
+4
+00:00:21,887 --> 00:00:27,903
+Open the Blue Impulse study guide at page thirty-five, Hardware
+gives software a body.
+
+5
+00:00:28,073 --> 00:00:35,391
+Keep page forty-four nearby too. It explains why a control
+signal and motor power are different things.
+
+6
+00:00:36,533 --> 00:00:42,763
+You will trace the sensing, memory, processing, and actuation
+path of a small robot.
+
+7
+00:00:42,933 --> 00:00:49,973
+You will explain why memory movement can limit a fast processor
+and what a pipeline actually improves.
+
+8
+00:00:50,143 --> 00:00:57,140
+You will also choose hardware by its job, rather than assuming
+every AI system needs the same chip.
+
+9
+00:00:57,310 --> 00:01:02,515
+Welcome to the tutorial on how hardware enables AI by Blue
+Impulse.
+
+10
+00:01:02,685 --> 00:01:10,237
+We are using the guide as our lesson: read the pictured
+excerpts, then follow the demonstrations beside them.
+
+11
+00:01:11,367 --> 00:01:18,641
+Page thirty-five groups hardware by the job it performs: input,
+processing, output, and storage.
+
+12
+00:01:18,811 --> 00:01:26,939
+For our robot, the sensor supplies observations. Memory holds
+inputs, model parameters, and working results.
+
+13
+00:01:27,109 --> 00:01:33,872
+The processor evaluates the program or model, and an output
+communicates the resulting decision.
+
+14
+00:01:34,042 --> 00:01:40,015
+If the robot needs to move, an actuator must turn that decision
+into physical motion.
+
+15
+00:01:40,185 --> 00:01:47,673
+Notice that one device can have multiple roles. A touchscreen
+both displays output and senses input.
+
+16
+00:01:47,843 --> 00:01:55,289
+The diagram is a chain of responsibilities, not a claim that
+every box must be a separate physical chip.
+
+17
+00:01:56,433 --> 00:02:01,596
+Use a kitchen to remember the memory hierarchy on page
+thirty-six.
+
+18
+00:02:01,766 --> 00:02:05,286
+Registers are like the tiny workspace immediately in your
+
+19
+00:02:05,396 --> 00:02:08,895
+hands. Cache keeps useful ingredients close to the cook.
+
+20
+00:02:09,065 --> 00:02:15,827
+Main memory is the larger active workbench, while persistent
+storage is more like the pantry.
+
+21
+00:02:15,997 --> 00:02:21,971
+The analogy is about access and capacity, not a literal map of
+computer components.
+
+22
+00:02:22,141 --> 00:02:30,077
+A huge pantry does not help if ingredients arrive too slowly.
+Similarly, a processor can wait for data.
+
+23
+00:02:30,247 --> 00:02:38,055
+Capacity asks how much fits. Memory bandwidth asks how quickly
+data can move. These are different questions.
+
+24
+00:02:39,200 --> 00:02:43,509
+Look at the final paragraph on page thirty-six. Model weights,
+
+25
+00:02:43,619 --> 00:02:46,926
+inputs, and intermediate results must fit somewhere.
+
+26
+00:02:47,096 --> 00:02:49,549
+When memory bandwidth is insufficient,
+
+27
+00:02:49,659 --> 00:02:55,014
+a fast processor may spend time waiting instead of doing useful
+arithmetic.
+
+28
+00:02:55,184 --> 00:03:01,904
+Adding storage capacity alone does not automatically remove a
+memory-transfer bottleneck.
+
+29
+00:03:02,074 --> 00:03:06,021
+The table also distinguishes cache, main RAM,
+
+30
+00:03:06,131 --> 00:03:11,336
+and secondary storage. They are not interchangeable names for
+one resource.
+
+31
+00:03:11,506 --> 00:03:19,357
+Both static RAM and dynamic RAM are volatile, although their
+circuits and refresh requirements differ.
+
+32
+00:03:19,527 --> 00:03:22,855
+For this tutorial, focus on the system question:
+
+33
+00:03:22,965 --> 00:03:27,274
+is the limiting factor how much fits, or how quickly it arrives?
+
+34
+00:03:28,400 --> 00:03:32,987
+Now compare the processing roles in the table on page forty-six.
+
+35
+00:03:33,157 --> 00:03:36,698
+A CPU handles general control, branches,
+
+36
+00:03:36,808 --> 00:03:43,123
+and diverse tasks. A GPU can accelerate suitable parallel
+arithmetic workloads.
+
+37
+00:03:43,293 --> 00:03:48,733
+Specialised accelerators can efficiently perform supported
+tensor operations,
+
+38
+00:03:48,843 --> 00:03:51,915
+but their benefits depend on the actual workload.
+
+39
+00:03:52,085 --> 00:04:01,365
+Simple tabular reinforcement learning can run on an ordinary
+CPU. AI does not always require a GPU.
+
+40
+00:04:01,535 --> 00:04:08,063
+Training changes model parameters. Inference uses an existing
+model to produce an output.
+
+41
+00:04:08,233 --> 00:04:16,041
+A model can be trained on a large server and deployed on a
+smaller device if the deployment requirements fit.
+
+42
+00:04:17,167 --> 00:04:24,953
+Page thirty-nine uses laundry to explain pipelining. One load
+can dry while a later load is washing.
+
+43
+00:04:25,123 --> 00:04:30,777
+In our simplified processor, the stages are fetch, decode,
+execute, and write.
+
+44
+00:04:30,947 --> 00:04:38,733
+Instruction one enters fetch in cycle one. In cycle two, it
+decodes while instruction two enters fetch.
+
+45
+00:04:38,903 --> 00:04:43,362
+Keep stepping forward. The instructions occupy different stages,
+
+46
+00:04:43,472 --> 00:04:47,355
+so several instructions make progress during the same cycle.
+
+47
+00:04:47,525 --> 00:04:55,269
+After the pipeline fills, this ideal example completes one
+instruction per cycle, assuming no stalls.
+
+48
+00:04:55,439 --> 00:05:02,393
+It does not make an individual four-stage instruction take just
+one cycle from start to finish.
+
+49
+00:05:02,563 --> 00:05:07,299
+Real pipelines can pause for dependencies, uncertain branches,
+
+50
+00:05:07,409 --> 00:05:11,463
+or shared resources. The guide names these as hazards.
+
+51
+00:05:11,633 --> 00:05:19,142
+Use the included Python table to compare completion cycles
+rather than relying only on the moving picture.
+
+52
+00:05:20,267 --> 00:05:24,939
+Turn to page forty-four and trace the environmental control
+loop.
+
+53
+00:05:25,109 --> 00:05:33,365
+An analogue sensor may need an analogue-to-digital converter.
+Many sensors already provide digital measurements.
+
+54
+00:05:33,535 --> 00:05:40,596
+The processor evaluates a decision, then a driver or power stage
+supplies what the actuator needs.
+
+55
+00:05:40,766 --> 00:05:46,014
+Some actuators use a digital interface or pulse-width
+modulation.
+
+56
+00:05:46,124 --> 00:05:50,007
+They do not all require a digital-to-analogue converter.
+
+57
+00:05:50,177 --> 00:05:58,369
+Pulse-width modulation is timed switching, not the same thing as
+converting a value into an analogue voltage.
+
+58
+00:05:58,539 --> 00:06:05,237
+A control signal can tell a motor what to do without being able
+to supply the current that moves it.
+
+59
+00:06:06,367 --> 00:06:13,513
+Imagine the robot detects an obstacle, selects a turn, and sends
+a command to its motor driver.
+
+60
+00:06:13,683 --> 00:06:20,126
+The driver powers the motor, the wheels move, and the sensor
+measures the changed situation.
+
+61
+00:06:20,296 --> 00:06:27,187
+That final measurement closes the feedback loop. The command
+alone does not prove the movement succeeded.
+
+62
+00:06:27,357 --> 00:06:33,842
+A wheel might slip, a sensor might be noisy, or the actuator
+might reach a mechanical limit.
+
+63
+00:06:34,012 --> 00:06:39,687
+The book also separates monitoring from control. Displaying a
+measurement monitors;
+
+64
+00:06:39,797 --> 00:06:42,570
+changing the environment adds control.
+
+65
+00:06:42,740 --> 00:06:49,673
+This loop can use a fixed rule or a learned policy. The hardware
+path alone does not tell you which.
+
+66
+00:06:50,800 --> 00:06:56,112
+Pause and diagnose a system. Its processor repeatedly waits for
+data,
+
+67
+00:06:56,222 --> 00:06:59,443
+and its motor driver cannot supply enough current.
+
+68
+00:06:59,613 --> 00:07:07,059
+Would replacing the processor with a faster GPU solve both
+problems? Think before the answer appears.
+
+69
+00:07:13,229 --> 00:07:21,229
+No. Memory movement and actuator power are separate limits that
+a new GPU does not automatically remove.
+
+70
+00:07:21,399 --> 00:07:27,543
+Measure the path, identify the limiting stage, and match the
+intervention to that evidence.
+
+71
+00:07:27,713 --> 00:07:33,921
+Page eighty-six broadens the discussion to power, heat, memory,
+and physical constraints.
+
+72
+00:07:34,091 --> 00:07:38,912
+An advertised arithmetic rate describes one capability. It is
+
+73
+00:07:39,022 --> 00:07:43,139
+not a complete measurement of the robot's useful performance.
+
+74
+00:07:44,267 --> 00:07:48,661
+Recap the path from page thirty-five: observations enter,
+
+75
+00:07:48,771 --> 00:07:55,235
+memory holds information, processing evaluates it, and outputs
+communicate or act.
+
+76
+00:07:55,405 --> 00:07:58,691
+Page thirty-six explains why memory capacity
+
+77
+00:07:58,801 --> 00:08:05,499
+and bandwidth both matter. Page thirty-nine separates pipeline
+throughput from instruction latency.
+
+78
+00:08:05,669 --> 00:08:09,723
+Page forty-four explains conversion, control signals,
+
+79
+00:08:09,833 --> 00:08:14,526
+and actuator power. Page forty-six compares processing
+strengths.
+
+80
+00:08:14,696 --> 00:08:19,880
+Choose hardware by the workload, deadlines, power budget, and
+physical task.
+
+81
+00:08:20,050 --> 00:08:24,487
+To check your understanding, draw a robot's path from camera to
+wheel,
+
+82
+00:08:24,597 --> 00:08:28,032
+and label one possible bottleneck at each stage.
+
+83
+00:08:28,202 --> 00:08:34,175
+Then explain why a more powerful chip does not, by itself,
+create a learning algorithm.
+
+84
+00:08:35,300 --> 00:08:40,207
+This tutorial used the Blue Impulse study guide, pages
+thirty-five,
+
+85
+00:08:40,317 --> 00:08:44,797
+thirty-six, thirty-nine, forty-four, forty-six, and eighty-six.
+
+86
+00:08:44,967 --> 00:08:48,700
+The original book cover is shown on screen as our credit.
+
+87
+00:08:48,870 --> 00:08:51,174
+The companion tutorial PDF
+
+88
+00:08:51,284 --> 00:08:57,684
+and pipeline demonstration help you repeat the lesson without
+replaying every explanation.
+
+89
+00:08:57,854 --> 00:09:03,038
+Blue Impulse study guide. Trace the whole system before choosing
+the hardware.

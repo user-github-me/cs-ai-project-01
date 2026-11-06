@@ -1,0 +1,472 @@
+1
+00:00:00,300 --> 00:00:06,188
+Have you ever wondered what a connected robot should do when its
+network drops during a task?
+
+2
+00:00:06,358 --> 00:00:14,294
+Sending every decision to a distant server may create a delay
+exactly when the robot needs a timely response.
+
+3
+00:00:14,464 --> 00:00:21,312
+Open the Blue Impulse study guide at page seventy-five,
+Networking for a behaviour-based agent.
+
+4
+00:00:21,482 --> 00:00:29,567
+We will design the responsibilities of a small warehouse robot,
+then examine the messages it sends and receives.
+
+5
+00:00:29,737 --> 00:00:33,812
+The lesson is about making the connection useful without
+assuming
+
+6
+00:00:33,922 --> 00:00:38,509
+a network is always available or a message is always current.
+
+7
+00:00:39,633 --> 00:00:46,908
+You will separate a fast local control loop from shared
+analysis, coordination, and training services.
+
+8
+00:00:47,078 --> 00:00:55,334
+You will explain why messages need context such as identity,
+time, sequence, units, and policy version.
+
+9
+00:00:55,504 --> 00:01:00,219
+You will also connect delayed learning feedback to the action
+that produced it.
+
+10
+00:01:00,389 --> 00:01:06,127
+Welcome to the tutorial on networking for behaviorist AI by Blue
+Impulse.
+
+11
+00:01:06,297 --> 00:01:10,713
+We will use pages seventy-four, seventy-five, and eighty-nine,
+
+12
+00:01:10,823 --> 00:01:15,623
+with an illustrative packet-checking demonstration you can run
+yourself.
+
+13
+00:01:16,767 --> 00:01:20,799
+Begin with the distinction on page twenty-four. A reactive
+
+14
+00:01:20,909 --> 00:01:24,877
+agent may map a sensed condition directly to an action.
+
+15
+00:01:25,047 --> 00:01:33,260
+A fixed rule such as avoiding a detected obstacle can produce
+useful behaviour without learning from reward.
+
+16
+00:01:33,430 --> 00:01:40,086
+Page twenty-five adds reinforcement learning: experience is used
+to improve a policy.
+
+17
+00:01:40,256 --> 00:01:45,205
+A network connection does not turn a fixed rule into a learning
+algorithm,
+
+18
+00:01:45,315 --> 00:01:48,451
+and not every connected agent learns online.
+
+19
+00:01:48,621 --> 00:01:56,408
+For our warehouse example, think of a locally evaluated policy
+with separate, reviewed updates from a server.
+
+20
+00:01:56,578 --> 00:02:03,917
+We will label architectural choices clearly instead of treating
+them as properties of every AI system.
+
+21
+00:02:05,067 --> 00:02:10,144
+Read the first paragraph on page seventy-five. Time-critical
+sensing,
+
+22
+00:02:10,254 --> 00:02:15,182
+policy evaluation, and actuator control can stay near the
+device.
+
+23
+00:02:15,352 --> 00:02:19,939
+Our robot observes an obstacle, evaluates its current policy,
+
+24
+00:02:20,049 --> 00:02:23,526
+and sends a control signal to the actuator hardware.
+
+25
+00:02:23,696 --> 00:02:27,643
+This local path need not wait for every cloud exchange.
+
+26
+00:02:27,813 --> 00:02:30,458
+Page seventy-four explains the reason:
+
+27
+00:02:30,568 --> 00:02:36,541
+a real-time task must meet a specified deadline, not just be
+fast on average.
+
+28
+00:02:36,711 --> 00:02:42,855
+Local processing removes some network dependency, but it still
+needs adequate compute,
+
+29
+00:02:42,965 --> 00:02:46,485
+trustworthy sensing, and suitable physical controls.
+
+30
+00:02:46,655 --> 00:02:50,602
+Local does not automatically mean safe. The requirements
+
+31
+00:02:50,712 --> 00:02:54,424
+and failure behaviour still have to be designed and checked.
+
+32
+00:02:55,567 --> 00:03:03,524
+Now read the warehouse example on page eighty-nine. Each robot
+handles immediate motion control locally.
+
+33
+00:03:03,694 --> 00:03:12,163
+A shared service can allocate tasks, coordinate inventory, and
+analyse selected telemetry from several devices.
+
+34
+00:03:12,333 --> 00:03:19,075
+Imagine a local driver following a route while a dispatcher
+coordinates deliveries across the fleet.
+
+35
+00:03:19,245 --> 00:03:21,506
+The driver needs immediate awareness;
+
+36
+00:03:21,616 --> 00:03:27,397
+the dispatcher benefits from a broader view. The analogy
+separates responsibilities.
+
+37
+00:03:27,567 --> 00:03:31,087
+The network may distribute reviewed policy updates,
+
+38
+00:03:31,197 --> 00:03:35,656
+but a received update should not automatically bypass
+validation.
+
+39
+00:03:35,826 --> 00:03:43,549
+Edge and cloud are not opposing teams. Put each part of the
+workload where its deadlines and resource needs fit.
+
+40
+00:03:44,700 --> 00:03:49,073
+Look at the final paragraph on page seventy-five. A message
+
+41
+00:03:49,183 --> 00:03:52,661
+should carry enough context to be interpreted correctly.
+
+42
+00:03:52,831 --> 00:04:00,724
+Device identity tells us which source or destination it
+concerns. A timestamp helps determine freshness.
+
+43
+00:04:00,894 --> 00:04:09,001
+A sequence number can expose repeated or out-of-order messages.
+Units prevent confusing metres with centimetres.
+
+44
+00:04:09,171 --> 00:04:14,568
+A policy version connects an action or update to the model that
+produced it.
+
+45
+00:04:14,738 --> 00:04:17,042
+These fields are useful evidence,
+
+46
+00:04:17,152 --> 00:04:24,320
+but fields alone do not authenticate a sender. Security checks
+must support the claimed identity.
+
+47
+00:04:24,490 --> 00:04:32,170
+Before acting, the receiver needs a policy for rejecting stale,
+unexpected, or unauthorised commands.
+
+48
+00:04:33,300 --> 00:04:38,783
+Let's run the supporting packet-checking example. This is an
+illustrative design,
+
+49
+00:04:38,893 --> 00:04:41,666
+not a universal protocol from the book.
+
+50
+00:04:41,836 --> 00:04:48,236
+Our toy receiver expects robot seven, metres as the unit, and
+policy version three.
+
+51
+00:04:48,406 --> 00:04:56,065
+For this demonstration, it rejects commands older than two
+hundred milliseconds and sequences already processed.
+
+52
+00:04:56,235 --> 00:05:00,437
+The first message has the expected context, a new sequence,
+
+53
+00:05:00,547 --> 00:05:04,686
+and an age of fifty milliseconds. It passes these checks.
+
+54
+00:05:04,856 --> 00:05:10,189
+The second is six hundred milliseconds old. The receiver rejects
+it as stale,
+
+55
+00:05:10,299 --> 00:05:13,243
+even if the network eventually delivered it.
+
+56
+00:05:13,413 --> 00:05:17,381
+The third repeats an already processed sequence. The receiver
+
+57
+00:05:17,491 --> 00:05:22,313
+rejects it as a duplicate instead of executing the command
+twice.
+
+58
+00:05:22,483 --> 00:05:27,304
+Our example assumes authentication was checked elsewhere. It
+does not
+
+59
+00:05:27,414 --> 00:05:33,259
+implement cryptographic authentication or certify a
+safety-critical controller.
+
+60
+00:05:33,429 --> 00:05:37,525
+The useful lesson is why delivery alone is insufficient:
+
+61
+00:05:37,635 --> 00:05:41,838
+the receiver must decide whether the message is still
+meaningful.
+
+62
+00:05:42,967 --> 00:05:46,551
+The guide makes a second point on page seventy-five:
+
+63
+00:05:46,661 --> 00:05:51,183
+delayed feedback must be associated with the action that
+produced it.
+
+64
+00:05:51,353 --> 00:05:53,785
+Suppose action forty-two turns left,
+
+65
+00:05:53,895 --> 00:06:00,103
+and action forty-three moves forward. Their feedback packets
+arrive in the opposite order.
+
+66
+00:06:00,273 --> 00:06:06,375
+Updating whichever action happened most recently would connect
+evidence to the wrong decision.
+
+67
+00:06:06,545 --> 00:06:12,731
+Use identifiers and recorded context to match each result with
+its original state
+
+68
+00:06:12,841 --> 00:06:15,295
+and action before a learning update.
+
+69
+00:06:15,465 --> 00:06:22,953
+If a feedback packet is lost, the evidence is missing. That does
+not silently mean the reward was zero.
+
+70
+00:06:23,123 --> 00:06:28,605
+This is how networking details can affect the data used by a
+learning algorithm,
+
+71
+00:06:28,715 --> 00:06:31,873
+even when policy evaluation stays local.
+
+72
+00:06:33,000 --> 00:06:39,059
+Return to the warehouse paragraph on page eighty-nine and read
+the outage condition carefully.
+
+73
+00:06:39,229 --> 00:06:46,759
+The design must say whether the robot pauses, completes a
+limited task, or enters another defined state.
+
+74
+00:06:46,929 --> 00:06:54,097
+Continuing safely during a link outage cannot simply be assumed
+because some computation is local.
+
+75
+00:06:54,267 --> 00:06:58,086
+Consider expiring permissions, missing coordination,
+
+76
+00:06:58,196 --> 00:07:02,825
+conflicting routes, and how the system reconnects after the
+interruption.
+
+77
+00:07:02,995 --> 00:07:09,779
+Record what happened locally so the shared service can reconcile
+state when communication returns.
+
+78
+00:07:09,949 --> 00:07:16,328
+The right fallback depends on the task and its hazards. Our
+tutorial demonstrates the reasoning
+
+79
+00:07:16,438 --> 00:07:19,318
+rather than certifying a physical robot.
+
+80
+00:07:20,467 --> 00:07:27,101
+Pause and think. The robot performed action forty-two, but its
+reward packet never arrived.
+
+81
+00:07:27,271 --> 00:07:34,397
+Should the learner record a reward of zero? And should a
+repeated command be executed again automatically?
+
+82
+00:07:40,567 --> 00:07:44,556
+No to both. Missing evidence is not an observed zero,
+
+83
+00:07:44,666 --> 00:07:49,082
+and a duplicate needs the receiver's defined handling policy.
+
+84
+00:07:49,252 --> 00:07:57,380
+Associate any later feedback with the original action. Decide
+how long to wait and how to record missing data.
+
+85
+00:07:57,550 --> 00:08:03,694
+Then explain why a timestamp alone does not prove a message came
+from an authorised sender.
+
+86
+00:08:03,864 --> 00:08:11,523
+Use the packet demonstration to change an age or sequence and
+predict which validation rule should reject it.
+
+87
+00:08:12,667 --> 00:08:17,509
+Recap page seventy-five. Keep suitable time-critical work local,
+
+88
+00:08:17,619 --> 00:08:22,441
+and use the network for telemetry, coordination, and reviewed
+updates.
+
+89
+00:08:22,611 --> 00:08:25,256
+Messages need interpretable context
+
+90
+00:08:25,366 --> 00:08:32,897
+and appropriate authentication. Stale or repeated commands must
+not be treated as automatically valid.
+
+91
+00:08:33,067 --> 00:08:41,472
+Delayed learning feedback belongs to its original action. Lost
+evidence must not silently become zero reward.
+
+92
+00:08:41,642 --> 00:08:45,077
+Page eighty-nine adds the deployment question:
+
+93
+00:08:45,187 --> 00:08:50,115
+which part belongs on the robot, at a nearby gateway, or in the
+cloud?
+
+94
+00:08:50,285 --> 00:08:55,063
+Finally, distinguish a fixed reactive rule, a deployed learned
+policy,
+
+95
+00:08:55,173 --> 00:08:58,693
+and an algorithm currently updating that policy.
+
+96
+00:08:58,863 --> 00:09:01,786
+Draw the local and shared responsibilities,
+
+97
+00:09:01,896 --> 00:09:06,803
+then explain your outage behaviour before calling the
+architecture complete.
+
+98
+00:09:07,933 --> 00:09:13,523
+This tutorial used the Blue Impulse study guide, especially
+pages twenty-four,
+
+99
+00:09:13,633 --> 00:09:17,515
+twenty-five, seventy-four, seventy-five, and eighty-nine.
+
+100
+00:09:17,685 --> 00:09:22,080
+The original book cover on screen credits the source of the
+lesson.
+
+101
+00:09:22,250 --> 00:09:30,421
+The companion PDF, narration, subtitles, and illustrative
+packet-checking code are included for your revision.
+
+102
+00:09:30,591 --> 00:09:36,265
+Blue Impulse study guide. Connect the system, and preserve the
+meaning of its data.

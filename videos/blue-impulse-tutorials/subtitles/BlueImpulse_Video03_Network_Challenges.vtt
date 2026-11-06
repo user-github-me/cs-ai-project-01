@@ -1,0 +1,342 @@
+WEBVTT
+
+00:00:00.300 --> 00:00:04.567
+Have you ever wondered why a connection advertised as fast can
+
+00:00:04.677 --> 00:00:08.773
+still make a video call freeze or a controller respond late?
+
+00:00:08.943 --> 00:00:17.348
+The advertised rate describes only part of the journey. Delay,
+variation, loss, and shared demand also matter.
+
+00:00:17.518 --> 00:00:23.918
+Open your Blue Impulse study guide at page sixty-two, Capacity
+is not responsiveness.
+
+00:00:24.088 --> 00:00:27.864
+We will use that page to diagnose problems instead of
+
+00:00:27.974 --> 00:00:31.985
+treating every network problem as a need for more bandwidth.
+
+00:00:32.155 --> 00:00:38.299
+Then we will calculate the effect of delay using the book's
+example on page seventy-four.
+
+00:00:39.433 --> 00:00:44.788
+Today you will distinguish bandwidth, throughput, latency,
+jitter, and packet loss.
+
+00:00:44.958 --> 00:00:50.483
+You will use a numerical example to connect delay with a
+physical consequence.
+
+00:00:50.653 --> 00:00:54.941
+You will choose responses such as compression, fewer round
+trips,
+
+00:00:55.051 --> 00:00:58.806
+buffering, or local control for specific problems.
+
+00:00:58.976 --> 00:01:03.499
+Welcome to the tutorial on network challenges by Blue Impulse.
+
+00:01:03.669 --> 00:01:09.301
+Keep a calculator or paper ready. Every book example has a page
+citation,
+
+00:01:09.411 --> 00:01:13.187
+and the tutorial PDF includes the practice answers.
+
+00:01:14.333 --> 00:01:21.800
+Read the table at the top of page sixty-two. Bandwidth describes
+how much data a link can carry per second.
+
+00:01:21.970 --> 00:01:28.583
+Throughput is the successful transfer rate actually achieved. It
+can be lower than the link's capacity.
+
+00:01:28.753 --> 00:01:35.153
+Latency is how long a transfer or response takes. Jitter is
+variation in that delay.
+
+00:01:35.323 --> 00:01:39.185
+Packet loss means some packets do not arrive as expected.
+
+00:01:39.355 --> 00:01:44.517
+These measures answer different questions. A connection can
+carry a lot of data
+
+00:01:44.627 --> 00:01:47.294
+and still take a long time to respond.
+
+00:01:47.464 --> 00:01:51.155
+When describing an experiment, specify what you measured:
+
+00:01:51.265 --> 00:01:55.745
+one-way delay, round-trip delay, or complete task response time.
+
+00:01:56.867 --> 00:02:04.035
+Use the guide's road analogy. A wider road can carry more cars
+at once, like greater bandwidth.
+
+00:02:04.205 --> 00:02:08.599
+How many cars actually arrive each second is closer to
+throughput.
+
+00:02:08.769 --> 00:02:15.297
+How long one journey takes is closer to latency. Uneven arrival
+times illustrate jitter,
+
+00:02:15.407 --> 00:02:18.053
+while missing deliveries illustrate loss.
+
+00:02:18.223 --> 00:02:24.175
+Widening a road does not shorten the distance to the destination
+or remove every queue.
+
+00:02:24.345 --> 00:02:29.401
+Likewise, increasing link capacity does not erase propagation
+time,
+
+00:02:29.511 --> 00:02:34.012
+server processing, or unnecessary back-and-forth exchanges.
+
+00:02:34.182 --> 00:02:41.393
+The analogy helps separate the ideas, but measure the actual
+network before deciding which factor dominates.
+
+00:02:42.533 --> 00:02:48.784
+Now connect page sixty-two with the media and contention
+discussion on page fifty-six.
+
+00:02:48.954 --> 00:02:56.015
+Wireless devices may share a medium, compete for transmission
+time, and experience interference.
+
+00:02:56.185 --> 00:03:03.460
+Heavy demand can create queues. Retransmissions after loss can
+use more capacity and add delay.
+
+00:03:03.630 --> 00:03:10.606
+Modern switched full-duplex Ethernet should not be described as
+suffering the old shared-hub collision model.
+
+00:03:10.776 --> 00:03:17.432
+The useful diagnosis depends on the network technology, the
+traffic, and the end-to-end path.
+
+00:03:17.602 --> 00:03:22.061
+Try testing near the access point, with fewer competing
+transfers,
+
+00:03:22.171 --> 00:03:26.267
+and at different times before blaming one advertised number.
+
+00:03:27.400 --> 00:03:37.448
+Page fifty-nine explains TCP and IP. IP routes packets, while
+TCP can provide an ordered, reliable byte stream.
+
+00:03:37.618 --> 00:03:43.890
+Reliability can require acknowledgements and retransmission, so
+recovery may add delay.
+
+00:03:44.060 --> 00:03:47.452
+A transport choice does not by itself guarantee an
+
+00:03:47.562 --> 00:03:52.127
+application deadline or protect every message from an attacker.
+
+00:03:52.297 --> 00:03:55.199
+Some applications prefer timely delivery
+
+00:03:55.309 --> 00:04:01.261
+and handle missing data themselves. Others need complete,
+correctly ordered transfer.
+
+00:04:01.431 --> 00:04:08.236
+Read the application's requirements before selecting a protocol
+or interpreting a performance measurement.
+
+00:04:08.406 --> 00:04:14.401
+Pages sixty-three through sixty-five discuss security
+separately. Confidentiality,
+
+00:04:14.511 --> 00:04:19.545
+integrity, and availability are distinct from simply having a
+fast link.
+
+00:04:20.667 --> 00:04:25.147
+Turn to page seventy-four. The guide uses a constant speed
+
+00:04:25.257 --> 00:04:29.395
+of thirty metres per second for an illustrative calculation.
+
+00:04:29.565 --> 00:04:37.288
+Distance travelled during delay equals speed multiplied by
+delay. First convert milliseconds into seconds.
+
+00:04:37.458 --> 00:04:45.693
+Five hundred milliseconds is zero point five seconds. Thirty
+times zero point five gives fifteen metres.
+
+00:04:45.863 --> 00:04:52.497
+Fifty milliseconds is zero point zero five seconds. That gives
+one point five metres.
+
+00:04:52.667 --> 00:05:00.219
+Five milliseconds is zero point zero zero five seconds. That
+gives zero point one five metres.
+
+00:05:00.389 --> 00:05:07.472
+Watch the three distances grow from the same starting point. We
+changed delay while keeping speed fixed.
+
+00:05:07.642 --> 00:05:15.279
+These are distances before a response begins, not complete
+stopping distances and not safety guarantees.
+
+00:05:15.449 --> 00:05:17.732
+Sensing, processing, actuation,
+
+00:05:17.842 --> 00:05:23.815
+and physical braking can contribute additional delay or distance
+in a real system.
+
+00:05:24.967 --> 00:05:33.009
+Read the first paragraph on page seventy-four. A real-time
+system must respond within a specified deadline.
+
+00:05:33.179 --> 00:05:41.286
+Real-time does not simply mean very fast. Correctness includes
+whether the result arrives in time for its task.
+
+00:05:41.456 --> 00:05:45.744
+Missing a hard deadline can violate the system's requirements.
+
+00:05:45.854 --> 00:05:49.417
+Missing a soft deadline reduces quality of service.
+
+00:05:49.587 --> 00:05:54.301
+Moving a computation locally may remove some communication
+delay,
+
+00:05:54.411 --> 00:05:57.803
+but does not automatically guarantee a safe outcome.
+
+00:05:57.973 --> 00:06:02.304
+Use this distinction when evaluating a remote controller:
+
+00:06:02.414 --> 00:06:06.446
+what is its deadline, and what happens if the response is late?
+
+00:06:06.616 --> 00:06:12.952
+A good average is insufficient when the important problem is an
+occasional deadline miss.
+
+00:06:14.100 --> 00:06:20.287
+Return to the final paragraph on page sixty-two and match each
+response to a problem.
+
+00:06:20.457 --> 00:06:27.049
+When capacity is limited, compress or summarise suitable data.
+When round trips dominate,
+
+00:06:27.159 --> 00:06:29.740
+reduce unnecessary exchanges.
+
+00:06:29.910 --> 00:06:37.334
+Timestamps help detect stale measurements. A playback buffer can
+smooth jitter, but the buffer adds delay.
+
+00:06:37.504 --> 00:06:41.579
+Reconnect logic and redundancy can improve resilience,
+
+00:06:41.689 --> 00:06:47.449
+while designed local control reduces dependence on an
+unavailable remote link.
+
+00:06:47.619 --> 00:06:55.896
+Page eighty-eight reminds us that growing a system adds load and
+coordination challenges, not just more devices.
+
+00:06:56.066 --> 00:07:03.917
+Every remedy has a trade-off. Diagnose, change one factor, and
+measure again using the metric that matters.
+
+00:07:05.067 --> 00:07:12.789
+Your turn. At thirty metres per second, how far does an object
+travel during a two hundred millisecond delay?
+
+00:07:12.959 --> 00:07:19.423
+Convert the units before multiplying. Take a few seconds, or
+pause the video to work it out.
+
+00:07:25.593 --> 00:07:32.719
+Two hundred milliseconds is zero point two seconds. Thirty times
+zero point two is six metres.
+
+00:07:32.889 --> 00:07:39.523
+This is only distance during the delay. It does not include the
+rest of a real stopping process.
+
+00:07:39.693 --> 00:07:42.019
+Now consider a separate question:
+
+00:07:42.129 --> 00:07:49.425
+would adding a playback buffer always help a time-critical
+controller? No, because buffering adds delay.
+
+00:07:49.595 --> 00:07:55.397
+The right network design depends on the task, not a single
+universally best setting.
+
+00:07:56.533 --> 00:08:02.613
+Let's recap page sixty-two. Capacity is the limit, throughput is
+achieved transfer,
+
+00:08:02.723 --> 00:08:07.545
+latency is delay, jitter is variation, and loss is missing data.
+
+00:08:07.715 --> 00:08:12.664
+Our page seventy-four demonstration gave fifteen, one point
+five,
+
+00:08:12.774 --> 00:08:16.849
+and zero point one five metres during three different delays.
+
+00:08:17.019 --> 00:08:21.925
+Those numbers illustrate timing; they are not total stopping
+distances.
+
+00:08:22.095 --> 00:08:29.050
+Use the road analogy to keep the measures distinct, then replace
+the analogy with an actual measurement.
+
+00:08:29.220 --> 00:08:37.668
+For practice, describe a slow application, name the metric you
+would test, and justify one targeted improvement.
+
+00:08:37.838 --> 00:08:44.174
+Run the supporting delay calculator to check a second speed and
+explain the units in your answer.
+
+00:08:45.300 --> 00:08:48.905
+This tutorial was taught from the Blue Impulse study guide,
+
+00:08:49.015 --> 00:08:54.861
+especially pages fifty-six, fifty-nine, sixty-two, seventy-four,
+and eighty-eight.
+
+00:08:55.031 --> 00:08:59.895
+The original cover on screen credits the book we used throughout
+the lesson.
+
+00:09:00.065 --> 00:09:07.318
+Keep the companion tutorial PDF, subtitles, narration, and delay
+calculator for revision.
+
+00:09:07.488 --> 00:09:12.288
+Blue Impulse study guide. Measure the whole task, then choose
+the fix.

@@ -1,0 +1,22 @@
+{
+  "video": 5,
+  "file": "BlueImpulse_Video05_Program_Execution.mp4",
+  "duration_seconds": 572.4,
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "frame_count": 17172,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "audio_sample_rate": "48000",
+  "bytes": 38677516,
+  "sha256": "9ba41b581579470a2fb8604fc7d4e639c8eb8b560f1d2ae76e2c5a1da2fe540c",
+  "decode_errors": 0,
+  "render_and_decode_seconds": 245.56,
+  "original_render_bytes": 190418864,
+  "sampled_ssim_against_render": 0.999155,
+  "ssim_sample_rate_fps": 1,
+  "audio_unchanged": true,
+  "audio_pcm_hash": "SHA256=d4b450b8efeaec2669c8babe9f93e56e2a1173e56042ad542830b48528875e57",
+  "compression": "libx264 veryfast CRF 18; 2-second maximum GOP; AAC copied"
+}

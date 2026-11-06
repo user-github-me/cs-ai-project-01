@@ -96,11 +96,27 @@ cs-ai-project-01/
 │       ├── meeting-notes.md
 │       ├── significance-use-of-AI.md
 │       └── use-of-github.md
+├── videos/
+│   └── blue-impulse-tutorials/
+│       ├── README.md
+│       ├── scripts/
+│       ├── supporting/
+│       └── source/
 └── assets/
     ├── study-guide/
     │   ├── BlueImpulse_Study_Guide.pdf
     │   ├── BlueImpulse_Study_Guide_Overview.jpg
     │   └── source/
+    ├── tutorials/
+    │   ├── README.md
+    │   ├── BlueImpulse_All_Video_Tutorials.pdf
+    │   ├── BlueImpulse_Video01_Basic_Reinforcement_Learning_Tutorial.pdf
+    │   └── videos/
+    │       ├── BlueImpulse_Video01_Basic_Reinforcement_Learning.mp4
+    │       ├── BlueImpulse_Video02_How_Hardware_Enables_AI.mp4
+    │       ├── BlueImpulse_Video03_Network_Challenges.mp4
+    │       ├── BlueImpulse_Video04_Networking_for_Behaviorist_AI.mp4
+    │       └── BlueImpulse_Video05_Program_Execution.mp4
     ├── images/
     ├── diagrams/
     │   └── Flowchart.png
@@ -125,6 +141,8 @@ cs-ai-project-01/
 - [drafts/](drafts/): Early ideas, outlines, research notes, and development plans. Stage 1 Markdown files are in [drafts/stage 1/](drafts/stage%201/).
 - [assets/](assets/): Images, diagrams, and reference material used in the chapters.
 - [Study guide](assets/study-guide/README.md): The complete six-chapter PDF, page overview, source files and page references for the companion tutorials.
+- [Video tutorials](assets/tutorials/README.md): Five narrated, subtitled MP4s lasting 8–10 minutes, with matching written tutorials, book excerpts, timestamps, and a combined PDF.
+- [Editable video project](videos/blue-impulse-tutorials/README.md): Narration, subtitles, animated demonstrations, supporting Python, and rendering instructions for the five book tutorials.
 - [assets/presentations/slides-draft/](assets/presentations/slides-draft/): Draft presentations, including the [Blue Impulse Stage 1 status-report template](assets/presentations/slides-draft/BlueImpulse_Stage1_StatusReport.pptx). The template contains placeholders for the team to complete.
 - [Stage 2 Sojourner slide draft](assets/presentations/slides-draft/stage2-sojourner/README.md): Editable PowerPoint, PDF preview, artwork and source for the retro Mars presentation. Detailed content remains blank according to the team's outline.
 - [Personal_logs/](Personal_logs/): Individual learning and work logs for each Blue Impulse member.

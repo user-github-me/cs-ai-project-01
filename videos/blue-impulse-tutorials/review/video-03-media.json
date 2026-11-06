@@ -1,0 +1,22 @@
+{
+  "video": 3,
+  "file": "BlueImpulse_Video03_Network_Challenges.mp4",
+  "duration_seconds": 554.066667,
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "frame_count": 16622,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "audio_sample_rate": "48000",
+  "bytes": 39388728,
+  "sha256": "2d067c636d95a5b7a0f53eb62ae4ef160181c84086498c653ed473fef5c1cb9c",
+  "decode_errors": 0,
+  "render_and_decode_seconds": 238.22,
+  "original_render_bytes": 210822992,
+  "sampled_ssim_against_render": 0.999088,
+  "ssim_sample_rate_fps": 1,
+  "audio_unchanged": true,
+  "audio_pcm_hash": "SHA256=833f017e0b7e17c3f16b112109bc455b87313968962a027d8462ccde12ae29c1",
+  "compression": "libx264 veryfast CRF 18; 2-second maximum GOP; AAC copied"
+}

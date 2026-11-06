@@ -1,0 +1,1508 @@
+{
+  "number": 2,
+  "slug": "How_Hardware_Enables_AI",
+  "title": "How hardware enables AI",
+  "pages": [
+    35,
+    36,
+    39,
+    44,
+    46,
+    86
+  ],
+  "objectives": [
+    "Trace sensing to action",
+    "Explain memory and processing roles",
+    "Diagnose a hardware bottleneck"
+  ],
+  "scenes": [
+    {
+      "key": "hook",
+      "kind": "hook",
+      "title": "What gives an AI decision a body?",
+      "page": 35,
+      "cues": [
+        "Have you ever wondered how a prediction inside a computer becomes a robot moving across a room?",
+        "A model cannot see, remember, calculate, or turn a wheel without physical components doing those jobs.",
+        "Today we will follow one observation through the hardware, all the way to an action and new feedback.",
+        "Open the Blue Impulse study guide at page thirty-five, Hardware gives software a body.",
+        "Keep page forty-four nearby too. It explains why a control signal and motor power are different things."
+      ],
+      "hero": "From an observation to an action",
+      "diagram": "hardware",
+      "start": 0.0,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 6.976667,
+          "text": "Have you ever wondered how a prediction inside a computer becomes a robot moving across a room?"
+        },
+        {
+          "index": 1,
+          "start": 6.976667,
+          "end": 15.061333,
+          "text": "A model cannot see, remember, calculate, or turn a wheel without physical components doing those jobs."
+        },
+        {
+          "index": 2,
+          "start": 15.061333,
+          "end": 21.887333,
+          "text": "Today we will follow one observation through the hardware, all the way to an action and new feedback."
+        },
+        {
+          "index": 3,
+          "start": 21.887333,
+          "end": 28.073333,
+          "text": "Open the Blue Impulse study guide at page thirty-five, Hardware gives software a body."
+        },
+        {
+          "index": 4,
+          "start": 28.073333,
+          "end": 35.560667,
+          "text": "Keep page forty-four nearby too. It explains why a control signal and motor power are different things."
+        }
+      ],
+      "duration": 36.233333
+    },
+    {
+      "key": "welcome",
+      "kind": "objectives",
+      "title": "Today’s route",
+      "page": 35,
+      "cues": [
+        "You will trace the sensing, memory, processing, and actuation path of a small robot.",
+        "You will explain why memory movement can limit a fast processor and what a pipeline actually improves.",
+        "You will also choose hardware by its job, rather than assuming every AI system needs the same chip.",
+        "Welcome to the tutorial on how hardware enables AI by Blue Impulse.",
+        "We are using the guide as our lesson: read the pictured excerpts, then follow the demonstrations beside them."
+      ],
+      "start": 36.233333333333334,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 6.699333,
+          "text": "You will trace the sensing, memory, processing, and actuation path of a small robot."
+        },
+        {
+          "index": 1,
+          "start": 6.699333,
+          "end": 13.909333,
+          "text": "You will explain why memory movement can limit a fast processor and what a pipeline actually improves."
+        },
+        {
+          "index": 2,
+          "start": 13.909333,
+          "end": 21.076667,
+          "text": "You will also choose hardware by its job, rather than assuming every AI system needs the same chip."
+        },
+        {
+          "index": 3,
+          "start": 21.076667,
+          "end": 26.452,
+          "text": "Welcome to the tutorial on how hardware enables AI by Blue Impulse."
+        },
+        {
+          "index": 4,
+          "start": 26.452,
+          "end": 34.174,
+          "text": "We are using the guide as our lesson: read the pictured excerpts, then follow the demonstrations beside them."
+        }
+      ],
+      "duration": 34.833333
+    },
+    {
+      "key": "roles",
+      "kind": "book",
+      "title": "Follow the physical path",
+      "page": 35,
+      "cues": [
+        "Page thirty-five groups hardware by the job it performs: input, processing, output, and storage.",
+        "For our robot, the sensor supplies observations. Memory holds inputs, model parameters, and working results.",
+        "The processor evaluates the program or model, and an output communicates the resulting decision.",
+        "If the robot needs to move, an actuator must turn that decision into physical motion.",
+        "Notice that one device can have multiple roles. A touchscreen both displays output and senses input.",
+        "The diagram is a chain of responsibilities, not a claim that every box must be a separate physical chip."
+      ],
+      "block": 1,
+      "quote": "More powerful hardware can increase capacity or speed, but does not itself create a learning algorithm.",
+      "start": 71.06666666666666,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 7.744667,
+          "text": "Page thirty-five groups hardware by the job it performs: input, processing, output, and storage."
+        },
+        {
+          "index": 1,
+          "start": 7.744667,
+          "end": 16.042667,
+          "text": "For our robot, the sensor supplies observations. Memory holds inputs, model parameters, and working results."
+        },
+        {
+          "index": 2,
+          "start": 16.042667,
+          "end": 22.975333,
+          "text": "The processor evaluates the program or model, and an output communicates the resulting decision."
+        },
+        {
+          "index": 3,
+          "start": 22.975333,
+          "end": 29.118667,
+          "text": "If the robot needs to move, an actuator must turn that decision into physical motion."
+        },
+        {
+          "index": 4,
+          "start": 29.118667,
+          "end": 36.776667,
+          "text": "Notice that one device can have multiple roles. A touchscreen both displays output and senses input."
+        },
+        {
+          "index": 5,
+          "start": 36.776667,
+          "end": 44.392,
+          "text": "The diagram is a chain of responsibilities, not a claim that every box must be a separate physical chip."
+        }
+      ],
+      "duration": 45.066667
+    },
+    {
+      "key": "kitchen",
+      "kind": "compare",
+      "title": "Use the kitchen analogy",
+      "page": 36,
+      "cues": [
+        "Use a kitchen to remember the memory hierarchy on page thirty-six.",
+        "Registers are like the tiny workspace immediately in your hands. Cache keeps useful ingredients close to the cook.",
+        "Main memory is the larger active workbench, while persistent storage is more like the pantry.",
+        "The analogy is about access and capacity, not a literal map of computer components.",
+        "A huge pantry does not help if ingredients arrive too slowly. Similarly, a processor can wait for data.",
+        "Capacity asks how much fits. Memory bandwidth asks how quickly data can move. These are different questions."
+      ],
+      "labels": [
+        "Registers: immediately available",
+        "Cache: frequently used copies",
+        "RAM: active work",
+        "Storage: persistent data"
+      ],
+      "start": 116.13333333333334,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 5.632667,
+          "text": "Use a kitchen to remember the memory hierarchy on page thirty-six."
+        },
+        {
+          "index": 1,
+          "start": 5.632667,
+          "end": 12.931333,
+          "text": "Registers are like the tiny workspace immediately in your hands. Cache keeps useful ingredients close to the cook."
+        },
+        {
+          "index": 2,
+          "start": 12.931333,
+          "end": 19.864,
+          "text": "Main memory is the larger active workbench, while persistent storage is more like the pantry."
+        },
+        {
+          "index": 3,
+          "start": 19.864,
+          "end": 26.007333,
+          "text": "The analogy is about access and capacity, not a literal map of computer components."
+        },
+        {
+          "index": 4,
+          "start": 26.007333,
+          "end": 34.113333,
+          "text": "A huge pantry does not help if ingredients arrive too slowly. Similarly, a processor can wait for data."
+        },
+        {
+          "index": 5,
+          "start": 34.113333,
+          "end": 42.091333,
+          "text": "Capacity asks how much fits. Memory bandwidth asks how quickly data can move. These are different questions."
+        }
+      ],
+      "duration": 42.766667
+    },
+    {
+      "key": "memory",
+      "kind": "book",
+      "title": "The processor may be waiting",
+      "page": 36,
+      "cues": [
+        "Look at the final paragraph on page thirty-six. Model weights, inputs, and intermediate results must fit somewhere.",
+        "When memory bandwidth is insufficient, a fast processor may spend time waiting instead of doing useful arithmetic.",
+        "Adding storage capacity alone does not automatically remove a memory-transfer bottleneck.",
+        "The table also distinguishes cache, main RAM, and secondary storage. They are not interchangeable names for one resource.",
+        "Both static RAM and dynamic RAM are volatile, although their circuits and refresh requirements differ.",
+        "For this tutorial, focus on the system question: is the limiting factor how much fits, or how quickly it arrives?"
+      ],
+      "block": 2,
+      "quote": "Capacity answers “how much fits?” Bandwidth answers “how quickly can it move?”",
+      "start": 158.9,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 8.196,
+          "text": "Look at the final paragraph on page thirty-six. Model weights, inputs, and intermediate results must fit somewhere."
+        },
+        {
+          "index": 1,
+          "start": 8.196,
+          "end": 16.284,
+          "text": "When memory bandwidth is insufficient, a fast processor may spend time waiting instead of doing useful arithmetic."
+        },
+        {
+          "index": 2,
+          "start": 16.284,
+          "end": 23.174,
+          "text": "Adding storage capacity alone does not automatically remove a memory-transfer bottleneck."
+        },
+        {
+          "index": 3,
+          "start": 23.174,
+          "end": 32.606,
+          "text": "The table also distinguishes cache, main RAM, and secondary storage. They are not interchangeable names for one resource."
+        },
+        {
+          "index": 4,
+          "start": 32.606,
+          "end": 40.626667,
+          "text": "Both static RAM and dynamic RAM are volatile, although their circuits and refresh requirements differ."
+        },
+        {
+          "index": 5,
+          "start": 40.626667,
+          "end": 48.544,
+          "text": "For this tutorial, focus on the system question: is the limiting factor how much fits, or how quickly it arrives?"
+        }
+      ],
+      "duration": 49.2
+    },
+    {
+      "key": "chips",
+      "kind": "compare",
+      "title": "Match the processor to the work",
+      "page": 46,
+      "cues": [
+        "Now compare the processing roles in the table on page forty-six.",
+        "A CPU handles general control, branches, and diverse tasks. A GPU can accelerate suitable parallel arithmetic workloads.",
+        "Specialised accelerators can efficiently perform supported tensor operations, but their benefits depend on the actual workload.",
+        "Simple tabular reinforcement learning can run on an ordinary CPU. AI does not always require a GPU.",
+        "Training changes model parameters. Inference uses an existing model to produce an output.",
+        "A model can be trained on a large server and deployed on a smaller device if the deployment requirements fit."
+      ],
+      "labels": [
+        "CPU: control and varied work",
+        "GPU: suitable parallel arithmetic",
+        "Accelerator: supported operations"
+      ],
+      "start": 208.1,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 5.056667,
+          "text": "Now compare the processing roles in the table on page forty-six."
+        },
+        {
+          "index": 1,
+          "start": 5.056667,
+          "end": 15.192667,
+          "text": "A CPU handles general control, branches, and diverse tasks. A GPU can accelerate suitable parallel arithmetic workloads."
+        },
+        {
+          "index": 2,
+          "start": 15.192667,
+          "end": 23.984667,
+          "text": "Specialised accelerators can efficiently perform supported tensor operations, but their benefits depend on the actual workload."
+        },
+        {
+          "index": 3,
+          "start": 23.984667,
+          "end": 33.434667,
+          "text": "Simple tabular reinforcement learning can run on an ordinary CPU. AI does not always require a GPU."
+        },
+        {
+          "index": 4,
+          "start": 33.434667,
+          "end": 40.132667,
+          "text": "Training changes model parameters. Inference uses an existing model to produce an output."
+        },
+        {
+          "index": 5,
+          "start": 40.132667,
+          "end": 48.110667,
+          "text": "A model can be trained on a large server and deployed on a smaller device if the deployment requirements fit."
+        }
+      ],
+      "duration": 48.766667
+    },
+    {
+      "key": "pipeline",
+      "kind": "pipeline-demo",
+      "title": "Overlap work, increase throughput",
+      "page": 39,
+      "cues": [
+        "Page thirty-nine uses laundry to explain pipelining. One load can dry while a later load is washing.",
+        "In our simplified processor, the stages are fetch, decode, execute, and write.",
+        "Instruction one enters fetch in cycle one. In cycle two, it decodes while instruction two enters fetch.",
+        "Keep stepping forward. The instructions occupy different stages, so several instructions make progress during the same cycle.",
+        "After the pipeline fills, this ideal example completes one instruction per cycle, assuming no stalls.",
+        "It does not make an individual four-stage instruction take just one cycle from start to finish.",
+        "Real pipelines can pause for dependencies, uncertain branches, or shared resources. The guide names these as hazards.",
+        "Use the included Python table to compare completion cycles rather than relying only on the moving picture."
+      ],
+      "stages": [
+        "Fetch",
+        "Decode",
+        "Execute",
+        "Write"
+      ],
+      "instructions": 3,
+      "start": 256.8666666666667,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 8.256667,
+          "text": "Page thirty-nine uses laundry to explain pipelining. One load can dry while a later load is washing."
+        },
+        {
+          "index": 1,
+          "start": 8.256667,
+          "end": 14.08,
+          "text": "In our simplified processor, the stages are fetch, decode, execute, and write."
+        },
+        {
+          "index": 2,
+          "start": 14.08,
+          "end": 22.036667,
+          "text": "Instruction one enters fetch in cycle one. In cycle two, it decodes while instruction two enters fetch."
+        },
+        {
+          "index": 3,
+          "start": 22.036667,
+          "end": 30.658,
+          "text": "Keep stepping forward. The instructions occupy different stages, so several instructions make progress during the same cycle."
+        },
+        {
+          "index": 4,
+          "start": 30.658,
+          "end": 38.572,
+          "text": "After the pipeline fills, this ideal example completes one instruction per cycle, assuming no stalls."
+        },
+        {
+          "index": 5,
+          "start": 38.572,
+          "end": 45.696667,
+          "text": "It does not make an individual four-stage instruction take just one cycle from start to finish."
+        },
+        {
+          "index": 6,
+          "start": 45.696667,
+          "end": 54.766,
+          "text": "Real pipelines can pause for dependencies, uncertain branches, or shared resources. The guide names these as hazards."
+        },
+        {
+          "index": 7,
+          "start": 54.766,
+          "end": 62.445333,
+          "text": "Use the included Python table to compare completion cycles rather than relying only on the moving picture."
+        }
+      ],
+      "duration": 63.1
+    },
+    {
+      "key": "sensor",
+      "kind": "book",
+      "title": "A signal is not motor power",
+      "page": 44,
+      "cues": [
+        "Turn to page forty-four and trace the environmental control loop.",
+        "An analogue sensor may need an analogue-to-digital converter. Many sensors already provide digital measurements.",
+        "The processor evaluates a decision, then a driver or power stage supplies what the actuator needs.",
+        "Some actuators use a digital interface or pulse-width modulation. They do not all require a digital-to-analogue converter.",
+        "Pulse-width modulation is timed switching, not the same thing as converting a value into an analogue voltage.",
+        "A control signal can tell a motor what to do without being able to supply the current that moves it."
+      ],
+      "block": 1,
+      "quote": "A motor driver or power stage supplies the current needed to move a motor or operate a valve.",
+      "start": 319.96666666666664,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 5.142,
+          "text": "Turn to page forty-four and trace the environmental control loop."
+        },
+        {
+          "index": 1,
+          "start": 5.142,
+          "end": 13.568,
+          "text": "An analogue sensor may need an analogue-to-digital converter. Many sensors already provide digital measurements."
+        },
+        {
+          "index": 2,
+          "start": 13.568,
+          "end": 20.799333,
+          "text": "The processor evaluates a decision, then a driver or power stage supplies what the actuator needs."
+        },
+        {
+          "index": 3,
+          "start": 20.799333,
+          "end": 30.21,
+          "text": "Some actuators use a digital interface or pulse-width modulation. They do not all require a digital-to-analogue converter."
+        },
+        {
+          "index": 4,
+          "start": 30.21,
+          "end": 38.572,
+          "text": "Pulse-width modulation is timed switching, not the same thing as converting a value into an analogue voltage."
+        },
+        {
+          "index": 5,
+          "start": 38.572,
+          "end": 45.440667,
+          "text": "A control signal can tell a motor what to do without being able to supply the current that moves it."
+        }
+      ],
+      "duration": 46.1
+    },
+    {
+      "key": "feedback",
+      "kind": "diagram",
+      "title": "Close the loop",
+      "page": 44,
+      "cues": [
+        "Imagine the robot detects an obstacle, selects a turn, and sends a command to its motor driver.",
+        "The driver powers the motor, the wheels move, and the sensor measures the changed situation.",
+        "That final measurement closes the feedback loop. The command alone does not prove the movement succeeded.",
+        "A wheel might slip, a sensor might be noisy, or the actuator might reach a mechanical limit.",
+        "The book also separates monitoring from control. Displaying a measurement monitors; changing the environment adds control.",
+        "This loop can use a fixed rule or a learned policy. The hardware path alone does not tell you which."
+      ],
+      "labels": [
+        "Sense",
+        "Decide",
+        "Drive motor",
+        "Measure again"
+      ],
+      "start": 366.06666666666666,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 7.616667,
+          "text": "Imagine the robot detects an obstacle, selects a turn, and sends a command to its motor driver."
+        },
+        {
+          "index": 1,
+          "start": 7.616667,
+          "end": 14.229333,
+          "text": "The driver powers the motor, the wheels move, and the sensor measures the changed situation."
+        },
+        {
+          "index": 2,
+          "start": 14.229333,
+          "end": 21.29,
+          "text": "That final measurement closes the feedback loop. The command alone does not prove the movement succeeded."
+        },
+        {
+          "index": 3,
+          "start": 21.29,
+          "end": 27.945333,
+          "text": "A wheel might slip, a sensor might be noisy, or the actuator might reach a mechanical limit."
+        },
+        {
+          "index": 4,
+          "start": 27.945333,
+          "end": 36.673333,
+          "text": "The book also separates monitoring from control. Displaying a measurement monitors; changing the environment adds control."
+        },
+        {
+          "index": 5,
+          "start": 36.673333,
+          "end": 43.776667,
+          "text": "This loop can use a fixed rule or a learned policy. The hardware path alone does not tell you which."
+        }
+      ],
+      "duration": 44.433333
+    },
+    {
+      "key": "practice",
+      "kind": "question",
+      "title": "Will a faster GPU fix this?",
+      "page": 86,
+      "cues": [
+        "Pause and diagnose a system. Its processor repeatedly waits for data, and its motor driver cannot supply enough current.",
+        "Would replacing the processor with a faster GPU solve both problems? Think before the answer appears.",
+        "No. Memory movement and actuator power are separate limits that a new GPU does not automatically remove.",
+        "Measure the path, identify the limiting stage, and match the intervention to that evidence.",
+        "Page eighty-six broadens the discussion to power, heat, memory, and physical constraints.",
+        "An advertised arithmetic rate describes one capability. It is not a complete measurement of the robot's useful performance."
+      ],
+      "prompt": "Waiting for data + insufficient motor current",
+      "answer": "Fix the memory path and power stage.",
+      "pause_after": 1,
+      "pause": 6,
+      "start": 410.5,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 9.113333,
+          "text": "Pause and diagnose a system. Its processor repeatedly waits for data, and its motor driver cannot supply enough current."
+        },
+        {
+          "index": 1,
+          "start": 9.113333,
+          "end": 16.728667,
+          "text": "Would replacing the processor with a faster GPU solve both problems? Think before the answer appears."
+        },
+        {
+          "index": 2,
+          "start": 22.728667,
+          "end": 30.898667,
+          "text": "No. Memory movement and actuator power are separate limits that a new GPU does not automatically remove."
+        },
+        {
+          "index": 3,
+          "start": 30.898667,
+          "end": 37.212667,
+          "text": "Measure the path, identify the limiting stage, and match the intervention to that evidence."
+        },
+        {
+          "index": 4,
+          "start": 37.212667,
+          "end": 43.590667,
+          "text": "Page eighty-six broadens the discussion to power, heat, memory, and physical constraints."
+        },
+        {
+          "index": 5,
+          "start": 43.590667,
+          "end": 52.809333,
+          "text": "An advertised arithmetic rate describes one capability. It is not a complete measurement of the robot's useful performance."
+        }
+      ],
+      "question_pause": {
+        "start": 16.728667,
+        "duration": 6
+      },
+      "duration": 53.466667
+    },
+    {
+      "key": "recap",
+      "kind": "recap",
+      "title": "Hardware enables every step",
+      "page": 46,
+      "cues": [
+        "Recap the path from page thirty-five: observations enter, memory holds information, processing evaluates it, and outputs communicate or act.",
+        "Page thirty-six explains why memory capacity and bandwidth both matter. Page thirty-nine separates pipeline throughput from instruction latency.",
+        "Page forty-four explains conversion, control signals, and actuator power. Page forty-six compares processing strengths.",
+        "Choose hardware by the workload, deadlines, power budget, and physical task.",
+        "To check your understanding, draw a robot's path from camera to wheel, and label one possible bottleneck at each stage.",
+        "Then explain why a more powerful chip does not, by itself, create a learning algorithm."
+      ],
+      "labels": [
+        "Sense → store → compute → act",
+        "Capacity differs from bandwidth",
+        "Throughput differs from latency",
+        "Signals differ from power"
+      ],
+      "start": 463.96666666666664,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 11.438667,
+          "text": "Recap the path from page thirty-five: observations enter, memory holds information, processing evaluates it, and outputs communicate or act."
+        },
+        {
+          "index": 1,
+          "start": 11.438667,
+          "end": 21.702667,
+          "text": "Page thirty-six explains why memory capacity and bandwidth both matter. Page thirty-nine separates pipeline throughput from instruction latency."
+        },
+        {
+          "index": 2,
+          "start": 21.702667,
+          "end": 30.729333,
+          "text": "Page forty-four explains conversion, control signals, and actuator power. Page forty-six compares processing strengths."
+        },
+        {
+          "index": 3,
+          "start": 30.729333,
+          "end": 36.083333,
+          "text": "Choose hardware by the workload, deadlines, power budget, and physical task."
+        },
+        {
+          "index": 4,
+          "start": 36.083333,
+          "end": 44.235333,
+          "text": "To check your understanding, draw a robot's path from camera to wheel, and label one possible bottleneck at each stage."
+        },
+        {
+          "index": 5,
+          "start": 44.235333,
+          "end": 50.378667,
+          "text": "Then explain why a more powerful chip does not, by itself, create a learning algorithm."
+        }
+      ],
+      "duration": 51.033333
+    },
+    {
+      "key": "credits",
+      "kind": "credits",
+      "title": "Blue Impulse study guide",
+      "page": 1,
+      "cues": [
+        "This tutorial used the Blue Impulse study guide, pages thirty-five, thirty-six, thirty-nine, forty-four, forty-six, and eighty-six.",
+        "The original book cover is shown on screen as our credit.",
+        "The companion tutorial PDF and pipeline demonstration help you repeat the lesson without replaying every explanation.",
+        "Blue Impulse study guide. Trace the whole system before choosing the hardware."
+      ],
+      "start": 515.0,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 9.966667,
+          "text": "This tutorial used the Blue Impulse study guide, pages thirty-five, thirty-six, thirty-nine, forty-four, forty-six, and eighty-six."
+        },
+        {
+          "index": 1,
+          "start": 9.966667,
+          "end": 13.87,
+          "text": "The original book cover is shown on screen as our credit."
+        },
+        {
+          "index": 2,
+          "start": 13.87,
+          "end": 22.854,
+          "text": "The companion tutorial PDF and pipeline demonstration help you repeat the lesson without replaying every explanation."
+        },
+        {
+          "index": 3,
+          "start": 22.854,
+          "end": 28.208,
+          "text": "Blue Impulse study guide. Trace the whole system before choosing the hardware."
+        }
+      ],
+      "duration": 29.833333
+    }
+  ],
+  "duration": 544.833333,
+  "fps": 30,
+  "voice": "am_michael",
+  "speed": 0.92,
+  "captions": [
+    {
+      "id": "v02-s00-c00-0",
+      "text": "Have you ever wondered how a prediction inside a computer becomes a robot moving across a room?",
+      "start": 0.3,
+      "end": 6.806667,
+      "scene": 0,
+      "beat": 0,
+      "audio": "assets/voice/cues/a5866e507e8215ad.wav"
+    },
+    {
+      "id": "v02-s00-c01-0",
+      "text": "A model cannot see, remember, calculate, or turn a wheel without physical components doing those jobs.",
+      "start": 6.976667,
+      "end": 14.891333,
+      "scene": 0,
+      "beat": 1,
+      "audio": "assets/voice/cues/8d23fbecc932299b.wav"
+    },
+    {
+      "id": "v02-s00-c02-0",
+      "text": "Today we will follow one observation through the hardware, all the way to an action and new feedback.",
+      "start": 15.061333,
+      "end": 21.717333,
+      "scene": 0,
+      "beat": 2,
+      "audio": "assets/voice/cues/e70ff4a3400c127a.wav"
+    },
+    {
+      "id": "v02-s00-c03-0",
+      "text": "Open the Blue Impulse study guide at page thirty-five, Hardware gives software a body.",
+      "start": 21.887333,
+      "end": 27.903333,
+      "scene": 0,
+      "beat": 3,
+      "audio": "assets/voice/cues/28af4ca413f110f1.wav"
+    },
+    {
+      "id": "v02-s00-c04-0",
+      "text": "Keep page forty-four nearby too. It explains why a control signal and motor power are different things.",
+      "start": 28.073333,
+      "end": 35.390667,
+      "scene": 0,
+      "beat": 4,
+      "audio": "assets/voice/cues/5388a21c76515cac.wav"
+    },
+    {
+      "id": "v02-s01-c00-0",
+      "text": "You will trace the sensing, memory, processing, and actuation path of a small robot.",
+      "start": 36.533333,
+      "end": 42.762667,
+      "scene": 1,
+      "beat": 0,
+      "audio": "assets/voice/cues/0a1709cda5fccd0c.wav"
+    },
+    {
+      "id": "v02-s01-c01-0",
+      "text": "You will explain why memory movement can limit a fast processor and what a pipeline actually improves.",
+      "start": 42.932667,
+      "end": 49.972667,
+      "scene": 1,
+      "beat": 1,
+      "audio": "assets/voice/cues/e50e1431119b4aa9.wav"
+    },
+    {
+      "id": "v02-s01-c02-0",
+      "text": "You will also choose hardware by its job, rather than assuming every AI system needs the same chip.",
+      "start": 50.142667,
+      "end": 57.14,
+      "scene": 1,
+      "beat": 2,
+      "audio": "assets/voice/cues/c12baa7a03cb6b32.wav"
+    },
+    {
+      "id": "v02-s01-c03-0",
+      "text": "Welcome to the tutorial on how hardware enables AI by Blue Impulse.",
+      "start": 57.31,
+      "end": 62.515333,
+      "scene": 1,
+      "beat": 3,
+      "audio": "assets/voice/cues/4b896f45ce829528.wav"
+    },
+    {
+      "id": "v02-s01-c04-0",
+      "text": "We are using the guide as our lesson: read the pictured excerpts, then follow the demonstrations beside them.",
+      "start": 62.685333,
+      "end": 70.237333,
+      "scene": 1,
+      "beat": 4,
+      "audio": "assets/voice/cues/89dfc8c65c2e01b3.wav"
+    },
+    {
+      "id": "v02-s02-c00-0",
+      "text": "Page thirty-five groups hardware by the job it performs: input, processing, output, and storage.",
+      "start": 71.366667,
+      "end": 78.641333,
+      "scene": 2,
+      "beat": 0,
+      "audio": "assets/voice/cues/8f7fb1b5efb336f5.wav"
+    },
+    {
+      "id": "v02-s02-c01-0",
+      "text": "For our robot, the sensor supplies observations. Memory holds inputs, model parameters, and working results.",
+      "start": 78.811333,
+      "end": 86.939333,
+      "scene": 2,
+      "beat": 1,
+      "audio": "assets/voice/cues/58991853a8fcbdba.wav"
+    },
+    {
+      "id": "v02-s02-c02-0",
+      "text": "The processor evaluates the program or model, and an output communicates the resulting decision.",
+      "start": 87.109333,
+      "end": 93.872,
+      "scene": 2,
+      "beat": 2,
+      "audio": "assets/voice/cues/2c2628671e3dc167.wav"
+    },
+    {
+      "id": "v02-s02-c03-0",
+      "text": "If the robot needs to move, an actuator must turn that decision into physical motion.",
+      "start": 94.042,
+      "end": 100.015333,
+      "scene": 2,
+      "beat": 3,
+      "audio": "assets/voice/cues/a3ba22f69ed41c9a.wav"
+    },
+    {
+      "id": "v02-s02-c04-0",
+      "text": "Notice that one device can have multiple roles. A touchscreen both displays output and senses input.",
+      "start": 100.185333,
+      "end": 107.673333,
+      "scene": 2,
+      "beat": 4,
+      "audio": "assets/voice/cues/972e6ca0deb8e2b5.wav"
+    },
+    {
+      "id": "v02-s02-c05-0",
+      "text": "The diagram is a chain of responsibilities, not a claim that every box must be a separate physical chip.",
+      "start": 107.843333,
+      "end": 115.288667,
+      "scene": 2,
+      "beat": 5,
+      "audio": "assets/voice/cues/36d645dde2335fe4.wav"
+    },
+    {
+      "id": "v02-s03-c00-0",
+      "text": "Use a kitchen to remember the memory hierarchy on page thirty-six.",
+      "start": 116.433333,
+      "end": 121.596,
+      "scene": 3,
+      "beat": 0,
+      "audio": "assets/voice/cues/adadc42bbbb820b1.wav"
+    },
+    {
+      "id": "v02-s03-c01-0",
+      "text": "Registers are like the tiny workspace immediately in your",
+      "start": 121.766,
+      "end": 125.286,
+      "scene": 3,
+      "beat": 1,
+      "audio": "assets/voice/cues/3257470fd0bf4b05.wav"
+    },
+    {
+      "id": "v02-s03-c01-1",
+      "text": "hands. Cache keeps useful ingredients close to the cook.",
+      "start": 125.396,
+      "end": 128.894667,
+      "scene": 3,
+      "beat": 1,
+      "audio": "assets/voice/cues/157ea481f9f99954.wav"
+    },
+    {
+      "id": "v02-s03-c02-0",
+      "text": "Main memory is the larger active workbench, while persistent storage is more like the pantry.",
+      "start": 129.064667,
+      "end": 135.827333,
+      "scene": 3,
+      "beat": 2,
+      "audio": "assets/voice/cues/ba27efa2a9656b9d.wav"
+    },
+    {
+      "id": "v02-s03-c03-0",
+      "text": "The analogy is about access and capacity, not a literal map of computer components.",
+      "start": 135.997333,
+      "end": 141.970667,
+      "scene": 3,
+      "beat": 3,
+      "audio": "assets/voice/cues/227240e469cf4698.wav"
+    },
+    {
+      "id": "v02-s03-c04-0",
+      "text": "A huge pantry does not help if ingredients arrive too slowly. Similarly, a processor can wait for data.",
+      "start": 142.140667,
+      "end": 150.076667,
+      "scene": 3,
+      "beat": 4,
+      "audio": "assets/voice/cues/7cc1a2202cda4b5f.wav"
+    },
+    {
+      "id": "v02-s03-c05-0",
+      "text": "Capacity asks how much fits. Memory bandwidth asks how quickly data can move. These are different questions.",
+      "start": 150.246667,
+      "end": 158.054667,
+      "scene": 3,
+      "beat": 5,
+      "audio": "assets/voice/cues/d5d62e9b7252c387.wav"
+    },
+    {
+      "id": "v02-s04-c00-0",
+      "text": "Look at the final paragraph on page thirty-six. Model weights,",
+      "start": 159.2,
+      "end": 163.509333,
+      "scene": 4,
+      "beat": 0,
+      "audio": "assets/voice/cues/8c75c311a2d3dc6e.wav"
+    },
+    {
+      "id": "v02-s04-c00-1",
+      "text": "inputs, and intermediate results must fit somewhere.",
+      "start": 163.619333,
+      "end": 166.926,
+      "scene": 4,
+      "beat": 0,
+      "audio": "assets/voice/cues/cd6b13c52ad5f55b.wav"
+    },
+    {
+      "id": "v02-s04-c01-0",
+      "text": "When memory bandwidth is insufficient,",
+      "start": 167.096,
+      "end": 169.549333,
+      "scene": 4,
+      "beat": 1,
+      "audio": "assets/voice/cues/ef0f5eea7d5f889f.wav"
+    },
+    {
+      "id": "v02-s04-c01-1",
+      "text": "a fast processor may spend time waiting instead of doing useful arithmetic.",
+      "start": 169.659333,
+      "end": 175.014,
+      "scene": 4,
+      "beat": 1,
+      "audio": "assets/voice/cues/de3b455aa77bbf06.wav"
+    },
+    {
+      "id": "v02-s04-c02-0",
+      "text": "Adding storage capacity alone does not automatically remove a memory-transfer bottleneck.",
+      "start": 175.184,
+      "end": 181.904,
+      "scene": 4,
+      "beat": 2,
+      "audio": "assets/voice/cues/286d86d1dfc2bae5.wav"
+    },
+    {
+      "id": "v02-s04-c03-0",
+      "text": "The table also distinguishes cache, main RAM,",
+      "start": 182.074,
+      "end": 186.020667,
+      "scene": 4,
+      "beat": 3,
+      "audio": "assets/voice/cues/955ef99ee655b4a8.wav"
+    },
+    {
+      "id": "v02-s04-c03-1",
+      "text": "and secondary storage. They are not interchangeable names for one resource.",
+      "start": 186.130667,
+      "end": 191.336,
+      "scene": 4,
+      "beat": 3,
+      "audio": "assets/voice/cues/03211f23c7a818ad.wav"
+    },
+    {
+      "id": "v02-s04-c04-0",
+      "text": "Both static RAM and dynamic RAM are volatile, although their circuits and refresh requirements differ.",
+      "start": 191.506,
+      "end": 199.356667,
+      "scene": 4,
+      "beat": 4,
+      "audio": "assets/voice/cues/3f868a784da5a207.wav"
+    },
+    {
+      "id": "v02-s04-c05-0",
+      "text": "For this tutorial, focus on the system question:",
+      "start": 199.526667,
+      "end": 202.854667,
+      "scene": 4,
+      "beat": 5,
+      "audio": "assets/voice/cues/f4c0527f0d52ecc3.wav"
+    },
+    {
+      "id": "v02-s04-c05-1",
+      "text": "is the limiting factor how much fits, or how quickly it arrives?",
+      "start": 202.964667,
+      "end": 207.274,
+      "scene": 4,
+      "beat": 5,
+      "audio": "assets/voice/cues/248d8f6056da829d.wav"
+    },
+    {
+      "id": "v02-s05-c00-0",
+      "text": "Now compare the processing roles in the table on page forty-six.",
+      "start": 208.4,
+      "end": 212.986667,
+      "scene": 5,
+      "beat": 0,
+      "audio": "assets/voice/cues/ee081a1fd888a0e1.wav"
+    },
+    {
+      "id": "v02-s05-c01-0",
+      "text": "A CPU handles general control, branches,",
+      "start": 213.156667,
+      "end": 216.698,
+      "scene": 5,
+      "beat": 1,
+      "audio": "assets/voice/cues/5d199ba1b03ee42f.wav"
+    },
+    {
+      "id": "v02-s05-c01-1",
+      "text": "and diverse tasks. A GPU can accelerate suitable parallel arithmetic workloads.",
+      "start": 216.808,
+      "end": 223.122667,
+      "scene": 5,
+      "beat": 1,
+      "audio": "assets/voice/cues/f89482912181db3b.wav"
+    },
+    {
+      "id": "v02-s05-c02-0",
+      "text": "Specialised accelerators can efficiently perform supported tensor operations,",
+      "start": 223.292667,
+      "end": 228.732667,
+      "scene": 5,
+      "beat": 2,
+      "audio": "assets/voice/cues/440777e4fbba7a4e.wav"
+    },
+    {
+      "id": "v02-s05-c02-1",
+      "text": "but their benefits depend on the actual workload.",
+      "start": 228.842667,
+      "end": 231.914667,
+      "scene": 5,
+      "beat": 2,
+      "audio": "assets/voice/cues/ae023373214f2f8d.wav"
+    },
+    {
+      "id": "v02-s05-c03-0",
+      "text": "Simple tabular reinforcement learning can run on an ordinary CPU. AI does not always require a GPU.",
+      "start": 232.084667,
+      "end": 241.364667,
+      "scene": 5,
+      "beat": 3,
+      "audio": "assets/voice/cues/6670e9310de54616.wav"
+    },
+    {
+      "id": "v02-s05-c04-0",
+      "text": "Training changes model parameters. Inference uses an existing model to produce an output.",
+      "start": 241.534667,
+      "end": 248.062667,
+      "scene": 5,
+      "beat": 4,
+      "audio": "assets/voice/cues/8af965de81066cc8.wav"
+    },
+    {
+      "id": "v02-s05-c05-0",
+      "text": "A model can be trained on a large server and deployed on a smaller device if the deployment requirements fit.",
+      "start": 248.232667,
+      "end": 256.040667,
+      "scene": 5,
+      "beat": 5,
+      "audio": "assets/voice/cues/81602aac7da9a31b.wav"
+    },
+    {
+      "id": "v02-s06-c00-0",
+      "text": "Page thirty-nine uses laundry to explain pipelining. One load can dry while a later load is washing.",
+      "start": 257.166667,
+      "end": 264.953333,
+      "scene": 6,
+      "beat": 0,
+      "audio": "assets/voice/cues/0000feb206aa90bd.wav"
+    },
+    {
+      "id": "v02-s06-c01-0",
+      "text": "In our simplified processor, the stages are fetch, decode, execute, and write.",
+      "start": 265.123333,
+      "end": 270.776667,
+      "scene": 6,
+      "beat": 1,
+      "audio": "assets/voice/cues/53932eb2a9f5292f.wav"
+    },
+    {
+      "id": "v02-s06-c02-0",
+      "text": "Instruction one enters fetch in cycle one. In cycle two, it decodes while instruction two enters fetch.",
+      "start": 270.946667,
+      "end": 278.733333,
+      "scene": 6,
+      "beat": 2,
+      "audio": "assets/voice/cues/ea9891737719e8ab.wav"
+    },
+    {
+      "id": "v02-s06-c03-0",
+      "text": "Keep stepping forward. The instructions occupy different stages,",
+      "start": 278.903333,
+      "end": 283.362,
+      "scene": 6,
+      "beat": 3,
+      "audio": "assets/voice/cues/0e70d4276f92e3a0.wav"
+    },
+    {
+      "id": "v02-s06-c03-1",
+      "text": "so several instructions make progress during the same cycle.",
+      "start": 283.472,
+      "end": 287.354667,
+      "scene": 6,
+      "beat": 3,
+      "audio": "assets/voice/cues/f11b62801d53fb08.wav"
+    },
+    {
+      "id": "v02-s06-c04-0",
+      "text": "After the pipeline fills, this ideal example completes one instruction per cycle, assuming no stalls.",
+      "start": 287.524667,
+      "end": 295.268667,
+      "scene": 6,
+      "beat": 4,
+      "audio": "assets/voice/cues/889eace73f2f94f6.wav"
+    },
+    {
+      "id": "v02-s06-c05-0",
+      "text": "It does not make an individual four-stage instruction take just one cycle from start to finish.",
+      "start": 295.438667,
+      "end": 302.393333,
+      "scene": 6,
+      "beat": 5,
+      "audio": "assets/voice/cues/5436be0f00071705.wav"
+    },
+    {
+      "id": "v02-s06-c06-0",
+      "text": "Real pipelines can pause for dependencies, uncertain branches,",
+      "start": 302.563333,
+      "end": 307.299333,
+      "scene": 6,
+      "beat": 6,
+      "audio": "assets/voice/cues/6112ca11ce432927.wav"
+    },
+    {
+      "id": "v02-s06-c06-1",
+      "text": "or shared resources. The guide names these as hazards.",
+      "start": 307.409333,
+      "end": 311.462667,
+      "scene": 6,
+      "beat": 6,
+      "audio": "assets/voice/cues/e05d1b01b499ab69.wav"
+    },
+    {
+      "id": "v02-s06-c07-0",
+      "text": "Use the included Python table to compare completion cycles rather than relying only on the moving picture.",
+      "start": 311.632667,
+      "end": 319.142,
+      "scene": 6,
+      "beat": 7,
+      "audio": "assets/voice/cues/91ed53c220d1e705.wav"
+    },
+    {
+      "id": "v02-s07-c00-0",
+      "text": "Turn to page forty-four and trace the environmental control loop.",
+      "start": 320.266667,
+      "end": 324.938667,
+      "scene": 7,
+      "beat": 0,
+      "audio": "assets/voice/cues/79228e8bc56c4a0a.wav"
+    },
+    {
+      "id": "v02-s07-c01-0",
+      "text": "An analogue sensor may need an analogue-to-digital converter. Many sensors already provide digital measurements.",
+      "start": 325.108667,
+      "end": 333.364667,
+      "scene": 7,
+      "beat": 1,
+      "audio": "assets/voice/cues/572dea1665c32e3f.wav"
+    },
+    {
+      "id": "v02-s07-c02-0",
+      "text": "The processor evaluates a decision, then a driver or power stage supplies what the actuator needs.",
+      "start": 333.534667,
+      "end": 340.596,
+      "scene": 7,
+      "beat": 2,
+      "audio": "assets/voice/cues/82cc32de85a44c15.wav"
+    },
+    {
+      "id": "v02-s07-c03-0",
+      "text": "Some actuators use a digital interface or pulse-width modulation.",
+      "start": 340.766,
+      "end": 346.014,
+      "scene": 7,
+      "beat": 3,
+      "audio": "assets/voice/cues/df0ec70d0eda2dc0.wav"
+    },
+    {
+      "id": "v02-s07-c03-1",
+      "text": "They do not all require a digital-to-analogue converter.",
+      "start": 346.124,
+      "end": 350.006667,
+      "scene": 7,
+      "beat": 3,
+      "audio": "assets/voice/cues/4225861610d8c162.wav"
+    },
+    {
+      "id": "v02-s07-c04-0",
+      "text": "Pulse-width modulation is timed switching, not the same thing as converting a value into an analogue voltage.",
+      "start": 350.176667,
+      "end": 358.368667,
+      "scene": 7,
+      "beat": 4,
+      "audio": "assets/voice/cues/4a33e95ab389c1ba.wav"
+    },
+    {
+      "id": "v02-s07-c05-0",
+      "text": "A control signal can tell a motor what to do without being able to supply the current that moves it.",
+      "start": 358.538667,
+      "end": 365.237333,
+      "scene": 7,
+      "beat": 5,
+      "audio": "assets/voice/cues/2e89092b6cb964b4.wav"
+    },
+    {
+      "id": "v02-s08-c00-0",
+      "text": "Imagine the robot detects an obstacle, selects a turn, and sends a command to its motor driver.",
+      "start": 366.366667,
+      "end": 373.513333,
+      "scene": 8,
+      "beat": 0,
+      "audio": "assets/voice/cues/503b668190b5866b.wav"
+    },
+    {
+      "id": "v02-s08-c01-0",
+      "text": "The driver powers the motor, the wheels move, and the sensor measures the changed situation.",
+      "start": 373.683333,
+      "end": 380.126,
+      "scene": 8,
+      "beat": 1,
+      "audio": "assets/voice/cues/6a68405ed4d94efe.wav"
+    },
+    {
+      "id": "v02-s08-c02-0",
+      "text": "That final measurement closes the feedback loop. The command alone does not prove the movement succeeded.",
+      "start": 380.296,
+      "end": 387.186667,
+      "scene": 8,
+      "beat": 2,
+      "audio": "assets/voice/cues/b73b014b73b7902b.wav"
+    },
+    {
+      "id": "v02-s08-c03-0",
+      "text": "A wheel might slip, a sensor might be noisy, or the actuator might reach a mechanical limit.",
+      "start": 387.356667,
+      "end": 393.842,
+      "scene": 8,
+      "beat": 3,
+      "audio": "assets/voice/cues/0eee78aa270e8a76.wav"
+    },
+    {
+      "id": "v02-s08-c04-0",
+      "text": "The book also separates monitoring from control. Displaying a measurement monitors;",
+      "start": 394.012,
+      "end": 399.686667,
+      "scene": 8,
+      "beat": 4,
+      "audio": "assets/voice/cues/23b0f83ccf1be143.wav"
+    },
+    {
+      "id": "v02-s08-c04-1",
+      "text": "changing the environment adds control.",
+      "start": 399.796667,
+      "end": 402.57,
+      "scene": 8,
+      "beat": 4,
+      "audio": "assets/voice/cues/58acf8493129959c.wav"
+    },
+    {
+      "id": "v02-s08-c05-0",
+      "text": "This loop can use a fixed rule or a learned policy. The hardware path alone does not tell you which.",
+      "start": 402.74,
+      "end": 409.673333,
+      "scene": 8,
+      "beat": 5,
+      "audio": "assets/voice/cues/9ed120bbd8498e6e.wav"
+    },
+    {
+      "id": "v02-s09-c00-0",
+      "text": "Pause and diagnose a system. Its processor repeatedly waits for data,",
+      "start": 410.8,
+      "end": 416.112,
+      "scene": 9,
+      "beat": 0,
+      "audio": "assets/voice/cues/9cd35f03f63122b3.wav"
+    },
+    {
+      "id": "v02-s09-c00-1",
+      "text": "and its motor driver cannot supply enough current.",
+      "start": 416.222,
+      "end": 419.443333,
+      "scene": 9,
+      "beat": 0,
+      "audio": "assets/voice/cues/7f2d54295f875c9c.wav"
+    },
+    {
+      "id": "v02-s09-c01-0",
+      "text": "Would replacing the processor with a faster GPU solve both problems? Think before the answer appears.",
+      "start": 419.613333,
+      "end": 427.058667,
+      "scene": 9,
+      "beat": 1,
+      "audio": "assets/voice/cues/978b579b701f5bb5.wav"
+    },
+    {
+      "id": "v02-s09-c02-0",
+      "text": "No. Memory movement and actuator power are separate limits that a new GPU does not automatically remove.",
+      "start": 433.228667,
+      "end": 441.228667,
+      "scene": 9,
+      "beat": 2,
+      "audio": "assets/voice/cues/6474834fe1b011ad.wav"
+    },
+    {
+      "id": "v02-s09-c03-0",
+      "text": "Measure the path, identify the limiting stage, and match the intervention to that evidence.",
+      "start": 441.398667,
+      "end": 447.542667,
+      "scene": 9,
+      "beat": 3,
+      "audio": "assets/voice/cues/d05ee14add732976.wav"
+    },
+    {
+      "id": "v02-s09-c04-0",
+      "text": "Page eighty-six broadens the discussion to power, heat, memory, and physical constraints.",
+      "start": 447.712667,
+      "end": 453.920667,
+      "scene": 9,
+      "beat": 4,
+      "audio": "assets/voice/cues/422eb6d8eace567a.wav"
+    },
+    {
+      "id": "v02-s09-c05-0",
+      "text": "An advertised arithmetic rate describes one capability. It is",
+      "start": 454.090667,
+      "end": 458.912,
+      "scene": 9,
+      "beat": 5,
+      "audio": "assets/voice/cues/9ce247f80ee5aacd.wav"
+    },
+    {
+      "id": "v02-s09-c05-1",
+      "text": "not a complete measurement of the robot's useful performance.",
+      "start": 459.022,
+      "end": 463.139333,
+      "scene": 9,
+      "beat": 5,
+      "audio": "assets/voice/cues/d1434930d2d444ea.wav"
+    },
+    {
+      "id": "v02-s10-c00-0",
+      "text": "Recap the path from page thirty-five: observations enter,",
+      "start": 464.266667,
+      "end": 468.661333,
+      "scene": 10,
+      "beat": 0,
+      "audio": "assets/voice/cues/11bda1f50dfc5886.wav"
+    },
+    {
+      "id": "v02-s10-c00-1",
+      "text": "memory holds information, processing evaluates it, and outputs communicate or act.",
+      "start": 468.771333,
+      "end": 475.235333,
+      "scene": 10,
+      "beat": 0,
+      "audio": "assets/voice/cues/a9d96ac501371c68.wav"
+    },
+    {
+      "id": "v02-s10-c01-0",
+      "text": "Page thirty-six explains why memory capacity",
+      "start": 475.405333,
+      "end": 478.690667,
+      "scene": 10,
+      "beat": 1,
+      "audio": "assets/voice/cues/f685c7168cdcd069.wav"
+    },
+    {
+      "id": "v02-s10-c01-1",
+      "text": "and bandwidth both matter. Page thirty-nine separates pipeline throughput from instruction latency.",
+      "start": 478.800667,
+      "end": 485.499333,
+      "scene": 10,
+      "beat": 1,
+      "audio": "assets/voice/cues/f86759408f22a54f.wav"
+    },
+    {
+      "id": "v02-s10-c02-0",
+      "text": "Page forty-four explains conversion, control signals,",
+      "start": 485.669333,
+      "end": 489.722667,
+      "scene": 10,
+      "beat": 2,
+      "audio": "assets/voice/cues/00d335c3284ff7df.wav"
+    },
+    {
+      "id": "v02-s10-c02-1",
+      "text": "and actuator power. Page forty-six compares processing strengths.",
+      "start": 489.832667,
+      "end": 494.526,
+      "scene": 10,
+      "beat": 2,
+      "audio": "assets/voice/cues/089d985f32b522b7.wav"
+    },
+    {
+      "id": "v02-s10-c03-0",
+      "text": "Choose hardware by the workload, deadlines, power budget, and physical task.",
+      "start": 494.696,
+      "end": 499.88,
+      "scene": 10,
+      "beat": 3,
+      "audio": "assets/voice/cues/b98e7feede2cef20.wav"
+    },
+    {
+      "id": "v02-s10-c04-0",
+      "text": "To check your understanding, draw a robot's path from camera to wheel,",
+      "start": 500.05,
+      "end": 504.487333,
+      "scene": 10,
+      "beat": 4,
+      "audio": "assets/voice/cues/c1cd22e0b9ae2739.wav"
+    },
+    {
+      "id": "v02-s10-c04-1",
+      "text": "and label one possible bottleneck at each stage.",
+      "start": 504.597333,
+      "end": 508.032,
+      "scene": 10,
+      "beat": 4,
+      "audio": "assets/voice/cues/b053a65e40ef3168.wav"
+    },
+    {
+      "id": "v02-s10-c05-0",
+      "text": "Then explain why a more powerful chip does not, by itself, create a learning algorithm.",
+      "start": 508.202,
+      "end": 514.175333,
+      "scene": 10,
+      "beat": 5,
+      "audio": "assets/voice/cues/727b32a8c9072c10.wav"
+    },
+    {
+      "id": "v02-s11-c00-0",
+      "text": "This tutorial used the Blue Impulse study guide, pages thirty-five,",
+      "start": 515.3,
+      "end": 520.206667,
+      "scene": 11,
+      "beat": 0,
+      "audio": "assets/voice/cues/d910edfba9d00734.wav"
+    },
+    {
+      "id": "v02-s11-c00-1",
+      "text": "thirty-six, thirty-nine, forty-four, forty-six, and eighty-six.",
+      "start": 520.316667,
+      "end": 524.796667,
+      "scene": 11,
+      "beat": 0,
+      "audio": "assets/voice/cues/ed9a48a9e1bb3f5e.wav"
+    },
+    {
+      "id": "v02-s11-c01-0",
+      "text": "The original book cover is shown on screen as our credit.",
+      "start": 524.966667,
+      "end": 528.7,
+      "scene": 11,
+      "beat": 1,
+      "audio": "assets/voice/cues/ff080997e7875582.wav"
+    },
+    {
+      "id": "v02-s11-c02-0",
+      "text": "The companion tutorial PDF",
+      "start": 528.87,
+      "end": 531.174,
+      "scene": 11,
+      "beat": 2,
+      "audio": "assets/voice/cues/5539c53b15882fd0.wav"
+    },
+    {
+      "id": "v02-s11-c02-1",
+      "text": "and pipeline demonstration help you repeat the lesson without replaying every explanation.",
+      "start": 531.284,
+      "end": 537.684,
+      "scene": 11,
+      "beat": 2,
+      "audio": "assets/voice/cues/b3eb5e441a2f25d3.wav"
+    },
+    {
+      "id": "v02-s11-c03-0",
+      "text": "Blue Impulse study guide. Trace the whole system before choosing the hardware.",
+      "start": 537.854,
+      "end": 543.038,
+      "scene": 11,
+      "beat": 3,
+      "audio": "assets/voice/cues/a54ac511570533ff.wav"
+    }
+  ],
+  "audio": "assets/voice/video-02-mix.m4a"
+}

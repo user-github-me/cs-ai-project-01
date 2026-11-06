@@ -1,0 +1,218 @@
+<template>
+  <style>
+    @font-face { font-family: Anta; src: url('assets/fonts/Anta-Regular.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: Inter; src: url('assets/fonts/Inter-400.woff2') format('woff2'); font-weight: 400; }
+    @font-face { font-family: Inter; src: url('assets/fonts/Inter-700.woff2') format('woff2'); font-weight: 700; }
+    @font-face { font-family: 'JetBrains Mono'; src: url('assets/fonts/JetBrainsMono-400.woff2') format('woff2'); font-weight: 400; }
+    [data-composition-id="message-demo"] { position: relative; width: 100%; height: 100%; overflow: hidden; color: #E6E4E5; font-family: Inter, sans-serif; }
+    #message-demo-background, #message-demo-content { position: absolute; inset: 0; }
+    #message-demo-background { background: #212C4A; }
+    #message-demo-content * { box-sizing: border-box; }
+    #message-demo-title { position: absolute; left: 192px; top: 140px; width: 1536px; margin: 0; font: 400 64px/1.15 Anta, sans-serif; }
+    #message-demo-subtitle { position: absolute; left: 192px; top: 230px; width: 1536px; margin: 0; font: 400 30px/1.3 Inter, sans-serif; }
+    #message-demo-citation { position: absolute; left: 192px; top: 812px; margin: 0; font: 400 28px/1.15 Inter, sans-serif; }
+    #message-demo-intro, #message-demo-assumptions, #message-demo-lesson { position: absolute; left: 192px; top: 310px; width: 1536px; height: 470px; opacity: 0; }
+    #message-demo-intro-title { position: absolute; left: 0; top: 60px; width: 1536px; margin: 0; color: #E15B83; font: 400 64px/1.2 Anta, sans-serif; }
+    #message-demo-intro-body { position: absolute; left: 0; top: 176px; width: 1420px; margin: 0; font: 400 42px/1.45 Inter, sans-serif; }
+    #message-demo-intro-note { position: absolute; left: 0; top: 336px; width: 1536px; margin: 0; font: 400 34px/1.35 Inter, sans-serif; }
+    #message-demo-receiver { position: absolute; left: 192px; top: 310px; width: 736px; height: 470px; }
+    #message-demo-receiver-title { position: absolute; left: 0; top: 0; width: 736px; margin: 0; opacity: 0; font: 400 44px/1.2 Anta, sans-serif; }
+    #message-demo-device, #message-demo-units, #message-demo-policy { position: absolute; left: 0; width: 736px; height: 47px; margin: 0; opacity: 0; font: 400 38px/1.2 Inter, sans-serif; }
+    #message-demo-device { top: 77px; }
+    #message-demo-units { top: 134px; }
+    #message-demo-policy { top: 191px; }
+    #message-demo-receiver strong { color: #E15B83; font-weight: 700; }
+    #message-demo-age-rule { position: absolute; left: 0; top: 279px; width: 736px; margin: 0; opacity: 0; font: 400 38px/1.2 Inter, sans-serif; }
+    #message-demo-sequence-rule { position: absolute; left: 0; top: 336px; width: 736px; margin: 0; opacity: 0; font: 400 34px/1.25 Inter, sans-serif; }
+    #message-demo-processed { position: absolute; left: 0; top: 408px; width: 736px; height: 45px; opacity: 0; }
+    #message-demo-processed-41, #message-demo-processed-42 { position: absolute; left: 0; top: 0; width: 736px; margin: 0; font: 400 32px/1.2 'JetBrains Mono', monospace; }
+    #message-demo-processed-42 { opacity: 0; }
+    #message-demo-content .message-demo-packet { position: absolute; left: 1024px; top: 310px; width: 704px; height: 470px; opacity: 0; }
+    #message-demo-content .message-demo-packet-title { position: absolute; left: 0; top: 0; width: 704px; margin: 0; font: 400 44px/1.2 Anta, sans-serif; }
+    #message-demo-content .message-demo-field { position: absolute; left: 0; width: 704px; margin: 0; font: 400 36px/1.2 'JetBrains Mono', monospace; }
+    #message-demo-content .message-demo-field-1 { top: 67px; }
+    #message-demo-content .message-demo-field-2 { top: 117px; }
+    #message-demo-content .message-demo-field-3 { top: 167px; }
+    #message-demo-content .message-demo-field-4 { top: 217px; }
+    #message-demo-content .message-demo-field-5 { top: 267px; }
+    #message-demo-content .message-demo-field strong { color: #E15B83; font-weight: 400; }
+    #message-demo-content .message-demo-result { position: absolute; left: 0; top: 338px; width: 704px; height: 132px; opacity: 0; }
+    #message-demo-content .message-demo-result-label { position: absolute; left: 0; top: 0; width: 704px; margin: 0; font: 400 30px/1.2 Inter, sans-serif; }
+    #message-demo-content .message-demo-result-status { position: absolute; left: 0; top: 37px; width: 704px; margin: 0; color: #E15B83; font: 400 44px/1.2 Anta, sans-serif; }
+    #message-demo-content .message-demo-result-reason { position: absolute; left: 0; top: 93px; width: 704px; margin: 0; font: 400 31px/1.25 Inter, sans-serif; }
+    #message-demo-assumptions-title { position: absolute; left: 0; top: 48px; width: 1536px; margin: 0; color: #E15B83; font: 400 56px/1.3 Anta, sans-serif; }
+    #message-demo-assumptions-crypto { position: absolute; left: 0; top: 174px; width: 1480px; margin: 0; font: 400 39px/1.45 Inter, sans-serif; }
+    #message-demo-assumptions-safety { position: absolute; left: 0; top: 304px; width: 1480px; margin: 0; font: 400 39px/1.45 Inter, sans-serif; }
+    #message-demo-lesson-title { position: absolute; left: 0; top: 38px; width: 1536px; margin: 0; color: #E15B83; font: 400 78px/1.2 Anta, sans-serif; }
+    #message-demo-lesson-question { position: absolute; left: 0; top: 169px; width: 1536px; margin: 0; font: 400 44px/1.35 Inter, sans-serif; }
+    #message-demo-lesson-checks { position: absolute; left: 0; top: 284px; width: 1536px; margin: 0; font: 400 37px/1.3 Inter, sans-serif; }
+    #message-demo-lesson-note { position: absolute; left: 0; top: 374px; width: 1536px; margin: 0; font: 400 32px/1.3 Inter, sans-serif; }
+  </style>
+
+  <div data-hf-id="hf-87jx" id="root" class="clip" data-composition-id="message-demo" data-width="1920" data-height="1080" data-start="0" data-duration="69.666667">
+    <div data-hf-id="hf-8562" id="message-demo-background" class="clip" data-start="0" data-duration="69.666667" data-track-index="0"></div>
+    <div data-hf-id="hf-4t7k" id="message-demo-content" class="clip" data-start="0" data-duration="69.666667" data-track-index="1">
+      <h1 data-hf-id="hf-dix7" id="message-demo-title">Inspect three incoming messages</h1>
+      <p data-hf-id="hf-6be0" id="message-demo-subtitle">Illustrative receiver model · Not a universal protocol</p>
+
+      <div data-hf-id="hf-uqcj" id="message-demo-intro">
+        <p data-hf-id="hf-8v70" id="message-demo-intro-title">Delivery is only the first step.</p>
+        <p data-hf-id="hf-qn65" id="message-demo-intro-body">This supporting example checks whether a command is still meaningful when it arrives.</p>
+        <p data-hf-id="hf-scar" id="message-demo-intro-note">We will inspect context, age, and sequence.</p>
+      </div>
+
+      <div data-hf-id="hf-vyao" id="message-demo-receiver">
+        <p data-hf-id="hf-k5r1" id="message-demo-receiver-title">Receiver expects</p>
+        <p data-hf-id="hf-f8fu" id="message-demo-device">Device: <strong data-hf-id="hf-xpnv">robot-7</strong></p>
+        <p data-hf-id="hf-g6ee" id="message-demo-units">Units: <strong data-hf-id="hf-zo2y">m</strong> (metres)</p>
+        <p data-hf-id="hf-njxq" id="message-demo-policy">Policy version: <strong data-hf-id="hf-fem3">3</strong></p>
+        <p data-hf-id="hf-nkj9" id="message-demo-age-rule">Maximum age: <strong data-hf-id="hf-9kpg">200 ms</strong></p>
+        <p data-hf-id="hf-wpu5" id="message-demo-sequence-rule">Require sequence > last processed.</p>
+        <div data-hf-id="hf-4hxl" id="message-demo-processed">
+          <p data-hf-id="hf-8qtw" id="message-demo-processed-41">Last processed: 41</p>
+          <p data-hf-id="hf-k50n" id="message-demo-processed-42">Last processed: <strong data-hf-id="hf-eb94">42</strong></p>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-4zcw" id="message-demo-packet-1" class="message-demo-packet">
+        <p data-hf-id="hf-gvcb" id="message-demo-packet-title-1" class="message-demo-packet-title">Message 01</p>
+        <p data-hf-id="hf-2w49" id="message-demo-device-1" class="message-demo-field message-demo-field-1">device = "robot-7"</p>
+        <p data-hf-id="hf-na4d" id="message-demo-units-1" class="message-demo-field message-demo-field-2">units = "m"</p>
+        <p data-hf-id="hf-g87h" id="message-demo-policy-1" class="message-demo-field message-demo-field-3">policy_version = 3</p>
+        <p data-hf-id="hf-w5t7" id="message-demo-sequence-1" class="message-demo-field message-demo-field-4">sequence = <strong data-hf-id="hf-18pc">42</strong></p>
+        <p data-hf-id="hf-5lai" id="message-demo-age-1" class="message-demo-field message-demo-field-5">computed age = <strong data-hf-id="hf-1lht">50 ms</strong></p>
+        <div data-hf-id="hf-hkge" id="message-demo-result-1" class="message-demo-result">
+          <p id="message-demo-result-label-1" class="message-demo-result-label">Decision for message 01</p>
+          <p data-hf-id="hf-jhwt" id="message-demo-status-1" class="message-demo-result-status">ACCEPT</p>
+          <p data-hf-id="hf-jqd9" id="message-demo-reason-1" class="message-demo-result-reason">Expected context. Fresh. New sequence.</p>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-fuuj" id="message-demo-packet-2" class="message-demo-packet">
+        <p data-hf-id="hf-z3rd" id="message-demo-packet-title-2" class="message-demo-packet-title">Message 02</p>
+        <p data-hf-id="hf-7zu8" id="message-demo-device-2" class="message-demo-field message-demo-field-1">device = "robot-7"</p>
+        <p data-hf-id="hf-3q9i" id="message-demo-units-2" class="message-demo-field message-demo-field-2">units = "m"</p>
+        <p data-hf-id="hf-gwv2" id="message-demo-policy-2" class="message-demo-field message-demo-field-3">policy_version = 3</p>
+        <p data-hf-id="hf-zttw" id="message-demo-sequence-2" class="message-demo-field message-demo-field-4">sequence = <strong data-hf-id="hf-dwy3">43</strong></p>
+        <p data-hf-id="hf-eqpf" id="message-demo-age-2" class="message-demo-field message-demo-field-5">computed age = <strong data-hf-id="hf-k34g">600 ms</strong></p>
+        <div data-hf-id="hf-dmcd" id="message-demo-result-2" class="message-demo-result">
+          <p id="message-demo-result-label-2" class="message-demo-result-label">Decision for message 02</p>
+          <p data-hf-id="hf-1qcx" id="message-demo-status-2" class="message-demo-result-status">STALE</p>
+          <p data-hf-id="hf-iokz" id="message-demo-reason-2" class="message-demo-result-reason">Rejected: 600 ms exceeds the 200 ms limit.</p>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-bwqi" id="message-demo-packet-3" class="message-demo-packet">
+        <p data-hf-id="hf-xf1n" id="message-demo-packet-title-3" class="message-demo-packet-title">Message 03</p>
+        <p data-hf-id="hf-yqev" id="message-demo-device-3" class="message-demo-field message-demo-field-1">device = "robot-7"</p>
+        <p data-hf-id="hf-4lin" id="message-demo-units-3" class="message-demo-field message-demo-field-2">units = "m"</p>
+        <p data-hf-id="hf-cawz" id="message-demo-policy-3" class="message-demo-field message-demo-field-3">policy_version = 3</p>
+        <p data-hf-id="hf-4pfl" id="message-demo-sequence-3" class="message-demo-field message-demo-field-4">sequence = <strong data-hf-id="hf-01s9">42</strong></p>
+        <p data-hf-id="hf-3umw" id="message-demo-age-3" class="message-demo-field message-demo-field-5">computed age = <strong data-hf-id="hf-3gq0">60 ms</strong></p>
+        <div data-hf-id="hf-cuok" id="message-demo-result-3" class="message-demo-result">
+          <p id="message-demo-result-label-3" class="message-demo-result-label">Decision for message 03</p>
+          <p data-hf-id="hf-l4dc" id="message-demo-status-3" class="message-demo-result-status">DUPLICATE / OLD SEQUENCE</p>
+          <p data-hf-id="hf-s04g" id="message-demo-reason-3" class="message-demo-result-reason">Rejected: 42 is not newer than 42.</p>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-vm7l" id="message-demo-assumptions">
+        <p data-hf-id="hf-f28h" id="message-demo-assumptions-title">Authentication is assumed elsewhere.</p>
+        <p data-hf-id="hf-ycaf" id="message-demo-assumptions-crypto">This demonstration does not implement cryptographic authentication.</p>
+        <p data-hf-id="hf-i18z" id="message-demo-assumptions-safety">It does not certify a safety-critical controller.</p>
+      </div>
+
+      <div data-hf-id="hf-p9r7" id="message-demo-lesson">
+        <p data-hf-id="hf-mycl" id="message-demo-lesson-title">Delivery alone is not enough</p>
+        <p data-hf-id="hf-dn1h" id="message-demo-lesson-question">Should the receiver still act on this message?</p>
+        <p data-hf-id="hf-9a9s" id="message-demo-lesson-checks">Expected context · Fresh enough · Newer sequence</p>
+        <p data-hf-id="hf-vnsi" id="message-demo-lesson-note">These application checks assume authentication was handled separately.</p>
+      </div>
+
+      <p data-hf-id="hf-g0za" id="message-demo-citation">Blue Impulse study guide · p. 75 · Networked AI</p>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const BEATS = [0.3, 8.836, 15.406, 23.234667, 31.856, 40.413333, 49.482667, 60.429333];
+      const CAPTIONS = [{"start": 0.3, "end": 5.782667, "text": "Let's run the supporting packet-checking example. This is an illustrative design,"}, {"start": 5.892667, "end": 8.666, "text": "not a universal protocol from the book."}, {"start": 8.836, "end": 15.236, "text": "Our toy receiver expects robot seven, metres as the unit, and policy version three."}, {"start": 15.406, "end": 23.064667, "text": "For this demonstration, it rejects commands older than two hundred milliseconds and sequences already processed."}, {"start": 23.234667, "end": 27.437333, "text": "The first message has the expected context, a new sequence,"}, {"start": 27.547333, "end": 31.686, "text": "and an age of fifty milliseconds. It passes these checks."}, {"start": 31.856, "end": 37.189333, "text": "The second is six hundred milliseconds old. The receiver rejects it as stale,"}, {"start": 37.299333, "end": 40.243333, "text": "even if the network eventually delivered it."}, {"start": 40.413333, "end": 44.381333, "text": "The third repeats an already processed sequence. The receiver"}, {"start": 44.491333, "end": 49.312667, "text": "rejects it as a duplicate instead of executing the command twice."}, {"start": 49.482667, "end": 54.304, "text": "Our example assumes authentication was checked elsewhere. It does not"}, {"start": 54.414, "end": 60.259333, "text": "implement cryptographic authentication or certify a safety-critical controller."}, {"start": 60.429333, "end": 64.525333, "text": "The useful lesson is why delivery alone is insufficient:"}, {"start": 64.635333, "end": 68.838, "text": "the receiver must decide whether the message is still meaningful."}];
+      const DURATION = 69.666667;
+      const tl = gsap.timeline({ paused: true });
+
+      // The builder injects scene-relative { start, end, text } caption chunks.
+      // Use an exact start only for a matching prefix. An interior result clause
+      // waits for the caption end; no word-timing estimate is used.
+      function clauseTime(phrase, fallback) {
+        const clean = text => String(text).toLowerCase().replace(/\s+/g, ' ').trim();
+        const needle = clean(phrase);
+        const caption = CAPTIONS.find(item => clean(item.text).includes(needle));
+        if (!caption) return fallback;
+        const at = Number(clean(caption.text).startsWith(needle) ? caption.start : caption.end);
+        return Number.isFinite(at) ? at : fallback;
+      }
+
+      // Entering objects pull down 12 px over three frames, then travel up.
+      // All starting values live on the timeline so direct seeks are stable.
+      function enter(selector, at) {
+        tl.set(selector, { opacity: 0, y: 12 }, 0);
+        tl.to(selector, { opacity: 1, y: 24, duration: 0.1, ease: 'power2.out' }, at);
+        tl.to(selector, { y: 0, duration: 0.5, ease: 'power3.out' }, at + 0.1);
+      }
+
+      enter('#message-demo-title', BEATS[0]);
+      enter('#message-demo-subtitle', BEATS[0] + 0.1);
+      enter('#message-demo-intro', BEATS[0] + 0.2);
+      tl.set('#message-demo-intro', { opacity: 0 }, BEATS[1]);
+
+      enter('#message-demo-receiver-title', BEATS[1]);
+      enter('#message-demo-device', BEATS[1] + 0.1);
+      enter('#message-demo-units', BEATS[1] + 0.2);
+      enter('#message-demo-policy', BEATS[1] + 0.3);
+      enter('#message-demo-age-rule', BEATS[2]);
+      enter('#message-demo-sequence-rule', BEATS[2] + 0.1);
+      enter('#message-demo-processed', BEATS[2] + 0.2);
+
+      const resultTimes = [
+        clauseTime('It passes these checks', BEATS[3] + 5.5),
+        clauseTime('The receiver rejects it as stale', BEATS[4] + 4.5),
+        clauseTime('rejects it as a duplicate', BEATS[5] + 4.2)
+      ];
+      // Show only the current incoming fields, but keep the explicitly labelled
+      // previous decision until the next spoken result has actually arrived.
+      for (let packet = 1; packet <= 3; packet += 1) {
+        const cue = packet + 2;
+        if (packet > 1) {
+          const previous = packet - 1;
+          ['packet-title', 'device', 'units', 'policy', 'sequence', 'age'].forEach(field => {
+            tl.set('#message-demo-' + field + '-' + previous, { opacity: 0 }, BEATS[cue]);
+          });
+          tl.set('#message-demo-result-' + previous, { opacity: 0 }, resultTimes[packet - 1]);
+        }
+        enter('#message-demo-packet-' + packet, BEATS[cue] + 0.1);
+        enter('#message-demo-result-' + packet, resultTimes[packet - 1]);
+      }
+
+      // The 50 ms age is in a later caption than the first packet's context.
+      enter('#message-demo-age-1', clauseTime('and an age of fifty milliseconds', BEATS[3] + 3.2));
+
+      // The supporting Python starts with 41 and then remembers accepted 42.
+      // Neither stale sequence 43 nor the repeat of 42 changes that state.
+      tl.set('#message-demo-processed-41', { opacity: 1 }, 0);
+      tl.set('#message-demo-processed-42', { opacity: 0 }, 0);
+      tl.set('#message-demo-processed-41', { opacity: 0 }, resultTimes[0] + 0.1);
+      tl.set('#message-demo-processed-42', { opacity: 1 }, resultTimes[0] + 0.1);
+
+      // The security limits arrive with their narration, after all three cases.
+      tl.set('#message-demo-receiver', { opacity: 1 }, 0);
+      tl.set('#message-demo-receiver', { opacity: 0 }, BEATS[6]);
+      [1, 2, 3].forEach(packet => tl.set('#message-demo-packet-' + packet, { opacity: 0 }, BEATS[6]));
+      enter('#message-demo-assumptions', BEATS[6] + 0.1);
+      tl.set('#message-demo-assumptions', { opacity: 0 }, BEATS[7]);
+      enter('#message-demo-lesson', BEATS[7] + 0.1);
+
+      tl.set('#message-demo-citation', { opacity: 1 }, DURATION - 0.001);
+      window.__timelines['message-demo'] = tl;
+    })();
+  </script>
+</template>

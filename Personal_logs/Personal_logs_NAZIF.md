@@ -40,3 +40,11 @@ What I did:
 - I added `content/chapter-04/`, `content/chapter-05/`, and `content/chapter-06/` for the next three chapters.
 - I included `README.md`, `draft.md`, `exercises.md`, and `solutions.md` in each folder, following the existing chapter layout.
 - I updated the repository README's folder structure and uploaded the new chapter folders to GitHub.
+
+### Study guide and tutorial production — 6 November 2026
+
+- I added `temp contents/` to `.gitignore` before working with the supplied chapter files and templates.
+- I used Neogpt to create a 96-page study guide from all six chapters, following the supplied instructions and preserving the original cover and chapter-divider artwork.
+- After finishing the guide, I used Neogpt to create five narrated tutorials on reinforcement learning, AI hardware, network challenges, networking for behaviorist AI, and program execution. Each video is between five and ten minutes and includes subtitles, guide-page citations and excerpts, demonstrations, questions, and a closing book-cover credit.
+- I prepared matching tutorial PDFs, narration scripts, teaching outlines, SRT/VTT subtitles, and runnable Python examples. The checks covered quotations, calculations, PDF layouts, video playback, and subtitle visibility.
+- I saved the finished videos in `assets/tutorials/videos/` and bundled the study guide, videos, PDFs, scripts, supporting files, and editable project into `deliverables/BlueImpulse_Tutorial_Package.zip`. I also updated the repository links so the team can find the materials.

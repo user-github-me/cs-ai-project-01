@@ -1,0 +1,214 @@
+# Video 04: Networking for behaviorist AI
+
+Duration: 09:38. Video: `BlueImpulse_Video04_Networking_for_Behaviorist_AI.mp4`.
+
+## Learning objectives
+
+- Separate local control from shared services
+- Interpret network messages safely
+- Associate feedback with its original action
+
+## 00:00–00:39 · Should a robot wait for the cloud?
+
+Study guide page 75. Visual: hook.
+
+Have you ever wondered what a connected robot should do when its network drops during a task?
+
+Sending every decision to a distant server may create a delay exactly when the robot needs a timely response.
+
+Open the Blue Impulse study guide at page seventy-five, Networking for a behaviour-based agent.
+
+We will design the responsibilities of a small warehouse robot, then examine the messages it sends and receives.
+
+The lesson is about making the connection useful without assuming a network is always available or a message is always current.
+
+
+## 00:39–01:16 · Today’s route
+
+Study guide page 75. Visual: objectives.
+
+You will separate a fast local control loop from shared analysis, coordination, and training services.
+
+You will explain why messages need context such as identity, time, sequence, units, and policy version.
+
+You will also connect delayed learning feedback to the action that produced it.
+
+Welcome to the tutorial on networking for behaviorist AI by Blue Impulse.
+
+We will use pages seventy-four, seventy-five, and eighty-nine, with an illustrative packet-checking demonstration you can run yourself.
+
+
+## 01:16–02:04 · Reactive behaviour is not always learning
+
+Study guide page 24. Visual: book.
+
+Begin with the distinction on page twenty-four. A reactive agent may map a sensed condition directly to an action.
+
+A fixed rule such as avoiding a detected obstacle can produce useful behaviour without learning from reward.
+
+Page twenty-five adds reinforcement learning: experience is used to improve a policy.
+
+A network connection does not turn a fixed rule into a learning algorithm, and not every connected agent learns online.
+
+For our warehouse example, think of a locally evaluated policy with separate, reviewed updates from a server.
+
+We will label architectural choices clearly instead of treating them as properties of every AI system.
+
+
+## 02:04–02:55 · Keep the time-critical loop close
+
+Study guide page 75. Visual: book.
+
+Read the first paragraph on page seventy-five. Time-critical sensing, policy evaluation, and actuator control can stay near the device.
+
+Our robot observes an obstacle, evaluates its current policy, and sends a control signal to the actuator hardware.
+
+This local path need not wait for every cloud exchange.
+
+Page seventy-four explains the reason: a real-time task must meet a specified deadline, not just be fast on average.
+
+Local processing removes some network dependency, but it still needs adequate compute, trustworthy sensing, and suitable physical controls.
+
+Local does not automatically mean safe. The requirements and failure behaviour still have to be designed and checked.
+
+
+## 02:55–03:44 · Let the network do useful shared work
+
+Study guide page 89. Visual: diagram.
+
+Now read the warehouse example on page eighty-nine. Each robot handles immediate motion control locally.
+
+A shared service can allocate tasks, coordinate inventory, and analyse selected telemetry from several devices.
+
+Imagine a local driver following a route while a dispatcher coordinates deliveries across the fleet.
+
+The driver needs immediate awareness; the dispatcher benefits from a broader view. The analogy separates responsibilities.
+
+The network may distribute reviewed policy updates, but a received update should not automatically bypass validation.
+
+Edge and cloud are not opposing teams. Put each part of the workload where its deadlines and resource needs fit.
+
+
+## 03:44–04:33 · A number needs context
+
+Study guide page 75. Visual: book.
+
+Look at the final paragraph on page seventy-five. A message should carry enough context to be interpreted correctly.
+
+Device identity tells us which source or destination it concerns. A timestamp helps determine freshness.
+
+A sequence number can expose repeated or out-of-order messages. Units prevent confusing metres with centimetres.
+
+A policy version connects an action or update to the model that produced it.
+
+These fields are useful evidence, but fields alone do not authenticate a sender. Security checks must support the claimed identity.
+
+Before acting, the receiver needs a policy for rejecting stale, unexpected, or unauthorised commands.
+
+
+## 04:33–05:42 · Inspect three incoming messages
+
+Study guide page 75. Visual: message-demo.
+
+Let's run the supporting packet-checking example. This is an illustrative design, not a universal protocol from the book.
+
+Our toy receiver expects robot seven, metres as the unit, and policy version three.
+
+For this demonstration, it rejects commands older than two hundred milliseconds and sequences already processed.
+
+The first message has the expected context, a new sequence, and an age of fifty milliseconds. It passes these checks.
+
+The second is six hundred milliseconds old. The receiver rejects it as stale, even if the network eventually delivered it.
+
+The third repeats an already processed sequence. The receiver rejects it as a duplicate instead of executing the command twice.
+
+Our example assumes authentication was checked elsewhere. It does not implement cryptographic authentication or certify a safety-critical controller.
+
+The useful lesson is why delivery alone is insufficient: the receiver must decide whether the message is still meaningful.
+
+
+## 05:42–06:32 · Match feedback to the original action
+
+Study guide page 75. Visual: diagram.
+
+The guide makes a second point on page seventy-five: delayed feedback must be associated with the action that produced it.
+
+Suppose action forty-two turns left, and action forty-three moves forward. Their feedback packets arrive in the opposite order.
+
+Updating whichever action happened most recently would connect evidence to the wrong decision.
+
+Use identifiers and recorded context to match each result with its original state and action before a learning update.
+
+If a feedback packet is lost, the evidence is missing. That does not silently mean the reward was zero.
+
+This is how networking details can affect the data used by a learning algorithm, even when policy evaluation stays local.
+
+
+## 06:32–07:20 · Define what an outage means
+
+Study guide page 89. Visual: book.
+
+Return to the warehouse paragraph on page eighty-nine and read the outage condition carefully.
+
+The design must say whether the robot pauses, completes a limited task, or enters another defined state.
+
+Continuing safely during a link outage cannot simply be assumed because some computation is local.
+
+Consider expiring permissions, missing coordination, conflicting routes, and how the system reconnects after the interruption.
+
+Record what happened locally so the shared service can reconcile state when communication returns.
+
+The right fallback depends on the task and its hazards. Our tutorial demonstrates the reasoning rather than certifying a physical robot.
+
+
+## 07:20–08:12 · The feedback packet never arrived
+
+Study guide page 75. Visual: question.
+
+Pause and think. The robot performed action forty-two, but its reward packet never arrived.
+
+Should the learner record a reward of zero? And should a repeated command be executed again automatically?
+
+**[Pause for 6 seconds. Keep the answer hidden.]**
+
+No to both. Missing evidence is not an observed zero, and a duplicate needs the receiver's defined handling policy.
+
+Associate any later feedback with the original action. Decide how long to wait and how to record missing data.
+
+Then explain why a timestamp alone does not prove a message came from an authorised sender.
+
+Use the packet demonstration to change an age or sequence and predict which validation rule should reject it.
+
+On-screen question: Missing feedback = reward zero?
+
+Answer after the pause: No. Missing evidence is not an observed zero.
+
+
+## 08:12–09:07 · Connect the responsibilities
+
+Study guide page 75. Visual: recap.
+
+Recap page seventy-five. Keep suitable time-critical work local, and use the network for telemetry, coordination, and reviewed updates.
+
+Messages need interpretable context and appropriate authentication. Stale or repeated commands must not be treated as automatically valid.
+
+Delayed learning feedback belongs to its original action. Lost evidence must not silently become zero reward.
+
+Page eighty-nine adds the deployment question: which part belongs on the robot, at a nearby gateway, or in the cloud?
+
+Finally, distinguish a fixed reactive rule, a deployed learned policy, and an algorithm currently updating that policy.
+
+Draw the local and shared responsibilities, then explain your outage behaviour before calling the architecture complete.
+
+
+## 09:07–09:38 · Blue Impulse study guide
+
+Study guide page 1. Visual: credits.
+
+This tutorial used the Blue Impulse study guide, especially pages twenty-four, twenty-five, seventy-four, seventy-five, and eighty-nine.
+
+The original book cover on screen credits the source of the lesson.
+
+The companion PDF, narration, subtitles, and illustrative packet-checking code are included for your revision.
+
+Blue Impulse study guide. Connect the system, and preserve the meaning of its data.

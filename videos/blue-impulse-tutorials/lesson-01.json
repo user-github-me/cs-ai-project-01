@@ -1,0 +1,1357 @@
+{
+  "number": 1,
+  "slug": "Basic_Reinforcement_Learning",
+  "title": "Basic reinforcement learning",
+  "pages": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    31
+  ],
+  "objectives": [
+    "Name the learning loop",
+    "Balance exploration and exploitation",
+    "Calculate one Q-value update"
+  ],
+  "scenes": [
+    {
+      "key": "hook",
+      "kind": "hook",
+      "title": "How does a rover learn a route?",
+      "page": 25,
+      "cues": [
+        "Have you ever wondered how a rover could learn a useful route without someone writing every turn?",
+        "Imagine a simulated rover choosing between two paths, trying moves, and receiving points for the outcomes.",
+        "The important question is how that experience changes its next decision.",
+        "Keep your Blue Impulse study guide open at page twenty-five. We will work directly through the book.",
+        "By the end, you will calculate a learning update yourself and explain what the result actually means."
+      ],
+      "hero": "A route learned from experience",
+      "diagram": "rover",
+      "start": 0.0,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 6.784667,
+          "text": "Have you ever wondered how a rover could learn a useful route without someone writing every turn?"
+        },
+        {
+          "index": 1,
+          "start": 6.784667,
+          "end": 14.784,
+          "text": "Imagine a simulated rover choosing between two paths, trying moves, and receiving points for the outcomes."
+        },
+        {
+          "index": 2,
+          "start": 14.784,
+          "end": 19.882,
+          "text": "The important question is how that experience changes its next decision."
+        },
+        {
+          "index": 3,
+          "start": 19.882,
+          "end": 26.558667,
+          "text": "Keep your Blue Impulse study guide open at page twenty-five. We will work directly through the book."
+        },
+        {
+          "index": 4,
+          "start": 26.558667,
+          "end": 33.683333,
+          "text": "By the end, you will calculate a learning update yourself and explain what the result actually means."
+        }
+      ],
+      "duration": 34.333333
+    },
+    {
+      "key": "welcome",
+      "kind": "objectives",
+      "title": "Today’s route",
+      "page": 25,
+      "cues": [
+        "Today you will identify an agent, an environment, a state, an action, a reward, and a policy.",
+        "You will compare exploration with exploitation, then work through the numerical example on page twenty-eight.",
+        "Welcome to the tutorial on basic reinforcement learning by Blue Impulse.",
+        "Have paper ready for one calculation. The tutorial PDF includes the same worked steps and practice question.",
+        "Treat our rover as an illustration. We are explaining a learning method, not claiming every real rover learns this way."
+      ],
+      "start": 34.333333333333336,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 7.723333,
+          "text": "Today you will identify an agent, an environment, a state, an action, a reward, and a policy."
+        },
+        {
+          "index": 1,
+          "start": 7.723333,
+          "end": 14.954667,
+          "text": "You will compare exploration with exploitation, then work through the numerical example on page twenty-eight."
+        },
+        {
+          "index": 2,
+          "start": 14.954667,
+          "end": 20.308667,
+          "text": "Welcome to the tutorial on basic reinforcement learning by Blue Impulse."
+        },
+        {
+          "index": 3,
+          "start": 20.308667,
+          "end": 28.308,
+          "text": "Have paper ready for one calculation. The tutorial PDF includes the same worked steps and practice question."
+        },
+        {
+          "index": 4,
+          "start": 28.308,
+          "end": 36.926,
+          "text": "Treat our rover as an illustration. We are explaining a learning method, not claiming every real rover learns this way."
+        }
+      ],
+      "duration": 37.6
+    },
+    {
+      "key": "loop",
+      "kind": "book",
+      "title": "Follow the learning loop",
+      "page": 25,
+      "cues": [
+        "Look at the diagram on page twenty-five, titled One interaction at time t.",
+        "The agent selects an action. The environment changes and returns the next state and a reward.",
+        "The learning algorithm uses that experience to improve the policy, which is the strategy for choosing actions.",
+        "For our grid, the state could be the current square, and an action could be moving right.",
+        "The reward is a number associated with the result. It is feedback, not a complete instruction manual.",
+        "Notice the return arrow. Learning depends on connecting an action to what happened after it."
+      ],
+      "block": 1,
+      "quote": "The objective is usually expected cumulative reward, not just the next reward.",
+      "start": 71.93333333333334,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 5.995333,
+          "text": "Look at the diagram on page twenty-five, titled One interaction at time t."
+        },
+        {
+          "index": 1,
+          "start": 5.995333,
+          "end": 12.821333,
+          "text": "The agent selects an action. The environment changes and returns the next state and a reward."
+        },
+        {
+          "index": 2,
+          "start": 12.821333,
+          "end": 20.692667,
+          "text": "The learning algorithm uses that experience to improve the policy, which is the strategy for choosing actions."
+        },
+        {
+          "index": 3,
+          "start": 20.692667,
+          "end": 26.26,
+          "text": "For our grid, the state could be the current square, and an action could be moving right."
+        },
+        {
+          "index": 4,
+          "start": 26.26,
+          "end": 33.662,
+          "text": "The reward is a number associated with the result. It is feedback, not a complete instruction manual."
+        },
+        {
+          "index": 5,
+          "start": 33.662,
+          "end": 39.826667,
+          "text": "Notice the return arrow. Learning depends on connecting an action to what happened after it."
+        }
+      ],
+      "duration": 40.5
+    },
+    {
+      "key": "distinctions",
+      "kind": "compare",
+      "title": "Reward, policy, value",
+      "page": 26,
+      "cues": [
+        "Page twenty-six separates three ideas that are easy to confuse: reward, policy, and value.",
+        "Think of a journey. The reward scores an outcome now, while the policy chooses the next move.",
+        "A value estimate predicts how much return a choice may lead to, including later outcomes.",
+        "A route with a small cost now can still be worthwhile if it reaches a better destination.",
+        "That is why choosing the biggest immediate reward is not always the best long-term decision.",
+        "The book also warns that poorly chosen rewards can encourage shortcuts that miss the designer's real goal."
+      ],
+      "labels": [
+        "Reward: score now",
+        "Policy: choose an action",
+        "Value: estimate return"
+      ],
+      "start": 112.43333333333334,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 7.467333,
+          "text": "Page twenty-six separates three ideas that are easy to confuse: reward, policy, and value."
+        },
+        {
+          "index": 1,
+          "start": 7.467333,
+          "end": 13.994667,
+          "text": "Think of a journey. The reward scores an outcome now, while the policy chooses the next move."
+        },
+        {
+          "index": 2,
+          "start": 13.994667,
+          "end": 20.351333,
+          "text": "A value estimate predicts how much return a choice may lead to, including later outcomes."
+        },
+        {
+          "index": 3,
+          "start": 20.351333,
+          "end": 26.878667,
+          "text": "A route with a small cost now can still be worthwhile if it reaches a better destination."
+        },
+        {
+          "index": 4,
+          "start": 26.878667,
+          "end": 33.534,
+          "text": "That is why choosing the biggest immediate reward is not always the best long-term decision."
+        },
+        {
+          "index": 5,
+          "start": 33.534,
+          "end": 41.213333,
+          "text": "The book also warns that poorly chosen rewards can encourage shortcuts that miss the designer's real goal."
+        }
+      ],
+      "duration": 41.866667
+    },
+    {
+      "key": "explore",
+      "kind": "book",
+      "title": "The restaurant analogy",
+      "page": 27,
+      "cues": [
+        "Turn to page twenty-seven and use the book's restaurant analogy.",
+        "Ordering the dish you currently believe is best is exploitation. Trying a different dish is exploration.",
+        "Exploration gathers information because your current estimates might be wrong.",
+        "In the book's epsilon-greedy example, epsilon is zero point one, giving a ten percent exploration probability.",
+        "Otherwise, the agent chooses an action with the highest current Q value.",
+        "These percentages describe probabilities over choices, not a promise that exactly one out of every ten choices explores.",
+        "In a real physical system, exploration also needs safety constraints. A simulation is a useful place to experiment."
+      ],
+      "block": 1,
+      "quote": "Early estimates can be wrong, so always exploiting can lock an agent into an inferior policy.",
+      "start": 154.3,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 4.864667,
+          "text": "Turn to page twenty-seven and use the book's restaurant analogy."
+        },
+        {
+          "index": 1,
+          "start": 4.864667,
+          "end": 12.629333,
+          "text": "Ordering the dish you currently believe is best is exploitation. Trying a different dish is exploration."
+        },
+        {
+          "index": 2,
+          "start": 12.629333,
+          "end": 18.303333,
+          "text": "Exploration gathers information because your current estimates might be wrong."
+        },
+        {
+          "index": 3,
+          "start": 18.303333,
+          "end": 26.814667,
+          "text": "In the book's epsilon-greedy example, epsilon is zero point one, giving a ten percent exploration probability."
+        },
+        {
+          "index": 4,
+          "start": 26.814667,
+          "end": 31.827333,
+          "text": "Otherwise, the agent chooses an action with the highest current Q value."
+        },
+        {
+          "index": 5,
+          "start": 31.827333,
+          "end": 40.914667,
+          "text": "These percentages describe probabilities over choices, not a promise that exactly one out of every ten choices explores."
+        },
+        {
+          "index": 6,
+          "start": 40.914667,
+          "end": 49.916667,
+          "text": "In a real physical system, exploration also needs safety constraints. A simulation is a useful place to experiment."
+        }
+      ],
+      "duration": 50.566667
+    },
+    {
+      "key": "think",
+      "kind": "question",
+      "title": "Is the familiar route certainly best?",
+      "page": 27,
+      "cues": [
+        "Pause and think. One route has worked twice. Another route has never been tried.",
+        "Does that prove the first route is better? Take a few seconds before we reveal the answer.",
+        "No. The evidence is incomplete, so the familiar route is not certainly the better one.",
+        "Exploration may improve the estimate, but it has a cost. The design must balance information and performance.",
+        "Write one sentence explaining why exploitation uses estimated future return, rather than only the next reward."
+      ],
+      "prompt": "Two successes versus an untried route: proof?",
+      "answer": "No. The evidence is incomplete.",
+      "pause_after": 1,
+      "pause": 5,
+      "start": 204.86666666666667,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 6.123333,
+          "text": "Pause and think. One route has worked twice. Another route has never been tried."
+        },
+        {
+          "index": 1,
+          "start": 6.123333,
+          "end": 11.904,
+          "text": "Does that prove the first route is better? Take a few seconds before we reveal the answer."
+        },
+        {
+          "index": 2,
+          "start": 16.904,
+          "end": 23.026,
+          "text": "No. The evidence is incomplete, so the familiar route is not certainly the better one."
+        },
+        {
+          "index": 3,
+          "start": 23.026,
+          "end": 31.068,
+          "text": "Exploration may improve the estimate, but it has a cost. The design must balance information and performance."
+        },
+        {
+          "index": 4,
+          "start": 31.068,
+          "end": 39.622,
+          "text": "Write one sentence explaining why exploitation uses estimated future return, rather than only the next reward."
+        }
+      ],
+      "question_pause": {
+        "start": 11.904,
+        "duration": 5
+      },
+      "duration": 40.3
+    },
+    {
+      "key": "qintro",
+      "kind": "book",
+      "title": "What is a Q value?",
+      "page": 28,
+      "cues": [
+        "Now open page twenty-eight, Update a Q value. Q associates a state and an action with an estimated return.",
+        "The book calls Q-learning model-free because it does not require a supplied model of environment transitions.",
+        "Model-free does not mean memory-free. The estimates still live in a table or another representation.",
+        "The update combines an old estimate with a target derived from new experience.",
+        "Alpha controls how far the estimate moves toward that target. Gamma discounts the future-value contribution.",
+        "We will use exactly the numbers in the guide, so you can check each line against the page."
+      ],
+      "block": 0,
+      "quote": "Alpha controls the size of an update. Gamma discounts future rewards.",
+      "start": 245.16666666666666,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 9.024667,
+          "text": "Now open page twenty-eight, Update a Q value. Q associates a state and an action with an estimated return."
+        },
+        {
+          "index": 1,
+          "start": 9.024667,
+          "end": 16.917333,
+          "text": "The book calls Q-learning model-free because it does not require a supplied model of environment transitions."
+        },
+        {
+          "index": 2,
+          "start": 16.917333,
+          "end": 24.340667,
+          "text": "Model-free does not mean memory-free. The estimates still live in a table or another representation."
+        },
+        {
+          "index": 3,
+          "start": 24.340667,
+          "end": 29.972,
+          "text": "The update combines an old estimate with a target derived from new experience."
+        },
+        {
+          "index": 4,
+          "start": 29.972,
+          "end": 37.95,
+          "text": "Alpha controls how far the estimate moves toward that target. Gamma discounts the future-value contribution."
+        },
+        {
+          "index": 5,
+          "start": 37.95,
+          "end": 44.008,
+          "text": "We will use exactly the numbers in the guide, so you can check each line against the page."
+        }
+      ],
+      "duration": 44.666667
+    },
+    {
+      "key": "qdemo",
+      "kind": "q-demo",
+      "title": "Work through the book’s update",
+      "page": 28,
+      "cues": [
+        "Start with an old Q value of two and a learning rate, alpha, of zero point five.",
+        "The reward is one, gamma is zero point nine, and the best next Q value is four.",
+        "First calculate the target: one plus zero point nine times four. The target is four point six.",
+        "Next subtract the old estimate. Four point six minus two gives an error of two point six.",
+        "Multiply that error by alpha. Half of two point six is one point three.",
+        "Finally add the change to the old value. Two plus one point three gives three point three.",
+        "Watch the estimate move halfway toward the target. That halfway movement is what alpha equals one half means here.",
+        "The supporting Python file repeats this calculation and prints every intermediate value for you to inspect."
+      ],
+      "values": {
+        "old": 2,
+        "alpha": 0.5,
+        "reward": 1,
+        "gamma": 0.9,
+        "next": 4,
+        "target": 4.6,
+        "error": 2.6,
+        "change": 1.3,
+        "new": 3.3
+      },
+      "start": 289.8333333333333,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 6.592667,
+          "text": "Start with an old Q value of two and a learning rate, alpha, of zero point five."
+        },
+        {
+          "index": 1,
+          "start": 6.592667,
+          "end": 12.672,
+          "text": "The reward is one, gamma is zero point nine, and the best next Q value is four."
+        },
+        {
+          "index": 2,
+          "start": 12.672,
+          "end": 20.052667,
+          "text": "First calculate the target: one plus zero point nine times four. The target is four point six."
+        },
+        {
+          "index": 3,
+          "start": 20.052667,
+          "end": 27.156,
+          "text": "Next subtract the old estimate. Four point six minus two gives an error of two point six."
+        },
+        {
+          "index": 4,
+          "start": 27.156,
+          "end": 32.851333,
+          "text": "Multiply that error by alpha. Half of two point six is one point three."
+        },
+        {
+          "index": 5,
+          "start": 32.851333,
+          "end": 39.336,
+          "text": "Finally add the change to the old value. Two plus one point three gives three point three."
+        },
+        {
+          "index": 6,
+          "start": 39.336,
+          "end": 47.25,
+          "text": "Watch the estimate move halfway toward the target. That halfway movement is what alpha equals one half means here."
+        },
+        {
+          "index": 7,
+          "start": 47.25,
+          "end": 55.1,
+          "text": "The supporting Python file repeats this calculation and prints every intermediate value for you to inspect."
+        }
+      ],
+      "duration": 55.766667
+    },
+    {
+      "key": "interpret",
+      "kind": "book",
+      "title": "A better estimate, not a proof",
+      "page": 28,
+      "cues": [
+        "Return to the final paragraph on page twenty-eight. This experience raised the estimate from two to three point three.",
+        "It did not prove that the action is always best. One observation is not a reliable policy.",
+        "Repeated experience, an appropriate learning schedule, and enough exploration are still important.",
+        "There is also a special case: when the next state is terminal, the future-value term is zero.",
+        "That prevents the calculation from inventing future reward after the episode has ended.",
+        "Compare these two ideas: updating an estimate from evidence, and guaranteeing the outcome of the next action.",
+        "They are different claims, and only the first follows from our calculation."
+      ],
+      "block": 3,
+      "quote": "It did not prove the action is always best.",
+      "start": 345.6,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 8.811333,
+          "text": "Return to the final paragraph on page twenty-eight. This experience raised the estimate from two to three point three."
+        },
+        {
+          "index": 1,
+          "start": 8.811333,
+          "end": 16.042667,
+          "text": "It did not prove that the action is always best. One observation is not a reliable policy."
+        },
+        {
+          "index": 2,
+          "start": 16.042667,
+          "end": 22.783333,
+          "text": "Repeated experience, an appropriate learning schedule, and enough exploration are still important."
+        },
+        {
+          "index": 3,
+          "start": 22.783333,
+          "end": 29.396,
+          "text": "There is also a special case: when the next state is terminal, the future-value term is zero."
+        },
+        {
+          "index": 4,
+          "start": 29.396,
+          "end": 35.560667,
+          "text": "That prevents the calculation from inventing future reward after the episode has ended."
+        },
+        {
+          "index": 5,
+          "start": 35.560667,
+          "end": 43.453333,
+          "text": "Compare these two ideas: updating an estimate from evidence, and guaranteeing the outcome of the next action."
+        },
+        {
+          "index": 6,
+          "start": 43.453333,
+          "end": 48.423333,
+          "text": "They are different claims, and only the first follows from our calculation."
+        }
+      ],
+      "duration": 49.1
+    },
+    {
+      "key": "practice",
+      "kind": "question",
+      "title": "Try a terminal state",
+      "page": 28,
+      "cues": [
+        "Your turn. Keep the old value at two, alpha at one half, and the reward at one.",
+        "Make the next state terminal. What is the new Q value? Pause the video if you need more time.",
+        "The future contribution is zero, so the target is one. The error is one minus two, or negative one.",
+        "Half that error is negative one half. Add it to two, giving a new value of one point five.",
+        "The estimate falls because the observed target is lower. A learning update can decrease a value as well as increase it."
+      ],
+      "prompt": "Terminal state: old Q = 2, α = 0.5, reward = 1",
+      "answer": "New Q = 2 + 0.5 × (1 − 2) = 1.5",
+      "pause_after": 1,
+      "pause": 6,
+      "start": 394.7,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 6.144667,
+          "text": "Your turn. Keep the old value at two, alpha at one half, and the reward at one."
+        },
+        {
+          "index": 1,
+          "start": 6.144667,
+          "end": 12.650667,
+          "text": "Make the next state terminal. What is the new Q value? Pause the video if you need more time."
+        },
+        {
+          "index": 2,
+          "start": 18.650667,
+          "end": 26.351333,
+          "text": "The future contribution is zero, so the target is one. The error is one minus two, or negative one."
+        },
+        {
+          "index": 3,
+          "start": 26.351333,
+          "end": 33.454667,
+          "text": "Half that error is negative one half. Add it to two, giving a new value of one point five."
+        },
+        {
+          "index": 4,
+          "start": 33.454667,
+          "end": 41.752667,
+          "text": "The estimate falls because the observed target is lower. A learning update can decrease a value as well as increase it."
+        }
+      ],
+      "question_pause": {
+        "start": 12.650667,
+        "duration": 6
+      },
+      "duration": 42.433333
+    },
+    {
+      "key": "recap",
+      "kind": "recap",
+      "title": "Experience changes estimates",
+      "page": 31,
+      "cues": [
+        "Let's recap using pages twenty-five through twenty-eight. The agent acts, receives feedback, and learns a policy from experience.",
+        "Reward scores an outcome. Value estimates return. Exploration improves information, while exploitation uses the best current estimates.",
+        "Our worked Q update produced three point three, and our terminal-state practice produced one point five.",
+        "Page thirty-one adds an important distinction: running an already learned policy is not the same as training it online.",
+        "A fixed sensor-response rule can control a machine without learning at all.",
+        "Before moving on, explain the loop to someone else and run the included calculation with one changed reward."
+      ],
+      "labels": [
+        "Observe → act → feedback",
+        "Explore and exploit",
+        "Q update: 2 → 3.3",
+        "Deployment is not necessarily learning"
+      ],
+      "start": 437.1333333333333,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 9.497333,
+          "text": "Let's recap using pages twenty-five through twenty-eight. The agent acts, receives feedback, and learns a policy from experience."
+        },
+        {
+          "index": 1,
+          "start": 9.497333,
+          "end": 19.974667,
+          "text": "Reward scores an outcome. Value estimates return. Exploration improves information, while exploitation uses the best current estimates."
+        },
+        {
+          "index": 2,
+          "start": 19.974667,
+          "end": 27.206,
+          "text": "Our worked Q update produced three point three, and our terminal-state practice produced one point five."
+        },
+        {
+          "index": 3,
+          "start": 27.206,
+          "end": 36.165333,
+          "text": "Page thirty-one adds an important distinction: running an already learned policy is not the same as training it online."
+        },
+        {
+          "index": 4,
+          "start": 36.165333,
+          "end": 41.284667,
+          "text": "A fixed sensor-response rule can control a machine without learning at all."
+        },
+        {
+          "index": 5,
+          "start": 41.284667,
+          "end": 49.412,
+          "text": "Before moving on, explain the loop to someone else and run the included calculation with one changed reward."
+        }
+      ],
+      "duration": 50.066667
+    },
+    {
+      "key": "credits",
+      "kind": "credits",
+      "title": "Blue Impulse study guide",
+      "page": 1,
+      "cues": [
+        "This tutorial was taught from the Blue Impulse study guide, especially pages twenty-four to twenty-eight and thirty-one.",
+        "The cover on screen is the original cover of your book.",
+        "Use the companion tutorial PDF, narration script, subtitles, and Python demonstration to practise at your own pace.",
+        "Blue Impulse study guide. Learn the reasoning, then test it with an example."
+      ],
+      "start": 487.2,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 8.299333,
+          "text": "This tutorial was taught from the Blue Impulse study guide, especially pages twenty-four to twenty-eight and thirty-one."
+        },
+        {
+          "index": 1,
+          "start": 8.299333,
+          "end": 12.224,
+          "text": "The cover on screen is the original cover of your book."
+        },
+        {
+          "index": 2,
+          "start": 12.224,
+          "end": 21.460667,
+          "text": "Use the companion tutorial PDF, narration script, subtitles, and Python demonstration to practise at your own pace."
+        },
+        {
+          "index": 3,
+          "start": 21.460667,
+          "end": 26.857333,
+          "text": "Blue Impulse study guide. Learn the reasoning, then test it with an example."
+        }
+      ],
+      "duration": 28.466667
+    }
+  ],
+  "duration": 515.666667,
+  "fps": 30,
+  "voice": "am_michael",
+  "speed": 0.92,
+  "captions": [
+    {
+      "id": "v01-s00-c00-0",
+      "text": "Have you ever wondered how a rover could learn a useful route without someone writing every turn?",
+      "start": 0.3,
+      "end": 6.614667,
+      "scene": 0,
+      "beat": 0,
+      "audio": "assets/voice/cues/210412778355167d.wav"
+    },
+    {
+      "id": "v01-s00-c01-0",
+      "text": "Imagine a simulated rover choosing between two paths, trying moves, and receiving points for the outcomes.",
+      "start": 6.784667,
+      "end": 14.614,
+      "scene": 0,
+      "beat": 1,
+      "audio": "assets/voice/cues/9c89c209f3f67286.wav"
+    },
+    {
+      "id": "v01-s00-c02-0",
+      "text": "The important question is how that experience changes its next decision.",
+      "start": 14.784,
+      "end": 19.712,
+      "scene": 0,
+      "beat": 2,
+      "audio": "assets/voice/cues/082fa37a17d3e5c0.wav"
+    },
+    {
+      "id": "v01-s00-c03-0",
+      "text": "Keep your Blue Impulse study guide open at page twenty-five. We will work directly through the book.",
+      "start": 19.882,
+      "end": 26.388667,
+      "scene": 0,
+      "beat": 3,
+      "audio": "assets/voice/cues/057636a7ccc81bcc.wav"
+    },
+    {
+      "id": "v01-s00-c04-0",
+      "text": "By the end, you will calculate a learning update yourself and explain what the result actually means.",
+      "start": 26.558667,
+      "end": 33.513333,
+      "scene": 0,
+      "beat": 4,
+      "audio": "assets/voice/cues/0b561239c67c8ee7.wav"
+    },
+    {
+      "id": "v01-s01-c00-0",
+      "text": "Today you will identify an agent, an environment, a state, an action, a reward, and a policy.",
+      "start": 34.633333,
+      "end": 41.886667,
+      "scene": 1,
+      "beat": 0,
+      "audio": "assets/voice/cues/ef58013a0ec198e4.wav"
+    },
+    {
+      "id": "v01-s01-c01-0",
+      "text": "You will compare exploration with exploitation, then work through the numerical example on page twenty-eight.",
+      "start": 42.056667,
+      "end": 49.118,
+      "scene": 1,
+      "beat": 1,
+      "audio": "assets/voice/cues/1ec79f9d762f66c9.wav"
+    },
+    {
+      "id": "v01-s01-c02-0",
+      "text": "Welcome to the tutorial on basic reinforcement learning by Blue Impulse.",
+      "start": 49.288,
+      "end": 54.472,
+      "scene": 1,
+      "beat": 2,
+      "audio": "assets/voice/cues/bdc01035c2759c48.wav"
+    },
+    {
+      "id": "v01-s01-c03-0",
+      "text": "Have paper ready for one calculation. The tutorial PDF includes the same worked steps and practice question.",
+      "start": 54.642,
+      "end": 62.471333,
+      "scene": 1,
+      "beat": 3,
+      "audio": "assets/voice/cues/8b9c2f4325c33473.wav"
+    },
+    {
+      "id": "v01-s01-c04-0",
+      "text": "Treat our rover as an illustration. We are explaining a learning method, not claiming every real rover learns this way.",
+      "start": 62.641333,
+      "end": 71.089333,
+      "scene": 1,
+      "beat": 4,
+      "audio": "assets/voice/cues/5af349d3e347c38e.wav"
+    },
+    {
+      "id": "v01-s02-c00-0",
+      "text": "Look at the diagram on page twenty-five, titled One interaction at time t.",
+      "start": 72.233333,
+      "end": 77.758667,
+      "scene": 2,
+      "beat": 0,
+      "audio": "assets/voice/cues/7349649adc374935.wav"
+    },
+    {
+      "id": "v01-s02-c01-0",
+      "text": "The agent selects an action. The environment changes and returns the next state and a reward.",
+      "start": 77.928667,
+      "end": 84.584667,
+      "scene": 2,
+      "beat": 1,
+      "audio": "assets/voice/cues/5e6448e319003895.wav"
+    },
+    {
+      "id": "v01-s02-c02-0",
+      "text": "The learning algorithm uses that experience to improve the policy, which is the strategy for choosing actions.",
+      "start": 84.754667,
+      "end": 92.456,
+      "scene": 2,
+      "beat": 2,
+      "audio": "assets/voice/cues/13dea494d8100f13.wav"
+    },
+    {
+      "id": "v01-s02-c03-0",
+      "text": "For our grid, the state could be the current square, and an action could be moving right.",
+      "start": 92.626,
+      "end": 98.023333,
+      "scene": 2,
+      "beat": 3,
+      "audio": "assets/voice/cues/0992cb8fd844b658.wav"
+    },
+    {
+      "id": "v01-s02-c04-0",
+      "text": "The reward is a number associated with the result. It is feedback, not a complete instruction manual.",
+      "start": 98.193333,
+      "end": 105.425333,
+      "scene": 2,
+      "beat": 4,
+      "audio": "assets/voice/cues/0b050aa9c0d1772e.wav"
+    },
+    {
+      "id": "v01-s02-c05-0",
+      "text": "Notice the return arrow. Learning depends on connecting an action to what happened after it.",
+      "start": 105.595333,
+      "end": 111.59,
+      "scene": 2,
+      "beat": 5,
+      "audio": "assets/voice/cues/fcad4c0a3a482696.wav"
+    },
+    {
+      "id": "v01-s03-c00-0",
+      "text": "Page twenty-six separates three ideas that are easy to confuse: reward, policy, and value.",
+      "start": 112.733333,
+      "end": 119.730667,
+      "scene": 3,
+      "beat": 0,
+      "audio": "assets/voice/cues/d2acc24261f9f020.wav"
+    },
+    {
+      "id": "v01-s03-c01-0",
+      "text": "Think of a journey. The reward scores an outcome now, while the policy chooses the next move.",
+      "start": 119.900667,
+      "end": 126.258,
+      "scene": 3,
+      "beat": 1,
+      "audio": "assets/voice/cues/218c88c205bcd09d.wav"
+    },
+    {
+      "id": "v01-s03-c02-0",
+      "text": "A value estimate predicts how much return a choice may lead to, including later outcomes.",
+      "start": 126.428,
+      "end": 132.614667,
+      "scene": 3,
+      "beat": 2,
+      "audio": "assets/voice/cues/bf0e5f2ae96de3f2.wav"
+    },
+    {
+      "id": "v01-s03-c03-0",
+      "text": "A route with a small cost now can still be worthwhile if it reaches a better destination.",
+      "start": 132.784667,
+      "end": 139.142,
+      "scene": 3,
+      "beat": 3,
+      "audio": "assets/voice/cues/3bf83c186216eac4.wav"
+    },
+    {
+      "id": "v01-s03-c04-0",
+      "text": "That is why choosing the biggest immediate reward is not always the best long-term decision.",
+      "start": 139.312,
+      "end": 145.797333,
+      "scene": 3,
+      "beat": 4,
+      "audio": "assets/voice/cues/6a19cddf6dcbd890.wav"
+    },
+    {
+      "id": "v01-s03-c05-0",
+      "text": "The book also warns that poorly chosen rewards can encourage shortcuts that miss the designer's real goal.",
+      "start": 145.967333,
+      "end": 153.476667,
+      "scene": 3,
+      "beat": 5,
+      "audio": "assets/voice/cues/8733b0d6a0fcb50f.wav"
+    },
+    {
+      "id": "v01-s04-c00-0",
+      "text": "Turn to page twenty-seven and use the book's restaurant analogy.",
+      "start": 154.6,
+      "end": 158.994667,
+      "scene": 4,
+      "beat": 0,
+      "audio": "assets/voice/cues/4a8a2dadae2a7c3b.wav"
+    },
+    {
+      "id": "v01-s04-c01-0",
+      "text": "Ordering the dish you currently believe is best is exploitation. Trying a different dish is exploration.",
+      "start": 159.164667,
+      "end": 166.759333,
+      "scene": 4,
+      "beat": 1,
+      "audio": "assets/voice/cues/851cc490ec3e3717.wav"
+    },
+    {
+      "id": "v01-s04-c02-0",
+      "text": "Exploration gathers information because your current estimates might be wrong.",
+      "start": 166.929333,
+      "end": 172.433333,
+      "scene": 4,
+      "beat": 2,
+      "audio": "assets/voice/cues/bea44a7fa16b18df.wav"
+    },
+    {
+      "id": "v01-s04-c03-0",
+      "text": "In the book's epsilon-greedy example, epsilon is zero point one, giving a ten percent exploration probability.",
+      "start": 172.603333,
+      "end": 180.944667,
+      "scene": 4,
+      "beat": 3,
+      "audio": "assets/voice/cues/9721a45ce6fca3e6.wav"
+    },
+    {
+      "id": "v01-s04-c04-0",
+      "text": "Otherwise, the agent chooses an action with the highest current Q value.",
+      "start": 181.114667,
+      "end": 185.957333,
+      "scene": 4,
+      "beat": 4,
+      "audio": "assets/voice/cues/74bf9251b6b1d6a4.wav"
+    },
+    {
+      "id": "v01-s04-c05-0",
+      "text": "These percentages describe probabilities over choices, not a promise that exactly one out of every ten choices explores.",
+      "start": 186.127333,
+      "end": 195.044667,
+      "scene": 4,
+      "beat": 5,
+      "audio": "assets/voice/cues/dc4431846ea60ebe.wav"
+    },
+    {
+      "id": "v01-s04-c06-0",
+      "text": "In a real physical system, exploration also needs safety constraints. A simulation is a useful place to experiment.",
+      "start": 195.214667,
+      "end": 204.046667,
+      "scene": 4,
+      "beat": 6,
+      "audio": "assets/voice/cues/680214b345df67a6.wav"
+    },
+    {
+      "id": "v01-s05-c00-0",
+      "text": "Pause and think. One route has worked twice. Another route has never been tried.",
+      "start": 205.166667,
+      "end": 210.82,
+      "scene": 5,
+      "beat": 0,
+      "audio": "assets/voice/cues/d643ea46ad62c48b.wav"
+    },
+    {
+      "id": "v01-s05-c01-0",
+      "text": "Does that prove the first route is better? Take a few seconds before we reveal the answer.",
+      "start": 210.99,
+      "end": 216.600667,
+      "scene": 5,
+      "beat": 1,
+      "audio": "assets/voice/cues/e0891e7b4588a2c9.wav"
+    },
+    {
+      "id": "v01-s05-c02-0",
+      "text": "No. The evidence is incomplete, so the familiar route is not certainly the better one.",
+      "start": 221.770667,
+      "end": 227.722667,
+      "scene": 5,
+      "beat": 2,
+      "audio": "assets/voice/cues/6c113fe166908748.wav"
+    },
+    {
+      "id": "v01-s05-c03-0",
+      "text": "Exploration may improve the estimate, but it has a cost. The design must balance information and performance.",
+      "start": 227.892667,
+      "end": 235.764667,
+      "scene": 5,
+      "beat": 3,
+      "audio": "assets/voice/cues/fc00244057db4344.wav"
+    },
+    {
+      "id": "v01-s05-c04-0",
+      "text": "Write one sentence explaining why exploitation uses estimated future return, rather than only the next reward.",
+      "start": 235.934667,
+      "end": 244.318667,
+      "scene": 5,
+      "beat": 4,
+      "audio": "assets/voice/cues/d0e59b495815c10f.wav"
+    },
+    {
+      "id": "v01-s06-c00-0",
+      "text": "Now open page twenty-eight, Update a Q value. Q associates a state and an action with an estimated return.",
+      "start": 245.466667,
+      "end": 254.021333,
+      "scene": 6,
+      "beat": 0,
+      "audio": "assets/voice/cues/5efdbcc4a040d545.wav"
+    },
+    {
+      "id": "v01-s06-c01-0",
+      "text": "The book calls Q-learning model-free because it does not require a supplied model of environment transitions.",
+      "start": 254.191333,
+      "end": 261.914,
+      "scene": 6,
+      "beat": 1,
+      "audio": "assets/voice/cues/3f65d12cb86d6738.wav"
+    },
+    {
+      "id": "v01-s06-c02-0",
+      "text": "Model-free does not mean memory-free. The estimates still live in a table or another representation.",
+      "start": 262.084,
+      "end": 269.337333,
+      "scene": 6,
+      "beat": 2,
+      "audio": "assets/voice/cues/a052b1501f3cd2b4.wav"
+    },
+    {
+      "id": "v01-s06-c03-0",
+      "text": "The update combines an old estimate with a target derived from new experience.",
+      "start": 269.507333,
+      "end": 274.968667,
+      "scene": 6,
+      "beat": 3,
+      "audio": "assets/voice/cues/b8305af027f25f70.wav"
+    },
+    {
+      "id": "v01-s06-c04-0",
+      "text": "Alpha controls how far the estimate moves toward that target. Gamma discounts the future-value contribution.",
+      "start": 275.138667,
+      "end": 282.946667,
+      "scene": 6,
+      "beat": 4,
+      "audio": "assets/voice/cues/0818a70995ca23f1.wav"
+    },
+    {
+      "id": "v01-s06-c05-0",
+      "text": "We will use exactly the numbers in the guide, so you can check each line against the page.",
+      "start": 283.116667,
+      "end": 289.004667,
+      "scene": 6,
+      "beat": 5,
+      "audio": "assets/voice/cues/bd55827e85eb0bd8.wav"
+    },
+    {
+      "id": "v01-s07-c00-0",
+      "text": "Start with an old Q value of two and a learning rate, alpha, of zero point five.",
+      "start": 290.133333,
+      "end": 296.256,
+      "scene": 7,
+      "beat": 0,
+      "audio": "assets/voice/cues/dd553b98cfcb989a.wav"
+    },
+    {
+      "id": "v01-s07-c01-0",
+      "text": "The reward is one, gamma is zero point nine, and the best next Q value is four.",
+      "start": 296.426,
+      "end": 302.335333,
+      "scene": 7,
+      "beat": 1,
+      "audio": "assets/voice/cues/2a3806abec4bb3f2.wav"
+    },
+    {
+      "id": "v01-s07-c02-0",
+      "text": "First calculate the target: one plus zero point nine times four. The target is four point six.",
+      "start": 302.505333,
+      "end": 309.716,
+      "scene": 7,
+      "beat": 2,
+      "audio": "assets/voice/cues/5527c524acae8566.wav"
+    },
+    {
+      "id": "v01-s07-c03-0",
+      "text": "Next subtract the old estimate. Four point six minus two gives an error of two point six.",
+      "start": 309.886,
+      "end": 316.819333,
+      "scene": 7,
+      "beat": 3,
+      "audio": "assets/voice/cues/67453813212cb1b1.wav"
+    },
+    {
+      "id": "v01-s07-c04-0",
+      "text": "Multiply that error by alpha. Half of two point six is one point three.",
+      "start": 316.989333,
+      "end": 322.514667,
+      "scene": 7,
+      "beat": 4,
+      "audio": "assets/voice/cues/80ec9ac3ff61bca5.wav"
+    },
+    {
+      "id": "v01-s07-c05-0",
+      "text": "Finally add the change to the old value. Two plus one point three gives three point three.",
+      "start": 322.684667,
+      "end": 328.999333,
+      "scene": 7,
+      "beat": 5,
+      "audio": "assets/voice/cues/2f4a8d07ffe87bbf.wav"
+    },
+    {
+      "id": "v01-s07-c06-0",
+      "text": "Watch the estimate move halfway toward the target. That halfway movement is what alpha equals one half means here.",
+      "start": 329.169333,
+      "end": 336.913333,
+      "scene": 7,
+      "beat": 6,
+      "audio": "assets/voice/cues/66be85f2ca1e9b03.wav"
+    },
+    {
+      "id": "v01-s07-c07-0",
+      "text": "The supporting Python file repeats this calculation and prints every intermediate value for you to inspect.",
+      "start": 337.083333,
+      "end": 344.763333,
+      "scene": 7,
+      "beat": 7,
+      "audio": "assets/voice/cues/314cd7749d63a599.wav"
+    },
+    {
+      "id": "v01-s08-c00-0",
+      "text": "Return to the final paragraph on page twenty-eight. This experience raised the estimate from two to three point three.",
+      "start": 345.9,
+      "end": 354.241333,
+      "scene": 8,
+      "beat": 0,
+      "audio": "assets/voice/cues/411d008a83086b1a.wav"
+    },
+    {
+      "id": "v01-s08-c01-0",
+      "text": "It did not prove that the action is always best. One observation is not a reliable policy.",
+      "start": 354.411333,
+      "end": 361.472667,
+      "scene": 8,
+      "beat": 1,
+      "audio": "assets/voice/cues/a1120f7fd3b04d27.wav"
+    },
+    {
+      "id": "v01-s08-c02-0",
+      "text": "Repeated experience, an appropriate learning schedule, and enough exploration are still important.",
+      "start": 361.642667,
+      "end": 368.213333,
+      "scene": 8,
+      "beat": 2,
+      "audio": "assets/voice/cues/475f931f74a99333.wav"
+    },
+    {
+      "id": "v01-s08-c03-0",
+      "text": "There is also a special case: when the next state is terminal, the future-value term is zero.",
+      "start": 368.383333,
+      "end": 374.826,
+      "scene": 8,
+      "beat": 3,
+      "audio": "assets/voice/cues/a8b905f9126b81a4.wav"
+    },
+    {
+      "id": "v01-s08-c04-0",
+      "text": "That prevents the calculation from inventing future reward after the episode has ended.",
+      "start": 374.996,
+      "end": 380.990667,
+      "scene": 8,
+      "beat": 4,
+      "audio": "assets/voice/cues/4ce5d202fa58adb9.wav"
+    },
+    {
+      "id": "v01-s08-c05-0",
+      "text": "Compare these two ideas: updating an estimate from evidence, and guaranteeing the outcome of the next action.",
+      "start": 381.160667,
+      "end": 388.883333,
+      "scene": 8,
+      "beat": 5,
+      "audio": "assets/voice/cues/f947e35883a3aed9.wav"
+    },
+    {
+      "id": "v01-s08-c06-0",
+      "text": "They are different claims, and only the first follows from our calculation.",
+      "start": 389.053333,
+      "end": 393.853333,
+      "scene": 8,
+      "beat": 6,
+      "audio": "assets/voice/cues/9742f4187850ccb7.wav"
+    },
+    {
+      "id": "v01-s09-c00-0",
+      "text": "Your turn. Keep the old value at two, alpha at one half, and the reward at one.",
+      "start": 395.0,
+      "end": 400.674667,
+      "scene": 9,
+      "beat": 0,
+      "audio": "assets/voice/cues/b66b3b75f8c5ea3f.wav"
+    },
+    {
+      "id": "v01-s09-c01-0",
+      "text": "Make the next state terminal. What is the new Q value? Pause the video if you need more time.",
+      "start": 400.844667,
+      "end": 407.180667,
+      "scene": 9,
+      "beat": 1,
+      "audio": "assets/voice/cues/fdf62368c0f4cf9e.wav"
+    },
+    {
+      "id": "v01-s09-c02-0",
+      "text": "The future contribution is zero, so the target is one. The error is one minus two, or negative one.",
+      "start": 413.350667,
+      "end": 420.881333,
+      "scene": 9,
+      "beat": 2,
+      "audio": "assets/voice/cues/45bf755539864e61.wav"
+    },
+    {
+      "id": "v01-s09-c03-0",
+      "text": "Half that error is negative one half. Add it to two, giving a new value of one point five.",
+      "start": 421.051333,
+      "end": 427.984667,
+      "scene": 9,
+      "beat": 3,
+      "audio": "assets/voice/cues/b27e2669fa47fe34.wav"
+    },
+    {
+      "id": "v01-s09-c04-0",
+      "text": "The estimate falls because the observed target is lower. A learning update can decrease a value as well as increase it.",
+      "start": 428.154667,
+      "end": 436.282667,
+      "scene": 9,
+      "beat": 4,
+      "audio": "assets/voice/cues/229e69148a25d18d.wav"
+    },
+    {
+      "id": "v01-s10-c00-0",
+      "text": "Let's recap using pages twenty-five through twenty-eight. The agent acts,",
+      "start": 437.433333,
+      "end": 442.510667,
+      "scene": 10,
+      "beat": 0,
+      "audio": "assets/voice/cues/5512f4bf52110d0a.wav"
+    },
+    {
+      "id": "v01-s10-c00-1",
+      "text": "receives feedback, and learns a policy from experience.",
+      "start": 442.620667,
+      "end": 446.460667,
+      "scene": 10,
+      "beat": 0,
+      "audio": "assets/voice/cues/22afb19f456fd170.wav"
+    },
+    {
+      "id": "v01-s10-c01-0",
+      "text": "Reward scores an outcome. Value estimates return. Exploration improves information,",
+      "start": 446.630667,
+      "end": 453.308,
+      "scene": 10,
+      "beat": 1,
+      "audio": "assets/voice/cues/c86476c87e31b4e9.wav"
+    },
+    {
+      "id": "v01-s10-c01-1",
+      "text": "while exploitation uses the best current estimates.",
+      "start": 453.418,
+      "end": 456.938,
+      "scene": 10,
+      "beat": 1,
+      "audio": "assets/voice/cues/a182d766a11e08c4.wav"
+    },
+    {
+      "id": "v01-s10-c02-0",
+      "text": "Our worked Q update produced three point three, and our terminal-state practice produced one point five.",
+      "start": 457.108,
+      "end": 464.169333,
+      "scene": 10,
+      "beat": 2,
+      "audio": "assets/voice/cues/f5f39fc742f8466a.wav"
+    },
+    {
+      "id": "v01-s10-c03-0",
+      "text": "Page thirty-one adds an important distinction: running an already learned policy is not the same as training it online.",
+      "start": 464.339333,
+      "end": 473.128667,
+      "scene": 10,
+      "beat": 3,
+      "audio": "assets/voice/cues/0bfb982a4bd7907e.wav"
+    },
+    {
+      "id": "v01-s10-c04-0",
+      "text": "A fixed sensor-response rule can control a machine without learning at all.",
+      "start": 473.298667,
+      "end": 478.248,
+      "scene": 10,
+      "beat": 4,
+      "audio": "assets/voice/cues/fd7c5d8c0e8b6d32.wav"
+    },
+    {
+      "id": "v01-s10-c05-0",
+      "text": "Before moving on, explain the loop to someone else and run the included calculation with one changed reward.",
+      "start": 478.418,
+      "end": 486.375333,
+      "scene": 10,
+      "beat": 5,
+      "audio": "assets/voice/cues/ed13f041ff5a7e52.wav"
+    },
+    {
+      "id": "v01-s11-c00-0",
+      "text": "This tutorial was taught from the Blue Impulse study guide, especially pages twenty-four to twenty-eight and thirty-one.",
+      "start": 487.5,
+      "end": 495.329333,
+      "scene": 11,
+      "beat": 0,
+      "audio": "assets/voice/cues/066fc702124a4749.wav"
+    },
+    {
+      "id": "v01-s11-c01-0",
+      "text": "The cover on screen is the original cover of your book.",
+      "start": 495.499333,
+      "end": 499.254,
+      "scene": 11,
+      "beat": 1,
+      "audio": "assets/voice/cues/139e405fdabcbe5e.wav"
+    },
+    {
+      "id": "v01-s11-c02-0",
+      "text": "Use the companion tutorial PDF, narration script, subtitles, and Python demonstration to practise at your own pace.",
+      "start": 499.424,
+      "end": 508.490667,
+      "scene": 11,
+      "beat": 2,
+      "audio": "assets/voice/cues/b2f221282850fe5e.wav"
+    },
+    {
+      "id": "v01-s11-c03-0",
+      "text": "Blue Impulse study guide. Learn the reasoning, then test it with an example.",
+      "start": 508.660667,
+      "end": 513.887333,
+      "scene": 11,
+      "beat": 3,
+      "audio": "assets/voice/cues/885800bc2cd7c9f1.wav"
+    }
+  ],
+  "audio": "assets/voice/video-01-mix.m4a"
+}

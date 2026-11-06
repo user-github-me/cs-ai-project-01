@@ -1,0 +1,22 @@
+{
+  "video": 2,
+  "file": "BlueImpulse_Video02_How_Hardware_Enables_AI.mp4",
+  "duration_seconds": 544.833333,
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "frame_count": 16345,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "audio_sample_rate": "48000",
+  "bytes": 38161560,
+  "sha256": "ee8cd5a5b30636db1d6f9940df6a68f0e713d0cd474f71bfcd93ea8fc88d5b04",
+  "decode_errors": 0,
+  "render_and_decode_seconds": 219.59,
+  "original_render_bytes": 196688423,
+  "sampled_ssim_against_render": 0.999076,
+  "ssim_sample_rate_fps": 1,
+  "audio_unchanged": true,
+  "audio_pcm_hash": "SHA256=30424876a5d2bd884a663a02a385966b816a08b649e0fa4cc5e21c88cc2c5f33",
+  "compression": "libx264 veryfast CRF 18; 2-second maximum GOP; AAC copied"
+}

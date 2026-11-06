@@ -1,0 +1,1620 @@
+{
+  "number": 5,
+  "slug": "Program_Execution",
+  "title": "Program execution",
+  "pages": [
+    12,
+    13,
+    14,
+    15,
+    39
+  ],
+  "objectives": [
+    "Trace fetch, decode, and execute",
+    "Give each register its job",
+    "Follow a four-instruction program"
+  ],
+  "scenes": [
+    {
+      "key": "hook",
+      "kind": "hook",
+      "title": "How does a line of code become a result?",
+      "page": 13,
+      "cues": [
+        "Have you ever wondered what changes inside a computer after you press Run?",
+        "A program does not execute because the processor understands the whole page like a person reading an essay.",
+        "It follows encoded instructions, changing registers, memory, and the next instruction address as it works.",
+        "Open the Blue Impulse study guide at page thirteen, Fetch, decode, execute.",
+        "We will use that page and the tiny program on page fifteen to track every important state change by hand."
+      ],
+      "hero": "From an instruction to changed state",
+      "diagram": "cpu",
+      "start": 0.0,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 5.334,
+          "text": "Have you ever wondered what changes inside a computer after you press Run?"
+        },
+        {
+          "index": 1,
+          "start": 5.334,
+          "end": 13.397333,
+          "text": "A program does not execute because the processor understands the whole page like a person reading an essay."
+        },
+        {
+          "index": 2,
+          "start": 13.397333,
+          "end": 21.247333,
+          "text": "It follows encoded instructions, changing registers, memory, and the next instruction address as it works."
+        },
+        {
+          "index": 3,
+          "start": 21.247333,
+          "end": 27.134667,
+          "text": "Open the Blue Impulse study guide at page thirteen, Fetch, decode, execute."
+        },
+        {
+          "index": 4,
+          "start": 27.134667,
+          "end": 35.198,
+          "text": "We will use that page and the tiny program on page fifteen to track every important state change by hand."
+        }
+      ],
+      "duration": 35.866667
+    },
+    {
+      "key": "welcome",
+      "kind": "objectives",
+      "title": "Today’s route",
+      "page": 13,
+      "cues": [
+        "You will explain fetch, decode, and execute, and give each teaching-model register a clear job.",
+        "You will trace four instructions and distinguish an immediate value from a memory address.",
+        "You will also connect source code, translators, and machine instructions without oversimplifying how modern language implementations work.",
+        "Welcome to the tutorial on program execution by Blue Impulse.",
+        "Have a small table ready with columns for the program counter, current instruction, accumulator, and memory location two hundred."
+      ],
+      "start": 35.86666666666667,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 7.360667,
+          "text": "You will explain fetch, decode, and execute, and give each teaching-model register a clear job."
+        },
+        {
+          "index": 1,
+          "start": 7.360667,
+          "end": 13.333333,
+          "text": "You will trace four instructions and distinguish an immediate value from a memory address."
+        },
+        {
+          "index": 2,
+          "start": 13.333333,
+          "end": 23.021333,
+          "text": "You will also connect source code, translators, and machine instructions without oversimplifying how modern language implementations work."
+        },
+        {
+          "index": 3,
+          "start": 23.021333,
+          "end": 27.906,
+          "text": "Welcome to the tutorial on program execution by Blue Impulse."
+        },
+        {
+          "index": 4,
+          "start": 27.906,
+          "end": 36.932667,
+          "text": "Have a small table ready with columns for the program counter, current instruction, accumulator, and memory location two hundred."
+        }
+      ],
+      "duration": 37.6
+    },
+    {
+      "key": "source",
+      "kind": "book",
+      "title": "Before the processor executes",
+      "page": 14,
+      "cues": [
+        "Start with page fourteen, From source code to execution. Machine code contains the instructions the processor executes.",
+        "An assembler translates assembly mnemonics and labels. A compiler produces another representation, often native code or bytecode.",
+        "An interpreter runs operations through a runtime, sometimes working with bytecode.",
+        "The same language can have compiled and interpreted implementations, and modern systems may combine several techniques.",
+        "Avoid the blanket claim that every interpreter translates exactly one source line at a time.",
+        "For our demonstration, the book supplies an invented assembly notation so that the state changes remain easy to see."
+      ],
+      "block": 0,
+      "quote": "A language may have both compiled and interpreted implementations.",
+      "start": 73.46666666666667,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 9.22,
+          "text": "Start with page fourteen, From source code to execution. Machine code contains the instructions the processor executes."
+        },
+        {
+          "index": 1,
+          "start": 9.22,
+          "end": 19.036,
+          "text": "An assembler translates assembly mnemonics and labels. A compiler produces another representation, often native code or bytecode."
+        },
+        {
+          "index": 2,
+          "start": 19.036,
+          "end": 24.902,
+          "text": "An interpreter runs operations through a runtime, sometimes working with bytecode."
+        },
+        {
+          "index": 3,
+          "start": 24.902,
+          "end": 33.118,
+          "text": "The same language can have compiled and interpreted implementations, and modern systems may combine several techniques."
+        },
+        {
+          "index": 4,
+          "start": 33.118,
+          "end": 39.645333,
+          "text": "Avoid the blanket claim that every interpreter translates exactly one source line at a time."
+        },
+        {
+          "index": 5,
+          "start": 39.645333,
+          "end": 47.776,
+          "text": "For our demonstration, the book supplies an invented assembly notation so that the state changes remain easy to see."
+        }
+      ],
+      "duration": 48.433333
+    },
+    {
+      "key": "recipe",
+      "kind": "compare",
+      "title": "Use the recipe analogy",
+      "page": 13,
+      "cues": [
+        "Page thirteen uses a recipe to explain the register jobs. The program counter marks the next recipe line.",
+        "The memory address register selects the location. The memory data register carries the item read from memory.",
+        "The current instruction register holds the instruction being followed. The accumulator is a temporary mixing bowl for arithmetic.",
+        "We abbreviate those names as P C, M A R, M D R, C I R, and A C C.",
+        "The analogy helps you remember the jobs, but these are electronic storage locations inside a processor model.",
+        "Keep the jobs distinct: an address points to a location, while an instruction or value is the content being handled."
+      ],
+      "labels": [
+        "PC: next instruction address",
+        "MAR: selected memory address",
+        "MDR: item moving to/from memory",
+        "CIR: current instruction",
+        "ACC: intermediate arithmetic"
+      ],
+      "start": 121.9,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 9.003333,
+          "text": "Page thirteen uses a recipe to explain the register jobs. The program counter marks the next recipe line."
+        },
+        {
+          "index": 1,
+          "start": 9.003333,
+          "end": 17.066667,
+          "text": "The memory address register selects the location. The memory data register carries the item read from memory."
+        },
+        {
+          "index": 2,
+          "start": 17.066667,
+          "end": 26.050667,
+          "text": "The current instruction register holds the instruction being followed. The accumulator is a temporary mixing bowl for arithmetic."
+        },
+        {
+          "index": 3,
+          "start": 26.050667,
+          "end": 32.812667,
+          "text": "We abbreviate those names as P C, M A R, M D R, C I R, and A C C."
+        },
+        {
+          "index": 4,
+          "start": 32.812667,
+          "end": 40.94,
+          "text": "The analogy helps you remember the jobs, but these are electronic storage locations inside a processor model."
+        },
+        {
+          "index": 5,
+          "start": 40.94,
+          "end": 49.369333,
+          "text": "Keep the jobs distinct: an address points to a location, while an instruction or value is the content being handled."
+        }
+      ],
+      "duration": 50.033333
+    },
+    {
+      "key": "fetch",
+      "kind": "book",
+      "title": "Fetch one instruction",
+      "page": 13,
+      "cues": [
+        "Follow the numbered table on page thirteen. First copy the address in the program counter to the memory address register.",
+        "Read the instruction at that memory location into the memory data register.",
+        "Advance the program counter so it identifies the next instruction address, then copy the fetched instruction into the current instruction register.",
+        "The control unit can now decode the operation and its operand, and the processor executes the required work.",
+        "In this simplified model, every instruction occupies one word, so the program counter advances by one.",
+        "Real instruction sizes and exact timing depend on the architecture. Our table is a teaching model, not every processor's wiring diagram."
+      ],
+      "block": 0,
+      "quote": "A branch instruction may replace the normal next value of PC.",
+      "start": 171.93333333333334,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 8.878667,
+          "text": "Follow the numbered table on page thirteen. First copy the address in the program counter to the memory address register."
+        },
+        {
+          "index": 1,
+          "start": 8.878667,
+          "end": 14.318,
+          "text": "Read the instruction at that memory location into the memory data register."
+        },
+        {
+          "index": 2,
+          "start": 14.318,
+          "end": 24.368667,
+          "text": "Advance the program counter so it identifies the next instruction address, then copy the fetched instruction into the current instruction register."
+        },
+        {
+          "index": 3,
+          "start": 24.368667,
+          "end": 32.346667,
+          "text": "The control unit can now decode the operation and its operand, and the processor executes the required work."
+        },
+        {
+          "index": 4,
+          "start": 32.346667,
+          "end": 40.154,
+          "text": "In this simplified model, every instruction occupies one word, so the program counter advances by one."
+        },
+        {
+          "index": 5,
+          "start": 40.154,
+          "end": 50.695333,
+          "text": "Real instruction sizes and exact timing depend on the architecture. Our table is a teaching model, not every processor's wiring diagram."
+        }
+      ],
+      "duration": 51.366667
+    },
+    {
+      "key": "program",
+      "kind": "book",
+      "title": "Read the four instructions",
+      "page": 15,
+      "cues": [
+        "Turn to page fifteen. The program starts at address one hundred with LOAD, hash three.",
+        "The hash sign denotes an immediate value in this invented notation, so that instruction puts the number three into the accumulator.",
+        "Address one hundred and one contains ADD, hash four. Address one hundred and two contains STORE, two hundred.",
+        "Address one hundred and three contains HALT, which ends this teaching program.",
+        "The number two hundred in STORE identifies a memory location. It is not the value to put into the accumulator.",
+        "Before running anything, predict what that memory location will contain when the program finishes."
+      ],
+      "block": 0,
+      "quote": "STORE copies 7 to address 200; it does not mean “store the number 200”.",
+      "start": 223.3,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 6.23,
+          "text": "Turn to page fifteen. The program starts at address one hundred with LOAD, hash three."
+        },
+        {
+          "index": 1,
+          "start": 6.23,
+          "end": 15.320667,
+          "text": "The hash sign denotes an immediate value in this invented notation, so that instruction puts the number three into the accumulator."
+        },
+        {
+          "index": 2,
+          "start": 15.320667,
+          "end": 23.256,
+          "text": "Address one hundred and one contains ADD, hash four. Address one hundred and two contains STORE, two hundred."
+        },
+        {
+          "index": 3,
+          "start": 23.256,
+          "end": 28.524667,
+          "text": "Address one hundred and three contains HALT, which ends this teaching program."
+        },
+        {
+          "index": 4,
+          "start": 28.524667,
+          "end": 36.822667,
+          "text": "The number two hundred in STORE identifies a memory location. It is not the value to put into the accumulator."
+        },
+        {
+          "index": 5,
+          "start": 36.822667,
+          "end": 43.286,
+          "text": "Before running anything, predict what that memory location will contain when the program finishes."
+        }
+      ],
+      "duration": 43.966667
+    },
+    {
+      "key": "trace",
+      "kind": "cpu-demo",
+      "title": "Single-step the book’s program",
+      "page": 15,
+      "cues": [
+        "Let's single-step. Initially, the program counter is one hundred. Fetch the LOAD instruction and advance to one hundred and one.",
+        "Decode and execute LOAD, hash three. The accumulator now contains three.",
+        "Next fetch ADD, hash four from address one hundred and one. The program counter advances to one hundred and two.",
+        "Execution adds four to the accumulator's three, giving seven. Memory location two hundred has not been written yet.",
+        "Fetch STORE, two hundred. The program counter advances to one hundred and three, and execution copies seven into memory location two hundred.",
+        "The accumulator still contains seven. STORE copies the value; it does not turn the accumulator into an address.",
+        "Finally fetch HALT. In this simplified trace, the fetch advances the counter to one hundred and four before execution stops.",
+        "Our runnable Python model prints these same states and the register transfers, so you can check the trace against page fifteen."
+      ],
+      "program": [
+        [
+          100,
+          "LOAD #3"
+        ],
+        [
+          101,
+          "ADD #4"
+        ],
+        [
+          102,
+          "STORE 200"
+        ],
+        [
+          103,
+          "HALT"
+        ]
+      ],
+      "start": 267.26666666666665,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 9.006667,
+          "text": "Let's single-step. Initially, the program counter is one hundred. Fetch the LOAD instruction and advance to one hundred and one."
+        },
+        {
+          "index": 1,
+          "start": 9.006667,
+          "end": 14.616667,
+          "text": "Decode and execute LOAD, hash three. The accumulator now contains three."
+        },
+        {
+          "index": 2,
+          "start": 14.616667,
+          "end": 22.68,
+          "text": "Next fetch ADD, hash four from address one hundred and one. The program counter advances to one hundred and two."
+        },
+        {
+          "index": 3,
+          "start": 22.68,
+          "end": 30.789333,
+          "text": "Execution adds four to the accumulator's three, giving seven. Memory location two hundred has not been written yet."
+        },
+        {
+          "index": 4,
+          "start": 30.789333,
+          "end": 40.968,
+          "text": "Fetch STORE, two hundred. The program counter advances to one hundred and three, and execution copies seven into memory location two hundred."
+        },
+        {
+          "index": 5,
+          "start": 40.968,
+          "end": 49.138,
+          "text": "The accumulator still contains seven. STORE copies the value; it does not turn the accumulator into an address."
+        },
+        {
+          "index": 6,
+          "start": 49.138,
+          "end": 58.122,
+          "text": "Finally fetch HALT. In this simplified trace, the fetch advances the counter to one hundred and four before execution stops."
+        },
+        {
+          "index": 7,
+          "start": 58.122,
+          "end": 66.615333,
+          "text": "Our runnable Python model prints these same states and the register transfers, so you can check the trace against page fifteen."
+        }
+      ],
+      "duration": 67.266667
+    },
+    {
+      "key": "address",
+      "kind": "question",
+      "title": "Value or address?",
+      "page": 15,
+      "cues": [
+        "Pause and check your prediction. After the STORE instruction, what are the accumulator and memory location two hundred?",
+        "Also ask yourself whether STORE, two hundred means storing the number two hundred.",
+        "The accumulator remains seven, and memory location two hundred receives seven. Two hundred is the destination address.",
+        "The hash sign in our LOAD and ADD operands marks literal values. The STORE operand has a different role.",
+        "This distinction prevents a common tracing mistake: confusing where data lives with the value stored there.",
+        "Use the book's instruction meanings before applying assumptions from a different programming language or processor."
+      ],
+      "prompt": "After STORE 200: ACC = ? and memory[200] = ?",
+      "answer": "ACC = 7; memory[200] = 7",
+      "pause_after": 1,
+      "pause": 5,
+      "start": 334.53333333333336,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 8.324,
+          "text": "Pause and check your prediction. After the STORE instruction, what are the accumulator and memory location two hundred?"
+        },
+        {
+          "index": 1,
+          "start": 8.324,
+          "end": 13.87,
+          "text": "Also ask yourself whether STORE, two hundred means storing the number two hundred."
+        },
+        {
+          "index": 2,
+          "start": 18.87,
+          "end": 27.448667,
+          "text": "The accumulator remains seven, and memory location two hundred receives seven. Two hundred is the destination address."
+        },
+        {
+          "index": 3,
+          "start": 27.448667,
+          "end": 35.341333,
+          "text": "The hash sign in our LOAD and ADD operands marks literal values. The STORE operand has a different role."
+        },
+        {
+          "index": 4,
+          "start": 35.341333,
+          "end": 42.85,
+          "text": "This distinction prevents a common tracing mistake: confusing where data lives with the value stored there."
+        },
+        {
+          "index": 5,
+          "start": 42.85,
+          "end": 50.148667,
+          "text": "Use the book's instruction meanings before applying assumptions from a different programming language or processor."
+        }
+      ],
+      "question_pause": {
+        "start": 13.87,
+        "duration": 5
+      },
+      "duration": 50.8
+    },
+    {
+      "key": "branch",
+      "kind": "diagram",
+      "title": "The next address can change",
+      "page": 13,
+      "cues": [
+        "Return to page thirteen. It notes that a branch instruction may replace the normal next value of the program counter.",
+        "That is how the instruction sequence can follow a decision or repeat a loop instead of always moving forward.",
+        "Our four-instruction program contains no branch, so the normal next addresses stay easy to follow.",
+        "Page thirty-nine adds pipelining: real processors may overlap work on several instructions while preserving the required program behaviour.",
+        "Overlapping the implementation does not make the logical effects of a program arbitrary.",
+        "For a basic trace, first understand the defined instruction effects, then study how a specific processor implements them."
+      ],
+      "labels": [
+        "Normal next address",
+        "Branch selects another address",
+        "Instruction effects still matter"
+      ],
+      "start": 385.3333333333333,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 8.430667,
+          "text": "Return to page thirteen. It notes that a branch instruction may replace the normal next value of the program counter."
+        },
+        {
+          "index": 1,
+          "start": 8.430667,
+          "end": 16.131333,
+          "text": "That is how the instruction sequence can follow a decision or repeat a loop instead of always moving forward."
+        },
+        {
+          "index": 2,
+          "start": 16.131333,
+          "end": 23.106667,
+          "text": "Our four-instruction program contains no branch, so the normal next addresses stay easy to follow."
+        },
+        {
+          "index": 3,
+          "start": 23.106667,
+          "end": 33.498667,
+          "text": "Page thirty-nine adds pipelining: real processors may overlap work on several instructions while preserving the required program behaviour."
+        },
+        {
+          "index": 4,
+          "start": 33.498667,
+          "end": 40.132667,
+          "text": "Overlapping the implementation does not make the logical effects of a program arbitrary."
+        },
+        {
+          "index": 5,
+          "start": 40.132667,
+          "end": 48.583333,
+          "text": "For a basic trace, first understand the defined instruction effects, then study how a specific processor implements them."
+        }
+      ],
+      "duration": 49.233333
+    },
+    {
+      "key": "practice",
+      "kind": "question",
+      "title": "Change one instruction",
+      "page": 15,
+      "cues": [
+        "Your turn. Change ADD, hash four to ADD, hash nine, while keeping LOAD, hash three and STORE, two hundred.",
+        "What value should reach memory location two hundred? Work through the accumulator before we reveal it.",
+        "LOAD gives three. Adding nine gives twelve. STORE copies twelve into memory location two hundred.",
+        "That is a small example of testing a prediction by changing one input to the program.",
+        "The included simulator accepts a different add value, prints the trace, and checks that the final memory result matches the arithmetic.",
+        "Try another value and explain each register's role aloud as the instruction moves through the cycle."
+      ],
+      "prompt": "LOAD #3; ADD #9; STORE 200",
+      "answer": "memory[200] = 3 + 9 = 12",
+      "pause_after": 1,
+      "pause": 6,
+      "start": 434.56666666666666,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 7.808667,
+          "text": "Your turn. Change ADD, hash four to ADD, hash nine, while keeping LOAD, hash three and STORE, two hundred."
+        },
+        {
+          "index": 1,
+          "start": 7.808667,
+          "end": 14.485333,
+          "text": "What value should reach memory location two hundred? Work through the accumulator before we reveal it."
+        },
+        {
+          "index": 2,
+          "start": 20.485333,
+          "end": 28.058,
+          "text": "LOAD gives three. Adding nine gives twelve. STORE copies twelve into memory location two hundred."
+        },
+        {
+          "index": 3,
+          "start": 28.058,
+          "end": 34.158667,
+          "text": "That is a small example of testing a prediction by changing one input to the program."
+        },
+        {
+          "index": 4,
+          "start": 34.158667,
+          "end": 43.654667,
+          "text": "The included simulator accepts a different add value, prints the trace, and checks that the final memory result matches the arithmetic."
+        },
+        {
+          "index": 5,
+          "start": 43.654667,
+          "end": 51.056667,
+          "text": "Try another value and explain each register's role aloud as the instruction moves through the cycle."
+        }
+      ],
+      "question_pause": {
+        "start": 14.485333,
+        "duration": 6
+      },
+      "duration": 51.733333
+    },
+    {
+      "key": "recap",
+      "kind": "recap",
+      "title": "Instructions change machine state",
+      "page": 13,
+      "cues": [
+        "Recap the lesson. Source code reaches execution through a translator or runtime appropriate to its implementation.",
+        "The program counter identifies the next instruction. Fetch brings it from memory, decode interprets it, and execute performs its operation.",
+        "The memory address register selects a location, the memory data register carries data, and the current instruction register holds the operation.",
+        "Our teaching accumulator went from three to seven, and STORE copied seven to memory location two hundred.",
+        "Addresses and values have different roles. Branches can change the normal next instruction address.",
+        "Revisit pages thirteen through fifteen and complete the trace without watching the moving highlight. Understanding means predicting the state changes yourself."
+      ],
+      "labels": [
+        "Fetch → decode → execute",
+        "Each register has a job",
+        "Addresses differ from values",
+        "Trace: 3 + 4 → memory[200] = 7"
+      ],
+      "start": 486.3,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 9.049333,
+          "text": "Recap the lesson. Source code reaches execution through a translator or runtime appropriate to its implementation."
+        },
+        {
+          "index": 1,
+          "start": 9.049333,
+          "end": 19.484,
+          "text": "The program counter identifies the next instruction. Fetch brings it from memory, decode interprets it, and execute performs its operation."
+        },
+        {
+          "index": 2,
+          "start": 19.484,
+          "end": 29.748,
+          "text": "The memory address register selects a location, the memory data register carries data, and the current instruction register holds the operation."
+        },
+        {
+          "index": 3,
+          "start": 29.748,
+          "end": 37.022,
+          "text": "Our teaching accumulator went from three to seven, and STORE copied seven to memory location two hundred."
+        },
+        {
+          "index": 4,
+          "start": 37.022,
+          "end": 44.018667,
+          "text": "Addresses and values have different roles. Branches can change the normal next instruction address."
+        },
+        {
+          "index": 5,
+          "start": 44.018667,
+          "end": 54.883333,
+          "text": "Revisit pages thirteen through fifteen and complete the trace without watching the moving highlight. Understanding means predicting the state changes yourself."
+        }
+      ],
+      "duration": 55.566667
+    },
+    {
+      "key": "credits",
+      "kind": "credits",
+      "title": "Blue Impulse study guide",
+      "page": 1,
+      "cues": [
+        "This tutorial used the Blue Impulse study guide, especially pages twelve through fifteen, with the pipeline connection on page thirty-nine.",
+        "The original cover on screen credits the book we followed.",
+        "Use the companion tutorial PDF, complete narration, subtitles, and runnable instruction simulator for revision.",
+        "Blue Impulse study guide. Follow the instruction, predict the state, and check the result."
+      ],
+      "start": 541.8666666666667,
+      "beats": [
+        {
+          "index": 0,
+          "start": 0.3,
+          "end": 9.838667,
+          "text": "This tutorial used the Blue Impulse study guide, especially pages twelve through fifteen, with the pipeline connection on page thirty-nine."
+        },
+        {
+          "index": 1,
+          "start": 9.838667,
+          "end": 13.87,
+          "text": "The original cover on screen credits the book we followed."
+        },
+        {
+          "index": 2,
+          "start": 13.87,
+          "end": 22.850667,
+          "text": "Use the companion tutorial PDF, complete narration, subtitles, and runnable instruction simulator for revision."
+        },
+        {
+          "index": 3,
+          "start": 22.850667,
+          "end": 28.908667,
+          "text": "Blue Impulse study guide. Follow the instruction, predict the state, and check the result."
+        }
+      ],
+      "duration": 30.533333
+    }
+  ],
+  "duration": 572.4,
+  "fps": 30,
+  "voice": "am_michael",
+  "speed": 0.92,
+  "captions": [
+    {
+      "id": "v05-s00-c00-0",
+      "text": "Have you ever wondered what changes inside a computer after you press Run?",
+      "start": 0.3,
+      "end": 5.164,
+      "scene": 0,
+      "beat": 0,
+      "audio": "assets/voice/cues/c3ad6cee4222dfd0.wav"
+    },
+    {
+      "id": "v05-s00-c01-0",
+      "text": "A program does not execute because the processor understands the whole page like a person reading an essay.",
+      "start": 5.334,
+      "end": 13.227333,
+      "scene": 0,
+      "beat": 1,
+      "audio": "assets/voice/cues/dd5340287a489de6.wav"
+    },
+    {
+      "id": "v05-s00-c02-0",
+      "text": "It follows encoded instructions, changing registers, memory, and the next instruction address as it works.",
+      "start": 13.397333,
+      "end": 21.077333,
+      "scene": 0,
+      "beat": 2,
+      "audio": "assets/voice/cues/de7ef08e8e3fbe05.wav"
+    },
+    {
+      "id": "v05-s00-c03-0",
+      "text": "Open the Blue Impulse study guide at page thirteen, Fetch, decode, execute.",
+      "start": 21.247333,
+      "end": 26.964667,
+      "scene": 0,
+      "beat": 3,
+      "audio": "assets/voice/cues/8c62b4a2a7584af7.wav"
+    },
+    {
+      "id": "v05-s00-c04-0",
+      "text": "We will use that page and the tiny program on page fifteen to track every important state change by hand.",
+      "start": 27.134667,
+      "end": 35.028,
+      "scene": 0,
+      "beat": 4,
+      "audio": "assets/voice/cues/e593fdde10ca547b.wav"
+    },
+    {
+      "id": "v05-s01-c00-0",
+      "text": "You will explain fetch, decode, and execute, and give each teaching-model register a clear job.",
+      "start": 36.166667,
+      "end": 43.057333,
+      "scene": 1,
+      "beat": 0,
+      "audio": "assets/voice/cues/3c989ba3f3c7fb07.wav"
+    },
+    {
+      "id": "v05-s01-c01-0",
+      "text": "You will trace four instructions and distinguish an immediate value from a memory address.",
+      "start": 43.227333,
+      "end": 49.03,
+      "scene": 1,
+      "beat": 1,
+      "audio": "assets/voice/cues/03820bd87d844887.wav"
+    },
+    {
+      "id": "v05-s01-c02-0",
+      "text": "You will also connect source code, translators,",
+      "start": 49.2,
+      "end": 52.229333,
+      "scene": 1,
+      "beat": 2,
+      "audio": "assets/voice/cues/38ff435592273db8.wav"
+    },
+    {
+      "id": "v05-s01-c02-1",
+      "text": "and machine instructions without oversimplifying how modern language implementations work.",
+      "start": 52.339333,
+      "end": 58.718,
+      "scene": 1,
+      "beat": 2,
+      "audio": "assets/voice/cues/f3163232de62aff2.wav"
+    },
+    {
+      "id": "v05-s01-c03-0",
+      "text": "Welcome to the tutorial on program execution by Blue Impulse.",
+      "start": 58.888,
+      "end": 63.602667,
+      "scene": 1,
+      "beat": 3,
+      "audio": "assets/voice/cues/b811c7b0b29c3dca.wav"
+    },
+    {
+      "id": "v05-s01-c04-0",
+      "text": "Have a small table ready with columns for the program counter,",
+      "start": 63.772667,
+      "end": 67.762,
+      "scene": 1,
+      "beat": 4,
+      "audio": "assets/voice/cues/060ce1b0e4dd1de2.wav"
+    },
+    {
+      "id": "v05-s01-c04-1",
+      "text": "current instruction, accumulator, and memory location two hundred.",
+      "start": 67.872,
+      "end": 72.629333,
+      "scene": 1,
+      "beat": 4,
+      "audio": "assets/voice/cues/851efdf0cdc8ad8d.wav"
+    },
+    {
+      "id": "v05-s02-c00-0",
+      "text": "Start with page fourteen,",
+      "start": 73.766667,
+      "end": 75.516,
+      "scene": 2,
+      "beat": 0,
+      "audio": "assets/voice/cues/10f74d1e4c259fa1.wav"
+    },
+    {
+      "id": "v05-s02-c00-1",
+      "text": "From source code to execution. Machine code contains the instructions the processor executes.",
+      "start": 75.626,
+      "end": 82.516667,
+      "scene": 2,
+      "beat": 0,
+      "audio": "assets/voice/cues/5edd5107924dff22.wav"
+    },
+    {
+      "id": "v05-s02-c01-0",
+      "text": "An assembler translates assembly mnemonics",
+      "start": 82.686667,
+      "end": 85.502667,
+      "scene": 2,
+      "beat": 1,
+      "audio": "assets/voice/cues/64c1a164849beed2.wav"
+    },
+    {
+      "id": "v05-s02-c01-1",
+      "text": "and labels. A compiler produces another representation, often native code or bytecode.",
+      "start": 85.612667,
+      "end": 92.332667,
+      "scene": 2,
+      "beat": 1,
+      "audio": "assets/voice/cues/29755c7aee750c4d.wav"
+    },
+    {
+      "id": "v05-s02-c02-0",
+      "text": "An interpreter runs operations through a runtime, sometimes working with bytecode.",
+      "start": 92.502667,
+      "end": 98.198667,
+      "scene": 2,
+      "beat": 2,
+      "audio": "assets/voice/cues/569eda9932d7a293.wav"
+    },
+    {
+      "id": "v05-s02-c03-0",
+      "text": "The same language can have compiled and interpreted implementations,",
+      "start": 98.368667,
+      "end": 102.976667,
+      "scene": 2,
+      "beat": 3,
+      "audio": "assets/voice/cues/1294e7dc7054a7bc.wav"
+    },
+    {
+      "id": "v05-s02-c03-1",
+      "text": "and modern systems may combine several techniques.",
+      "start": 103.086667,
+      "end": 106.414667,
+      "scene": 2,
+      "beat": 3,
+      "audio": "assets/voice/cues/cc16ebf815169764.wav"
+    },
+    {
+      "id": "v05-s02-c04-0",
+      "text": "Avoid the blanket claim that every interpreter translates exactly one source line at a time.",
+      "start": 106.584667,
+      "end": 112.942,
+      "scene": 2,
+      "beat": 4,
+      "audio": "assets/voice/cues/179506eddfda68d1.wav"
+    },
+    {
+      "id": "v05-s02-c05-0",
+      "text": "For our demonstration, the book supplies an invented assembly notation",
+      "start": 113.112,
+      "end": 117.954667,
+      "scene": 2,
+      "beat": 5,
+      "audio": "assets/voice/cues/8c58db1cac1fdcc4.wav"
+    },
+    {
+      "id": "v05-s02-c05-1",
+      "text": "so that the state changes remain easy to see.",
+      "start": 118.064667,
+      "end": 121.072667,
+      "scene": 2,
+      "beat": 5,
+      "audio": "assets/voice/cues/f0c010a11ceb7cde.wav"
+    },
+    {
+      "id": "v05-s03-c00-0",
+      "text": "Page thirteen uses a recipe to explain the register jobs. The program counter marks the next recipe line.",
+      "start": 122.2,
+      "end": 130.733333,
+      "scene": 3,
+      "beat": 0,
+      "audio": "assets/voice/cues/903cc2c268b58b9e.wav"
+    },
+    {
+      "id": "v05-s03-c01-0",
+      "text": "The memory address register selects the location. The memory data register carries the item read from memory.",
+      "start": 130.903333,
+      "end": 138.796667,
+      "scene": 3,
+      "beat": 1,
+      "audio": "assets/voice/cues/5da38ef8fa7b13c8.wav"
+    },
+    {
+      "id": "v05-s03-c02-0",
+      "text": "The current instruction register holds the instruction being",
+      "start": 138.966667,
+      "end": 142.934667,
+      "scene": 3,
+      "beat": 2,
+      "audio": "assets/voice/cues/615da5cdd026215d.wav"
+    },
+    {
+      "id": "v05-s03-c02-1",
+      "text": "followed. The accumulator is a temporary mixing bowl for arithmetic.",
+      "start": 143.044667,
+      "end": 147.780667,
+      "scene": 3,
+      "beat": 2,
+      "audio": "assets/voice/cues/4e7f7d870b0b0042.wav"
+    },
+    {
+      "id": "v05-s03-c03-0",
+      "text": "We abbreviate those names as P C, M A R, M D R, C I R, and A C C.",
+      "start": 147.950667,
+      "end": 154.542667,
+      "scene": 3,
+      "beat": 3,
+      "audio": "assets/voice/cues/4d6144a9f55c60f2.wav"
+    },
+    {
+      "id": "v05-s03-c04-0",
+      "text": "The analogy helps you remember the jobs, but these are electronic storage locations inside a processor model.",
+      "start": 154.712667,
+      "end": 162.67,
+      "scene": 3,
+      "beat": 4,
+      "audio": "assets/voice/cues/67aab4827dc9e9f1.wav"
+    },
+    {
+      "id": "v05-s03-c05-0",
+      "text": "Keep the jobs distinct: an address points to a location,",
+      "start": 162.84,
+      "end": 166.957333,
+      "scene": 3,
+      "beat": 5,
+      "audio": "assets/voice/cues/2f3c06a6a679bf83.wav"
+    },
+    {
+      "id": "v05-s03-c05-1",
+      "text": "while an instruction or value is the content being handled.",
+      "start": 167.067333,
+      "end": 171.099333,
+      "scene": 3,
+      "beat": 5,
+      "audio": "assets/voice/cues/f5ea1b67f9ea69c4.wav"
+    },
+    {
+      "id": "v05-s04-c00-0",
+      "text": "Follow the numbered table on page thirteen. First copy the",
+      "start": 172.233333,
+      "end": 176.414667,
+      "scene": 4,
+      "beat": 0,
+      "audio": "assets/voice/cues/385b53f02523d537.wav"
+    },
+    {
+      "id": "v05-s04-c00-1",
+      "text": "address in the program counter to the memory address register.",
+      "start": 176.524667,
+      "end": 180.642,
+      "scene": 4,
+      "beat": 0,
+      "audio": "assets/voice/cues/6473359bbcc535c3.wav"
+    },
+    {
+      "id": "v05-s04-c01-0",
+      "text": "Read the instruction at that memory location into the memory data register.",
+      "start": 180.812,
+      "end": 186.081333,
+      "scene": 4,
+      "beat": 1,
+      "audio": "assets/voice/cues/651a3e0ac15ff4f0.wav"
+    },
+    {
+      "id": "v05-s04-c02-0",
+      "text": "Advance the program counter so it identifies the next instruction address,",
+      "start": 186.251333,
+      "end": 191.371333,
+      "scene": 4,
+      "beat": 2,
+      "audio": "assets/voice/cues/7649d764f002e07d.wav"
+    },
+    {
+      "id": "v05-s04-c02-1",
+      "text": "then copy the fetched instruction into the current instruction register.",
+      "start": 191.481333,
+      "end": 196.132,
+      "scene": 4,
+      "beat": 2,
+      "audio": "assets/voice/cues/62262d3861c754b9.wav"
+    },
+    {
+      "id": "v05-s04-c03-0",
+      "text": "The control unit can now decode the operation and its operand, and the processor executes the required work.",
+      "start": 196.302,
+      "end": 204.11,
+      "scene": 4,
+      "beat": 3,
+      "audio": "assets/voice/cues/a7a1970995552423.wav"
+    },
+    {
+      "id": "v05-s04-c04-0",
+      "text": "In this simplified model, every instruction occupies one word, so the program counter advances by one.",
+      "start": 204.28,
+      "end": 211.917333,
+      "scene": 4,
+      "beat": 4,
+      "audio": "assets/voice/cues/f96a24c25206b967.wav"
+    },
+    {
+      "id": "v05-s04-c05-0",
+      "text": "Real instruction sizes and exact timing depend on the architecture. Our table is a teaching model,",
+      "start": 212.087333,
+      "end": 219.511333,
+      "scene": 4,
+      "beat": 5,
+      "audio": "assets/voice/cues/a111f01d4f2ea137.wav"
+    },
+    {
+      "id": "v05-s04-c05-1",
+      "text": "not every processor's wiring diagram.",
+      "start": 219.621333,
+      "end": 222.458667,
+      "scene": 4,
+      "beat": 5,
+      "audio": "assets/voice/cues/fdbfdf185e64aa4f.wav"
+    },
+    {
+      "id": "v05-s05-c00-0",
+      "text": "Turn to page fifteen. The program starts at address one hundred with LOAD, hash three.",
+      "start": 223.6,
+      "end": 229.36,
+      "scene": 5,
+      "beat": 0,
+      "audio": "assets/voice/cues/4a7617588165d9eb.wav"
+    },
+    {
+      "id": "v05-s05-c01-0",
+      "text": "The hash sign denotes an immediate value in this invented notation,",
+      "start": 229.53,
+      "end": 234.479333,
+      "scene": 5,
+      "beat": 1,
+      "audio": "assets/voice/cues/05061def6b95113d.wav"
+    },
+    {
+      "id": "v05-s05-c01-1",
+      "text": "so that instruction puts the number three into the accumulator.",
+      "start": 234.589333,
+      "end": 238.450667,
+      "scene": 5,
+      "beat": 1,
+      "audio": "assets/voice/cues/7e59e0da5edc6eb5.wav"
+    },
+    {
+      "id": "v05-s05-c02-0",
+      "text": "Address one hundred and one contains ADD, hash four. Address one hundred and two contains STORE, two hundred.",
+      "start": 238.620667,
+      "end": 246.386,
+      "scene": 5,
+      "beat": 2,
+      "audio": "assets/voice/cues/e73fdeba492c8e03.wav"
+    },
+    {
+      "id": "v05-s05-c03-0",
+      "text": "Address one hundred and three contains HALT, which ends this teaching program.",
+      "start": 246.556,
+      "end": 251.654667,
+      "scene": 5,
+      "beat": 3,
+      "audio": "assets/voice/cues/89e9d400fabbaffa.wav"
+    },
+    {
+      "id": "v05-s05-c04-0",
+      "text": "The number two hundred in STORE identifies a memory location. It is not the value to put into the accumulator.",
+      "start": 251.824667,
+      "end": 259.952667,
+      "scene": 5,
+      "beat": 4,
+      "audio": "assets/voice/cues/07bbd0844a2b82f4.wav"
+    },
+    {
+      "id": "v05-s05-c05-0",
+      "text": "Before running anything, predict what that memory location will contain when the program finishes.",
+      "start": 260.122667,
+      "end": 266.416,
+      "scene": 5,
+      "beat": 5,
+      "audio": "assets/voice/cues/23914c12d58c4f5d.wav"
+    },
+    {
+      "id": "v05-s06-c00-0",
+      "text": "Let's single-step. Initially, the program counter is one hundred. Fetch the LOAD instruction",
+      "start": 267.566667,
+      "end": 273.753333,
+      "scene": 6,
+      "beat": 0,
+      "audio": "assets/voice/cues/62778d17717e1d57.wav"
+    },
+    {
+      "id": "v05-s06-c00-1",
+      "text": "and advance to one hundred and one.",
+      "start": 273.863333,
+      "end": 276.103333,
+      "scene": 6,
+      "beat": 0,
+      "audio": "assets/voice/cues/8a931bae064baf1e.wav"
+    },
+    {
+      "id": "v05-s06-c01-0",
+      "text": "Decode and execute LOAD, hash three. The accumulator now contains three.",
+      "start": 276.273333,
+      "end": 281.713333,
+      "scene": 6,
+      "beat": 1,
+      "audio": "assets/voice/cues/8effeca137593b07.wav"
+    },
+    {
+      "id": "v05-s06-c02-0",
+      "text": "Next fetch ADD, hash four from address one hundred and one. The program counter advances to one hundred and two.",
+      "start": 281.883333,
+      "end": 289.776667,
+      "scene": 6,
+      "beat": 2,
+      "audio": "assets/voice/cues/bd6c0fd09505ff65.wav"
+    },
+    {
+      "id": "v05-s06-c03-0",
+      "text": "Execution adds four to the accumulator's three,",
+      "start": 289.946667,
+      "end": 293.232,
+      "scene": 6,
+      "beat": 3,
+      "audio": "assets/voice/cues/d1cf8f234a482367.wav"
+    },
+    {
+      "id": "v05-s06-c03-1",
+      "text": "giving seven. Memory location two hundred has not been written yet.",
+      "start": 293.342,
+      "end": 297.886,
+      "scene": 6,
+      "beat": 3,
+      "audio": "assets/voice/cues/654d496a29caf31d.wav"
+    },
+    {
+      "id": "v05-s06-c04-0",
+      "text": "Fetch STORE, two hundred. The program counter advances to one hundred",
+      "start": 298.056,
+      "end": 302.856,
+      "scene": 6,
+      "beat": 4,
+      "audio": "assets/voice/cues/63ced4062132a71c.wav"
+    },
+    {
+      "id": "v05-s06-c04-1",
+      "text": "and three, and execution copies seven into memory location two hundred.",
+      "start": 302.966,
+      "end": 308.064667,
+      "scene": 6,
+      "beat": 4,
+      "audio": "assets/voice/cues/877ebb9f08135430.wav"
+    },
+    {
+      "id": "v05-s06-c05-0",
+      "text": "The accumulator still contains seven. STORE copies the value; it does not turn the accumulator into an address.",
+      "start": 308.234667,
+      "end": 316.234667,
+      "scene": 6,
+      "beat": 5,
+      "audio": "assets/voice/cues/d2957313c7cef3e5.wav"
+    },
+    {
+      "id": "v05-s06-c06-0",
+      "text": "Finally fetch HALT. In this simplified trace,",
+      "start": 316.404667,
+      "end": 319.754,
+      "scene": 6,
+      "beat": 6,
+      "audio": "assets/voice/cues/888aa89a33516a58.wav"
+    },
+    {
+      "id": "v05-s06-c06-1",
+      "text": "the fetch advances the counter to one hundred and four before execution stops.",
+      "start": 319.864,
+      "end": 325.218667,
+      "scene": 6,
+      "beat": 6,
+      "audio": "assets/voice/cues/c9d633c2bf2290d6.wav"
+    },
+    {
+      "id": "v05-s06-c07-0",
+      "text": "Our runnable Python model prints these same states",
+      "start": 325.388667,
+      "end": 328.716667,
+      "scene": 6,
+      "beat": 7,
+      "audio": "assets/voice/cues/68a86533205436ac.wav"
+    },
+    {
+      "id": "v05-s06-c07-1",
+      "text": "and the register transfers, so you can check the trace against page fifteen.",
+      "start": 328.826667,
+      "end": 333.712,
+      "scene": 6,
+      "beat": 7,
+      "audio": "assets/voice/cues/ddfa775816f812c7.wav"
+    },
+    {
+      "id": "v05-s07-c00-0",
+      "text": "Pause and check your prediction. After the STORE instruction,",
+      "start": 334.833333,
+      "end": 338.737333,
+      "scene": 7,
+      "beat": 0,
+      "audio": "assets/voice/cues/3ca97c5e987e7d93.wav"
+    },
+    {
+      "id": "v05-s07-c00-1",
+      "text": "what are the accumulator and memory location two hundred?",
+      "start": 338.847333,
+      "end": 342.687333,
+      "scene": 7,
+      "beat": 0,
+      "audio": "assets/voice/cues/815475736618f99d.wav"
+    },
+    {
+      "id": "v05-s07-c01-0",
+      "text": "Also ask yourself whether STORE, two hundred means storing the number two hundred.",
+      "start": 342.857333,
+      "end": 348.233333,
+      "scene": 7,
+      "beat": 1,
+      "audio": "assets/voice/cues/4ab7626eb29246d5.wav"
+    },
+    {
+      "id": "v05-s07-c02-0",
+      "text": "The accumulator remains seven,",
+      "start": 353.403333,
+      "end": 355.408667,
+      "scene": 7,
+      "beat": 2,
+      "audio": "assets/voice/cues/413e3ad4241ff5dd.wav"
+    },
+    {
+      "id": "v05-s07-c02-1",
+      "text": "and memory location two hundred receives seven. Two hundred is the destination address.",
+      "start": 355.518667,
+      "end": 361.812,
+      "scene": 7,
+      "beat": 2,
+      "audio": "assets/voice/cues/eb3be252cc910fca.wav"
+    },
+    {
+      "id": "v05-s07-c03-0",
+      "text": "The hash sign in our LOAD and ADD operands marks literal values. The STORE operand has a different role.",
+      "start": 361.982,
+      "end": 369.704667,
+      "scene": 7,
+      "beat": 3,
+      "audio": "assets/voice/cues/e8d28da2b8b1d179.wav"
+    },
+    {
+      "id": "v05-s07-c04-0",
+      "text": "This distinction prevents a common tracing mistake: confusing where data lives with the value stored there.",
+      "start": 369.874667,
+      "end": 377.213333,
+      "scene": 7,
+      "beat": 4,
+      "audio": "assets/voice/cues/da44d09d42b3c09d.wav"
+    },
+    {
+      "id": "v05-s07-c05-0",
+      "text": "Use the book's instruction meanings before applying",
+      "start": 377.383333,
+      "end": 380.498,
+      "scene": 7,
+      "beat": 5,
+      "audio": "assets/voice/cues/e64ed8c8ae0f2375.wav"
+    },
+    {
+      "id": "v05-s07-c05-1",
+      "text": "assumptions from a different programming language or processor.",
+      "start": 380.608,
+      "end": 384.512,
+      "scene": 7,
+      "beat": 5,
+      "audio": "assets/voice/cues/551777f6cfd2e0df.wav"
+    },
+    {
+      "id": "v05-s08-c00-0",
+      "text": "Return to page thirteen. It notes that a branch instruction",
+      "start": 385.633333,
+      "end": 389.729333,
+      "scene": 8,
+      "beat": 0,
+      "audio": "assets/voice/cues/7a669f9583f9612c.wav"
+    },
+    {
+      "id": "v05-s08-c00-1",
+      "text": "may replace the normal next value of the program counter.",
+      "start": 389.839333,
+      "end": 393.594,
+      "scene": 8,
+      "beat": 0,
+      "audio": "assets/voice/cues/646b4d5f3930ff07.wav"
+    },
+    {
+      "id": "v05-s08-c01-0",
+      "text": "That is how the instruction sequence can follow a decision or repeat a loop instead of always moving forward.",
+      "start": 393.764,
+      "end": 401.294667,
+      "scene": 8,
+      "beat": 1,
+      "audio": "assets/voice/cues/34f568c5065d9c4f.wav"
+    },
+    {
+      "id": "v05-s08-c02-0",
+      "text": "Our four-instruction program contains no branch, so the normal next addresses stay easy to follow.",
+      "start": 401.464667,
+      "end": 408.27,
+      "scene": 8,
+      "beat": 2,
+      "audio": "assets/voice/cues/486d6f0f3756907a.wav"
+    },
+    {
+      "id": "v05-s08-c03-0",
+      "text": "Page thirty-nine adds pipelining: real processors may overlap work on several instructions",
+      "start": 408.44,
+      "end": 415.416,
+      "scene": 8,
+      "beat": 3,
+      "audio": "assets/voice/cues/035dff61a035122c.wav"
+    },
+    {
+      "id": "v05-s08-c03-1",
+      "text": "while preserving the required program behaviour.",
+      "start": 415.526,
+      "end": 418.662,
+      "scene": 8,
+      "beat": 3,
+      "audio": "assets/voice/cues/a6c0aab2e3294af3.wav"
+    },
+    {
+      "id": "v05-s08-c04-0",
+      "text": "Overlapping the implementation does not make the logical effects of a program arbitrary.",
+      "start": 418.832,
+      "end": 425.296,
+      "scene": 8,
+      "beat": 4,
+      "audio": "assets/voice/cues/f4984abdfc5085cb.wav"
+    },
+    {
+      "id": "v05-s08-c05-0",
+      "text": "For a basic trace, first understand the defined instruction effects,",
+      "start": 425.466,
+      "end": 430.159333,
+      "scene": 8,
+      "beat": 5,
+      "audio": "assets/voice/cues/bf79be3b4564700c.wav"
+    },
+    {
+      "id": "v05-s08-c05-1",
+      "text": "then study how a specific processor implements them.",
+      "start": 430.269333,
+      "end": 433.746667,
+      "scene": 8,
+      "beat": 5,
+      "audio": "assets/voice/cues/90f0c51ddce5734b.wav"
+    },
+    {
+      "id": "v05-s09-c00-0",
+      "text": "Your turn. Change ADD, hash four to ADD, hash nine, while keeping LOAD, hash three and STORE, two hundred.",
+      "start": 434.866667,
+      "end": 442.205333,
+      "scene": 9,
+      "beat": 0,
+      "audio": "assets/voice/cues/30070ea99527b1b8.wav"
+    },
+    {
+      "id": "v05-s09-c01-0",
+      "text": "What value should reach memory location two hundred? Work through the accumulator before we reveal it.",
+      "start": 442.375333,
+      "end": 448.882,
+      "scene": 9,
+      "beat": 1,
+      "audio": "assets/voice/cues/74ab5228634f523f.wav"
+    },
+    {
+      "id": "v05-s09-c02-0",
+      "text": "LOAD gives three. Adding nine gives twelve. STORE copies twelve into memory location two hundred.",
+      "start": 455.052,
+      "end": 462.454667,
+      "scene": 9,
+      "beat": 2,
+      "audio": "assets/voice/cues/7e0c6eaf5af0f567.wav"
+    },
+    {
+      "id": "v05-s09-c03-0",
+      "text": "That is a small example of testing a prediction by changing one input to the program.",
+      "start": 462.624667,
+      "end": 468.555333,
+      "scene": 9,
+      "beat": 3,
+      "audio": "assets/voice/cues/68a2c2d27c9adb66.wav"
+    },
+    {
+      "id": "v05-s09-c04-0",
+      "text": "The included simulator accepts a different add value, prints the trace,",
+      "start": 468.725333,
+      "end": 473.568,
+      "scene": 9,
+      "beat": 4,
+      "audio": "assets/voice/cues/be63f67357595da6.wav"
+    },
+    {
+      "id": "v05-s09-c04-1",
+      "text": "and checks that the final memory result matches the arithmetic.",
+      "start": 473.678,
+      "end": 478.051333,
+      "scene": 9,
+      "beat": 4,
+      "audio": "assets/voice/cues/b5ca24e883603c3a.wav"
+    },
+    {
+      "id": "v05-s09-c05-0",
+      "text": "Try another value and explain each register's role aloud as the instruction moves through the cycle.",
+      "start": 478.221333,
+      "end": 485.453333,
+      "scene": 9,
+      "beat": 5,
+      "audio": "assets/voice/cues/a0a5360bcea36bf7.wav"
+    },
+    {
+      "id": "v05-s10-c00-0",
+      "text": "Recap the lesson. Source code reaches execution through",
+      "start": 486.6,
+      "end": 490.653333,
+      "scene": 10,
+      "beat": 0,
+      "audio": "assets/voice/cues/e1106f6007087be4.wav"
+    },
+    {
+      "id": "v05-s10-c00-1",
+      "text": "a translator or runtime appropriate to its implementation.",
+      "start": 490.763333,
+      "end": 495.179333,
+      "scene": 10,
+      "beat": 0,
+      "audio": "assets/voice/cues/1740894cb0693770.wav"
+    },
+    {
+      "id": "v05-s10-c01-0",
+      "text": "The program counter identifies the next instruction. Fetch brings it from memory,",
+      "start": 495.349333,
+      "end": 501.28,
+      "scene": 10,
+      "beat": 1,
+      "audio": "assets/voice/cues/be9f9a040a11790c.wav"
+    },
+    {
+      "id": "v05-s10-c01-1",
+      "text": "decode interprets it, and execute performs its operation.",
+      "start": 501.39,
+      "end": 505.614,
+      "scene": 10,
+      "beat": 1,
+      "audio": "assets/voice/cues/fafb92757133f0be.wav"
+    },
+    {
+      "id": "v05-s10-c02-0",
+      "text": "The memory address register selects a location, the memory data register carries data,",
+      "start": 505.784,
+      "end": 512.013333,
+      "scene": 10,
+      "beat": 2,
+      "audio": "assets/voice/cues/7e06b92315e1190e.wav"
+    },
+    {
+      "id": "v05-s10-c02-1",
+      "text": "and the current instruction register holds the operation.",
+      "start": 512.123333,
+      "end": 515.878,
+      "scene": 10,
+      "beat": 2,
+      "audio": "assets/voice/cues/b0e124060297deb3.wav"
+    },
+    {
+      "id": "v05-s10-c03-0",
+      "text": "Our teaching accumulator went from three to seven, and STORE copied seven to memory location two hundred.",
+      "start": 516.048,
+      "end": 523.152,
+      "scene": 10,
+      "beat": 3,
+      "audio": "assets/voice/cues/cf9ea65ce12feb05.wav"
+    },
+    {
+      "id": "v05-s10-c04-0",
+      "text": "Addresses and values have different roles. Branches can change the normal next instruction address.",
+      "start": 523.322,
+      "end": 530.148667,
+      "scene": 10,
+      "beat": 4,
+      "audio": "assets/voice/cues/3b768aceea952b57.wav"
+    },
+    {
+      "id": "v05-s10-c05-0",
+      "text": "Revisit pages thirteen through fifteen",
+      "start": 530.318667,
+      "end": 532.793333,
+      "scene": 10,
+      "beat": 5,
+      "audio": "assets/voice/cues/95a53abb8c5ba4d3.wav"
+    },
+    {
+      "id": "v05-s10-c05-1",
+      "text": "and complete the trace without watching the moving highlight.",
+      "start": 532.903333,
+      "end": 536.807333,
+      "scene": 10,
+      "beat": 5,
+      "audio": "assets/voice/cues/9206327f1fb5100f.wav"
+    },
+    {
+      "id": "v05-s10-c05-2",
+      "text": "Understanding means predicting the state changes yourself.",
+      "start": 536.917333,
+      "end": 541.013333,
+      "scene": 10,
+      "beat": 5,
+      "audio": "assets/voice/cues/0f80933b13d79785.wav"
+    },
+    {
+      "id": "v05-s11-c00-0",
+      "text": "This tutorial used the Blue Impulse study guide,",
+      "start": 542.166667,
+      "end": 545.345333,
+      "scene": 11,
+      "beat": 0,
+      "audio": "assets/voice/cues/83c514767298ce56.wav"
+    },
+    {
+      "id": "v05-s11-c00-1",
+      "text": "especially pages twelve through fifteen, with the pipeline connection on page thirty-nine.",
+      "start": 545.455333,
+      "end": 551.535333,
+      "scene": 11,
+      "beat": 0,
+      "audio": "assets/voice/cues/b05d8a006ff27863.wav"
+    },
+    {
+      "id": "v05-s11-c01-0",
+      "text": "The original cover on screen credits the book we followed.",
+      "start": 551.705333,
+      "end": 555.566667,
+      "scene": 11,
+      "beat": 1,
+      "audio": "assets/voice/cues/9a29c75e7987ad03.wav"
+    },
+    {
+      "id": "v05-s11-c02-0",
+      "text": "Use the companion tutorial PDF, complete narration, subtitles, and runnable instruction simulator for revision.",
+      "start": 555.736667,
+      "end": 564.547333,
+      "scene": 11,
+      "beat": 2,
+      "audio": "assets/voice/cues/d60649f6ba1f082f.wav"
+    },
+    {
+      "id": "v05-s11-c03-0",
+      "text": "Blue Impulse study guide. Follow the instruction, predict the state, and check the result.",
+      "start": 564.717333,
+      "end": 570.605333,
+      "scene": 11,
+      "beat": 3,
+      "audio": "assets/voice/cues/32ba390ac7a60d42.wav"
+    }
+  ],
+  "audio": "assets/voice/video-05-mix.m4a"
+}

@@ -1,0 +1,22 @@
+{
+  "video": 1,
+  "file": "BlueImpulse_Video01_Basic_Reinforcement_Learning.mp4",
+  "duration_seconds": 515.666667,
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "frame_count": 15470,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "audio_sample_rate": "48000",
+  "bytes": 37326183,
+  "sha256": "880ca4dcc938d14953d194b82446b41569e6ac9d16c8253361eabe46c59f56d4",
+  "decode_errors": 0,
+  "render_and_decode_seconds": 177.52,
+  "original_render_bytes": 204684339,
+  "sampled_ssim_against_render": 0.999032,
+  "ssim_sample_rate_fps": 1,
+  "audio_unchanged": true,
+  "audio_pcm_hash": "SHA256=878d61be2d81c72c7fa270d31035ba3314bd59487403c48044bd5d8b070d2ace",
+  "compression": "libx264 veryfast CRF 18; 2-second maximum GOP; AAC copied"
+}

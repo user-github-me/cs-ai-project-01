@@ -1,0 +1,155 @@
+<template>
+  <style>
+    @font-face { font-family: Anta; src: url('assets/fonts/Anta-Regular.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: Inter; src: url('assets/fonts/Inter-400.woff2') format('woff2'); font-weight: 400; }
+    @font-face { font-family: Inter; src: url('assets/fonts/Inter-700.woff2') format('woff2'); font-weight: 700; }
+    @font-face { font-family: 'JetBrains Mono'; src: url('assets/fonts/JetBrainsMono-400.woff2') format('woff2'); font-weight: 400; }
+    #q-demo-background { position: absolute; inset: 0; background: #212C4A; }
+    #q-demo-content { position: absolute; inset: 0; color: #E6E4E5; font-family: Inter, sans-serif; }
+    #q-demo-content * { box-sizing: border-box; }
+    #q-demo-title { position: absolute; left: 192px; top: 140px; width: 1536px; height: 80px; margin: 0; font: 400 64px/1.14 Anta, sans-serif; }
+    #q-demo-subtitle { position: absolute; left: 192px; top: 230px; width: 1536px; height: 44px; margin: 0; font-size: 30px; line-height: 1.3; opacity: 0.78; }
+    #q-demo-parameters { position: absolute; left: 192px; top: 316px; width: 1536px; height: 102px; display: grid; grid-template-columns: repeat(5, 276px); column-gap: 30px; }
+    #q-demo-parameters .q-demo-parameter { width: 276px; height: 102px; }
+    #q-demo-parameters .q-demo-label { height: 40px; font-size: 30px; line-height: 1.2; opacity: 0.72; }
+    #q-demo-parameters .q-demo-value { height: 56px; font: 400 44px/1.2 'JetBrains Mono', monospace; }
+    #q-demo-content .q-demo-stage { position: absolute; left: 192px; top: 454px; width: 1536px; height: 330px; }
+    #q-demo-content .q-demo-intro-title { position: absolute; left: 0; top: 34px; width: 1536px; height: 86px; font: 400 64px/1.15 Anta, sans-serif; }
+    #q-demo-content .q-demo-intro-copy { position: absolute; left: 0; top: 150px; width: 1536px; height: 100px; font-size: 38px; line-height: 1.4; opacity: 0.82; }
+    #q-demo-content .q-demo-step-label { position: absolute; left: 0; top: 0; width: 1536px; height: 42px; color: #E15B83; font-size: 30px; line-height: 1.3; font-weight: 700; }
+    #q-demo-content .q-demo-equation { position: absolute; left: 0; top: 72px; width: 1536px; height: 120px; display: flex; align-items: baseline; gap: 42px; font: 400 64px/1.1 'JetBrains Mono', monospace; white-space: nowrap; }
+    #q-demo-content .q-demo-expression { display: block; width: 730px; height: 110px; }
+    #q-demo-content .q-demo-answer { display: block; width: 320px; height: 120px; font-size: 104px; color: #E15B83; }
+    #q-demo-content .q-demo-reason { position: absolute; left: 0; top: 224px; width: 1536px; height: 56px; font-size: 38px; line-height: 1.35; opacity: 0.84; }
+    #q-demo-numberline { top: 448px !important; }
+    #q-demo-line-title { position: absolute; left: 0; top: 0; width: 1536px; height: 64px; font: 400 48px/1.2 Anta, sans-serif; }
+    #q-demo-track { position: absolute; left: 192px; top: 180px; width: 1152px; height: 4px; background: #E6E4E5; opacity: 0.48; }
+    #q-demo-start-tick, #q-demo-mid-tick, #q-demo-target-tick { position: absolute; top: 166px; width: 4px; height: 32px; background: #E6E4E5; opacity: 0.65; }
+    #q-demo-start-tick { left: 190px; }
+    #q-demo-mid-tick { left: 766px; opacity: 0.32; }
+    #q-demo-target-tick { left: 1342px; }
+    #q-demo-old-label, #q-demo-target-label { position: absolute; top: 212px; width: 320px; height: 48px; text-align: center; font-size: 36px; line-height: 1.2; }
+    #q-demo-old-label { left: 32px; }
+    #q-demo-target-label { left: 1184px; }
+    #q-demo-marker { position: absolute; left: 92px; top: 82px; width: 200px; height: 124px; }
+    #q-demo-marker-dot { position: absolute; left: 80px; top: 80px; width: 40px; height: 40px; border-radius: 50%; background: #E15B83; }
+    #q-demo-marker-value { position: absolute; left: 0; top: 0; width: 200px; height: 72px; text-align: center; color: #E15B83; font: 400 60px/1.15 'JetBrains Mono', monospace; }
+    #q-demo-halfway, #q-demo-python-note { position: absolute; left: 0; top: 286px; width: 1536px; height: 48px; font-size: 36px; line-height: 1.25; }
+    #q-demo-halfway { text-align: center; color: #E15B83; }
+    #q-demo-python-note { text-align: center; }
+    #q-demo-citation { position: absolute; left: 192px; top: 812px; width: 1536px; height: 38px; font-size: 28px; line-height: 1.2; opacity: 0.74; }
+  </style>
+
+  <div data-hf-id="hf-vjtl" id="root" class="clip" data-composition-id="q-demo" data-width="1920" data-height="1080" data-start="0" data-duration="60" style="position:relative; width:100%; height:100%; overflow:hidden;">
+    <div data-hf-id="hf-swyi" id="q-demo-background" class="clip" data-start="0" data-duration="60" data-track-index="0"></div>
+    <div data-hf-id="hf-vgt4" id="q-demo-content" class="clip" data-start="0" data-duration="60" data-track-index="1">
+      <h1 data-hf-id="hf-m6tw" id="q-demo-title">Work through the book’s update</h1>
+      <p data-hf-id="hf-5zdl" id="q-demo-subtitle">Q-learning adjusts one estimate using one observed transition.</p>
+
+      <div data-hf-id="hf-ochz" id="q-demo-parameters">
+        <div data-hf-id="hf-287k" id="q-demo-old" class="q-demo-parameter"><div data-hf-id="hf-03x3" class="q-demo-label">OLD ESTIMATE</div><div data-hf-id="hf-2e5r" class="q-demo-value">Q = 2</div></div>
+        <div data-hf-id="hf-zhhv" id="q-demo-alpha" class="q-demo-parameter"><div data-hf-id="hf-uh7q" class="q-demo-label">LEARNING RATE</div><div data-hf-id="hf-2z30" class="q-demo-value">α = 0.5</div></div>
+        <div data-hf-id="hf-750g" id="q-demo-reward" class="q-demo-parameter"><div data-hf-id="hf-n4sl" class="q-demo-label">REWARD</div><div data-hf-id="hf-durj" class="q-demo-value">r = 1</div></div>
+        <div data-hf-id="hf-p3bo" id="q-demo-gamma" class="q-demo-parameter"><div data-hf-id="hf-8zpp" class="q-demo-label">DISCOUNT</div><div data-hf-id="hf-q8ce" class="q-demo-value">γ = 0.9</div></div>
+        <div data-hf-id="hf-zspm" id="q-demo-next" class="q-demo-parameter"><div data-hf-id="hf-f6zt" class="q-demo-label">BEST NEXT</div><div data-hf-id="hf-o8j7" class="q-demo-value">max Q = 4</div></div>
+      </div>
+
+      <div data-hf-id="hf-t2wt" id="q-demo-primer" class="q-demo-stage">
+        <div data-hf-id="hf-21qa" class="q-demo-intro-title">Begin with the current estimate.</div>
+        <div data-hf-id="hf-tbsd" class="q-demo-intro-copy">Q is currently 2. The learning rate controls how much it changes.</div>
+      </div>
+      <div data-hf-id="hf-n1no" id="q-demo-observe" class="q-demo-stage">
+        <div data-hf-id="hf-o9de" class="q-demo-intro-title">Observe one transition.</div>
+        <div data-hf-id="hf-7reb" class="q-demo-intro-copy">Combine the reward now with the discounted best estimate next.</div>
+      </div>
+
+      <div data-hf-id="hf-vpvv" id="q-demo-target" class="q-demo-stage">
+        <div data-hf-id="hf-0bq9" class="q-demo-step-label">1 / CALCULATE THE TARGET</div>
+        <div data-hf-id="hf-r04q" class="q-demo-equation"><span data-hf-id="hf-cmnx" class="q-demo-expression">1 + (0.9 × 4) =</span><span data-hf-id="hf-wrrz" id="q-demo-target-answer" class="q-demo-answer">4.6</span></div>
+        <div data-hf-id="hf-sf05" class="q-demo-reason">Reward now + discounted best estimate next.</div>
+      </div>
+      <div data-hf-id="hf-j9ea" id="q-demo-error" class="q-demo-stage">
+        <div data-hf-id="hf-givk" class="q-demo-step-label">2 / FIND THE ERROR</div>
+        <div data-hf-id="hf-7ewe" class="q-demo-equation"><span data-hf-id="hf-bv98" class="q-demo-expression">4.6 − 2 =</span><span data-hf-id="hf-cuqu" id="q-demo-error-answer" class="q-demo-answer">2.6</span></div>
+        <div data-hf-id="hf-c1gl" class="q-demo-reason">Subtract the old estimate from the target.</div>
+      </div>
+      <div data-hf-id="hf-aveo" id="q-demo-change" class="q-demo-stage">
+        <div data-hf-id="hf-n89a" class="q-demo-step-label">3 / SCALE THE ERROR</div>
+        <div data-hf-id="hf-7t7f" class="q-demo-equation"><span data-hf-id="hf-gdqy" class="q-demo-expression">0.5 × 2.6 =</span><span data-hf-id="hf-bipw" id="q-demo-change-answer" class="q-demo-answer">1.3</span></div>
+        <div data-hf-id="hf-xkl0" class="q-demo-reason">Take half of the error: the learning rate is 0.5.</div>
+      </div>
+      <div data-hf-id="hf-q7cz" id="q-demo-update" class="q-demo-stage">
+        <div data-hf-id="hf-j92w" class="q-demo-step-label">4 / UPDATE THE ESTIMATE</div>
+        <div data-hf-id="hf-87ig" class="q-demo-equation"><span data-hf-id="hf-x12f" class="q-demo-expression">2 + 1.3 =</span><span data-hf-id="hf-u639" id="q-demo-update-answer" class="q-demo-answer">3.3</span></div>
+        <div data-hf-id="hf-et05" class="q-demo-reason">Add the correction to the old Q value.</div>
+      </div>
+
+      <div data-hf-id="hf-tl1l" id="q-demo-numberline" class="q-demo-stage">
+        <div data-hf-id="hf-180w" id="q-demo-line-title">Move halfway toward the target</div>
+        <div data-hf-id="hf-6h2w" id="q-demo-track"></div>
+        <div data-hf-id="hf-smj9" id="q-demo-start-tick"></div><div data-hf-id="hf-eez7" id="q-demo-mid-tick"></div><div data-hf-id="hf-1bm6" id="q-demo-target-tick"></div>
+        <div data-hf-id="hf-3liy" id="q-demo-old-label">Old Q = 2</div>
+        <div data-hf-id="hf-ulvz" id="q-demo-target-label">Target = 4.6</div>
+        <div data-hf-id="hf-xv9l" id="q-demo-marker"><div data-hf-id="hf-nxpd" id="q-demo-marker-value">3.3</div><div data-hf-id="hf-5q6b" id="q-demo-marker-dot"></div></div>
+        <div data-hf-id="hf-0ziu" id="q-demo-halfway">α = 0.5: half the gap is 1.3</div>
+        <div data-hf-id="hf-ak1s" id="q-demo-python-note">Inspect every intermediate value in the supporting Python file.</div>
+      </div>
+      <div data-hf-id="hf-6rs0" id="q-demo-citation">Blue Impulse study guide · PDF page 28 · Worked Q-learning update</div>
+    </div>
+  </div>
+
+  <script>
+    const BEATS = [0.3,7,14,21,28,35,42,49];
+    const DURATION = 60;
+    const tl = gsap.timeline({ paused: true });
+    const entries = [
+      '#q-demo-old', '#q-demo-alpha', '#q-demo-reward', '#q-demo-gamma', '#q-demo-next',
+      '#q-demo-primer', '#q-demo-observe', '#q-demo-target', '#q-demo-error',
+      '#q-demo-change', '#q-demo-update', '#q-demo-numberline',
+      '#q-demo-target-answer', '#q-demo-error-answer', '#q-demo-change-answer',
+      '#q-demo-update-answer', '#q-demo-marker-value', '#q-demo-halfway', '#q-demo-python-note'
+    ];
+    tl.set(entries, { opacity: 0, x: 60 }, 0);
+    tl.set('#q-demo-marker', { x: 0 }, 0);
+
+    // Three frames of anticipation, then fifteen frames of travel.
+    function enter(selector, at) {
+      tl.to(selector, { x: 72, opacity: 1, duration: 0.1, ease: 'power1.in' }, at);
+      tl.to(selector, { x: 0, duration: 0.5, ease: 'power3.out' }, at + 0.1);
+    }
+    function leaveBefore(selector, at) {
+      tl.to(selector, { opacity: 0, duration: 0.12, ease: 'none' }, at - 0.18);
+    }
+
+    enter('#q-demo-old', BEATS[0]);
+    enter('#q-demo-alpha', BEATS[0] + 0.1);
+    enter('#q-demo-primer', BEATS[0] + 0.2);
+    leaveBefore('#q-demo-primer', BEATS[1]);
+    enter('#q-demo-reward', BEATS[1]);
+    enter('#q-demo-gamma', BEATS[1] + 0.1);
+    enter('#q-demo-next', BEATS[1] + 0.2);
+    enter('#q-demo-observe', BEATS[1] + 0.3);
+    leaveBefore('#q-demo-observe', BEATS[2]);
+
+    const steps = ['target', 'error', 'change', 'update'];
+    steps.forEach((step, index) => {
+      const beat = index + 2;
+      enter('#q-demo-' + step, BEATS[beat]);
+      // Delay the result until the calculation has been introduced aloud.
+      enter('#q-demo-' + step + '-answer', BEATS[beat] + 0.62 * (BEATS[beat + 1] - BEATS[beat]));
+      leaveBefore('#q-demo-' + step, BEATS[beat + 1]);
+    });
+
+    enter('#q-demo-numberline', BEATS[6]);
+    // Fixed geometry: 2 to 4.6 spans 1152px. Its midpoint, 3.3, is 576px away.
+    // A 12px pull-back comes before the half-gap movement.
+    tl.to('#q-demo-marker', { x: -12, duration: 0.1, ease: 'power1.in' }, BEATS[6] + 1.5);
+    tl.to('#q-demo-marker', { x: 576, duration: 0.5, ease: 'power3.out' }, BEATS[6] + 1.6);
+    enter('#q-demo-marker-value', BEATS[6] + 2.2);
+    enter('#q-demo-halfway', BEATS[6] + 2.3);
+    leaveBefore('#q-demo-halfway', BEATS[7]);
+    enter('#q-demo-python-note', BEATS[7]);
+    tl.addLabel('scene-end', DURATION);
+    window.__timelines['q-demo'] = tl;
+  </script>
+</template>

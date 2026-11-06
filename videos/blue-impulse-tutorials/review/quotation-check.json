@@ -1,0 +1,110 @@
+[
+  {
+    "video": 1,
+    "page": 25,
+    "quote": "The objective is usually expected cumulative reward, not just the next reward.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 1,
+    "page": 27,
+    "quote": "Early estimates can be wrong, so always exploiting can lock an agent into an inferior policy.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 1,
+    "page": 28,
+    "quote": "Alpha controls the size of an update. Gamma discounts future rewards.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 1,
+    "page": 28,
+    "quote": "It did not prove the action is always best.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 2,
+    "page": 35,
+    "quote": "More powerful hardware can increase capacity or speed, but does not itself create a learning algorithm.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 2,
+    "page": 36,
+    "quote": "Capacity answers \u201chow much fits?\u201d Bandwidth answers \u201chow quickly can it move?\u201d",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 2,
+    "page": 44,
+    "quote": "A motor driver or power stage supplies the current needed to move a motor or operate a valve.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 3,
+    "page": 62,
+    "quote": "High bandwidth does not remove propagation delay, queueing or server processing.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 3,
+    "page": 62,
+    "quote": "Measure the entire task, not just the advertised link rate.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 3,
+    "page": 62,
+    "quote": "Retransmitting lost data can add delay; interference and contention can reduce throughput.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 3,
+    "page": 74,
+    "quote": "\u201cReal-time\u201d does not simply mean very fast.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 4,
+    "page": 75,
+    "quote": "Training may occur centrally while a fixed policy runs locally.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 4,
+    "page": 75,
+    "quote": "A useful architecture keeps time-critical sensing, policy evaluation and actuator control near the device.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 4,
+    "page": 75,
+    "quote": "Reject stale or unauthorised commands.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 4,
+    "page": 89,
+    "quote": "Continued operation must not be assumed.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 5,
+    "page": 14,
+    "quote": "A language may have both compiled and interpreted implementations.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 5,
+    "page": 13,
+    "quote": "A branch instruction may replace the normal next value of PC.",
+    "exact_ignoring_case_punctuation": true
+  },
+  {
+    "video": 5,
+    "page": 15,
+    "quote": "STORE copies 7 to address 200; it does not mean \u201cstore the number 200\u201d.",
+    "exact_ignoring_case_punctuation": true
+  }
+]
