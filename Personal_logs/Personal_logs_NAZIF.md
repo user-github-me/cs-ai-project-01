@@ -48,3 +48,10 @@ What I did:
 - After finishing the guide, I used Neogpt to create five narrated tutorials on reinforcement learning, AI hardware, network challenges, networking for behaviorist AI, and program execution. Each video is between five and ten minutes and includes subtitles, guide-page citations and excerpts, demonstrations, questions, and a closing book-cover credit.
 - I prepared matching tutorial PDFs, narration scripts, teaching outlines, SRT/VTT subtitles, and runnable Python examples. The checks covered quotations, calculations, PDF layouts, video playback, and subtitle visibility.
 - I saved the finished videos in `assets/tutorials/videos/` and bundled the study guide, videos, PDFs, scripts, supporting files, and editable project into `deliverables/BlueImpulse_Tutorial_Package.zip`. I also updated the repository links so the team can find the materials.
+
+### GitHub upload and task record — 6 November 2026
+
+- I uploaded the 37-slide Stage 2 Sojourner PowerPoint in `assets/presentations/final-presentation/` to the repository.
+- I checked that the six-chapter study guide, all five tutorial videos, matching PDFs, narration scripts, teaching outlines, subtitles, supporting Python examples, and editable source files were available on GitHub.
+- I added a [GitHub release for the complete project deliverables](https://github.com/user-github-me/cs-ai-project-01/releases/tag/blue-impulse-delivery-2026-11-06), including the full tutorial ZIP and checksum, with separate study-guide and presentation downloads. I used a release asset for the ZIP because it exceeds GitHub's regular file-size limit.
+- I verified the presentation and ZIP file integrity, added download links to the repository documentation, and recorded these completed tasks in my personal log. I kept `temp contents/`, generated intermediates, and macOS metadata excluded from Git.
