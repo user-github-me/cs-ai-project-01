@@ -1,0 +1,50 @@
+{
+  "1": {
+    "name": "Dawn",
+    "bg": "#7A99C7",
+    "deep": "#466BAA",
+    "light": "#E5D9E7",
+    "accent": "#DF8F9C",
+    "ink": "#212C4A"
+  },
+  "2": {
+    "name": "Morning",
+    "bg": "#8FBCDD",
+    "deep": "#356DB7",
+    "light": "#FAF6D3",
+    "accent": "#EED583",
+    "ink": "#212C4A"
+  },
+  "3": {
+    "name": "Midday",
+    "bg": "#388BC5",
+    "deep": "#168FCB",
+    "light": "#C4E3F7",
+    "accent": "#69BEC1",
+    "ink": "#153756"
+  },
+  "4": {
+    "name": "Afternoon",
+    "bg": "#193FA8",
+    "deep": "#2469D8",
+    "light": "#D5E5F5",
+    "accent": "#E15B83",
+    "ink": "#142B52"
+  },
+  "5": {
+    "name": "Dusk",
+    "bg": "#5D6B98",
+    "deep": "#463373",
+    "light": "#D6C9E5",
+    "accent": "#DC5983",
+    "ink": "#302444"
+  },
+  "6": {
+    "name": "Midnight",
+    "bg": "#212C4A",
+    "deep": "#2B2E65",
+    "light": "#E6E4E5",
+    "accent": "#215096",
+    "ink": "#212C4A"
+  }
+}

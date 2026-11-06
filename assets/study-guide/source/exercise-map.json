@@ -1,0 +1,491 @@
+{
+  "1.1a1": {
+    "text": "The byte 01001111 represents an eight-bit two’s complement integer. State its equivalent denary value.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      7
+    ]
+  },
+  "1.1a2": {
+    "text": "The byte 10011010 represents an eight-bit two’s complement integer. State its equivalent denary value.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      20
+    ]
+  },
+  "1.1a3": {
+    "text": "Write the integer −53 in eight-bit two’s complement form.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      8
+    ]
+  },
+  "1.1a4": {
+    "text": "State the range of integers that can be represented by an eight-bit two’s complement number. Give the endpoints in denary.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      20
+    ]
+  },
+  "1.1b1": {
+    "text": "Write the denary integer 798 in binary-coded decimal (BCD) format.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      20
+    ]
+  },
+  "1.1b2": {
+    "text": "Write the denary number represented by the BCD sequence 1001 0111 0111 0110.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      9
+    ]
+  },
+  "1.1c": {
+    "text": "Give one use of the binary-coded decimal system.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      18,
+      19,
+      20
+    ]
+  },
+  "1.2a1": {
+    "text": "A developer records sounds for a game. State what is meant by sampling resolution.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      21
+    ]
+  },
+  "1.2a2": {
+    "text": "Describe how sampling resolution affects the accuracy of stored digitised sound.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      11
+    ]
+  },
+  "1.2b1": {
+    "text": "A developer includes bitmap images in a game. Explain the term image resolution.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      21
+    ]
+  },
+  "1.2b2": {
+    "text": "A developer uses 16-colour bitmap images. State the number of bits required to encode the data for one pixel.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      10
+    ]
+  },
+  "1.2b3": {
+    "text": "An image is 16,384 pixels wide and 512 pixels high. It is saved as a 256-colour bitmap. Calculate the raw image-data size in gibibytes, excluding headers and compression.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      6
+    ]
+  },
+  "1.3": {
+    "text": "Put these fetch–execute stages in order: copy MDR to CIR; execute the instruction; decode the instruction; copy PC to MAR; increment PC by 1; copy the instruction at the memory location in MAR into MDR.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      12,
+      13
+    ]
+  },
+  "1.4": {
+    "text": "File History and Time Machine are examples of backup utilities. Explain why it is important to back up files on a computer.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      16
+    ]
+  },
+  "1.5": {
+    "text": "Assemblers, compilers and interpreters are all used to translate or execute programs. Discuss the different roles played by each translator.",
+    "source": "content/chapter-01/exercises.md",
+    "pages": [
+      3,
+      14,
+      15
+    ]
+  },
+  "2.1": {
+    "text": "Differentiate between classical conditioning (Pavlov) and operant conditioning (Skinner) in terms of how learning occurs.",
+    "source": "content/chapter-02/exercises.md",
+    "pages": [
+      23
+    ]
+  },
+  "2.2": {
+    "text": "Give an example of a simple reflex-based agent, such as a robotic vacuum or thermostat, and identify its stimulus, response and environment.",
+    "source": "content/chapter-02/exercises.md",
+    "pages": [
+      31,
+      32,
+      33
+    ]
+  },
+  "2.3": {
+    "text": "Explain how subsumption architecture organises robot behaviours into layered modules without requiring a centralised internal map.",
+    "source": "content/chapter-02/exercises.md",
+    "pages": [
+      24
+    ]
+  },
+  "2.4a": {
+    "text": "What are the roles of the environment, the agent and the policy in a Markov decision process (MDP)?",
+    "source": "content/chapter-02/exercises.md",
+    "pages": [
+      25,
+      29,
+      30
+    ]
+  },
+  "2.4b": {
+    "text": "Explain the difference between exploration (trying new actions) and exploitation (using the best current estimates). Why must an agent balance both?",
+    "source": "content/chapter-02/exercises.md",
+    "pages": [
+      27,
+      28
+    ]
+  },
+  "3.1a": {
+    "text": "Differentiate between primary storage and secondary storage in terms of volatility, speed and CPU accessibility.",
+    "source": "content/chapter-03/exercises.md",
+    "pages": [
+      48,
+      49,
+      50
+    ]
+  },
+  "3.1b": {
+    "text": "Give an example of a secondary-storage technology for each category: magnetic, optical and solid-state (flash).",
+    "source": "content/chapter-03/exercises.md",
+    "pages": [
+      50
+    ]
+  },
+  "3.2a": {
+    "text": "Explain the structural difference between SRAM and DRAM regarding how they store data and their need for refreshing.",
+    "source": "content/chapter-03/exercises.md",
+    "pages": [
+      36
+    ]
+  },
+  "3.2b": {
+    "text": "Contrast ROM, PROM and EPROM in terms of how data is written and erased.",
+    "source": "content/chapter-03/exercises.md",
+    "pages": [
+      37
+    ]
+  },
+  "3.3": {
+    "text": "Classify the following as input, output or storage, noting dual roles where relevant: a touchscreen display, a solid-state drive and a barcode reader.",
+    "source": "content/chapter-03/exercises.md",
+    "pages": [
+      35,
+      47
+    ]
+  },
+  "3.4": {
+    "text": "Outline an automated environmental control system, such as a greenhouse or thermostat. Specify the sensor, the processing condition and the resulting actuator action.",
+    "source": "content/chapter-03/exercises.md",
+    "pages": [
+      44
+    ]
+  },
+  "3.5a": {
+    "text": "Explain the main design difference between RISC and CISC architectures regarding instruction encoding and decoding complexity.",
+    "source": "content/chapter-03/exercises.md",
+    "pages": [
+      38
+    ]
+  },
+  "3.5b": {
+    "text": "Explain the role of pipelining in overlapping instruction execution, and name one hazard that can stall a pipeline.",
+    "source": "content/chapter-03/exercises.md",
+    "pages": [
+      39,
+      40
+    ]
+  },
+  "3.5c": {
+    "text": "State the functions of the program counter, accumulator and memory data register during instruction execution.",
+    "source": "content/chapter-03/exercises.md",
+    "pages": [
+      50
+    ]
+  },
+  "3.6": {
+    "text": "What is a hardware interrupt, and what happens to program execution when an enabled interrupt is serviced by the CPU?",
+    "source": "content/chapter-03/exercises.md",
+    "pages": [
+      17,
+      41
+    ]
+  },
+  "3.7": {
+    "text": "Draw or describe the logic-gate symbols and write the truth tables for AND, OR and NOT.",
+    "source": "content/chapter-03/exercises.md",
+    "pages": [
+      42,
+      43
+    ]
+  },
+  "4.1a": {
+    "text": "Contrast LANs and WANs in geographic scale, ownership and typical transmission conditions. Avoid assuming that scale alone fixes speed.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      52
+    ]
+  },
+  "4.1b": {
+    "text": "Compare the client–server and peer-to-peer models in resource management and scalability.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      53
+    ]
+  },
+  "4.1c": {
+    "text": "Differentiate between a thick client and a thin client based on where processing and storage take place.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      69
+    ]
+  },
+  "4.1d": {
+    "text": "What are the main trade-offs in cost, security responsibilities and control between a public cloud and a private cloud?",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      54
+    ]
+  },
+  "4.2": {
+    "text": "How do network systems handle simultaneous transmissions on a shared medium, using collision detection or collision avoidance?",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      56
+    ]
+  },
+  "4.3a": {
+    "text": "Break down the parts of a URL, such as scheme, domain and path, and explain how it identifies a resource.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      57
+    ]
+  },
+  "4.3b": {
+    "text": "Describe the role of DNS when resolving the host name in a URL to an IP address.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      58
+    ]
+  },
+  "4.4a": {
+    "text": "Outline the four TCP/IP layers in order and give the core responsibility of each.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      55,
+      59
+    ]
+  },
+  "4.4b": {
+    "text": "State the purpose of HTTP, FTP, POP3 and IMAP.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      60
+    ]
+  },
+  "4.5a": {
+    "text": "Explain what is meant by circuit switching.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      69
+    ]
+  },
+  "4.5b": {
+    "text": "Assume a video-conferencing scenario specifically requires reserved communication capacity. Explain why circuit switching could be preferred in that scenario. This is the source question’s assumed context, not a claim that modern Internet video calls generally use circuits.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      69
+    ]
+  },
+  "4.5c": {
+    "text": "List two benefits and one drawback of packet switching.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      61
+    ]
+  },
+  "4.6a": {
+    "text": "Differentiate between data security, data privacy and data integrity.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      67,
+      68,
+      69
+    ]
+  },
+  "4.6b": {
+    "text": "Contrast validation, such as range and format checks, with verification, such as double entry and transfer checks, when protecting data quality.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      63
+    ]
+  },
+  "4.6c": {
+    "text": "Name three mechanisms used to protect computer systems against threats.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      70
+    ]
+  },
+  "4.7a": {
+    "text": "Compare symmetric and asymmetric cryptography in key management, typical performance and the handling of plaintext and ciphertext.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      64,
+      66
+    ]
+  },
+  "4.7b": {
+    "text": "Explain how a private signing key and matching public verification key support a digital signature that checks message origin and integrity. Distinguish signing from encryption.",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      70
+    ]
+  },
+  "4.7c": {
+    "text": "What are SSL and TLS, and where is TLS used to secure network traffic today?",
+    "source": "content/chapter-04/exercises.md",
+    "pages": [
+      65
+    ]
+  },
+  "5.1": {
+    "text": "Define a smart system and explain how it integrates physical hardware, network connectivity and software into one workflow.",
+    "source": "content/chapter-05/exercises.md",
+    "pages": [
+      2,
+      72,
+      82
+    ]
+  },
+  "5.2a": {
+    "text": "Define real-time processing and explain why communication delay and hardware performance matter for tasks such as collision avoidance.",
+    "source": "content/chapter-05/exercises.md",
+    "pages": [
+      74
+    ]
+  },
+  "5.2b": {
+    "text": "What is automation, and how can moving from manual operation to automated systems change efficiency and error patterns?",
+    "source": "content/chapter-05/exercises.md",
+    "pages": [
+      76
+    ]
+  },
+  "5.3a": {
+    "text": "Explain how an RL-based system uses feedback or reward signals from its environment to update its behavioural policy or value estimates.",
+    "source": "content/chapter-05/exercises.md",
+    "pages": [
+      26,
+      77
+    ]
+  },
+  "5.3b": {
+    "text": "Describe the role of actuators in translating a computed decision into a physical change.",
+    "source": "content/chapter-05/exercises.md",
+    "pages": [
+      73,
+      78
+    ]
+  },
+  "5.4a": {
+    "text": "Define human-AI interaction and explain the additional challenges it introduces within human-computer interaction.",
+    "source": "content/chapter-05/exercises.md",
+    "pages": [
+      83
+    ]
+  },
+  "5.4b": {
+    "text": "Identify a usability or safety challenge that can occur when a smart system’s autonomous behaviour lacks transparency.",
+    "source": "content/chapter-05/exercises.md",
+    "pages": [
+      79
+    ]
+  },
+  "5.5a": {
+    "text": "Define ethical AI and discuss the challenges of maintaining transparency, fairness and accountability in smart systems.",
+    "source": "content/chapter-05/exercises.md",
+    "pages": [
+      80
+    ]
+  },
+  "5.5b": {
+    "text": "Identify one opportunity and one security or privacy risk associated with connecting everyday physical devices to networks.",
+    "source": "content/chapter-05/exercises.md",
+    "pages": [
+      81
+    ]
+  },
+  "6.1": {
+    "text": "Explain how thermal limits, power consumption, memory capacity and processing speed constrain complex AI models on small embedded devices.",
+    "source": "content/chapter-06/exercises.md",
+    "pages": [
+      45,
+      46,
+      86,
+      87
+    ]
+  },
+  "6.2": {
+    "text": "Define scalability and interoperability. Explain why both matter when adding hundreds of IoT devices from different manufacturers.",
+    "source": "content/chapter-06/exercises.md",
+    "pages": [
+      88
+    ]
+  },
+  "6.3": {
+    "text": "Define adaptive intelligence and explain how it can help an agent respond to changing conditions, without assuming that adaptation guarantees success.",
+    "source": "content/chapter-06/exercises.md",
+    "pages": [
+      93,
+      94,
+      95
+    ]
+  },
+  "6.4": {
+    "text": "Compare predictive analytics and behavioural modelling in how they use evidence to inform future decisions or actions.",
+    "source": "content/chapter-06/exercises.md",
+    "pages": [
+      90
+    ]
+  },
+  "6.5": {
+    "text": "Explain resource optimisation when balancing local hardware processing against network transmission costs.",
+    "source": "content/chapter-06/exercises.md",
+    "pages": [
+      4,
+      62,
+      75,
+      85,
+      89
+    ]
+  },
+  "6.6": {
+    "text": "Define explainability and explain why some deep reinforcement-learning models are difficult to interpret.",
+    "source": "content/chapter-06/exercises.md",
+    "pages": [
+      91
+    ]
+  },
+  "6.7": {
+    "text": "Identify two security concerns and two ethical implications when a network of smart devices makes high-stakes decisions with limited human oversight.",
+    "source": "content/chapter-06/exercises.md",
+    "pages": [
+      92,
+      96
+    ]
+  }
+}

@@ -97,6 +97,10 @@ cs-ai-project-01/
 │       ├── significance-use-of-AI.md
 │       └── use-of-github.md
 └── assets/
+    ├── study-guide/
+    │   ├── BlueImpulse_Study_Guide.pdf
+    │   ├── BlueImpulse_Study_Guide_Overview.jpg
+    │   └── source/
     ├── images/
     ├── diagrams/
     │   └── Flowchart.png
@@ -120,6 +124,7 @@ cs-ai-project-01/
 - [content/](content/): Study material being developed or ready for use. Repeat the chapter folder layout for each new chapter.
 - [drafts/](drafts/): Early ideas, outlines, research notes, and development plans. Stage 1 Markdown files are in [drafts/stage 1/](drafts/stage%201/).
 - [assets/](assets/): Images, diagrams, and reference material used in the chapters.
+- [Study guide](assets/study-guide/README.md): The complete six-chapter PDF, page overview, source files and page references for the companion tutorials.
 - [assets/presentations/slides-draft/](assets/presentations/slides-draft/): Draft presentations, including the [Blue Impulse Stage 1 status-report template](assets/presentations/slides-draft/BlueImpulse_Stage1_StatusReport.pptx). The template contains placeholders for the team to complete.
 - [Stage 2 Sojourner slide draft](assets/presentations/slides-draft/stage2-sojourner/README.md): Editable PowerPoint, PDF preview, artwork and source for the retro Mars presentation. Detailed content remains blank according to the team's outline.
 - [Personal_logs/](Personal_logs/): Individual learning and work logs for each Blue Impulse member.

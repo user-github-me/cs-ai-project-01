@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "pages": 96,
+  "unchanged_artwork_pages": [
+    1,
+    5,
+    22,
+    34,
+    51,
+    71,
+    84
+  ],
+  "verified_text_items": 1287,
+  "source_exercises": 65,
+  "exercise_pages": 89,
+  "contents_links": 6,
+  "minimum_prose_font_pt": 11.2,
+  "pdf_sha256": "2af7695b50de6d32cdc3254b1a702b1ec09701c90677bc758d956f9476b7d3e4"
+}

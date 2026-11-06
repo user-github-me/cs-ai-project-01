@@ -1,0 +1,25 @@
+{
+  "source": "User-supplied study guide art.pdf",
+  "cover_source_page": 16,
+  "divider_source_pages": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "windows_source_pages": [
+    4,
+    5,
+    6
+  ],
+  "folder_source_page": 7,
+  "diagram_nodes_source_page": 8,
+  "aircraft_source_page": 11,
+  "depth_source_page": 12,
+  "sky_source_page": 28,
+  "sky_opacity": 0.3,
+  "chapter_5_sky_recoloured_purple": true,
+  "note": "Cover and dividers are imported as PDF pages without overlays or edits."
+}
