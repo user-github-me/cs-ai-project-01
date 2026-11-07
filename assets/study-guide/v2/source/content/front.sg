@@ -1,0 +1,24 @@
+@page! About this guide
+@plane climb br
+
+This study guide introduces **high-school students and university freshmen** who already have some basic computer science knowledge to our module: **Hardware, Networks and Behaviorist AI**. It explains how machines *sense* the world, *connect* to one another and *act* on what they learn. These three ideas give the guide its title.
+
+@box dark w=92 | Three parts, used together
+The module is built from three learning materials. You can move between them in any order:
+
+1. **This study guide** — six chapters of explanations, worked examples, diagrams and exercises.
+2. **Video tutorials** — short narrated lessons that show a process in motion (program execution, reinforcement learning, hardware for AI and networking). Each chapter shows the link at the topic it belongs to.
+3. **RoverLab, an interactive game** — build a small machine, connect its network, train its behaviour and test it on a mission. The Appendix explains how to play.
+@end
+
+@box light w=86 right | How each chapter works
+Every chapter opens with a coloured **divider**, followed by its **learning goals** and **key terms**. The subtopics keep their numbers (1.1, 1.2 …) so you can find them in the Contents. Most pages end with a short **Pause & Try** question: answer it before you turn the page. Each chapter closes with a **Practice** page that brings the whole chapter together.
+@end
+
+@box alt w=80 | Reading the page
+@flow Window boxes :: explanations > Folder boxes :: pictures and diagrams > Pill shapes :: steps and flows
+Text on the background introduces an idea; the boxes break it into parts.
+@end
+
+@video Play RoverLab: Build, Connect, Train | https://roverlab-blue-impulse.vercel.app
+@video All video tutorials | https://github.com/user-github-me/cs-ai-project-01/tree/main/assets/tutorials/stage2

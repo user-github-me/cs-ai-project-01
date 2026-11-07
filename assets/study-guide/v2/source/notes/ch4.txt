@@ -1,0 +1,642 @@
+[page 1]
+CHAPTER 4
+Networking, Security & Communications
+LEARNING GOALS
+Characteristics of WAN, LAN, MAN, PAN, WPAN
+Client-server & peer-to-peer (P2P) networking models
+Thick client vs. thin client architectures
+Public vs. private cloud computing & storage
+Hardware to support LAN (Hub, Switch, Router, NIC, AP)
+Functions of Routers, Gateways, Bridges, Repeaters
+Data collision detection & avoidance (CSMA/CD,
+CSMA/CA)
+Differences between Internet & World Wide Web
+Hardware needed to support the Internet & Modems
+Structure of IP Addresses (IPv4 & IPv6)
+Uniform Resource Locator (URL) structure
+Role of the Domain Name Service (DNS)
+Need for communication protocols & protocol stacks
+TCP/IP 4-Layer Model (Application, Transport, Internet,
+Link)
+Application protocols: HTTP, FTP, POP3, IMAP, SMTP,
+MIME
+Data security, data privacy, and data integrity
+System protection: Passwords, Firewalls, Antivirus,
+Digital Signatures
+Security threats: Malware, Hacking, Phishing, Pharming
+Methods to reduce security risks & Access Rights
+Validation checks to ensure data integrity
+Verification methods during data entry & transfer
+Circuit switching mechanics & applications
+Packet switching benefits, drawbacks, & routing
+Symmetric vs. Asymmetric cryptography & Key
+Distribution
+Plaintext, Ciphertext, Block & Stream Ciphers, Block
+Chaining
+Digital signatures for verified message origin
+Quantum cryptography & Quantum Key Distribution
+(QKD)
+SSL and TLS protocols & implementation scenarios
+Acquisition of Digital Certificates & Certificate
+Authorities
+KEY TERMS
+ARPAnet: Advanced Research Projects Agency Network;
+pioneer packet-switching network.
+WAN: Wide Area Network covering large geographical
+regions.
+LAN: Local Area Network covering small areas like a single
+building.
+MAN: Metropolitan Area Network covering a city or university
+campus.
+PAN / WPAN: Personal Area Network centred around an
+individual workspace.
+WLAN: Wireless Local Area Network implementing IEEE
+802.11 Wi-Fi standard.
+File server: Network server providing centralized data and
+file access.
+Hub: Hardware broadcasting incoming data packets to all
+connected LAN ports.
+Switch: Hardware directing incoming data packets to specific
+destination addresses.
+Router: Device routing data packets between different
+subnets/networks.
+Modem: Modulator-Demodulator converting analogue and
+digital signals.
+(W)AP: Wireless Access Point providing wireless node
+connection to a LAN.
+Node: Any device (PC, printer, storage) connected to a
+network.
+Client-server: Architecture using dedicated servers and client
+workstations.
+Peer-to-peer (P2P): Decentralized network where every node
+shares resources equally.
+Thin client: Device relying on a server for processing power
+and storage.
+Thick client: Device processing data locally independently of
+a network connection.
+Packet: Small discrete block of formatted data sent across a
+network.
+Cloud storage: Storing data on remote, off-site servers
+managed by providers.
+Data redundancy: Storing identical data across multiple
+servers for fault tolerance.
+Spread spectrum: Wideband radio transmission technique
+(30m-50m range).
+Frequency hopping: Rapid channel switching across 79
+frequencies to prevent noise.
+Bridge / Gateway: Bridge links identical protocol LANs;
+Gateway links different protocols.
+NIC / MAC: Network Interface Card with factory-assigned
+Hardware Address.
+Symmetric / Asymmetric: Encryption using single shared
+key vs. public/private key pairs.
+Chapter 4: Networking, Security & Communications
+Page 1 of 1
+
+
+[page 2]
+4.1 Network Architecture & Topologies
+Computer networks connect computing devices (nodes) to share data, hardware peripherals, and software
+applications. Networks are primarily classified by their geographical footprint, administrative structure, and
+processing models.
+Geographical Classifications: LAN, WAN, MAN, PAN, WPAN
+The scale of a network determines the physical transmission media required, ownership structures, and overall
+throughput capabilities.
+Network Type
+Geographic
+Scale
+Ownership &
+Infrastructure
+Data Speeds
+Typical Application
+PAN / WPAN
+Within 10
+metres (Personal
+Space)
+Privately owned by
+individual
+High (1–24 Mbps via
+Bluetooth)
+Connecting
+smartphone to wireless
+headphones or
+smartwatch.
+LAN (Local Area
+Network)
+Single room,
+home, or
+building
+Owned entirely by the
+private organization
+Very High (100 Mbps –
+10 Gbps)
+School computer lab or
+office Ethernet/Wi-Fi
+network.
+MAN
+(Metropolitan
+Area Network)
+Across a town,
+city, or campus
+Owned by a consortium
+or telecom service
+High (Fiber backbone,
+1–10 Gbps)
+Linking multiple
+university buildings
+scattered across a city.
+WAN (Wide Area
+Network)
+Countries,
+continents,
+global
+Leased public
+infrastructure
+(telecoms, undersea
+cable)
+Variable (Depends on
+distance/medium)
+The global Internet or
+corporate multi-
+national network.
+ANALOGY: UNDERSTANDING GEOGRAPHICAL SCALE
+Think of a PAN like a conversation whispered between two people sitting on the same bench. A LAN is
+like an intercom system inside an apartment building—privately wired and extremely fast. A MAN is like a
+city bus system connecting distinct neighborhoods. A WAN is the international postal system: it relies on
+roads, planes, and ships owned by many countries to carry letters around the world.
+Client-Server vs. Peer-to-Peer (P2P) Models
+The operational logic of a network defines how resources (files, applications, compute power) are managed
+and accessed by connected nodes.
+Client-Server Model: A centralized structure where dedicated, high-performance machines (servers) store
+data, manage security, handle file requests (File Server), and manage network access. Client workstations
+request services, and servers process and respond. Centralized backup, single-point security access, and
+high scalability are main benefits, though server failure disrupts the whole network.
+Peer-to-Peer (P2P) Model: A decentralized structure where every connected node acts as both a client and
+a server. Each node retains its own data and can share files directly with other nodes without a central
+authority. P2P networks are easy to set up and cost-effective, but security management is fragmented and
+data redundancy is difficult to control.
+Chapter 4: Networking, Security & Communications
+Page 2 of 1
+
+
+[page 3]
+File Sharing in P2P: BitTorrent Protocol Terminology
+Modern P2P protocols like BitTorrent break large binary files into small pieces to distribute downloading
+loads across thousands of computers simultaneously:
+Tracker: A central server holding metadata about connected computers without storing actual content
+files.
+Swarm: The entire group of peers sharing or downloading a specific file torrent.
+Seed: A peer that has downloaded the complete file and continues uploading pieces to others.
+Leech: A node that downloads data from the swarm but limits its upload speed to others.
+Lurker: A user who downloads content from a community without contributing any new upload bandwidth.
+STUDENT ACTIVITY 4.1: MODEL COMPARISON CHALLENGE
+A medium-sized architectural firm with 40 staff members wants to upgrade its network. They work on
+heavy 3D rendering files and need daily offsite backups and strict user permissions. Should they deploy a
+Client-Server or Peer-to-Peer architecture? Justify your recommendation with 3 distinct architectural
+reasons.
+4.2 Client Computations & Cloud Technologies
+Thin Client vs. Thick Client Systems
+Workstation processing can occur locally on the user's desktop hardware or remotely on centralized enterprise
+servers.
+Attribute
+Thin Client
+Thick Client
+Definition
+Low-spec terminal reliant on a network
+connection to run programs on a central server.
+Full-featured PC capable of operating
+independently offline or online.
+Processing
+Location
+Processed completely on the central application
+server.
+Processed locally using internal CPU and RAM
+hardware.
+Storage Location
+Remote file servers; no internal local storage
+required.
+Local Solid-State Drive (SSD) or Hard Disk Drive
+(HDD).
+Advantages
+Low terminal hardware cost; centralized
+software updates; easy maintenance.
+Works offline; high graphic/compute
+performance; lower network bandwidth usage.
+Disadvantages
+Useless without active network/internet
+connection; high server load.
+High initial hardware cost per user; complex
+software rollout across machines.
+ANALOGY: THIN VS. THICK CLIENTS
+A Thin Client is like a web browser stream of a video game (cloud gaming): your computer sends
+keypresses and renders video, but the game engine runs on a multi-thousand-dollar server far away. A
+Thick Client is like installing the game directly on your custom gaming rig: it processes everything using
+your internal graphics card without relying on a constant network connection.
+Chapter 4: Networking, Security & Communications
+Page 3 of 1
+
+
+[page 4]
+Public and Private Cloud Computing
+Cloud storage and cloud computing involve hosting server resources, databases, software applications, and
+file systems over off-site internet infrastructure. Modern cloud providers maintain extensive data redundancy
+by replicating data across geographic locations to protect against hardware failures.
+Public Cloud: Cloud infrastructure owned and operated by third-party service providers (e.g., AWS,
+Microsoft Azure, Google Cloud). Resources are shared dynamically across millions of multi-tenant users
+over the public Internet. It provides high scalability and low upfront costs, but offers less control over
+storage locations.
+Private Cloud: Dedicated cloud infrastructure owned, managed, and accessed exclusively by a single
+enterprise or government agency. It can be hosted on-premise or off-site. It delivers total control, high
+security, and compliance with data isolation standards, but demands substantial capital expenditure.
+4.3 Hardware Required to Support a LAN
+Building a physical or wireless LAN requires specialized communication hardware to convert, connect, route,
+and amplify network signals.
+Network Interface Card (NIC): Hardware controller installed in a device that allows it to connect to a
+network. Each NIC contains a factory-embedded physical address called a MAC (Media Access Control)
+address.
+Hub: A basic hardware device that connects multiple network nodes. It broadcasts incoming data frames to
+every single port on the hub, creating unnecessary network traffic and security risks.
+Switch: An intelligent LAN device that reads the destination MAC address of incoming data frames and
+forwards them only to the specific target port.
+Wireless Access Point ((W)AP): A device containing a transceiver that allows wireless nodes (smartphones,
+laptops) to connect to a wired LAN using radio frequencies.
+Repeating Hub / Repeater: A device that receives weak incoming signals, cleans noise, amplifies the
+voltage, and retransmits them to overcome cable distance limits.
+Bridge: A networking device used to join two separate LAN segments that run on the same communications
+protocol.
+Gateway: A specialized entry point that translates data format protocols between two networks running on
+different communication protocols.
+Modem (Modulator-Demodulator): Converts digital computer data into analogue signals for transmission
+over telephone lines, and converts incoming analogue signals back to digital data. Softmodems perform
+these signal conversion steps in software to save hardware component costs.
+WORKED EXAMPLE 4.1: Switch vs. Hub Bandwidth Efficiency
+Scenario: Node A sends a 10 MB file to Node B on an 8-port hub vs. an 8-port switch.
+Hub Behavior: Broadcasts all 10 MB of data frames across ports 2 through 8. Nodes C, D, E, F, G, and H
+receive the frames, inspect the destination MAC address, and drop them. Bandwidth is consumed across
+the whole network segment.
+Switch Behavior: Reads destination MAC address in the frame header, checks its internal MAC table,
+opens a direct circuit between Port A and Port B, and transmits data solely to Node B. Other ports remain
+free for concurrent communications.
+Chapter 4: Networking, Security & Communications
+Page 4 of 1
+
+
+[page 5]
+4.4 Transmission Media & Collision Handling
+Physical and Wireless Transmission Media
+Twisted Pair Cable: Copper wires twisted together in pairs to reduce electromagnetic interference
+(crosstalk). Common standard in Ethernet networks (Cat5e/Cat6).
+Wi-Fi (IEEE 802.11): Uses high-frequency radio and microwave bands for wireless LAN communication.
+Bluetooth: Short-range wireless connectivity using radio waves in the 2.45 GHz ISM band, typically for
+WPAN setups.
+Spread Spectrum Frequency Hopping: A radio transmission method where a device rapidly hops across
+79 random frequency channels. If a chosen channel has interference, it immediately switches to another
+channel, allowing robust short-range transmissions up to 100 metres.
+Data Collisions on Shared Media
+When multiple nodes transmit data simultaneously over a shared medium (such as a single copper wire or
+shared radio spectrum), signals overlap and corrupt each other. This is known as a data collision.
+ANALOGY: CARRIER SENSE & COLLISION HANDLING
+Imagine a dinner party in a dark room. CSMA/CD is like two people starting to talk at the exact same
+moment. They both stop, wait a random number of seconds, and then try speaking again. CSMA/CA is
+like raising your hand and waiting for the host's clear signal before speaking to avoid interrupting
+anyone.
+CSMA/CD vs. CSMA/CA
+CSMA/CD (Carrier Sense Multiple Access with Collision Detection): Used primarily in wired Ethernet
+networks.
+1. Node listens to the medium to check if line is idle.
+2. If idle, node begins transmitting data packet.
+3. Node monitors the voltage level on the wire during transmission.
+4. If a sudden rise in voltage indicates a collision, a jamming signal is sent to alert all nodes.
+5. Transmission halts immediately, and both nodes wait a random time interval (backoff timer) before
+retrying.
+CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance): Used in wireless Wi-Fi networks
+where nodes cannot listen while transmitting.
+1. Node checks channel; if clear, it sends a Request to Send (RTS) packet to the access point.
+2. Access Point replies with a Clear to Send (CTS) packet, reserving the channel.
+3. Node transmits its payload and waits for an ACK (Acknowledgement) frame. If ACK is missing, a
+collision is assumed and backoff occurs.
+4.5 Internet Infrastructure, URLs & DNS
+The Internet is the global physical infrastructure of interconnected computer networks. The World Wide Web
+(WWW) is an information system of interlinked web pages and resources accessed *over* the Internet using
+HTTP protocol.
+Chapter 4: Networking, Security & Communications
+Page 5 of 1
+
+
+[page 6]
+Structure of a Uniform Resource Locator (URL)
+A URL provides the precise location address of a Web resource across the Internet:
+URL BREAKDOWN STRUCTURE
+https://www.example.com:443/courses/computer-science/notes.html#section2
+Protocol (Scheme): https:// (Hypertext Transfer Protocol Secure)
+Domain Name (Host): www.example.com (Human-readable server name)
+Port Number: :443 (Target application port; default for HTTPS)
+Path: /courses/computer-science/ (Directory path on web server)
+Resource / Filename: notes.html (Target document file)
+Fragment / Anchor: #section2 (Specific position marker within the file)
+The Domain Name System (DNS) Translation Process
+Computers route data using numeric IP addresses (e.g., 192.0.2.1 ), but humans remember domain names
+(e.g., cambridge.org ). The DNS converts domain names into destination IP addresses through a recursive
+step-by-step lookup process:
+1. User enters domain name into a browser. Local OS cache is checked first.
+2. If missing, request is sent to the local ISP's DNS Recursive Resolver.
+3. Resolver queries a Root Name Server, which directs it to the appropriate Top-Level Domain (TLD) Server
+(e.g., .org, .com).
+4. TLD server returns the IP address of the domain's Authoritative Name Server.
+5. Authoritative server returns the target IP address to the resolver.
+6. Resolver caches the result and returns IP address to client browser to establish TCP connection.
+4.6 Protocols & The TCP/IP Protocol Stack
+A protocol is a set of formal rules governing communication across a network. Without agreed rules for
+framing, addressing, error detection, and speed, nodes cannot interpret received bitstreams.
+The 4-Layer TCP/IP Protocol Stack
+The TCP/IP stack structures network operations into four modular layers. As data moves down the stack from
+sender to recipient, each layer adds specific header metadata (encapsulation).
+Layer
+Protocol Data
+Unit (PDU)
+Core Responsibilities
+Key Protocols
+1. Application
+Layer
+Data / Message
+Provides user-facing network services and high-level
+application data formatting.
+HTTP, HTTPS, FTP,
+SMTP, POP3, IMAP,
+DNS
+2. Transport
+Layer
+Segment (TCP) /
+Datagram (UDP)
+End-to-end host-to-host communications, flow
+control, port numbers, packet reassembly, error
+recovery.
+TCP, UDP
+3. Internet
+Layer
+IP Packet
+Logical addressing (IP addresses) and routing data
+packets across disparate networks.
+IP (IPv4, IPv6), ICMP,
+ARP
+4. Link Layer
+Ethernet Frame
+Physical hardware drivers, MAC addressing, signal
+encoding, and physical transmission.
+Ethernet, Wi-Fi
+(802.11), PPP
+Chapter 4: Networking, Security & Communications
+Page 6 of 1
+
+
+[page 7]
+ANALOGY: TCP/IP ENCAPSULATION AS POSTAL MAILING
+1. Application: You write a letter (Data payload).
+2. Transport: You break a long letter into numbered pages and put them in envelopes with sequence
+numbers (TCP Segment).
+3. Internet: You write destination and return street addresses on the envelope (IP Packet).
+4. Link: Postal workers place envelopes inside specific mail trucks moving over physical roads (Ethernet
+Frame).
+Application Protocols Deep-Dive
+HTTP / HTTPS: Transfers hypertext documents across the web. HTTPS encrypts data using SSL/TLS.
+FTP (File Transfer Protocol): Used for uploading and downloading binary and text files between client and
+server.
+Email Protocols (Push vs. Pull):
+SMTP (Simple Mail Transfer Protocol): A push protocol used by clients to upload emails to outgoing
+mail servers and for servers to relay messages between each other. Handles MIME (Multipurpose
+Internet Mail Extensions) data to send binary attachments (images, audio).
+POP3 (Post Office Protocol v3): A pull protocol that downloads emails from server to local client and
+deletes server copies by default.
+IMAP (Internet Message Access Protocol): A pull protocol that syncs email client headers with remote
+server folders, keeping emails cached on server across multiple client devices.
+STUDENT ACTIVITY 4.2: PROTOCOL IDENTIFICATION
+Identify which protocol is actively used in each scenario:
+a) Fetching unread emails on a laptop and keeping them visible on a smartphone inbox simultaneously.
+b) Sending a PDF file attachment via email over an encrypted channel.
+c) Uploading a 2 GB file to a remote website storage folder via command line terminal.
+Chapter 4: Networking, Security & Communications
+Page 7 of 1
+
+
+[page 8]
+4.7 Network Security, Privacy & Data Integrity
+Managing network safety requires separating three distinct domain objectives:
+Data Security: Protection of computer systems and data from unauthorized access, accidental loss,
+malicious deletion, or physical damage.
+Data Privacy: Rights of individuals/organizations to control how their personal data is collected, stored,
+shared, and processed by third parties.
+Data Integrity: Ensuring that data remains accurate, complete, authentic, and uncorrupted during entry,
+storage, and transmission over network channels.
+Common Security Threats
+Threat
+Category
+Mechanism & Operational Method
+Mitigation Strategies
+Viruses &
+Malware
+Self-replicating malicious code that attaches to host
+files and executes unauthorized operations.
+Antivirus software, regular OS updates,
+restricting executable downloads.
+Spyware &
+Keyloggers
+Hidden software tracking keystrokes, activity, and
+credentials, relaying them secretly to an eavesdropper.
+Anti-spyware utilities, multi-factor
+authentication (MFA), virtual onscreen
+keyboards.
+Hacking
+Unauthorized access to digital systems by exploiting
+software vulnerabilities or weak access points.
+Network firewalls, strong password
+policies, intrusion detection systems
+(IDS).
+Phishing
+Social engineering attack using fake emails/websites
+designed to trick users into revealing login details.
+User security training, email spam filters,
+digital signatures on domain mail.
+Pharming
+Malicious tampering with DNS hosts or browser
+settings to redirect requests to fraudulent mirror sites
+automatically.
+DNSSEC verification, updating host files,
+inspecting SSL certificates.
+System Protection Mechanisms
+User Accounts & Passwords: Access control mechanisms enforcing authentic identity verification and user
+access rights.
+Firewalls: Hardware or software filters examining incoming and outgoing traffic packets against
+predefined rule sets, blocking unauthorized network ports and IP addresses.
+Validation: Automated software checks verifying input data matches mandatory criteria (e.g., range
+checks, format checks, length checks) *before* saving to preserve data integrity.
+Verification: Methods ensuring data entered or transferred matches the original source exactly without
+errors (e.g., double entry checks, parity bits, checksums).
+WORKED EXAMPLE 4.2: Validation vs. Verification
+Validation: Inputting a birthdate field 31/02/2024 fails a Format Check / Logic Check (February does not
+have 31 days). Validation confirms data is reasonable and formatted correctly.
+Verification: Inputting password Secr3t! twice into registration boxes confirms double-entry match.
+Verification checks that data was transcribed accurately, even if the value itself was typed incorrectly in
+both steps.
+Chapter 4: Networking, Security & Communications
+Page 8 of 1
+
+
+[page 9]
+4.8 Switching Mechanisms: Circuit vs. Packet Switching
+Circuit Switching Mechanics
+Circuit switching establishes a dedicated, unbroken physical communication path between sender and
+receiver for the entire duration of a call or session.
+Steps: 1. Circuit Setup → 2. Data Transmission → 3. Circuit Teardown.
+Advantages: Dedicated bandwidth ensures low latency, zero jitter, and constant transmission speeds—
+ideal for real-time video conferencing or landline phone calls.
+Drawbacks: Inefficient channel usage; bandwidth is reserved even during silent pauses, blocking other
+traffic.
+Packet Switching Mechanics
+Packet switching splits messages into small discrete blocks called packets that travel independently across
+network nodes based on dynamic routing decisions.
+ANATOMY OF A NETWORK PACKET
+Header Metadata
+Payload
+Trailer / Footer
+• Source IP & MAC
+Address
+• Destination IP &
+MAC Address
+• Packet Sequence
+Number
+• Protocol Identifier
+Actual file data fragment / message slice
+(e.g., 1500 bytes of image data).
+• Error checking checksum (e.g., Cyclic
+Redundancy Check - CRC)
+• End of packet flag
+Routing & Packet Reassembly
+Network routers inspect destination addresses in packet headers and forward packets dynamically along the
+shortest or least congested path available. Packets may arrive out of order; the receiving node's Transport
+layer uses sequence numbers to reorder and reassemble the original file.
+Metric
+Circuit Switching
+Packet Switching
+Path Reservation
+Dedicated fixed physical path for entire
+session.
+Dynamic routing per packet; paths vary
+dynamically.
+Bandwidth
+Efficiency
+Low; reserved capacity wasted during idle
+moments.
+High; multiple nodes share backbone links
+concurrently.
+Latency &
+Reliability
+Low fixed latency; session fails if connection
+breaks.
+Variable latency (jitter); robust against node
+outages.
+Chapter 4: Networking, Security & Communications
+Page 9 of 1
+
+
+[page 10]
+4.9 Cryptography, Quantum Security & Digital Certificates
+Symmetric vs. Asymmetric Encryption
+Encryption transforms original readable message text (plaintext) into an unreadable mathematical format
+(ciphertext) using an encryption algorithm and key.
+Symmetric Encryption: Uses the *same single secret key* for both encryption and decryption. Fast and
+computationally efficient, but suffers from the Key Distribution Problem—sending the shared key securely
+over public networks to the recipient risks interception by an eavesdropper.
+Asymmetric Encryption: Uses a mathematically linked key pair: a Public Key (known to everyone) and a
+Private Key (kept secret by owner). Messages encrypted with a recipient's Public Key can *only* be
+decrypted by that recipient's Private Key.
+WORKED EXAMPLE 4.3: Digital Signature Generation & Verification
+Goal: Alice sends a document to Bob, proving it originated from her and was not modified.
+1. Alice generates a cryptographic hash of the plaintext message.
+2. Alice encrypts the hash using her own Private Key. This encrypted hash is the Digital Signature.
+3. Alice transmits the message and digital signature to Bob.
+4. Bob decrypts the signature using Alice's Public Key to reveal the original hash.
+5. Bob hashes the received message independently. If Bob's hash matches the decrypted hash, message
+origin and integrity are confirmed.
+Stream Ciphers vs. Block Ciphers & Block Chaining
+Stream Cipher: Encrypts data bit-by-bit or byte-by-byte continuously in sequence as data arrives.
+Block Cipher: Processes data in fixed-size blocks (e.g., 64-bit or 128-bit blocks) in one go.
+Block Chaining (CBC): Advanced cipher mode where each plaintext block is combined with the previous
+block's ciphertext (using an XOR operation) before encryption. This prevents identical plaintext blocks from
+generating identical ciphertext blocks.
+SSL/TLS and Digital Certificates
+Secure Sockets Layer (SSL) and its successor Transport Layer Security (TLS) protect web sessions (e.g.,
+online banking, e-commerce). A website acquires a Digital Certificate from a trusted Certificate Authority
+(CA) to prove its domain ownership and supply its public key.
+Quantum Cryptography & Quantum Key Distribution (QKD)
+Traditional asymmetric encryption relies on mathematical problems (like prime factorisation) that could be
+broken by future quantum computers. Quantum Key Distribution (QKD) uses quantum photon states to
+transmit encryption keys. According to quantum physics (Heisenberg Uncertainty Principle), any eavesdropper
+attempting to measure a photon alters its state instantly, revealing the intrusion and invalidating the key.
+Chapter 4: Networking, Security & Communications
+Page 10 of 1
+
+
+[page 11]
+STUDENT ACTIVITY 4.3: SECURITY SCENARIO ANALYSIS
+Evaluate which security mechanism best solves each problem:
+1. Preventing hackers from decrypting captured Wi-Fi traffic.
+2. Guaranteeing an email contract received from a vendor was actually sent by them and untouched in
+transit.
+3. Stopping employees from opening malicious websites on internal office computers.
+4.10 End-of-Chapter Assessment Exercises
+EXERCISE QUESTIONS
+1. Network Fundamentals & Architectures
+a) Contrast a Local Area Network (LAN) and a Wide Area Network (WAN) in terms of geographic scale,
+ownership, and transmission speeds. [3 marks]
+b) Compare the client-server model with the peer-to-peer (P2P) model regarding resource management
+and scalability. [3 marks]
+c) Differentiate between a thick client and a thin client based on where data processing and storage take
+place. [2 marks]
+d) What are the primary trade-offs (in terms of cost, security, and control) between using a public cloud
+versus a private cloud? [3 marks]
+2. Medium Access & Collisions
+How do network systems handle data collisions when multiple devices attempt to transmit data
+simultaneously over a shared medium (e.g., using CSMA/CD or collision avoidance techniques)? [4 marks]
+3. Web Infrastructure & Addressing
+a) Break down the distinct parts of a Uniform Resource Locator (URL) (e.g., protocol, domain, path) and
+explain how it locates a specific resource. [3 marks]
+b) Describe the step-by-step role of the Domain Name Service (DNS) when translating a human-readable
+URL into an IP address. [4 marks]
+4. Protocol Stacks & Applications
+a) Outline the four layers of the TCP/IP protocol stack in correct order (from top to bottom or bottom to
+top), giving the core responsibility of each layer. [4 marks]
+b) Briefly state the specific purpose of each of the following application/transport protocols: HTTP, FTP,
+POP3, and IMAP. [4 marks]
+5. Switching Paradigms
+a) Explain what is meant by circuit switching. [2 marks]
+b) There are many applications in which digital data are transferred across a network. Video conferencing
+is one of these. For this application, circuit switching is preferred. Explain why this is so. [2 marks]
+c) List two major benefits and one drawback of packet switching. [3 marks]
+6. Data Security, Validation & Verification
+a) Differentiate between the concepts of data security, data privacy, and data integrity. [3 marks]
+b) Contrast the use of validation (e.g., range checks, format checks) with verification (e.g., double-entry,
+parity checks) in protecting data during entry and transfer. [4 marks]
+c) Name three mechanisms used to protect computer systems against threats. [3 marks]
+Chapter 4: Networking, Security & Communications
+Page 11 of 1
+
+
+[page 12]
+7. Encryption Mechanics & Certificates
+a) Compare symmetric key cryptography with asymmetric key cryptography in terms of key management,
+speed, and how plaintext is converted to ciphertext. [4 marks]
+b) Explain how an asymmetric key pair can be used in reverse to generate a digital signature that verifies
+the sender's identity and ensures message integrity. [3 marks]
+c) What are SSL and TLS, and in what real-world scenarios are they typically deployed to secure network
+traffic? [3 marks]
+CHAPTER 4 SELF-ASSESSMENT CHECKLIST
+[ ] I can contrast LAN, WAN, MAN, PAN, and WLAN networks.
+[ ] I can explain Client-Server, P2P, Thin Client, and Thick Client models.
+[ ] I can outline hardware roles: Routers, Switches, Hubs, NICs, Gateways, Bridges, and Modems.
+[ ] I know how CSMA/CD and CSMA/CA handle network data collisions.
+[ ] I can dissect a URL and trace a step-by-step DNS lookup.
+[ ] I understand the 4 layers of TCP/IP and email push/pull protocols (SMTP, POP3, IMAP).
+[ ] I can contrast Circuit Switching with Packet Switching.
+[ ] I can explain Symmetric vs. Asymmetric encryption, Digital Signatures, QKD, and SSL/TLS.
+Chapter 4: Networking, Security & Communications
+Page 12 of 1

@@ -1,0 +1,370 @@
+===== OLD GUIDE PAGE 84 =====
+STRENGTH &
+STRENGTH &
+STRENGTH &
+      LIMITATIONS
+LIMITATIONS
+LIMITATIONS
+STRENGTH &
+  LIMITATIONS
+6
+Midnight
+
+
+===== OLD GUIDE PAGE 85 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MIDNIGHT  ·  Strengths & Limitations
+Judge the whole system
+Strengths and limitations interact
+Part
+Strength
+Limitation
+Hardware
+Senses, computes and acts locally.
+Power, heat, memory and physical
+reliability.
+Networks
+Share resources and coordinate
+devices.
+Delay, loss, availability and security.
+AI / control software
+Selects actions and may learn from
+experience.
+Model errors, limited evidence and
+unclear objectives.
+There is no universally best architecture
+Choose a design for its task, operating conditions and consequences of failure. A model with
+excellent offline accuracy may be unsuitable if it misses a deadline or requires too much memory.
+A highly connected system may be fragile if local operation depends on one remote service. A
+simple fixed-rule controller can be appropriate for a well-defined task.
+Make the comparison explicit
+State the intended outcome, identify constraints, compare options and define measures for
+success. Evaluate the combination of hardware, networking, algorithms and human operation. A
+component’s specification is useful evidence, but it is not proof that the complete application
+meets its requirements.
+PAUSE & TRY
+Explain resource optimisation when balancing local hardware processing against network transmission
+costs.
+Chapter 6 · Question 5  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+85
+
+
+===== OLD GUIDE PAGE 86 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MIDNIGHT  ·  Strengths & Limitations
+Four physical budgets
+Every device has limits
+Power
+Heat
+Memory
+Processing
+A design must fit all four budgets, not just the model’s arithmetic requirement.
+Understand the constraint
+Budget
+What can go wrong
+Power
+A battery drains too quickly for the required mission.
+Heat
+Thermal throttling reduces sustained performance.
+Memory
+Weights, inputs or intermediate results do not fit.
+Processing
+An inference or control computation misses its deadline.
+Optimise with evidence
+A smaller model, quantised representation, reduced input resolution or lower update rate can
+reduce cost, but may change accuracy or responsiveness. Measure the resulting behaviour.
+Dedicated accelerators can improve efficiency on supported workloads, but data conversion,
+memory movement and idle power remain relevant. Local computing removes a remote round
+trip; it does not mean zero total latency.
+PAUSE & TRY
+Explain how thermal limits, power consumption, memory capacity and processing speed constrain
+complex AI models on small embedded devices.
+Chapter 6 · Question 1  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+86
+
+
+===== OLD GUIDE PAGE 87 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MIDNIGHT  ·  Strengths & Limitations
+Reliable decisions need reliable inputs
+Sensors are imperfect
+Noise creates random variation; drift changes a sensor’s behaviour over time. Obstruction,
+calibration error or environmental conditions can produce misleading observations. Sensor fusion
+combines information from multiple sources, often after time alignment and filtering. Different
+sensors can have complementary strengths, but they can also share common failure causes.
+A fusion pipeline
+Camera / range /
+motion
+Align + check
+Combine evidence
+State estimate
+Do not combine incompatible units or measurements from different times as if they described the same
+instant.
+Define reliability under conditions
+Reliability concerns performing an intended function for a stated period under stated conditions.
+MTBF is a statistical measure for repairable systems, not a promise that a particular unit cannot fail
+earlier. Monitor drift, error rates, temperature and data quality. Redundancy can help when
+failures are sufficiently independent and the system can recognise and manage disagreement.
+PAUSE & TRY
+Explain how thermal limits, power consumption, memory capacity and processing speed constrain
+complex AI models on small embedded devices.
+Chapter 6 · Question 1  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+87
+
+
+===== OLD GUIDE PAGE 88 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MIDNIGHT  ·  Strengths & Limitations
+Grow without losing coordination
+Three network qualities
+Quality
+Meaning
+Scalability
+Handle more devices or work at acceptable performance.
+Interoperability
+Exchange data and use it correctly across different systems.
+Resilience
+Maintain or recover an acceptable service during disruption.
+Capacity is only one part of scaling
+Adding hundreds of IoT devices can increase addressing, authentication, message traffic, storage
+and maintenance work. Agree on data formats, units, timestamps and interface versions as well as
+the physical link. Two products using Wi-Fi do not automatically interpret one another’s messages
+correctly.
+Plan for failures
+Redundant links, retry policies, local buffering and controlled reconnection can improve resilience.
+A mesh can route around some failures when an alternative path exists and the protocols support
+it. It does not guarantee communication through every outage. Test overload and partial failure,
+not just the normal case with every device online.
+PAUSE & TRY
+Define scalability and interoperability. Explain why both matter when adding hundreds of IoT devices
+from different manufacturers.
+Chapter 6 · Question 2  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+88
+
+
+===== OLD GUIDE PAGE 89 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MIDNIGHT  ·  Strengths & Limitations
+Put each computation where it fits
+Three deployment patterns
+Location
+Benefit
+Cost or limit
+On-device edge
+Low communication delay; local
+data.
+Limited local resources and
+maintenance.
+Nearby gateway / fog
+Aggregates local devices.
+Another service to size and manage.
+Remote cloud
+Shared compute and flexible
+capacity.
+Network dependency, latency and
+transfer cost.
+An illustrative warehouse design
+Each robot handles immediate motion control locally. A shared service allocates tasks and
+coordinates inventory. Robots send selected telemetry and receive authorised updates. If the
+coordination service is unavailable, the design defines whether a robot pauses, completes a
+limited task or enters another safe state; continued operation must not be assumed.
+Optimise across the whole path
+Compare local compute energy with transmission energy, available bandwidth, deadlines, privacy
+and model capacity. Summarising data locally can reduce transfer volume. Centralised analysis
+can reveal patterns across devices. The useful decision is which part of the workload belongs
+where, not whether edge or cloud is always superior.
+PAUSE & TRY
+Explain resource optimisation when balancing local hardware processing against network transmission
+costs.
+Chapter 6 · Question 5  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+89
+
+
+===== OLD GUIDE PAGE 90 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MIDNIGHT  ·  Strengths & Limitations
+Predict an outcome or model
+behaviour?
+Two useful questions
+Predictive analytics
+Behavioural modelling
+What is likely to happen?
+How does an agent or system behave?
+Forecasts, scores or probability
+estimates.
+Rules, transitions, trajectories or action patterns.
+Example: estimate a component’s
+failure risk.
+Example: model a robot’s response to an obstacle.
+The approaches can overlap
+A behavioural model can be used to make predictions, and predictive features can inform an
+action policy. They are not mutually exclusive categories defined by one kind of data. Choose the
+model and evaluation method based on the question being asked and the evidence available.
+Adaptation is not guaranteed generalisation
+Adaptive intelligence describes changing behaviour appropriately using new information or
+experience. Autonomy describes operating with limited direct human control. An autonomous
+device may use a fixed policy; an adaptive model may still need supervision. Performance in
+familiar conditions does not prove reliability in a new environment.
+PAUSE & TRY
+Compare predictive analytics and behavioural modelling in how they use evidence to inform future
+decisions or actions.
+Chapter 6 · Question 4  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+90
+
+
+===== OLD GUIDE PAGE 91 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MIDNIGHT  ·  Strengths & Limitations
+Understand why a policy acted
+Explainability is a practical capability
+Explainability concerns making relevant aspects of a model’s behaviour understandable to
+people. A small rule set or Q table may be inspectable. A deep RL policy can be harder to
+interpret because many parameters contribute to each output. Complexity does not mean analysis
+is impossible, but a simple story about one decision may be incomplete or misleading.
+Look beyond one successful outcome
+Inspect representative cases, counterexamples, changed conditions and failure logs. Separate a
+faithful explanation of the computation from a plausible narrative generated after the fact. An
+explanation does not establish that the action was correct; validation requires evidence about
+outcomes and requirements.
+Reward errors and bias
+An agent rewarded only for speed may neglect an important constraint. Training environments
+can under-represent some conditions or groups. Distribution shift can reduce performance when
+deployment differs from training. Track both overall performance and relevant subsets. Correcting
+a reward or dataset requires re-evaluation of the resulting policy.
+PAUSE & TRY
+Define explainability and explain why some deep reinforcement-learning models are difficult to
+interpret.
+Chapter 6 · Question 6  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+91
+
+
+===== OLD GUIDE PAGE 92 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MIDNIGHT  ·  Strengths & Limitations
+Balance benefit, risk & oversight
+Questions for a deployment review
+Area
+Evidence to seek
+Security
+Authenticated updates, restricted access and recovery plans.
+Privacy
+Necessary data collection, appropriate retention and access.
+Fairness
+Evaluation across relevant people and conditions.
+Accountability
+Named responsibilities, review and correction routes.
+Reliability
+Measured deadlines, failure handling and monitoring.
+Physical effects raise the stakes
+A connected controller can change the physical world, so a corrupted measurement or
+unauthorised command may have consequences beyond a damaged file. Protect sensor inputs,
+model updates and actuator commands according to the task. Test how the system responds to
+missing, stale and contradictory data.
+Finish with a justified judgement
+State the benefit you expect, the evidence supporting it, the conditions under which it applies and
+the remaining limitations. Decide what a human must monitor or approve and how the system
+should respond when its assumptions fail. The strongest design is the one suited to its purpose,
+with limitations that are understood and managed.
+PAUSE & TRY
+Identify two security concerns and two ethical implications when a network of smart devices makes
+high-stakes decisions with limited human oversight.
+Chapter 6 · Question 7  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+92
+
+
+===== OLD GUIDE PAGE 93 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MIDNIGHT  ·  Strengths & Limitations
+Key terms · 06
+Build your vocabulary
+Term
+Meaning
+Sensor integration
+Connecting and coordinating measurements for a computing
+system.
+Hardware constraints
+Limits such as power, thermal capacity, memory and compute
+time.
+Reliability
+Performance of the intended function over time under stated
+conditions.
+Sensor drift
+A gradual change in measurement behaviour or calibration.
+Scalability
+Ability to handle growth at acceptable performance.
+Interoperability
+Ability to exchange information and use it correctly across
+systems.
+Resilience
+Ability to maintain or recover acceptable service through
+disruption.
+Resource optimisation
+Balancing computation, communication, energy and other costs
+for a goal.
+Adaptive intelligence
+Changing behaviour appropriately using new information or
+experience.
+Use the terms in an explanation
+Choose two terms and connect them in a sentence about a working system. A definition is useful
+when it helps you explain a mechanism, compare alternatives or justify a decision. Return to the
+relevant teaching page if you cannot yet give an example.
+PAUSE & TRY
+Define adaptive intelligence and explain how it can help an agent respond to changing conditions,
+without assuming that adaptation guarantees success.
+Chapter 6 · Question 3  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+93
+
+
+===== OLD GUIDE PAGE 94 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MIDNIGHT  ·  Strengths & Limitations
+Key terms · 06
+Build your vocabulary
+Term
+Meaning
+Autonomy
+Operating with limited direct human intervention.
+Predictive analytics
+Using evidence to forecast outcomes.
+Behavioural modelling
+Representing or analysing behaviour and interactions.
+Explainability
+Making relevant aspects of model behaviour understandable.
+Bias / distribution shift
+Systematic distortion / a difference between training and
+deployment conditions.
+Use the terms in an explanation
+Choose two terms and connect them in a sentence about a working system. A definition is useful
+when it helps you explain a mechanism, compare alternatives or justify a decision. Return to the
+relevant teaching page if you cannot yet give an example.
+PAUSE & TRY
+Define adaptive intelligence and explain how it can help an agent respond to changing conditions,
+without assuming that adaptation guarantees success.
+Chapter 6 · Question 3  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+94
+
+
+===== OLD GUIDE PAGE 95 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MIDNIGHT  ·  Strengths & Limitations
+Practice · Chapter 6
+Try first, then check feedback
+Write your reasoning before opening the explained answers after the six chapter missions. Show
+units and intermediate steps for calculations. For comparisons, use the same criteria on both
+sides. Match the question number with the answer key in this complete edition.
+PAUSE & TRY
+Define adaptive intelligence and explain how it can help an agent respond to changing conditions,
+without assuming that adaptation guarantees success.
+Chapter 6 · Question 3  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+95

@@ -1,0 +1,412 @@
+WEBVTT
+
+00:00:00.600 --> 00:00:02.894
+You type a question. A moment later,
+
+00:00:02.894 --> 00:00:04.041
+an answer appears.
+
+00:00:04.321 --> 00:00:07.784
+It feels like the AI lives somewhere inside the screen.
+
+00:00:07.784 --> 00:00:10.176
+Pure software, made of nothing at all.
+
+00:00:10.456 --> 00:00:12.477
+But AI isn't just software.
+
+00:00:12.977 --> 00:00:14.822
+Thank you, Randy. Anyway.
+
+00:00:15.223 --> 00:00:16.894
+Yes, AI lives in software.
+
+00:00:16.894 --> 00:00:19.594
+But software on its own can't do anything.
+
+00:00:19.594 --> 00:00:22.037
+It needs a physical machine to run on.
+
+00:00:22.317 --> 00:00:26.699
+Behind every answer are processors, memory, servers and networks.
+
+00:00:26.979 --> 00:00:29.486
+Here's the whole idea in four lines.
+
+00:00:29.766 --> 00:00:32.838
+Software provides the instructions and the models.
+
+00:00:33.118 --> 00:00:36.673
+Hardware provides the physical resources to execute them.
+
+00:00:36.953 --> 00:00:39.501
+Data moves through hardware components.
+
+00:00:39.781 --> 00:00:44.366
+And processing units perform the calculations that make AI possible.
+
+00:00:44.646 --> 00:00:46.534
+Let's take that machine apart,
+
+00:00:46.534 --> 00:00:47.792
+one piece at a time.
+
+00:00:49.072 --> 00:00:51.261
+Part two. The physical foundation.
+
+00:00:51.861 --> 00:00:54.102
+Open up any computer that runs AI,
+
+00:00:54.102 --> 00:00:57.003
+and you'll find the same cast of characters.
+
+00:00:57.283 --> 00:00:59.969
+The motherboard is the city they all live in.
+
+00:00:59.969 --> 00:01:03.192
+It connects every component and lets them communicate.
+
+00:01:03.472 --> 00:01:05.555
+The CPU is the coordinator.
+
+00:01:05.555 --> 00:01:10.183
+It manages operations and runs general-purpose instructions.
+
+00:01:10.463 --> 00:01:12.304
+The GPU is the specialist.
+
+00:01:12.304 --> 00:01:15.490
+Thousands of small cores perform huge numbers
+
+00:01:15.490 --> 00:01:17.827
+of calculations at the same time,
+
+00:01:17.827 --> 00:01:18.676
+in parallel.
+
+00:01:18.956 --> 00:01:21.993
+RAM temporarily holds the data and model
+
+00:01:21.993 --> 00:01:24.802
+information that is in use right now.
+
+00:01:25.082 --> 00:01:28.450
+The SSD stores AI models, datasets and software,
+
+00:01:28.450 --> 00:01:30.344
+even when the power is off.
+
+00:01:30.624 --> 00:01:33.462
+The power supply provides the electricity.
+
+00:01:33.742 --> 00:01:38.876
+And the cooling system stops everything from overheating during intensive processing.
+
+00:01:40.156 --> 00:01:42.556
+Part three. How hardware runs AI.
+
+00:01:43.156 --> 00:01:45.558
+So what is all this hardware actually
+
+00:01:45.558 --> 00:01:47.764
+doing when an AI model is working?
+
+00:01:47.764 --> 00:01:50.361
+Mostly, maths. An enormous amount of it.
+
+00:01:50.641 --> 00:01:54.153
+At the heart of modern AI is matrix multiplication.
+
+00:01:54.153 --> 00:01:57.941
+Grids of numbers, multiplied by other grids of numbers,
+
+00:01:57.941 --> 00:01:59.525
+billions of times over.
+
+00:01:59.805 --> 00:02:02.434
+Let's follow one question through the machine.
+
+00:02:02.714 --> 00:02:05.480
+Step one. The data enters the computer.
+
+00:02:05.760 --> 00:02:07.940
+Step two. It's converted into numbers,
+
+00:02:07.940 --> 00:02:10.867
+because numbers are all the hardware can work with.
+
+00:02:11.147 --> 00:02:15.140
+Step three. The processor calculates, using the model's parameters:
+
+00:02:15.140 --> 00:02:17.404
+the values it learned during training.
+
+00:02:17.684 --> 00:02:20.893
+Step four. Intermediate results are stored in memory.
+
+00:02:21.173 --> 00:02:25.246
+Step five. Further calculations are performed, again and again.
+
+00:02:25.526 --> 00:02:28.574
+Step six. The final output is generated.
+
+00:02:28.854 --> 00:02:32.858
+Those repeated calculations happen inside a neural network:
+
+00:02:32.858 --> 00:02:36.590
+interconnected computational units, arranged in layers.
+
+00:02:36.870 --> 00:02:39.520
+Each unit combines the numbers it receives,
+
+00:02:39.520 --> 00:02:41.862
+and passes a result to the next layer.
+
+00:02:42.142 --> 00:02:43.822
+The network is the recipe.
+
+00:02:43.822 --> 00:02:47.635
+The hardware is the kitchen that actually does the cooking,
+
+00:02:47.635 --> 00:02:49.315
+one calculation at a time.
+
+00:02:50.595 --> 00:02:52.768
+Part four. Where storage comes in.
+
+00:02:53.368 --> 00:02:56.060
+But processing power alone isn't enough.
+
+00:02:56.060 --> 00:02:58.482
+A processor has to be fed with data,
+
+00:02:58.482 --> 00:03:00.030
+quickly and constantly.
+
+00:03:00.310 --> 00:03:02.607
+Think of the processor as a worker.
+
+00:03:02.887 --> 00:03:06.040
+Storage is the warehouse, where everything is kept.
+
+00:03:06.320 --> 00:03:07.785
+RAM is the workbench,
+
+00:03:07.785 --> 00:03:10.574
+holding what the worker needs right now.
+
+00:03:10.854 --> 00:03:13.449
+And the faster information moves between them,
+
+00:03:13.449 --> 00:03:15.931
+the more efficiently the worker can operate.
+
+00:03:16.211 --> 00:03:17.523
+In a real machine,
+
+00:03:17.523 --> 00:03:20.947
+the SSD stores the trained models and datasets.
+
+00:03:20.947 --> 00:03:23.715
+RAM temporarily holds the active data.
+
+00:03:23.995 --> 00:03:27.419
+A GPU has its own fast memory, called VRAM,
+
+00:03:27.419 --> 00:03:29.251
+right beside its cores.
+
+00:03:29.531 --> 00:03:32.571
+And memory bandwidth is the road between them:
+
+00:03:32.571 --> 00:03:34.950
+how much data can move every second.
+
+00:03:35.230 --> 00:03:37.267
+Give the worker a tiny workbench,
+
+00:03:37.267 --> 00:03:39.243
+or a slow road to the warehouse,
+
+00:03:39.243 --> 00:03:41.651
+and it spends most of its time waiting.
+
+00:03:41.931 --> 00:03:44.585
+That's why a powerful processor can still
+
+00:03:44.585 --> 00:03:46.657
+be limited by too little memory,
+
+00:03:46.657 --> 00:03:48.081
+or slow data transfer.
+
+00:03:49.361 --> 00:03:51.089
+Part five. Networking.
+
+00:03:51.689 --> 00:03:52.700
+Here's a secret.
+
+00:03:52.700 --> 00:03:54.721
+The AI on your phone often isn't
+
+00:03:54.721 --> 00:03:56.489
+really on your phone at all.
+
+00:03:56.769 --> 00:04:00.720
+Many AI applications rely on more than one computer.
+
+00:04:01.000 --> 00:04:02.423
+When you send a request,
+
+00:04:02.423 --> 00:04:04.438
+your phone turns it into a signal.
+
+00:04:04.718 --> 00:04:07.914
+Routers and switches direct it across the network,
+
+00:04:07.914 --> 00:04:11.238
+often as pulses of light through fibre-optic cables.
+
+00:04:11.518 --> 00:04:13.285
+It arrives at a data centre:
+
+00:04:13.285 --> 00:04:15.242
+a building packed with servers.
+
+00:04:15.522 --> 00:04:18.794
+A network interface card receives the request,
+
+00:04:18.794 --> 00:04:20.288
+and GPUs get to work.
+
+00:04:20.568 --> 00:04:23.460
+Then the answer makes the same journey back to you.
+
+00:04:23.740 --> 00:04:26.820
+Using remote hardware like this, over a network,
+
+00:04:26.820 --> 00:04:28.489
+is called cloud computing.
+
+00:04:29.769 --> 00:04:32.348
+Part six. Hardware in the physical world.
+
+00:04:32.948 --> 00:04:37.144
+AI hardware isn't only found in computers and data centres.
+
+00:04:37.144 --> 00:04:39.988
+Some AI has to deal with the real world.
+
+00:04:40.268 --> 00:04:41.992
+For that, it needs senses.
+
+00:04:42.272 --> 00:04:46.383
+Cameras capture visual information. Microphones capture sound.
+
+00:04:46.663 --> 00:04:50.271
+LiDAR and ultrasonic sensors measure distance.
+
+00:04:50.271 --> 00:04:52.545
+GPS modules provide location.
+
+00:04:52.825 --> 00:04:55.906
+And temperature sensors monitor the environment.
+
+00:04:56.186 --> 00:04:57.744
+It also needs muscles.
+
+00:04:57.744 --> 00:05:01.923
+Motors and actuators let machines perform physical actions.
+
+00:05:02.203 --> 00:05:05.915
+Sending every reading to a distant server takes time.
+
+00:05:05.915 --> 00:05:06.685
+So instead,
+
+00:05:06.685 --> 00:05:10.257
+the AI model can run directly on the device itself.
+
+00:05:10.537 --> 00:05:12.506
+This is called edge AI.
+
+00:05:12.786 --> 00:05:16.375
+You'll find it in autonomous vehicles, smart cameras,
+
+00:05:16.375 --> 00:05:19.762
+industrial robots, drones, and smart home devices.
+
+00:05:20.042 --> 00:05:23.555
+Picture a small rover. Its sensors read the terrain.
+
+00:05:23.555 --> 00:05:26.392
+Its onboard processor decides where to go.
+
+00:05:26.672 --> 00:05:29.077
+Its network link reports back to base.
+
+00:05:29.077 --> 00:05:31.039
+And its motors turn the wheels.
+
+00:05:31.319 --> 00:05:33.111
+Sense, decide, connect, act.
+
+00:05:33.111 --> 00:05:36.631
+You can build exactly this kind of machine in RoverLab.
+
+00:05:37.911 --> 00:05:40.332
+Part seven. Hardware limitations.
+
+00:05:40.932 --> 00:05:44.206
+So why can't AI simply do everything? Very often,
+
+00:05:44.206 --> 00:05:45.742
+the answer is hardware.
+
+00:05:46.022 --> 00:05:48.971
+This links to Chapter six of our study guide:
+
+00:05:48.971 --> 00:05:50.674
+Strengths and Limitations.
+
+00:05:50.954 --> 00:05:55.086
+Processing capacity is finite. So is memory capacity.
+
+00:05:55.366 --> 00:05:57.565
+Every calculation consumes energy,
+
+00:05:57.565 --> 00:06:00.994
+and that energy turns into heat that must be removed.
+
+00:06:01.274 --> 00:06:04.456
+Network bandwidth limits how fast data can travel.
+
+00:06:04.456 --> 00:06:06.811
+And all of this hardware costs money.
+
+00:06:07.091 --> 00:06:10.112
+So engineers are building new kinds of hardware.
+
+00:06:10.392 --> 00:06:15.612
+Dedicated AI accelerators. Neural processing units, or NPUs.
+
+00:06:15.892 --> 00:06:20.794
+More energy-efficient processors, built with advanced semiconductor manufacturing.
+
+00:06:21.074 --> 00:06:22.714
+And neuromorphic computing:
+
+00:06:22.714 --> 00:06:25.265
+chips inspired by the way the brain works.
+
+00:06:25.545 --> 00:06:29.180
+The future of AI depends not only on better algorithms,
+
+00:06:29.180 --> 00:06:32.947
+but on better, faster and more energy-efficient hardware.
+
+00:06:33.227 --> 00:06:36.135
+So the next time an answer appears on your screen,
+
+00:06:36.135 --> 00:06:37.938
+remember the machine behind it.

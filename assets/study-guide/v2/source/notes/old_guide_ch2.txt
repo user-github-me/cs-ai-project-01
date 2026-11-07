@@ -1,0 +1,361 @@
+===== OLD GUIDE PAGE 22 =====
+BEHAVIORISM &
+BEHAVIORISM &
+BEHAVIORISM & 
+      BEHAVIORIST AI
+BEHAVIORIST AI
+BEHAVIORIST AI
+BEHAVIORISM & 
+  BEHAVIORIST AI
+2
+morning
+
+
+===== OLD GUIDE PAGE 23 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MORNING  ·  Behaviorism & Behaviorist AI
+Learning from the environment
+Start with observable behaviour
+Behaviourism studies the relationship between observable behaviour and environmental events. A
+stimulus is a detectable event; a response is an observable reaction. Pavlov, Watson and Skinner
+contributed to different strands of this tradition. The approach helped make learning measurable,
+although it is not a complete description of every kind of human learning.
+Two kinds of conditioning
+Classical conditioning
+Operant conditioning
+A cue becomes associated with
+another stimulus.
+An action becomes associated with its consequences.
+A bell paired with food can trigger
+salivation.
+Sitting followed by a treat can become more frequent.
+Focus: an elicited response.
+Focus: behaviour shaped by reinforcement or punishment.
+Connect the analogy carefully
+Reinforcement learning borrows the idea of learning from consequences, but an algorithm is not a
+human or animal mind. A numerical reward is a training signal. It does not imply feelings,
+understanding or consciousness. Use the analogy to identify a feedback relationship, then
+describe the computational mechanism precisely.
+PAUSE & TRY
+Differentiate between classical conditioning (Pavlov) and operant conditioning (Skinner) in terms of how
+learning occurs.
+Chapter 2 · Question 1  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+23
+
+
+===== OLD GUIDE PAGE 24 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MORNING  ·  Behaviorism & Behaviorist AI
+React first: behaviour-based robots
+A sensor can trigger a useful action
+A simple robotic vacuum may move forward until a bumper is pressed, then reverse and turn. Its
+environment is the room, its stimulus is the bumper signal, and its response is the movement.
+These rules can produce useful behaviour without a detailed map. If the rules never change from
+experience, this is reactive control rather than reinforcement learning.
+A direct feedback path
+Sensor
+Behaviour rule
+Actuator
+Environment
+Situated systems act in an environment; embodied systems have a physical body that constrains and enables
+action.
+Layers and priorities
+Brooks’ subsumption architecture coordinates relatively simple behaviour modules. A module can
+inhibit or suppress another module’s output under specified conditions. A designer might
+combine wandering, obstacle avoidance and task seeking while protecting a safety stop. This is
+one design approach, not a claim that all map-based planning is slow or unreliable; practical
+robots often combine reactive control and planning.
+PAUSE & TRY
+Explain how subsumption architecture organises robot behaviours into layered modules without
+requiring a centralised internal map.
+Chapter 2 · Question 3  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+24
+
+
+===== OLD GUIDE PAGE 25 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MORNING  ·  Behaviorism & Behaviorist AI
+The reinforcement-learning loop
+Learn a policy through experience
+Reinforcement learning is a way for an agent to learn decisions through interaction. The agent
+observes a state or observation, selects an action, and receives feedback from the environment. A
+learning algorithm uses that experience to improve a policy: the rule or strategy for choosing
+actions. The objective is usually expected cumulative reward, not just the next reward.
+One interaction at time t
+Agent / policy
+Action
+Environment
+Next state + reward
+Repeat: observe, act, receive feedback, then update. The learning update may occur during training rather
+than every deployed action.
+Name the components
+Component
+Grid-world example
+Agent / environment
+A simulated rover / a grid with obstacles.
+State / action
+Current square / move up, down, left or right.
+Reward / policy
+Points for outcomes / a strategy for selecting moves.
+PAUSE & TRY
+What are the roles of the environment, the agent and the policy in a Markov decision process (MDP)?
+Chapter 2 · Question 4a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+25
+
+
+===== OLD GUIDE PAGE 26 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MORNING  ·  Behaviorism & Behaviorist AI
+Rewards, policies & values
+Feedback evaluates an outcome
+A reward is a numerical signal associated with an interaction. It may be positive, zero or negative.
+A reward of −1 is not a moral judgement: its role is defined by the task. Designers might reward
+reaching a goal, penalise a collision and charge a small cost per step. Poorly chosen rewards can
+encourage shortcuts that defeat the intended goal.
+Distinguish the three ideas
+The reward says how an outcome scores now. A policy says what action to choose in a situation. A
+value estimate says how much future reward is expected from a state or a state–action choice. A
+good policy may accept a small immediate cost to achieve a larger long-term return. Q-learning
+estimates action values and derives choices from them.
+The learning question
+Experience
+Value estimate
+Policy improvement
+A fixed rule such as “if hot, turn on fan” may control a system effectively without learning any values or
+changing a policy.
+PAUSE & TRY
+Explain how an RL-based system uses feedback or reward signals from its environment to update its
+behavioural policy or value estimates.
+Chapter 5 · Question 3a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+26
+
+
+===== OLD GUIDE PAGE 27 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MORNING  ·  Behaviorism & Behaviorist AI
+Explore or exploit?
+Use the restaurant analogy
+Exploitation is ordering a dish you already believe is best. Exploration is trying another dish to
+learn more about it. In an RL task, exploitation chooses the action with the best current value
+estimate, including future return. Exploration gathers information about other actions. Early
+estimates can be wrong, so always exploiting can lock an agent into an inferior policy.
+An epsilon-greedy example
+Choice rule
+With epsilon = 0.10
+Explore
+With 10% probability, choose a random permitted action.
+Exploit
+Otherwise choose an action with the highest current Q value.
+During training
+Measure outcomes and update estimates; epsilon may change
+over time.
+Think before choosing
+Suppose one route has worked twice and another has never been tried. Is the first route certainly
+better? No: evidence is incomplete. Exploration can improve knowledge, but it also has a cost. In
+physical systems, experiments must respect safety constraints; training in a simulation does not
+automatically make every real-world action safe.
+PAUSE & TRY
+Explain the difference between exploration (trying new actions) and exploitation (using the best current
+estimates). Why must an agent balance both?
+Chapter 2 · Question 4b  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+27
+
+
+===== OLD GUIDE PAGE 28 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MORNING  ·  Behaviorism & Behaviorist AI
+Update a Q value
+A table of learned action values
+Q(s, a) estimates the return from taking action a in state s and then following a good policy.
+Q-learning is model-free: it learns from transitions without needing a supplied transition model.
+“Model-free” does not mean memory-free or that the agent lacks a table or neural network.
+The update rule
+Q(new) = Q(old) + alpha × [reward + gamma × max Q(next state, next action) − Q(old)]. Alpha
+controls the size of an update. Gamma discounts future rewards. The quantity in square brackets is
+the temporal-difference error. For a terminal next state, use zero for the future-value term.
+Work through one illustrative update
+Quantity
+Value
+Old Q / alpha
+2 / 0.5
+Reward / gamma / best next Q
+1 / 0.9 / 4
+Target
+1 + 0.9 × 4 = 4.6
+New Q
+2 + 0.5 × (4.6 − 2) = 3.3
+Interpret the result
+This experience raised the estimate from 2 to 3.3. It did not prove the action is always best.
+Repeated experience, an appropriate learning schedule and sufficient exploration are important;
+one reward does not establish a reliable policy.
+PAUSE & TRY
+Explain the difference between exploration (trying new actions) and exploitation (using the best current
+estimates). Why must an agent balance both?
+Chapter 2 · Question 4b  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+28
+
+
+===== OLD GUIDE PAGE 29 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MORNING  ·  Behaviorism & Behaviorist AI
+A decision problem as an MDP
+Five parts of a Markov decision process
+Symbol
+Meaning
+S
+Possible states.
+A
+Available actions.
+P
+Transition probabilities: where an action can lead.
+R
+Reward function: how outcomes are scored.
+gamma
+Discount factor: how future rewards are weighted.
+The Markov property
+A state is Markov when it contains the information needed to predict the next-state and reward
+distribution, given the current action. Earlier history adds no further predictive information once
+that state is known. A position alone may be insufficient: a robot may also need speed, battery
+level or whether it is carrying a package.
+Observation is not always state
+Sensors can provide incomplete or noisy observations. A camera view may hide an obstacle or
+omit velocity. An agent may need memory or a state estimate to work with partial information. A
+simple grid world is useful because we can explicitly specify the state, actions, transitions and
+rewards instead of assuming the agent knows everything.
+PAUSE & TRY
+What are the roles of the environment, the agent and the policy in a Markov decision process (MDP)?
+Chapter 2 · Question 4a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+29
+
+
+===== OLD GUIDE PAGE 30 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MORNING  ·  Behaviorism & Behaviorist AI
+Actions can have uncertain outcomes
+A slippery grid square
+Imagine an agent choosing “forward”. In this illustrative environment, it reaches the intended
+square with probability 0.8 and slips sideways with probability 0.2. The action is chosen by the
+agent; the transition outcome is sampled by the environment. The probabilities for all possible
+next outcomes must sum to 1.
+One action, two outcomes
+Choose forward
+Target: probability 0.8
+Slip: probability 0.2
+For immediate rewards of +10 and −5, the expected immediate reward is 0.8 × 10 + 0.2 × (−5) = 7. Future
+rewards may change which action is best.
+Expected is not guaranteed
+An expected value of 7 does not mean every attempt earns 7. It summarises the average implied
+by the model. A system that learns under one set of transition probabilities may perform poorly
+when its environment changes. Test across plausible conditions rather than judging a policy from
+a single successful run.
+PAUSE & TRY
+What are the roles of the environment, the agent and the policy in a Markov decision process (MDP)?
+Chapter 2 · Question 4a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+30
+
+
+===== OLD GUIDE PAGE 31 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MORNING  ·  Behaviorism & Behaviorist AI
+Training is different from using a policy
+Separate two phases
+During training, the system collects experience and updates estimates or policy parameters.
+During deployment, it may use a fixed learned policy without further learning. Some applications
+allow controlled online updates, but adaptation is not automatic. A robot can react to a new
+sensor reading while keeping exactly the same policy.
+Test what was actually learned
+Check whether success persists with different starting states, sensor noise and changed
+conditions. Compare against a simple fixed-rule baseline. Examine failure cases as well as average
+reward. If the goal is “arrive safely”, a reward that only measures speed may produce an
+undesirable strategy even when the algorithm is working as specified.
+A responsible learning workflow
+Define the task
+Train / explore
+Evaluate
+Deploy / monitor
+Behaviour-based robotics, reinforcement learning and neural networks are related ideas, not
+interchangeable labels. A system can use one without using all three.
+PAUSE & TRY
+Give an example of a simple reflex-based agent, such as a robotic vacuum or thermostat, and identify
+its stimulus, response and environment.
+Chapter 2 · Question 2  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+31
+
+
+===== OLD GUIDE PAGE 32 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MORNING  ·  Behaviorism & Behaviorist AI
+Key terms · 02
+Build your vocabulary
+Term
+Meaning
+Behaviourism
+An approach studying observable behaviour and its relation to
+the environment.
+Stimulus / response
+A detectable event / the observable reaction.
+Subsumption
+Layered behaviour coordination using suppression or inhibition.
+Agent / environment
+The decision-maker / the system it interacts with.
+State / observation
+A representation sufficient for a task / the information actually
+sensed.
+Action / reward
+A choice / a numerical feedback signal.
+Policy
+A strategy that maps a situation to action choices.
+Value / Q value
+Expected return from a state / from a state–action choice.
+Exploration / exploitation
+Gathering new experience / using current value estimates.
+Use the terms in an explanation
+Choose two terms and connect them in a sentence about a working system. A definition is useful
+when it helps you explain a mechanism, compare alternatives or justify a decision. Return to the
+relevant teaching page if you cannot yet give an example.
+PAUSE & TRY
+Give an example of a simple reflex-based agent, such as a robotic vacuum or thermostat, and identify
+its stimulus, response and environment.
+Chapter 2 · Question 2  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+32
+
+
+===== OLD GUIDE PAGE 33 =====
+BLUE IMPULSE  /  STUDY GUIDE
+MORNING  ·  Behaviorism & Behaviorist AI
+Key terms · 02
+Build your vocabulary
+Term
+Meaning
+Learning rate
+A parameter controlling the size of an update.
+Discount factor
+A parameter controlling the weighting of future rewards.
+MDP
+A framework specifying states, actions, transitions, rewards and
+discounting.
+Model-free RL
+Learning without a supplied environment transition model.
+Markov property
+The current state and action contain the information needed for
+the next-step distribution.
+Use the terms in an explanation
+Choose two terms and connect them in a sentence about a working system. A definition is useful
+when it helps you explain a mechanism, compare alternatives or justify a decision. Return to the
+relevant teaching page if you cannot yet give an example.
+PAUSE & TRY
+Give an example of a simple reflex-based agent, such as a robotic vacuum or thermostat, and identify
+its stimulus, response and environment.
+Chapter 2 · Question 2  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+33

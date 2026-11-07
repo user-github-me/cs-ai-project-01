@@ -1,0 +1,507 @@
+[page 1]
+CHAPTER 3
+Hardware Architecture & Computer Systems
+Processors, Memory Systems, Input/Output, Control Systems & Logic Circuits
+LEARNING GOALS
+In this chapter, you will learn about:
+• Primary memory & secondary storage technologies
+• Hardware classification: Input, Output, Storage & CPU
+• RAM variants: SRAM vs. DRAM and usage cases
+• ROM types: Standard ROM, PROM, EPROM & EEPROM
+• Embedded systems, microcontrollers & trade-offs
+• Sensors, actuators, ADCs, DACs & control feedback
+• RISC vs. CISC processor design philosophies
+• CPU registers, pipelining & execution hazards
+• Parallel architectures: SISD, SIMD, MISD, MIMD
+• Supercomputers, clusters & massively parallel systems
+• Interrupt handling mechanisms on RISC & CISC
+• Display & touch technologies (Capacitive/Resistive,
+OLED)
+• 3D Printing methods: Direct vs. Binder 3D printing
+• Logic gates (AND, OR, NOT, NAND, NOR, XOR) & truth
+tables
+• Boolean algebra expression simplification
+• AI Hardware acceleration (GPUs & Neural Engines)
+KEY TERMS
+Hardware: Physical components of a computer system.
+Input Device: Enters data/instructions into a computer.
+Output Device: Presents results/processed data to users.
+Processing Device / CPU: Main circuit executing program
+instructions.
+Primary Storage: Directly CPU-accessible
+temporary/working memory.
+Secondary Storage: Non-volatile long-term data
+retention media.
+Volatile Memory: Memory losing content when power is
+lost.
+Non-Volatile Memory: Retains stored data without
+electrical power.
+RAM / ROM: Random Access Memory / Read-Only
+Memory.
+SRAM / DRAM: Static RAM (flip-flops) / Dynamic RAM
+(capacitors).
+Refreshed: Periodic electrical recharging of DRAM cells.
+PROM / EPROM: Programmable ROM / UV-Erasable
+Programmable ROM.
+EEPROM / Flash: Electronically Erasable PROM / Block-
+based EEPROM.
+HDD Latency: Delay while disk sector rotates to read-
+write head.
+Fragmented: Non-consecutive storage of file sectors
+across a disk.
+SSD: Solid-State Drive utilizing flash memory with no
+moving parts.
+CISC / RISC: Complex / Reduced Instruction Set
+Computer.
+Pipelining: Overlapping instruction execution stages in
+CPU.
+Parallel Processing: Running multiple instruction
+streams concurrently.
+Flynn's Taxonomy: SISD, SIMD, MISD, MIMD hardware
+classifications.
+Cluster / Supercomputer: Networked SIMD/MIMD nodes
+/ High-power mainframes.
+Massively Parallel: Linking thousands of processors as a
+single engine.
+ADC / DAC: Analogue-to-Digital / Digital-to-Analogue
+Converters.
+Sensor / Actuator: Detects environmental data /
+Executes physical action.
+Embedded System: Single-purpose computer inside a
+larger device.
+Microcontroller: Integrated IC with CPU, RAM, ROM, and
+I/O pins.
+Chapter 3: Hardware
+Page 1
+
+
+[page 2]
+3.1 Processing Architectures & CPU Design
+The Central Processing Unit (CPU) is the computational core of a computer system. Its main role is to execute
+program instructions stored in memory by performing Fetch-Decode-Execute cycles. Computer architecture
+design dictates how efficiently instructions are processed and how hardware components communicate.
+RISC vs. CISC Architectures
+Processor instruction set architectures (ISAs) fall primarily into two design philosophies:
+CISC (Complex Instruction Set Computer): Designed to execute complex tasks in as few assembly lines as
+possible. CISC processors (like x86 architecture found in modern PCs) feature variable-length instructions
+and complex hardware decoding circuits. A single CISC instruction might perform a memory load,
+arithmetic operation, and memory store simultaneously.
+RISC (Reduced Instruction Set Computer): Designed with a small set of simple, fixed-length instructions
+that each execute in a single clock cycle. RISC architectures (like ARM processors found in mobile devices
+and modern supercomputers) use a load/store architecture where arithmetic operations occur strictly
+between internal registers.
+Feature
+CISC (Complex Instruction Set)
+RISC (Reduced Instruction Set)
+Instruction Size
+Variable (1 byte to several bytes).
+Fixed (typically 32-bit or 64-bit).
+Execution Speed
+Multiple clock cycles per instruction.
+Single clock cycle per instruction.
+Memory Access
+Instructions operate directly on memory.
+Strict Load/Store architecture (registers
+only).
+Transistor Layout
+Complex decoder circuits; fewer registers.
+Simple decoders; large register file.
+Pipelining
+Efficiency
+Difficult due to variable instruction
+length.
+Highly efficient due to fixed instruction sizes.
+Instruction Pipelining and Processor Registers
+Pipelining is a technique used in RISC processors to maximize instruction throughput. Instead of waiting for
+one instruction to complete all stages (Fetch, Decode, Execute, Writeback) before fetching the next, pipelining
+overlaps the stages of multiple instructions concurrently.
+FIGURE 3.1 — 4-STAGE INSTRUCTION PIPELINE EXECUTION GRID
+Clock Cycle
+Cycle 1
+Cycle 2
+Cycle 3
+Cycle 4
+Cycle 5
+Instruction 1
+Fetch (F)
+Decode (D)
+Execute (E)
+Writeback (W)
+—
+Instruction 2
+—
+Fetch (F)
+Decode (D)
+Execute (E)
+Writeback (W)
+Instruction 3
+—
+—
+Fetch (F)
+Decode (D)
+Execute (E)
+Pipeline Hazards: Pipelining can stall due to hazards:
+Data Hazard: An instruction depends on the unwritten result of a preceding instruction.
+Control Hazard: Branch instructions (e.g., conditional jumps) alter the execution flow, requiring pipeline
+flushing.
+Structural Hazard: Two instructions require the same hardware resource simultaneously.
+Chapter 3: Hardware
+Page 2
+
+
+[page 3]
+Core CPU Registers: High-speed internal memory locations used during processing:
+Program Counter (PC): Holds the memory address of the next instruction to be fetched.
+Memory Address Register (MAR): Holds the RAM address currently being read from or written to.
+Memory Data Register (MDR): Stores data read from or waiting to be written to memory.
+Current Instruction Register (CIR): Holds the instruction currently being decoded and executed.
+Accumulator (ACC): Temporarily holds intermediate arithmetic and logic results from the ALU.
+Parallel Computer Architectures (Flynn's Taxonomy)
+To increase performance beyond single-core limits, parallel processing splits tasks across multiple execution
+units simultaneously. Michael J. Flynn classified computer architectures based on instruction and data streams:
+FIGURE 3.2 — FLYNN'S ARCHITECTURAL CLASSIFICATION MATRIX
+Architecture
+Instruction
+Streams
+Data
+Streams
+Description & Common Application
+SISD (Single
+Instruction Single
+Data)
+Single
+Single
+Traditional single-core CPU executing one instruction
+on one data item at a time.
+SIMD (Single
+Instruction Multiple
+Data)
+Single
+Multiple
+Array processors / GPUs applying one operation
+simultaneously to multiple data arrays (e.g., image
+processing, vector math).
+MISD (Multiple
+Instruction Single
+Data)
+Multiple
+Single
+Rare architecture where multiple processors perform
+different operations on the same data stream (e.g.,
+fault-tolerant space systems).
+MIMD (Multiple
+Instruction Multiple
+Data)
+Multiple
+Multiple
+Multi-core CPUs, supercomputers, and modern
+distributed systems where independent cores
+process different datasets independently.
+Supercomputers, Clusters, and Massively Parallel Processing
+When processing demands exceed a single machine's capability, specialized high-performance computing
+structures are used:
+Clusters: A collection of standalone computers (nodes) connected via high-speed local area networks,
+operating together as a unified resource. Nodes frequently employ SIMD or multi-core MIMD units.
+Supercomputers: Custom-built mainframes housing tens of thousands of processing cores sharing fast
+interconnects and memory pipelines, optimized for heavy scientific modeling.
+Massively Parallel Computers (MPP): Systems linking thousands of independent processors, each with its
+own memory, running programs concurrently via coordinated message-passing interfaces.
+Interrupt Handling Mechanisms
+An Interrupt is a signal generated by hardware or software requiring immediate CPU attention, pausing
+current program execution.
+Chapter 3: Hardware
+Page 3
+
+
+[page 4]
+Handling Process:
+1. CPU completes current instruction cycle.
+2. Contents of registers (PC, ACC, CIR) are pushed onto a memory stack.
+3. Interrupt Service Routine (ISR) address is loaded into PC to manage the event.
+4. Once resolved, saved register states are restored from stack and normal execution resumes.
+CISC vs. RISC Handling: CISC checks for interrupts between complex instruction cycles or multi-cycle steps,
+requiring large context saves. RISC handles interrupts swiftly due to uniform single-cycle instructions and
+fast register swapping.
+Artificial Intelligence Hardware
+Modern AI workloads (such as neural network training and inference) require massive linear algebra and
+matrix multiplication operations.
+Graphics Processing Units (GPUs): Specialized SIMD processors containing thousands of small efficiency
+cores designed to execute high-throughput mathematical operations in parallel.
+Dedicated AI Accelerators (TPUs/NPUs): Purpose-built integrated circuits tailored for low-precision tensor
+operations, maximizing power efficiency for deep learning models.
+3.2 Primary Memory & Storage Technologies
+Computer storage is structured hierarchically based on access speed, cost, capacity, and volatility. Storage is
+broadly divided into Primary Storage (directly accessible by the CPU) and Secondary Storage (non-volatile
+retention media).
+Primary Storage: RAM vs. ROM
+Primary memory communicates directly with the CPU over the system bus.
+Random Access Memory (RAM): Read-write, volatile primary memory that temporarily holds operating
+system files, active programs, and working data. Data is lost immediately when power supply ceases.
+Read-Only Memory (ROM): Non-volatile memory containing critical bootstrap instructions (BIOS/UEFI
+firmware) required to boot the system. It can be read from, but not easily written to during standard
+operation.
+Random Access Memory Variants: SRAM vs. DRAM
+Characteristic
+SRAM (Static RAM)
+DRAM (Dynamic RAM)
+Storage Mechanism
+Uses flip-flop logic circuits (4–6 transistors
+per bit).
+Uses 1 transistor and 1 capacitor per bit.
+Refresh
+Requirement
+No refresh needed while powered.
+Requires periodic refresh as capacitors
+leak charge.
+Access Speed
+Extremely fast (1–10 ns).
+Slower than SRAM (30–60 ns).
+Density & Cost
+Lower bit density; high cost per MB.
+Very high bit density; lower cost per GB.
+Primary
+Application
+CPU Memory Cache (L1, L2, L3 caches).
+Main computer system RAM modules.
+Chapter 3: Hardware
+Page 4
+
+
+[page 5]
+Read-Only Memory (ROM) Evolution
+Standard ROM: Pre-programmed during chip manufacturing with permanent binary masks; contents can
+never be changed.
+PROM (Programmable ROM): Manufactured blank. Can be programmed once by burning internal
+microscopic fuses using a high-voltage programmer.
+EPROM (Erasable Programmable ROM): Contains a transparent quartz window. Exposure to strong
+ultraviolet (UV) light clears all memory cells, allowing reprogramming.
+EEPROM (Electronically Erasable PROM): Contents erased and rewritten electronically using pulsed
+voltages without physical removal from the circuit board.
+Flash Memory: A specialized high-density form of EEPROM that reads/writes data in blocks, forming the
+foundation of modern solid-state storage.
+Secondary Storage Media Categories
+Secondary storage is non-volatile media used to store programs and user files permanently.
+1. MAGNETIC STORAGE (HDDS)
+Uses spinning magnetic platters read by electromagnetic heads.
+• Latency: Rotational delay waiting for disk sector to pass under the head.
+• Fragmentation: File sectors scattered in non-consecutive locations degrade read speeds.
+• Removable HDDs: Portable external drives connected via USB for backups.
+2. SOLID-STATE STORAGE (SSDS)
+Uses NAND flash memory cells with floating-gate transistors.
+• No Moving Parts: Zero latency, shock-resistant, highly durable.
+• High Performance: Extremely fast read/write throughput via electronic grid access.
+3. OPTICAL STORAGE (CDS, DVDS, BLU-RAY™)
+Reads data using laser light reflected off reflective pits and lands stamped into polycarbonate discs.
+• Dual Layering: DVDs and Blu-rays stack two reflective layers, nearly doubling storage capacity.
+• Birefringence: A reading error where laser light refracts into two distinct beams inside imperfect disc substrate
+materials, causing data corruption.
+Chapter 3: Hardware
+Page 5
+
+
+[page 6]
+3.3 Input, Output, Monitoring & Control Systems
+Computer systems interact with the physical world through input devices, output devices, sensors, and
+actuators. Processing real-world phenomena requires translating continuous physical signals into discrete
+digital representations.
+Signal Conversion: ADC and DAC
+ADC (Analogue-to-Digital Converter): Converts continuous physical signals (e.g., voltage, sound waves,
+temperature readings) into digital binary values understood by the CPU.
+DAC (Digital-to-Analogue Converter): Converts digital binary output values back into continuous electrical
+currents to drive physical actuators, motors, or speakers.
+Sensors, Actuators, and Control Feedback Loops
+Sensors (Input Devices): Measure physical conditions (e.g., temperature, light level, pressure, humidity,
+motion, pH). They produce analogue signals sent to ADCs.
+Actuators (Output Devices): Electromechanical devices (e.g., motors, valves, relays, solenoids) that
+execute physical movement based on DAC control signals.
+Monitoring System: Reads sensor data continuously to display or log environment metrics without
+altering the environment directly.
+Control System: Reads sensor data, processes it against predefined threshold rules, and uses feedback
+loops to drive actuators to alter the environment.
+FIGURE 3.3 — ENVIRONMENTAL CONTROL FEEDBACK LOOP ARCHITECTURE
+Sensor Data → ADC Conversion → CPU Decision Logic → DAC Signal → Actuator Action → Environment Changes
+→ (Feedback Loop)
+Touchscreen Technologies
+Touchscreens serve as combined input and display devices using two primary technologies:
+Feature
+Capacitive Touchscreens
+Resistive Touchscreens
+Operating
+Principle
+Glass layers coated with conductive material
+store electric charge; fingers alter electrostatic
+field.
+Flexible top plastic layer pushes against
+conductive bottom glass layer, completing
+circuit.
+Multi-touch &
+Input
+Supports multi-touch gestures; requires
+conductive input (bare finger or capacitive
+stylus).
+Single touch focus; operated with any object
+(gloved hand, plastic stylus).
+Durability &
+Clarity
+High optical clarity; highly durable glass top.
+Lower clarity; vulnerable to scratches; less
+expensive to manufacture.
+Chapter 3: Hardware
+Page 6
+
+
+[page 7]
+Display Technologies & Advanced Peripherals
+OLED (Organic LED): Uses organic compounds that emit light when electric current passes through.
+Generates its own light, eliminating backlighting for true blacks, thinner screens, and higher energy
+efficiency.
+Screen Resolution: Number of distinct horizontal and vertical pixels (e.g., 1920 × 1080) displaying images.
+Virtual Reality (VR) Headset: Head-mounted apparatus featuring two separate displays, lenses, and
+motion sensors to totally immerse users in virtual surroundings.
+3D Printing Technologies:
+• Direct 3D Printing: Print head moves along X, Y, and Z axes ejecting melted polymer layers through nozzles.
+• Binder 3D Printing: Two-pass method using dry powder spread across a bed followed by a liquid binder
+spray.
+Embedded Systems and Microcontrollers
+An Embedded System is a specialized computer built into a larger machine to perform a specific dedicated
+control function (e.g., washing machine controller, ABS brake module). They typically use a Microcontroller—
+an integrated IC combining CPU core, RAM, ROM, and I/O ports on a single chip.
+Benefits: Compact size, low power consumption, low per-unit cost, high operational reliability.
+Drawbacks: Difficult to upgrade, specialized repair required, limited processing capacity.
+3.4 Logic Circuits & Boolean Algebra
+At the microscopic level, all computer hardware is constructed from digital logic gates that manipulate binary
+signals (0 and 1).
+Fundamental Logic Gates
+AND OPERATION (A · B)
+Output is 1 ONLY if ALL inputs are 1.
+A
+B
+Output
+0
+0
+0
+0
+1
+0
+1
+0
+0
+1
+1
+1
+OR OPERATION (A + B)
+Output is 1 if AT LEAST ONE input is 1.
+A
+B
+Output
+0
+0
+0
+0
+1
+1
+1
+0
+1
+1
+1
+1
+Chapter 3: Hardware
+Page 7
+
+
+[page 8]
+NOT OPERATION (Ā)
+Inverts the input signal.
+A
+Output
+0
+1
+1
+0
+XOR OPERATION (A ⊕ B)
+Output is 1 if inputs are DIFFERENT.
+A
+B
+Output
+0
+0
+0
+0
+1
+1
+1
+0
+1
+1
+1
+0
+Boolean Algebra Simplification Laws
+Boolean expressions describe logic circuits mathematically and can be simplified using formal laws:
+Identity Laws: A · 1 = A | A + 0 = A
+Null Laws: A · 0 = 0 | A + 1 = 1
+Idempotent Laws: A · A = A | A + A = A
+Inverse Laws: A · Ā = 0 | A + Ā = 1
+Double Negation: Ā̄ = A
+De Morgan's Laws:
+• Break the line, change the sign: A · B = Ā + B̄
+• A + B = Ā · B̄
+WORKED SIMPLIFICATION EXAMPLE
+Simplify the Boolean Expression: X = A · B + A · B̄
+1. Factor out term A using Distributive Law: X = A · (B + B̄)
+2. Apply Inverse Law (B + B̄ = 1): X = A · (1)
+3. Apply Identity Law: X = A
+Chapter 3: Hardware
+Page 8
+
+
+[page 9]
+End-of-Chapter Assessment Exercises
+EXERCISE QUESTIONS
+1. Storage Classification & Categories
+a) Differentiate between primary storage and secondary storage in terms of volatility, access speed, and
+direct CPU accessibility. [3 marks]
+b) Give one specific example of a secondary storage technology for each of the three main storage
+categories: magnetic, optical, and solid-state (flash). [3 marks]
+2. Memory Architecture & Silicon Technologies
+a) Explain the fundamental structural difference between SRAM (Static RAM) and DRAM (Dynamic RAM)
+regarding how data bits are physically stored and their requirement for periodic refreshing. [4 marks]
+b) Contrast standard ROM (Read-Only Memory) with PROM (Programmable ROM) and EPROM (Erasable
+Programmable ROM) in terms of how data is written and erased. [4 marks]
+3. Component Classification
+Classify the following hardware components as Input, Output, or Storage devices (note dual roles where
+applicable):
+  i. Touchscreen display (consider both perspectives) [2 marks]
+  ii. Solid State Drive (SSD) [1 mark]
+  iii. Barcode reader [1 mark]
+4. Automated Systems & Environment Control
+Outline a simple scenario for an automated environmental control system (e.g., an automated
+greenhouse or smart thermostat), explicitly specifying:
+  • The specific sensor used [1 mark]
+  • The computer processing threshold condition [1 mark]
+  • The resulting actuator physical action [1 mark]
+5. Processor Design & Instruction Execution
+a) Define the core philosophical difference between RISC (Reduced Instruction Set Computer) and CISC
+(Complex Instruction Set Computer) architectures regarding instruction size and decoding complexity. [3
+marks]
+b) Explain the role of pipelining in executing instructions concurrently within a RISC processor, and name
+one hazard that can stall the execution pipeline. [3 marks]
+c) State the specific function of the following CPU registers during the instruction cycle: Program Counter
+(PC), Accumulator (ACC), and Memory Data Register (MDR). [3 marks]
+6. Hardware Interrupt Handling
+What is a hardware interrupt, and what step-by-step sequence occurs at the machine code level when an
+interrupt signal is received by the CPU? [4 marks]
+7. Digital Logic Circuits & Operations
+Draw or describe the logic gate symbols and write out the full truth tables for the three basic logic
+operations: AND, OR, and NOT. [6 marks]
+SELF-ASSESSMENT CHECKLIST
+ Can I explain primary vs. secondary storage?
+ Do I know SRAM (flip-flops) vs DRAM (capacitors)?
+ Can I detail RISC vs CISC architectural differences?
+ Do I understand pipelining stages & hazards?
+ Can I classify SISD, SIMD, MISD, MIMD systems?
+ Do I know how interrupts alter register state?
+ Can I describe sensor/actuator ADC/DAC loops?
+ Can I draw truth tables & simplify logic circuits?
+Chapter 3: Hardware
+Page 9
