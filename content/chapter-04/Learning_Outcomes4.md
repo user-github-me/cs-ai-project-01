@@ -2,6 +2,37 @@
 
 ## Learning outcomes
 
-Compare network architectures, clients and clouds; identify communication hardware and media; trace URLs, DNS and TCP/IP; explain application protocols, switching and network performance; distinguish data protection goals, encryption, signatures and TLS.
-
-By the end, explain the chapter’s mechanisms, apply them to the mission, and justify a design decision using its constraints. Check learning by completing the application checkpoints and exercises without first reading feedback.
+- The characteristics of a WAN and a LAN
+- Client-server and peer-to-peer models in networking
+- The differences between thick client and thin client
+- Public and private cloud computing
+- Hardware required to support a LAN
+- Function of routers
+- How data collisions are detected and avoided
+- Differences between the Internet and the World Wide Web
+- Hardware needed to support the internet
+- IP addresses
+- The use of the uniform resource locator (URL) to locate a resource on the world wide web
+- The role of the Domain Name Service (DNS)
+- The need for protocols during communication
+- The implementation of protocols such as a stack
+- TCP/IP protocols including the 4 layers (Application, Transport, Internet and Link)
+- HTTP, POP3, FTP, IMAP, etc
+- The terms security, privacy, integrity of data
+- security to protect computer systems such as user accounts, passwords, digital signatures, firewalls, antivirus and anti spyware software and encryption
+- security threats such as viruses and spyware, hacking, phishing, and pharming
+- methods to reduce security risks such as encryption and access rights
+- use of validation to protect data integrity
+- use of verification during data entry and data transfer to reduce or eliminate errors.
+- Circuit switching
+- Benefits and drawbacks of packet switching
+- Function of a router in packet switching
+- Use of packet switching to pass messages along a network
+- How encryption works, including the use of public and private keys, plaintext and ciphertext, symmetric key cryptography and asymmetric key cryptography
+- How keys can be used to send verified messages
+- How data is encrypted using symmetric and asymmetric cryptography
+- quantum cryptography and QKD
+- SSL and TLS
+- Examples of where SSL and TLS would be used
+- How digital certificates are acquired
+- how digital certificates are used to produce digital signatures
