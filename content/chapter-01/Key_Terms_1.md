@@ -33,3 +33,4 @@ Chapter 1: Intro
 - Overclocking: changing the clock speed of a system clock to a value higher than the factory/recommended setting.
 - BIOS: basic input/output system.
 - Cache memory: a high speed auxiliary memory which permits high speed data transfer and retrieval.
+- 
