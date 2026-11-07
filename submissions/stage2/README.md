@@ -19,6 +19,10 @@ The [Stage 2 release](https://github.com/user-github-me/cs-ai-project-01/release
 
 Video HTML, HyperFrames/renderer code, raw audio and render caches stay local at Nazif’s request. The public files are the finished learning materials and compact verification records.
 
+## Interactive companion
+
+[Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) on Vercel Hobby. [Game source and deployment instructions](../../apps/roverlab/README.md) · [source ZIP](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_ROVERLAB_Source.zip) · [guided study activity](../../content/supporting/ROVERLAB_Activity.md). The game has three missions and evaluates actual component, network and response choices. It is an optional extension to the course materials.
+
 ## Remaining team actions
 
 Complete the four missing members’ Stage 2 logs and actual learning reflections, agree contribution scores, record teammate/learner reviews, rehearse, and submit the required files through the course platform. The documents explicitly flag these missing human records. Do not convert an AI check into a claimed student experience.

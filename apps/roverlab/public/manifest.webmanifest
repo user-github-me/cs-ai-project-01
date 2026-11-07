@@ -1,0 +1,12 @@
+{
+  "id": "./",
+  "name": "ROVERLAB: Build, Connect, Train",
+  "short_name": "ROVERLAB",
+  "description": "Build a machine, connect its network and train its responses. A Blue Impulse learning companion.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#081722",
+  "theme_color": "#081722",
+  "icons": [{ "src": "./assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

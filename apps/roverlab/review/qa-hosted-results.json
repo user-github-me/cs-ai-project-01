@@ -1,0 +1,89 @@
+{
+  "generatedAt": "2026-11-07T09:25:24.769Z",
+  "browser": "chromium",
+  "baseURL": "https://roverlab-blue-impulse.vercel.app",
+  "outcomes": [
+    {
+      "name": "Desktop exploration: all seven stages, gating, feedback, playback controls",
+      "status": "passed",
+      "durationMs": 11369,
+      "details": {
+        "score": 100,
+        "status": "success"
+      }
+    },
+    {
+      "name": "Mobile service/search: complete touch-sized journey with no horizontal overflow",
+      "status": "passed",
+      "durationMs": 16067,
+      "details": {
+        "score": 100,
+        "status": "success"
+      }
+    },
+    {
+      "name": "Desktop industrial/monitor: complete mission with correct rules",
+      "status": "passed",
+      "durationMs": 7333,
+      "details": {
+        "score": 100,
+        "status": "success"
+      }
+    },
+    {
+      "name": "Wrong compatible rule changes monitoring outcome",
+      "status": "passed",
+      "durationMs": 4617,
+      "details": {
+        "correctScore": 100,
+        "wrongScore": 45,
+        "wrongStatus": "failed"
+      }
+    },
+    {
+      "name": "Keyboard focus and Enter activate game controls",
+      "status": "passed",
+      "durationMs": 790,
+      "details": {
+        "firstFocusedControl": "Skip to the lab"
+      }
+    },
+    {
+      "name": "Saved build survives reload, continues, and resets",
+      "status": "passed",
+      "durationMs": 1748
+    },
+    {
+      "name": "Rule editing, ordering, deletion, and hardware changes preserve valid gates",
+      "status": "passed",
+      "durationMs": 1495
+    },
+    {
+      "name": "Start new mission confirms replacement while Continue preserves the saved build",
+      "status": "passed",
+      "durationMs": 1550
+    },
+    {
+      "name": "Relay links connect distinct nodes and reject a self-link",
+      "status": "passed",
+      "durationMs": 2335
+    },
+    {
+      "name": "Direct file URL runs without network access",
+      "status": "passed",
+      "durationMs": 263
+    },
+    {
+      "name": "Hosted game reloads offline and restores progress from the local cache",
+      "status": "passed",
+      "durationMs": 1621
+    },
+    {
+      "name": "No browser exceptions or failed app resource requests",
+      "status": "passed",
+      "durationMs": 1
+    }
+  ],
+  "browserErrors": [],
+  "failedRequests": []
+}

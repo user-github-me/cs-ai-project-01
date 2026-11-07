@@ -138,6 +138,34 @@ Evidence: Stage 2 output index, tutorial documents, chapter review, and project 
 
 - The publishable collection is in assets/tutorials/stage2. The final verification report records the measurements. Video production source stays local, as I requested. GitHub publication is recorded separately after it is verified.
 
+### Synchronising the team's latest changes — 7 November 2026
+
+- Before uploading, Neogpt fetched and retained Safa's interactive-game prompt (4b51f77) and Edzel's expanded Chapter 3 topic list (8ab3108). My update was rebased on those commits without conflicts.
+
+- The four added Hardware topics are already covered in the completed chapter materials. The game file is a planning prompt; it is not recorded as a completed interactive game. These commits remain attributed to their authors.
+
+### ROVERLAB game, study-guide integration and initial hosting — 7 November 2026
+
+- I asked Neogpt to build the actual seven-stage ROVERLAB game in a separate application folder, with source on GitHub and automatic deployment through my Vercel Hobby workspace. This extends the earlier game-planning record; it does not change the authorship or scope of Safa's original prompt commit.
+
+- Neogpt/Codex built the playable application in apps/roverlab/public/: choose a machine, assemble hardware, connect a network, train rules, select a mission, run the simulation and inspect results. The exploration, service and industrial missions use the selected components, network routes and weighted stimulus–response rules. Ineffective rules or unavailable links can produce partial results or failures.
+
+- Neogpt ran 21 engine tests successfully, including the three successful mission configurations, wrong-rule failures, movement-dependent network range, power and sensor requirements, feedback changing the actual outcome, and deterministic playback. The first Chromium browser run passed nine checks. The final expanded 11-check browser run, WebKit checks and hosted browser checks were still pending when this entry was added. These are automated checks, not a student or teacher playtest.
+
+- Neogpt integrated an optional ROVERLAB activity into the study guide, expanding it to 123 pages while preserving the original 96-page core and supplied cover/divider artwork. The current learning PDFs and scripts link to the game. The activity explains how hardware, networking and authored stimulus–response associations work together; the game does not claim to train a neural network or a full reinforcement-learning agent.
+
+- Neogpt configured the static Vercel project roverlab-blue-impulse in the usergithubmes-projects Hobby workspace. The initial manual deployment is live at ROVERLAB, and an anonymous HTTP request returned 200. The verified Git connection uses user-github-me/cs-ai-project-01, production branch main, root apps/roverlab, and output directory public.
+
+- At this entry, the new game revision had not yet been pushed, a Git-triggered deployment had not been verified, and the new source-release asset had not been published. Those outcomes must be recorded after they are observed. My own reflection, a student or teacher review, team-agreed contribution scores and course-channel submission evidence are not supplied by these production checks.
+
+Evidence: application source and instructions, engine test record, browser verification record, and optional activity. Neogpt assisted with this entry and the generated project/personal-log documents; the entry records my instructions and observed AI-assisted production, not invented independent work or learning.
+
+### Human voice recording scripts — 7 November 2026
+
+Nazif requested clean video scripts so he can record his own narration and return the audio for a new render. The assistant prepared five narration-only PDFs and five matching TXT files in assets/tutorials/stage2/recording-scripts/, plus BlueImpulse_Video_Recording_Scripts.zip. All 368 spoken cues across 60 sections match the existing lesson wording exactly. Section headings and original timing labels are explicitly unspoken. PDF text order, layout bounds, ZIP CRC and file hashes were checked.
+
+The five existing MP4s still use the disclosed synthetic voice. Nazif has not yet supplied his recorded audio, so no human-voice version is claimed. The next audio step is to receive one recording per video, align the captions and visual timing to those recordings, then render and verify the revised MP4s. The existing narration and finished videos have been preserved.
+
 ### 7 November — Stage 2 audit and revised tutorials (AI-assisted draft)
 
 Recorded personal action: I asked Neogpt to follow rules/Stage2_All_Instructions.md across the repository and to record the work. I supplied a new video direction: replace study-guide screenshots/page numbers with chapter and subtopic citations, use a story hook, make the existing palette more vibrant, and use readable dynamic motion with sound effects below the narration.

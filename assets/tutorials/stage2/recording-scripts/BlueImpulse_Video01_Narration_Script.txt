@@ -1,0 +1,181 @@
+[NOT SPOKEN — Video 01 — Basic reinforcement learning]
+
+[NOT SPOKEN — Read only the narration paragraphs. Section headings, numbers and timestamps are not spoken. Timings refer to the original edit; speak naturally.]
+
+[SECTION 01 — Pip’s route is blocked | Original 00:00–00:32 | NOT SPOKEN]
+
+Pip, the coffee is getting cold!
+
+Our simulated campus rover has a delivery to make, but its familiar route is blocked.
+
+Repeating yesterday's move will not solve today's problem. Pip needs useful feedback, and a way to change its estimates.
+
+Have you ever wondered how an agent learns which action to try?
+
+In Chapter two, Behaviorism and Behaviorist AI, we will connect the reinforcement-learning loop to one numerical update.
+
+[SECTION 02 — Today’s route | Original 00:32–01:11 | NOT SPOKEN]
+
+Today you will identify an agent, an environment, a state, an action, a reward, and a policy.
+
+You will compare exploration with exploitation, then calculate the example in the subtopic Update a Q value.
+
+Welcome to the tutorial on basic reinforcement learning by Blue Impulse.
+
+Have paper ready for one calculation. The tutorial PDF includes the same worked steps and practice question.
+
+Treat our rover as an illustration. We are explaining a learning method, not claiming every real rover learns this way.
+
+[SECTION 03 — Follow the learning loop | Original 01:11–02:15 | NOT SPOKEN]
+
+Start with the subtopic The reinforcement-learning loop. One interaction connects an observation, an action, and feedback.
+
+The agent selects an action. The environment changes and returns the next state and a reward.
+
+The learning algorithm uses that experience to improve the policy, which is the strategy for choosing actions.
+
+For our grid, the state could be the current square, and an action could be moving right.
+
+The reward is a number associated with the result. It is feedback, not a complete instruction manual.
+
+Notice the return arrow. Learning depends on connecting an action to what happened after it.
+
+For Pip, define the state before choosing an action. A location alone may be insufficient if a barrier can change the route.
+
+The environment includes what happens after the action. The reward is feedback about that outcome, not a replacement for observing the next state.
+
+[SECTION 04 — Reward, policy, value | Original 02:15–03:19 | NOT SPOKEN]
+
+The subtopic Rewards, policies and values separates three ideas that are easy to confuse.
+
+Think of a journey. The reward scores an outcome now, while the policy chooses the next move.
+
+A value estimate predicts how much return a choice may lead to, including later outcomes.
+
+A route with a small cost now can still be worthwhile if it reaches a better destination.
+
+That is why choosing the biggest immediate reward is not always the best long-term decision.
+
+A poorly chosen reward can encourage a shortcut that misses the designer's real goal.
+
+Suppose the reward gives a point for moving, regardless of direction. Pip could keep moving in circles and collect points without completing a delivery.
+
+An objective and a reward design are connected, but they are not automatically identical. Test whether the rewarded behaviour is the behaviour you actually wanted.
+
+[SECTION 05 — The restaurant analogy | Original 03:19–04:11 | NOT SPOKEN]
+
+Use a restaurant to understand the subtopic Explore or exploit?
+
+Ordering the dish you currently believe is best is exploitation. Trying a different dish is exploration.
+
+Exploration gathers information because your current estimates might be wrong.
+
+In our epsilon-greedy example, epsilon is zero point one, giving a ten percent exploration probability.
+
+Otherwise, the agent chooses an action with the highest current Q value.
+
+These percentages describe probabilities over choices, not a promise that exactly one out of every ten choices explores.
+
+In a real physical system, exploration also needs safety constraints. A simulation is a useful place to experiment.
+
+[SECTION 06 — Is the familiar route certainly best? | Original 04:11–04:53 | NOT SPOKEN]
+
+Pause and think. One route has worked twice. Another route has never been tried.
+
+Does that prove the first route is better? Take a few seconds before we reveal the answer.
+
+No. The evidence is incomplete, so the familiar route is not certainly the better one.
+
+Exploration may improve the estimate, but it has a cost. The design must balance information and performance.
+
+Write one sentence explaining why exploitation uses estimated future return, rather than only the next reward.
+
+[SECTION 07 — What is a Q value? | Original 04:53–05:39 | NOT SPOKEN]
+
+Now use the subtopic Update a Q value. Q associates a state and an action with an estimated return.
+
+Q-learning is called model-free because it does not require a supplied model of environment transitions.
+
+Model-free does not mean memory-free. The estimates still live in a table or another representation.
+
+The update combines an old estimate with a target derived from new experience.
+
+Alpha controls how far the estimate moves toward that target. Gamma discounts the future-value contribution.
+
+We will keep every input visible, so you can reproduce the arithmetic yourself.
+
+[SECTION 08 — Work through the worked update | Original 05:39–06:37 | NOT SPOKEN]
+
+Start with an old Q value of two and a learning rate, alpha, of zero point five.
+
+The reward is one, gamma is zero point nine, and the best next Q value is four.
+
+First calculate the target: one plus zero point nine times four. The target is four point six.
+
+Next subtract the old estimate. Four point six minus two gives an error of two point six.
+
+Multiply that error by alpha. Half of two point six is one point three.
+
+Finally add the change to the old value. Two plus one point three gives three point three.
+
+Watch the estimate move halfway toward the target. That halfway movement is what alpha equals one half means here.
+
+The supporting Python file repeats this calculation and prints every intermediate value for you to inspect.
+
+[SECTION 09 — A better estimate, not a proof | Original 06:37–07:46 | NOT SPOKEN]
+
+This experience raised the estimate from two to three point three. Now decide what that result actually means.
+
+It did not prove that the action is always best. One observation is not a reliable policy.
+
+Repeated experience, an appropriate learning schedule, and enough exploration are still important.
+
+There is also a special case: when the next state is terminal, the future-value term is zero.
+
+That prevents the calculation from inventing future reward after the episode has ended.
+
+Compare these two ideas: updating an estimate from evidence, and guaranteeing the outcome of the next action.
+
+They are different claims, and only the first follows from our calculation.
+
+Imagine that the next trial gives different feedback. One sample is noisy evidence, so another update can move the estimate again.
+
+The learning rate controls how strongly this experience changes the estimate. It does not turn a single successful delivery into a guarantee.
+
+[SECTION 10 — Try a terminal state | Original 07:46–08:30 | NOT SPOKEN]
+
+Your turn. Keep the old value at two, alpha at one half, and the reward at one.
+
+Make the next state terminal. What is the new Q value? Pause the video if you need more time.
+
+The future contribution is zero, so the target is one. The error is one minus two, or negative one.
+
+Half that error is negative one half. Add it to two, giving a new value of one point five.
+
+The estimate falls because the observed target is lower. A learning update can decrease a value as well as increase it.
+
+[SECTION 11 — Experience changes estimates | Original 08:30–09:31 | NOT SPOKEN]
+
+Return to Pip's blocked route. The agent acts, receives feedback, and learns a policy from experience.
+
+Reward scores an outcome. Value estimates return. Exploration improves information, while exploitation uses the best current estimates.
+
+Our worked Q update produced three point three, and our terminal-state practice produced one point five.
+
+The training-and-deployment distinction matters: running an already learned policy is not the same as training it online.
+
+A fixed sensor-response rule can control a machine without learning at all.
+
+Before moving on, explain the loop to someone else and run the included calculation with one changed reward.
+
+Pip's improvement is a change in an estimate and, possibly, a later choice. It is not proof that every new street or unexpected obstacle has been solved.
+
+[SECTION 12 — Pip completes the shift | Original 09:31–10:00 | NOT SPOKEN]
+
+Pip's small problem now has an explanation you can test.
+
+Use Chapter 2, Behaviorism & Behaviorist AI, and the named subtopics to revisit the reasoning.
+
+The tutorial guide includes the full teaching steps and the checked practice answers. Run the supporting demonstration and change one input.
+
+Blue Impulse. Follow the signal, predict the result, and check your explanation.

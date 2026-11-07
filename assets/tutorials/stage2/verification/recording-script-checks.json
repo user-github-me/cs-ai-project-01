@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "date": "2026-11-07",
+  "scope": "Independent comparison with all final lesson scene cues; TXT byte-for-byte cue text/order; complete PDF cue wording in order with whitespace normalization only; PDF page bounds and text markers; manifest times/counts/hashes; ZIP CRC/member hash checks. No human recording or rerender is claimed.",
+  "total_spoken_cues": 368,
+  "total_sections": 60,
+  "videos": [
+    {
+      "number": 1,
+      "pdf": "assets/tutorials/stage2/recording-scripts/BlueImpulse_Video01_Narration_Script.pdf",
+      "txt": "assets/tutorials/stage2/recording-scripts/BlueImpulse_Video01_Narration_Script.txt",
+      "pages": 6,
+      "sections": 12,
+      "spoken_cues": 77,
+      "exact_txt_cues_in_order": true,
+      "complete_pdf_cues_in_order": true,
+      "source_and_manifest_equal": true,
+      "manifest_timestamps_verified": true,
+      "out_of_page_spans": [],
+      "invalid_text_markers": [],
+      "empty_pages": []
+    },
+    {
+      "number": 2,
+      "pdf": "assets/tutorials/stage2/recording-scripts/BlueImpulse_Video02_Narration_Script.pdf",
+      "txt": "assets/tutorials/stage2/recording-scripts/BlueImpulse_Video02_Narration_Script.txt",
+      "pages": 5,
+      "sections": 12,
+      "spoken_cues": 74,
+      "exact_txt_cues_in_order": true,
+      "complete_pdf_cues_in_order": true,
+      "source_and_manifest_equal": true,
+      "manifest_timestamps_verified": true,
+      "out_of_page_spans": [],
+      "invalid_text_markers": [],
+      "empty_pages": []
+    },
+    {
+      "number": 3,
+      "pdf": "assets/tutorials/stage2/recording-scripts/BlueImpulse_Video03_Narration_Script.pdf",
+      "txt": "assets/tutorials/stage2/recording-scripts/BlueImpulse_Video03_Narration_Script.txt",
+      "pages": 5,
+      "sections": 12,
+      "spoken_cues": 73,
+      "exact_txt_cues_in_order": true,
+      "complete_pdf_cues_in_order": true,
+      "source_and_manifest_equal": true,
+      "manifest_timestamps_verified": true,
+      "out_of_page_spans": [],
+      "invalid_text_markers": [],
+      "empty_pages": []
+    },
+    {
+      "number": 4,
+      "pdf": "assets/tutorials/stage2/recording-scripts/BlueImpulse_Video04_Narration_Script.pdf",
+      "txt": "assets/tutorials/stage2/recording-scripts/BlueImpulse_Video04_Narration_Script.txt",
+      "pages": 5,
+      "sections": 12,
+      "spoken_cues": 72,
+      "exact_txt_cues_in_order": true,
+      "complete_pdf_cues_in_order": true,
+      "source_and_manifest_equal": true,
+      "manifest_timestamps_verified": true,
+      "out_of_page_spans": [],
+      "invalid_text_markers": [],
+      "empty_pages": []
+    },
+    {
+      "number": 5,
+      "pdf": "assets/tutorials/stage2/recording-scripts/BlueImpulse_Video05_Narration_Script.pdf",
+      "txt": "assets/tutorials/stage2/recording-scripts/BlueImpulse_Video05_Narration_Script.txt",
+      "pages": 5,
+      "sections": 12,
+      "spoken_cues": 72,
+      "exact_txt_cues_in_order": true,
+      "complete_pdf_cues_in_order": true,
+      "source_and_manifest_equal": true,
+      "manifest_timestamps_verified": true,
+      "out_of_page_spans": [],
+      "invalid_text_markers": [],
+      "empty_pages": []
+    }
+  ],
+  "archive": {
+    "path": "deliverables/stage2/BlueImpulse_Video_Recording_Scripts.zip",
+    "files": 12,
+    "bytes": 184337,
+    "sha256": "780862745f5f750214c1506df878fb9a4ea20f5d8eb567f5dbd976720a17984e",
+    "crc_errors": 0,
+    "member_hashes_match": true,
+    "contents": "5 PDFs, 5 TXT scripts, README.md, manifest.json; no generator, video production source, audio or video files."
+  }
+}

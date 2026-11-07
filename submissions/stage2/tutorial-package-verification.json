@@ -1,18 +1,18 @@
 [
   {
     "file": "BlueImpulse_Stage2_Tutorial_Documents.zip",
-    "bytes": 3321084,
-    "sha256": "9d2645132b54f0432c71b7ca7219c38d6257f0a1daaf07c4a0657fe66e4f3bfb",
-    "members": 69,
+    "bytes": 3515046,
+    "sha256": "6b9d295929b1bb360c550a724c1e71047993c694d6a1b8d3c1bd3837dec3b851",
+    "members": 83,
     "crc": "passed",
     "all_member_hashes": "passed",
     "production_project_included": false
   },
   {
     "file": "BlueImpulse_Stage2_Tutorial_Package.zip",
-    "bytes": 274333522,
-    "sha256": "14b3af99c218c7adba5c99bd645768b09fec7479654dd3c919bf67c290e199df",
-    "members": 75,
+    "bytes": 274531386,
+    "sha256": "a17274071699d4d4dee31a49306dcc3c2929b0e89c4c7c5f735fc273d60256f9",
+    "members": 89,
     "crc": "passed",
     "all_member_hashes": "passed",
     "production_project_included": false

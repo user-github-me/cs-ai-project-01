@@ -62,6 +62,8 @@ Scripts and chapter references are checked against the measured lesson JSON and 
 
 **Apply in the learning system:** Complete ACT-02 in the Study Guide / Markdown activity file. Use Test Bank questions TF05–TF08, MC05–MC08 and OE02 for review. The six-chapter PPT deck introduces the same chapter concepts through classroom discussion.
 
+**Optional interactive companion:** ROVERLAB lets you apply these ideas by building a robot, connecting its network and comparing stimulus-response rules. Play at https://roverlab-blue-impulse.vercel.app and use the ROVERLAB activity in the Study Guide. It is a simplified rule-and-feedback model, not a neural network or the numerical Q-learning algorithm taught in Video 01.
+
 **Materials:** Paper and a calculator are sufficient. The optional supporting Python demonstration uses Python 3.9 or newer with no third-party packages or account.
 
 ```sh
@@ -371,6 +373,8 @@ Use old Q = 2, alpha = 0.5, reward = 1, gamma = 0.9 and best next Q = 4. Alpha i
 
 **Apply in the learning system:** Complete ACT-03 in the Study Guide / Markdown activity file. Use Test Bank questions TF09–TF12, MC09–MC12 and OE03 for review. The six-chapter PPT deck introduces the same chapter concepts through classroom discussion.
 
+**Optional interactive companion:** ROVERLAB lets you apply these ideas by building a robot, connecting its network and comparing stimulus-response rules. Play at https://roverlab-blue-impulse.vercel.app and use the ROVERLAB activity in the Study Guide. It is a simplified rule-and-feedback model, not a neural network or the numerical Q-learning algorithm taught in Video 01.
+
 **Materials:** Paper and a calculator are sufficient. The optional supporting Python demonstration uses Python 3.9 or newer with no third-party packages or account.
 
 ```sh
@@ -667,6 +671,8 @@ Completion cycles are 4, 5 and 6. Three instructions finish in six cycles, rathe
 
 **Apply in the learning system:** Complete ACT-04 in the Study Guide / Markdown activity file. Use Test Bank questions TF13–TF16, MC13–MC16 and OE04 for review. The six-chapter PPT deck introduces the same chapter concepts through classroom discussion.
 
+**Optional interactive companion:** ROVERLAB lets you apply these ideas by building a robot, connecting its network and comparing stimulus-response rules. Play at https://roverlab-blue-impulse.vercel.app and use the ROVERLAB activity in the Study Guide. It is a simplified rule-and-feedback model, not a neural network or the numerical Q-learning algorithm taught in Video 01.
+
 **Materials:** Paper and a calculator are sufficient. The optional supporting Python demonstration uses Python 3.9 or newer with no third-party packages or account.
 
 ```sh
@@ -960,6 +966,8 @@ Distance during delay = speed × delay. This is not total stopping distance: sen
 
 **Apply in the learning system:** Complete ACT-05 in the Study Guide / Markdown activity file. Use Test Bank questions TF17–TF20, MC17–MC20 and OE05 for review. The six-chapter PPT deck introduces the same chapter concepts through classroom discussion.
 
+**Optional interactive companion:** ROVERLAB lets you apply these ideas by building a robot, connecting its network and comparing stimulus-response rules. Play at https://roverlab-blue-impulse.vercel.app and use the ROVERLAB activity in the Study Guide. It is a simplified rule-and-feedback model, not a neural network or the numerical Q-learning algorithm taught in Video 01.
+
 **Materials:** Paper and a calculator are sufficient. The optional supporting Python demonstration uses Python 3.9 or newer with no third-party packages or account.
 
 ```sh
@@ -1250,6 +1258,8 @@ Only accepted messages advance accepted-sequence state. Delivery, correct format
 - Chapter 1 — The Fundamentals / Trace a tiny program
 
 **Apply in the learning system:** Complete ACT-01 in the Study Guide / Markdown activity file. Use Test Bank questions TF01–TF04, MC01–MC04 and OE01 for review. The six-chapter PPT deck introduces the same chapter concepts through classroom discussion.
+
+**Optional interactive companion:** ROVERLAB lets you apply these ideas by building a robot, connecting its network and comparing stimulus-response rules. Play at https://roverlab-blue-impulse.vercel.app and use the ROVERLAB activity in the Study Guide. It is a simplified rule-and-feedback model, not a neural network or the numerical Q-learning algorithm taught in Video 01.
 
 **Materials:** Paper and a calculator are sufficient. The optional supporting Python demonstration uses Python 3.9 or newer with no third-party packages or account.
 

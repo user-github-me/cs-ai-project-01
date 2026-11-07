@@ -57,52 +57,52 @@
     {
       "file": "BlueImpulse_Video01_Basic_Reinforcement_Learning_Tutorial.pdf",
       "pages": 6,
-      "sha256": "1b9fad5bb7ca22b4d33a294db0b886161936712cc40345fb2a71bb0c41ea53d9"
+      "sha256": "cbe9004a2b7ea1589a00fd297f86824c8c45d49a9b8ee52a0fe8351c960b1c26"
     },
     {
       "file": "BlueImpulse_Video01_Basic_Reinforcement_Learning_Script_Teaching_Outline.pdf",
       "pages": 8,
-      "sha256": "64e305f63848e4cd7447a1e231b7e65fc48c9f7e9890f0ff2516d0135c8bea3d"
+      "sha256": "39c86b8f92d4659c3a35259a2e6dc99bdf3b51c243d8b660e62888adf12b17fb"
     },
     {
       "file": "BlueImpulse_Video02_How_Hardware_Enables_AI_Tutorial.pdf",
       "pages": 5,
-      "sha256": "0bb5bb5450d5e20bb147adb35e034433a631438dbbd69c6899c1eb30403a2072"
+      "sha256": "402ac79df64d6b4534cb9f264494fa769145de4434aaa1b2a7adb10e92fb6296"
     },
     {
       "file": "BlueImpulse_Video02_How_Hardware_Enables_AI_Script_Teaching_Outline.pdf",
       "pages": 8,
-      "sha256": "dbbac5ff7164ad83670a5b772114374a0f94d45899e11ccfdd7b2da7f7334045"
+      "sha256": "db5a5780b2864e26e25bde5f0e49dcf30577d6f635f0c5f6c688c22965cf0015"
     },
     {
       "file": "BlueImpulse_Video03_Network_Challenges_Tutorial.pdf",
       "pages": 5,
-      "sha256": "b3d854d823ac2c639e7c5a50b7b8c03478fc802848713ca5139c4b0d68f19988"
+      "sha256": "e3d0666ab6b35cb8318a8fda5529e288988823aaf3bc4ad09aa4c0ecb92eaf13"
     },
     {
       "file": "BlueImpulse_Video03_Network_Challenges_Script_Teaching_Outline.pdf",
       "pages": 8,
-      "sha256": "4049f12b7c37263c3c765bd65a72fb077e0fba57885de9c107280188c1ea52e3"
+      "sha256": "105d75a6b52363eb06e7c4e0cebd9c16e06e89ee565708df92d7fe8a6516ee30"
     },
     {
       "file": "BlueImpulse_Video04_Networking_for_Behaviorist_AI_Tutorial.pdf",
       "pages": 6,
-      "sha256": "ba649a83be74dbecbe307fbd15b229a6ae8ad2a625f22feebdce9187b809e171"
+      "sha256": "a8a875a0257b66b10332fe926a5655f67b8ca9f67897c316a1eee2c69c8635bc"
     },
     {
       "file": "BlueImpulse_Video04_Networking_for_Behaviorist_AI_Script_Teaching_Outline.pdf",
       "pages": 8,
-      "sha256": "0624b726a6fce73b82bf8f7ba1c28944408af0e2ca4e7f2b3d1de814eb41f712"
+      "sha256": "6aa123342d8da47c09a0a97fcd22cbcc28bfe8be915276260a74a30bce2154ff"
     },
     {
       "file": "BlueImpulse_Video05_Program_Execution_Tutorial.pdf",
       "pages": 6,
-      "sha256": "e717cb3d3dbc616f54abb673fd9fe2bff01778d09d146921ef66f4173f694410"
+      "sha256": "6c49cf4bdb551d1023341095fe5db01cf7ea2d2f4f199cd3181c3cc3ac5f8835"
     },
     {
       "file": "BlueImpulse_Video05_Program_Execution_Script_Teaching_Outline.pdf",
       "pages": 8,
-      "sha256": "fa6b51147159c8b356cca4e0841c94d8ac4e31bd0cf1091138536fefb3a8ab65"
+      "sha256": "a62efb6e7274a6f8654c3a1998a8ff9dac9c615bdb0b648a18e9dbf010db95d8"
     }
   ],
   "combined_guide": {

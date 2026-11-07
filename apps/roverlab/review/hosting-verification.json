@@ -1,0 +1,81 @@
+{
+  "checked_at_utc": "2026-11-07T09:18:49.186284+00:00",
+  "status": "passed",
+  "url": "https://roverlab-blue-impulse.vercel.app/",
+  "plan": "hobby",
+  "workspace": "usergithubmes-projects",
+  "deployment_id": "dpl_GLUVXn5EYpgHeEtHAvARB5rzJPwd",
+  "deployment_source": "CLI; Git automatic deployment verification pending",
+  "assets": [
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "bytes": 1635,
+      "sha256": "33a34c0a47155f47e58c3cfb56d432ad8e706d5c2516e92d72c643a4a8a4e0e9",
+      "matches_local": true
+    },
+    {
+      "path": "offline.js",
+      "http_status": 200,
+      "bytes": 662,
+      "sha256": "ede4d44d6343fe84f58c6b01c8d89bc3844a024c255c3a52cae6838e8a34738b",
+      "matches_local": true
+    },
+    {
+      "path": "script.js",
+      "http_status": 200,
+      "bytes": 80575,
+      "sha256": "c48d7e24ab809696bbb6673ff4e2a9de5570c57c39ea366bd1e1722fecbd74b4",
+      "matches_local": true
+    },
+    {
+      "path": "style.css",
+      "http_status": 200,
+      "bytes": 37353,
+      "sha256": "debd5836ca9442928d3ed5e6b5166d61cf5c0176d228c98fd750aea7cbc281aa",
+      "matches_local": true
+    },
+    {
+      "path": "engine.js",
+      "http_status": 200,
+      "bytes": 51836,
+      "sha256": "5ffa200c2f2e78088dcec6f3c7708ef62c140972d4b5e3e37d815b6a13439643",
+      "matches_local": true
+    },
+    {
+      "path": "manifest.webmanifest",
+      "http_status": 200,
+      "bytes": 437,
+      "sha256": "da25c0430408e8d2e0e3caaec210060dfdb63b1a1c30be30def2b63012c5d209",
+      "matches_local": true
+    },
+    {
+      "path": "sw.js",
+      "http_status": 200,
+      "bytes": 1416,
+      "sha256": "6db8edb6153a75c3c60eee88f6caff9a5de5d488635c3ae6983766ec4d68001c",
+      "matches_local": true
+    },
+    {
+      "path": "assets/Inter-OFL.txt",
+      "http_status": 200,
+      "bytes": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "matches_local": true
+    },
+    {
+      "path": "assets/icon.svg",
+      "http_status": 200,
+      "bytes": 478,
+      "sha256": "0b20f16d4dc8c7e6dc78f409db15256421a16000f0de99b1ff7c012f96fb972d",
+      "matches_local": true
+    },
+    {
+      "path": "assets/InterVariable.woff2",
+      "http_status": 200,
+      "bytes": 352240,
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+      "matches_local": true
+    }
+  ]
+}

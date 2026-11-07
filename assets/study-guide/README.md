@@ -2,7 +2,7 @@
 
 [Complete Study Guide PDF](BlueImpulse_Study_Guide.pdf) · [Editable Test Bank](BlueImpulse_Stage2_TestBank_V1.docx) · [Test Bank PDF](BlueImpulse_Stage2_TestBank_V1.pdf)
 
-The complete guide has 121 pages: the original 96-page teaching sequence followed by six guided missions, resource introductions, and explained answers for all 65 retained exercises. The separate Test Bank contains 24 True/False questions, 24 single-answer multiple-choice questions and six substantial open tasks, with four/four/one per chapter. Questions precede the explanatory answer key. The [Stage 2 submission package](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_StudyGuide_TestBank_V1.zip) includes the complete PDF, editable DOCX, optional PDF copy and runnable activity support.
+The complete guide has 123 pages: the original 96-page teaching sequence followed by six guided missions, resource introductions, and explained answers for all 65 retained exercises. The separate Test Bank contains 24 True/False questions, 24 single-answer multiple-choice questions and six substantial open tasks, with four/four/one per chapter. Questions precede the explanatory answer key. The [Stage 2 submission package](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_StudyGuide_TestBank_V1.zip) includes the complete PDF, editable DOCX, optional PDF copy and runnable activity support.
 
 | Chapter | Theme | Core PDF pages |
 | --- | --- | --- |
@@ -16,6 +16,8 @@ The complete guide has 121 pages: the original 96-page teaching sequence followe
 The active learning and feedback section begins on page 97. Bookmarks navigate every original topic and the new missions, resources and answers. All six missions provide a goal, preparation, steps, observations, reflection and feedback. Paper alternatives contain every required input and expected result; optional Python uses only the standard library. A fictional campus delivery rover, Pip, connects the examples. Its device identifier is `robot-7` in the packet demonstration.
 
 The original cover and all six chapter dividers are preserved as PDF pages without overlays. The original art's printed labels identify its cover on page 16 and dividers on pages 17–22. Existing window panels, diagrams and photographs retain the supplied artwork and font brief. The user-created `BlueImpulse_Study_Guide_compressed.pdf` has not been modified by this revision.
+
+**Interactive companion:** [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) · [guided experiment](../../content/supporting/ROVERLAB_Activity.md) · [source and offline setup](../../apps/roverlab/README.md). The complete guide includes the experiment and paper alternative.
 
 ## Source, review and remaining human evidence
 

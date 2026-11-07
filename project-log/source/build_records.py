@@ -389,8 +389,8 @@ def project_blocks():
     contributions = [
         ['Nazif', 'Direction of AI-assisted repository organization, Stage 2 draft slides, study guide, five tutorials, documents, and requested compliance revision.', 'Team review required', '1, 3, 4, 6, 7 Nov entries; 4cbc5cb, ab18e00, d5f7fc4, b40933c, 238cf9e, 14c6ed1, 5ebb2bb.'],
         ['Tian', 'Visual-concept uploads, Stage 2 slide outline, presentation-folder organization, task-list and AI-use note updates.', 'Team review required', '29 Oct / 1 / 3 Nov; 19c7a71, d481f0c, ed5576c, e0902bb, cfd8a53.'],
-        ['Edzel', 'Rover research, activity collection, and chapter scope revisions.', 'Team review required', '4 / 6 / 7 Nov; a19c547, 5a38faf, 52bf6d2, bc91f1e.'],
-        ['Safa', 'Six-chapter scope, learning outcomes, key terms, exercises, AI-use disclosures, and source chapter PDF uploads.', 'Team review required', '1–6 Nov entries; ec245e7, outcome/key-term commits, 9a645d0, chapter exercise/AI-note changes.'],
+        ['Edzel', 'Rover research, activity collection, chapter scope revisions, and four additional Chapter 3 Hardware topics in the finalization list.', 'Team review required', '4 / 6 / 7 Nov; a19c547, 5a38faf, 52bf6d2, bc91f1e, 8ab3108.'],
+        ['Safa', 'Six-chapter scope, learning outcomes, key terms, exercises, AI-use disclosures, source chapter PDF uploads, and a rover-game AI prompt request (no implemented game evidenced).', 'Team review required', '1–7 Nov entries; ec245e7, outcome/key-term commits, 9a645d0, chapter exercise/AI-note changes, 4b51f77.'],
         ['Danial', 'Rover research document uploaded under his name.', 'Team review required', '4 Nov; d4050c1 added ResearchRoverInfoDanial.docx. Further research process/verification is not supplied.'],
     ]
     roster = {a: f'{a} / {b}\n{c}' for a,b,c,_ in MEMBERS}

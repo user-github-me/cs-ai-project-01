@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081722">
+  <meta name="description" content="Build a robot, connect its network, train its reactions, and send it on a mission. A hands-on robotics learning lab.">
+  <title>ROVERLAB — Your ideas. In motion.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <script src="engine.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the lab</a>
+  <div id="app"></div>
+  <div id="announcements" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <dialog id="info-dialog" class="modal" aria-labelledby="dialog-title">
+    <div id="dialog-content"></div>
+    <form method="dialog"><button class="button primary" value="close">Got it <span aria-hidden="true">↗</span></button></form>
+  </dialog>
+  <dialog id="reset-dialog" class="modal" aria-labelledby="reset-title">
+    <span class="eyebrow">A fresh workbench</span><h2 id="reset-title">Start over?</h2>
+    <p id="reset-description">This clears the saved robot, training rules, and mission progress on this device.</p>
+    <div class="modal-actions"><button class="button secondary" data-action="cancel-reset">Keep my robot</button><button class="button danger" data-action="confirm-reset">Reset the lab</button></div>
+  </dialog>
+  <script src="offline.js" defer></script>
+</body>
+</html>

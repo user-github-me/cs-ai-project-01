@@ -40,6 +40,7 @@ The original guide source supplied the existing developed explanations. On 7 Nov
 - [Chapter 6: Strengths & Limitations](chapter-06/README.md)
 - [Curated resources and attribution](references.md)
 - [Activity setup and expected results](supporting/README.md)
+- [ROVERLAB interactive companion activity](supporting/ROVERLAB_Activity.md)
 - [Review status and evidence](REVIEW.md)
 
 ## Review status

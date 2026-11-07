@@ -4,7 +4,7 @@
 **Module:** Hardware, Networking and Behaviorist AI  
 **Snapshot date:** 7 November 2026 (UTC+8)  
 **Repository (supplementary):** https://github.com/user-github-me/cs-ai-project-01  
-**Historical repository baseline (HEAD before the uncommitted snapshot changes):** 5ebb2bbde8f403491f1f8015106721b39b05d3f2
+**Historical repository baseline (HEAD before the uncommitted snapshot changes):** f567ff9dd9710debad5cb9b6a43c4983bdb7fa6b
 
 This package includes the complete updated Markdown source and supporting assets, the full rendered content PDF and this report. The files contain uncommitted Stage 2 revisions made after the identified baseline; the SHA-256 manifest fixes the submitted snapshot independently of a later upload commit. GitHub links are supplementary; current access settings are recorded in the repository README. The supplied PDF and snapshot contain the required learning content directly.
 
@@ -52,14 +52,14 @@ The slides/videos adapt this foundation for their media; not every paragraph app
 The following actual commit history is reproduced so the report does not rely on a web link:
 
 ```text
+f567ff9 | 2026-11-07 | Complete Stage 2 teaching materials and deliver tutorial outputs
+8ab3108 | 2026-11-07 | Updating the Chapter 3 Sub Topic
+4b51f77 | 2026-11-07 | Create InteractiveGame_Prompt.md
 5ebb2bb | 2026-11-07 | feat: add printable tutorial scripts and teaching documents package
 bc91f1e | 2026-11-07 | Revised chapter 3 outline
 14c6ed1 | 2026-11-06 | chore: upload final presentation and record project deliverables
 238cf9e | 2026-11-06 | feat: add five Blue Impulse study-guide video tutorials
 52bf6d2 | 2026-11-06 | Create activities.md with multiple computer science activities
-b40933c | 2026-11-06 | feat: add six-chapter Blue Impulse study guide PDF
-9a645d0 | 2026-11-06 | Add files via upload
-7afde2c | 2026-11-06 | Updating the Chapter 3 Sub Topic
 ```
 
 The earlier study-guide and video commits demonstrate prior production. The current revision repairs the missing shared Markdown source and feedback. For example, content/chapter-03/draft.md previously contained “put your draft here la!!!!!”; it now develops thirteen hardware topics. The new pipeline checkpoint asks for five instructions in four ideal stages and explains 4 + 5 − 1 = 8 cycles. The original solutions file’s request for future answers is replaced by worked answers, including exact binary, image-size, Q-update and network-delay calculations.

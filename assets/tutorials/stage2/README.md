@@ -13,3 +13,7 @@
 Editable Markdown versions use the same filenames. All five lessons cite exact chapter numbers, names and subtopics. They include full explanations, demonstrations, practice and feedback. The single Video Guide includes every narration cue and section timestamp. The file inventory records each final MP4’s duration and size. [Subtitle files](subtitles/) and [runnable learning examples](supporting/README.md) accompany the outputs.
 
 Use the actual five MP4 files for submission and upload them individually, each below 250 MB. These documents support the videos and do not replace them. Independent teammate viewing and a beginner attempt remain pending unless authentic evidence is added to the project and personal logs.
+
+**Interactive practice:** [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) and follow the [guided activity](supporting/ROVERLAB_Activity.md). Build, connect and train a machine to apply the chapter concepts.
+
+**Record your own voice:** [Five clean narration scripts](recording-scripts/README.md) · [recording-script ZIP](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Video_Recording_Scripts.zip). Read the narration only; section labels and original timestamps are unspoken recording cues.

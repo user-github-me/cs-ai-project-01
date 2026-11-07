@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "pages": 121,
+  "pages": 123,
   "explained_answers": 65,
   "missions": 6,
   "unchanged_artwork_pages": [
@@ -17,5 +17,5 @@
   "exercise_pages": 89,
   "contents_links": 6,
   "minimum_prose_font_pt": 11.2,
-  "pdf_sha256": "08a786dfe9e267b042907f62b602913d86720f09746c9705348df2c81ea889b8"
+  "pdf_sha256": "c7643b0dbcc020e2c8e1706bb3cb980bd6f86e91e0898e5d834f10bace70cb92"
 }

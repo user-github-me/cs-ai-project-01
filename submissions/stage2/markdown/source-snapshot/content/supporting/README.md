@@ -11,3 +11,7 @@ python3 BlueImpulse_Demonstrations.py --topic network --speed 2
 ```
 
 The available topic values are `rl`, `hardware`, `network`, `networked-ai`, and `execution`. Output is JSON so a learner can compare exact intermediate states. `expected-results.json` records the default output; `modified-results.json` records the two changes above. The toy models are deliberately limited: no physical braking simulation, cryptographic authentication or real ISA is implemented. ACT-06 uses a supplied fictional design table and needs no code.
+
+## Interactive robot experiment
+
+[ROVERLAB activity](ROVERLAB_Activity.md) connects Chapters 2–5 through hardware assembly, networking, response training and mission playback. Play at https://roverlab-blue-impulse.vercel.app or use the activity’s paper alternative.

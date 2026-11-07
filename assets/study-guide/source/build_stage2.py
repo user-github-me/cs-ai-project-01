@@ -18,6 +18,7 @@ from reference_content import TITLES,GOALS,TERMS
 from stage2_learning import ANSWERS,CHECKS,MISSIONS,RESOURCES,CHAPTER_REFS
 from stage2_testbank import TF,MC,OE
 from stage2_documents import render_markdown
+from roverlab_activity import ACTIVITY as ROVERLAB_ACTIVITY
 
 ROOT=Path(__file__).resolve().parents[3]
 BASE=ROOT/'assets/study-guide'
@@ -79,6 +80,7 @@ The original guide source supplied the existing developed explanations. On 7 Nov
 '''+ '\n'.join(f'- [Chapter {c}: {TITLES[c]}](chapter-{c:02d}/README.md)' for c in range(1,7))+'''
 - [Curated resources and attribution](references.md)
 - [Activity setup and expected results](supporting/README.md)
+- [ROVERLAB interactive companion activity](supporting/ROVERLAB_Activity.md)
 - [Review status and evidence](REVIEW.md)
 
 ## Review status
@@ -138,7 +140,8 @@ def build_content():
   old=old.split(marker)[0].rstrip()
   write(ai,old+'\n\n'+marker+'\n\nNeogpt/Codex assisted with importing the already developed guide explanations into Markdown, adding application checkpoints and feedback, the chapter mission, and explained answers. The request was to follow rules/Stage2_All_Instructions.md. Evidence includes checked calculations and executable demonstrations plus the Stage 2 review report. This records AI-assisted production, not a claim of independent student understanding or human peer review. Full user-specific evidence is kept in project and personal logs.\n')
   all_sections.extend([draft,activity,terms,exercise,solutions])
- all_sections.append(resources)
+ all_sections.extend([ROVERLAB_ACTIVITY,resources])
+ write(CONTENT/'supporting/ROVERLAB_Activity.md',ROVERLAB_ACTIVITY)
  write(CONTENT/'BlueImpulse_Complete_Content_V2.md','\n\n'.join(all_sections))
  source=CONTENT/'supporting/BlueImpulse_Demonstrations.py'
  setup='''# Blue Impulse — Offline activity setup
@@ -155,6 +158,7 @@ python3 BlueImpulse_Demonstrations.py --topic network --speed 2
 
 The available topic values are `rl`, `hardware`, `network`, `networked-ai`, and `execution`. Output is JSON so a learner can compare exact intermediate states. `expected-results.json` records the default output; `modified-results.json` records the two changes above. The toy models are deliberately limited: no physical braking simulation, cryptographic authentication or real ISA is implemented. ACT-06 uses a supplied fictional design table and needs no code.
 '''
+ setup+='\n## Interactive robot experiment\n\n[ROVERLAB activity](ROVERLAB_Activity.md) connects Chapters 2–5 through hardware assembly, networking, response training and mission playback. Play at https://roverlab-blue-impulse.vercel.app or use the activity’s paper alternative.\n'
  write(CONTENT/'supporting/README.md',setup)
  out=subprocess.check_output([sys.executable,str(source),'--topic','all'],text=True)
  write(CONTENT/'supporting/expected-results.json',out)
@@ -243,6 +247,7 @@ The original six-chapter contents and bookmarks remain usable. Additional PDF bo
   s+=f'## Chapter {ch} — {TITLES[ch]}\n\n'
   for key,val in ANSWERS.items():
    if int(key.split('.')[0])==ch:s+=f'### Answer {key}\n\n{val}\n\n'
+ s+=ROVERLAB_ACTIVITY+'\n\n'
  s+='# Sources, access and revision notes\n\n'+resources.split('\n',1)[1]
  return s
 

@@ -4,16 +4,19 @@ A six-chapter learning module for the CS & AI course. Start with the chapter mat
 
 The repository is **public**, as requested for the professor’s submitted link. The current Stage 2 materials are listed below. Earlier presentation drafts and first-edition tutorials remain available as historical work.
 
+**Play [ROVERLAB: Build, Connect, Train](https://roverlab-blue-impulse.vercel.app)** — assemble a machine, connect its network, train its responses and test a mission. The game runs on Vercel's Hobby plan, with GitHub updates deploying automatically. [Game source and setup](https://github.com/user-github-me/cs-ai-project-01/blob/main/apps/roverlab/README.md) · [guided learning activity](content/supporting/ROVERLAB_Activity.md).
+
 ## Current Stage 2 materials
 
 | Material | Open here | Contents |
 | --- | --- | --- |
 | Complete Markdown | [Chapter index](content/README.md) · [full content](content/BlueImpulse_Complete_Content_V2.md) | Six chapters, 67 topics, worked examples, exercises and explained answers. |
-| Study guide | [Complete PDF](https://github.com/user-github-me/cs-ai-project-01/blob/main/assets/study-guide/BlueImpulse_Study_Guide.pdf) | 121 pages; original artwork and teaching sequence, guided missions and feedback. |
+| Study guide | [Complete PDF](https://github.com/user-github-me/cs-ai-project-01/blob/main/assets/study-guide/BlueImpulse_Study_Guide.pdf) | 123 pages; original artwork and teaching sequence, guided missions and feedback. |
 | Test Bank | [Editable Word](https://github.com/user-github-me/cs-ai-project-01/blob/main/assets/study-guide/BlueImpulse_Stage2_TestBank_V1.docx) · [PDF](https://github.com/user-github-me/cs-ai-project-01/blob/main/assets/study-guide/BlueImpulse_Stage2_TestBank_V1.pdf) | 24 True/False, 24 single-choice and six open-response questions, with explained answers. |
 | Teaching slides | [PPTX and supporting materials](https://github.com/user-github-me/cs-ai-project-01/blob/main/assets/presentations/stage2-teaching/README.md) | 63 editable slides across all six chapters, native presenter notes and 15 audience tasks. |
-| Tutorials | [Videos, PDFs and scripts](https://github.com/user-github-me/cs-ai-project-01/blob/main/assets/tutorials/stage2/README.md) | Five ten-minute MP4s at 1080p/60 fps, chapter/subtopic citations, narrated demonstrations, captions, tutorial PDFs and full scripts. |
+| Tutorials | [Videos, PDFs and scripts](https://github.com/user-github-me/cs-ai-project-01/blob/main/assets/tutorials/stage2/README.md) | Five ten-minute MP4s at 1080p/60 fps, chapter/subtopic citations, narrated demonstrations, captions, tutorial PDFs, full scripts and [clean recording copies](https://github.com/user-github-me/cs-ai-project-01/blob/main/assets/tutorials/stage2/recording-scripts/README.md). |
 | Runnable examples | [Python and checked outputs](content/supporting/README.md) | Q-learning, pipelines, network delay, message validation and a toy CPU. |
+| Interactive game | [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) · [source / ZIP / instructions](https://github.com/user-github-me/cs-ai-project-01/blob/main/apps/roverlab/README.md) | Three playable machines and missions, hardware/network/rule checks, animated playback, scoring, local saves and offline support. |
 | Project log | [Word](https://github.com/user-github-me/cs-ai-project-01/blob/main/project-log/BlueImpulse_Stage2_ProjectLog.docx) · [PDF](https://github.com/user-github-me/cs-ai-project-01/blob/main/project-log/BlueImpulse_Stage2_ProjectLog.pdf) | Dated Stage 2 work, meeting evidence, AI use and contribution records. |
 | Personal logs | [Individual Markdown](https://github.com/user-github-me/cs-ai-project-01/tree/main/Personal_logs/) · [combined Word](https://github.com/user-github-me/cs-ai-project-01/blob/main/private-submissions/stage2/BlueImpulse_Stage2_PersonalLogs.docx) · [combined PDF](https://github.com/user-github-me/cs-ai-project-01/blob/main/private-submissions/stage2/BlueImpulse_Stage2_PersonalLogs.pdf) | Authentic available entries; missing member writing is identified. |
 | Submission files | [Stage 2 index](https://github.com/user-github-me/cs-ai-project-01/blob/main/submissions/stage2/README.md) | Exact assignment filenames, downloadable packages and remaining human steps. |

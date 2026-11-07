@@ -1,0 +1,19 @@
+# Deploy only the ROVERLAB application. Course PDFs and videos stay on GitHub.
+/assets
+/content
+/deliverables
+/drafts
+/Personal_logs
+/private-submissions
+/project-log
+/public
+/rules
+/submissions
+/temp contents
+/videos
+/Learning and Development
+/README.md
+/task.md
+/apps/roverlab/tests
+/apps/roverlab/review
+/apps/roverlab/README.md

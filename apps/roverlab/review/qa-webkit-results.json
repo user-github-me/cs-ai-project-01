@@ -1,0 +1,90 @@
+{
+  "generatedAt": "2026-11-07T09:23:52.259Z",
+  "browser": "webkit",
+  "baseURL": "http://127.0.0.1:8792",
+  "outcomes": [
+    {
+      "name": "Desktop exploration: all seven stages, gating, feedback, playback controls",
+      "status": "passed",
+      "durationMs": 11581,
+      "details": {
+        "score": 100,
+        "status": "success"
+      }
+    },
+    {
+      "name": "Mobile service/search: complete touch-sized journey with no horizontal overflow",
+      "status": "passed",
+      "durationMs": 14161,
+      "details": {
+        "score": 100,
+        "status": "success"
+      }
+    },
+    {
+      "name": "Desktop industrial/monitor: complete mission with correct rules",
+      "status": "passed",
+      "durationMs": 7009,
+      "details": {
+        "score": 100,
+        "status": "success"
+      }
+    },
+    {
+      "name": "Wrong compatible rule changes monitoring outcome",
+      "status": "passed",
+      "durationMs": 4303,
+      "details": {
+        "correctScore": 100,
+        "wrongScore": 45,
+        "wrongStatus": "failed"
+      }
+    },
+    {
+      "name": "Keyboard focus and Enter activate game controls",
+      "status": "passed",
+      "durationMs": 245,
+      "details": {
+        "firstFocusedControl": "Skip to the lab"
+      }
+    },
+    {
+      "name": "Saved build survives reload, continues, and resets",
+      "status": "passed",
+      "durationMs": 764
+    },
+    {
+      "name": "Rule editing, ordering, deletion, and hardware changes preserve valid gates",
+      "status": "passed",
+      "durationMs": 1070
+    },
+    {
+      "name": "Start new mission confirms replacement while Continue preserves the saved build",
+      "status": "passed",
+      "durationMs": 735
+    },
+    {
+      "name": "Relay links connect distinct nodes and reject a self-link",
+      "status": "passed",
+      "durationMs": 2118
+    },
+    {
+      "name": "Direct file URL runs without network access",
+      "status": "passed",
+      "durationMs": 415
+    },
+    {
+      "name": "Hosted game reloads offline and restores progress from the local cache",
+      "status": "skipped",
+      "durationMs": 0,
+      "reason": "Not verified: this local WebKit runner reports an internal navigation error after setOffline, even with all assets cached. See webkit-offline-limitation.md."
+    },
+    {
+      "name": "No browser exceptions or failed app resource requests",
+      "status": "passed",
+      "durationMs": 0
+    }
+  ],
+  "browserErrors": [],
+  "failedRequests": []
+}

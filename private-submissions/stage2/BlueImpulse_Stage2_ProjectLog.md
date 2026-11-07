@@ -332,6 +332,58 @@ The five written tutorial PDFs and five complete script/teaching-outline PDFs we
 
 Output-only download packages are being assembled by the coordinating assistant. GitHub publication, release-asset verification and the course-channel submission receipt are not recorded as completed here. The next publishing entry must use observed GitHub results. Four missing members’ Stage 2 reflections, the team’s agreed contribution scores, teammate viewing, a beginner’s attempt, rehearsal and professor-access confirmation remain genuine human evidence gaps.
 
+### 7 November — latest teammate changes retained before publishing
+
+Before publishing, the coordinating assistant fetched origin/main and found two newer teammate commits. The inspected Git changes are attributed below to their recorded authors. They supplement the earlier evidence; Git authorship does not establish elapsed work, personal understanding, review approval or contribution scores.
+
+| Recorded commit and author | Actual addition |
+| --- | --- |
+| 4b51f77 — Safa Nadeem / 7 November 2026, 15:51:17 +08:00 | Created Learning and Development/InteractiveGame_Prompt.md: three lines containing a ChatGPT prompt request for an AI-assisted rover-building and training game. This is a planning prompt, not an implemented or tested game. |
+| 8ab3108 — EdzelHennessy / 7 November 2026, 16:06:39 +08:00 | Added four Chapter 3 Hardware topics to drafts/stage 2/Chapter_Finalization.md: memory/storage, processing devices/CPU architecture, parallel processing/computer systems, and logic circuits/Boolean algebra. |
+
+> Safa’s actual added heading: “This is the prompt I gave to ChatGPT to generate a prompt that I could give to AI so it can generate the game program.” The text asks for hardware assembly, networking, stimulus-based training toward a mission, and a final rover playback compatible with phones and computers. No generated prompt response, program, running game, test result or user trial is present in that three-line commit.
+
+> Edzel’s four added lines: “Computer Memory and Storage”; “Processing Devices and CPU Architecture”; “Parallel Processing and Computer Systems”; “Logic Circuits and Boolean Algebra”. These are topic-list additions, not four newly written full chapter explanations in that commit.
+
+The assistant checked the completed content/chapter-03/draft.md against the added scope. Memory: capacity versus speed and Keep data when power is off cover memory/storage; Processor instruction-set choices and Overlap work with a pipeline cover CPU architecture; One stream or many? covers Flynn’s classes, clusters and parallel systems; Reason with logic gates and Simplify a logic expression cover truth tables and Boolean identities. All four requested areas already have developed explanations and application feedback in the completed chapter.
+
+> The coordinating assistant reported a conflict-free rebase that retained both teammate changes. The independently inspected commit chain is f567ff9 → 8ab3108 → 4b51f77 → 5ebb2bb. The integration commit sits after both original teammate commits; their authorship remains unchanged. This records the local synchronized snapshot, not a confirmed push.
+
+Nazif’s existing log now records “Synchronising the team’s latest changes — 7 November 2026”; the assignment documents are refreshed from that actual entry. Publishing remains unconfirmed at this entry. Team-agreed contribution scores and missing student reflections remain pending.
+
+### 7 November — ROVERLAB implementation, study-guide integration and initial live deployment
+
+Nazif requested an actual seven-stage ROVERLAB game, maintained in a separate application folder, with GitHub source and automatic static deployment through his Vercel Hobby workspace. Neogpt/Codex implemented and checked the application. The earlier same-day statement that Safa’s three-line commit contained only a planning prompt remains accurate for that historical commit; the implementation recorded here is subsequent AI-assisted work directed by Nazif. No sole human authorship, elapsed human work, personal learning or teammate approval is inferred.
+
+| Implemented artifact | Observed behaviour or limit |
+| --- | --- |
+| apps/roverlab/public/ | Seven stages: machine choice, hardware assembly, networking, behaviour training, mission selection, playback and results. Static HTML/CSS/JavaScript, local assets and browser progress; no runtime account, backend or paid API is required. |
+| Hardware and network model | Exploration, service and industrial machines; component compatibility, processor/sensor/actuator prerequisites and simplified power limits. Actual network routes, required recipients, range and packet reliability affect the mission. |
+| Training and missions | Player-authored stimulus–response rules can be edited and prioritised. Feedback changes selection strength. Three deterministic missions can succeed, fail or finish partially according to the selected hardware, route and actions. This is not a neural network or full reinforcement-learning algorithm. |
+| Study-guide integration | The guide is now 123 pages with an optional ROVERLAB activity. The original 96-page core and supplied cover/divider artwork are preserved. Current learning PDFs and scripts link to the game. |
+
+> Observed engine verification: node --test apps/roverlab/tests/engine.test.cjs — 21 passed, 0 failed, 0 skipped. Recommended exploration, service and industrial configurations succeed in 42.8, 43.3 and 30 simulated seconds. Checks also cover collision/overheating failures, incomplete returns, a service report lost outside Wi-Fi range, feedback changing the outcome, power/sensor requirements, multi-hop routes and deterministic irregular-frame playback. Saved record: apps/roverlab/review/engine-report.md.
+
+Browser verification state at this entry: the initial Chromium run passed nine checks. An expanded final 11-check run, WebKit checks and hosted browser journeys were still pending and are not claimed complete here. These are automated and AI-assisted software checks. They do not establish a beginner trial, teacher review, student understanding, real-robot safety or course submission.
+
+| Hosting setting | Verified initial state |
+| --- | --- |
+| Project / workspace / plan | roverlab-blue-impulse / usergithubmes-projects / Hobby. Static project with no application backend or paid add-ons. |
+| Public URL | https://roverlab-blue-impulse.vercel.app — anonymous HTTP 200 verified after the initial manual deployment. |
+| Connected Git repository | user-github-me/cs-ai-project-01; production branch main. |
+| Static project directories | Root: apps/roverlab. Output: public. |
+| Pending publishing evidence | The new game revision has not yet been pushed; no Git-triggered deployment or new source-release publication is claimed at this entry. |
+
+> Initial manual Vercel deployment ID supplied by the coordinating assistant: dpl_6sayiXJZcLkMoDQAUMT4SWcAaUNE. The live URL and anonymous HTTP result verify that deployment only. Configuring the Git connection is not evidence that an automatic deployment has already run; a later entry must record the actual pushed commit, automatic deployment and release checks after they are observed.
+
+Nazif’s dated personal log now records his game request, the AI-assisted implementation, the exact current verification boundary, study-guide integration and initial hosting. The combined and Nazif-only Word/PDF records are regenerated from the preserved personal-log text and roster IDs. Historical entries and teammate attribution remain intact. Missing personal reflections, student/teacher review, team-agreed contribution scores and designated course-channel receipt remain human evidence gaps.
+
+### 7 November — clean scripts for human voice recording
+
+Nazif requested the five video scripts to record his own narration and return the audio for a new render. The assistant extracted 368 exact spoken cues across 60 sections into five clean narration PDFs and five TXT files, with clearly unspoken headings and reference timestamps. The recording pack includes guidance and a file manifest; PDF wording/order/bounds and ZIP CRC/member hashes passed. It is available in assets/tutorials/stage2/recording-scripts and BlueImpulse_Video_Recording_Scripts.zip.
+
+No replacement recording has been supplied yet. The existing five finished videos still use the disclosed synthetic narration. Future retiming, caption alignment and rendering with Nazif’s voice remain pending receipt of his recordings; they have not been marked complete.
+
 ## Follow-up and submission status
 
 | Owner | Required follow-up | Status / intended deadline |
@@ -349,6 +401,6 @@ The following rows report available work evidence, not a ranking. The rules requ
 | --- | --- | --- | --- |
 | Nazif / 纳齐夫 / 1820262003 | Direction of AI-assisted repository organization, Stage 2 draft slides, study guide, five tutorials, documents, and requested compliance revision. | Team review required | 1, 3, 4, 6, 7 Nov entries; 4cbc5cb, ab18e00, d5f7fc4, b40933c, 238cf9e, 14c6ed1, 5ebb2bb. |
 | Tian / 刘天美 / 1820262008 | Visual-concept uploads, Stage 2 slide outline, presentation-folder organization, task-list and AI-use note updates. | Team review required | 29 Oct / 1 / 3 Nov; 19c7a71, d481f0c, ed5576c, e0902bb, cfd8a53. |
-| Edzel / 黄金贤 / 1820262009 | Rover research, activity collection, and chapter scope revisions. | Team review required | 4 / 6 / 7 Nov; a19c547, 5a38faf, 52bf6d2, bc91f1e. |
-| Safa / 那第武 / 1820262016 | Six-chapter scope, learning outcomes, key terms, exercises, AI-use disclosures, and source chapter PDF uploads. | Team review required | 1–6 Nov entries; ec245e7, outcome/key-term commits, 9a645d0, chapter exercise/AI-note changes. |
+| Edzel / 黄金贤 / 1820262009 | Rover research, activity collection, chapter scope revisions, and four additional Chapter 3 Hardware topics in the finalization list. | Team review required | 4 / 6 / 7 Nov; a19c547, 5a38faf, 52bf6d2, bc91f1e, 8ab3108. |
+| Safa / 那第武 / 1820262016 | Six-chapter scope, learning outcomes, key terms, exercises, AI-use disclosures, source chapter PDF uploads, and a rover-game AI prompt request (no implemented game evidenced). | Team review required | 1–7 Nov entries; ec245e7, outcome/key-term commits, 9a645d0, chapter exercise/AI-note changes, 4b51f77. |
 | Danial / 达尼亚 / 1820262025 | Rover research document uploaded under his name. | Team review required | 4 Nov; d4050c1 added ResearchRoverInfoDanial.docx. Further research process/verification is not supplied. |

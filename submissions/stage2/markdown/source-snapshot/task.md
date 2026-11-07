@@ -54,8 +54,8 @@
 - [x] Keep `temp contents/` ignored; keep personal logs tracked and restore the repository to public at Nazif’s explicit instruction.
 - [x] Verify the public repository responds without authentication (HTTP 200).
 - [x] Complete six chapter folders with 67 topics, examples, activities and 65 explained exercise answers.
-- [x] Create the complete 116-page Markdown content PDF, report and source-snapshot ZIP.
-- [x] Extend the study guide to 121 pages while preserving the original cover and dividers.
+- [x] Create the complete 118-page Markdown content PDF, report and source-snapshot ZIP.
+- [x] Extend the study guide to 123 pages while preserving the original cover and dividers.
 - [x] Create the balanced 54-question Test Bank in editable Word and PDF.
 - [x] Create 63 editable teaching slides, presenter notes, offline demonstrations and the named ZIP.
 - [x] Prepare dated project and personal-log Word/PDF documents from authentic available evidence.
@@ -71,8 +71,20 @@
 - [x] Create five revised tutorial PDFs, five script/outline PDFs and the 42-page VideoGuide.
 - [x] Add measured final MP4 metadata to the VideoGuide.
 - [x] Verify final video sizes, all 180,000 decoded frames, copied audio and 489 captions.
-- [ ] Package the verified tutorial outputs and check public downloads.
+- [x] Package the verified tutorial outputs.
+- [ ] Check the published tutorial downloads.
 - [x] Keep video production projects and render code local; publish finished videos and requested learning materials.
+
+## ROVERLAB companion game
+
+- [x] Build the game in the separate `apps/roverlab/` folder with three machines and missions.
+- [x] Implement component assembly, power/compatibility, network links, rule training and readiness checks.
+- [x] Implement configuration-driven playback, reports, save/resume/reset and offline caching.
+- [x] Verify complete desktop/mobile player journeys, a wrong-rule failure and keyboard controls.
+- [x] Add a guided experiment and game links to the learning materials.
+- [x] Create the Vercel project in the Hobby workspace and connect the GitHub repository.
+- [ ] Verify the public deployment and a GitHub-triggered production update.
+- [ ] Publish the completed game source and downloadable ZIP.
 
 ## Evidence and submission by the team
 
