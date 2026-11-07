@@ -1,0 +1,164 @@
+/* Blue Impulse Study Guide V2 — page design.
+   Fonts (brief): headings outside boxes = DIN Condensed Bold; headings inside boxes = Smiley Sans; text = Avenir.
+   Box, folder and pill colours are sampled from "study guide art.pdf" pages 4-8 (see palette notes per chapter). */
+@font-face { font-family: "DINC"; src: url("file:///System/Library/Fonts/Supplemental/DIN Condensed Bold.ttf"); font-weight: 700; }
+@font-face { font-family: "Smiley"; src: url("../../fonts/SmileySans-Oblique.ttf"); }
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #555; }
+body { font-family: "Avenir", "Avenir Next", sans-serif; font-weight: 400; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+/* ---------------- page frame ---------------- */
+.page { position: relative; width: 794px; height: 1123px; overflow: hidden; page-break-after: always; break-after: page; color: var(--out); }
+.page .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.page .hdr { position: absolute; top: 15px; right: 40px; z-index: 3; font-size: 13px; letter-spacing: .02em; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.25); }
+.page .pn { position: absolute; left: 46px; bottom: 26px; z-index: 3; font-size: 22px; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.25); }
+.page .deco { position: absolute; z-index: 1; pointer-events: none; }
+.page .content { position: absolute; z-index: 2; left: 50px; right: 50px; top: 72px; bottom: 62px; display: flex; flex-direction: column; gap: 13px; }
+.page .content > * { flex: none; }
+
+/* ---------------- headings ---------------- */
+.sec { font-family: "Avenir"; font-weight: 800; font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--seclabel); margin-bottom: -10px; }
+.ph { font-family: "DINC"; font-weight: 700; font-size: 56px; line-height: .98; color: #fff; letter-spacing: .005em; text-shadow: 0 2px 14px var(--hshadow); position: relative; display: inline-block; align-self: flex-start; padding-right: 50px; }
+.ph.big { font-size: 74px; }
+.ph .spark { position: absolute; right: 0; top: -14px; width: 46px; height: 46px; filter: drop-shadow(0 0 6px rgba(255,255,255,.6)); }
+.h2 { font-family: "DINC"; font-weight: 700; font-size: 30px; line-height: 1; color: #fff; text-shadow: 0 2px 10px var(--hshadow); margin-bottom: -6px; }
+
+/* ---------------- text that sits directly on the background ---------------- */
+.out { font-size: 14.6px; line-height: 1.55; color: var(--out); text-shadow: var(--outshadow); }
+.out p + p { margin-top: 8px; }
+.out ul, .out ol { margin: 4px 0 0 20px; }
+.out li + li { margin-top: 3px; }
+.out strong { font-weight: 800; }
+.out a { color: inherit; }
+
+/* ---------------- window box (art pages 4-6) ---------------- */
+.win { position: relative; background: var(--wb); color: var(--wt); border-radius: 10px 10px 0 0;
+  box-shadow: 6px 6px 0 var(--ws1), 11px 11px 0 var(--ws2); margin-right: 11px; margin-bottom: 11px; }
+.win .tb { height: 30px; position: relative; }
+.win .tb i { position: absolute; top: 9px; width: 13px; height: 13px; border-radius: 50%; }
+.win .tb i:nth-child(1) { left: 11px; background: var(--d1); }
+.win .tb i:nth-child(2) { left: 31px; background: var(--d2); }
+.win .tb i:nth-child(3) { left: 51px; background: var(--d3); }
+.win .tb b { position: absolute; top: 11px; left: 74px; right: 24px; height: 10px; background: #fff; }
+.win .wb { padding: 2px 22px 17px; font-size: 13.6px; line-height: 1.5; }
+.win h3 { font-family: "Smiley"; font-weight: 400; font-size: 23px; line-height: 1.1; margin: 0 0 7px; color: var(--wh); }
+.win p + p, .win p + ul, .win ul + p, .win p + ol, .win ol + p, .win table + p, .win p + table, .win .flow + p, .win p + .flow { margin-top: 7px; }
+.win ul, .win ol { margin: 4px 0 0 19px; }
+.win li + li { margin-top: 2px; }
+.win strong { font-weight: 800; }
+.win em { font-style: italic; }
+.win code, .out code { font-family: "Menlo", monospace; font-size: .9em; background: rgba(255,255,255,.35); padding: 0 3px; border-radius: 3px; }
+.win.dark code { background: rgba(255,255,255,.16); }
+.win.small .wb { font-size: 12.8px; }
+.win a { color: inherit; }
+
+/* the two colour variants per chapter (light / dark), plus "alt" where the art gives a second light colour */
+.win.light { --wb: var(--L-body); --wt: var(--L-ink); --wh: var(--L-head); --ws1: var(--L-s1); --ws2: var(--L-s2); --d1: var(--L-d1); --d2: var(--L-d2); --d3: var(--L-d3); }
+.win.dark  { --wb: var(--D-body); --wt: #fff; --wh: #fff; --ws1: var(--D-s1); --ws2: var(--D-s2); --d1: var(--D-d1); --d2: var(--D-d2); --d3: var(--D-d3); }
+.win.alt   { --wb: var(--A-body); --wt: var(--A-ink); --wh: var(--A-head); --ws1: var(--A-s1); --ws2: var(--A-s2); --d1: var(--A-d1); --d2: var(--A-d2); --d3: var(--A-d3); }
+
+/* ---------------- tables (white borders between cells, per the revision notes) ---------------- */
+table { border-collapse: collapse; width: 100%; font-size: 12.6px; line-height: 1.38; margin-top: 4px; }
+th, td { border: 2px solid #fff; padding: 5px 8px; vertical-align: top; text-align: left; }
+th { background: var(--th); color: #fff; font-weight: 800; }
+.win.light td, .win.alt td { background: rgba(255,255,255,.38); }
+.win.dark td { background: rgba(255,255,255,.12); }
+.win.dark th { background: rgba(255,255,255,.26); }
+
+/* ---------------- folder image box (art page 7) ---------------- */
+.folder { position: relative; padding-top: 14px; margin-right: 11px; margin-bottom: 11px; }
+.folder .tab { position: absolute; top: 0; left: 0; width: 82px; height: 30px; background: var(--L-body); border-radius: 12px 12px 0 0; }
+.folder .fb { position: relative; background: var(--L-body); border-radius: 0 6px 0 0; padding: 12px 12px 10px; box-shadow: 6px 6px 0 var(--L-s1), 11px 11px 0 var(--L-s2); }
+.folder img { display: block; width: 100%; border-radius: 10px; object-fit: cover; }
+.folder figcaption { font-size: 11.6px; line-height: 1.35; color: var(--L-ink); margin-top: 7px; }
+.folder .lbl { position: absolute; top: 3px; left: 96px; font-size: 11px; color: var(--L-ink); opacity: .8; }
+.win .inimg { float: right; width: 44%; margin: 4px 0 8px 14px; }
+.win .inimg img { width: 100%; border-radius: 10px; display: block; }
+.win .inimg figcaption { font-size: 11px; line-height: 1.3; margin-top: 4px; opacity: .9; }
+.clear { clear: both; }
+
+/* ---------------- pills for diagrams (art page 8) ---------------- */
+.flow { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 8px; padding: 2px 11px 11px 0; }
+.pill { background: var(--N-body); color: var(--N-text); border-radius: 999px; padding: 9px 18px; font-size: 13.2px; font-weight: 800; line-height: 1.2; text-align: center;
+  box-shadow: 5px 5px 0 var(--N-s1), 9px 9px 0 var(--N-s2); }
+.pill small { display: block; font-weight: 400; font-size: 11.4px; margin-top: 2px; }
+.arr { color: var(--arrow); font-weight: 900; font-size: 20px; line-height: 1; }
+.stack { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 0 11px 11px 0; }
+.stack .pill { text-align: left; padding: 7px 20px; }
+.stack .down { height: 18px; display: flex; justify-content: center; align-items: center; color: var(--arrow); font-size: 18px; font-weight: 900; }
+.cycle { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 8px; padding: 2px 11px 4px 0; }
+.cycle-back { font-size: 12px; color: var(--out); opacity: .9; text-align: right; padding-right: 14px; }
+.win .flow, .win .stack, .win .cycle { margin-top: 6px; }
+.win.dark .arr, .win.dark .down { color: #fff; }
+.win .pill { box-shadow: 4px 4px 0 var(--N-s1), 7px 7px 0 var(--N-s2); }
+
+/* ---------------- special blocks ---------------- */
+.try { margin-top: auto; }
+.try h3::before { content: ""; }
+.video { display: flex; align-items: center; gap: 12px; background: var(--N-body); color: var(--N-text); border-radius: 999px; padding: 9px 22px 9px 10px; box-shadow: 5px 5px 0 var(--N-s1), 9px 9px 0 var(--N-s2); margin-right: 11px; margin-bottom: 9px; }
+.video .play { width: 30px; height: 30px; border-radius: 50%; background: #fff; flex: none; position: relative; }
+.video .play::after { content: ""; position: absolute; left: 11px; top: 8px; border-left: 12px solid var(--arrow); border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+.video b { font-weight: 800; font-size: 13.5px; display: block; }
+.video a { font-size: 11.6px; color: inherit; word-break: break-all; }
+.terms { columns: 2; column-gap: 24px; font-size: 12.2px; line-height: 1.4; }
+.terms div { break-inside: avoid; margin-bottom: 7px; }
+.terms b { font-weight: 800; }
+.goals ul { margin-left: 18px; }
+.goals li { margin-top: 3px; }
+.practice ol { margin-left: 0; padding-left: 26px; }
+.practice > .wb > ol > li { margin-top: 12px; padding-left: 4px; }
+.practice > .wb > ol > li:first-child { margin-top: 2px; }
+.practice ol ol { list-style: lower-alpha; margin-top: 4px; padding-left: 22px; }
+.practice ol ol ol { list-style: lower-roman; }
+.practice .marks { display: inline-block; white-space: nowrap; font-size: 11.5px; opacity: .75; margin-left: 8px; }
+.row { display: flex; gap: 22px; align-items: flex-start; }
+.row > * { flex: 1 1 0; min-width: 0; }
+.row > [style*="width"] { flex: 0 0 auto; }
+.spacer { flex: none; }
+.right { margin-left: auto !important; }
+.center { margin-left: auto !important; margin-right: auto !important; }
+.grow { flex: 1 1 auto !important; }
+
+/* ---------------- chapter palettes ---------------- */
+.ch0, .ch4 { --out: #fff; --outshadow: 0 1px 8px rgba(8,25,70,.35); --hshadow: rgba(10,30,90,.35); --seclabel: #FFD6E2;
+  --D-body: #216ABF; --D-d1: #2EB8FF; --D-d2: #D3E6F7; --D-d3: #ED4D82; --D-s1: #F081A6; --D-s2: #FCDCE6;
+  --L-body: rgba(214,232,249,.93); --L-ink: #163A73; --L-head: #1E5BAF; --L-d1: #2EB8FF; --L-d2: #FFFFFF; --L-d3: #ED4D82; --L-s1: #F294B4; --L-s2: #FCE1EA;
+  --A-body: rgba(214,232,249,.93); --A-ink: #163A73; --A-head: #1E5BAF; --A-d1: #2EB8FF; --A-d2: #FFFFFF; --A-d3: #ED4D82; --A-s1: #F294B4; --A-s2: #FCE1EA;
+  --N-body: #216ABF; --N-text: #fff; --N-s1: #F181A7; --N-s2: #FCDCE6; --arrow: #ED4D82; --th: #216ABF; }
+.ch1 { --out: #1F2A57; --outshadow: 0 1px 6px rgba(255,255,255,.35); --hshadow: rgba(40,50,110,.45); --seclabel: #2E3D7A;
+  --D-body: #466BAA; --D-d1: #F6F6F5; --D-d2: #BDE5F9; --D-d3: #D9C9E8; --D-s1: #B4A6C0; --D-s2: #EAE6EE;
+  --L-body: rgba(217,201,232,.95); --L-ink: #2A2F5E; --L-head: #466BAA; --L-d1: #F6F6F5; --L-d2: #BDE5F9; --L-d3: #466BAA; --L-s1: #B4A6C0; --L-s2: #EAE6EE;
+  --A-body: rgba(229,217,231,.95); --A-ink: #2A2F5E; --A-head: #466BAA; --A-d1: #466BAA; --A-d2: #DF8F9C; --A-d3: #F6F6F5; --A-s1: #B4A6C0; --A-s2: #EAE6EE;
+  --N-body: #D9C9E8; --N-text: #2A2F5E; --N-s1: #B4A6C0; --N-s2: #EAE6EE; --arrow: #466BAA; --th: #466BAA; }
+.ch2 { --out: #173B66; --outshadow: 0 1px 6px rgba(255,255,255,.4); --hshadow: rgba(30,80,140,.45); --seclabel: #1D4F8A;
+  --D-body: #356DB7; --D-d1: #F8EFBA; --D-d2: #FFFFFF; --D-d3: #C2DAE5; --D-s1: #6BCCFE; --D-s2: #D5F1FF;
+  --L-body: rgba(248,239,186,.96); --L-ink: #24426B; --L-head: #356DB7; --L-d1: #458CC4; --L-d2: #FFFFFF; --L-d3: #C2DAE5; --L-s1: #6BCCFE; --L-s2: #D5F1FF;
+  --A-body: rgba(194,218,229,.96); --A-ink: #24426B; --A-head: #356DB7; --A-d1: #458CC4; --A-d2: #F6F6F5; --A-d3: #F8EFBA; --A-s1: #5D7C9B; --A-s2: #D2DAE3;
+  --N-body: #F8EFBA; --N-text: #24426B; --N-s1: #6CCDFF; --N-s2: #D5F1FF; --arrow: #1976C9; --th: #356DB7; }
+.ch3 { --out: #0D3550; --outshadow: 0 1px 6px rgba(255,255,255,.35); --hshadow: rgba(10,60,100,.45); --seclabel: #0C5E86;
+  --D-body: #2CABBE; --D-d1: #BDE5F9; --D-d2: #77E0F5; --D-d3: #0C5E86; --D-s1: #5D7C9B; --D-s2: #D2DAE3;
+  --L-body: rgba(119,224,245,.95); --L-ink: #0B3B57; --L-head: #0C5E86; --L-d1: #BDE5F9; --L-d2: #2CABBE; --L-d3: #0C5E86; --L-s1: #528DA9; --L-s2: #CFDFE7;
+  --A-body: rgba(196,227,247,.95); --A-ink: #0B3B57; --A-head: #0C5E86; --A-d1: #2CABBE; --A-d2: #FFFFFF; --A-d3: #0C5E86; --A-s1: #528DA9; --A-s2: #CFDFE7;
+  --N-body: #4FCADD; --N-text: #0B3B57; --N-s1: #5D7C9B; --N-s2: #D2DAE3; --arrow: #0C5E86; --th: #168FCB; }
+.ch5 { --out: #fff; --outshadow: 0 1px 8px rgba(30,15,60,.4); --hshadow: rgba(40,20,80,.4); --seclabel: #F7C9A8;
+  --D-body: #483278; --D-d1: #D9C9E8; --D-d2: #8588B9; --D-d3: #ED4D82; --D-s1: #6E6C9F; --D-s2: #D6D6E4;
+  --L-body: rgba(217,201,232,.95); --L-ink: #35265E; --L-head: #483278; --L-d1: #483278; --L-d2: #8588B9; --L-d3: #ED4D82; --L-s1: #6E6C9F; --L-s2: #D6D6E4;
+  --A-body: rgba(214,201,229,.95); --A-ink: #35265E; --A-head: #483278; --A-d1: #483278; --A-d2: #EC9C6B; --A-d3: #DC5983; --A-s1: #6E6C9F; --A-s2: #D6D6E4;
+  --N-body: #463373; --N-text: #fff; --N-s1: #6E6C9F; --N-s2: #D6D6E4; --arrow: #DC5983; --th: #483278; }
+.ch6 { --out: #fff; --outshadow: 0 1px 8px rgba(0,0,0,.4); --hshadow: rgba(0,0,0,.4); --seclabel: #AFC6F0;
+  --D-body: #042D62; --D-d1: #483278; --D-d2: #545454; --D-d3: #F6F6F5; --D-s1: #4B4B4B; --D-s2: #CDCDCD;
+  --L-body: rgba(246,246,245,.96); --L-ink: #1B2340; --L-head: #042D62; --L-d1: #483278; --L-d2: #545454; --L-d3: #042D62; --L-s1: #4B4B4B; --L-s2: #CDCDCD;
+  --A-body: rgba(230,228,229,.96); --A-ink: #1B2340; --A-head: #215096; --A-d1: #215096; --A-d2: #545454; --A-d3: #042D62; --A-s1: #4B4B4B; --A-s2: #CDCDCD;
+  --N-body: #042D62; --N-text: #fff; --N-s1: #868686; --N-s2: #CDCDCD; --arrow: #8FB4F0; --th: #215096; }
+
+/* ---------------- contents (Content1.png) ---------------- */
+.toc .ph.big { font-size: 104px; margin-bottom: 2px; }
+.toc-ch { display: grid; grid-template-columns: 62px 1fr auto; column-gap: 12px; align-items: end; margin-top: 6px; }
+.toc-ch .n { font-family: "DINC"; font-size: 80px; line-height: .78; color: #fff; text-shadow: 0 2px 12px rgba(10,30,90,.35); }
+.toc-ch .t { font-family: "DINC"; font-size: 38px; line-height: 1; color: #fff; text-shadow: 0 2px 12px rgba(10,30,90,.35); padding-bottom: 2px; }
+.toc-ch .p { font-family: "DINC"; font-size: 30px; color: #fff; padding-bottom: 3px; }
+.toc-sub { margin: 6px 0 0 74px; font-size: 15px; line-height: 1.46; color: #fff; text-shadow: 0 1px 6px rgba(8,25,70,.35); }
+.toc-sub div { display: grid; grid-template-columns: 14px 1fr auto; column-gap: 8px; }
+.toc-sub div::before { content: "•"; }
+.toc-sub span:last-child { font-size: 14px; opacity: .92; }

@@ -1,0 +1,626 @@
+===== OLD GUIDE PAGE 51 =====
+NETWORKING
+NETWORKING
+NETWORKING
+NETWORKING
+4
+Afternoon
+
+
+===== OLD GUIDE PAGE 52 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Connect a room, a city, a world
+What a network provides
+A network connects devices so they can exchange data and share services, storage or hardware. A
+connected device is a node. Networks differ in scale, ownership, transmission media and
+management. Geographic size alone does not determine speed: a particular WAN link can be
+faster than a particular local wireless connection.
+Names describe the scope
+Network
+Typical scope
+PAN / WPAN
+A person’s nearby devices; a WPAN is wireless.
+LAN / WLAN
+A home, office or building; a WLAN uses wireless links.
+MAN
+A metropolitan area or several sites across a city.
+WAN
+Widely separated sites, regions or countries.
+A practical analogy
+A personal conversation resembles a PAN, a building intercom resembles a LAN, and an inter-city
+transport network resembles a WAN. Real networks can contain smaller networks inside them. The
+Internet is a global interconnection of networks, built from links and equipment operated by many
+organisations.
+PAUSE & TRY
+Contrast LANs and WANs in geographic scale, ownership and typical transmission conditions. Avoid
+assuming that scale alone fixes speed.
+Chapter 4 · Question 1a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+52
+
+
+===== OLD GUIDE PAGE 53 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Clients, servers & peers
+Two ways to organise services
+Client–server
+Peer-to-peer
+Clients request services from
+servers.
+Peers can both request and provide resources.
+Central management can simplify
+permissions and backup.
+Resources can be distributed among participating peers.
+Capacity and resilience require
+deliberate design.
+Coordination and consistent security can be harder.
+Servers are roles, not magic boxes
+A file server provides access to shared files. One physical machine can host several server
+programs, and a service can run across many machines. A server failure need not stop an entire
+network if replication or failover is provided. A small P2P setup can be inexpensive, while large
+P2P systems can also scale when their protocols are designed for it.
+A service request
+Client request
+Network
+Server response
+A peer may act as a client for one exchange and as a server for another. Describe the role being performed.
+PAUSE & TRY
+Compare the client–server and peer-to-peer models in resource management and scalability.
+Chapter 4 · Question 1b  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+53
+
+
+===== OLD GUIDE PAGE 54 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Where does the work happen?
+Thin and thick clients
+Thin client
+Thick client
+Relies heavily on remote
+applications or services.
+Performs substantial processing locally.
+Can simplify central
+administration.
+Can support more offline work.
+Network and server availability
+affect its main tasks.
+Needs suitable local hardware and maintenance.
+Public and private clouds
+A public cloud provides services using infrastructure operated by a provider for multiple
+customers. A private cloud is dedicated to one organisation and can be on-site or hosted
+elsewhere. Public cloud can reduce initial capital cost and offer flexible capacity; private cloud can
+provide greater direct control but requires resources to manage.
+Compare actual responsibilities
+Neither deployment is automatically secure. Consider access control, configuration, backups, data
+location, operational expertise and ongoing cost. Replication improves availability but is not a
+substitute for a recoverable backup. A thin client still performs some local processing, such as
+displaying an interface; “thin” does not mean it has no CPU.
+PAUSE & TRY
+What are the main trade-offs in cost, security responsibilities and control between a public cloud and a
+private cloud?
+Chapter 4 · Question 1d  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+54
+
+
+===== OLD GUIDE PAGE 55 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+The devices along a network path
+Recognise the job
+Device
+Primary role
+NIC
+Connects a host to a network interface.
+Switch / bridge
+Forwards frames between LAN ports or segments.
+Router
+Forwards IP packets between networks.
+Wireless access point
+Connects wireless stations to a network.
+Hub / repeater
+Repeats signals; a hub sends them to multiple ports.
+Gateway / modem
+Translates between systems / modulates and demodulates
+signals.
+Addresses serve different scopes
+An Ethernet switch learns which MAC addresses are reachable through which ports. A router uses
+IP routing information to select a next hop. MAC addresses can be changed or randomised; they
+are not always permanently fixed identifiers. A modem’s modulation depends on the medium,
+rather than being limited to old telephone lines.
+A switch is selective, not omniscient
+Known unicast frames can be sent to a selected port. Broadcasts and unknown destinations may
+be flooded within the relevant LAN. A router chooses a route using its routing table and policies;
+it does not always measure the least congested possible path for every packet.
+PAUSE & TRY
+Outline the four TCP/IP layers in order and give the core responsibility of each.
+Chapter 4 · Question 4a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+55
+
+
+===== OLD GUIDE PAGE 56 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Sharing a communication medium
+Choose a link for its conditions
+Twisted-pair copper reduces some electromagnetic interference by twisting paired conductors.
+Optical fibre carries light and supports high-capacity links. Wi-Fi uses shared radio channels;
+Bluetooth connects nearby devices using its own radio protocols. Range, speed and
+frequency-hopping behaviour depend on the version, equipment and environment, not one
+universal distance or channel count.
+Collision detection and avoidance
+CSMA/CD
+CSMA/CA
+Historically used on shared,
+half-duplex Ethernet.
+Used by Wi-Fi to manage shared radio access.
+Listen, transmit, detect collision,
+back off and retry.
+Listen, wait/back off, transmit and use acknowledgements.
+Modern switched full-duplex
+Ethernet has no collisions on the
+link.
+RTS/CTS is an optional mechanism, not a compulsory step every
+time.
+Use the conversation analogy
+At a busy table, people listen before speaking and pause if they talk over each other. Random
+backoff reduces repeated clashes. Avoidance reduces the chance of a collision; it cannot
+guarantee one never happens. Interference, hidden stations and missing acknowledgements can
+still cause retries and delay.
+PAUSE & TRY
+How do network systems handle simultaneous transmissions on a shared medium, using collision
+detection or collision avoidance?
+Chapter 4 · Question 2  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+56
+
+
+===== OLD GUIDE PAGE 57 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Internet, web & addresses
+The web is one Internet service
+The Internet carries many kinds of communication. The World Wide Web uses linked resources
+accessed through web protocols. Email and other services also use the Internet. IPv4 addresses
+have 32 bits; IPv6 addresses have 128 bits. An address helps identify a network interface for
+communication, while routing determines how packets are forwarded.
+Read a URL: https://example.org:443/course/notes?q=ai#part2
+Part
+Meaning
+https
+Scheme: how the resource is accessed.
+example.org / :443
+Host name / port number.
+/course/notes
+Path interpreted by the server.
+?q=ai
+Query supplied to the application.
+#part2
+Fragment identifying a location within the resource.
+A URL is not just an IP address
+The host name may be resolved through DNS. The path selects a resource on that host and need
+not correspond to a physical directory. Default ports can be omitted. A browser normally handles
+the fragment locally rather than sending it as part of an HTTP request.
+PAUSE & TRY
+Break down the parts of a URL, such as scheme, domain and path, and explain how it identifies a
+resource.
+Chapter 4 · Question 3a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+57
+
+
+===== OLD GUIDE PAGE 58 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Find a host with DNS
+Names are easier to remember
+The Domain Name System maps names to records, including records that provide IP addresses. A
+browser and operating system may already have a cached answer. If not, a recursive resolver can
+obtain an answer using the DNS hierarchy. Cached answers remain usable for their permitted
+lifetime, reducing repeat lookups.
+A simplified lookup
+Client
+Recursive resolver
+Root / TLD
+Authoritative server
+The resolver follows referrals, receives the requested record, caches it and returns the answer to the client.
+The lookup is only one step
+After resolving a host, a client still needs to establish suitable communication with the service.
+DNS does not deliver the web page itself, and it does not translate an entire URL, including its
+path, into an address. Failures in DNS, connectivity, transport, security negotiation or the
+application can each prevent a page from loading.
+PAUSE & TRY
+Describe the role of DNS when resolving the host name in a URL to an IP address.
+Chapter 4 · Question 3b  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+58
+
+
+===== OLD GUIDE PAGE 59 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Give each protocol layer a job
+The four-layer TCP/IP model
+Layer
+Responsibility
+Examples
+Application
+Application messages and services.
+HTTP, DNS, SMTP
+Transport
+Communication between
+application endpoints.
+TCP, UDP
+Internet
+IP addressing and routing between
+networks.
+IPv4, IPv6, ICMP
+Link
+Local network delivery and access to
+the medium.
+Ethernet, Wi-Fi
+Encapsulation is packaging
+Application data is carried inside transport data, which is carried inside IP packets, which are
+carried by link-layer frames. Each layer has its own fields and scope. A frame’s MAC addresses are
+not the same thing as an IP packet’s addresses; the frame can change at the next link while the
+packet continues its journey.
+Reliable ordering is a service choice
+TCP provides an ordered byte stream with reliability and flow/congestion control. UDP provides
+datagrams without those guarantees by itself. Applications may build additional mechanisms over
+UDP. Not every IP packet contains a sequence number that allows a router to rebuild a file:
+reconstruction belongs to the relevant endpoint protocol.
+PAUSE & TRY
+Outline the four TCP/IP layers in order and give the core responsibility of each.
+Chapter 4 · Question 4a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+59
+
+
+===== OLD GUIDE PAGE 60 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Web, files, email & sharing
+Identify the application protocol
+Protocol
+Purpose
+HTTP / HTTPS
+Web requests and responses; HTTPS protects HTTP using TLS.
+FTP
+Traditional file transfer; plain FTP is not encrypted.
+SMTP
+Submitting and relaying email.
+POP3
+Retrieving email, with retention behaviour set by the client.
+IMAP
+Accessing and synchronising server-held mailboxes.
+MIME
+Structures message content and attachments; not a transport
+protocol.
+A BitTorrent example
+BitTorrent divides a file into pieces that peers exchange. A swarm is the participating group. A
+seed has the complete content and can upload pieces. A downloading peer may upload too; the
+word “leecher” does not necessarily mean a malicious user. Trackers can help peers discover one
+another, while distributed discovery is also possible.
+Security is part of the choice
+A protocol name alone may not guarantee confidentiality or authenticity. Use protected versions
+or secure alternatives where appropriate. File-transfer tools such as SFTP use a different protocol
+from FTP. A networked application must also authenticate users and apply access controls at the
+service.
+PAUSE & TRY
+State the purpose of HTTP, FTP, POP3 and IMAP.
+Chapter 4 · Question 4b  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+60
+
+
+===== OLD GUIDE PAGE 61 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Reserve a path or share capacity?
+Circuit and packet switching
+Circuit switching
+Packet switching
+Reserves communication capacity
+for a session.
+Shares links by sending discrete packets.
+Can provide predictable allocated
+capacity.
+Uses capacity efficiently across variable traffic.
+Reservation can be idle during
+pauses.
+Queues, loss and variable delay need management.
+Packets move hop by hop
+A sender divides or packages data according to its protocols. Routers forward IP packets using
+destination information. Packets may follow different routes or arrive out of order, although this is
+not required for every transfer. Endpoint protocols handle the reliability or ordering their
+applications need.
+Apply the comparison carefully
+A reserved circuit still has propagation and processing delay; it does not mean zero latency or
+perfect reliability. Modern Internet video calls commonly use packet-switched networks, buffering,
+congestion control and other techniques. The source exercise about a preferred circuit assumes a
+scenario valuing reserved capacity; it is not a universal description of today’s video conferencing.
+PAUSE & TRY
+List two benefits and one drawback of packet switching.
+Chapter 4 · Question 5c  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+61
+
+
+===== OLD GUIDE PAGE 62 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Capacity is not responsiveness
+Four problems to distinguish
+Metric
+What it tells you
+Bandwidth / capacity
+How much data a link can carry per second.
+Throughput
+The successful transfer rate actually achieved.
+Latency
+How long a transfer or response takes.
+Jitter / loss
+Variation in delay / missing packets.
+Why a fast link can still feel slow
+A wide road carries many cars, but a long journey still takes time. Similarly, high bandwidth does
+not remove propagation delay, queueing or server processing. Retransmitting lost data can add
+delay; interference and contention can reduce throughput. Measure the entire task, not just the
+advertised link rate.
+Choose a response to the problem
+Compress or summarise data when capacity is limited. Reduce unnecessary round trips when
+latency matters. Use timestamps to identify stale measurements. Buffering can smooth jitter for
+playback, but adds delay. Redundancy and reconnect logic can improve resilience, while local
+control keeps a time-critical action from depending on an unavailable remote link.
+PAUSE & TRY
+Explain resource optimisation when balancing local hardware processing against network transmission
+costs.
+Chapter 6 · Question 5  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+62
+
+
+===== OLD GUIDE PAGE 63 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Protect data and its meaning
+Three different goals
+Goal
+Question
+Security
+Who can access, change or disrupt the system?
+Privacy
+How is personal data collected, used and shared?
+Integrity
+Has the data remained correct and unaltered?
+Validation versus verification
+Validation checks whether an input meets rules: range, type, length or a valid calendar date. It
+cannot prove a plausible value is true. Verification checks that data agrees with a source or
+expected copy, such as double entry or a transfer checksum. Checksums detect some errors; a
+cryptographic authentication mechanism is needed to resist deliberate modification by an
+attacker.
+Use layers of protection
+Strong authentication, least-privilege access, updates, backups and network filtering address
+different risks. Malware can damage or steal data; spyware monitors activity; phishing tricks a user;
+pharming redirects a user to an unintended destination. A firewall is not a substitute for secure
+software, and antivirus cannot promise to detect every threat.
+PAUSE & TRY
+Contrast validation, such as range and format checks, with verification, such as double entry and
+transfer checks, when protecting data quality.
+Chapter 4 · Question 6b  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+63
+
+
+===== OLD GUIDE PAGE 64 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Keep messages confidential
+From plaintext to ciphertext
+Encryption uses an algorithm and a key to transform readable plaintext into ciphertext. Correctly
+implemented cryptography can protect confidentiality, but key management and authentication
+remain essential. Encryption alone does not prove who sent a message or ensure that a device
+receiving it is trustworthy.
+Two approaches
+Symmetric
+Asymmetric
+Uses a shared secret key.
+Uses a related public/private key pair.
+Efficient for bulk data encryption.
+Supports mechanisms such as key establishment and signatures.
+Both parties must obtain the
+secret securely.
+The public key must be authenticated to its owner.
+Combine their strengths
+Secure protocols commonly use asymmetric mechanisms to authenticate or establish shared
+secrets, then symmetric authenticated encryption for application traffic. Keep private keys private.
+Do not invent an encryption scheme by substituting characters or treating a checksum as a secret;
+the design and implementation of cryptography require established protocols.
+PAUSE & TRY
+Compare symmetric and asymmetric cryptography in key management, typical performance and the
+handling of plaintext and ciphertext.
+Chapter 4 · Question 7a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+64
+
+
+===== OLD GUIDE PAGE 65 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Trust, signatures & certificates
+A signature protects authenticity and integrity
+A sender signs a message, usually through a hash-based construction, using a private signing key.
+A verifier checks the signature with the matching public key. A valid signature supports a claim
+about the key used and whether the signed content changed. It does not encrypt the message or
+prove that the message’s claims are true.
+A simplified verification path
+Message +
+signature
+Trusted public key
+Verify
+Accept or reject
+Signing is not generally “encryption in reverse”; the operations depend on the signature algorithm.
+Certificates and TLS
+A digital certificate binds an identity, such as a domain name, to a public key and is signed by an
+issuer. A client checks the trust chain, validity and expected name. TLS uses authentication and
+cryptography to protect communication, including HTTPS. SSL is obsolete and should not be
+deployed. A certificate can authenticate a domain without proving the site is honest in every other
+respect.
+PAUSE & TRY
+What are SSL and TLS, and where is TLS used to secure network traffic today?
+Chapter 4 · Question 7c  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+65
+
+
+===== OLD GUIDE PAGE 66 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Encryption modes & quantum ideas
+Blocks and streams
+A block cipher operates on fixed-size blocks; a mode specifies how it is used for longer messages.
+A stream cipher combines data with a generated keystream. Reusing a key/nonce combination
+incorrectly can undermine security. Authenticated encryption also detects unauthorised changes,
+rather than providing confidentiality alone.
+Understand CBC as a historical example
+Cipher block chaining combines a plaintext block with the previous ciphertext block before
+encryption, starting with an initialisation vector. Correct IV handling, padding and authentication
+matter. CBC is useful to understand, but a new application should use a vetted protocol and
+suitable authenticated-encryption construction rather than assembling its own cryptographic
+workflow.
+What quantum key distribution does
+QKD uses quantum signals and classical communication to establish key material. Its security
+analysis detects disturbance statistically under stated assumptions; it does not make every device
+or message unhackable. It requires specialised infrastructure and authenticated classical
+communication. Post-quantum cryptography is a different approach: algorithms designed to resist
+quantum attacks on conventional computers.
+PAUSE & TRY
+Compare symmetric and asymmetric cryptography in key management, typical performance and the
+handling of plaintext and ciphertext.
+Chapter 4 · Question 7a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+66
+
+
+===== OLD GUIDE PAGE 67 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Key terms · 04
+Build your vocabulary
+Term
+Meaning
+LAN / WAN / MAN / PAN
+Local / wide-area / metropolitan / personal network scopes.
+Client / server / peer
+Service requester / provider / participant that can perform both
+roles.
+Thin / thick client
+Relies more on remote resources / performs substantial local
+work.
+Switch / router
+Forwards local frames / forwards IP packets between networks.
+NIC / access point
+A network interface / a wireless network access device.
+Protocol / stack
+Communication rules / a layered organisation of those rules.
+Frame / IP packet
+A link-layer unit / a routed Internet-layer unit.
+URL / DNS
+A resource locator / a distributed name-resolution system.
+TCP / UDP
+Ordered reliable byte-stream transport / datagram transport.
+Use the terms in an explanation
+Choose two terms and connect them in a sentence about a working system. A definition is useful
+when it helps you explain a mechanism, compare alternatives or justify a decision. Return to the
+relevant teaching page if you cannot yet give an example.
+PAUSE & TRY
+Differentiate between data security, data privacy and data integrity.
+Chapter 4 · Question 6a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+67
+
+
+===== OLD GUIDE PAGE 68 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Key terms · 04
+Build your vocabulary
+Term
+Meaning
+Bandwidth / throughput
+Link capacity / achieved successful transfer rate.
+Latency / jitter
+Delay / variation in delay.
+Security / privacy / integrity
+Protection / appropriate personal-data use / accuracy and
+resistance to alteration.
+Validation / verification
+Checking rules / checking agreement with a source or expected
+copy.
+Plaintext / ciphertext
+Readable original data / encrypted data.
+Symmetric / asymmetric
+Shared-secret mechanisms / public–private key mechanisms.
+Signature / certificate
+An authenticity-and-integrity check / an issuer-signed
+identity-to-key binding.
+TLS / SSL
+Current secure-transport protocol family / obsolete predecessor.
+QKD
+Key establishment using quantum communication with specific
+assumptions and infrastructure.
+Use the terms in an explanation
+Choose two terms and connect them in a sentence about a working system. A definition is useful
+when it helps you explain a mechanism, compare alternatives or justify a decision. Return to the
+relevant teaching page if you cannot yet give an example.
+PAUSE & TRY
+Differentiate between data security, data privacy and data integrity.
+Chapter 4 · Question 6a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+68
+
+
+===== OLD GUIDE PAGE 69 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Practice · Chapter 4
+Try first, then check feedback
+Write your reasoning before opening the explained answers after the six chapter missions. Show
+units and intermediate steps for calculations. For comparisons, use the same criteria on both
+sides. Match the question number with the answer key in this complete edition.
+Chapter 4 · Question 1c
+Differentiate between a thick client and a thin client based on where processing and storage take
+place.
+Chapter 4 · Question 5a
+Explain what is meant by circuit switching.
+Chapter 4 · Question 5b
+Assume a video-conferencing scenario specifically requires reserved communication capacity.
+Explain why circuit switching could be preferred in that scenario. This is the source question’s
+assumed context, not a claim that modern Internet video calls generally use circuits.
+PAUSE & TRY
+Differentiate between data security, data privacy and data integrity.
+Chapter 4 · Question 6a  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+69
+
+
+===== OLD GUIDE PAGE 70 =====
+BLUE IMPULSE  /  STUDY GUIDE
+AFTERNOON  ·  Networking
+Practice · Chapter 4
+Try first, then check feedback
+Write your reasoning before opening the explained answers after the six chapter missions. Show
+units and intermediate steps for calculations. For comparisons, use the same criteria on both
+sides. Match the question number with the answer key in this complete edition.
+Chapter 4 · Question 6c
+Name three mechanisms used to protect computer systems against threats.
+PAUSE & TRY
+Explain how a private signing key and matching public verification key support a digital signature that
+checks message origin and integrity. Distinguish signing from encryption.
+Chapter 4 · Question 7b  ·  Adapted from GitHub exercises
+How machines sense, connect, and act
+70

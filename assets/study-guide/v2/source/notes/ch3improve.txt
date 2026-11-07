@@ -1,0 +1,16 @@
+Chapter 3: Hardware
+
+
+Overall, we need the subtopics in this chapter clearly separated: 
+
+Label and number each subtopic like 3.1, 3.2, etc etc. The subtopics mentioned in this picture need to be implemented in this exact order. By reading this chapter one should clearly understand that there is a structure to it, not just random cheesy corny heading thrown around. 
+ We also need to ensure that while the chapter should NOT be wordy, and redundant at all, it should not be just random headings thrown together. It should implement the structure mentioned above, and provide explanantions, for each topic in detail, which also not being redundant. Concise and to the point, while still having a good explanation. 
+ Move key terms to the beginning of the chapter, and altogether, not seprated 
+
+Page 35, keep it all in a text that elaborates the idea behind hardware in a computer. Include the windows style text boxes as well. Also keep the pause and try box
+On the next page talk about input and output hardware. Mention key types of input and output hardware, examples like headphones, speakers, keyboards etc. Include pictures where possible. Keep the heading of this part “Input and Output”. Take up as many pages as necessary, don’t limit to just one page. 
+From the next page talk about storage of data, continue talking about storage, bring up Primary and Secondary memory, and elaborate on its types. Have a not redundant, but explanatory explanation. Include a detailed explanation of the storage types and The use of RAM, ROM, SRAM and DRAM in a range of devices, Differences between RAM, ROM, SRAM, DRAM, PROM and EPROM. Make the heading of this section “Computer Memory and Storage”, and include small, easy to comprehend sections of text with subsequent mini headings. 
+The text topic should have the heading Processing Devices and CPU Architecture, and this section should explain and elaborate the inside of a CPU, mention in detail the computer registers, MAR, PC, MDR etc, and the directional buses between them in a beginner friendly manner. 
+Next it should carefully explain The difference between RISC and CISC processors, The importance of pipelining and registers in RISC processors, SISD, SIMD, MISD, MIMD basic computer architecture, Characteristics of massively parallel computers, interrupt handling on CISC and RISC computers, then it should talk about massively parallel computers and parallel processing. Also talk about pipelining and use the laundry analogy. Include a diagram easy to understand. Main heading of this section should be “Parallel Processing & Computer Systems”
+This next section should be named “Logic Circuits and Boolean Algebra”, where you introduce in steps, what each logic gate does, and then cohesively talk about logic circuits, move on to Boolean algebra and truth tables. The key is to carefully talk with some explanation about each point. Include a worked example for a truth table, to walk the reader through the process. 
+Now discuss How hardware enables AI. Make short separated text sections and a pause and try. 

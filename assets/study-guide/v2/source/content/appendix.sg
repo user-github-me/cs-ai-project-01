@@ -1,0 +1,110 @@
+@page! RoverLab
+@section Appendix · RoverLab: Build, Connect, Train
+@label Appendix · Our game
+@plane none
+
+**RoverLab** is the module's interactive game. You build a small machine from real-world parts, connect it to a network, teach it how to respond to what it senses, and send it on a mission. A first experiment takes about **5–10 minutes**, needs no experience, and runs in any modern browser — on a computer, tablet or phone.
+
+@image roverlab-home.jpg w=84 center | The RoverLab start screen. Choose **Start new mission** to open your workbench.
+
+@row
+@box dark | Play it now
+Open **[roverlab-blue-impulse.vercel.app](https://roverlab-blue-impulse.vercel.app)** or scan the code. Your progress is saved in your browser, and after the first visit the game keeps working offline.
+
+The complete source can also be downloaded from the project's GitHub page and played without an internet connection.
+@end
+@image qr-roverlab.png w=30 | Scan to play
+@endrow
+
+@page Three machines, three missions
+@label Appendix · Our game
+@plane none
+
+RoverLab is one game with three machines. Each machine has its own mission, so the same ideas — sensing, connecting and acting — are tested in three different situations.
+
+@box light | Choose your machine
+| Machine | Mission | What it must do |
+|---|---|---|
+| **Exploration rover** | Explore | Cross rough terrain, avoid obstacles, take a reading at the research site, send it back and return home. |
+| **Service robot** | Search | Find people, move safely around them, report them, and return before the battery runs low. |
+| **Industrial machine** | Monitor | Watch a worksite's temperature, stop and report when it gets too hot, and restart when it is safe. |
+@end
+
+@image roverlab-machine.jpg w=60 center | Step 1 of 7: every experiment starts by choosing a machine.
+
+@box alt | The seven steps of an experiment
+@flow 1 Machine > 2 Hardware > 3 Network > 4 Training > 5 Mission > 6 Simulation > 7 Results
+You can return to any earlier step, change one decision and run the mission again to see what difference it makes.
+@end
+
+@page Build and connect
+@label Appendix · Our game
+@plane none
+
+@row
+@image roverlab-hardware.jpg w=56 | Step 2 — Hardware: add parts from the component library; the pre-flight check says when the build is ready.
+@box dark | Build · Chapter 3
+Every part has a job. **Sensors** detect the world, the **processor** chooses a response, **motors** carry it out and the **battery** limits how much you can add. Inspect a part to read what it does; remove it and watch which abilities disappear.
+@end
+@endrow
+
+@row
+@box light | Connect · Chapter 4
+Pick a communication module — Wi-Fi, Bluetooth, radio, Ethernet or cellular — link your robot to a node such as the base station, then **test the network**. A link that works at the base can still fail far away in the field: range matters.
+@end
+@image roverlab-network.jpg w=56 | Step 3 — Network: choose a module, connect two nodes and test the link.
+@endrow
+
+@box alt w=84 right | Why the order matters
+Hardware comes first because a robot cannot sense what it has no sensor for, and cannot report what it has no network for. The game checks each step before it lets you continue.
+@end
+
+@page Train, run and read the results
+@label Appendix · Our game
+@plane none
+
+@row
+@image roverlab-training.jpg w=51 | Step 4 — Training: write IF–THEN rules, test a stimulus and reward a useful response.
+@box dark | Train · Chapter 2
+Write at least three **IF stimulus → THEN response** rules. Test a stimulus and give feedback: **useful response** strengthens the association, **needs work** weakens it. Stronger rules win.
+@end
+@endrow
+
+@row
+@box light | Run · Chapter 5
+Launch the mission and watch it play out: pause, step, restart or speed up. The **event log** traces each sensor reading to the rule, action and message it caused.
+@end
+@image roverlab-simulation.jpg w=51 | Step 6 — Simulation: your robot out in the world.
+@endrow
+
+@row
+@image roverlab-results.jpg w=51 | Step 7 — Results: four scores and the evidence behind them.
+@box alt | Reflect · Chapter 6
+The report scores **hardware, network, behaviour and mission completion** and explains each one. A high score in a simplified world is a good start — not proof that a real robot would be safe.
+@end
+@endrow
+
+@page RoverLab and this guide
+@label Appendix · Our game
+@plane climb br
+
+@box light | Learning connections
+| Chapter | What to investigate in RoverLab |
+|---|---|
+| 2 · Behaviorism & Behaviorist AI | Stimulus–response associations; feedback changes how strongly competing rules are preferred. |
+| 3 · Hardware | Sensors, processors, memory, power and actuators each have a different job. |
+| 4 · Networking | Endpoints, routes, range and what happens when communication fails. |
+| 5 · Applications | Readiness checks, practical constraints and how a whole system fits together. |
+| 6 · Strengths & Limitations | Why success in a simplified simulation does not prove real-world safety. |
+@end
+
+@box dark w=90 | An experiment to try
+1. Build the exploration rover with the starter parts and complete the mission.
+2. Remove one sensor and run the mission again. Which objective failed, and why?
+3. Change to a short-range network module. Does the reading still reach the base?
+4. Swap the order of two rules. Which situations now produce a different action?
+@end
+
+@box alt w=86 right | What the game is — and is not
+RoverLab is a **teaching model**. You write the rules, and feedback only changes how strongly each rule is preferred — it is not a neural network or a full reinforcement-learning algorithm. Power, range and timing values are simplified, and every mission is deterministic, so the same set-up always gives the same result. Change one thing at a time and compare.
+@end

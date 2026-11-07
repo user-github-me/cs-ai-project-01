@@ -1,0 +1,732 @@
+@page Learning goals
+@label Chapter 5 · Before you begin
+@plane none
+
+In the first four chapters you met the module's three technologies one at a time: hardware that senses and acts, networks that carry data, and behaviourist AI that learns from feedback. In real life they almost always work together. This chapter follows them into homes, hospitals, roads, factories and classrooms, shows how they combine into one working system, and looks at what can go wrong when they do.
+
+@goals light | Learning goals
+You will:
+
+- Discover how hardware, networks and behaviourist AI are used in real-world applications
+- Understand how physical devices, communication systems and intelligent algorithms work together
+- Explain how AI systems respond to feedback and adapt their behaviour to achieve specific goals
+- Recognise the opportunities and challenges of integrating these technologies into everyday applications
+@end
+
+@box dark | Your route through the chapter
+| Subtopic | The question it answers |
+|---|---|
+| 5.1 Applications of Hardware, Networks and Behaviorist AI in Real-Life Situations | How do the three technologies work together as one system, and how fast must it respond? |
+| 5.2 Smart Homes | How do connected devices sense, automate and learn at home? |
+| 5.3 Healthcare | How do wearables and intelligent systems watch over patients? |
+| 5.4 Transportation | How do traffic systems and vehicles sense, connect and drive themselves? |
+| 5.5 Industry & Manufacturing | How do robots and smart factories work, and how can a robot learn from rewards? |
+| 5.6 Education | How do smart devices and adaptive systems help people learn? |
+| 5.7 Conclusion | How do the three technologies shape everyday life and future innovation? |
+@end
+
+
+
+@page Key terms
+@label Chapter 5 · Before you begin
+@plane none
+
+@terms light | Key terms
+Smart system: A system that combines hardware, networks and intelligent software to perform tasks: sensing, deciding and acting with little human help.
+Sensor: A device that measures a physical quantity, such as temperature, light or movement, and turns it into a signal a computer can process.
+Actuator: A device that turns an electrical signal into physical action, e.g. a motor turning, a valve opening or a heater switching on.
+Internet of Things (IoT): Everyday objects fitted with sensors and network connections so that they can share data and be controlled remotely.
+Feedback loop: A cycle in which the result of an action is measured and used to choose the next action.
+Behaviourist AI: An approach to AI in which behaviour is shaped by interaction with the environment, through fixed stimulus–response rules or by learning from rewards and penalties.
+Reactive control: Behaviour produced by fixed stimulus–response rules that do not change with experience.
+Reinforcement learning (RL): Learning by trial and error: an agent tries actions and learns which ones earn the most reward over time.
+Reward: A positive feedback score telling an agent that an action had a good result.
+Penalty: A negative reward telling an agent that an action had a bad result.
+Policy: The strategy an agent uses to choose an action in each situation (state).
+Real-time processing: Processing data immediately or with very little delay, so that the result arrives before a strict deadline.
+Batch processing: Collecting data and processing it all together later, when a delay causes no harm.
+Latency: The delay between an event, or a message being sent, and the response; usually measured in milliseconds (ms).
+Edge computing: Processing data on or near the device that collected it, rather than on a distant server.
+Cloud computing: Storing and processing data on remote servers reached over the internet.
+Automation: The use of technology to perform tasks with minimal human involvement.
+Wearable device: A small computer worn on the body, such as a smartwatch, that uses sensors to track activity and health.
+Remote patient monitoring: Collecting a patient's health readings at home and sending them over a network for doctors and nurses to check.
+Connected vehicle: A vehicle that exchanges data with other vehicles (V2V) and with roadside equipment such as traffic lights (V2I).
+Autonomous vehicle: A vehicle that uses sensors, onboard computers and actuators to drive itself with little or no human input.
+Predictive maintenance: Using sensor data to predict when a machine is likely to fail, so that it can be repaired before it breaks.
+Smart factory: A factory whose machines, robots and sensors are networked so that production can be monitored and adjusted automatically.
+Cobot: A collaborative robot designed to work safely alongside people.
+Adaptive learning: Educational software that changes the difficulty and content for each learner based on their answers.
+Human-AI interaction (HAI): The ways humans communicate and interact with AI-powered systems.
+Black box: An AI system whose internal decision-making cannot easily be understood, even by its developers.
+Ethical AI: The development and use of AI in ways that are fair, responsible and transparent.
+Smart city: A city that uses connected sensors, networks and AI to manage services such as traffic, energy, water and waste.
+@end
+
+
+
+@page Where the three technologies meet
+@section 5.1 Applications of Hardware, Networks and Behaviorist AI in Real-Life Situations
+
+In Chapters 1–4 you studied hardware, networks and behaviourist AI separately, but in the real world you rarely meet them alone. Think about a robot vacuum cleaner. Its bump and cliff sensors detect obstacles and stairs (hardware). It reports its progress to an app over Wi-Fi (network). Its software chooses what to do when it hits a chair leg (behaviourist AI), and its wheel motors carry out that choice (hardware again). A machine that combines the three technologies in this way is called a **smart system**.
+
+@box light w=90 | What makes a system "smart"?
+A **smart system** combines hardware, networks and intelligent software so that a machine can sense its surroundings, share information, decide what to do and act, often within milliseconds and with little or no human help. Thermostats, watches, cars, factories and whole cities all contain smart systems, and every one has the same four parts:
+
+- **Sensors** measure the physical world: temperature, light, movement, distance.
+- A **network** carries readings to wherever the deciding happens, and carries commands back.
+- A **processor** running software or AI decides what to do.
+- **Actuators** turn the decision into physical action: a motor turns, a valve opens.
+@end
+
+@box dark w=94 right | Analogy: a smart system works like a body
+<div>
+<svg viewBox="0 0 620 172" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Avenir, Avenir Next, sans-serif">
+<path d="M44 36 Q80 6 116 36 Q80 66 44 36 Z" fill="#fff"/>
+<circle cx="80" cy="36" r="12" fill="#ED4D82"/>
+<circle cx="80" cy="36" r="5.5" fill="#35265E"/>
+<circle cx="84.5" cy="31.5" r="2.6" fill="#fff"/>
+<path d="M197 36 C209 16 221 56 233 36 C245 16 257 56 269 36" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+<path d="M233 36 L246 58 M221 45 L212 60" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<circle cx="197" cy="36" r="6.5" fill="#EC9C6B"/>
+<circle cx="269" cy="36" r="6.5" fill="#EC9C6B"/>
+<path d="M362 50 C350 49 348 32 360 29 C358 16 374 10 384 18 C392 9 410 13 410 26 C422 28 424 46 412 49 C410 60 392 63 386 55 C378 63 364 60 362 50 Z" fill="#D9C9E8" stroke="#fff" stroke-width="2.5"/>
+<path d="M386 19 C379 30 393 40 386 55 M364 37 C371 31 377 41 384 36 M392 31 C399 26 404 36 410 31" fill="none" stroke="#483278" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M506 60 H550 L557 26" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="527" cy="49" rx="19" ry="13" fill="#fff"/>
+<path d="M515 51 Q526 41 538 49" fill="none" stroke="#483278" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="546" y="6" width="23" height="20" rx="8" fill="#fff"/>
+<path d="M552 12 H563 M552 18 H563" stroke="#483278" stroke-width="1.8" stroke-linecap="round"/>
+<g font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle">
+<text x="80" y="86">Eyes, ears, skin</text>
+<text x="233" y="86">Nerves</text>
+<text x="386" y="86">Brain</text>
+<text x="539" y="86">Muscles</text>
+</g>
+<g fill="none" stroke="#EC9C6B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M80 93 V103 M75 98 L80 103 L85 98"/>
+<path d="M233 93 V103 M228 98 L233 103 L238 98"/>
+<path d="M386 93 V103 M381 98 L386 103 L391 98"/>
+<path d="M539 93 V103 M534 98 L539 103 L544 98"/>
+</g>
+<g fill="#D9C9E8">
+<rect x="15" y="109" width="130" height="30" rx="15"/>
+<rect x="168" y="109" width="130" height="30" rx="15"/>
+<rect x="321" y="109" width="130" height="30" rx="15"/>
+<rect x="474" y="109" width="130" height="30" rx="15"/>
+</g>
+<g font-size="13.5" font-weight="800" fill="#35265E" text-anchor="middle">
+<text x="80" y="129">Sensors</text>
+<text x="233" y="129">Network</text>
+<text x="386" y="129">AI processor</text>
+<text x="539" y="129">Actuators</text>
+</g>
+<g fill="none" stroke="#ED4D82" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M149 124 H163 M158 119 L163 124 L158 129"/>
+<path d="M302 124 H316 M311 119 L316 124 L311 129"/>
+<path d="M455 124 H469 M464 119 L469 124 L464 129"/>
+</g>
+<g font-size="11.5" fill="#fff" text-anchor="middle">
+<text x="80" y="160">camera, thermometer</text>
+<text x="233" y="160">Wi-Fi, 5G, cables</text>
+<text x="386" y="160">chooses the action</text>
+<text x="539" y="160">motors, valves, heaters</text>
+</g>
+</svg>
+</div>
+
+Like a body, a smart system senses, passes signals along, decides and moves. The analogy describes the *roles* only: the machine does not think or feel like a person.
+@end
+
+@try
+Choose one electronic device in your home, such as a smart thermostat, a robot vacuum cleaner or a smartphone. Identify a) the sensors it uses to gather real-world data, b) how it communicates across a network, c) the actuator or output action it performs.
+@end
+
+
+
+@page Sense, connect, decide, act
+
+To see the four parts working together, follow one example from start to finish. On a large farm, watering on a fixed timer wastes water on wet days and leaves crops thirsty on hot ones. A smart irrigation system waters each zone only when it needs it.
+
+@box light | One trip around the loop on a smart farm
+| Stage | What happens |
+|---|---|
+| 1 · Sense | soil-moisture **sensors** measure how wet the ground is in every zone |
+| 2 · Connect | a long-range, low-power **network** (LoRaWAN) carries the readings to the farm's computer |
+| 3 · Decide | **software or AI** combines the readings with the forecast to decide each zone's water |
+| 4 · Act | solenoid valves (**actuators**) open Zone A's drip lines for 12 minutes; Zone B stays closed |
+@end
+
+@cycle Sense > Connect > Decide > Act
+
+Acting changes the environment, so tomorrow's readings show whether 12 minutes was the right amount, and the cycle repeats. A cycle in which the result of each action is measured and used to choose the next one is called a **feedback loop**. The *decide* step can work in two quite different ways:
+
+@row
+@box alt | A fixed rule
+A programmer writes: *if moisture is below 30%, open the valve for 10 minutes.* The rule is simple, predictable and easy to check, but it waters even when rain is forecast, and it never improves.
+@end
+@box alt | A learned policy
+A **reward** for healthy crops and a small **penalty** for every litre used teach it, over many weeks, to grow the same harvest with less water. It needs data and testing before it can be trusted.
+@end
+@endrow
+
+Being connected does not make a system learn: it only *learns* when feedback about its results changes what it does next time. A fixed rule is **reactive control**; a policy improved by rewards and penalties is **reinforcement learning** (Chapter 2).
+
+@try
+For the smart farm, give one advantage of a learned watering policy over a fixed rule, and one reason a farmer might still prefer the fixed rule.
+@end
+
+
+
+@page Deciding in time
+
+Some computer jobs can wait. A bank can work out every customer's monthly statement overnight in one large batch, and nobody is harmed if it takes an hour: this is **batch processing**. A smart system that controls something physical is different, because its answer is only useful if it arrives in time. **Real-time processing** means processing data immediately, or within a strict time limit called a **deadline**. Real-time does not simply mean "fast": it means *fast enough, every time*.
+
+@box dark | How strict is the deadline?
+| Type | If the deadline is missed … | Examples |
+|---|---|---|
+| Hard real-time | the system fails; people or equipment may be harmed | car airbag, anti-lock brakes |
+| Soft real-time | quality drops, but nothing is damaged | video call, online game |
+| Not real-time (batch) | the result simply arrives later | bank statements, overnight back-ups |
+@end
+
+Every stage of the feedback loop takes time: the sensor must measure, the network must carry the data, the processor must compute and the actuator must move. The delay added by the network is called **latency**. It is usually measured in milliseconds (ms); one millisecond is a thousandth of a second.
+
+@box light | Worked example: adding up the delays
+A safety system must stop a robot arm within **100 ms** of a person stepping too close. Each stage of the loop adds delay:
+@flow Sense :: 2 ms > Send :: 20 ms > Decide :: 10 ms > Act :: 50 ms
+Total: 2 + 20 + 10 + 50 = **82 ms**, so the deadline is met with 18 ms to spare. If a busy network raised the latency from 20 ms to 45 ms, the total would become 107 ms and this hard deadline would be missed. That is why engineers keep slow network links out of safety-critical loops wherever they can.
+@end
+
+@try
+Classify each application as hard real-time, soft real-time or not real-time, and justify one of your answers: a) an aircraft's fly-by-wire control system, b) streaming a film, c) a heart pacemaker, d) processing weekly payroll.
+@end
+
+
+
+@page Edge or cloud?
+
+Where should the deciding happen? In **cloud computing**, data travels over the internet to a powerful remote data centre and the answer travels back, which adds latency and makes the system depend on its connection. In **edge computing**, a processor on the device itself, or very close to it, does the work; chips such as GPUs and NPUs (Chapter 3) let small devices run AI quickly.
+
+@box light | Comparing cloud and edge
+| | Cloud computing | Edge computing |
+|---|---|---|
+| Where it happens | remote data centres, often far away | on the device or a nearby gateway |
+| Typical network delay | about 50–200 ms | about 1–10 ms |
+| Data sent | a lot: continuous raw readings | a little: results and summaries |
+| If the link fails | the system stops | it keeps working locally |
+| Best for | heavy work that can wait, e.g. training AI | split-second decisions, e.g. braking |
+@end
+
+Edge and cloud are partners, not rivals. A campus delivery robot steers round people using its own computer, because that cannot wait. Over the network it receives delivery jobs, uploads logs that engineers use to retrain its AI, and downloads improved, tested policies.
+
+@box dark | What the network carries
+Every message needs context: which device sent it, when (a **timestamp**) and in what order (a **sequence number**), so the robot can reject a command that is too old or already carried out. Context matters for learning too: if the report on action 42 arrives after the one on action 43, sequence numbers match each result to the right action. A lost report means the result is unknown, not a reward of zero.
+@end
+
+@video Watch the tutorial: Networking for behaviorist AI (Video 04) | https://github.com/user-github-me/cs-ai-project-01/blob/main/assets/tutorials/stage2/videos/BlueImpulse_Video04_Networking_for_Behaviorist_AI.mp4
+
+@try
+A delivery robot must a) stop for a pedestrian, b) plan tomorrow's routes for the fleet, c) retrain its policy on a week of logs. Should each job run on the robot (edge) or in the cloud? Justify one answer.
+@end
+
+
+
+@page The connected home
+@section 5.2 Smart Homes
+
+A **smart home** is a home whose everyday devices, such as lights, heating, locks, cameras and speakers, are networked so that they can be controlled from an app, by voice or automatically. Each device is a small smart system, and together they form part of the **Internet of Things (IoT)**.
+
+@row
+@image 5.1 smart system.PNG | One hub links the home's lights, cameras, heating and locks.
+Devices connect in different ways. A camera streams video, so it needs the high data rate of **Wi-Fi**. A door sensor sends a few bytes and must run for a year on a small battery, so it uses a low-power network such as **Zigbee** or **Thread**, in which mains-powered devices pass messages on to form a **mesh** that reaches every room. A **hub**, or the router itself, links everything to the internet.
+@endrow
+
+@flow Door sensor :: the door opens > Hub :: Zigbee to Wi-Fi > Cloud server :: runs your routine > Phone app :: "Front door opened"
+
+@box light | The home's senses
+| Sensor | What it detects | Example use |
+|---|---|---|
+| Temperature | how warm the air is | heating control |
+| Passive infrared (PIR) | body heat from a moving person | lights on as you walk in; alarm |
+| Magnetic contact | a door or window opening | security alert |
+| Smoke / carbon monoxide | smoke particles or CO gas | alarm and phone alert |
+| Microphone | sound | hears a voice assistant's wake word |
+@end
+
+On the output side, **actuators** do the work: a **relay** (an electrically controlled switch) turns the boiler or a lamp on and off, **motors** move a lock's bolt or the blinds, and a **speaker** sounds an alarm.
+
+@try
+A smart video doorbell has a camera, a PIR motion sensor, a speaker and a Wi-Fi chip. Classify each part as a sensor, an actuator (output) or a network component, and say what it does when a visitor arrives.
+@end
+
+
+
+@page Homes that act on their own
+
+Connecting devices lets you control them from anywhere, but a home only becomes truly smart when it can act without being told. Smart-home automation comes in three levels, and only the last one learns:
+
+@stack Remote control :: you tap the app and the light comes on > Fixed routine :: IF motion is detected after sunset THEN switch on the hall light > Learning automation :: the system notices your habits and adjusts its own behaviour
+
+A **fixed routine** is the reactive control of Chapter 2: the same stimulus always triggers the same response. Many robot vacuum cleaners work this way: when the bumper is pressed they reverse and turn, when the cliff sensor finds no floor they back away from the stairs, and when the battery is low they follow the dock's infrared signal home. The rules never change, yet together they clean the room.
+
+@box light | Worked example: a learning thermostat
+A learning thermostat treats every change you make as **feedback**. From Monday to Thursday you turn the heating up from 17 °C to 21 °C at about 06:30, and each time it records the day, time and setting. By Friday it has spotted the pattern and starts heating at 06:00 by itself, so the house is already 21 °C when you get up. If you turn it down again, that correction works like a **penalty** for its last choice and the schedule shifts; a day with no corrections suggests it got things right.
+@end
+
+@box dark | The cost of connection
+Every connected device is a possible way in for an attacker. In 2016 the **Mirai** malware took over hundreds of thousands of cameras and routers that still used their factory passwords and used them in a DDoS attack that made websites such as Twitter and Netflix hard to reach for hours. Smart speakers and cameras also collect private data. To protect a smart home, change default passwords, install updates, use encryption and choose devices that collect only the data they need.
+@end
+
+@try
+Explain how a learning thermostat uses feedback from the people in a home to change its behaviour. Then give one security risk of connecting it to the internet and one way to reduce that risk.
+@end
+
+
+
+@page Wearables and patient monitoring
+@section 5.3 Healthcare
+
+Healthcare is one of the most valuable places to use smart systems, and one of the most sensitive: the environment being sensed is a human body, the data is private and a wrong decision can harm someone. So most systems *support* doctors and nurses rather than replace them.
+
+@box light | What a smartwatch senses
+A **wearable device** is a small computer worn on the body, such as a smartwatch, a fitness band or a skin patch.
+
+- **Optical heart-rate sensor:** green LEDs shine into the skin and a light sensor measures how much light comes back. Blood absorbs green light, so each heartbeat changes the reading.
+- **Accelerometer and gyroscope:** measure movement to count steps, track sleep and detect a hard fall; some watches then call the emergency services if the wearer does not respond.
+- **ECG sensor:** on some watches, records the heart's electrical signal to check its rhythm.
+@end
+
+The watch processes its raw readings itself (edge computing) and sends only summaries, which saves battery power and network bandwidth:
+
+@flow Watch :: measures and summarises > Bluetooth :: to the phone > Mobile network :: encrypted upload > Clinic dashboard :: a nurse reviews
+
+@box dark | Remote patient monitoring
+People with long-term conditions can be monitored at home. A heart-failure patient might weigh themselves each morning on a connected scale. A gain of about 2 kg in three days can mean fluid is building up, so the system flags the patient and a nurse phones that day, instead of the patient arriving at hospital weeks later as an emergency.
+@end
+
+In hospital, bedside monitors send heart rate, blood pressure, oxygen level and breathing rate over the ward network to the nurses' station. Fixed limits, such as *alarm if the heart rate is above 120 beats per minute*, cause so many false alarms that staff can tune them out (**alarm fatigue**), so smarter systems combine several readings and trends to raise fewer, more meaningful alerts.
+
+@try
+Trace one heart-rate reading from a patient's smartwatch to a nurse's screen, naming the hardware or network used at each step. Then explain one benefit of processing the readings on the watch.
+@end
+
+
+
+@page Intelligent health systems
+
+Monitoring shows what is happening; **intelligent health systems** use AI to decide what should happen next, either acting automatically in a feedback loop or advising a doctor.
+
+@box alt | A feedback loop in the body: the artificial pancreas
+People with type 1 diabetes must take insulin to control the sugar (glucose) in their blood. A **hybrid closed-loop system** does much of this automatically:
+@flow Glucose sensor :: every few minutes > Bluetooth :: sends the reading > Algorithm :: decides the dose > Insulin pump :: delivers it
+Each reading shows how the body responded to the last dose, and this feedback lets the algorithm learn the person's insulin needs. The user still enters meals, so the system is called *hybrid*.
+@end
+
+@box dark | AI in the emergency room
+@image 5.7 reader activity emergency room.PNG w=38 | Emergency departments are busy day and night.
+A busy emergency department can take hundreds of chest X-rays a day. An AI system trained on thousands of earlier images can check each one in seconds, mark areas that look abnormal and move urgent cases to the top of the doctor's list. The doctor still makes the diagnosis; the AI adds a fast, tireless extra check. But it only recognises patterns like those in its training data.
+
+This kind of AI learns from labelled examples rather than from rewards: not every AI is behaviourist.
+@clear
+@end
+
+Many AI systems are **black boxes**: their outputs come from millions of calculations that even their developers cannot easily explain. If an alert just says *High risk*, a doctor may trust it blindly (**over-reliance**) or ignore it (**under-reliance**). A transparent system shows its evidence: the area that triggered the alert and how confident it is.
+
+@try
+An AI system scans chest X-rays for signs of lung illness in a busy hospital emergency room. a) Identify two major efficiency advantages of using it. b) Identify one potential risk if the AI meets an unusually rare chest deformity that it has never seen before.
+@end
+
+
+
+@page Smart traffic, connected cars
+@section 5.4 Transportation
+
+Roads are a shared system: thousands of vehicles, traffic lights and people all affect one another. Smart transport uses sensors and networks to see the whole picture, and AI to keep traffic moving safely.
+
+@h2 Smart traffic systems
+
+A traditional traffic light runs on a **fixed timer**, even at 3 a.m. when the roads are empty. An **adaptive traffic signal** changes its timing to match the traffic: wire loops buried in the road detect waiting cars, cameras and radar measure queues, and fibre or mobile networks carry the readings to a controller that sets each green light.
+
+@box light | Worked example: sharing out the green light
+At a junction with a 60-second cycle, a fixed timer gives each road 30 seconds of green (ignoring the amber phases). At 08:00, cameras count 18 cars queuing on the main road and 6 on the side road. Sharing the 60 seconds in proportion to the queues gives the main road 18 ÷ 24 × 60 = **45 seconds** and the side road 6 ÷ 24 × 60 = **15 seconds**, so the long queue clears and nobody waits at a red light beside an empty road.
+@end
+
+Researchers also train traffic signals with **reinforcement learning**. The **state** is the length of the queue on each road, the **action** is which road gets the next green light, and the **reward** is the total waiting time made negative, so shorter queues earn a higher reward. Over thousands of simulated rush hours, the controller learns timings that keep queues shorter than a fixed timer can.
+
+@h2 Connected vehicles
+
+A **connected vehicle** exchanges data over wireless networks with other vehicles (**V2V**), with roadside equipment such as traffic lights (**V2I**), and with everything around it (**V2X**). A car approaching a junction can be told how many seconds remain before the light turns red. Since 2018, every new model of car approved in the EU has had to include **eCall**, which automatically dials the emergency number 112 after a serious crash and sends the car's location.
+
+@flow Car ahead :: brakes hard in fog > V2V message :: arrives in milliseconds > Car behind :: warns its driver at once
+
+@try
+Explain how an adaptive traffic signal uses sensors, a network and software to reduce waiting times compared with a fixed timer. Then suggest one extra penalty you would add to the reward of a traffic light trained with reinforcement learning, and explain why.
+@end
+
+
+
+@page Self-driving cars and latency
+
+An **autonomous vehicle** drives itself by running the sense–decide–act loop many times every second. **Cameras** read lane markings, signs and traffic lights. **Radar** measures the distance and speed of other vehicles, even in fog or heavy rain. **Lidar** fires laser pulses and times their reflections to build a 3D map of everything nearby. **GPS** and motion sensors track the car's own position. An onboard computer with GPU and AI-accelerator chips combines these readings, decides what to do and sends commands to the **actuators**: an electric motor that turns the steering, and the systems that brake and accelerate. As a car covers many metres every second, *when* a decision arrives matters as much as *what* it is.
+
+@box light | Worked example: speed, latency and braking
+@image 5.2 workexamplebraking.PNG w=38 | Hard braking: what matters is how soon it starts.
+A car travels at **108 km/h** when a child runs into the road. How far does it travel before the brakes are applied?
+
+**Step 1 — convert the speed.** 108 km/h = 108&nbsp;000 m ÷ 3600 s = **30 m/s**.
+
+**Step 2 — use** distance = speed × delay.
+@clear
+| Who or what decides | Delay | Distance before braking |
+|---|---|---|
+| an alert human driver | about 0.67 s | 30 × 0.67 ≈ **20 m** |
+| AI over a slow cloud link | 500 ms = 0.500 s | 30 × 0.500 = **15 m** |
+| AI over a fast cloud link | 50 ms = 0.050 s | 30 × 0.050 = **1.5 m** |
+| AI on the car's own (edge) computer | 5 ms = 0.005 s | 30 × 0.005 = **0.15 m** |
+
+**Conclusion:** deciding on board instead of over the slow cloud link saves 15 − 0.15 = **14.85 m**, more than three car lengths. This is only the distance travelled *before* braking begins; the car then needs extra distance to stop. (The human figure uses the 0.67 s thinking time assumed by the UK Highway Code.)
+@end
+
+That is why safety-critical decisions are made at the edge, inside the vehicle, while the cloud handles jobs that can wait: updating maps, collecting data from the whole fleet and training better AI models.
+
+@try
+A bus travels at 54 km/h. a) Convert this speed into metres per second. b) Calculate how far it travels before braking begins if the decision takes 300 ms over a cloud link, and if it takes 4 ms on an onboard computer. c) Explain why the bus still needs a network connection.
+@end
+
+
+
+@page Who is in control?
+
+**Automation** (technology doing tasks with minimal human involvement) comes in levels:
+
+@box dark | Six levels of driving automation (SAE J3016 standard)
+| Level | The car … | The human … |
+|---|---|---|
+| 0 · None | only warns, e.g. of a collision | drives all the time |
+| 1 · Assistance | steers *or* controls speed | drives and supervises |
+| 2 · Partial | steers *and* controls speed | watches the road constantly |
+| 3 · Conditional | drives itself in limited conditions | takes over when asked |
+| 4 · High | drives itself within a defined area | is not needed in that area |
+| 5 · Full | drives anywhere, in any conditions | is never needed |
+
+Adaptive cruise control is Level 1; driverless taxis are Level 4; no Level 5 car exists yet.
+@end
+
+As automation rises, the human shifts from **operator** to **supervisor**: from driving a manual car (traditional **human–computer interaction**, HCI) to supervising a self-driving taxi (**human–AI interaction**, HAI).
+
+@box alt | HCI and HAI compared
+| | Traditional HCI | Human–AI interaction |
+|---|---|---|
+| Behaviour | fixed: same input, same output | adapts to what it senses and learns |
+| Human's role | operator giving every command | supervisor setting goals, checking |
+| Unclear input | shows an error | makes a best guess, maybe wrong |
+@end
+
+HAI goes wrong when people misjudge the machine: with **over-trust** a Level 2 driver stops watching the road, and with **under-trust** a driver switches off a useful safety feature. In 2009, ice blocked the airspeed sensors of Air France Flight 447; the autopilot handed control to pilots who did not understand why, and their confused responses led to a fatal crash. Automation must show clearly what it is doing, and why.
+
+@try
+Compare driving a traditional manual car with supervising a self-driving taxi. a) In which situation is the human giving continuous HCI inputs? b) What new responsibilities does the human have in the supervisory HAI role?
+@end
+
+
+
+@page Robots and automated production
+@section 5.5 Industry & Manufacturing
+
+Factories were among the first places to use automation, and today they contain some of the most advanced smart systems. An **industrial robot** is a programmable machine, usually an arm with several joints, that can weld, paint, lift, sort and assemble products with the same precision thousands of times a day. Robots do not get tired or distracted, so a production line can run day and night.
+
+@h2 From a decision to a movement
+
+Inside the robot's computer, a decision is only a number, such as *rotate joint 2 to 90°*. The controller sends this target to a **driver circuit**, which turns it into a control signal (a voltage or PWM pulses) and switches the power the motor needs. The **actuator**, a motor, turns the joint, and an **encoder** measures the new angle and reports it back:
+
+@flow Controller :: target 90° > Driver circuit :: signal and power > Motor :: turns the joint > Encoder :: measures 87°
+
+The controller compares the two angles: 90° − 87° leaves a 3° error, so it drives the motor a little further. This feedback loop runs hundreds of times a second.
+
+@box light | Actuators in a factory
+| Actuator | How it works | Typical use |
+|---|---|---|
+| Electric servo motor | magnetic fields produce precise rotation | robot-arm joints, conveyor belts |
+| Solenoid valve | an electromagnet slides a plunger open or shut | dosing liquids, switching air lines |
+| Hydraulic piston | pressurised oil produces a very large force | presses, heavy lifting |
+| Pneumatic actuator | compressed air gives fast, repeated movement | high-speed pick-and-place grippers |
+@end
+
+Automation also changes the kind of mistakes a factory makes. A tired human inspector might miss the odd faulty part; a robot does not get tired. But if a camera is knocked out of line or the software has a bug, a robot repeats the *same* mistake on every product until someone notices, so automated lines still need people to monitor them.
+
+@try
+A robot arm is told to rotate a joint to 45°, but its encoder reports 41°. a) Explain what the controller does next. b) Explain why the arm needs both an actuator and a sensor to place parts accurately.
+@end
+
+
+
+@page Smart factories, learning robots
+
+In a **smart factory**, every machine is networked and sensors stream data to software that watches the whole line. In **predictive maintenance**, the AI notices a motor's vibration rising from 2 mm/s to 6 mm/s over three weeks as its bearings wear, so engineers replace the bearing in a planned stop, not after a breakdown. **Cobots** (collaborative robots) work beside people and stop if they touch someone.
+
+When every object is different, as in a warehouse full of parcels, hand-programming each move is impossible, so engineers use **reinforcement learning**: the robot learns from the results of its actions.
+
+@box light | The learning loop
+@image 5.8 reward system.PNG w=31 | A reward is the robot's trophy: a number saying how well an action went.
+- **State (*S*):** what the sensors report now, e.g. a camera image of the bin.
+- **Action (*A*):** what the robot does: move, rotate, open or close its gripper.
+- **Reward (*R*):** positive for success, negative (a **penalty**) for failure.
+- **Policy (*π*):** the robot's strategy for choosing actions; learning makes actions that earned high rewards more likely.
+
+In 2018, seven Google robot arms practised grasping; after about 580&nbsp;000 attempts they could pick up objects they had never seen about 96% of the time.
+@clear
+@end
+
+@box dark | Worked example: the reward decides what "good" means
+A warehouse robot moves items into a box. Rewards: item placed **+10**; each second taken **−0.5**; item dropped **−20**; collision **−50**.
+
+**Attempt A** is careful: 12 s, success. Reward = +10 − (0.5 × 12) = **+4**.<br>**Attempt B** is fast: 6 s, but clips a shelf. Reward = +10 − (0.5 × 6) − 50 = **−43**.
+
+Over thousands of attempts the robot learns that careful, collision-free moves pay best; reward speed alone and it would learn to rush and crash. Robots usually practise first in a **simulation**, and safety limits such as emergency stops never depend on the reward.
+@end
+
+@try
+You are training a behaviourist AI drone to deliver medicine to rural clinics safely. Define a) the sensor data that forms its state, b) one event that earns a positive reward, c) one event that earns a heavy penalty.
+@end
+
+
+
+@page Smart classrooms
+@section 5.6 Education
+
+In education, the three technologies help people learn: they show teachers at once what every student understands, and let students work at their own pace.
+
+@h2 Smart learning devices
+
+- **Tablets and laptops:** touchscreens, cameras and microphones collect every student's work.
+- **Interactive whiteboards:** large touch-sensitive displays that detect a pen or finger.
+- **Microcontroller kits:** a BBC micro:bit has buttons, a motion sensor, a light sensor and LEDs, so students can build small smart systems of their own.
+- **VR headsets:** motion sensors track your head as you explore a virtual volcano.
+
+@h2 Connected classrooms
+
+Devices connect through the school's Wi-Fi to **cloud** learning platforms, where teachers set work, students hand it in and everything is saved automatically. A live quiz shows the network in action:
+
+@box light | Worked example: a live quiz
+<div>
+<svg viewBox="0 0 620 134" style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Avenir, Avenir Next, sans-serif">
+<rect x="8" y="4" width="78" height="104" rx="10" fill="#483278"/>
+<rect x="15" y="13" width="64" height="82" rx="3" fill="#fff"/>
+<rect x="22" y="20" width="50" height="14" rx="7" fill="#D9C9E8"/>
+<rect x="22" y="39" width="50" height="14" rx="7" fill="#ED4D82"/>
+<rect x="22" y="58" width="50" height="14" rx="7" fill="#D9C9E8"/>
+<rect x="22" y="77" width="50" height="14" rx="7" fill="#D9C9E8"/>
+<g font-size="11" font-weight="800" text-anchor="middle" fill="#35265E">
+<text x="47" y="31">A</text>
+<text x="47" y="50" fill="#fff">B</text>
+<text x="47" y="69">C</text>
+<text x="47" y="88">D</text>
+</g>
+<circle cx="47" cy="101" r="2.5" fill="#fff"/>
+<g fill="none" stroke="#DC5983" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M98 56 H142 M136 50 L142 56 L136 62"/>
+<path d="M266 56 H310 M304 50 L310 56 L304 62"/>
+</g>
+<path d="M180 72 C164 72 162 50 178 48 C178 32 200 28 208 40 C214 28 238 30 238 46 C254 46 256 72 238 72 Z" fill="#fff" stroke="#483278" stroke-width="2.5"/>
+<rect x="320" y="4" width="292" height="96" rx="8" fill="#483278"/>
+<rect x="327" y="11" width="278" height="82" rx="3" fill="#fff"/>
+<rect x="456" y="100" width="20" height="8" fill="#483278"/>
+<rect x="432" y="108" width="68" height="5" rx="2.5" fill="#483278"/>
+<path d="M340 78 H592" stroke="#35265E" stroke-width="1.5"/>
+<rect x="350" y="70.6" width="34" height="7.4" fill="#8588B9"/>
+<rect x="412" y="26" width="34" height="52" fill="#ED4D82"/>
+<rect x="474" y="68.1" width="34" height="9.9" fill="#8588B9"/>
+<rect x="536" y="73" width="34" height="5" fill="#8588B9"/>
+<g font-size="11" fill="#35265E" text-anchor="middle">
+<text x="367" y="90">A: 3</text>
+<text x="429" y="90">B: 21</text>
+<text x="491" y="90">C: 4</text>
+<text x="553" y="90">D: 2</text>
+<text x="120" y="45">Wi-Fi</text>
+<text x="208" y="63" font-weight="700">server</text>
+<text x="208" y="90">counts 30 answers</text>
+<text x="47" y="121">a student taps B</text>
+<text x="466" y="122">the teacher's screen</text>
+</g>
+<text x="429" y="22" font-size="11" font-weight="800" fill="#ED4D82" text-anchor="middle">70%</text>
+</svg>
+</div>
+
+The answers travel over Wi-Fi to a cloud server, which counts all 30 in seconds and draws a chart for the teacher. Answer B was wrong, yet 21 ÷ 30 = 70% of the class chose it, so the teacher knows at once to explain the idea again: feedback that would take days with a paper test.
+@end
+
+Schools can also become **smart campuses**. In 2021, state schools in England were sent carbon dioxide (CO<sub>2</sub>) monitors that show when a crowded classroom needs fresh air. Occupancy sensors can switch off lights and heating in empty rooms, and software that reads the timetable can warm only the rooms that are about to be used.
+
+@try
+Imagine turning your school, college or university into a smart campus. Identify two areas, such as library seating, cafeteria food waste or classroom heating, where sensors, a network and AI software could reduce waste. For one of them, name the sensor, the network and the action taken.
+@end
+
+
+
+@page Adaptive learning
+
+Behaviourism shaped education long before computers. In the 1950s B. F. Skinner, whose operant conditioning you met in Chapter 2, built **teaching machines** that showed material in small steps and told the student at once whether each answer was right; that instant confirmation acted as reinforcement. **Adaptive learning** uses the same idea, with AI choosing what each learner sees next.
+
+@cycle Ask :: a question > Observe :: right or wrong? > Update :: what you seem to know > Choose :: the next question
+
+Feedback flows both ways: *you* get feedback on each answer, which reinforces correct responses, and the *system* learns whether its question was too easy, too hard or just right.
+
+@box light | Worked example: a levelling rule
+A maths app has five levels and one rule: **3 right answers in a row → up one level; 2 wrong in a row → down one level, with a hint.** A student starts on level 2:
+
+| Answers | Results | Level afterwards |
+|---|---|---|
+| 1–3 | right, right, right | 3 (three right in a row: up) |
+| 4–5 | wrong, wrong | 2 (two wrong in a row: down, with a hint) |
+| 6 | right | 2 (a new run begins) |
+
+This rule never changes, so it is reactive control. A **learning** system uses thousands of students' results to find which question helps most, rewarded when a learner gets a similar question right a week later.
+@end
+
+@box dark | Fairness and privacy
+Adaptive systems record every answer and mistake, so schools must protect that data and collect only what they need. Algorithms can also be unfair: in 2020 an algorithm used to award A-level grades in England lowered about 4 in 10 of teachers' predicted grades, and students at large state schools lost out more than those at private schools. After protests, teachers' grades were used instead.
+@end
+
+@try
+Using the same rule, a student starts on level 3 and answers: right, wrong, right, right, right, wrong, wrong. a) Which level does the student finish on? b) Explain how a learning (reinforcement learning) version of the app would differ from this fixed rule.
+@end
+
+
+
+@page The smart city: everything together
+@section 5.7 Conclusion
+
+Each section of this chapter looked at one setting. A **smart city** joins them all: homes, hospitals, roads, factories and schools share networks and data, so that a whole city can sense what is happening and respond. Thousands of IoT sensors report to AI systems that manage the resources everyone shares: roads, energy, water and clean streets.
+
+@row
+@image 5.13 smartcity.PNG | A smart energy grid: solar panels, wind turbines and batteries balanced by networked software.
+@box dark | Worked example: a smart grid
+On a hot afternoon, air conditioners push electricity demand towards a peak. Smart meters send readings every few minutes over the network to the grid's AI, which predicts the spike and tells large batteries, charged by solar panels during the morning, to release their stored energy. Supply and demand stay balanced without anyone pressing a button.
+@end
+@endrow
+
+@box light | How a city senses and acts
+| City system | Sense → connect → decide → act | Benefit |
+|---|---|---|
+| Adaptive traffic signals | cameras and road sensors send traffic data over 5G; AI sets the green times | shorter queues, less idling and pollution |
+| Smart water network | acoustic sensors on water mains hear small leaks; valves close to isolate the pipe | less clean water lost, cheaper repairs |
+| Smart street lighting | motion sensors dim lights on empty streets and brighten them as people approach | lower energy use |
+| Smart waste collection | bins report how full they are; software plans the lorries' routes | fewer trips, less fuel and traffic |
+@end
+
+Smart cities show both sides of this chapter at once. They can save energy, water, time and lives, but they depend on huge amounts of data about where people go and what they do, and a single attack on their networks could affect a whole city.
+
+@try
+Choose one city system from the table. Name its sensor, its network and its actuator, and explain what the AI decides. Then suggest one way the system could fail and how the city could reduce that risk.
+@end
+
+
+
+@page Opportunities and responsibilities
+
+Every application in this chapter brings benefits and new risks. Once, security teams protected only servers and desktop computers; now every connected lock, camera, sensor and medical pump is another way in for an attacker, and many cheap devices ship with weak passwords. Smart systems also collect data constantly, about where people go and how they live, which can be stolen, sold or misused.
+
+@box light | One technology, two sides
+| Technology | Opportunity | Security or privacy risk |
+|---|---|---|
+| Health monitors | early warning of emergencies | stolen records; altered doses |
+| Home cameras | intruder alerts from anywhere | hijacked video feeds |
+| Delivery robots | fast deliveries, lower emissions | GPS spoofing misdirects them |
+| City sensors | less wasted energy and water | tracking where everyone goes |
+@end
+
+Beyond security lies a second question: are the decisions right? **Ethical AI** means developing and using AI in ways that are fair, responsible and transparent:
+
+@box dark | The three pillars of ethical AI
+| Pillar | What it means | Why it is hard |
+|---|---|---|
+| Fairness | people and groups are treated equally | AI repeats bias hidden in past data, as the 2020 grading algorithm showed |
+| Transparency | people can find out how a decision was made | many AI systems are black boxes |
+| Accountability | someone is clearly responsible when things go wrong | a hardware maker, software developer, network provider and user all play a part |
+
+The law is beginning to answer the accountability question. Under the UK's Automated Vehicles Act 2024, while an approved self-driving system is driving, the company behind it is responsible, not the person in the seat.
+@end
+
+@try
+A city wants cameras at every bus stop to count waiting passengers and send extra buses. Give one opportunity and one privacy risk, then suggest one way to make the plan fairer or more transparent.
+@end
+
+
+
+@page Shaping everyday life
+
+Across every setting in this chapter the pattern is the same. **Hardware** senses the world and changes it, **networks** carry information between devices, people and the cloud, and **behaviourist AI** chooses actions and improves them from feedback. Remove any one and the system fails: without sensors it is blind, without a network it is cut off, and without intelligent software it cannot adapt.
+
+@box light | One pattern, five settings
+| Setting | Hardware | Network | Behaviourist AI |
+|---|---|---|---|
+| Smart home | thermostat, relay | Wi-Fi, Zigbee | learns your heating times |
+| Healthcare | glucose sensor, insulin pump | Bluetooth | adjusts doses from feedback |
+| Transportation | cameras, radar, brakes | V2V, V2I, 5G | signals rewarded for short queues |
+| Industry | robot arms, encoders | factory network | robots learn to grasp |
+| Education | tablets, whiteboards | Wi-Fi, cloud | picks the next question |
+@end
+
+Think about a single day: the thermostat warms the house before you wake, adaptive signals speed up your bus, a live quiz shows your teacher what to explain again, and your watch tracks your sleep. Each time, hardware senses, a network connects and software decides, usually without you noticing:
+
+@flow 07:00 :: a warm house > 08:15 :: green lights > 10:30 :: a live quiz > 23:00 :: sleep tracking
+
+@h2 Future innovations
+
+Faster networks, cheaper sensors and more efficient AI chips will move more intelligence to the edge, close to where things happen. Researchers are already building prosthetic hands that adapt to the way their wearer moves, farm robots that weed a field plant by plant instead of spraying it all, and power grids that balance wind and solar energy automatically. Each of these is a feedback loop of sensing, connecting, deciding and acting. However clever the machines become, people still choose their goals and the rewards they learn from, so understanding all three technologies, and their limits, matters for everyone. You can try the loop yourself in **RoverLab**: build a machine, connect its network and train its behaviour.
+
+@try
+Pick the application from this chapter that you would trust least. Using fairness, transparency and accountability, explain what would need to change before you would trust it.
+@end
+
+
+
+@page Practice
+@label Chapter 5 · Practice
+@plane none
+
+@practice light | Practice · Chapter 5
+1. Define a smart system and explain how it integrates physical hardware, network connectivity and software into a unified workflow.
+2. Real-time processing and automation
+    1. Define real-time processing and explain why low network latency and high-speed hardware are critical for systems like autonomous vehicle collision avoidance.
+    2. An autonomous car travels at 90 km/h. Calculate how far it travels before braking begins if the decision takes 400 ms over a cloud connection, and if it takes 8 ms on an onboard computer. Show your working.
+    3. What is automation, and how does moving from human-operated control to fully automated smart systems alter operational efficiency and error rates?
+3. Feedback and action
+    1. Explain how a behaviourist AI system uses performance feedback or reward signals from its environment to modify its behavioural policy.
+    2. Describe the role of actuators in translating an AI model's computed decision into physical changes within the real world.
+4. Humans and AI
+    1. Define human-AI interaction (HAI) and explain how it differs from traditional human-computer interaction (HCI).
+    2. Identify a major usability or safety challenge that occurs when a smart system's autonomous behaviour lacks transparency, leaving the human user confused about its next action.
+    3. An AI system alerts a doctor: "High risk of patient sepsis – transfer to ICU immediately." Suggest how the alert screen could be redesigned so that the doctor can check it within 5 seconds, listing three pieces of evidence it should display.
+5. Ethics and society
+    1. Define ethical AI and discuss why transparency, fairness and accountability are difficult to maintain in complex smart systems.
+    2. Identify one major opportunity (e.g. resource optimisation in smart cities) and one major security or privacy risk associated with connecting everyday physical devices to public networks.
+@end
+
+
+
+@page Practice
+@label Chapter 5 · Practice
+@plane none
+
+@practice light | Practice · Chapter 5 (continued)
+6. Smart homes. A family installs a learning thermostat, a smart door lock and a security camera.
+    1. For each device, name one sensor and one actuator or output that it uses.
+    2. Explain how the learning thermostat changes its schedule using feedback from the family.
+    3. Describe two steps the family should take to protect these devices from attackers.
+7. Healthcare
+    1. Describe how a smartwatch and a mobile phone could help a doctor monitor a patient with a heart condition at home. Name the sensors and networks involved.
+    2. Explain why a hybrid closed-loop insulin system is an example of a system that adapts to feedback.
+8. Transportation
+    1. Explain how vehicle-to-vehicle (V2V) communication could prevent a crash in fog.
+    2. Describe the difference between Level 2 and Level 4 driving automation, including what the human must do at each level.
+9. Industry and manufacturing. A warehouse robot is trained with reinforcement learning to move parcels onto a conveyor belt.
+    1. Suggest a suitable state, action, reward and penalty for the robot.
+    2. Using a reward table of your own, show how the robot's total reward would differ for a slow, safe move and a fast move that hits a shelf.
+    3. Explain what could go wrong if the robot were rewarded for speed only.
+10. Education
+    1. Explain how an adaptive learning app uses a student's answers as feedback to choose the next question.
+    2. Give one fairness concern and one privacy concern about using AI systems in schools.
+11. Using examples from at least two settings in this chapter, evaluate how hardware, networks and behaviourist AI combine to shape everyday life.
+@end
