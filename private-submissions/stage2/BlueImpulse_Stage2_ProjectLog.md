@@ -1,0 +1,354 @@
+# Blue Impulse — Stage 2 Project Log
+
+Hardware, Networks & Behaviorist AI | 25 October–7 November 2026
+
+Evidence compilation prepared on 7 November 2026. Historical baseline: commit 5ebb2bb. This is a retrospective reconstruction from dated Git changes, existing records, recorded user requests, and saved checks. It does not replace missing contemporaneous meeting records.
+
+Status: documented work is supported below; team review, relative contribution scores, missing meeting details, and individual learning evidence are not completed by this AI-assisted compilation.
+
+## Team and evidence boundaries
+
+Team: Blue Impulse. Module: Hardware, Networks & Behaviorist AI. Course: Foundations of CS & AI. Reporting period excludes work before 25 October. Names are taken from the repository; class-roster spelling has not been independently checked. Safa’s Chinese name differs between the README and an existing personal log and needs roster confirmation.
+
+| Member | Recorded roster name | Student ID |
+| --- | --- | --- |
+| Nazif | 纳齐夫 | 1820262003 |
+| Tian | 刘天美 | 1820262008 |
+| Edzel | 黄金贤 | 1820262009 |
+| Safa | 那第武 | 1820262016 |
+| Danial | 达尼亚 | 1820262025 |
+
+A Git author identifies who committed a change; it does not prove sole authorship, hours spent, personal understanding, or team approval. Existing author-to-member associations are based on repository records. Original student reflections are kept separately in the personal-log documents.
+
+## 29 October — early Stage 2 organization
+
+Recorded actor: Pichanyagan (Tian in the team records). Repository changes added visual-concept artwork, updated the task list, and created an AI-use note. The artifact record establishes those changes, not a meeting or review.
+
+| Commit / date | Actual change | What it supports |
+| --- | --- | --- |
+| 19c7a71 · 29 Oct | Added blueim1.png and blueim2.png under visual-concept. | Visual reference files were shared. |
+| d481f0c · 29 Oct | Updated task list to mark items complete. | A task-list change exists; each completion still needs substantive evidence. |
+| ed5576c · 29 Oct | Added significance-use-of-AI.md. | AI use was acknowledged, but the Stage 2 section was empty. |
+
+> Actual AI-note excerpt: “Use to create the README.md in the beginning and such folders like content, draft, and assets”; “Slide is AI based for ideas and templates, and later a lot of human intervention”. The same file’s Stage 2 section contains only a dash.
+
+Unresolved: the note lacks Stage 2 prompts, outputs, verification, and member-specific judgment. The fuller records below address Nazif’s available session evidence; they do not invent other members’ interactions.
+
+## 1 November — repository organization and visual assets
+
+Nazif requested recovery of the earlier Neogpt history, a “Learning and Development” folder, Stage 1 draft organization, and placement of the generated slides. Neogpt assisted with the file operations and the log. Tian separately maintained presentation folders and uploaded presentation assets.
+
+> Recorded request excerpt: “there’s a neogpt history for this repo, get that history … create a folder names ‘Learning and Development’ then log it in my nazif personal log.” The accompanying image instructed moving the draft Markdown files into a Stage 1 subfolder.
+
+| Evidence | Result |
+| --- | --- |
+| 4cbc5cb · 1 Nov · Nazif | Created Learning and Development/, moved 12 draft Markdown files into drafts/stage 1/, added a Stage 1 PowerPoint draft, and updated links. |
+| e0902bb and 91c2da6 · 1 Nov · Tian | Presentation asset upload and final-presentation directory naming are recorded. |
+| 35ec5c4 · 1 Nov · Safa | Updated Content_Outline.md. |
+
+Outcome and limits: the repository changes are verifiable. A draft PowerPoint with placeholders is not evidence of a finished teaching deck. No new individual learning reflection is inferred from the organization work.
+
+## 2 November — chapter scope outline
+
+Recorded actor: SafaNadeem0508 (Safa). Commit ec245e7 created the chapter-finalization outline. It established six chapter headings and subtopics that later materials used as their structure.
+
+> Outline evidence: “Chapter 1: Intro--The Fundamentals”; “Chapter 2: Behaviorism and Behaviorist AI”; “Chapter 3: Hardware”; “Chapter 4: Networking”; “Chapter 5: Applications”; “Chapter 6: Strengths and Limitations”.
+
+An outline alone did not establish that every topic had complete explanations, activities, or checked answers. Later production and audit entries distinguish the content artifacts from that initial scope.
+
+## 3 November — slide outline and AI-assisted presentation draft
+
+Tian committed the Stage 2 slide outline (cfd8a53). Nazif supplied Mars visual references and asked Neogpt to make the new presentation from that outline. Commit ab18e00 added the editable 37-slide draft and design source. Safa added and revised chapter learning-outcome files.
+
+> Recorded request excerpt: “need to make new slide, this the info, prompt … assets/presentations/slides-draft/stage2-slide-outline.md” with color references and a PowerPoint Morph style reference.
+
+AI use — purpose and result: create an editable visual presentation matching the supplied outline. The existing record says the draft used Mars/NASA imagery, large text, and Morph transitions while leaving detailed explanations, debate, video, and game content for the team. This limitation is preserved rather than relabelled as completed content.
+
+| Selected evidence | Meaning |
+| --- | --- |
+| cfd8a53 · 3 Nov | 54 lines added to stage2-slide-outline.md by Tian’s recorded account. |
+| ab18e00 · 3 Nov | Editable Stage 2 Sojourner draft and design materials added by Nazif’s recorded account with Neogpt assistance. |
+| 0af8fa2 / 10f6abb · 3 Nov | Chapter 3 / Chapter 2 learning-outcome files added by Safa’s recorded account. |
+
+### 3 November — meeting record: whether Sojourner had AI
+
+> Actual user report: “also log in the personal log that, today we had meeting, and we discussed about is that sojourner had AI or not”.
+
+Date: 3 November, supported by the existing dated entry and commit b94beda. Purpose/discussion: whether Sojourner had AI. Time, location or platform, attendee list, absences, alternatives, final decision, action owners, and deadlines were not supplied. No outcome or attendance is invented.
+
+Follow-up evidence: rover research files were committed on 3–4 November, but the available record does not establish that this meeting assigned those tasks. Scientific clarification belongs in the checked learning content; it must not be presented as an unrecorded meeting decision.
+
+## 4 November — chapter folders and rover research
+
+Nazif asked for Chapters 4–6 to be added and logged. Neogpt created the folders using the existing README/draft/exercises/solutions layout (d5f7fc4; logged in e1b87c2). Safa continued learning-outcome files. Edzel and Danial’s recorded accounts uploaded rover research.
+
+> Recorded requests: “add chapter 4,5,6 folder in github repo”; “add this to my personal log too”.
+
+| Evidence | Recorded result / limit |
+| --- | --- |
+| d5f7fc4 · Nazif | Chapter 4–6 file structure added. A folder is not evidence of developed core content. |
+| a19c547 and 5a38faf · Edzel | ResearchRoverInfoEdzel.md added and formatted. |
+| d4050c1 · Bleedy0 | ResearchRoverInfoDanial.docx uploaded (36,228 bytes); filename associates it with Danial. |
+| e0863af / febb796 / fdb8485 · Safa | Learning-outcome files for Chapters 6, 4, and 5 added. |
+
+> Research excerpt from Edzel’s committed file: “Its navigation was not based on modern deep learning. Instead, it used sensor feedback and predefined reactive behaviours to avoid hazards while moving toward destinations selected by human operators.” This is a source excerpt, not proof that each student independently verified it.
+
+## 5 November — outcomes and key terminology
+
+Safa’s recorded account revised learning outcomes and added the six chapter key-term files. The repository shows dcfbc71 (Chapter 1), aeb6ced (2), 84cd2ba (3), 7ce917c (4), e87b4f5/50015be (5), and 08b2955 (6). These changes establish vocabulary work across the module.
+
+Unresolved: the available records do not show a dated learner trial, peer approval, or each member’s explanation of the terms. Such learning evidence must come from the students and cannot be inferred from uploads.
+
+## 6 November — source chapters, exercises, and AI-use disclosures
+
+Safa updated exercises and UseOfAI.md in the chapter folders and uploaded six chapter PDFs. Edzel added activities.md with application tasks. The source upload was explicitly described as work in progress.
+
+> Commit 9a645d0 body: “The bone structures of the chapters i finished. Which are still a work in progress in terms of content but just to document work, I uploaded them here”.
+
+> Chapter 2 UseOfAI.md excerpt: “we largely used AI, specifically Gemini, from generating the learning outcomes, to the key terms, to creating the end of chapter exercises. It passed through multiple rounds”.
+
+AI evidence limit: the chapter disclosure names the tool and purpose but does not include the important prompts/outputs, round-by-round decisions, or verification results. That missing evidence remains a specific responsibility of the members involved; this log does not fabricate it.
+
+| Evidence | Actual material |
+| --- | --- |
+| 9a645d0 · Safa | Six Bone Structures chapter PDFs uploaded. |
+| 56c3ca9 / 6eae359 / 3edca73 and related 6 Nov commits · Safa | Chapter exercises revised; chapter-specific AI-use notes created. |
+| 52bf6d2 · Edzel | 352-line activities.md added, including binary conversion, storage, computer components, logic gates, and AI applications. |
+
+## 6 November — AI-assisted study guide and tutorial production
+
+Member directing the work: Nazif. Tool: Neogpt/Codex with local PDF, HyperFrames, FFmpeg, Python, and synthetic speech tooling. The user specified the order: ignore temporary source contents, finish the study guide from six chapters and supplied artwork, then produce five tutorial videos with documents and support files. The AI performed the drafting, rendering, and automated checks; this record does not attribute those operations to independent student execution.
+
+> Recorded prompt excerpt: “first of all, add the ‘temp contents’ folder in gitignore. then check the files, there are 6 chapters contents, and a md file about making the study guide. there is also a template for the study guide. follow all those then make a study guide pdf. and only then as task no. 2 …”
+
+> Video requirements excerpt: “This is not a seperate explanation but it’s a video of US tecahing the viewer using the book”; “CITE THE PAGES OR QUOTE FROM THE STUDY GUIDE”; “subtitles are mandatory”; “duration of the video 5-10min only”.
+
+> Important follow-up: when the original study guide art PDF was missing, the user replied “i have added that. check now”. The subsequent guide build used the supplied original artwork.
+
+Decisions and outcome: temporary material stayed ignored. The guide was completed before video production. Original cover/divider artwork was preserved. Commit b40933c added the 96-page guide; 238cf9e added five narrated tutorials, PDFs, timed scripts, subtitles, runnable demonstrations, and editable source. The old videos used guide screenshots and page citations, as requested then; the 7 November append below explicitly supersedes that visual requirement.
+
+| Saved guide verification | Result |
+| --- | --- |
+| source/verification.json | status: passed; 96 pages; 1,287 verified text items; 65 source exercises; 6 contents links. |
+| Artwork pages | Cover and six divider pages compared unchanged: guide pages 1, 5, 22, 34, 51, 71, 84. |
+| Guide SHA-256 | 2af7695b50de6d32cdc3254b1a702b1ec09701c90677bc758d956f9476b7d3e4 |
+
+The following are saved verification results for the 6 November exports. They are not transferred automatically to replacement videos.
+
+| Video | Duration | Size | Decoded frames | Sampled SSIM |
+| --- | --- | --- | --- | --- |
+| 01 | 8:36 | 37.33 MB | 15470 | 0.999032 |
+| 02 | 9:05 | 38.16 MB | 16345 | 0.999076 |
+| 03 | 9:14 | 39.39 MB | 16622 | 0.999088 |
+| 04 | 9:38 | 42.80 MB | 17342 | 0.999035 |
+| 05 | 9:32 | 38.68 MB | 17172 | 0.999155 |
+
+Saved final-review evidence: 1920 × 1080, 30 fps, H.264/AAC; all 82,951 frames decoded without errors; audio unchanged by compression; all 456 spoken subtitle midpoint samples showed text and 12 silent samples had a clear caption band. Eighteen quotations were matched against the guide. Each tutorial PDF contained 13 pages, 65 combined. SSIM was sampled once per second, not on every frame. Runtime/layout checks had no errors; the optional automated motion pass was disabled.
+
+Meaningful technical correction recorded during production: captions could linger during seeking into silence. The caption child span was given explicit opacity changes at measured cue boundaries; the final caption and silence samples then passed. Compression reduced file size while preserving decoded audio. These are AI-assisted production findings, not claims about a student’s personal learning.
+
+## 6 November — repository/release delivery
+
+Nazif requested “push everything in github and log in my tasks in personal logs”. Commit 14c6ed1 records the final-presentation upload and deliverable documentation. The prior release is supplementary access, not evidence of a course-channel submission.
+
+> Saved package verification: BlueImpulse_Tutorial_Package.zip; 369,127,764 bytes; 305 files; 0 CRC errors; 0 SHA-256 mismatches; 5 videos; 6 tutorial PDFs. SHA-256: 83cdedf69adf51ae9f3db3c8a9ca686927a852270b5f8a06d94fb6ca192fefdd.
+
+Shared-rule correction now required: earlier personal logs were published with project files. The 7 November audit identified the assignment’s privacy requirement. The user-directed access choice and the confirmed repository action are documented below when completed.
+
+## 7 November — chapter revision and printable tutorial documents
+
+Edzel revised the Chapter 3 outline in bc91f1e. Nazif requested PDFs of the tutorials and script/teaching-outline documents. Neogpt generated five printable script/outline PDFs, kept editable Markdown, and packaged the documents; commit 5ebb2bb records that work.
+
+> Actual content change in bc91f1e: removed “Computer Memory and Storage”, “Processing Devices and CPU Architecture”, “Parallel Processing and Computer Systems”, and “Logic Circuits and Boolean Algebra” from the Chapter 3 scope outline. “Input, Processing and Output Hardware” and “How Hardware enables AI” remain. This is scope-edit evidence, not proof that downstream resources were synchronized.
+
+> Recorded request: “make - pdf of tutorial - script/teaching outline for the tutorial videos.”
+
+Outcome: five Script_and_Teaching_Outline.pdf files and the source builders were committed. Their old screenshots/page references require revision under the later video append; keeping old files does not satisfy the new requirement by itself.
+
+## 7 November — Stage 2 rules audit and revised video direction
+
+Member directing work: Nazif. Tool: Neogpt/Codex. Purpose: apply the supplied Stage2_All_Instructions.md across the repository, revise video teaching and motion, prepare required formats, and record the work. This is active AI-assisted production; outcomes appear only when verified.
+
+> Current request excerpt: “rules/Stage2_All_Instructions.md follow this. and make whole repo follow this. make it it ready. log everything in my personal log.”
+
+> Current video append: “dont make it put screenshots or pg number of the study guide anymore, just cite the number and name of the chapter and the subtopic the video will explain”; “The key is ‘story telling’”; “Keep the same color palette but the color must bemore vibrant”.
+
+> Motion/build excerpt: one typeface; at most three colors; 115 BPM; “Everyshot is made out of previous one”; “no CSS animations, no timers, no state carried between frames”; 60 fps with three subframes; inspect one frame per beat; sound effects must not overpower narration. The explicit banned list includes bouncy easing despite the earlier general request for bouncy energy.
+
+Production decisions recorded at the planning stage: keep the five teaching topics; use a fictional campus delivery rover, Pip (protocol identifier robot-7), to connect hook, example, demonstration, and recap. Cite chapter numbers, names, and subtopics instead of book screenshots/page numbers. Use the specific no-bouncy-easing constraint when interpreting the broad lively-motion request. Motion must remain readable during a sustained explanation; generated sound sits below voice.
+
+Rules audit result: separate editable Word test bank required; Markdown submission needs full rendered content and a report; video guide needs metadata, prerequisites, timestamps, resource connections, and scripts/outlines; individual MP4 files must be at most 250 MB; the assignment specifies private personal logs; project and combined personal logs each require a single Word/PDF document with adjacent evidence.
+
+### 7 November — checks actually repeated during record preparation
+
+The AI assistant read the complete shared rules and exact log submission requirements, inspected all five existing personal files and dated Git changes, and executed the existing demonstration script with --topic all. The observed outputs below are directly included so the evidence is readable without following a link.
+
+| Demonstration | Observed default result | Interpretation / limit |
+| --- | --- | --- |
+| Q-learning | Target 4.6; new Q 3.3; terminal practice 1.5. | Future value is omitted for the terminal state. |
+| Pipeline | Completion cycles 4, 5, 6; 6 cycles total versus 12 sequential. | Four one-cycle stages, independent instructions, no stalls; one instruction still takes four stages. |
+| Delay distance | At 30 m/s: 500/50/5/200 ms → 15/1.5/0.15/6 m. | Distance travelled during delay only; not full stopping distance. |
+| Networked AI | ACCEPT, STALE, DUPLICATE / OLD SEQUENCE. | 200 ms policy limit; authenticated is a prior check result, not an authentication method. |
+| Program execution | ACC 3 → 7; memory[200] = 7; final PC = 104. | Invented teaching ISA, not a real processor implementation. |
+
+AI-use disclosure for these logs: Codex selected evidence, drafted the process prose, preserved available personal writing, and generated Word/PDF layouts. This is substantial AI assistance with the logs themselves. Nazif supplied the request and constraints. No personal learning, independent student checks, review approval, meeting details, or contribution scores were supplied by the model.
+
+Human evidence still required: student-written Stage 2 entries from Tian, Edzel, Safa, and Danial; Nazif’s own understanding and judgment where not recorded; specific wider-course learning; actual Stage 1 feedback if received; missing meeting details; team-agreed scores; each student’s review. These are flagged openly rather than claimed complete.
+
+### 7 November — repository visibility correction and user-directed public restoration
+
+The rules audit initially changed the repository to PRIVATE; that GitHub result was verified. The user then explicitly corrected the decision: “no keep it public” and “full thing public”, explaining that the professor needs the submitted repository link. Neogpt restored PUBLIC visibility and verified it with gh. No Git history rewrite, collaborator changes, or invitations occurred. The final access state is PUBLIC.
+
+> Current verified result reported by the coordinating assistant: visibility PUBLIC. Broad /Personal_logs/, /private-submissions/, and /submissions/ exclusions were removed. Personal_logs remains tracked. temp contents/, generated intermediates, and duplicate submission ZIP/MP4 files remain excluded as appropriate.
+
+The explicit user instruction governs this repository action. It differs from the supplied assignment privacy rule and therefore is recorded as a user-directed exception, not as compliance with that rule. Actual professor access and course-channel submission receipt have not been tested. A public repository does not by itself establish submission through the designated course channel.
+
+### 7 November — revised video planning artifacts
+
+The coordinating assistant created the motion-project lesson source and beat-by-beat storyboard for five Pip tutorials. The storyboard is now synchronized to measured scene starts: 1,150 beats per ten-minute lesson at 115 BPM, or 5,750 rows total. The audited scene-to-topic map supplies all 60 canonical chapter/subtopic citations. The source preparation code no longer uses an old guide page as a fallback. Completed audio and document checks are recorded below; final MP4 encoding remains in progress.
+
+### 7 November — complete Markdown foundation and applied learning revision
+
+Nazif requested a repository-wide revision against Stage2_All_Instructions.md. Neogpt/Codex reconstructed the six-chapter Markdown foundation from the existing developed guide content, added specific application checkpoints and feedback, completed six guided missions, and supplied explained answers. This repairs the earlier sequence in which a guide had been produced before a complete shared Markdown foundation; it does not claim that the earlier production already followed the required workflow.
+
+| Observed content evidence | Completed result |
+| --- | --- |
+| content/topic-map.json and chapter files | 67 developed topics and 67 application checkpoints with feedback. |
+| Chapter activity and solution files | Six missions with goals, preparation, steps, observations, reflection prompts and expected outcomes; all 65 retained exercise IDs have explained answers. |
+| content/supporting/ | Five runnable standard-library demonstrations, default results and changed-input results. Paper alternatives contain the needed inputs and answers. |
+| content/references.md and source/stage2-review/resource-access.json | Six resources returned signed-out HTTP 200; introductions explain the relevant task, limitations and an offline route. |
+
+> Selected verification output, assets/study-guide/source/stage2-review/final-verification.json: status passed; developed_topics 67; checkpoint_feedback_pairs 67; explained_exercises 65; missions 6; working_local_links 48; resource_access “6/6 signed-out HTTP 200”. These are automated and AI-assisted checks.
+
+The complete rendered Markdown content is 116 pages, with a three-page submission report. The checked Markdown ZIP contains 64 files. The report records the observed gaps, revisions, resource mapping and Git evidence rather than inventing teacher feedback. A different student still needs to attempt the required questions and selected activities; that evidence was not supplied.
+
+### 7 November — expanded study guide and separate editable Test Bank
+
+Neogpt/Codex extended the original 96-page guide to a complete 121-page edition, preserving the original cover and six dividers. The added section supplies guided activities, resource introductions, and explained feedback. A separate editable Word Test Bank and its PDF copy were produced rather than treating the guide’s exercises as the required standalone test-bank submission.
+
+| Artifact or check | Observed result |
+| --- | --- |
+| assets/study-guide/BlueImpulse_Study_Guide.pdf | 121 pages; 31,485,258 bytes at this check. |
+| BlueImpulse_Stage2_TestBank_V1.docx and PDF | 24 True/False, 24 single-answer multiple-choice, and six substantial open tasks; exactly 4/4/1 per chapter, with questions before the explanatory answer key. |
+| Open-task sample answers | Six developed model responses, 130–171 words each, with explicit expected points. |
+| Study-guide/Test Bank ZIP | Nine files; extraction, CRC and member SHA-256 checks passed in the saved verification. |
+
+> Complete guide SHA-256 at the saved check: 56ce601a95459e24515c00bb769b2c85667cae930f305eac504ef9e0873aca05. The historical 96-page guide remains available as BlueImpulse_Study_Guide.pdf in the 6 November release, so older video page citations still identify their correct source edition.
+
+No student test attempt or understanding is inferred from these artifacts. The user-supplied compressed PDF was not modified. Final repository/package snapshots must be checked against the finalized delivery state after encoding and documentation finish.
+
+### 7 November — complete six-chapter teaching slides
+
+Neogpt/Codex created a separate current classroom deck instead of relabelling the earlier Sojourner visual draft as complete. The new Pip story connects six chapters, worked demonstrations, audience prediction tasks, checked answers, and the final design challenge. Editable text, native presenter notes, and embedded Inter fonts support delivery.
+
+| Saved presentation verification | Observed result |
+| --- | --- |
+| assets/presentations/stage2-teaching/review/verification.json | 63 editable slides; 63 native notes; 7,148 note words; 15 audience tasks; 599 editable text runs; zero rasterized slide pictures. |
+| Native application and font checks | Keynote import/PDF export passed; 63 slide PDF pages and 63 presenter-note PDF pages; minimum native text 28 pt; two Inter font weights embedded. |
+| Content/layout checks | Signed-byte, image-size, Q-learning, pipeline, delay, packet, program and logic examples passed. Missing rendered text and outside-page text lists are empty. |
+| submissions/stage2/slides/package-verification.json | 47 files; CRC and all member hashes passed; PPTX/PDFs reopened and copied demonstration executed. |
+
+The automated Keynote slideshow start/stop at slide 29 is a software check, not a human rehearsal. The notes’ 78.5-minute teaching allocation is a planning estimate, not measured delivery time. A teammate review, rehearsal and classroom-projector check remain unperformed in the available evidence.
+
+### 7 November — chapter-based tutorial PDFs and exact scripts
+
+Following Nazif’s video append, Neogpt/Codex rebuilt the tutorial documents around the revised measured narration and canonical chapter/subtopic names. The new documents omit all guide screenshots and guide-page citations. They preserve the full explanation, demonstrations, learner questions, checked answers, prerequisites and section timestamps.
+
+> assets/tutorials/stage2/verification/document-checks.json: 11 PDFs passed; 60 scene references checked; 368 exact recorded narration cues checked; screenshots/page citations absent; PDF text bounds and glyph checks passed. The combined Video Guide has 42 pages. Each script/teaching-outline PDF has eight pages; written tutorial PDFs have five or six pages.
+
+Final video metadata is explicitly pending in the document verification: video_metadata_final is false and “Final MP4 metadata and sizes” remains listed. The PDFs must be refreshed from the completed MP4 files before final delivery. Independent teammate viewing and a beginner’s activity attempt have not been supplied and are not claimed.
+
+### 7 November — original coded soundtrack and speech-priority audio
+
+Neogpt/Codex generated original oscillator music with browser OfflineAudioContext, rendered score WAVs, and mixed them with the disclosed Kokoro synthetic narration. Each lesson has 1,150 beat kicks, 12 scene hits, and 72–77 measured reveal cues. A restrained riser resolves into the last full bar, followed by the end signature. No third-party song or sampled sound recording is used.
+
+| Video | Duration | Integrated loudness | True peak | AAC size |
+| --- | --- | --- | --- | --- |
+| 01 | 600 s | -16.13 LUFS | -1.95 dBTP | 11.52 MB |
+| 02 | 600 s | -16.12 LUFS | -2.04 dBTP | 11.40 MB |
+| 03 | 600 s | -16.12 LUFS | -1.72 dBTP | 11.46 MB |
+| 04 | 600 s | -16.12 LUFS | -1.61 dBTP | 11.50 MB |
+| 05 | 600 s | -16.12 LUFS | -2.03 dBTP | 11.52 MB |
+
+All five final AAC files decoded without errors and matched their recorded hashes. Caption intervals drive look-ahead volume ducking and dynamic cuts around 1 kHz and 2.2 kHz. The closest measured caption still places narration at least 21 dB above the score in RMS; the median margin is about 30.5 dB. These are machine acoustic measurements, not a claimed human listening test.
+
+> Meaningful revision during audio checking: the first score measured about 54 dB below speech and was too faint for the requested audible reveal effects. The assistant raised only the score by 24 dB, retained speech-priority gain/EQ envelopes, and remeasured the final encoded audio. Closely spaced speech intervals were merged so an earlier release could not accidentally undo the next phrase’s ducking.
+
+### 7 November — deterministic video preflight and encoding in progress
+
+The assistant generated all 5,750 beat-preview images, synchronized the storyboard to actual measured scene starts, and checked the scene-to-topic citations. Dedicated demonstrations keep their numerical inputs and outcomes visible. The renderer uses one standalone HTML file at 1920 × 1080, computed by window.seek(t), and averages three temporal samples for each 60 fps output frame.
+
+> Saved preflight-checks.json: all five lessons pass 52 timestamps in forward and reverse seek order; 60 scene citations have no failures; 1,150 beat frames per lesson have no caption-title-safe or unmasked-main-text safety failures; browser error lists are empty. The first and last three-sample blended frame checks match exactly for all five lessons. That endpoint test is not a complete encoded-MP4 review.
+
+Independent beat-audit JSON files report zero unmasked text overlaps, zero frame-bound flags, no missing font glyphs, and at most two caption rows across the sampled beat frames. Masked transition overlaps are recorded separately rather than hidden. The approved render input hash matches the preflight input. These are AI-assisted and automated production checks, not a teammate’s full viewing.
+
+At this record’s preparation the five complete MP4 encodes are running. Final encoded durations, frame counts, sizes, decoding, compressed visual quality, document metadata refresh, and upload/package verification remain to be recorded after completion. The audio files and preflight results must not be mistaken for completed video exports.
+
+### 7 November — historical edition navigation and pre-upload status
+
+The user requested an explanation of the changes before upload; the coordinating assistant provided that summary. At this record’s preparation Git HEAD remained 5ebb2bb and the current revision had not been pushed. Final upload status must be added only after GitHub confirms it.
+
+Neogpt/Codex added historical-edition notices to the old tutorial indexes and earlier presentation directories, linked the current Stage 2 resources, and corrected the old 96-page guide reference to its actual prior-release PDF. The current main PDF is correctly identified as the 121-page guide. The old materials are preserved as dated artifacts.
+
+> Documentation audit: 27 repository README files inspected, 165 local Markdown links checked, zero missing local targets. Twenty-six external links were not network-tested by this path audit. GitHub release metadata separately confirmed that the historical BlueImpulse_Study_Guide.pdf asset exists (31,337,778 bytes) in blue-impulse-delivery-2026-11-06.
+
+The user-directed PUBLIC repository exception remains as recorded earlier. No collaborator invitation, student score, human review, meeting attendance, personal learning reflection, professor-access test or course-channel submission receipt is invented by these updates.
+
+### 7 November — public teaching outputs and local video production files
+
+The user clarified that HyperFrames and video-production code should not be included in the repository because the professor needs the output videos. The coordinating assistant therefore added /videos/ to .gitignore and removed the old tracked production project from the current Git index while retaining its local files. A read-only git ls-files videos/ check returned no paths. This changes the current deliverable tree; it does not rewrite historical commits or remove a historical release archive.
+
+The public teaching deliverables remain under assets/tutorials/: finished videos, tutorial PDFs, editable narration and teaching outlines, subtitle files, and the small learner demonstrations. Compact current video and document evidence is published under assets/tutorials/stage2/verification/. Production HTML, renderer scripts, generated frame images, raw narration/score WAVs, and production build tools stay in the ignored local videos/ tree. Local production paths mentioned as plain text in earlier evidence identify where work occurred; they are not public source-download links.
+
+> Observed relocation check, project-log/source/historical-output-relocation.json: 23 historical teaching files copied or already present and verified byte-for-byte against their originals — ten Markdown narration/outline documents, ten SRT/VTT caption files, and three supporting demonstration files. No original file was deleted. The historical tutorial README now links these public output paths and the current Stage 2 delivery index instead of the local production project.
+
+The historical complete production-package download is no longer promoted from the tutorial delivery index. Previously published history and release contents were not removed by this change. The user-directed public-repository exception for logs remains in effect. At this point final rendering and upload checks remain separate work; no current push, professor access, human review, contribution score, or course submission is inferred from this source/output separation.
+
+> After the output-only change, documentation-link-audit.json records 19 current public README files, 141 local links, zero missing local targets, and zero links into the excluded /videos/ tree. Seventeen external links were not network-tested by this path audit. Selected historical video metrics were preserved in project-log/source/historical-video-verification.json so the records builder no longer depends on ignored production files.
+
+The principal project-log Word/PDF links now lead to the same complete roster-and-ID content as the retained assignment copies. This follows the user’s explicit instruction to make the full submission public for the professor. The document-check evidence link points to assets/tutorials/stage2/verification/document-checks.json in the public teaching outputs. Encoding, final package verification and upload are not claimed complete by this document-navigation correction.
+
+### 7 November — completed final video exports and refreshed tutorial documents
+
+Current production status: all five revised tutorial MP4s are finished and the post-render verification has passed. This completion entry supersedes the earlier same-day encoding-in-progress and pending-document-metadata stages above, which remain as an honest record of the sequence. Neogpt/Codex rendered, encoded, verified and prepared the outputs; this is not evidence that a student performed a full viewing or teaching rehearsal.
+
+| Video / topic | Size (bytes; decimal MB) | Duration / format | Decoded frames / subtitle cues |
+| --- | --- | --- | --- |
+| 01 — Basic reinforcement learning | 47,425,849; 47.43 MB | 600 s; 1920 × 1080; 60 fps | 36,000 frames / 96 cues |
+| 02 — How hardware enables AI | 48,161,007; 48.16 MB | 600 s; 1920 × 1080; 60 fps | 36,000 frames / 94 cues |
+| 03 — Network challenges | 48,902,815; 48.90 MB | 600 s; 1920 × 1080; 60 fps | 36,000 frames / 96 cues |
+| 04 — Networking for behaviorist AI | 50,061,875; 50.06 MB | 600 s; 1920 × 1080; 60 fps | 36,000 frames / 102 cues |
+| 05 — Program execution | 45,852,242; 45.85 MB | 600 s; 1920 × 1080; 60 fps | 36,000 frames / 101 cues |
+
+> assets/tutorials/stage2/verification/final-video-checks.json: status pass; five of five videos passed; 180,000 video frames decoded in full with no errors; all 489 SRT subtitle cues match the measured narration and frozen rendered captions. Every file is below the assignment’s 250 MB limit. Final MP4 SHA-256 values and byte counts were independently compared with the saved verification and all five matched.
+
+The delivered H.264 video is 8-bit YUV 4:2:0 with full-range metadata (FFprobe reports yuvj420p). The MP4 AAC payloads and packet timings match the verified mixes exactly, so the earlier measured voice-priority audio results remain applicable after muxing. Integrated loudness is −16.13 to −16.12 LUFS and true peak is −2.04 to −1.61 dBTP. No human listening test is claimed.
+
+The coordinating assistant inspected ten encoded demonstration/caption proofs: two selected still frames from each final video. The saved observations check the Q-update calculation, pipeline trace, delay-distance comparison, packet decisions and program-execution state against their explanations. First/last decoded frame SSIM ranges from 0.997273 to 0.997548; this measures the compressed loop seam, not whole-film quality. Selected stills and decoding do not establish full-motion pacing, educational effectiveness or a teammate’s complete viewing.
+
+> assets/tutorials/stage2/verification/document-checks.json: status passed; 11 final PDFs; video_metadata_final true; pending list empty; 368 exact recorded narration cues and 60 chapter/subtopic references checked; guide screenshots and guide-page citations absent. The combined Video Guide is 42 pages. All 11 current PDF hashes were independently compared with the final saved report and matched.
+
+The five written tutorial PDFs and five complete script/teaching-outline PDFs were regenerated with final video filenames, timings and sizes. The final combined guide contains these delivery details, goals, prerequisites, chapter/resource connections, explanations, worked examples, questions and feedback. Nazif’s existing personal log now includes the actual “Finished tutorial outputs — 7 November 2026” entry and is refreshed into the assignment records.
+
+Output-only download packages are being assembled by the coordinating assistant. GitHub publication, release-asset verification and the course-channel submission receipt are not recorded as completed here. The next publishing entry must use observed GitHub results. Four missing members’ Stage 2 reflections, the team’s agreed contribution scores, teammate viewing, a beginner’s attempt, rehearsal and professor-access confirmation remain genuine human evidence gaps.
+
+## Follow-up and submission status
+
+| Owner | Required follow-up | Status / intended deadline |
+| --- | --- | --- |
+| Nazif with AI production support | Finish the requested cross-resource revision and record new media/document/package checks. | See verified completion entries above; do not inherit old export checks. |
+| Each named student | Write and check their own Stage 2 personal section, including actual learning beyond the team module. | Missing where identified; before submission. |
+| All members / submission lead | Review evidence, agree contribution scores, confirm roster names, and verify course/teacher access. | Human confirmation not established in the inspected records. |
+| Submission lead | Submit actual assignment files through the course channel in the specified formats. | Repository upload is supplementary; course-channel receipt not available. |
+
+## Stage 2 contribution table
+
+The following rows report available work evidence, not a ranking. The rules require the team to agree relative contribution scores, with the strongest contributor at 100. The AI cannot honestly assign those judgments from commit counts or generate the team’s agreement. Scores are therefore explicitly pending. Equal scores are permitted where the team judges contributions equally strong.
+
+| Member / ID | Main evidenced Stage 2 work | Relative score | Evidence in this document |
+| --- | --- | --- | --- |
+| Nazif / 纳齐夫 / 1820262003 | Direction of AI-assisted repository organization, Stage 2 draft slides, study guide, five tutorials, documents, and requested compliance revision. | Team review required | 1, 3, 4, 6, 7 Nov entries; 4cbc5cb, ab18e00, d5f7fc4, b40933c, 238cf9e, 14c6ed1, 5ebb2bb. |
+| Tian / 刘天美 / 1820262008 | Visual-concept uploads, Stage 2 slide outline, presentation-folder organization, task-list and AI-use note updates. | Team review required | 29 Oct / 1 / 3 Nov; 19c7a71, d481f0c, ed5576c, e0902bb, cfd8a53. |
+| Edzel / 黄金贤 / 1820262009 | Rover research, activity collection, and chapter scope revisions. | Team review required | 4 / 6 / 7 Nov; a19c547, 5a38faf, 52bf6d2, bc91f1e. |
+| Safa / 那第武 / 1820262016 | Six-chapter scope, learning outcomes, key terms, exercises, AI-use disclosures, and source chapter PDF uploads. | Team review required | 1–6 Nov entries; ec245e7, outcome/key-term commits, 9a645d0, chapter exercise/AI-note changes. |
+| Danial / 达尼亚 / 1820262025 | Rover research document uploaded under his name. | Team review required | 4 Nov; d4050c1 added ResearchRoverInfoDanial.docx. Further research process/verification is not supplied. |

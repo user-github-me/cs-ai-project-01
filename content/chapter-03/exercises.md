@@ -1,23 +1,49 @@
-# Chapter 3:
+# Chapter 3 — Hardware
 
-- 1-a) Differentiate between primary storage and secondary storage in terms of volatility, speed, and CPU accessibility.
-- b) Give an example of a secondary storage technology for each of the three main categories: magnetic, optical, and solid-state (flash).
+## Exercises
 
--2-a) Explain the fundamental structural difference between SRAM (Static RAM) and DRAM (Dynamic RAM) regarding how they store data and their need for refreshing.
--b) Contrast ROM (Read-Only Memory) with PROM (Programmable ROM) and EPROM (Erasable Programmable ROM) in terms of how data is written and erased.
+Write reasoning, units and intermediate steps. All necessary concepts are explained in draft.md; the answer key is in solutions.md. The numbering preserves the source questions used throughout the guide.
 
--3-Classify the following hardware components as Input, Output, or Storage:
--i. Touchscreen display (consider both perspectives)
--	ii. Solid State Drive (SSD)
--	iii. Barcode reader
+### Exercise 3.1a
 
--4- Outline a simple scenario for an automated environmental control system (e.g., a greenhouse or smart thermostat), specifying the sensor used, the processing condition, and the resulting actuator action.
+Differentiate between primary storage and secondary storage in terms of volatility, speed and CPU accessibility.
 
--5-a) Define the core philosophical difference between RISC (Reduced Instruction Set Computer) and CISC (Complex Instruction Set Computer) architectures regarding instruction size and decoding complexity.
-- b) Explain the role of pipelining in executing instructions concurrently within a RISC processor, and name one hazard that can stall the pipeline.
-- c) What is the specific function of processor registers (such as the Program Counter, Accumulator, and Memory Data Register) during instruction execution?
+### Exercise 3.1b
 
--6-What is a hardware interrupt, and what happens at the machine code level when an interrupt signal is received by the CPU?
+Give an example of a secondary-storage technology for each category: magnetic, optical and solid-state (flash).
 
--7- Draw or describe the logic gate symbols and write out the truth tables for the three basic operations: AND, OR, and NOT.
+### Exercise 3.2a
 
+Explain the structural difference between SRAM and DRAM regarding how they store data and their need for refreshing.
+
+### Exercise 3.2b
+
+Contrast ROM, PROM and EPROM in terms of how data is written and erased.
+
+### Exercise 3.3
+
+Classify the following as input, output or storage, noting dual roles where relevant: a touchscreen display, a solid-state drive and a barcode reader.
+
+### Exercise 3.4
+
+Outline an automated environmental control system, such as a greenhouse or thermostat. Specify the sensor, the processing condition and the resulting actuator action.
+
+### Exercise 3.5a
+
+Explain the main design difference between RISC and CISC architectures regarding instruction encoding and decoding complexity.
+
+### Exercise 3.5b
+
+Explain the role of pipelining in overlapping instruction execution, and name one hazard that can stall a pipeline.
+
+### Exercise 3.5c
+
+State the functions of the program counter, accumulator and memory data register during instruction execution.
+
+### Exercise 3.6
+
+What is a hardware interrupt, and what happens to program execution when an enabled interrupt is serviced by the CPU?
+
+### Exercise 3.7
+
+Draw or describe the logic-gate symbols and write the truth tables for AND, OR and NOT.

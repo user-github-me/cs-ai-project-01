@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-07",
+  "scope": "Current non-ignored README Markdown links; generated submission snapshots excluded. Path existence and no links into the excluded top-level video-production directory; anchors and remote access not checked.",
+  "readme_files": 19,
+  "local_links_checked": 141,
+  "broken_local_links": [],
+  "links_into_excluded_video_production": [],
+  "external_links_not_network_tested": 17
+}

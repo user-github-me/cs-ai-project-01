@@ -1,0 +1,401 @@
+[
+  {
+    "type": "h",
+    "text": "7 November — repository visibility correction and user-directed public restoration",
+    "level": 2
+  },
+  {
+    "type": "p",
+    "text": "The rules audit initially changed the repository to PRIVATE; that GitHub result was verified. The user then explicitly corrected the decision: “no keep it public” and “full thing public”, explaining that the professor needs the submitted repository link. Neogpt restored PUBLIC visibility and verified it with gh. No Git history rewrite, collaborator changes, or invitations occurred. The final access state is PUBLIC."
+  },
+  {
+    "type": "quote",
+    "text": "Current verified result reported by the coordinating assistant: visibility PUBLIC. Broad /Personal_logs/, /private-submissions/, and /submissions/ exclusions were removed. Personal_logs remains tracked. temp contents/, generated intermediates, and duplicate submission ZIP/MP4 files remain excluded as appropriate."
+  },
+  {
+    "type": "p",
+    "text": "The explicit user instruction governs this repository action. It differs from the supplied assignment privacy rule and therefore is recorded as a user-directed exception, not as compliance with that rule. Actual professor access and course-channel submission receipt have not been tested. A public repository does not by itself establish submission through the designated course channel."
+  },
+  {
+    "type": "h",
+    "text": "7 November — revised video planning artifacts",
+    "level": 2
+  },
+  {
+    "type": "p",
+    "text": "The coordinating assistant created the motion-project lesson source and beat-by-beat storyboard for five Pip tutorials. The storyboard is now synchronized to measured scene starts: 1,150 beats per ten-minute lesson at 115 BPM, or 5,750 rows total. The audited scene-to-topic map supplies all 60 canonical chapter/subtopic citations. The source preparation code no longer uses an old guide page as a fallback. Completed audio and document checks are recorded below; final MP4 encoding remains in progress."
+  },
+  {
+    "type": "h",
+    "level": 2,
+    "text": "7 November — complete Markdown foundation and applied learning revision"
+  },
+  {
+    "type": "p",
+    "text": "Nazif requested a repository-wide revision against Stage2_All_Instructions.md. Neogpt/Codex reconstructed the six-chapter Markdown foundation from the existing developed guide content, added specific application checkpoints and feedback, completed six guided missions, and supplied explained answers. This repairs the earlier sequence in which a guide had been produced before a complete shared Markdown foundation; it does not claim that the earlier production already followed the required workflow."
+  },
+  {
+    "type": "table",
+    "headers": [
+      "Observed content evidence",
+      "Completed result"
+    ],
+    "rows": [
+      [
+        "content/topic-map.json and chapter files",
+        "67 developed topics and 67 application checkpoints with feedback."
+      ],
+      [
+        "Chapter activity and solution files",
+        "Six missions with goals, preparation, steps, observations, reflection prompts and expected outcomes; all 65 retained exercise IDs have explained answers."
+      ],
+      [
+        "content/supporting/",
+        "Five runnable standard-library demonstrations, default results and changed-input results. Paper alternatives contain the needed inputs and answers."
+      ],
+      [
+        "content/references.md and source/stage2-review/resource-access.json",
+        "Six resources returned signed-out HTTP 200; introductions explain the relevant task, limitations and an offline route."
+      ]
+    ],
+    "widths": [
+      0.38,
+      0.62
+    ]
+  },
+  {
+    "type": "quote",
+    "text": "Selected verification output, assets/study-guide/source/stage2-review/final-verification.json: status passed; developed_topics 67; checkpoint_feedback_pairs 67; explained_exercises 65; missions 6; working_local_links 48; resource_access “6/6 signed-out HTTP 200”. These are automated and AI-assisted checks."
+  },
+  {
+    "type": "p",
+    "text": "The complete rendered Markdown content is 116 pages, with a three-page submission report. The checked Markdown ZIP contains 64 files. The report records the observed gaps, revisions, resource mapping and Git evidence rather than inventing teacher feedback. A different student still needs to attempt the required questions and selected activities; that evidence was not supplied."
+  },
+  {
+    "type": "h",
+    "level": 2,
+    "text": "7 November — expanded study guide and separate editable Test Bank"
+  },
+  {
+    "type": "p",
+    "text": "Neogpt/Codex extended the original 96-page guide to a complete 121-page edition, preserving the original cover and six dividers. The added section supplies guided activities, resource introductions, and explained feedback. A separate editable Word Test Bank and its PDF copy were produced rather than treating the guide’s exercises as the required standalone test-bank submission."
+  },
+  {
+    "type": "table",
+    "headers": [
+      "Artifact or check",
+      "Observed result"
+    ],
+    "rows": [
+      [
+        "assets/study-guide/BlueImpulse_Study_Guide.pdf",
+        "121 pages; 31,485,258 bytes at this check."
+      ],
+      [
+        "BlueImpulse_Stage2_TestBank_V1.docx and PDF",
+        "24 True/False, 24 single-answer multiple-choice, and six substantial open tasks; exactly 4/4/1 per chapter, with questions before the explanatory answer key."
+      ],
+      [
+        "Open-task sample answers",
+        "Six developed model responses, 130–171 words each, with explicit expected points."
+      ],
+      [
+        "Study-guide/Test Bank ZIP",
+        "Nine files; extraction, CRC and member SHA-256 checks passed in the saved verification."
+      ]
+    ],
+    "widths": [
+      0.38,
+      0.62
+    ]
+  },
+  {
+    "type": "quote",
+    "text": "Complete guide SHA-256 at the saved check: 56ce601a95459e24515c00bb769b2c85667cae930f305eac504ef9e0873aca05. The historical 96-page guide remains available as BlueImpulse_Study_Guide.pdf in the 6 November release, so older video page citations still identify their correct source edition."
+  },
+  {
+    "type": "p",
+    "text": "No student test attempt or understanding is inferred from these artifacts. The user-supplied compressed PDF was not modified. Final repository/package snapshots must be checked against the finalized delivery state after encoding and documentation finish."
+  },
+  {
+    "type": "h",
+    "level": 2,
+    "text": "7 November — complete six-chapter teaching slides"
+  },
+  {
+    "type": "p",
+    "text": "Neogpt/Codex created a separate current classroom deck instead of relabelling the earlier Sojourner visual draft as complete. The new Pip story connects six chapters, worked demonstrations, audience prediction tasks, checked answers, and the final design challenge. Editable text, native presenter notes, and embedded Inter fonts support delivery."
+  },
+  {
+    "type": "table",
+    "headers": [
+      "Saved presentation verification",
+      "Observed result"
+    ],
+    "rows": [
+      [
+        "assets/presentations/stage2-teaching/review/verification.json",
+        "63 editable slides; 63 native notes; 7,148 note words; 15 audience tasks; 599 editable text runs; zero rasterized slide pictures."
+      ],
+      [
+        "Native application and font checks",
+        "Keynote import/PDF export passed; 63 slide PDF pages and 63 presenter-note PDF pages; minimum native text 28 pt; two Inter font weights embedded."
+      ],
+      [
+        "Content/layout checks",
+        "Signed-byte, image-size, Q-learning, pipeline, delay, packet, program and logic examples passed. Missing rendered text and outside-page text lists are empty."
+      ],
+      [
+        "submissions/stage2/slides/package-verification.json",
+        "47 files; CRC and all member hashes passed; PPTX/PDFs reopened and copied demonstration executed."
+      ]
+    ],
+    "widths": [
+      0.4,
+      0.6
+    ]
+  },
+  {
+    "type": "p",
+    "text": "The automated Keynote slideshow start/stop at slide 29 is a software check, not a human rehearsal. The notes’ 78.5-minute teaching allocation is a planning estimate, not measured delivery time. A teammate review, rehearsal and classroom-projector check remain unperformed in the available evidence."
+  },
+  {
+    "type": "h",
+    "level": 2,
+    "text": "7 November — chapter-based tutorial PDFs and exact scripts"
+  },
+  {
+    "type": "p",
+    "text": "Following Nazif’s video append, Neogpt/Codex rebuilt the tutorial documents around the revised measured narration and canonical chapter/subtopic names. The new documents omit all guide screenshots and guide-page citations. They preserve the full explanation, demonstrations, learner questions, checked answers, prerequisites and section timestamps."
+  },
+  {
+    "type": "quote",
+    "text": "assets/tutorials/stage2/verification/document-checks.json: 11 PDFs passed; 60 scene references checked; 368 exact recorded narration cues checked; screenshots/page citations absent; PDF text bounds and glyph checks passed. The combined Video Guide has 42 pages. Each script/teaching-outline PDF has eight pages; written tutorial PDFs have five or six pages."
+  },
+  {
+    "type": "p",
+    "text": "Final video metadata is explicitly pending in the document verification: video_metadata_final is false and “Final MP4 metadata and sizes” remains listed. The PDFs must be refreshed from the completed MP4 files before final delivery. Independent teammate viewing and a beginner’s activity attempt have not been supplied and are not claimed."
+  },
+  {
+    "type": "h",
+    "level": 2,
+    "text": "7 November — original coded soundtrack and speech-priority audio"
+  },
+  {
+    "type": "p",
+    "text": "Neogpt/Codex generated original oscillator music with browser OfflineAudioContext, rendered score WAVs, and mixed them with the disclosed Kokoro synthetic narration. Each lesson has 1,150 beat kicks, 12 scene hits, and 72–77 measured reveal cues. A restrained riser resolves into the last full bar, followed by the end signature. No third-party song or sampled sound recording is used."
+  },
+  {
+    "type": "table",
+    "headers": [
+      "Video",
+      "Duration",
+      "Integrated loudness",
+      "True peak",
+      "AAC size"
+    ],
+    "rows": [
+      [
+        "01",
+        "600 s",
+        "-16.13 LUFS",
+        "-1.95 dBTP",
+        "11.52 MB"
+      ],
+      [
+        "02",
+        "600 s",
+        "-16.12 LUFS",
+        "-2.04 dBTP",
+        "11.40 MB"
+      ],
+      [
+        "03",
+        "600 s",
+        "-16.12 LUFS",
+        "-1.72 dBTP",
+        "11.46 MB"
+      ],
+      [
+        "04",
+        "600 s",
+        "-16.12 LUFS",
+        "-1.61 dBTP",
+        "11.50 MB"
+      ],
+      [
+        "05",
+        "600 s",
+        "-16.12 LUFS",
+        "-2.03 dBTP",
+        "11.52 MB"
+      ]
+    ],
+    "widths": [
+      0.1,
+      0.15,
+      0.27,
+      0.24,
+      0.24
+    ]
+  },
+  {
+    "type": "p",
+    "text": "All five final AAC files decoded without errors and matched their recorded hashes. Caption intervals drive look-ahead volume ducking and dynamic cuts around 1 kHz and 2.2 kHz. The closest measured caption still places narration at least 21 dB above the score in RMS; the median margin is about 30.5 dB. These are machine acoustic measurements, not a claimed human listening test."
+  },
+  {
+    "type": "quote",
+    "text": "Meaningful revision during audio checking: the first score measured about 54 dB below speech and was too faint for the requested audible reveal effects. The assistant raised only the score by 24 dB, retained speech-priority gain/EQ envelopes, and remeasured the final encoded audio. Closely spaced speech intervals were merged so an earlier release could not accidentally undo the next phrase’s ducking."
+  },
+  {
+    "type": "h",
+    "level": 2,
+    "text": "7 November — deterministic video preflight and encoding in progress"
+  },
+  {
+    "type": "p",
+    "text": "The assistant generated all 5,750 beat-preview images, synchronized the storyboard to actual measured scene starts, and checked the scene-to-topic citations. Dedicated demonstrations keep their numerical inputs and outcomes visible. The renderer uses one standalone HTML file at 1920 × 1080, computed by window.seek(t), and averages three temporal samples for each 60 fps output frame."
+  },
+  {
+    "type": "quote",
+    "text": "Saved preflight-checks.json: all five lessons pass 52 timestamps in forward and reverse seek order; 60 scene citations have no failures; 1,150 beat frames per lesson have no caption-title-safe or unmasked-main-text safety failures; browser error lists are empty. The first and last three-sample blended frame checks match exactly for all five lessons. That endpoint test is not a complete encoded-MP4 review."
+  },
+  {
+    "type": "p",
+    "text": "Independent beat-audit JSON files report zero unmasked text overlaps, zero frame-bound flags, no missing font glyphs, and at most two caption rows across the sampled beat frames. Masked transition overlaps are recorded separately rather than hidden. The approved render input hash matches the preflight input. These are AI-assisted and automated production checks, not a teammate’s full viewing."
+  },
+  {
+    "type": "p",
+    "text": "At this record’s preparation the five complete MP4 encodes are running. Final encoded durations, frame counts, sizes, decoding, compressed visual quality, document metadata refresh, and upload/package verification remain to be recorded after completion. The audio files and preflight results must not be mistaken for completed video exports."
+  },
+  {
+    "type": "h",
+    "level": 2,
+    "text": "7 November — historical edition navigation and pre-upload status"
+  },
+  {
+    "type": "p",
+    "text": "The user requested an explanation of the changes before upload; the coordinating assistant provided that summary. At this record’s preparation Git HEAD remained 5ebb2bb and the current revision had not been pushed. Final upload status must be added only after GitHub confirms it."
+  },
+  {
+    "type": "p",
+    "text": "Neogpt/Codex added historical-edition notices to the old tutorial indexes and earlier presentation directories, linked the current Stage 2 resources, and corrected the old 96-page guide reference to its actual prior-release PDF. The current main PDF is correctly identified as the 121-page guide. The old materials are preserved as dated artifacts."
+  },
+  {
+    "type": "quote",
+    "text": "Documentation audit: 27 repository README files inspected, 165 local Markdown links checked, zero missing local targets. Twenty-six external links were not network-tested by this path audit. GitHub release metadata separately confirmed that the historical BlueImpulse_Study_Guide.pdf asset exists (31,337,778 bytes) in blue-impulse-delivery-2026-11-06."
+  },
+  {
+    "type": "p",
+    "text": "The user-directed PUBLIC repository exception remains as recorded earlier. No collaborator invitation, student score, human review, meeting attendance, personal learning reflection, professor-access test or course-channel submission receipt is invented by these updates."
+  },
+  {
+    "type": "h",
+    "level": 2,
+    "text": "7 November — public teaching outputs and local video production files"
+  },
+  {
+    "type": "p",
+    "text": "The user clarified that HyperFrames and video-production code should not be included in the repository because the professor needs the output videos. The coordinating assistant therefore added /videos/ to .gitignore and removed the old tracked production project from the current Git index while retaining its local files. A read-only git ls-files videos/ check returned no paths. This changes the current deliverable tree; it does not rewrite historical commits or remove a historical release archive."
+  },
+  {
+    "type": "p",
+    "text": "The public teaching deliverables remain under assets/tutorials/: finished videos, tutorial PDFs, editable narration and teaching outlines, subtitle files, and the small learner demonstrations. Compact current video and document evidence is published under assets/tutorials/stage2/verification/. Production HTML, renderer scripts, generated frame images, raw narration/score WAVs, and production build tools stay in the ignored local videos/ tree. Local production paths mentioned as plain text in earlier evidence identify where work occurred; they are not public source-download links."
+  },
+  {
+    "type": "quote",
+    "text": "Observed relocation check, project-log/source/historical-output-relocation.json: 23 historical teaching files copied or already present and verified byte-for-byte against their originals — ten Markdown narration/outline documents, ten SRT/VTT caption files, and three supporting demonstration files. No original file was deleted. The historical tutorial README now links these public output paths and the current Stage 2 delivery index instead of the local production project."
+  },
+  {
+    "type": "p",
+    "text": "The historical complete production-package download is no longer promoted from the tutorial delivery index. Previously published history and release contents were not removed by this change. The user-directed public-repository exception for logs remains in effect. At this point final rendering and upload checks remain separate work; no current push, professor access, human review, contribution score, or course submission is inferred from this source/output separation."
+  },
+  {
+    "type": "quote",
+    "text": "After the output-only change, documentation-link-audit.json records 19 current public README files, 141 local links, zero missing local targets, and zero links into the excluded /videos/ tree. Seventeen external links were not network-tested by this path audit. Selected historical video metrics were preserved in project-log/source/historical-video-verification.json so the records builder no longer depends on ignored production files."
+  },
+  {
+    "type": "p",
+    "text": "The principal project-log Word/PDF links now lead to the same complete roster-and-ID content as the retained assignment copies. This follows the user’s explicit instruction to make the full submission public for the professor. The document-check evidence link points to assets/tutorials/stage2/verification/document-checks.json in the public teaching outputs. Encoding, final package verification and upload are not claimed complete by this document-navigation correction."
+  },
+  {
+    "type": "h",
+    "level": 2,
+    "text": "7 November — completed final video exports and refreshed tutorial documents"
+  },
+  {
+    "type": "p",
+    "text": "Current production status: all five revised tutorial MP4s are finished and the post-render verification has passed. This completion entry supersedes the earlier same-day encoding-in-progress and pending-document-metadata stages above, which remain as an honest record of the sequence. Neogpt/Codex rendered, encoded, verified and prepared the outputs; this is not evidence that a student performed a full viewing or teaching rehearsal."
+  },
+  {
+    "type": "table",
+    "headers": [
+      "Video / topic",
+      "Size (bytes; decimal MB)",
+      "Duration / format",
+      "Decoded frames / subtitle cues"
+    ],
+    "widths": [
+      0.34,
+      0.23,
+      0.22,
+      0.21
+    ],
+    "rows": [
+      [
+        "01 — Basic reinforcement learning",
+        "47,425,849; 47.43 MB",
+        "600 s; 1920 × 1080; 60 fps",
+        "36,000 frames / 96 cues"
+      ],
+      [
+        "02 — How hardware enables AI",
+        "48,161,007; 48.16 MB",
+        "600 s; 1920 × 1080; 60 fps",
+        "36,000 frames / 94 cues"
+      ],
+      [
+        "03 — Network challenges",
+        "48,902,815; 48.90 MB",
+        "600 s; 1920 × 1080; 60 fps",
+        "36,000 frames / 96 cues"
+      ],
+      [
+        "04 — Networking for behaviorist AI",
+        "50,061,875; 50.06 MB",
+        "600 s; 1920 × 1080; 60 fps",
+        "36,000 frames / 102 cues"
+      ],
+      [
+        "05 — Program execution",
+        "45,852,242; 45.85 MB",
+        "600 s; 1920 × 1080; 60 fps",
+        "36,000 frames / 101 cues"
+      ]
+    ]
+  },
+  {
+    "type": "quote",
+    "text": "assets/tutorials/stage2/verification/final-video-checks.json: status pass; five of five videos passed; 180,000 video frames decoded in full with no errors; all 489 SRT subtitle cues match the measured narration and frozen rendered captions. Every file is below the assignment’s 250 MB limit. Final MP4 SHA-256 values and byte counts were independently compared with the saved verification and all five matched."
+  },
+  {
+    "type": "p",
+    "text": "The delivered H.264 video is 8-bit YUV 4:2:0 with full-range metadata (FFprobe reports yuvj420p). The MP4 AAC payloads and packet timings match the verified mixes exactly, so the earlier measured voice-priority audio results remain applicable after muxing. Integrated loudness is −16.13 to −16.12 LUFS and true peak is −2.04 to −1.61 dBTP. No human listening test is claimed."
+  },
+  {
+    "type": "p",
+    "text": "The coordinating assistant inspected ten encoded demonstration/caption proofs: two selected still frames from each final video. The saved observations check the Q-update calculation, pipeline trace, delay-distance comparison, packet decisions and program-execution state against their explanations. First/last decoded frame SSIM ranges from 0.997273 to 0.997548; this measures the compressed loop seam, not whole-film quality. Selected stills and decoding do not establish full-motion pacing, educational effectiveness or a teammate’s complete viewing."
+  },
+  {
+    "type": "quote",
+    "text": "assets/tutorials/stage2/verification/document-checks.json: status passed; 11 final PDFs; video_metadata_final true; pending list empty; 368 exact recorded narration cues and 60 chapter/subtopic references checked; guide screenshots and guide-page citations absent. The combined Video Guide is 42 pages. All 11 current PDF hashes were independently compared with the final saved report and matched."
+  },
+  {
+    "type": "p",
+    "text": "The five written tutorial PDFs and five complete script/teaching-outline PDFs were regenerated with final video filenames, timings and sizes. The final combined guide contains these delivery details, goals, prerequisites, chapter/resource connections, explanations, worked examples, questions and feedback. Nazif’s existing personal log now includes the actual “Finished tutorial outputs — 7 November 2026” entry and is refreshed into the assignment records."
+  },
+  {
+    "type": "p",
+    "text": "Output-only download packages are being assembled by the coordinating assistant. GitHub publication, release-asset verification and the course-channel submission receipt are not recorded as completed here. The next publishing entry must use observed GitHub results. Four missing members’ Stage 2 reflections, the team’s agreed contribution scores, teammate viewing, a beginner’s attempt, rehearsal and professor-access confirmation remain genuine human evidence gaps."
+  }
+]

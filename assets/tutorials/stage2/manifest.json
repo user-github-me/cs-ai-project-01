@@ -1,0 +1,121 @@
+{
+  "version": "Stage 2 V1.0 revised",
+  "date": "2026-11-07",
+  "videos": [
+    {
+      "filename": "BlueImpulse_Video01_Basic_Reinforcement_Learning.mp4",
+      "duration_seconds": 600.0,
+      "fps": 60,
+      "width": 1920,
+      "height": 1080,
+      "bytes": 47425849,
+      "sha256": "95f891130387b6ede69a6f6e0dbf0522971948bfcb201f03d9ae5ac681a137a7",
+      "status": "Final MP4 metadata verified"
+    },
+    {
+      "filename": "BlueImpulse_Video02_How_Hardware_Enables_AI.mp4",
+      "duration_seconds": 600.0,
+      "fps": 60,
+      "width": 1920,
+      "height": 1080,
+      "bytes": 48161007,
+      "sha256": "bd0572e066c05982caf99dab5d0e0eec660619803e370beefca4bf7e1839ceea",
+      "status": "Final MP4 metadata verified"
+    },
+    {
+      "filename": "BlueImpulse_Video03_Network_Challenges.mp4",
+      "duration_seconds": 600.0,
+      "fps": 60,
+      "width": 1920,
+      "height": 1080,
+      "bytes": 48902815,
+      "sha256": "cd7b27582950e5fef6c2a4184375fd1d20515d40d5698b95f12fdde71246998b",
+      "status": "Final MP4 metadata verified"
+    },
+    {
+      "filename": "BlueImpulse_Video04_Networking_for_Behaviorist_AI.mp4",
+      "duration_seconds": 600.0,
+      "fps": 60,
+      "width": 1920,
+      "height": 1080,
+      "bytes": 50061875,
+      "sha256": "a2c3fd1e8f6d21345d75b1b397cc72cedb4073465fe1b3153ad53b6ebb466673",
+      "status": "Final MP4 metadata verified"
+    },
+    {
+      "filename": "BlueImpulse_Video05_Program_Execution.mp4",
+      "duration_seconds": 600.0,
+      "fps": 60,
+      "width": 1920,
+      "height": 1080,
+      "bytes": 45852242,
+      "sha256": "db186cf7091ac0adba212616d407b0c81218c2de97b0adb77c081721b86d1d0b",
+      "status": "Final MP4 metadata verified"
+    }
+  ],
+  "documents": [
+    {
+      "file": "BlueImpulse_Video01_Basic_Reinforcement_Learning_Tutorial.pdf",
+      "pages": 6,
+      "sha256": "1b9fad5bb7ca22b4d33a294db0b886161936712cc40345fb2a71bb0c41ea53d9"
+    },
+    {
+      "file": "BlueImpulse_Video01_Basic_Reinforcement_Learning_Script_Teaching_Outline.pdf",
+      "pages": 8,
+      "sha256": "64e305f63848e4cd7447a1e231b7e65fc48c9f7e9890f0ff2516d0135c8bea3d"
+    },
+    {
+      "file": "BlueImpulse_Video02_How_Hardware_Enables_AI_Tutorial.pdf",
+      "pages": 5,
+      "sha256": "0bb5bb5450d5e20bb147adb35e034433a631438dbbd69c6899c1eb30403a2072"
+    },
+    {
+      "file": "BlueImpulse_Video02_How_Hardware_Enables_AI_Script_Teaching_Outline.pdf",
+      "pages": 8,
+      "sha256": "dbbac5ff7164ad83670a5b772114374a0f94d45899e11ccfdd7b2da7f7334045"
+    },
+    {
+      "file": "BlueImpulse_Video03_Network_Challenges_Tutorial.pdf",
+      "pages": 5,
+      "sha256": "b3d854d823ac2c639e7c5a50b7b8c03478fc802848713ca5139c4b0d68f19988"
+    },
+    {
+      "file": "BlueImpulse_Video03_Network_Challenges_Script_Teaching_Outline.pdf",
+      "pages": 8,
+      "sha256": "4049f12b7c37263c3c765bd65a72fb077e0fba57885de9c107280188c1ea52e3"
+    },
+    {
+      "file": "BlueImpulse_Video04_Networking_for_Behaviorist_AI_Tutorial.pdf",
+      "pages": 6,
+      "sha256": "ba649a83be74dbecbe307fbd15b229a6ae8ad2a625f22feebdce9187b809e171"
+    },
+    {
+      "file": "BlueImpulse_Video04_Networking_for_Behaviorist_AI_Script_Teaching_Outline.pdf",
+      "pages": 8,
+      "sha256": "0624b726a6fce73b82bf8f7ba1c28944408af0e2ca4e7f2b3d1de814eb41f712"
+    },
+    {
+      "file": "BlueImpulse_Video05_Program_Execution_Tutorial.pdf",
+      "pages": 6,
+      "sha256": "e717cb3d3dbc616f54abb673fd9fe2bff01778d09d146921ef66f4173f694410"
+    },
+    {
+      "file": "BlueImpulse_Video05_Program_Execution_Script_Teaching_Outline.pdf",
+      "pages": 8,
+      "sha256": "fa6b51147159c8b356cca4e0841c94d8ac4e31bd0cf1091138536fefb3a8ab65"
+    }
+  ],
+  "combined_guide": {
+    "file": "BlueImpulse_Stage2_VideoGuide.pdf",
+    "pages": 42
+  },
+  "lesson_hashes": {
+    "lesson-01.json": "82f54a97d89ab3c068e55539c247b5ccd65903f537c71701fc4eeba9c5663daf",
+    "lesson-02.json": "8f042f248cadcc88c2c98d78d63ee24ba69854828a2f9c967e8ae71b93144c68",
+    "lesson-03.json": "50f3337a85512e91b2d1ab95659676b1adad15020725e15f44ba6d9be7064b11",
+    "lesson-04.json": "706191a1e331d3750b7c0d5e9c6fb26393faa28a3bfe6505cb84099d71a6f1b8",
+    "lesson-05.json": "62a7c58c121d9fc52a2d9fbdaeca3e21fe6734e67cc1a75fed118c5020a1da63"
+  },
+  "chapter_citation_source": "content/topic-map.json",
+  "independent_human_review": "pending \u2014 no evidence supplied"
+}

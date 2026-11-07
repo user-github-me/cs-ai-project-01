@@ -1,0 +1,124 @@
+{
+  "status": "passed",
+  "date": "2026-11-07",
+  "pdf_count": 11,
+  "scene_references_checked": 60,
+  "exact_recorded_narration_cues_checked": 368,
+  "all_guide_screenshots_and_page_citations_absent": true,
+  "pdf_text_bounds_and_glyphs": "passed",
+  "documents": [
+    {
+      "filename": "BlueImpulse_Stage2_VideoGuide.pdf",
+      "pages": 42,
+      "sha256": "cb9cd84bbaa4c55957a59f43c32a373ac1fbe0a53d36f3bc66ffa2a1c7e3d586",
+      "text_spans_checked": 2340,
+      "fonts": [
+        "Inter-Bold",
+        "Inter-Regular"
+      ]
+    },
+    {
+      "filename": "BlueImpulse_Video01_Basic_Reinforcement_Learning_Script_Teaching_Outline.pdf",
+      "pages": 8,
+      "sha256": "64e305f63848e4cd7447a1e231b7e65fc48c9f7e9890f0ff2516d0135c8bea3d",
+      "text_spans_checked": 459,
+      "fonts": [
+        "Inter-Bold",
+        "Inter-Regular"
+      ]
+    },
+    {
+      "filename": "BlueImpulse_Video01_Basic_Reinforcement_Learning_Tutorial.pdf",
+      "pages": 6,
+      "sha256": "1b9fad5bb7ca22b4d33a294db0b886161936712cc40345fb2a71bb0c41ea53d9",
+      "text_spans_checked": 265,
+      "fonts": [
+        "Inter-Bold",
+        "Inter-Regular"
+      ]
+    },
+    {
+      "filename": "BlueImpulse_Video02_How_Hardware_Enables_AI_Script_Teaching_Outline.pdf",
+      "pages": 8,
+      "sha256": "dbbac5ff7164ad83670a5b772114374a0f94d45899e11ccfdd7b2da7f7334045",
+      "text_spans_checked": 458,
+      "fonts": [
+        "Inter-Bold",
+        "Inter-Regular"
+      ]
+    },
+    {
+      "filename": "BlueImpulse_Video02_How_Hardware_Enables_AI_Tutorial.pdf",
+      "pages": 5,
+      "sha256": "0bb5bb5450d5e20bb147adb35e034433a631438dbbd69c6899c1eb30403a2072",
+      "text_spans_checked": 267,
+      "fonts": [
+        "Inter-Bold",
+        "Inter-Regular"
+      ]
+    },
+    {
+      "filename": "BlueImpulse_Video03_Network_Challenges_Script_Teaching_Outline.pdf",
+      "pages": 8,
+      "sha256": "4049f12b7c37263c3c765bd65a72fb077e0fba57885de9c107280188c1ea52e3",
+      "text_spans_checked": 436,
+      "fonts": [
+        "Inter-Bold",
+        "Inter-Regular"
+      ]
+    },
+    {
+      "filename": "BlueImpulse_Video03_Network_Challenges_Tutorial.pdf",
+      "pages": 5,
+      "sha256": "b3d854d823ac2c639e7c5a50b7b8c03478fc802848713ca5139c4b0d68f19988",
+      "text_spans_checked": 250,
+      "fonts": [
+        "Inter-Bold",
+        "Inter-Regular"
+      ]
+    },
+    {
+      "filename": "BlueImpulse_Video04_Networking_for_Behaviorist_AI_Script_Teaching_Outline.pdf",
+      "pages": 8,
+      "sha256": "0624b726a6fce73b82bf8f7ba1c28944408af0e2ca4e7f2b3d1de814eb41f712",
+      "text_spans_checked": 460,
+      "fonts": [
+        "Inter-Bold",
+        "Inter-Regular"
+      ]
+    },
+    {
+      "filename": "BlueImpulse_Video04_Networking_for_Behaviorist_AI_Tutorial.pdf",
+      "pages": 6,
+      "sha256": "ba649a83be74dbecbe307fbd15b229a6ae8ad2a625f22feebdce9187b809e171",
+      "text_spans_checked": 278,
+      "fonts": [
+        "Inter-Bold",
+        "Inter-Regular"
+      ]
+    },
+    {
+      "filename": "BlueImpulse_Video05_Program_Execution_Script_Teaching_Outline.pdf",
+      "pages": 8,
+      "sha256": "fa6b51147159c8b356cca4e0841c94d8ac4e31bd0cf1091138536fefb3a8ab65",
+      "text_spans_checked": 451,
+      "fonts": [
+        "Inter-Bold",
+        "Inter-Regular"
+      ]
+    },
+    {
+      "filename": "BlueImpulse_Video05_Program_Execution_Tutorial.pdf",
+      "pages": 6,
+      "sha256": "e717cb3d3dbc616f54abb673fd9fe2bff01778d09d146921ef66f4173f694410",
+      "text_spans_checked": 267,
+      "fonts": [
+        "Inter-Bold",
+        "Inter-Regular"
+      ]
+    }
+  ],
+  "video_metadata_final": true,
+  "pending": [],
+  "human_review": "Independent teammate viewing and learner attempt not supplied; not claimed."
+}

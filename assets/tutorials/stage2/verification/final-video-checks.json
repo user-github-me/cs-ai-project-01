@@ -1,0 +1,615 @@
+{
+  "scope": "Post-render machine checks plus separately recorded AI proof-frame inspections.",
+  "status": "pass",
+  "automated_status": "pass",
+  "completed_videos": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "passed_videos": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "videos": [
+    {
+      "video": 1,
+      "file": "assets/tutorials/stage2/videos/BlueImpulse_Video01_Basic_Reinforcement_Learning.mp4",
+      "status": "pass",
+      "failures": [],
+      "bytes": 47425849,
+      "sha256": "95f891130387b6ede69a6f6e0dbf0522971948bfcb201f03d9ae5ac681a137a7",
+      "container_duration_seconds": 600.0,
+      "video_stream": {
+        "codec": "h264",
+        "pixel_format": "yuvj420p",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 36000,
+        "duration_seconds": 600.0,
+        "color_range": "pc",
+        "color_space": "bt470bg"
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": 48000,
+        "channels": 2,
+        "duration_seconds": 600.0,
+        "source_sha256": "c15e242eb846608ccd7c4dc4f096347a8157c0084ea1e0d4dd7bdc323f0c7d29",
+        "copied_payloads_identical": true,
+        "packet_timing_identical": true,
+        "source_packets": {
+          "packets": 28126,
+          "payload_sequence_sha256": "4c97d8eb35ede333f2e44745692017be35b571c14f53088162779cde61a1c46c",
+          "timing_sequence_sha256": "84821201ae6bcc93362f9603baf5ee5512770be4d7f9aaea2fa5c5435ba774d6",
+          "first_packet_pts": -1024,
+          "last_packet_pts": 28798976,
+          "last_packet_duration": 1024
+        },
+        "delivery_packets": {
+          "packets": 28126,
+          "payload_sequence_sha256": "4c97d8eb35ede333f2e44745692017be35b571c14f53088162779cde61a1c46c",
+          "timing_sequence_sha256": "84821201ae6bcc93362f9603baf5ee5512770be4d7f9aaea2fa5c5435ba774d6",
+          "first_packet_pts": -1024,
+          "last_packet_pts": 28798976,
+          "last_packet_duration": 1024
+        },
+        "integrated_loudness_lufs": -16.13,
+        "true_peak_dbtp": -1.95,
+        "minimum_voice_above_score_db": 21.072424138051197,
+        "measurement_scope": "Encoded-mix measurements carried forward after exact source-file, AAC payload and packet-timing identity checks; no listening test."
+      },
+      "captions": {
+        "file": "../subtitles/BlueImpulse_Video01_Basic_Reinforcement_Learning.srt",
+        "sha256": "4c7a8864265c898c9eb2e87911a3f70c910f9a6eb874046c6963abc5cdcd7ec7",
+        "caption_count": 96,
+        "max_srt_rows": 2,
+        "max_timestamp_rounding_error_seconds": 0.000493,
+        "match_frozen_html": true,
+        "failures": []
+      },
+      "decode": {
+        "full_decode_returncode": 0,
+        "full_decode_error_output": "",
+        "decoded_video_frames": 36000,
+        "threads": 1,
+        "endpoint_ssim": 0.997273,
+        "endpoint_psnr_db": "45.997931",
+        "endpoint_metric_scope": "Lossless PNGs of decoded MP4 first/last frames; JPEG proof conversion occurs after measurement.",
+        "proofs": [
+          {
+            "kind": "first",
+            "output_frame_index": 0,
+            "time_seconds": 0.0,
+            "middle_temporal_sample_seconds": 0.008333333,
+            "expected_caption": null,
+            "file": "encoded/video-01/first-frame-00000.jpg",
+            "bytes": 142009,
+            "visual_review": "measured_only"
+          },
+          {
+            "kind": "demo",
+            "output_frame_index": 23478,
+            "time_seconds": 391.3,
+            "middle_temporal_sample_seconds": 391.308333333,
+            "expected_caption": "The supporting Python file repeats this calculation and prints every intermediate value for you to inspect.",
+            "file": "encoded/video-01/demo-frame-23478.jpg",
+            "bytes": 220182,
+            "visual_review": "pass"
+          },
+          {
+            "kind": "two-line-caption",
+            "output_frame_index": 21600,
+            "time_seconds": 360.0,
+            "middle_temporal_sample_seconds": 360.008333333,
+            "expected_caption": "Next subtract the old estimate. Four point six minus two gives an error of two point six.",
+            "file": "encoded/video-01/two-line-caption-frame-21600.jpg",
+            "bytes": 202113,
+            "visual_review": "pass"
+          },
+          {
+            "kind": "last",
+            "output_frame_index": 35999,
+            "time_seconds": 599.983333333,
+            "middle_temporal_sample_seconds": 599.991666667,
+            "expected_caption": null,
+            "file": "encoded/video-01/last-frame-35999.jpg",
+            "bytes": 142972,
+            "visual_review": "measured_only"
+          }
+        ]
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewer": "AI",
+        "human_full_viewing": false,
+        "images_inspected": 2,
+        "notes": "Q demo retains readable inputs, intermediate values and 3.3 result. The midpoint annotation clears the marker. At frame 21600 the error calculation is 4.6 minus 2 = 2.6 and the two-line caption matches the measured narration text."
+      },
+      "verification_elapsed_seconds": 47.31,
+      "format_validation_note": "Full-range yuvj420p is the FFprobe alias for 8-bit YUV 4:2:0. Accepted alongside limited-range yuv420p; all original decode evidence retained."
+    },
+    {
+      "video": 2,
+      "file": "assets/tutorials/stage2/videos/BlueImpulse_Video02_How_Hardware_Enables_AI.mp4",
+      "status": "pass",
+      "failures": [],
+      "bytes": 48161007,
+      "sha256": "bd0572e066c05982caf99dab5d0e0eec660619803e370beefca4bf7e1839ceea",
+      "container_duration_seconds": 600.0,
+      "video_stream": {
+        "codec": "h264",
+        "pixel_format": "yuvj420p",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 36000,
+        "duration_seconds": 600.0,
+        "color_range": "pc",
+        "color_space": "bt470bg"
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": 48000,
+        "channels": 2,
+        "duration_seconds": 600.0,
+        "source_sha256": "c4b9a67747e420eff817b318369c9e858adcd62e4ee00384d8bacc0b7ab0ea9a",
+        "copied_payloads_identical": true,
+        "packet_timing_identical": true,
+        "source_packets": {
+          "packets": 28126,
+          "payload_sequence_sha256": "6ec94674a1e1654cfd8e51d29b53384b44968b83aa7125350314dc32fefb94f1",
+          "timing_sequence_sha256": "84821201ae6bcc93362f9603baf5ee5512770be4d7f9aaea2fa5c5435ba774d6",
+          "first_packet_pts": -1024,
+          "last_packet_pts": 28798976,
+          "last_packet_duration": 1024
+        },
+        "delivery_packets": {
+          "packets": 28126,
+          "payload_sequence_sha256": "6ec94674a1e1654cfd8e51d29b53384b44968b83aa7125350314dc32fefb94f1",
+          "timing_sequence_sha256": "84821201ae6bcc93362f9603baf5ee5512770be4d7f9aaea2fa5c5435ba774d6",
+          "first_packet_pts": -1024,
+          "last_packet_pts": 28798976,
+          "last_packet_duration": 1024
+        },
+        "integrated_loudness_lufs": -16.12,
+        "true_peak_dbtp": -2.04,
+        "minimum_voice_above_score_db": 22.113312855736783,
+        "measurement_scope": "Encoded-mix measurements carried forward after exact source-file, AAC payload and packet-timing identity checks; no listening test."
+      },
+      "captions": {
+        "file": "../subtitles/BlueImpulse_Video02_How_Hardware_Enables_AI.srt",
+        "sha256": "ae343df6b89759f7f1445babf3eb92f465bbab00c479b1201559dcc8a4bae5fc",
+        "caption_count": 94,
+        "max_srt_rows": 2,
+        "max_timestamp_rounding_error_seconds": 0.000493,
+        "match_frozen_html": true,
+        "failures": []
+      },
+      "decode": {
+        "full_decode_returncode": 0,
+        "full_decode_error_output": "",
+        "decoded_video_frames": 36000,
+        "threads": 1,
+        "endpoint_ssim": 0.997548,
+        "endpoint_psnr_db": "46.465626",
+        "endpoint_metric_scope": "Lossless PNGs of decoded MP4 first/last frames; JPEG proof conversion occurs after measurement.",
+        "proofs": [
+          {
+            "kind": "first",
+            "output_frame_index": 0,
+            "time_seconds": 0.0,
+            "middle_temporal_sample_seconds": 0.008333333,
+            "expected_caption": null,
+            "file": "encoded/video-02/first-frame-00000.jpg",
+            "bytes": 131744,
+            "visual_review": "measured_only"
+          },
+          {
+            "kind": "demo",
+            "output_frame_index": 19470,
+            "time_seconds": 324.5,
+            "middle_temporal_sample_seconds": 324.508333333,
+            "expected_caption": "Real pipelines can pause for dependencies, uncertain branches,",
+            "file": "encoded/video-02/demo-frame-19470.jpg",
+            "bytes": 224471,
+            "visual_review": "pass"
+          },
+          {
+            "kind": "two-line-caption",
+            "output_frame_index": 17843,
+            "time_seconds": 297.383333333,
+            "middle_temporal_sample_seconds": 297.391666667,
+            "expected_caption": "Instruction one enters fetch in cycle one. In cycle two, it decodes while instruction two enters fetch.",
+            "file": "encoded/video-02/two-line-caption-frame-17843.jpg",
+            "bytes": 228470,
+            "visual_review": "pass"
+          },
+          {
+            "kind": "last",
+            "output_frame_index": 35999,
+            "time_seconds": 599.983333333,
+            "middle_temporal_sample_seconds": 599.991666667,
+            "expected_caption": null,
+            "file": "encoded/video-02/last-frame-35999.jpg",
+            "bytes": 132948,
+            "visual_review": "measured_only"
+          }
+        ]
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewer": "AI",
+        "human_full_viewing": false,
+        "images_inspected": 2,
+        "notes": "Pipeline stages, instruction rows, CYCLE labels and completion-cycle explanation remain separate. The completed trace and a two-line caption at frame 17843 are readable."
+      },
+      "verification_elapsed_seconds": 43.72,
+      "format_validation_note": "Full-range yuvj420p is the FFprobe alias for 8-bit YUV 4:2:0. Accepted alongside limited-range yuv420p; all original decode evidence retained."
+    },
+    {
+      "video": 3,
+      "file": "assets/tutorials/stage2/videos/BlueImpulse_Video03_Network_Challenges.mp4",
+      "status": "pass",
+      "failures": [],
+      "bytes": 48902815,
+      "sha256": "cd7b27582950e5fef6c2a4184375fd1d20515d40d5698b95f12fdde71246998b",
+      "container_duration_seconds": 600.0,
+      "video_stream": {
+        "codec": "h264",
+        "pixel_format": "yuvj420p",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 36000,
+        "duration_seconds": 600.0,
+        "color_range": "pc",
+        "color_space": "bt470bg"
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": 48000,
+        "channels": 2,
+        "duration_seconds": 600.0,
+        "source_sha256": "bcffc2ca725ee1eb9fae94e241535b0737621135d88dfc146bf821c7559dab64",
+        "copied_payloads_identical": true,
+        "packet_timing_identical": true,
+        "source_packets": {
+          "packets": 28126,
+          "payload_sequence_sha256": "4c0ae0f2d29e1a9874b653c6fe804ab84a7a5f7d5e8b7c22d935e9c596cbc807",
+          "timing_sequence_sha256": "84821201ae6bcc93362f9603baf5ee5512770be4d7f9aaea2fa5c5435ba774d6",
+          "first_packet_pts": -1024,
+          "last_packet_pts": 28798976,
+          "last_packet_duration": 1024
+        },
+        "delivery_packets": {
+          "packets": 28126,
+          "payload_sequence_sha256": "4c0ae0f2d29e1a9874b653c6fe804ab84a7a5f7d5e8b7c22d935e9c596cbc807",
+          "timing_sequence_sha256": "84821201ae6bcc93362f9603baf5ee5512770be4d7f9aaea2fa5c5435ba774d6",
+          "first_packet_pts": -1024,
+          "last_packet_pts": 28798976,
+          "last_packet_duration": 1024
+        },
+        "integrated_loudness_lufs": -16.12,
+        "true_peak_dbtp": -1.72,
+        "minimum_voice_above_score_db": 25.48361716188049,
+        "measurement_scope": "Encoded-mix measurements carried forward after exact source-file, AAC payload and packet-timing identity checks; no listening test."
+      },
+      "captions": {
+        "file": "../subtitles/BlueImpulse_Video03_Network_Challenges.srt",
+        "sha256": "00197391edcaad391bb325b96625fd2ebb2f5886189aab87891eecebc691b94e",
+        "caption_count": 96,
+        "max_srt_rows": 2,
+        "max_timestamp_rounding_error_seconds": 0.000493,
+        "match_frozen_html": true,
+        "failures": []
+      },
+      "decode": {
+        "full_decode_returncode": 0,
+        "full_decode_error_output": "",
+        "decoded_video_frames": 36000,
+        "threads": 1,
+        "endpoint_ssim": 0.997499,
+        "endpoint_psnr_db": "46.410974",
+        "endpoint_metric_scope": "Lossless PNGs of decoded MP4 first/last frames; JPEG proof conversion occurs after measurement.",
+        "proofs": [
+          {
+            "kind": "first",
+            "output_frame_index": 0,
+            "time_seconds": 0.0,
+            "middle_temporal_sample_seconds": 0.008333333,
+            "expected_caption": null,
+            "file": "encoded/video-03/first-frame-00000.jpg",
+            "bytes": 130586,
+            "visual_review": "measured_only"
+          },
+          {
+            "kind": "demo",
+            "output_frame_index": 18750,
+            "time_seconds": 312.5,
+            "middle_temporal_sample_seconds": 312.508333333,
+            "expected_caption": "Watch the three distances grow from the same starting point. We changed delay while keeping speed fixed.",
+            "file": "encoded/video-03/demo-frame-18750.jpg",
+            "bytes": 227025,
+            "visual_review": "pass"
+          },
+          {
+            "kind": "two-line-caption",
+            "output_frame_index": 17405,
+            "time_seconds": 290.083333333,
+            "middle_temporal_sample_seconds": 290.091666667,
+            "expected_caption": "Five hundred milliseconds is zero point five seconds. Thirty times zero point five gives fifteen metres.",
+            "file": "encoded/video-03/two-line-caption-frame-17405.jpg",
+            "bytes": 218770,
+            "visual_review": "pass"
+          },
+          {
+            "kind": "last",
+            "output_frame_index": 35999,
+            "time_seconds": 599.983333333,
+            "middle_temporal_sample_seconds": 599.991666667,
+            "expected_caption": null,
+            "file": "encoded/video-03/last-frame-35999.jpg",
+            "bytes": 131580,
+            "visual_review": "measured_only"
+          }
+        ]
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewer": "AI",
+        "human_full_viewing": false,
+        "images_inspected": 2,
+        "notes": "The three delay-distance values use a shared scale with a separate legend and stopping-distance qualification. The two-line caption at frame 17405 matches the visible 500 ms to 15 m step."
+      },
+      "verification_elapsed_seconds": 43.21,
+      "format_validation_note": "Full-range yuvj420p is the FFprobe alias for 8-bit YUV 4:2:0. Accepted alongside limited-range yuv420p; all original decode evidence retained."
+    },
+    {
+      "video": 4,
+      "file": "assets/tutorials/stage2/videos/BlueImpulse_Video04_Networking_for_Behaviorist_AI.mp4",
+      "status": "pass",
+      "failures": [],
+      "bytes": 50061875,
+      "sha256": "a2c3fd1e8f6d21345d75b1b397cc72cedb4073465fe1b3153ad53b6ebb466673",
+      "container_duration_seconds": 600.0,
+      "video_stream": {
+        "codec": "h264",
+        "pixel_format": "yuvj420p",
+        "color_range": "pc",
+        "color_space": "bt470bg",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 36000,
+        "duration_seconds": 600.0
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": 48000,
+        "channels": 2,
+        "duration_seconds": 600.0,
+        "source_sha256": "1d566fcb05e1cfe7be30252c15a765320c24cbadb63fb8cae2a0adb2aee79689",
+        "copied_payloads_identical": true,
+        "packet_timing_identical": true,
+        "source_packets": {
+          "packets": 28126,
+          "payload_sequence_sha256": "cf6f9f20caf0acea86d6218cbf3a937bcff1dc3a4641c4c4736441e69bcbf76b",
+          "timing_sequence_sha256": "84821201ae6bcc93362f9603baf5ee5512770be4d7f9aaea2fa5c5435ba774d6",
+          "first_packet_pts": -1024,
+          "last_packet_pts": 28798976,
+          "last_packet_duration": 1024
+        },
+        "delivery_packets": {
+          "packets": 28126,
+          "payload_sequence_sha256": "cf6f9f20caf0acea86d6218cbf3a937bcff1dc3a4641c4c4736441e69bcbf76b",
+          "timing_sequence_sha256": "84821201ae6bcc93362f9603baf5ee5512770be4d7f9aaea2fa5c5435ba774d6",
+          "first_packet_pts": -1024,
+          "last_packet_pts": 28798976,
+          "last_packet_duration": 1024
+        },
+        "integrated_loudness_lufs": -16.12,
+        "true_peak_dbtp": -1.61,
+        "minimum_voice_above_score_db": 22.284711164430547,
+        "measurement_scope": "Encoded-mix measurements carried forward after exact source-file, AAC payload and packet-timing identity checks; no listening test."
+      },
+      "captions": {
+        "file": "../subtitles/BlueImpulse_Video04_Networking_for_Behaviorist_AI.srt",
+        "sha256": "aac9a89bca51084dad5bac9ea87c8f1b5382c1dc440fdb12aafb756841584a76",
+        "caption_count": 102,
+        "max_srt_rows": 2,
+        "max_timestamp_rounding_error_seconds": 0.000464,
+        "match_frozen_html": true,
+        "failures": []
+      },
+      "decode": {
+        "full_decode_returncode": 0,
+        "full_decode_error_output": "",
+        "decoded_video_frames": 36000,
+        "threads": 1,
+        "endpoint_ssim": 0.997488,
+        "endpoint_psnr_db": "46.014410",
+        "endpoint_metric_scope": "Lossless PNGs of decoded MP4 first/last frames; JPEG proof conversion occurs after measurement.",
+        "proofs": [
+          {
+            "kind": "first",
+            "output_frame_index": 0,
+            "time_seconds": 0.0,
+            "middle_temporal_sample_seconds": 0.008333333,
+            "expected_caption": null,
+            "file": "encoded/video-04/first-frame-00000.jpg",
+            "bytes": 133825,
+            "visual_review": "measured_only"
+          },
+          {
+            "kind": "demo",
+            "output_frame_index": 20190,
+            "time_seconds": 336.5,
+            "middle_temporal_sample_seconds": 336.508333333,
+            "expected_caption": "implement cryptographic authentication or certify a safety-critical controller.",
+            "file": "encoded/video-04/demo-frame-20190.jpg",
+            "bytes": 251236,
+            "visual_review": "pass"
+          },
+          {
+            "kind": "two-line-caption",
+            "output_frame_index": 17155,
+            "time_seconds": 285.916666667,
+            "middle_temporal_sample_seconds": 285.925,
+            "expected_caption": "Run the supporting packet-checking example. This is an illustrative receiver design,",
+            "file": "encoded/video-04/two-line-caption-frame-17155.jpg",
+            "bytes": 271355,
+            "visual_review": "pass"
+          },
+          {
+            "kind": "last",
+            "output_frame_index": 35999,
+            "time_seconds": 599.983333333,
+            "middle_temporal_sample_seconds": 599.991666667,
+            "expected_caption": null,
+            "file": "encoded/video-04/last-frame-35999.jpg",
+            "bytes": 135052,
+            "visual_review": "measured_only"
+          }
+        ]
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewer": "AI",
+        "human_full_viewing": false,
+        "images_inspected": 2,
+        "notes": "The three decoded verdicts ACCEPT, STALE and DUPLICATE match their sequence and age values. Context and authentication qualification remain distinct. The two-line caption at frame 17155 is readable and matches the measured text."
+      },
+      "verification_elapsed_seconds": 26.35
+    },
+    {
+      "video": 5,
+      "file": "assets/tutorials/stage2/videos/BlueImpulse_Video05_Program_Execution.mp4",
+      "status": "pass",
+      "failures": [],
+      "bytes": 45852242,
+      "sha256": "db186cf7091ac0adba212616d407b0c81218c2de97b0adb77c081721b86d1d0b",
+      "container_duration_seconds": 600.0,
+      "video_stream": {
+        "codec": "h264",
+        "pixel_format": "yuvj420p",
+        "color_range": "pc",
+        "color_space": "bt470bg",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 36000,
+        "duration_seconds": 600.0
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": 48000,
+        "channels": 2,
+        "duration_seconds": 600.0,
+        "source_sha256": "3e1504a884156229ad95966a30a13d4cb67b4a25263665d4cb7a2ccb8c50d54e",
+        "copied_payloads_identical": true,
+        "packet_timing_identical": true,
+        "source_packets": {
+          "packets": 28126,
+          "payload_sequence_sha256": "7450aae6c825266c51b19e84244a5a803cdc4f8dfdc51955d31bd0388d0f27dd",
+          "timing_sequence_sha256": "84821201ae6bcc93362f9603baf5ee5512770be4d7f9aaea2fa5c5435ba774d6",
+          "first_packet_pts": -1024,
+          "last_packet_pts": 28798976,
+          "last_packet_duration": 1024
+        },
+        "delivery_packets": {
+          "packets": 28126,
+          "payload_sequence_sha256": "7450aae6c825266c51b19e84244a5a803cdc4f8dfdc51955d31bd0388d0f27dd",
+          "timing_sequence_sha256": "84821201ae6bcc93362f9603baf5ee5512770be4d7f9aaea2fa5c5435ba774d6",
+          "first_packet_pts": -1024,
+          "last_packet_pts": 28798976,
+          "last_packet_duration": 1024
+        },
+        "integrated_loudness_lufs": -16.12,
+        "true_peak_dbtp": -2.03,
+        "minimum_voice_above_score_db": 21.005051371644576,
+        "measurement_scope": "Encoded-mix measurements carried forward after exact source-file, AAC payload and packet-timing identity checks; no listening test."
+      },
+      "captions": {
+        "file": "../subtitles/BlueImpulse_Video05_Program_Execution.srt",
+        "sha256": "59bd4b799718f833102d76abc959b1125d9138f7ddab030104321d3309b1ab9d",
+        "caption_count": 101,
+        "max_srt_rows": 2,
+        "max_timestamp_rounding_error_seconds": 0.000493,
+        "match_frozen_html": true,
+        "failures": []
+      },
+      "decode": {
+        "full_decode_returncode": 0,
+        "full_decode_error_output": "",
+        "decoded_video_frames": 36000,
+        "threads": 1,
+        "endpoint_ssim": 0.997459,
+        "endpoint_psnr_db": "46.427818",
+        "endpoint_metric_scope": "Lossless PNGs of decoded MP4 first/last frames; JPEG proof conversion occurs after measurement.",
+        "proofs": [
+          {
+            "kind": "first",
+            "output_frame_index": 0,
+            "time_seconds": 0.0,
+            "middle_temporal_sample_seconds": 0.008333333,
+            "expected_caption": null,
+            "file": "encoded/video-05/first-frame-00000.jpg",
+            "bytes": 132604,
+            "visual_review": "measured_only"
+          },
+          {
+            "kind": "demo",
+            "output_frame_index": 20066,
+            "time_seconds": 334.433333333,
+            "middle_temporal_sample_seconds": 334.441666667,
+            "expected_caption": "the fetch advances the counter to one hundred and four before execution stops.",
+            "file": "encoded/video-05/demo-frame-20066.jpg",
+            "bytes": 204486,
+            "visual_review": "pass"
+          },
+          {
+            "kind": "two-line-caption",
+            "output_frame_index": 17843,
+            "time_seconds": 297.383333333,
+            "middle_temporal_sample_seconds": 297.391666667,
+            "expected_caption": "Next fetch ADD, hash four from address one hundred and one. The program counter advances to one hundred and two.",
+            "file": "encoded/video-05/two-line-caption-frame-17843.jpg",
+            "bytes": 228837,
+            "visual_review": "pass"
+          },
+          {
+            "kind": "last",
+            "output_frame_index": 35999,
+            "time_seconds": 599.983333333,
+            "middle_temporal_sample_seconds": 599.991666667,
+            "expected_caption": null,
+            "file": "encoded/video-05/last-frame-35999.jpg",
+            "bytes": 133995,
+            "visual_review": "measured_only"
+          }
+        ]
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewer": "AI",
+        "human_full_viewing": false,
+        "images_inspected": 2,
+        "notes": "The HALT proof shows PC 104, CIR HALT, ACC 7 and memory[200] 7. The ADD-fetch proof at frame 17843 shows PC 102, CIR ADD #4, ACC 3 and unwritten memory, consistent with its readable two-line caption."
+      },
+      "verification_elapsed_seconds": 26.0
+    }
+  ],
+  "quality_limits": [
+    "Machine decoding and metadata checks do not establish educational effectiveness or full-motion pacing.",
+    "AI visual inspection is limited to one demo and one two-line-caption proof per video, once marked reviewed.",
+    "Encoded endpoint SSIM measures the loop seam; it is not a whole-film perceptual quality score.",
+    "Narration is disclosed synthetic Kokoro speech. No human full viewing, listening, peer feedback or rehearsal is claimed."
+  ]
+}

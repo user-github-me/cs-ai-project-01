@@ -1,0 +1,247 @@
+{
+  "recommendation": "go_to_full_render",
+  "scope": "Pre-render review of five 600-second, 1920x1080 tutorial compositions at 115 BPM and 60 output fps.",
+  "source_hashes": {
+    "index_html_sha256": "df8664155a367485ecba46c1c5c45da46504dc02d15de0115ac87fa1adfb1d2e",
+    "composition_js_sha256": "3cb3299efe9dd7d1e4b51048d7ce6979dc109ca22e1c3c1b80f5fe352969e628"
+  },
+  "prior_visual_review": {
+    "provenance": "Coverage reported by the coordinating agent; not re-performed in this final pass.",
+    "video_01_to_03_contact_sheets": 54,
+    "video_04_to_05_contact_sheets": 36,
+    "total_unique_beat_frames": 5750,
+    "revision": "Before the final localized fixes. The no-sheets audit intentionally does not rebuild those older contact sheets."
+  },
+  "final_visual_review": {
+    "image_inspections": 14,
+    "distinct_video_beat_pairs": 12,
+    "method": "Direct visual inspection of full-resolution 1920x1080 critical beat captures. Two frames were inspected again after the final Q-label/caption adjustment.",
+    "frames": [
+      {
+        "video": 1,
+        "beat": 181,
+        "focus": "RL return arrow clears the four tiles and explanatory line.",
+        "revision": "before last global caption adjustment",
+        "time_seconds": 93.913043478,
+        "path": "review/video-01/beats/0181.jpg",
+        "status": "pass"
+      },
+      {
+        "video": 2,
+        "beat": 540,
+        "focus": "Pipeline CYCLE 0 and completion text are distinct.",
+        "revision": "before last global caption adjustment",
+        "time_seconds": 281.217391304,
+        "path": "review/video-02/beats/0540.jpg",
+        "status": "pass"
+      },
+      {
+        "video": 2,
+        "beat": 623,
+        "focus": "Pipeline CYCLE 6, completion cycles 4/5/6 and all filled stages read clearly.",
+        "revision": "before last global caption adjustment",
+        "time_seconds": 324.52173913,
+        "path": "review/video-02/beats/0623.jpg",
+        "status": "pass"
+      },
+      {
+        "video": 3,
+        "beat": 600,
+        "focus": "All three distance bars, shared-scale legend and stopping-distance qualification are separated.",
+        "revision": "before last global caption adjustment",
+        "time_seconds": 312.52173913,
+        "path": "review/video-03/beats/0600.jpg",
+        "status": "pass"
+      },
+      {
+        "video": 4,
+        "beat": 544,
+        "focus": "Packet context, three pending verdicts and authentication qualification are separated.",
+        "revision": "before and after last global caption adjustment",
+        "time_seconds": 283.304347826,
+        "path": "review/video-04/beats/0544.jpg",
+        "status": "pass"
+      },
+      {
+        "video": 4,
+        "beat": 646,
+        "focus": "ACCEPT / STALE / DUPLICATE are visible and correctly associated with the three packets.",
+        "revision": "before last global caption adjustment",
+        "time_seconds": 336.52173913,
+        "path": "review/video-04/beats/0646.jpg",
+        "status": "pass"
+      },
+      {
+        "video": 5,
+        "beat": 544,
+        "focus": "Initial PC is 100; accumulator and destination remain unwritten.",
+        "revision": "before last global caption adjustment",
+        "time_seconds": 283.304347826,
+        "path": "review/video-05/beats/0544.jpg",
+        "status": "pass"
+      },
+      {
+        "video": 5,
+        "beat": 552,
+        "focus": "After first fetch, PC is 101 and LOAD is the current instruction.",
+        "revision": "before last global caption adjustment",
+        "time_seconds": 287.47826087,
+        "path": "review/video-05/beats/0552.jpg",
+        "status": "pass"
+      },
+      {
+        "video": 1,
+        "beat": 751,
+        "focus": "Q update reaches 3.3; the midpoint annotation now clears the pink marker. Two-line caption stays above the safe boundary.",
+        "revision": "before and after final Q-label and caption adjustment",
+        "time_seconds": 391.304347826,
+        "path": "review/video-01/beats/0751.jpg",
+        "status": "pass"
+      },
+      {
+        "video": 1,
+        "beat": 1147,
+        "focus": "Final Q result uses supported text: Q: 2 to 3.3.",
+        "revision": "before last global caption adjustment",
+        "time_seconds": 597.913043478,
+        "path": "review/video-01/beats/1147.jpg",
+        "status": "pass"
+      },
+      {
+        "video": 3,
+        "beat": 1147,
+        "focus": "Final delay result uses supported text: 500 ms to 15 m.",
+        "revision": "before last global caption adjustment",
+        "time_seconds": 597.913043478,
+        "path": "review/video-03/beats/1147.jpg",
+        "status": "pass"
+      },
+      {
+        "video": 5,
+        "beat": 642,
+        "focus": "HALT state shows PC 104, ACC 7 and memory[200] 7.",
+        "revision": "before last global caption adjustment",
+        "time_seconds": 334.434782609,
+        "path": "review/video-05/beats/0642.jpg",
+        "status": "pass"
+      }
+    ]
+  },
+  "final_automated_audit": {
+    "total_beat_frames": 5750,
+    "caption_title_safe_box": [
+      192,
+      108,
+      1728,
+      972
+    ],
+    "max_caption_diagnostic_bottom_px": 971.5,
+    "caption_and_unmasked_main_text_safe_failures": 0,
+    "nonpositive_font_diagnostics": 0,
+    "videos": [
+      {
+        "video": 1,
+        "beat_frames": 1150,
+        "all_beats_covered": true,
+        "min_font_px": 23,
+        "max_caption_rows": 2,
+        "missing_font_glyphs": {},
+        "flags": [],
+        "unmasked_text_overlap_count": 0,
+        "masked_transition_overlap_count": 59,
+        "critical_frames": 53
+      },
+      {
+        "video": 2,
+        "beat_frames": 1150,
+        "all_beats_covered": true,
+        "min_font_px": 23,
+        "max_caption_rows": 2,
+        "missing_font_glyphs": {},
+        "flags": [],
+        "unmasked_text_overlap_count": 0,
+        "masked_transition_overlap_count": 71,
+        "critical_frames": 50
+      },
+      {
+        "video": 3,
+        "beat_frames": 1150,
+        "all_beats_covered": true,
+        "min_font_px": 23,
+        "max_caption_rows": 2,
+        "missing_font_glyphs": {},
+        "flags": [],
+        "unmasked_text_overlap_count": 0,
+        "masked_transition_overlap_count": 52,
+        "critical_frames": 49
+      },
+      {
+        "video": 4,
+        "beat_frames": 1150,
+        "all_beats_covered": true,
+        "min_font_px": 23,
+        "max_caption_rows": 2,
+        "missing_font_glyphs": {},
+        "flags": [],
+        "unmasked_text_overlap_count": 0,
+        "masked_transition_overlap_count": 71,
+        "critical_frames": 51
+      },
+      {
+        "video": 5,
+        "beat_frames": 1150,
+        "all_beats_covered": true,
+        "min_font_px": 23,
+        "max_caption_rows": 2,
+        "missing_font_glyphs": {},
+        "flags": [],
+        "unmasked_text_overlap_count": 0,
+        "masked_transition_overlap_count": 61,
+        "critical_frames": 53
+      }
+    ]
+  },
+  "determinism": {
+    "timestamps_per_video": 52,
+    "total_timestamp_comparisons": 260,
+    "method": "Compare JPEG SHA-256 and diagnostic SHA-256 in forward and reverse seek order, including each scene at +0.05s, +0.4s, +2s and midpoint, plus endpoints.",
+    "failures": 0
+  },
+  "loop_endpoints": {
+    "videos_passed": 5,
+    "output_frame_indices": [
+      0,
+      35999
+    ],
+    "temporal_samples_per_output_frame": 3,
+    "fps": 60,
+    "result": "All six endpoint source samples match within each video. The exact ffmpeg three-sample blend produces byte-identical first and last raw yuv420p output frames.",
+    "scope": "This checks blended render endpoints; the full delivery MP4 has not been encoded or decoded by this pass."
+  },
+  "chapter_citations": {
+    "scenes_checked": 60,
+    "failures": 0,
+    "reference": "content/topic-map.json and source/chapter-citations.json"
+  },
+  "browser_errors": 0,
+  "fixed_in_final_pass": [
+    "Moved the Q midpoint annotation from baseline 742 to 720 to clear its marker.",
+    "Moved caption baselines to 913 and 962, keeping their diagnostic bottom at or below 971.5.",
+    "Stopped drawing shrinking tile labels when their available dimensions are too small, and rejected invalid text sizes."
+  ],
+  "remaining_render_blockers": [],
+  "limitations": [
+    "This is AI-assisted static-frame review, not a human teammate viewing, peer-feedback session, or rehearsal.",
+    "All final beat frames were audited automatically; only the 14 specified image inspections were performed in this final pass. Prior contact-sheet review belongs to an earlier revision.",
+    "Diagnostic text rectangles are approximate. Masked transitions contain hidden old/new states, so their 314 rectangle intersections are recorded separately rather than treated as visible collisions.",
+    "Secondary footer text has a 23px minimum size; no phone-width readability claim is made.",
+    "Beat sampling and limited seek tests cannot establish every intermediate animation frame, complete temporal-blur quality, or full-motion pacing.",
+    "Audio was not listened to or measured in this preflight. Full delivery encoding, metadata, decode integrity and audio validation remain post-render checks."
+  ],
+  "artifacts": [
+    "source/review_beats.py",
+    "source/preflight.mjs",
+    "review/preflight-checks.json",
+    "review/all-beat-coverage-manifest.json"
+  ]
+}

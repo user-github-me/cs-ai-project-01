@@ -1,0 +1,18 @@
+[
+  {
+    "source": "RFC9293",
+    "checked_excerpt": "re labeled the same as \"SHOULD\" and \"MUST\" instances. 2.2. Key TCP Concepts TCP provides a reliable, in-order, byte-stream service to applications. The application byte-stream is conveyed over the network via TCP segments, with each TCP segment sent as an Internet Protocol (IP) datagram. TCP reliability consists of detecting packet losses (via sequence numbers) and errors (via per-segment checksums), as well as correction via retransmission. TCP supports unica"
+  },
+  {
+    "source": "RFC768",
+    "checked_excerpt": " other programs with a minimum of protocol mechanism. The protocol is transaction oriented, and delivery and duplicate protection are not guaranteed. Applications requiring ordered reliable delivery of streams of data should use the Transmission Control Protocol (TCP) [2]. Format ------ 0 7 8 15 16 23 24 31 +--------+--------+--------+--------+ | Source | Destination | "
+  },
+  {
+    "source": "RFC3986",
+    "checked_excerpt": "etimes better for usability to avoid percent- encoding those characters. 3.5. Fragment The fragment identifier component of a URI allows indirect identification of a secondary resource by reference to a primary resource and additional identifying information. The identified secondary resource may be some portion or subset of the primary resource, some view on representations of the primary resource, or some other resource defined or described by those representations. A"
+  },
+  {
+    "source": "RFC8446",
+    "checked_excerpt": "ve Digital Signature Algorithm (EdDSA) [RFC8032]) or a symmetric pre-shared key (PSK). - Confidentiality: Data sent over the channel after establishment is only visible to the endpoints. TLS does not hide the length of the data it transmits, though endpoints are able to pad TLS records in order to obscure lengths and improve protection against traffic analysis techniques. - Integrity: Data sent over the channel after establishment cannot be modified by attackers withou"
+  }
+]

@@ -206,11 +206,11 @@ def make_schedule():
             if not batch:continue
             pages.append(dict(kind='content',key=f'practice-{ch}-{j//4+1}',title=f'Practice · Chapter {ch}',chapter=ch,
                               exercise=batch[-1],source='Team GitHub exercises',
-                              blocks=[B('Work without an answer key','Write your reasoning before checking the teaching pages. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. These questions come from the team’s repository, with wording clarified where needed.')]+[B(label(k),EXERCISES[k]) for k in batch[:-1]]))
+                              blocks=[B('Try first, then check feedback','Write your reasoning before opening the explained answers after the six chapter missions. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. Match the question number with the answer key in this complete edition.')]+[B(label(k),EXERCISES[k]) for k in batch[:-1]]))
     pages.append(dict(kind='content',key='sources',chapter=6,title='Sources & acknowledgements',exercise='6.7',source='Blue Impulse project materials',blocks=[
       B('Learning materials','This guide is an edited synthesis of the six chapter PDFs supplied by Blue Impulse, with learning outcomes, key terms and exercises from the project repository at revision 9a645d0. The team’s source notes credit Cambridge International AS & A Level Computer Science and disclose use of Gemini, Claude and ChatGPT. The supplied files do not identify a complete textbook edition or bibliography.'),
       B('Artwork and production','The unchanged cover and six labelled dividers come from study guide art.pdf. Its window boxes, folder panels, diagram shapes, aircraft and sky images are reused throughout; the supplementary art PDF guides the layouts. Anta, DIN Condensed, Smiley Sans and Avenir follow the written font brief. Neogpt assisted with editing, diagrams, layout and PDF production.'),
-      B('How to read this edition','Page numbers refer to physical PDF pages, including the cover and dividers. Each teaching or reference page ends with a question from the team’s GitHub exercise files; no answer key is included. Wording is lightly edited for clarity and technical accuracy. Worked examples teach methods using separate examples. The original art’s printed chapter labels determine the divider order.')
+      B('How to read this edition','Page numbers refer to physical PDF pages, including the cover and dividers. Each teaching or reference page ends with a question from the team’s exercise files. The complete Stage 2 edition includes six missions, resources and explained answers after the core chapters. Wording is lightly edited for clarity and technical accuracy. Worked examples teach methods using separate examples. The original art’s printed chapter labels determine the divider order.')
     ]))
     for idx,p in enumerate(pages):p['page']=idx+1
     return pages
@@ -268,8 +268,8 @@ def main():
     ends={ch:max(p['page'] for p in schedule if p['chapter']==ch and p['key']!='sources' and p['key'] not in ['contents','learning-goals-1','learning-goals-2']) for ch in range(1,7)}
     schedule[1]['blocks']=[
       T('Six chapters, one connected story',['Chapter','Read'],[[f'{i:02d} · {TITLES[i]}',f'Pages {starts[i]}–{ends[i]} · {PALETTES[i]["name"]}'] for i in range(1,7)]),
-      B('How to study','Start with a chapter’s learning goals, then read one teaching page at a time. Follow the diagram or worked example. Pause at the question before moving on, and write an answer in your own notes. Return to the chapter’s key terms and practice pages to check your understanding.'),
-      B('Find a page quickly','This PDF has bookmarks for every chapter and teaching page. Page numbers match the PDF viewer, including the unchanged cover and chapter dividers. Exercise links lead to the team’s GitHub files. The learning goals are on pages 3–4; source and production notes are at the end.')
+      B('How to study','Start with a chapter’s learning goals, then read one teaching page at a time. Follow the diagram or worked example. Pause at the question before moving on, and write an answer in your own notes. Then try the matching chapter mission in the activity section beginning on page 97. Explained answers follow the six missions.'),
+      B('Find a page quickly','This PDF has bookmarks for every chapter and teaching page. Page numbers match the PDF viewer, including the unchanged cover and chapter dividers. The learning goals are on pages 3–4. Missions, optional resources and the complete answer key follow page 96; their bookmarks provide direct navigation. GitHub links are supplementary.')
     ]
     raw=TMP/'generated-guide-pages.pdf'
     c=canvas.Canvas(str(raw),pagesize=(W,H),pageCompression=1)

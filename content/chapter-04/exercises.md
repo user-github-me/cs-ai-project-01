@@ -1,26 +1,77 @@
-# Chapter 04: Networking
+# Chapter 4 — Networking
 
-- 1-a) Contrast a Local Area Network (LAN) and a Wide Area Network (WAN) in terms of geographic scale, ownership, and transmission speeds.
-- b) Compare the client-server model with the peer-to-peer (P2P) model regarding resource management and scalability.
-- c) Differentiate between a thick client and a thin client based on where data processing and storage take place.
-- d) What are the primary trade-offs (in terms of cost, security, and control) between using a public cloud versus a private cloud?
+## Exercises
 
-- 2-	How do network systems handle data collisions when multiple devices attempt to transmit data simultaneously over a shared medium (e.g., using CSMA/CD or collision avoidance techniques)?
+Write reasoning, units and intermediate steps. All necessary concepts are explained in draft.md; the answer key is in solutions.md. The numbering preserves the source questions used throughout the guide.
 
-- 3-a) Break down the distinct parts of a Uniform Resource Locator (URL) (e.g., protocol, domain, path) and explain how it locates a specific resource.
-- b) Describe the step-by-step role of the Domain Name Service (DNS) when translating a human-readable URL into an IP address.
+### Exercise 4.1a
 
-- 4-a) Outline the four layers of the TCP/IP protocol stack in correct order (from top to bottom or bottom to top), giving the core responsibility of each layer.
-- b) Briefly state the specific purpose of each of the following application/transport protocols: HTTP, FTP, POP3, and IMAP.
+Contrast LANs and WANs in geographic scale, ownership and typical transmission conditions. Avoid assuming that scale alone fixes speed.
 
-- 5-a) Explain what is meant by circuit switching.
-- b) There are many applications in which digital data are transferred across a network. Video conferencing is one of these. For this application, circuit switching is preferred. Explain why this is so. 
-- c) List two major benefits and one drawback of packet switching.
+### Exercise 4.1b
 
-- 6-a) Differentiate between the concepts of data security, data privacy, and data integrity.
-- b) Contrast the use of validation (e.g., range checks, format checks) with verification (e.g., double-entry, parity checks) in protecting data during entry and transfer.
-- c) Name three mechanisms used to protect computer systems against threats.
+Compare the client–server and peer-to-peer models in resource management and scalability.
 
-- 7.	a) Compare symmetric key cryptography with asymmetric key cryptography in terms of key management, speed, and how plaintext is converted to ciphertext.
--8- b) Explain how an asymmetric key pair can be used in reverse to generate a digital signature that verifies the sender's identity and ensures message integrity.
--c) What are SSL and TLS, and in what real-world scenarios are they typically deployed to secure network traffic?
+### Exercise 4.1c
+
+Differentiate between a thick client and a thin client based on where processing and storage take place.
+
+### Exercise 4.1d
+
+What are the main trade-offs in cost, security responsibilities and control between a public cloud and a private cloud?
+
+### Exercise 4.2
+
+How do network systems handle simultaneous transmissions on a shared medium, using collision detection or collision avoidance?
+
+### Exercise 4.3a
+
+Break down the parts of a URL, such as scheme, domain and path, and explain how it identifies a resource.
+
+### Exercise 4.3b
+
+Describe the role of DNS when resolving the host name in a URL to an IP address.
+
+### Exercise 4.4a
+
+Outline the four TCP/IP layers in order and give the core responsibility of each.
+
+### Exercise 4.4b
+
+State the purpose of HTTP, FTP, POP3 and IMAP.
+
+### Exercise 4.5a
+
+Explain what is meant by circuit switching.
+
+### Exercise 4.5b
+
+Assume a video-conferencing scenario specifically requires reserved communication capacity. Explain why circuit switching could be preferred in that scenario. This is the source question’s assumed context, not a claim that modern Internet video calls generally use circuits.
+
+### Exercise 4.5c
+
+List two benefits and one drawback of packet switching.
+
+### Exercise 4.6a
+
+Differentiate between data security, data privacy and data integrity.
+
+### Exercise 4.6b
+
+Contrast validation, such as range and format checks, with verification, such as double entry and transfer checks, when protecting data quality.
+
+### Exercise 4.6c
+
+Name three mechanisms used to protect computer systems against threats.
+
+### Exercise 4.7a
+
+Compare symmetric and asymmetric cryptography in key management, typical performance and the handling of plaintext and ciphertext.
+
+### Exercise 4.7b
+
+Explain how a private signing key and matching public verification key support a digital signature that checks message origin and integrity. Distinguish signing from encryption.
+
+### Exercise 4.7c
+
+What are SSL and TLS, and where is TLS used to secure network traffic today?

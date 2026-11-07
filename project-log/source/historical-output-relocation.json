@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-07",
+  "purpose": "Preserve historical teaching documents, caption files and learner demonstrations in public output directories while video production sources stay local. No original production files were deleted.",
+  "verified_files": 23,
+  "counts": {
+    "scripts": 10,
+    "subtitles": 10,
+    "supporting": 3
+  },
+  "files": [
+    {
+      "output": "assets/tutorials/scripts/BlueImpulse_Video01_Basic_Reinforcement_Learning_Narration.md",
+      "sha256": "95dfdc3b018e8eaa0853eef24394b7d9e7b723d89c214c2d5040812cc342863e",
+      "bytes": 8504,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/scripts/BlueImpulse_Video01_Basic_Reinforcement_Learning_Teaching_Outline.md",
+      "sha256": "1cbb2b6301646fba235cd64e2636cf451c44475292239ead5520307b11ce80a4",
+      "bytes": 1717,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/scripts/BlueImpulse_Video02_How_Hardware_Enables_AI_Narration.md",
+      "sha256": "88f42adef6d81d223170f3499627c7e27d0ffd9cf8ccd5792447bbb6b7cf69b5",
+      "bytes": 8698,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/scripts/BlueImpulse_Video02_How_Hardware_Enables_AI_Teaching_Outline.md",
+      "sha256": "4b8e03ea7ee888d14f178220b3686aeb1846704ffb9045c617cec999780cbc72",
+      "bytes": 1868,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/scripts/BlueImpulse_Video03_Network_Challenges_Narration.md",
+      "sha256": "c2556e6a3c9bd5f0ac9721f3d9ef37747057da602549046224bebce96de18db2",
+      "bytes": 8879,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/scripts/BlueImpulse_Video03_Network_Challenges_Teaching_Outline.md",
+      "sha256": "329622e9ba1b6c942ab51486aae1746f00dd1ecfc9649a69e5a19c509c02fbc9",
+      "bytes": 1811,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/scripts/BlueImpulse_Video04_Networking_for_Behaviorist_AI_Narration.md",
+      "sha256": "bf9f02a1cea0a26eb46da19e00c1f377497ed5ca470ac3dfc7979aefd02a5b86",
+      "bytes": 9386,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/scripts/BlueImpulse_Video04_Networking_for_Behaviorist_AI_Teaching_Outline.md",
+      "sha256": "501fffd68f36b9d1dc9c42f382c561ee3e290750420c36d7a7f40b53e97c9dbb",
+      "bytes": 1815,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/scripts/BlueImpulse_Video05_Program_Execution_Narration.md",
+      "sha256": "fee488668f21848e5b711295c812097b1d9c45c3f1f5c8410ec664d83fa30103",
+      "bytes": 9326,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/scripts/BlueImpulse_Video05_Program_Execution_Teaching_Outline.md",
+      "sha256": "e05d8084198b6c5dcd1df624192ff13cb34d09ab6278336f4ae537844174d493",
+      "bytes": 1790,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/subtitles/BlueImpulse_Video01_Basic_Reinforcement_Learning.srt",
+      "sha256": "42bcdeea235cca9e0304778f9387d7fa7b323429f00ae965956f12adb9a49db0",
+      "bytes": 9242,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/subtitles/BlueImpulse_Video01_Basic_Reinforcement_Learning.vtt",
+      "sha256": "1d335a4445d0dc82dbd2aa0d2cc006da2319ceb9bc31c3a19178a76f0b499152",
+      "bytes": 9043,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/subtitles/BlueImpulse_Video02_How_Hardware_Enables_AI.srt",
+      "sha256": "1370417b5f256d4126632044506f7705364c32aa39356bce5b0a344ced434e37",
+      "bytes": 10185,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/subtitles/BlueImpulse_Video02_How_Hardware_Enables_AI.vtt",
+      "sha256": "853f38adc533ca5fc740b554995c24eec26741c51e919d9c76ce304718bc4eba",
+      "bytes": 9935,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/subtitles/BlueImpulse_Video03_Network_Challenges.srt",
+      "sha256": "6d0eb7155bebe3632c0b81b34dcd60604f5053db7a9319d4de39828e2a352bf5",
+      "bytes": 10517,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/subtitles/BlueImpulse_Video03_Network_Challenges.vtt",
+      "sha256": "c05d778f4e2923f656b214417297409617ce135c0a7963562b44e485b52f33c2",
+      "bytes": 10255,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/subtitles/BlueImpulse_Video04_Networking_for_Behaviorist_AI.srt",
+      "sha256": "e60ad8b0fceefc127d00831994a5e570c5f33f4bff8284b536b1e0114962f4c6",
+      "bytes": 11228,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/subtitles/BlueImpulse_Video04_Networking_for_Behaviorist_AI.vtt",
+      "sha256": "d28c0c15960c7e6e75266bbbb93b3300a693db7f7c19958e16545d3bc40d9805",
+      "bytes": 10936,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/subtitles/BlueImpulse_Video05_Program_Execution.srt",
+      "sha256": "0c62c3f7b54e68e238f4cb7967482367925476856a9da2fff988eb7e5af00605",
+      "bytes": 11062,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/subtitles/BlueImpulse_Video05_Program_Execution.vtt",
+      "sha256": "ed35a6463f34e9b75711f7cc16e71deeec46ac4789507e1bf69a9d7e83739bfb",
+      "bytes": 10778,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/supporting/BlueImpulse_Demonstrations.py",
+      "sha256": "e165ec17ebe8d59ccb25de11936eb1c1a414328faf5b7c10ad22c6f707bee1e6",
+      "bytes": 5784,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/supporting/README.md",
+      "sha256": "58a763904a82cf9f6b617e121f21f0df00beb9c50b6e5b5d981633c12af74458",
+      "bytes": 1826,
+      "status": "copied"
+    },
+    {
+      "output": "assets/tutorials/supporting/expected-results.json",
+      "sha256": "7af2634c4f37f78335bc007a2cc74b733431c5c339a94e828a1680476419e06e",
+      "bytes": 5742,
+      "status": "copied"
+    }
+  ]
+}

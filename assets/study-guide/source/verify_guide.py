@@ -17,7 +17,8 @@ manifest=json.loads((BASE/'manifest.json').read_text())
 def norm(t):
     return re.sub(r'\s+','',unicodedata.normalize('NFKC',str(t)))
 
-assert len(pdf)==len(pages)==96
+assert len(pages)==96
+assert len(pdf)==manifest["pages"] and len(pdf)>=96
 assert hashlib.sha256((BASE/'BlueImpulse_Study_Guide.pdf').read_bytes()).hexdigest()==manifest['sha256']
 assert all(v['pages'] for v in exercise_map.values()),'An exercise was omitted'
 fixed_checks=[]
@@ -65,8 +66,16 @@ for font,collection_index,names in [('/System/Library/Fonts/Avenir.ttc',0,['text
 
 links=[l for l in pdf[1].get_links() if l['kind']==fitz.LINK_GOTO]
 assert len(links)==6,('Contents links',len(links))
-assert len(pdf.get_toc())==len(pages)
-result=dict(status='passed',pages=len(pdf),unchanged_artwork_pages=fixed_checks,
+assert len(pdf.get_toc())>=len(pages)
+from stage2_learning import ANSWERS, MISSIONS
+appendix_text=norm(' '.join(pdf[i].get_text() for i in range(96,len(pdf))))
+assert len(pdf)>96, 'Run build_stage2.py after the base build'
+for key,answer in ANSWERS.items():
+    assert norm(answer) in appendix_text, ('Missing explained answer',key)
+for mission in MISSIONS:
+    assert norm(mission['id']) in appendix_text
+    assert norm(mission['feedback']) in appendix_text
+result=dict(status='passed',pages=len(pdf),explained_answers=len(ANSWERS),missions=len(MISSIONS),unchanged_artwork_pages=fixed_checks,
             verified_text_items=text_checks,source_exercises=len(EXERCISES),
             exercise_pages=len(pages)-len(fixed_checks),contents_links=len(links),
             minimum_prose_font_pt=min(e['font_size'] for e in layout if e['role']=='content'),

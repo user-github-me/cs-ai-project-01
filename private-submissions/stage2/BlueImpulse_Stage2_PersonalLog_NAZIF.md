@@ -1,0 +1,157 @@
+# Blue Impulse — Stage 2 Personal Logs
+
+ASSIGNMENT DRAFT · PUBLIC AT THE USER’S REQUEST | 25 October–7 November 2026
+
+Submission filename: BlueImpulse_Stage2_PersonalLogs. Submit the completed single Word or PDF through the designated assignment channel without a ZIP. The user explicitly requested public repository access for the professor, including personal logs; this differs from the supplied assignment’s privacy instruction.
+
+This AI-assisted compilation preserves the available dated personal writing. It is not a claim that students have checked the compilation or demonstrated the missing learning. Each student must write and review their own section. Missing reflections remain explicitly missing.
+
+## Contents
+
+Nazif / 纳齐夫 · 1820262003 — existing dated entries plus labelled AI drafting
+
+Navigation: each member starts on a new page. Word headings and PDF headings identify the sections. Names/IDs come from the repository; verify against the class roster, especially the differing recorded Chinese spelling of Safa’s name.
+
+<!-- new member page -->
+
+## Nazif / 纳齐夫
+
+Student ID: 1820262003 | Blue Impulse | 25 October–7 November 2026
+
+The entries below preserve the existing wording, including first person statements previously drafted with Neogpt. Added evidence notes identify which work/checks were AI-assisted. The 1 November entry was filed under a Stage 1 heading but falls within the required reporting period, so it is included by its date.
+
+### Repository organisation update — 1 November 2026
+
+- I created the Learning and Development/ folder for shared learning and development materials.
+
+- I created drafts/stage 1/ and moved all 12 existing draft Markdown files into it to keep the Stage 1 planning documents together.
+
+- I added the previously generated seven-slide Blue Impulse Stage 1 status-report PowerPoint to assets/presentations/slides-draft/. It is a draft template with placeholders for the team to complete.
+
+- I updated the README's folder structure and links so team members can find the reorganised files and presentation draft.
+
+- I used Neogpt to recover the earlier repository context and help with file organisation, documentation, and this log update.
+
+> Adjacent evidence note — 4cbc5cb: Created Learning and Development/, reorganized 12 draft Markdown files, and added the Stage 1 draft presentation. Neogpt performed the requested file organization; no personal learning test is recorded.
+
+### Presentation design — 3 November 2026
+
+- I used Neogpt to turn the team's Stage 2 slide outline and visual references into an editable 37-slide Sojourner presentation draft.
+
+- I followed the retro space and Mars direction, using warm orange, magenta, plum and cream, with Horizon titles and Quicksand text at 28 pt or larger.
+
+- I added NASA rover and planet imagery, a rocket journey, and Morph transitions for the presentation's movement.
+
+- I kept detailed explanations, the debate claims, video and game content empty, as requested in the outline, so the team can add them later.
+
+- I saved the PowerPoint, preview and editable design source in assets/presentations/slides-draft/ and recorded the artwork sources and AI assistance.
+
+> Adjacent evidence note — ab18e00: 37-slide editable draft added from the supplied outline and references. The existing entry openly notes the content left blank; an editable design is not a complete teaching presentation.
+
+### Team meeting — 3 November 2026
+
+- We had a meeting today and discussed whether Sojourner had AI.
+
+> Adjacent evidence note — b94beda: The only supplied meeting claim is that the team discussed whether Sojourner had AI. Attendees, time/location, final decision, and actions were not supplied.
+
+### Chapter folder setup — 4 November 2026
+
+- I added content/chapter-04/, content/chapter-05/, and content/chapter-06/ for the next three chapters.
+
+- I included README.md, draft.md, exercises.md, and solutions.md in each folder, following the existing chapter layout.
+
+- I updated the repository README's folder structure and uploaded the new chapter folders to GitHub.
+
+> Adjacent evidence note — d5f7fc4 / e1b87c2: Added Chapters 4–6 with the existing four-file structure. This establishes organization, not completion of chapter explanations.
+
+### Study guide and tutorial production — 6 November 2026
+
+- I added temp contents/ to .gitignore before working with the supplied chapter files and templates.
+
+- I used Neogpt to create a 96-page study guide from all six chapters, following the supplied instructions and preserving the original cover and chapter-divider artwork.
+
+- After finishing the guide, I used Neogpt to create five narrated tutorials on reinforcement learning, AI hardware, network challenges, networking for behaviorist AI, and program execution. Each video is between five and ten minutes and includes subtitles, guide-page citations and excerpts, demonstrations, questions, and a closing book-cover credit.
+
+- I prepared matching tutorial PDFs, narration scripts, teaching outlines, SRT/VTT subtitles, and runnable Python examples. The checks covered quotations, calculations, PDF layouts, video playback, and subtitle visibility.
+
+- I saved the finished videos in assets/tutorials/videos/ and bundled the study guide, videos, PDFs, scripts, supporting files, and editable project into deliverables/BlueImpulse_Tutorial_Package.zip. I also updated the repository links so the team can find the materials.
+
+> Adjacent evidence note — b40933c / 238cf9e: Saved AI-assisted checks report 96 guide pages, 65 source exercises, five 8:36–9:38 videos, 456 caption samples and 12 silence samples. These are automated production checks, not proof of Nazif’s independent subject understanding.
+
+### GitHub upload and task record — 6 November 2026
+
+- I uploaded the 37-slide Stage 2 Sojourner PowerPoint in assets/presentations/final-presentation/ to the repository.
+
+- I checked that the six-chapter study guide, all five tutorial videos, matching PDFs, narration scripts, teaching outlines, subtitles, supporting Python examples, and editable source files were available on GitHub.
+
+- I added a GitHub release for the complete project deliverables, including the full tutorial ZIP and checksum, with separate study-guide and presentation downloads. I used a release asset for the ZIP because it exceeds GitHub's regular file-size limit.
+
+- I verified the presentation and ZIP file integrity, added download links to the repository documentation, and recorded these completed tasks in my personal log. I kept temp contents/, generated intermediates, and macOS metadata excluded from Git.
+
+> Adjacent evidence note — 14c6ed1: Final-presentation upload and delivery links recorded. Saved ZIP verification: 305 files, five MP4s, zero CRC/hash mismatches. This does not establish submission through the course channel.
+
+### Tutorial PDFs, scripts, and teaching outlines — 7 November 2026
+
+- I organised the five existing tutorial PDFs and used Neogpt to prepare printable PDFs of each video's complete narration script and teaching outline, including learning objectives, timestamps, teaching steps, and study-guide page references.
+
+- I kept the editable Markdown scripts and outlines alongside the printable versions and checked that the narration and teaching sections were complete.
+
+- I created a separate tutorial-documents ZIP, added direct links for each video's materials, and uploaded the documents to GitHub so the team can download them together.
+
+> Adjacent evidence note — 5ebb2bb: Five printable script/outline PDFs, their source builders, and document-package links were added. The newer chapter/subtopic citation request supersedes old page-reference layouts.
+
+### Repository visibility and submission access — 7 November 2026
+
+- I clarified that the repository must remain public so that the professor can open the submitted link and see the full project, including my personal log.
+
+- Neogpt restored the repository to public after temporarily making it private while interpreting the Stage 2 privacy guidance. It verified the GitHub visibility as PUBLIC.
+
+- I asked why personal logs and submission folders had been added to .gitignore. Neogpt removed those broad exclusions and kept my personal log tracked. The supplied temp contents/ folder and generated submission ZIP/video copies remain excluded from normal Git; downloadable deliverables are published separately where necessary.
+
+- This entry records my instructions and the verified repository change, with AI assistance; it is not evidence of a teammate review or a professor's access test.
+
+### Complete Stage 2 revision and tutorial direction — 7 November 2026
+
+- I asked Neogpt to follow rules/Stage2_All_Instructions.md and prepare the repository's Stage 2 materials. I also supplied the revised tutorial direction: story-based explanations, a more vibrant palette, chapter/subtopic citations, mandatory subtitles, and motion that supports a ten-minute lesson.
+
+- Neogpt completed the six-chapter Markdown foundation with 67 topics, application checkpoints, six guided missions and 65 explained exercise answers. It extended the study guide to 121 pages while preserving the original artwork, and created a separate 54-question Test Bank in editable Word and PDF.
+
+- Neogpt prepared a 63-slide editable teaching deck covering the six chapters, presenter notes and audience activities. The earlier Sojourner deck remains available as historical work.
+
+- Neogpt created five revised tutorial PDFs, five narration-script/teaching-outline PDFs and a 42-page combined Video Guide. The revised tutorials cite chapter numbers, names and subtopics instead of study-guide screenshots or page numbers.
+
+- The video production checks covered all 5,750 beat frames, 60 chapter/subtopic references, deterministic frame seeking, looping endpoints and speech/music levels. These are AI-assisted production checks; they do not claim that I or another student watched every video or independently solved the activities. Final encoding was still running when this entry was added.
+
+- I asked to see the changes before they are pushed to GitHub. I also clarified that the professor needs the finished videos, not the HyperFrames/HTML video production projects. Neogpt kept the production projects locally and excluded them from the next GitHub revision, while retaining the finished MP4s, requested PDFs, scripts, subtitles and learning examples for publication.
+
+- The project and personal-log documents distinguish actual available records from missing teammate entries, personal learning reflections, agreed contribution scores, rehearsal and learner-review evidence. My own reflection and the team's reviews still need to be supplied by the people involved.
+
+Evidence: Stage 2 output index, tutorial documents, chapter review, and project log. Neogpt assisted with this entry; it records the requests and observed production work rather than inventing personal learning.
+
+### Finished tutorial outputs — 7 November 2026
+
+- Neogpt finished all five revised MP4s. Each is 10:00 at 1920×1080 and 60 fps. Their measured sizes are 47.43, 48.16, 48.90, 50.06 and 45.85 MB, below the assignment's 250 MB limit per video.
+
+- The final production checks decoded all 180,000 video frames without errors, matched all 489 subtitle cues to the measured narration, and confirmed that the final MP4 audio matches the verified mixes. Ten final encoded demonstration/caption frames were inspected by AI. These checks do not replace the required teammate viewing or beginner trial.
+
+- The 42-page combined Video Guide and all ten individual tutorial/script PDFs now contain the final filenames, timings and file sizes. The files use chapter/subtopic citations and include worked examples, reasoning, questions and feedback.
+
+- The publishable collection is in assets/tutorials/stage2. The final verification report records the measurements. Video production source stays local, as I requested. GitHub publication is recorded separately after it is verified.
+
+### 7 November — Stage 2 audit and revised tutorials (AI-assisted draft)
+
+Recorded personal action: I asked Neogpt to follow rules/Stage2_All_Instructions.md across the repository and to record the work. I supplied a new video direction: replace study-guide screenshots/page numbers with chapter and subtopic citations, use a story hook, make the existing palette more vibrant, and use readable dynamic motion with sound effects below the narration.
+
+> My recorded request: “rules/Stage2_All_Instructions.md follow this. and make whole repo follow this. make it it ready. log everything in my personal log.” Video follow-up: “The key is ‘story telling’”.
+
+AI contribution: Codex inspected the rules and repository, planned the coordinated revision, checked existing evidence, and drafted the process records and this dated entry. Planned story: Pip, a fictional campus delivery rover, with robot-7 as its protocol identifier. The AI’s production/checking work is not presented as work I carried out independently.
+
+> Selected AI check output actually obtained during this audit: Q target 4.6/new value 3.3; pipeline completions 4, 5, 6; at 30 m/s a 500 ms delay corresponds to 15 m (delay distance only); packet checks ACCEPT, STALE, DUPLICATE / OLD SEQUENCE; the toy program stores 7. The assistant ran the existing Python examples; this is not evidence that I solved or explained them unaided.
+
+Repository decision: after the rules audit, I explicitly clarified that the repository, personal logs, and submission materials should remain public for the professor. Neogpt restored and verified PUBLIC visibility and removed the broad personal-log/submission exclusions. This user-directed access choice differs from the assignment’s privacy instruction. The historical private-submissions folder name is not an access restriction.
+
+Own learning and judgment still to record: explain in my own words what I checked in the revised learning materials, show one independent worked check or prediction, and describe an actual wider-course learning activity. These were not provided in the recorded request, so no answer is invented.
+
+Next steps: review the generated learning materials and this log; correct anything that does not reflect my actual work; supply my own reflection and selected verification evidence; coordinate the combined submission with all members.
+
+AI-use disclosure: this new entry and the compilation were substantially drafted by Neogpt/Codex from actual requests and repository evidence. They have not been represented as student-approved or independently student-written.

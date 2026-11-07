@@ -1,0 +1,31 @@
+{
+  "slides": 63,
+  "chapters": 6,
+  "native_notes": 63,
+  "notes_words": 7148,
+  "audience_tasks": 15,
+  "approximate_teaching_minutes": 78.5,
+  "editable_text_runs": 599,
+  "raster_slide_pictures": 0,
+  "embedded_font_weights": 2,
+  "native_pdf_pages": 63,
+  "min_native_font_pt": 28.0,
+  "font_families": [
+    "Inter-Bold",
+    "Inter-Regular"
+  ],
+  "missing_rendered_text": [],
+  "outside_page_text": [],
+  "contrast_white_on_navy": 16.29,
+  "contrast_pink_on_navy": 5.26,
+  "example_checks": "passed: signed byte, raw image size, Q update and terminal state, pipeline, delay, packet order and freshness boundary, program and modified ADD, AND truth table",
+  "keynote_import_pdf_export": "passed on 7 November 2026",
+  "keynote_slideshow": "automated start/stop at slide 29 passed; not human rehearsal",
+  "human_teammate_review": "pending",
+  "human_rehearsal": "pending",
+  "classroom_projector_check": "pending",
+  "pptx_sha256": "48124e50a1f7e6acfe7f62a60f43cd220b47d27ea6138d3aec96ed850b9332f2",
+  "pdf_sha256": "0aae8ba4100b7b09136d1fc61480ce9ba526573b11ae23d1d971a980489fe55e",
+  "presenter_notes_pdf_pages": 63,
+  "readiness_report_pdf_pages": 2
+}

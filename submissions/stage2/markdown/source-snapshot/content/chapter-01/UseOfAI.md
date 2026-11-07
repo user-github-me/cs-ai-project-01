@@ -1,0 +1,7 @@
+## Chapter 1: Intro to Fundamentals
+The content for this chapter as in the learning material itself was generated through multiple runs with AI tools such as Gemini, Claude and ChatGPT. The Learning Outcomes were LARGELY constructed manually, by looking at the learning outcomes mentioned in the book "Cambridge International AS & A level Computer Science".
+The key terms were also similarly compiled manually by looking at the book and the typing them out. Lastly the end of chapter exercises were created using Gemini, with the prompt telling it about the scope of the lesson, the learning outcomes, the key terms to be used in that chapter, etc. Then copy pasted the questions here. For this specific chapter the book came in handy in this regard too. We copied some of the questions that fit our content scope and used them here. Credit is due where credit is due.
+
+## Stage 2 revision — 7 November 2026
+
+Neogpt/Codex assisted with importing the already developed guide explanations into Markdown, adding application checkpoints and feedback, the chapter mission, and explained answers. The request was to follow rules/Stage2_All_Instructions.md. Evidence includes checked calculations and executable demonstrations plus the Stage 2 review report. This records AI-assisted production, not a claim of independent student understanding or human peer review. Full user-specific evidence is kept in project and personal logs.

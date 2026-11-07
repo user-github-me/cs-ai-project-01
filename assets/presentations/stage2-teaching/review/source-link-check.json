@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Sutton & Barto",
+    "url": "https://incompleteideas.net/book/the-book-2nd.html",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1129)>"
+  },
+  {
+    "name": "Brooks 1986",
+    "url": "https://people.csail.mit.edu/brooks/papers/AIM-864.pdf",
+    "status": 200,
+    "bytes": 1648517,
+    "title": ""
+  },
+  {
+    "name": "OSTEP",
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+    "status": 200,
+    "bytes": 51995,
+    "title": "Operating Systems: Three Easy Pieces"
+  },
+  {
+    "name": "Nand2Tetris",
+    "url": "https://www.nand2tetris.org/course",
+    "status": 200,
+    "bytes": 495119,
+    "title": "Projects | nand2tetris"
+  },
+  {
+    "name": "Unicode",
+    "url": "https://docs.python.org/3/howto/unicode.html",
+    "status": 200,
+    "bytes": 85524,
+    "title": "Unicode HOWTO &#8212; Python 3.15.2 documentation"
+  },
+  {
+    "name": "RFC1122",
+    "url": "https://www.rfc-editor.org/rfc/rfc1122.txt",
+    "status": 200,
+    "bytes": 289148,
+    "title": ""
+  },
+  {
+    "name": "RFC1034",
+    "url": "https://www.rfc-editor.org/rfc/rfc1034.txt",
+    "status": 200,
+    "bytes": 126103,
+    "title": ""
+  },
+  {
+    "name": "RFC3986",
+    "url": "https://www.rfc-editor.org/rfc/rfc3986.txt",
+    "status": 200,
+    "bytes": 141811,
+    "title": ""
+  },
+  {
+    "name": "RFC9293",
+    "url": "https://www.rfc-editor.org/rfc/rfc9293.txt",
+    "status": 200,
+    "bytes": 263696,
+    "title": ""
+  },
+  {
+    "name": "RFC768",
+    "url": "https://www.rfc-editor.org/rfc/rfc768.txt",
+    "status": 200,
+    "bytes": 5896,
+    "title": ""
+  },
+  {
+    "name": "RFC8446",
+    "url": "https://www.rfc-editor.org/rfc/rfc8446.txt",
+    "status": 200,
+    "bytes": 337736,
+    "title": ""
+  },
+  {
+    "name": "NIST",
+    "url": "https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines",
+    "status": 200,
+    "bytes": 53066,
+    "title": "Cryptographic Standards and Guidelines | CSRC"
+  },
+  {
+    "name": "Sutton & Barto publisher",
+    "url": "https://mitpress.mit.edu/9780262039246/reinforcement-learning/",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

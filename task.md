@@ -46,4 +46,43 @@
 - [X] Include Stage2 priorities
 - [X] PPT
 
-# Stage 2 Task lists
+# Stage 2 Task lists — 7 November 2026
+
+## Materials and organisation
+
+- [x] Read and audit `rules/Stage2_All_Instructions.md`.
+- [x] Keep `temp contents/` ignored; keep personal logs tracked and restore the repository to public at Nazif’s explicit instruction.
+- [x] Verify the public repository responds without authentication (HTTP 200).
+- [x] Complete six chapter folders with 67 topics, examples, activities and 65 explained exercise answers.
+- [x] Create the complete 116-page Markdown content PDF, report and source-snapshot ZIP.
+- [x] Extend the study guide to 121 pages while preserving the original cover and dividers.
+- [x] Create the balanced 54-question Test Bank in editable Word and PDF.
+- [x] Create 63 editable teaching slides, presenter notes, offline demonstrations and the named ZIP.
+- [x] Prepare dated project and personal-log Word/PDF documents from authentic available evidence.
+
+## Revised tutorial videos
+
+- [x] Present the Pip story concept and 5,750-beat storyboard.
+- [x] Rewrite five narration scripts around chapter names and subtopics, removing guide screenshots/page citations.
+- [x] Generate measured narration and SRT/VTT captions for five ten-minute tutorials.
+- [x] Build the single-file 1920×1080 HTML composition and the Playwright/60fps/three-subframe rendering pipeline.
+- [x] Check all 5,750 beat frames and finalize five narration/music mixes.
+- [x] Complete all five final MP4 exports: 600 seconds, 1080p/60 fps and under 250 MB each.
+- [x] Create five revised tutorial PDFs, five script/outline PDFs and the 42-page VideoGuide.
+- [x] Add measured final MP4 metadata to the VideoGuide.
+- [x] Verify final video sizes, all 180,000 decoded frames, copied audio and 489 captions.
+- [ ] Package the verified tutorial outputs and check public downloads.
+- [x] Keep video production projects and render code local; publish finished videos and requested learning materials.
+
+## Evidence and submission by the team
+
+- [ ] Tian, Edzel, Safa and Danial supply their own dated Stage 2 personal learning/work entries.
+- [ ] Each member reviews their own personal-log section and adds authentic subject-learning reflections where missing.
+- [ ] Agree relative contribution scores from substantive evidence.
+- [ ] Add actual meeting details, decisions and action owners where available.
+- [ ] Another teammate views each final compressed video; a beginner tries the explanations and tasks; record actual findings.
+- [ ] Rehearse representative teaching sections and check the classroom display.
+- [ ] Upload the named packages, individual MP4s and standalone log documents to the designated course channel; save receipts.
+- [ ] Push the verified Stage 2 files and publish/check the new release downloads.
+
+See [submission index](submissions/stage2/README.md) and [requirements/readiness](project-log/REQUIREMENTS_AND_READINESS.md). A generated file or public repository link does not establish a completed human review or course submission.

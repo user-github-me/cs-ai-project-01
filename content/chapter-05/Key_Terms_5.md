@@ -1,6 +1,14 @@
-## Chapter 5
-- Automation – The use of technology to perform tasks with minimal human involvement.
--	Real-time processing – Processing data immediately or with very little delay.
--	Smart Systems – Systems that combine hardware, networks and intelligent software to perform tasks. 
--	Human-AI interaction – The ways humans communicate and interact with AI-powered systems
--	Ethical AI – The development and use of AI in ways that are fair, responsible and transparent.
+# Chapter 5 — Applications
+
+## Key terms
+
+| Term | Meaning |
+| --- | --- |
+| Smart system | Hardware, communication and software integrated for a useful task. |
+| Real-time processing | Processing that must satisfy a specified timing deadline. |
+| Automation | Technology performing some or all parts of a task with reduced direct human operation. |
+| Edge / cloud computing | Processing near the source / processing on remote shared infrastructure. |
+| Human-AI interaction | Interaction challenges involving AI, including uncertainty, delegation and trust. |
+| Ethical AI | Design and use that consider fairness, accountability, transparency and impacts on people. |
+| Operating domain | The conditions under which a system is intended to function. |
+| Telemetry | Measurements and status information communicated for monitoring or analysis. |

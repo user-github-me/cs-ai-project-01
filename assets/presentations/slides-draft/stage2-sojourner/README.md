@@ -1,5 +1,7 @@
 # Blue Impulse — Sojourner / Stage 2
 
+> **Historical visual draft.** The 37-slide Sojourner design and its original scope are preserved here. The [current Stage 2 teaching deck](../../stage2-teaching/README.md) contains 63 editable slides, complete presenter notes, six-chapter teaching content, and classroom activities.
+
 A 37-slide, widescreen visual draft built from the team's [Stage 2 outline](../stage2-slide-outline.md) and the four supplied style references. It uses a retro Mars palette, photographic rover cutouts, flowing ink textures, large titles, and a symbolic rocket journey.
 
 - [Editable PowerPoint](../BlueImpulse_Stage2_Sojourner.pptx)

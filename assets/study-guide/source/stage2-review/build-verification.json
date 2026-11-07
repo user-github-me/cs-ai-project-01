@@ -1,0 +1,193 @@
+{
+  "date": "7 November 2026 (UTC+8)",
+  "topics": 67,
+  "checkpoint_answers": 67,
+  "exercises_and_answers": 65,
+  "missions": 6,
+  "test_bank": {
+    "true_false": 24,
+    "multiple_choice": 24,
+    "open_ended": 6,
+    "distribution": {
+      "1": {
+        "tf": 4,
+        "mc": 4,
+        "oe": 1
+      },
+      "2": {
+        "tf": 4,
+        "mc": 4,
+        "oe": 1
+      },
+      "3": {
+        "tf": 4,
+        "mc": 4,
+        "oe": 1
+      },
+      "4": {
+        "tf": 4,
+        "mc": 4,
+        "oe": 1
+      },
+      "5": {
+        "tf": 4,
+        "mc": 4,
+        "oe": 1
+      },
+      "6": {
+        "tf": 4,
+        "mc": 4,
+        "oe": 1
+      }
+    }
+  },
+  "guide": {
+    "file": "BlueImpulse_Study_Guide.pdf",
+    "pages": 121,
+    "chapters": {
+      "1": {
+        "start": 5,
+        "end": 21
+      },
+      "2": {
+        "start": 22,
+        "end": 33
+      },
+      "3": {
+        "start": 34,
+        "end": 50
+      },
+      "4": {
+        "start": 51,
+        "end": 70
+      },
+      "5": {
+        "start": 71,
+        "end": 83
+      },
+      "6": {
+        "start": 84,
+        "end": 95
+      }
+    },
+    "topic_pages": {
+      "cover": 1,
+      "contents": 2,
+      "learning-goals-1": 3,
+      "learning-goals-2": 4,
+      "chapter-1": 5,
+      "bits-bytes": 6,
+      "binary-hex": 7,
+      "signed-binary": 8,
+      "characters-bcd": 9,
+      "images": 10,
+      "sound-compression": 11,
+      "stored-program": 12,
+      "fetch-execute": 13,
+      "translators": 14,
+      "program-trace": 15,
+      "operating-system": 16,
+      "interrupts-ports": 17,
+      "key-terms-1-1": 18,
+      "key-terms-1-2": 19,
+      "practice-1-1": 20,
+      "practice-1-2": 21,
+      "chapter-2": 22,
+      "conditioning": 23,
+      "reactive-agents": 24,
+      "rl-loop": 25,
+      "rewards-values": 26,
+      "exploration": 27,
+      "q-learning": 28,
+      "mdp": 29,
+      "uncertainty": 30,
+      "learning-deployment": 31,
+      "key-terms-2-1": 32,
+      "key-terms-2-2": 33,
+      "chapter-3": 34,
+      "hardware-roles": 35,
+      "memory-hierarchy": 36,
+      "rom-storage": 37,
+      "risc-cisc": 38,
+      "pipeline": 39,
+      "parallel": 40,
+      "hardware-interrupt": 41,
+      "logic-gates": 42,
+      "boolean-algebra": 43,
+      "sensor-control": 44,
+      "embedded": 45,
+      "ai-hardware": 46,
+      "advanced-io": 47,
+      "key-terms-3-1": 48,
+      "key-terms-3-2": 49,
+      "practice-3-1": 50,
+      "chapter-4": 51,
+      "network-scales": 52,
+      "client-server": 53,
+      "clients-cloud": 54,
+      "lan-hardware": 55,
+      "media-collisions": 56,
+      "internet-url": 57,
+      "dns": 58,
+      "tcp-ip": 59,
+      "application-protocols": 60,
+      "switching": 61,
+      "network-challenges": 62,
+      "security-integrity": 63,
+      "encryption": 64,
+      "tls-signatures": 65,
+      "crypto-modes": 66,
+      "key-terms-4-1": 67,
+      "key-terms-4-2": 68,
+      "practice-4-1": 69,
+      "practice-4-2": 70,
+      "chapter-5": 71,
+      "smart-system": 72,
+      "smart-irrigation": 73,
+      "real-time": 74,
+      "networked-ai": 75,
+      "automation": 76,
+      "policy-feedback": 77,
+      "actuators": 78,
+      "human-ai": 79,
+      "ethical-ai": 80,
+      "smart-cities": 81,
+      "key-terms-5-1": 82,
+      "practice-5-1": 83,
+      "chapter-6": 84,
+      "system-tradeoffs": 85,
+      "hardware-limits": 86,
+      "sensor-reliability": 87,
+      "scalability": 88,
+      "edge-cloud": 89,
+      "prediction-behaviour": 90,
+      "explainability": 91,
+      "responsible-deployment": 92,
+      "key-terms-6-1": 93,
+      "key-terms-6-2": 94,
+      "practice-6-1": 95,
+      "sources": 96
+    },
+    "sha256": "08a786dfe9e267b042907f62b602913d86720f09746c9705348df2c81ea889b8",
+    "version": "Stage 2 V1.0 complete",
+    "base_pages": 96,
+    "appendix_start": 97
+  },
+  "packages": [
+    {
+      "file": "submissions/stage2/markdown/BlueImpulse_Stage2_Markdown_V2.zip",
+      "bytes": 544302,
+      "sha256": "e433607d6d8c37884eec15b01483438de9f37ca1d2b8ae44d466f9a07a942c8a",
+      "files": 67,
+      "extracted_and_hash_checked": true
+    },
+    {
+      "file": "submissions/stage2/study-guide/BlueImpulse_Stage2_StudyGuide_TestBank_V1.zip",
+      "bytes": 30733404,
+      "sha256": "e1abbda57dcc5562157bd13c7f703d79b4d6b5bcde03c9cca8cda1cf0926d871",
+      "files": 9,
+      "extracted_and_hash_checked": true
+    }
+  ],
+  "independent_human_peer_review": "pending \u2014 no evidence supplied"
+}

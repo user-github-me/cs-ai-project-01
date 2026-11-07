@@ -1,0 +1,350 @@
+WEBVTT
+
+00:00:00.150 --> 00:00:02.795
+Pip has a plan. The wheels still wait.
+
+00:00:02.965 --> 00:00:08.533
+A sensor stream reaches our campus rover faster than its
+computer can process it.
+
+00:00:08.703 --> 00:00:15.573
+A clever decision still needs memory, processing, connections,
+and enough power to become an action.
+
+00:00:15.743 --> 00:00:20.372
+Have you ever wondered what gives an AI decision a physical
+body?
+
+00:00:20.542 --> 00:00:26.537
+Chapter three, Hardware, will help us follow the whole path and
+find the actual bottleneck.
+
+00:00:28.846 --> 00:00:35.075
+You will trace the sensing, memory, processing, and actuation
+path of a small robot.
+
+00:00:35.245 --> 00:00:42.285
+You will explain why memory movement can limit a fast processor
+and what a pipeline actually improves.
+
+00:00:42.455 --> 00:00:49.452
+You will also choose hardware by its job, rather than assuming
+every AI system needs the same chip.
+
+00:00:49.622 --> 00:00:54.828
+Welcome to the tutorial on how hardware enables AI by Blue
+Impulse.
+
+00:00:54.998 --> 00:01:01.312
+Follow each part of the diagram, then predict what happens when
+that part becomes the bottleneck.
+
+00:01:04.324 --> 00:01:11.727
+The subtopic Hardware gives software a body groups hardware by
+input, processing, output, and storage.
+
+00:01:11.897 --> 00:01:20.025
+For our robot, the sensor supplies observations. Memory holds
+inputs, model parameters, and working results.
+
+00:01:20.195 --> 00:01:26.957
+The processor evaluates the program or model, and an output
+communicates the resulting decision.
+
+00:01:27.127 --> 00:01:33.101
+If the robot needs to move, an actuator must turn that decision
+into physical motion.
+
+00:01:33.271 --> 00:01:40.759
+Notice that one device can have multiple roles. A touchscreen
+both displays output and senses input.
+
+00:01:40.929 --> 00:01:48.374
+The diagram is a chain of responsibilities, not a claim that
+every box must be a separate physical chip.
+
+00:01:52.324 --> 00:01:55.951
+Use a kitchen to remember the memory hierarchy.
+
+00:01:56.121 --> 00:01:59.641
+Registers are like the tiny workspace immediately in your
+
+00:01:59.751 --> 00:02:03.249
+hands. Cache keeps useful ingredients close to the cook.
+
+00:02:03.419 --> 00:02:10.182
+Main memory is the larger active workbench, while persistent
+storage is more like the pantry.
+
+00:02:10.352 --> 00:02:16.325
+The analogy is about access and capacity, not a literal map of
+computer components.
+
+00:02:16.495 --> 00:02:24.431
+A huge pantry does not help if ingredients arrive too slowly.
+Similarly, a processor can wait for data.
+
+00:02:24.601 --> 00:02:32.409
+Capacity asks how much fits. Memory bandwidth asks how quickly
+data can move. These are different questions.
+
+00:02:35.628 --> 00:02:39.404
+Model weights, inputs, and intermediate results must fit
+
+00:02:39.514 --> 00:02:43.397
+somewhere. A processor cannot use data that has not arrived.
+
+00:02:43.567 --> 00:02:46.020
+When memory bandwidth is insufficient,
+
+00:02:46.130 --> 00:02:51.485
+a fast processor may spend time waiting instead of doing useful
+arithmetic.
+
+00:02:51.655 --> 00:02:58.375
+Adding storage capacity alone does not automatically remove a
+memory-transfer bottleneck.
+
+00:02:58.545 --> 00:03:02.492
+The table also distinguishes cache, main RAM,
+
+00:03:02.602 --> 00:03:07.807
+and secondary storage. They are not interchangeable names for
+one resource.
+
+00:03:07.977 --> 00:03:15.828
+Both static RAM and dynamic RAM are volatile, although their
+circuits and refresh requirements differ.
+
+00:03:15.998 --> 00:03:19.326
+For this tutorial, focus on the system question:
+
+00:03:19.436 --> 00:03:23.745
+is the limiting factor how much fits, or how quickly it arrives?
+
+00:03:23.915 --> 00:03:29.056
+Imagine the processor as a cook waiting for ingredients. Hiring
+a faster
+
+00:03:29.166 --> 00:03:33.881
+cook does not shorten the time a missing ingredient spends in
+transit.
+
+00:03:34.051 --> 00:03:38.254
+Likewise, a faster arithmetic unit can still spend time waiting
+
+00:03:38.364 --> 00:03:42.268
+for memory. Measure that waiting before choosing the upgrade.
+
+00:03:47.628 --> 00:03:52.386
+Now compare the processor roles in the subtopic Hardware for AI.
+
+00:03:52.556 --> 00:03:56.097
+A CPU handles general control, branches,
+
+00:03:56.207 --> 00:04:02.522
+and diverse tasks. A GPU can accelerate suitable parallel
+arithmetic workloads.
+
+00:04:02.692 --> 00:04:08.132
+Specialised accelerators can efficiently perform supported
+tensor operations,
+
+00:04:08.242 --> 00:04:11.314
+but their benefits depend on the actual workload.
+
+00:04:11.484 --> 00:04:20.764
+Simple tabular reinforcement learning can run on an ordinary
+CPU. AI does not always require a GPU.
+
+00:04:20.934 --> 00:04:27.462
+Training changes model parameters. Inference uses an existing
+model to produce an output.
+
+00:04:27.632 --> 00:04:35.440
+A model can be trained on a large server and deployed on a
+smaller device if the deployment requirements fit.
+
+00:04:39.280 --> 00:04:45.510
+Use laundry to understand pipelining. One load can dry while a
+later load is washing.
+
+00:04:45.680 --> 00:04:51.333
+In our simplified processor, the stages are fetch, decode,
+execute, and write.
+
+00:04:51.503 --> 00:04:59.290
+Instruction one enters fetch in cycle one. In cycle two, it
+decodes while instruction two enters fetch.
+
+00:04:59.460 --> 00:05:03.918
+Keep stepping forward. The instructions occupy different stages,
+
+00:05:04.028 --> 00:05:07.911
+so several instructions make progress during the same cycle.
+
+00:05:08.081 --> 00:05:15.825
+After the pipeline fills, this ideal example completes one
+instruction per cycle, assuming no stalls.
+
+00:05:15.995 --> 00:05:22.950
+It does not make an individual four-stage instruction take just
+one cycle from start to finish.
+
+00:05:23.120 --> 00:05:27.856
+Real pipelines can pause for dependencies, uncertain branches,
+
+00:05:27.966 --> 00:05:32.680
+or shared resources. These hazards limit the ideal improvement.
+
+00:05:32.850 --> 00:05:40.360
+Use the included Python table to compare completion cycles
+rather than relying only on the moving picture.
+
+00:05:45.541 --> 00:05:50.043
+Trace the environmental control loop: measurement becomes a
+signal,
+
+00:05:50.153 --> 00:05:55.081
+processing chooses an output, and an actuator changes the
+environment.
+
+00:05:55.251 --> 00:06:03.507
+An analogue sensor may need an analogue-to-digital converter.
+Many sensors already provide digital measurements.
+
+00:06:03.677 --> 00:06:10.738
+The processor evaluates a decision, then a driver or power stage
+supplies what the actuator needs.
+
+00:06:10.908 --> 00:06:16.156
+Some actuators use a digital interface or pulse-width
+modulation.
+
+00:06:16.266 --> 00:06:20.149
+They do not all require a digital-to-analogue converter.
+
+00:06:20.319 --> 00:06:28.511
+Pulse-width modulation is timed switching, not the same thing as
+converting a value into an analogue voltage.
+
+00:06:28.681 --> 00:06:35.379
+A control signal can tell a motor what to do without being able
+to supply the current that moves it.
+
+00:06:35.549 --> 00:06:40.200
+Pip's control signal communicates what the motor driver should
+do. The
+
+00:06:40.310 --> 00:06:44.918
+energy that turns a loaded wheel still comes through the power
+system.
+
+00:06:49.715 --> 00:06:56.862
+Imagine the robot detects an obstacle, selects a turn, and sends
+a command to its motor driver.
+
+00:06:57.032 --> 00:07:03.475
+The driver powers the motor, the wheels move, and the sensor
+measures the changed situation.
+
+00:07:03.645 --> 00:07:10.535
+That final measurement closes the feedback loop. The command
+alone does not prove the movement succeeded.
+
+00:07:10.705 --> 00:07:17.191
+A wheel might slip, a sensor might be noisy, or the actuator
+might reach a mechanical limit.
+
+00:07:17.361 --> 00:07:24.785
+Monitoring and control differ. Displaying a measurement
+monitors; changing the environment adds control.
+
+00:07:24.955 --> 00:07:31.888
+This loop can use a fixed rule or a learned policy. The hardware
+path alone does not tell you which.
+
+00:07:35.628 --> 00:07:40.940
+Pause and diagnose a system. Its processor repeatedly waits for
+data,
+
+00:07:41.050 --> 00:07:44.272
+and its motor driver cannot supply enough current.
+
+00:07:44.442 --> 00:07:51.887
+Would replacing the processor with a faster GPU solve both
+problems? Think before the answer appears.
+
+00:07:58.057 --> 00:08:06.057
+No. Memory movement and actuator power are separate limits that
+a new GPU does not automatically remove.
+
+00:08:06.227 --> 00:08:12.371
+Measure the path, identify the limiting stage, and match the
+intervention to that evidence.
+
+00:08:12.541 --> 00:08:18.728
+Chapter six, Strengths and Limitations, adds power, heat,
+memory, and physical constraints.
+
+00:08:18.898 --> 00:08:23.719
+An advertised arithmetic rate describes one capability. It is
+
+00:08:23.829 --> 00:08:27.946
+not a complete measurement of the robot's useful performance.
+
+00:08:32.498 --> 00:08:37.682
+Trace Pip's whole path: observations enter, memory holds
+information,
+
+00:08:37.792 --> 00:08:41.952
+processing evaluates it, and outputs communicate or act.
+
+00:08:42.122 --> 00:08:49.780
+Memory capacity and bandwidth both matter. Pipeline throughput
+is different from the latency of one instruction.
+
+00:08:49.950 --> 00:08:57.182
+Conversion, control signals, actuator power, and processor
+strengths all affect what the system can do.
+
+00:08:57.352 --> 00:09:02.536
+Choose hardware by the workload, deadlines, power budget, and
+physical task.
+
+00:09:02.706 --> 00:09:07.144
+To check your understanding, draw a robot's path from camera to
+wheel,
+
+00:09:07.254 --> 00:09:10.688
+and label one possible bottleneck at each stage.
+
+00:09:10.858 --> 00:09:16.832
+Then explain why a more powerful chip does not, by itself,
+create a learning algorithm.
+
+00:09:17.002 --> 00:09:22.335
+An upgrade should target the constrained part of the task. Check
+the input rate,
+
+00:09:22.445 --> 00:09:27.800
+memory traffic, compute load, and actuator response as a
+connected system.
+
+00:09:32.498 --> 00:09:36.252
+Pip's small problem now has an explanation you can test.
+
+00:09:36.422 --> 00:09:41.841
+Use Chapter 3, Hardware, and the named subtopics to revisit the
+reasoning.
+
+00:09:42.011 --> 00:09:45.424
+The tutorial guide includes the full teaching steps
+
+00:09:45.534 --> 00:09:51.294
+and the checked practice answers. Run the supporting
+demonstration and change one input.
+
+00:09:51.464 --> 00:09:56.798
+Blue Impulse. Follow the signal, predict the result, and check
+your explanation.

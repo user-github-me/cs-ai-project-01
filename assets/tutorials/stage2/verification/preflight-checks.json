@@ -1,0 +1,201 @@
+{
+  "index_sha256": "df8664155a367485ecba46c1c5c45da46504dc02d15de0115ac87fa1adfb1d2e",
+  "composition_sha256": "3cb3299efe9dd7d1e4b51048d7ce6979dc109ca22e1c3c1b80f5fe352969e628",
+  "results": [
+    {
+      "video": 1,
+      "seek_test": {
+        "timestamps": 52,
+        "orders": [
+          "forward",
+          "reverse"
+        ],
+        "failures": []
+      },
+      "endpoint_test": {
+        "output_frame_indices": [
+          0,
+          35999
+        ],
+        "fps": 60,
+        "temporal_samples_per_frame": 3,
+        "all_six_source_samples_identical": true,
+        "blended_output_frames_identical": true,
+        "raw_frame_bytes": 3110400,
+        "actual_output_bytes": 6220800,
+        "hashes": [
+          "371f0ec099519c5dc93aa01debd4dcbc8f5c64f33a29f15db4066447be93dbd1",
+          "371f0ec099519c5dc93aa01debd4dcbc8f5c64f33a29f15db4066447be93dbd1"
+        ],
+        "scope": "Exact first and last three-sample blended output frames; not a full MP4 encode or a full-motion review."
+      },
+      "citations": {
+        "scenes": 12,
+        "failures": []
+      },
+      "layout": {
+        "beat_frames": 1150,
+        "caption_title_safe_failures": [],
+        "unmasked_main_text_title_safe_failures": [],
+        "nonpositive_font_diagnostics": []
+      },
+      "browser_errors": []
+    },
+    {
+      "video": 2,
+      "seek_test": {
+        "timestamps": 52,
+        "orders": [
+          "forward",
+          "reverse"
+        ],
+        "failures": []
+      },
+      "endpoint_test": {
+        "output_frame_indices": [
+          0,
+          35999
+        ],
+        "fps": 60,
+        "temporal_samples_per_frame": 3,
+        "all_six_source_samples_identical": true,
+        "blended_output_frames_identical": true,
+        "raw_frame_bytes": 3110400,
+        "actual_output_bytes": 6220800,
+        "hashes": [
+          "1a7b2c0af356e598e3be0a4a77df96402f72ff9f83bff2612d73bfee6473e33d",
+          "1a7b2c0af356e598e3be0a4a77df96402f72ff9f83bff2612d73bfee6473e33d"
+        ],
+        "scope": "Exact first and last three-sample blended output frames; not a full MP4 encode or a full-motion review."
+      },
+      "citations": {
+        "scenes": 12,
+        "failures": []
+      },
+      "layout": {
+        "beat_frames": 1150,
+        "caption_title_safe_failures": [],
+        "unmasked_main_text_title_safe_failures": [],
+        "nonpositive_font_diagnostics": []
+      },
+      "browser_errors": []
+    },
+    {
+      "video": 3,
+      "seek_test": {
+        "timestamps": 52,
+        "orders": [
+          "forward",
+          "reverse"
+        ],
+        "failures": []
+      },
+      "endpoint_test": {
+        "output_frame_indices": [
+          0,
+          35999
+        ],
+        "fps": 60,
+        "temporal_samples_per_frame": 3,
+        "all_six_source_samples_identical": true,
+        "blended_output_frames_identical": true,
+        "raw_frame_bytes": 3110400,
+        "actual_output_bytes": 6220800,
+        "hashes": [
+          "0dae4c850e8f101237abef03e228617ea6ad751623e3a501dca158c79a35b55a",
+          "0dae4c850e8f101237abef03e228617ea6ad751623e3a501dca158c79a35b55a"
+        ],
+        "scope": "Exact first and last three-sample blended output frames; not a full MP4 encode or a full-motion review."
+      },
+      "citations": {
+        "scenes": 12,
+        "failures": []
+      },
+      "layout": {
+        "beat_frames": 1150,
+        "caption_title_safe_failures": [],
+        "unmasked_main_text_title_safe_failures": [],
+        "nonpositive_font_diagnostics": []
+      },
+      "browser_errors": []
+    },
+    {
+      "video": 4,
+      "seek_test": {
+        "timestamps": 52,
+        "orders": [
+          "forward",
+          "reverse"
+        ],
+        "failures": []
+      },
+      "endpoint_test": {
+        "output_frame_indices": [
+          0,
+          35999
+        ],
+        "fps": 60,
+        "temporal_samples_per_frame": 3,
+        "all_six_source_samples_identical": true,
+        "blended_output_frames_identical": true,
+        "raw_frame_bytes": 3110400,
+        "actual_output_bytes": 6220800,
+        "hashes": [
+          "7840bea05a88eafa763060f580973fba332ba35bbe1fe51d3964e2e548016c24",
+          "7840bea05a88eafa763060f580973fba332ba35bbe1fe51d3964e2e548016c24"
+        ],
+        "scope": "Exact first and last three-sample blended output frames; not a full MP4 encode or a full-motion review."
+      },
+      "citations": {
+        "scenes": 12,
+        "failures": []
+      },
+      "layout": {
+        "beat_frames": 1150,
+        "caption_title_safe_failures": [],
+        "unmasked_main_text_title_safe_failures": [],
+        "nonpositive_font_diagnostics": []
+      },
+      "browser_errors": []
+    },
+    {
+      "video": 5,
+      "seek_test": {
+        "timestamps": 52,
+        "orders": [
+          "forward",
+          "reverse"
+        ],
+        "failures": []
+      },
+      "endpoint_test": {
+        "output_frame_indices": [
+          0,
+          35999
+        ],
+        "fps": 60,
+        "temporal_samples_per_frame": 3,
+        "all_six_source_samples_identical": true,
+        "blended_output_frames_identical": true,
+        "raw_frame_bytes": 3110400,
+        "actual_output_bytes": 6220800,
+        "hashes": [
+          "23afbe445bedb7b48883b0128ab2f17413e371456d091750d2936602d8cb4d2d",
+          "23afbe445bedb7b48883b0128ab2f17413e371456d091750d2936602d8cb4d2d"
+        ],
+        "scope": "Exact first and last three-sample blended output frames; not a full MP4 encode or a full-motion review."
+      },
+      "citations": {
+        "scenes": 12,
+        "failures": []
+      },
+      "layout": {
+        "beat_frames": 1150,
+        "caption_title_safe_failures": [],
+        "unmasked_main_text_title_safe_failures": [],
+        "nonpositive_font_diagnostics": []
+      },
+      "browser_errors": []
+    }
+  ]
+}

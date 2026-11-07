@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "scenes": 60,
+  "canonical_topics_validated": true,
+  "only_citation_fields_changed": true,
+  "note": "Video 04 shared services uses Chapter 5 networked-ai as the primary teaching citation; Chapter 6 edge-cloud remains a relevant secondary resource. Credits now point to an existing chapter topic rather than the non-canonical overview placeholder."
+}

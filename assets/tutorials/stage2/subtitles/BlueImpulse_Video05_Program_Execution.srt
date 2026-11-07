@@ -1,0 +1,470 @@
+1
+00:00:00,150 --> 00:00:03,585
+Three deliveries, plus four. Where does seven go?
+
+2
+00:00:03,755 --> 00:00:09,045
+Pip's tiny demonstration program must add two values and save
+the result.
+
+3
+00:00:09,215 --> 00:00:11,861
+The processor follows instruction meanings
+
+4
+00:00:11,971 --> 00:00:19,224
+and changes stored state. It does not understand the whole
+program like a reader understands a story.
+
+5
+00:00:19,394 --> 00:00:23,810
+Have you ever wondered how a line of code becomes a visible
+result?
+
+6
+00:00:23,980 --> 00:00:30,999
+Chapter one, The Fundamentals, lets us trace the registers and
+follow every important state change.
+
+7
+00:00:33,020 --> 00:00:39,910
+You will explain fetch, decode, and execute, and give each
+teaching-model register a clear job.
+
+8
+00:00:40,080 --> 00:00:45,883
+You will trace four instructions and distinguish an immediate
+value from a memory address.
+
+9
+00:00:46,053 --> 00:00:49,082
+You will also connect source code, translators,
+
+10
+00:00:49,192 --> 00:00:55,571
+and machine instructions without oversimplifying how modern
+language implementations work.
+
+11
+00:00:55,741 --> 00:01:00,456
+Welcome to the tutorial on program execution by Blue Impulse.
+
+12
+00:01:00,626 --> 00:01:04,615
+Have a small table ready with columns for the program counter,
+
+13
+00:01:04,725 --> 00:01:09,482
+current instruction, accumulator, and memory location two
+hundred.
+
+14
+00:01:11,628 --> 00:01:15,596
+The subtopic From source code to execution explains that
+
+15
+00:01:15,706 --> 00:01:20,229
+machine code contains the instructions a processor executes.
+
+16
+00:01:20,399 --> 00:01:23,215
+An assembler translates assembly mnemonics
+
+17
+00:01:23,325 --> 00:01:30,045
+and labels. A compiler produces another representation, often
+native code or bytecode.
+
+18
+00:01:30,215 --> 00:01:35,911
+An interpreter runs operations through a runtime, sometimes
+working with bytecode.
+
+19
+00:01:36,081 --> 00:01:40,689
+The same language can have compiled and interpreted
+implementations,
+
+20
+00:01:40,799 --> 00:01:44,127
+and modern systems may combine several techniques.
+
+21
+00:01:44,297 --> 00:01:50,654
+Avoid the blanket claim that every interpreter translates
+exactly one source line at a time.
+
+22
+00:01:50,824 --> 00:01:58,142
+Our demonstration uses invented assembly notation so that every
+state change remains easy to see.
+
+23
+00:02:00,672 --> 00:02:07,605
+Use a recipe to remember the register jobs. The program counter
+marks the next recipe line.
+
+24
+00:02:07,775 --> 00:02:15,668
+The memory address register selects the location. The memory
+data register carries the item read from memory.
+
+25
+00:02:15,838 --> 00:02:19,806
+The current instruction register holds the instruction being
+
+26
+00:02:19,916 --> 00:02:24,652
+followed. The accumulator is a temporary mixing bowl for
+arithmetic.
+
+27
+00:02:24,822 --> 00:02:31,414
+We abbreviate those names as P C, M A R, M D R, C I R, and A C
+C.
+
+28
+00:02:31,584 --> 00:02:39,542
+The analogy helps you remember the jobs, but these are
+electronic storage locations inside a processor model.
+
+29
+00:02:39,712 --> 00:02:43,829
+Keep the jobs distinct: an address points to a location,
+
+30
+00:02:43,939 --> 00:02:47,971
+while an instruction or value is the content being handled.
+
+31
+00:02:50,759 --> 00:02:57,607
+Follow the fetch sequence. First copy the address in the program
+counter to the memory address register.
+
+32
+00:02:57,777 --> 00:03:03,046
+Read the instruction at that memory location into the memory
+data register.
+
+33
+00:03:03,216 --> 00:03:08,336
+Advance the program counter so it identifies the next
+instruction address,
+
+34
+00:03:08,446 --> 00:03:13,097
+then copy the fetched instruction into the current instruction
+register.
+
+35
+00:03:13,267 --> 00:03:21,075
+The control unit can now decode the operation and its operand,
+and the processor executes the required work.
+
+36
+00:03:21,245 --> 00:03:28,882
+In this simplified model, every instruction occupies one word,
+so the program counter advances by one.
+
+37
+00:03:29,052 --> 00:03:36,476
+Real instruction sizes and exact timing depend on the
+architecture. Our table is a teaching model,
+
+38
+00:03:36,586 --> 00:03:39,423
+not every processor's wiring diagram.
+
+39
+00:03:39,593 --> 00:03:45,332
+An address identifies a place. A value is the information stored
+or processed
+
+40
+00:03:45,442 --> 00:03:51,010
+there. Keeping these roles separate makes the register trace
+much easier to follow.
+
+41
+00:03:54,411 --> 00:04:02,048
+In the subtopic Trace a tiny program, the first instruction sits
+at address one hundred: LOAD, hash three.
+
+42
+00:04:02,218 --> 00:04:07,168
+The hash sign denotes an immediate value in this invented
+notation,
+
+43
+00:04:07,278 --> 00:04:11,139
+so that instruction puts the number three into the accumulator.
+
+44
+00:04:11,309 --> 00:04:19,074
+Address one hundred and one contains ADD, hash four. Address one
+hundred and two contains STORE, two hundred.
+
+45
+00:04:19,244 --> 00:04:24,343
+Address one hundred and three contains HALT, which ends this
+teaching program.
+
+46
+00:04:24,513 --> 00:04:32,641
+The number two hundred in STORE identifies a memory location. It
+is not the value to put into the accumulator.
+
+47
+00:04:32,811 --> 00:04:39,104
+Before running anything, predict what that memory location will
+contain when the program finishes.
+
+48
+00:04:41,889 --> 00:04:48,076
+Let's single-step. Initially, the program counter is one
+hundred. Fetch the LOAD instruction
+
+49
+00:04:48,186 --> 00:04:50,426
+and advance to one hundred and one.
+
+50
+00:04:50,596 --> 00:04:56,036
+Decode and execute LOAD, hash three. The accumulator now
+contains three.
+
+51
+00:04:56,206 --> 00:05:04,099
+Next fetch ADD, hash four from address one hundred and one. The
+program counter advances to one hundred and two.
+
+52
+00:05:04,269 --> 00:05:07,554
+Execution adds four to the accumulator's three,
+
+53
+00:05:07,664 --> 00:05:12,208
+giving seven. Memory location two hundred has not been written
+yet.
+
+54
+00:05:12,378 --> 00:05:17,178
+Fetch STORE, two hundred. The program counter advances to one
+hundred
+
+55
+00:05:17,288 --> 00:05:22,387
+and three, and execution copies seven into memory location two
+hundred.
+
+56
+00:05:22,557 --> 00:05:30,557
+The accumulator still contains seven. STORE copies the value; it
+does not turn the accumulator into an address.
+
+57
+00:05:30,727 --> 00:05:34,076
+Finally fetch HALT. In this simplified trace,
+
+58
+00:05:34,186 --> 00:05:39,541
+the fetch advances the counter to one hundred and four before
+execution stops.
+
+59
+00:05:39,711 --> 00:05:42,932
+The runnable Python model prints these same states
+
+60
+00:05:43,042 --> 00:05:47,586
+and register transfers, so you can reproduce the trace yourself.
+
+61
+00:05:51,280 --> 00:05:55,184
+Pause and check your prediction. After the STORE instruction,
+
+62
+00:05:55,294 --> 00:05:59,134
+what are the accumulator and memory location two hundred?
+
+63
+00:05:59,304 --> 00:06:04,680
+Also ask yourself whether STORE, two hundred means storing the
+number two hundred.
+
+64
+00:06:09,850 --> 00:06:11,856
+The accumulator remains seven,
+
+65
+00:06:11,966 --> 00:06:18,259
+and memory location two hundred receives seven. Two hundred is
+the destination address.
+
+66
+00:06:18,429 --> 00:06:26,152
+The hash sign in our LOAD and ADD operands marks literal values.
+The STORE operand has a different role.
+
+67
+00:06:26,322 --> 00:06:33,660
+This distinction prevents a common tracing mistake: confusing
+where data lives with the value stored there.
+
+68
+00:06:33,830 --> 00:06:37,436
+Use this model's instruction meanings before applying
+
+69
+00:06:37,546 --> 00:06:41,450
+assumptions from a different programming language or processor.
+
+70
+00:06:44,498 --> 00:06:50,044
+A branch instruction may replace the normal next value of the
+program counter.
+
+71
+00:06:50,214 --> 00:06:57,745
+That is how the instruction sequence can follow a decision or
+repeat a loop instead of always moving forward.
+
+72
+00:06:57,915 --> 00:07:04,720
+Our four-instruction program contains no branch, so the normal
+next addresses stay easy to follow.
+
+73
+00:07:04,890 --> 00:07:11,056
+Chapter three, Hardware, adds pipelining: real processors may
+overlap instructions
+
+74
+00:07:11,166 --> 00:07:14,302
+while preserving the required program behaviour.
+
+75
+00:07:14,472 --> 00:07:20,936
+Overlapping the implementation does not make the logical effects
+of a program arbitrary.
+
+76
+00:07:21,106 --> 00:07:25,799
+For a basic trace, first understand the defined instruction
+effects,
+
+77
+00:07:25,909 --> 00:07:29,386
+then study how a specific processor implements them.
+
+78
+00:07:31,976 --> 00:07:39,315
+Your turn. Change ADD, hash four to ADD, hash nine, while
+keeping LOAD, hash three and STORE, two hundred.
+
+79
+00:07:39,485 --> 00:07:45,991
+What value should reach memory location two hundred? Work
+through the accumulator before we reveal it.
+
+80
+00:07:52,161 --> 00:07:59,564
+LOAD gives three. Adding nine gives twelve. STORE copies twelve
+into memory location two hundred.
+
+81
+00:07:59,734 --> 00:08:05,665
+That is a small example of testing a prediction by changing one
+input to the program.
+
+82
+00:08:05,835 --> 00:08:10,677
+The included simulator accepts a different add value, prints the
+trace,
+
+83
+00:08:10,787 --> 00:08:15,161
+and checks that the final memory result matches the arithmetic.
+
+84
+00:08:15,331 --> 00:08:22,563
+Try another value and explain each register's role aloud as the
+instruction moves through the cycle.
+
+85
+00:08:25,715 --> 00:08:29,769
+Recap the lesson. Source code reaches execution through
+
+86
+00:08:29,879 --> 00:08:34,295
+a translator or runtime appropriate to its implementation.
+
+87
+00:08:34,465 --> 00:08:40,395
+The program counter identifies the next instruction. Fetch
+brings it from memory,
+
+88
+00:08:40,505 --> 00:08:44,729
+decode interprets it, and execute performs its operation.
+
+89
+00:08:44,899 --> 00:08:51,129
+The memory address register selects a location, the memory data
+register carries data,
+
+90
+00:08:51,239 --> 00:08:54,993
+and the current instruction register holds the operation.
+
+91
+00:08:55,163 --> 00:09:02,267
+Our teaching accumulator went from three to seven, and STORE
+copied seven to memory location two hundred.
+
+92
+00:09:02,437 --> 00:09:09,264
+Addresses and values have different roles. Branches can change
+the normal next instruction address.
+
+93
+00:09:09,434 --> 00:09:16,709
+Complete the trace without watching the highlight. Understanding
+means predicting each state change yourself.
+
+94
+00:09:16,879 --> 00:09:19,204
+Pip's seven is now a stored result
+
+95
+00:09:19,314 --> 00:09:24,114
+because STORE copied the accumulator value to the chosen memory
+address.
+
+96
+00:09:24,224 --> 00:09:28,725
+The instruction determined both what changed and what stayed the
+same.
+
+97
+00:09:32,498 --> 00:09:36,252
+Pip's small problem now has an explanation you can test.
+
+98
+00:09:36,422 --> 00:09:42,225
+Use Chapter 1, The Fundamentals, and the named subtopics to
+revisit the reasoning.
+
+99
+00:09:42,395 --> 00:09:45,808
+The tutorial guide includes the full teaching steps
+
+100
+00:09:45,918 --> 00:09:51,678
+and the checked practice answers. Run the supporting
+demonstration and change one input.
+
+101
+00:09:51,848 --> 00:09:57,182
+Blue Impulse. Follow the signal, predict the result, and check
+your explanation.

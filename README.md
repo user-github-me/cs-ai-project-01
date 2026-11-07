@@ -1,12 +1,39 @@
-# Blue Impulse — AI Project Plan: Hardware, Networks & Behaviorist AI
+# Blue Impulse — Hardware, Networks & Behaviorist AI
 
-University team assignment for the **CS & AI** course.
+A six-chapter learning module for the CS & AI course. Start with the chapter materials, practise with the study guide and Test Bank, then use the teaching slides and focused tutorials.
 
-## Overview
+The repository is **public**, as requested for the professor’s submitted link. The current Stage 2 materials are listed below. Earlier presentation drafts and first-edition tutorials remain available as historical work.
 
-**Group name:** Blue Impulse
+## Current Stage 2 materials
 
-**Module:** Hardware, Networks & Behaviorist AI
+| Material | Open here | Contents |
+| --- | --- | --- |
+| Complete Markdown | [Chapter index](content/README.md) · [full content](content/BlueImpulse_Complete_Content_V2.md) | Six chapters, 67 topics, worked examples, exercises and explained answers. |
+| Study guide | [Complete PDF](assets/study-guide/BlueImpulse_Study_Guide.pdf) | 121 pages; original artwork and teaching sequence, guided missions and feedback. |
+| Test Bank | [Editable Word](assets/study-guide/BlueImpulse_Stage2_TestBank_V1.docx) · [PDF](assets/study-guide/BlueImpulse_Stage2_TestBank_V1.pdf) | 24 True/False, 24 single-choice and six open-response questions, with explained answers. |
+| Teaching slides | [PPTX and supporting materials](assets/presentations/stage2-teaching/README.md) | 63 editable slides across all six chapters, native presenter notes and 15 audience tasks. |
+| Tutorials | [Videos, PDFs and scripts](assets/tutorials/stage2/README.md) | Five ten-minute MP4s at 1080p/60 fps, chapter/subtopic citations, narrated demonstrations, captions, tutorial PDFs and full scripts. |
+| Runnable examples | [Python and checked outputs](content/supporting/README.md) | Q-learning, pipelines, network delay, message validation and a toy CPU. |
+| Project log | [Word](project-log/BlueImpulse_Stage2_ProjectLog.docx) · [PDF](project-log/BlueImpulse_Stage2_ProjectLog.pdf) | Dated Stage 2 work, meeting evidence, AI use and contribution records. |
+| Personal logs | [Individual Markdown](Personal_logs/) · [combined Word](private-submissions/stage2/BlueImpulse_Stage2_PersonalLogs.docx) · [combined PDF](private-submissions/stage2/BlueImpulse_Stage2_PersonalLogs.pdf) | Authentic available entries; missing member writing is identified. |
+| Submission files | [Stage 2 index](submissions/stage2/README.md) | Exact assignment filenames, downloadable packages and remaining human steps. |
+
+## Learning sequence
+
+1. [The Fundamentals](content/chapter-01/README.md): represent data and trace stored-program execution.
+2. [Behaviorism & Behaviorist AI](content/chapter-02/README.md): distinguish rules, feedback and reinforcement learning.
+3. [Hardware](content/chapter-03/README.md): explain memory, processing, control and physical constraints.
+4. [Networking](content/chapter-04/README.md): connect devices, evaluate performance and protect communication.
+5. [Applications](content/chapter-05/README.md): place computation, validate messages and meet task requirements.
+6. [Strengths & Limitations](content/chapter-06/README.md): evaluate where approaches work and where they fail.
+
+Predict an outcome, attempt the activity, compare your reasoning with the explained answer, and change one input to test the explanation. The examples are explicit teaching models; their assumptions are stated in the materials.
+
+## Review and submission status
+
+[task.md](task.md) records completed production work and remaining tasks. The [requirements audit](project-log/REQUIREMENTS_AND_READINESS.md) distinguishes verified files from evidence that must come from the team: four members’ Stage 2 personal entries, contribution scores, actual learner/teammate review, rehearsal and course-platform submission. Those events have not been invented or marked complete.
+
+The current source of assignment requirements is [Stage2_All_Instructions.md](rules/Stage2_All_Instructions.md). Later user instructions govern the revised tutorial style and the repository’s public visibility. The supplied assignment’s private-personal-log rule and the user’s public-access exception are recorded in the project log.
 
 ### Members
 
@@ -18,137 +45,12 @@ University team assignment for the **CS & AI** course.
 | Safa | 那第武 | 1820262016 | [safa-nadeem@outlook.com](mailto:safa-nadeem@outlook.com) | Submission + Research |
 | Danial | 达尼亚 | 1820262025 | [danialkhanmay@gmail.com](mailto:danialkhanmay@gmail.com) | Research / Content |
 
-## Purpose
+## Source, earlier work and project organisation
 
-- Become familiar with basic computer hardware, such as RAM and the CPU.
-- Understand the concept of stimulus and response.
-- Know the basic definition of AI.
-- Understand networking as the transmission of data between linked devices.
+- [Learning and Development](Learning%20and%20Development/) holds shared development materials.
+- [Stage 1 drafts](drafts/stage%201/) preserve the original planning Markdown.
+- [Sojourner presentation](assets/presentations/final-presentation/BlueImpulse_Stage2_Sojourner.pptx) preserves the earlier Mars presentation; the complete module teaching deck is linked above.
+- [First-edition tutorial outputs](assets/tutorials/README.md) and the [6 November release](https://github.com/user-github-me/cs-ai-project-01/releases/tag/blue-impulse-delivery-2026-11-06) preserve the previous book-page-based tutorials.
+- `temp contents/` contains supplied working inputs and remains excluded from Git. Video production projects (`videos/`), generated caches and duplicate ZIP/MP4 submission copies are also excluded. The public tutorial materials are finished MP4s, PDFs, scripts/outlines, subtitles and learning examples; production HTML, render code and audio intermediates stay local.
 
-## Learning Goals
-
-By the end of the learning experience, learners should be able to:
-
-- **Identify** fundamental computer hardware components and describe their functions.
-- **Explain** basic networking concepts and distinguish common networking devices.
-- **Apply** their knowledge to simple, everyday technology scenarios.
-- **Demonstrate** improvement through interactive exercises, repeated practice, and assessments.
-- **Learn** at their own pace through behaviorist AI that provides immediate feedback, reinforcement, and additional practice when needed.
-
-## Repository Structure
-
-```text
-cs-ai-project-01/
-├── README.md
-├── task.md
-├── Learning and Development/
-│   └── .gitkeep
-├── Personal_logs/
-│   ├── Personal_logs_Danial.md
-│   ├── Personal_logs_EDZEL.md
-│   ├── Personal_logs_NAZIF.md
-│   ├── Personal_logs_SAFA.md
-│   └── Personal_logs_TIAN.md
-├── content/
-│   ├── chapter-01/
-│   │   ├── README.md
-│   │   ├── Chapter-01-sample.md
-│   │   ├── draft.md
-│   │   ├── exercises.md
-│   │   └── solutions.md
-│   ├── chapter-02/
-│   │   ├── README.md
-│   │   ├── draft.md
-│   │   ├── exercises.md
-│   │   └── solutions.md
-│   ├── chapter-03/
-│   │   ├── README.md
-│   │   ├── draft.md
-│   │   ├── exercises.md
-│   │   └── solutions.md
-│   ├── chapter-04/
-│   │   ├── README.md
-│   │   ├── draft.md
-│   │   ├── exercises.md
-│   │   └── solutions.md
-│   ├── chapter-05/
-│   │   ├── README.md
-│   │   ├── draft.md
-│   │   ├── exercises.md
-│   │   └── solutions.md
-│   └── chapter-06/
-│       ├── README.md
-│       ├── draft.md
-│       ├── exercises.md
-│       └── solutions.md
-├── drafts/
-│   ├── Learning Methods Plan.docx
-│   └── stage 1/
-│       ├── Content_Outline.md
-│       ├── Learning Goal.md
-│       ├── Learning_methods.md
-│       ├── Meetings_and_Rehearsals.md
-│       ├── Members_strengths.md
-│       ├── Responsibilities.md
-│       ├── Scope_Boundaries.md
-│       ├── Target audience.md
-│       ├── development-plan.md
-│       ├── meeting-notes.md
-│       ├── significance-use-of-AI.md
-│       └── use-of-github.md
-├── videos/
-│   └── blue-impulse-tutorials/
-│       ├── README.md
-│       ├── scripts/
-│       ├── supporting/
-│       └── source/
-└── assets/
-    ├── study-guide/
-    │   ├── BlueImpulse_Study_Guide.pdf
-    │   ├── BlueImpulse_Study_Guide_Overview.jpg
-    │   └── source/
-    ├── tutorials/
-    │   ├── README.md
-    │   ├── BlueImpulse_All_Video_Tutorials.pdf
-    │   ├── BlueImpulse_Video01_Basic_Reinforcement_Learning_Tutorial.pdf
-    │   ├── scripts/
-    │   └── videos/
-    │       ├── BlueImpulse_Video01_Basic_Reinforcement_Learning.mp4
-    │       ├── BlueImpulse_Video02_How_Hardware_Enables_AI.mp4
-    │       ├── BlueImpulse_Video03_Network_Challenges.mp4
-    │       ├── BlueImpulse_Video04_Networking_for_Behaviorist_AI.mp4
-    │       └── BlueImpulse_Video05_Program_Execution.mp4
-    ├── images/
-    ├── diagrams/
-    │   └── Flowchart.png
-    ├── references/
-    └── presentations/
-        ├── final-presentation/
-        │   └── BlueImpulse_Stage2_Sojourner.pptx
-        ├── slides-draft/
-        │   ├── BlueImpulse_Stage1_StatusReport.pptx
-        │   ├── BlueImpulse_Stage2_Sojourner.pptx
-        │   ├── BlueImpulse_Stage2_Sojourner.pdf
-        │   ├── BlueImpulse_Stage2_Overview.jpg
-        │   ├── stage2-slide-outline.md
-        │   └── stage2-sojourner/
-        └── visual-concept/
-            ├── blueim1.png
-            └── blueim2.png
-```
-
-- [task.md](task.md): Task assignments and progress tracking.
-- [Learning and Development/](Learning%20and%20Development/): Shared learning and development materials.
-- [content/](content/): Study material being developed or ready for use. Repeat the chapter folder layout for each new chapter.
-- [drafts/](drafts/): Early ideas, outlines, research notes, and development plans. Stage 1 Markdown files are in [drafts/stage 1/](drafts/stage%201/).
-- [assets/](assets/): Images, diagrams, and reference material used in the chapters.
-- [Study guide](assets/study-guide/README.md): The complete six-chapter PDF, page overview, source files and page references for the companion tutorials.
-- [Video tutorials](assets/tutorials/README.md): Five narrated, subtitled MP4s lasting 8–10 minutes, matching written tutorials, printable scripts and teaching outlines, editable Markdown, and a documents-only ZIP.
-- [Download the complete project deliverables](https://github.com/user-github-me/cs-ai-project-01/releases/tag/blue-impulse-delivery-2026-11-06): The full tutorial ZIP and checksum, study guide PDF, and Stage 2 PowerPoint.
-- [Editable video project](videos/blue-impulse-tutorials/README.md): Narration, subtitles, animated demonstrations, supporting Python, and rendering instructions for the five book tutorials.
-- [assets/presentations/slides-draft/](assets/presentations/slides-draft/): Draft presentations, including the [Blue Impulse Stage 1 status-report template](assets/presentations/slides-draft/BlueImpulse_Stage1_StatusReport.pptx). The template contains placeholders for the team to complete.
-- [Stage 2 Sojourner slide draft](assets/presentations/slides-draft/stage2-sojourner/README.md): Editable PowerPoint, PDF preview, artwork and source for the retro Mars presentation. Detailed content remains blank according to the team's outline.
-- [Stage 2 Sojourner presentation](assets/presentations/final-presentation/BlueImpulse_Stage2_Sojourner.pptx): The presentation saved in the final-presentation folder.
-- [Personal_logs/](Personal_logs/): Individual learning and work logs for each Blue Impulse member.
-
-Empty folders contain `.gitkeep` files so they are tracked by Git.
+AI assistance is disclosed in the project log, chapter records and artifact-specific source/review files. AI-assisted checks are distinct from a student’s own reflection or a teammate’s viewing.

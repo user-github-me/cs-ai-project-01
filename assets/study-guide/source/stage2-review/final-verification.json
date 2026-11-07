@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "date": "2026-11-07",
+  "pdfs": [
+    {
+      "file": "assets/study-guide/BlueImpulse_Study_Guide.pdf",
+      "pages": 121,
+      "bytes": 31485246,
+      "sha256": "08a786dfe9e267b042907f62b602913d86720f09746c9705348df2c81ea889b8",
+      "checked_text_spans": 858
+    },
+    {
+      "file": "assets/study-guide/BlueImpulse_Stage2_TestBank_V1.pdf",
+      "pages": 15,
+      "bytes": 97499,
+      "sha256": "9ef4c5ae558b1adf5b64e227369cd46ead1568a6c2b79c3a16795f9cd28f1fc7",
+      "checked_text_spans": 544
+    },
+    {
+      "file": "submissions/stage2/markdown/BlueImpulse_Stage2_Markdown_V2_Content.pdf",
+      "pages": 116,
+      "bytes": 427265,
+      "sha256": "cf7ba0c8440ea2e144d9aa508a28695e3dd68d6df00b531296b8159112ca0df7",
+      "checked_text_spans": 4409
+    },
+    {
+      "file": "submissions/stage2/markdown/BlueImpulse_Stage2_Markdown_Submission_Report.pdf",
+      "pages": 3,
+      "bytes": 55599,
+      "sha256": "bb2b143c4d4ed8fa06c3aa1c8fb338a3c0733f2957f28cc96542ac3f3704d89a",
+      "checked_text_spans": 214
+    }
+  ],
+  "test_bank": {
+    "true_false": 24,
+    "multiple_choice": 24,
+    "open_ended": 6,
+    "each_chapter": "4 TF / 4 MC / 1 OE",
+    "open_sample_word_counts": [
+      138,
+      139,
+      142,
+      130,
+      154,
+      171
+    ]
+  },
+  "developed_topics": 67,
+  "checkpoint_feedback_pairs": 67,
+  "explained_exercises": 65,
+  "missions": 6,
+  "working_local_links": 48,
+  "resource_access": "6/6 signed-out HTTP 200",
+  "packages": [
+    {
+      "file": "submissions/stage2/study-guide/BlueImpulse_Stage2_StudyGuide_TestBank_V1.zip",
+      "files": 9,
+      "crc_and_hashes": "passed"
+    },
+    {
+      "file": "submissions/stage2/markdown/BlueImpulse_Stage2_Markdown_V2.zip",
+      "files": 67,
+      "crc_and_hashes": "passed"
+    }
+  ],
+  "human_review": "pending; no independent teammate attempt evidence supplied"
+}

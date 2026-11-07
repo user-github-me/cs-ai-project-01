@@ -1,0 +1,3 @@
+# Snapshot navigation
+
+The current repository README text is included in README.md. Links to files outside this Markdown snapshot have been made explicit supplementary GitHub URLs, while content/ and the included task.md and rules/ links remain local. REPOSITORY_README_ORIGINAL.txt preserves the exact original Markdown bytes for development evidence. The complete learning foundation is content/README.md; every content-relative link and optional activity file is included in its working structure. The rendered content PDF includes every core explanation, activity and answer offline. The original art is embedded in the separately submitted complete Study Guide PDF; this Markdown content uses native tables/flows and does not require the ignored raw art inputs.

@@ -1,0 +1,9 @@
+{
+  "package": "BlueImpulse_Stage2_PPT_V1.zip",
+  "PPT_sha256": "48124e50a1f7e6acfe7f62a60f43cd220b47d27ea6138d3aec96ed850b9332f2",
+  "native_import": "passed",
+  "slideshow_start_stop": "passed at slide 29",
+  "native_export": "63 nonempty PDF pages",
+  "notes_archive": "63 native note parts verified during package readback",
+  "human_rehearsal": "pending"
+}

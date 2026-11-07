@@ -61,3 +61,29 @@ What I did:
 - I organised the five existing tutorial PDFs and used Neogpt to prepare printable PDFs of each video's complete narration script and teaching outline, including learning objectives, timestamps, teaching steps, and study-guide page references.
 - I kept the editable Markdown scripts and outlines alongside the printable versions and checked that the narration and teaching sections were complete.
 - I created a separate tutorial-documents ZIP, added direct links for each video's materials, and uploaded the documents to GitHub so the team can download them together.
+
+### Repository visibility and submission access — 7 November 2026
+
+- I clarified that the repository must remain public so that the professor can open the submitted link and see the full project, including my personal log.
+- Neogpt restored the repository to public after temporarily making it private while interpreting the Stage 2 privacy guidance. It verified the GitHub visibility as `PUBLIC`.
+- I asked why personal logs and submission folders had been added to `.gitignore`. Neogpt removed those broad exclusions and kept my personal log tracked. The supplied `temp contents/` folder and generated submission ZIP/video copies remain excluded from normal Git; downloadable deliverables are published separately where necessary.
+- This entry records my instructions and the verified repository change, with AI assistance; it is not evidence of a teammate review or a professor's access test.
+
+### Complete Stage 2 revision and tutorial direction — 7 November 2026
+
+- I asked Neogpt to follow `rules/Stage2_All_Instructions.md` and prepare the repository's Stage 2 materials. I also supplied the revised tutorial direction: story-based explanations, a more vibrant palette, chapter/subtopic citations, mandatory subtitles, and motion that supports a ten-minute lesson.
+- Neogpt completed the six-chapter Markdown foundation with 67 topics, application checkpoints, six guided missions and 65 explained exercise answers. It extended the study guide to 121 pages while preserving the original artwork, and created a separate 54-question Test Bank in editable Word and PDF.
+- Neogpt prepared a 63-slide editable teaching deck covering the six chapters, presenter notes and audience activities. The earlier Sojourner deck remains available as historical work.
+- Neogpt created five revised tutorial PDFs, five narration-script/teaching-outline PDFs and a 42-page combined Video Guide. The revised tutorials cite chapter numbers, names and subtopics instead of study-guide screenshots or page numbers.
+- The video production checks covered all 5,750 beat frames, 60 chapter/subtopic references, deterministic frame seeking, looping endpoints and speech/music levels. These are AI-assisted production checks; they do not claim that I or another student watched every video or independently solved the activities. Final encoding was still running when this entry was added.
+- I asked to see the changes before they are pushed to GitHub. I also clarified that the professor needs the finished videos, not the HyperFrames/HTML video production projects. Neogpt kept the production projects locally and excluded them from the next GitHub revision, while retaining the finished MP4s, requested PDFs, scripts, subtitles and learning examples for publication.
+- The project and personal-log documents distinguish actual available records from missing teammate entries, personal learning reflections, agreed contribution scores, rehearsal and learner-review evidence. My own reflection and the team's reviews still need to be supplied by the people involved.
+
+Evidence: [Stage 2 output index](../submissions/stage2/README.md), [tutorial documents](../assets/tutorials/stage2/README.md), [chapter review](../content/REVIEW.md), and [project log](../project-log/BlueImpulse_Stage2_ProjectLog.pdf). Neogpt assisted with this entry; it records the requests and observed production work rather than inventing personal learning.
+
+### Finished tutorial outputs — 7 November 2026
+
+- Neogpt finished all five revised MP4s. Each is 10:00 at 1920×1080 and 60 fps. Their measured sizes are 47.43, 48.16, 48.90, 50.06 and 45.85 MB, below the assignment's 250 MB limit per video.
+- The final production checks decoded all 180,000 video frames without errors, matched all 489 subtitle cues to the measured narration, and confirmed that the final MP4 audio matches the verified mixes. Ten final encoded demonstration/caption frames were inspected by AI. These checks do not replace the required teammate viewing or beginner trial.
+- The 42-page combined Video Guide and all ten individual tutorial/script PDFs now contain the final filenames, timings and file sizes. The files use chapter/subtopic citations and include worked examples, reasoning, questions and feedback.
+- The publishable collection is in [assets/tutorials/stage2](../assets/tutorials/stage2/README.md). The [final verification report](../assets/tutorials/stage2/verification/final-video-checks.md) records the measurements. Video production source stays local, as I requested. GitHub publication is recorded separately after it is verified.

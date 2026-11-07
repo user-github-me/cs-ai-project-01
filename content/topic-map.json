@@ -1,0 +1,548 @@
+{
+  "chapters": {
+    "1": "The Fundamentals",
+    "2": "Behaviorism & Behaviorist AI",
+    "3": "Hardware",
+    "4": "Networking",
+    "5": "Applications",
+    "6": "Strengths & Limitations"
+  },
+  "topics": [
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "bits-bytes",
+      "title": "From bits to bytes",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "1.2b3"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "binary-hex",
+      "title": "Binary, denary & hex",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "1.1a1"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "signed-binary",
+      "title": "Represent negative values",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "1.1a3"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "characters-bcd",
+      "title": "Numbers, characters & codes",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "1.1b2"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "images",
+      "title": "Build a digital image",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "1.2b2"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "sound-compression",
+      "title": "Sample, store & compress",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "1.2a2"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "stored-program",
+      "title": "The stored-program computer",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "1.3"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "fetch-execute",
+      "title": "Fetch / decode / execute",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "1.3"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "translators",
+      "title": "From source code to execution",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "1.5"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "program-trace",
+      "title": "Trace a tiny program",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "1.5"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "operating-system",
+      "title": "The operating system’s jobs",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "1.4"
+    },
+    {
+      "chapter": 1,
+      "chapter_title": "The Fundamentals",
+      "key": "interrupts-ports",
+      "title": "Events, interrupts & peripherals",
+      "file": "content/chapter-01/draft.md",
+      "exercise": "3.6"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Behaviorism & Behaviorist AI",
+      "key": "conditioning",
+      "title": "Learning from the environment",
+      "file": "content/chapter-02/draft.md",
+      "exercise": "2.1"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Behaviorism & Behaviorist AI",
+      "key": "reactive-agents",
+      "title": "React first: behaviour-based robots",
+      "file": "content/chapter-02/draft.md",
+      "exercise": "2.3"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Behaviorism & Behaviorist AI",
+      "key": "rl-loop",
+      "title": "The reinforcement-learning loop",
+      "file": "content/chapter-02/draft.md",
+      "exercise": "2.4a"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Behaviorism & Behaviorist AI",
+      "key": "rewards-values",
+      "title": "Rewards, policies & values",
+      "file": "content/chapter-02/draft.md",
+      "exercise": "5.3a"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Behaviorism & Behaviorist AI",
+      "key": "exploration",
+      "title": "Explore or exploit?",
+      "file": "content/chapter-02/draft.md",
+      "exercise": "2.4b"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Behaviorism & Behaviorist AI",
+      "key": "q-learning",
+      "title": "Update a Q value",
+      "file": "content/chapter-02/draft.md",
+      "exercise": "2.4b"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Behaviorism & Behaviorist AI",
+      "key": "mdp",
+      "title": "A decision problem as an MDP",
+      "file": "content/chapter-02/draft.md",
+      "exercise": "2.4a"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Behaviorism & Behaviorist AI",
+      "key": "uncertainty",
+      "title": "Actions can have uncertain outcomes",
+      "file": "content/chapter-02/draft.md",
+      "exercise": "2.4a"
+    },
+    {
+      "chapter": 2,
+      "chapter_title": "Behaviorism & Behaviorist AI",
+      "key": "learning-deployment",
+      "title": "Training is different from using a policy",
+      "file": "content/chapter-02/draft.md",
+      "exercise": "2.2"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "hardware-roles",
+      "title": "Hardware gives software a body",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "3.3"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "memory-hierarchy",
+      "title": "Memory: capacity versus speed",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "3.2a"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "rom-storage",
+      "title": "Keep data when power is off",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "3.2b"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "risc-cisc",
+      "title": "Processor instruction-set choices",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "3.5a"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "pipeline",
+      "title": "Overlap work with a pipeline",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "3.5b"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "parallel",
+      "title": "One stream or many?",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "3.5b"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "hardware-interrupt",
+      "title": "Let hardware request attention",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "3.6"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "logic-gates",
+      "title": "Reason with logic gates",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "3.7"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "boolean-algebra",
+      "title": "Simplify a logic expression",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "3.7"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "sensor-control",
+      "title": "Sense, decide, act, sense again",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "3.4"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "embedded",
+      "title": "Computing inside another device",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "6.1"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "ai-hardware",
+      "title": "The hardware behind an AI model",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "6.1"
+    },
+    {
+      "chapter": 3,
+      "chapter_title": "Hardware",
+      "key": "advanced-io",
+      "title": "Interfaces you can see and touch",
+      "file": "content/chapter-03/draft.md",
+      "exercise": "3.3"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "network-scales",
+      "title": "Connect a room, a city, a world",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.1a"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "client-server",
+      "title": "Clients, servers & peers",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.1b"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "clients-cloud",
+      "title": "Where does the work happen?",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.1d"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "lan-hardware",
+      "title": "The devices along a network path",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.4a"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "media-collisions",
+      "title": "Sharing a communication medium",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.2"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "internet-url",
+      "title": "Internet, web & addresses",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.3a"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "dns",
+      "title": "Find a host with DNS",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.3b"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "tcp-ip",
+      "title": "Give each protocol layer a job",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.4a"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "application-protocols",
+      "title": "Web, files, email & sharing",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.4b"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "switching",
+      "title": "Reserve a path or share capacity?",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.5c"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "network-challenges",
+      "title": "Capacity is not responsiveness",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "6.5"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "security-integrity",
+      "title": "Protect data and its meaning",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.6b"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "encryption",
+      "title": "Keep messages confidential",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.7a"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "tls-signatures",
+      "title": "Trust, signatures & certificates",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.7c"
+    },
+    {
+      "chapter": 4,
+      "chapter_title": "Networking",
+      "key": "crypto-modes",
+      "title": "Encryption modes & quantum ideas",
+      "file": "content/chapter-04/draft.md",
+      "exercise": "4.7a"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Applications",
+      "key": "smart-system",
+      "title": "A system that senses and acts",
+      "file": "content/chapter-05/draft.md",
+      "exercise": "5.1"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Applications",
+      "key": "smart-irrigation",
+      "title": "Example: an irrigation system",
+      "file": "content/chapter-05/draft.md",
+      "exercise": "5.3b"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Applications",
+      "key": "real-time",
+      "title": "Real-time means meeting a deadline",
+      "file": "content/chapter-05/draft.md",
+      "exercise": "5.2a"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Applications",
+      "key": "networked-ai",
+      "title": "Networking for a behaviour-based agent",
+      "file": "content/chapter-05/draft.md",
+      "exercise": "6.5"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Applications",
+      "key": "automation",
+      "title": "Automation changes work and errors",
+      "file": "content/chapter-05/draft.md",
+      "exercise": "5.2b"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Applications",
+      "key": "policy-feedback",
+      "title": "Feedback can change a policy",
+      "file": "content/chapter-05/draft.md",
+      "exercise": "5.3a"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Applications",
+      "key": "actuators",
+      "title": "Turn a decision into an action",
+      "file": "content/chapter-05/draft.md",
+      "exercise": "5.3b"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Applications",
+      "key": "human-ai",
+      "title": "Help people understand the system",
+      "file": "content/chapter-05/draft.md",
+      "exercise": "5.4b"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Applications",
+      "key": "ethical-ai",
+      "title": "Evaluate more than performance",
+      "file": "content/chapter-05/draft.md",
+      "exercise": "5.5a"
+    },
+    {
+      "chapter": 5,
+      "chapter_title": "Applications",
+      "key": "smart-cities",
+      "title": "Opportunities bring responsibilities",
+      "file": "content/chapter-05/draft.md",
+      "exercise": "5.5b"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Strengths & Limitations",
+      "key": "system-tradeoffs",
+      "title": "Judge the whole system",
+      "file": "content/chapter-06/draft.md",
+      "exercise": "6.5"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Strengths & Limitations",
+      "key": "hardware-limits",
+      "title": "Four physical budgets",
+      "file": "content/chapter-06/draft.md",
+      "exercise": "6.1"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Strengths & Limitations",
+      "key": "sensor-reliability",
+      "title": "Reliable decisions need reliable inputs",
+      "file": "content/chapter-06/draft.md",
+      "exercise": "6.1"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Strengths & Limitations",
+      "key": "scalability",
+      "title": "Grow without losing coordination",
+      "file": "content/chapter-06/draft.md",
+      "exercise": "6.2"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Strengths & Limitations",
+      "key": "edge-cloud",
+      "title": "Put each computation where it fits",
+      "file": "content/chapter-06/draft.md",
+      "exercise": "6.5"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Strengths & Limitations",
+      "key": "prediction-behaviour",
+      "title": "Predict an outcome or model behaviour?",
+      "file": "content/chapter-06/draft.md",
+      "exercise": "6.4"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Strengths & Limitations",
+      "key": "explainability",
+      "title": "Understand why a policy acted",
+      "file": "content/chapter-06/draft.md",
+      "exercise": "6.6"
+    },
+    {
+      "chapter": 6,
+      "chapter_title": "Strengths & Limitations",
+      "key": "responsible-deployment",
+      "title": "Balance benefit, risk & oversight",
+      "file": "content/chapter-06/draft.md",
+      "exercise": "6.7"
+    }
+  ]
+}

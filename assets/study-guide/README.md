@@ -1,40 +1,42 @@
-# Blue Impulse study guide
+# Blue Impulse study guide and Test Bank — Stage 2 V1.0
 
-[Study guide PDF](BlueImpulse_Study_Guide.pdf) · [All-page overview](BlueImpulse_Study_Guide_Overview.jpg)
+[Complete Study Guide PDF](BlueImpulse_Study_Guide.pdf) · [Editable Test Bank](BlueImpulse_Stage2_TestBank_V1.docx) · [Test Bank PDF](BlueImpulse_Stage2_TestBank_V1.pdf)
 
-The 96-page guide covers the six supplied chapters. It includes learning goals, explanations, worked examples, diagrams, key terms and the team's GitHub exercises. The PDF has selectable text, chapter and topic bookmarks, linked contents, and links to the exercise files. Page numbers match the PDF viewer, including the cover and dividers.
+The complete guide has 121 pages: the original 96-page teaching sequence followed by six guided missions, resource introductions, and explained answers for all 65 retained exercises. The separate Test Bank contains 24 True/False questions, 24 single-answer multiple-choice questions and six substantial open tasks, with four/four/one per chapter. Questions precede the explanatory answer key. The [Stage 2 submission package](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_StudyGuide_TestBank_V1.zip) includes the complete PDF, editable DOCX, optional PDF copy and runnable activity support.
 
-| Chapter | Theme | PDF pages |
+| Chapter | Theme | Core PDF pages |
 | --- | --- | --- |
 | 1. The Fundamentals | Dawn | 5–21 |
-| 2. Behaviorism and Behaviorist AI | Morning | 22–33 |
+| 2. Behaviorism & Behaviorist AI | Morning | 22–33 |
 | 3. Hardware | Midday | 34–50 |
 | 4. Networking | Afternoon | 51–70 |
 | 5. Applications | Dusk | 71–83 |
-| 6. Strengths and Limitations | Midnight | 84–95 |
+| 6. Strengths & Limitations | Midnight | 84–95 |
 
-The original cover and all six chapter dividers are preserved as PDF pages, without overlays or edits. The supplied art's printed chapter labels put the cover on page 16 and the dividers on pages 17–22; these labels resolve the shifted page references in the written prompt. All other pages end with an exercise. No exercise answer key is included.
+The active learning and feedback section begins on page 97. Bookmarks navigate every original topic and the new missions, resources and answers. All six missions provide a goal, preparation, steps, observations, reflection and feedback. Paper alternatives contain every required input and expected result; optional Python uses only the standard library. A fictional campus delivery rover, Pip, connects the examples. Its device identifier is `robot-7` in the packet demonstration.
 
-The page boxes, folder panels, diagram shapes, aircraft and photographs were extracted from `study guide art.pdf`. Background photographs are composited at 30% opacity; Chapter 5's photograph is tinted purple. The secondary template informs the layouts. Fonts follow the written brief: Anta titles, DIN Condensed headings, Smiley Sans subheadings and Avenir text. Body prose is 11.2 pt. Diagram labels, table cells, references and navigation use smaller type where appropriate.
+The original cover and all six chapter dividers are preserved as PDF pages without overlays. The original art's printed labels identify its cover on page 16 and dividers on pages 17–22. Existing window panels, diagrams and photographs retain the supplied artwork and font brief. The user-created `BlueImpulse_Study_Guide_compressed.pdf` has not been modified by this revision.
 
-## Content and source notes
+## Source, review and remaining human evidence
 
-The six supplied chapter PDFs define the content scope. Learning outcomes, key terms and questions were checked against repository revision `9a645d0`. This is an edited study guide, not a facsimile of those source PDFs. Technical clarifications address fixed rules versus reinforcement learning, exploitation and future return, CPU timing, SSD latency, current Ethernet and TLS usage, signatures, real-time deadlines, and the limits of edge computing. Unsupported performance percentages were not carried over. Exercise wording and numbering are lightly normalised, including the circuit-switching premise and the distinction between signing and encryption.
+[Complete Markdown V2](../../content/README.md) contains all 67 developed topics, 67 application checkpoints with feedback, six missions, 65 exercises and answers, glossaries and full resource introductions. [Review status](../../content/REVIEW.md) distinguishes completed automated/AI-assisted checks from the mandatory independent teammate attempts that are still pending. No human test, feedback, contribution or reflection has been invented.
 
-The source notes credit *Cambridge International AS & A Level Computer Science* and disclose the team's use of Gemini, Claude and ChatGPT; the supplied materials do not identify a complete textbook edition or bibliography. Neogpt assisted with editing, diagrams, layout and production of this guide. User-supplied art is retained for this project; this repository does not assert a new licence over third-party artwork.
+The six supplied chapter PDFs define scope. Their notes credit *Cambridge International AS & A Level Computer Science* but do not identify a full edition or bibliography; this provenance limitation is explicit. Six traceable references and optional learning resources support the revision, including Sutton and Barto, Nand to Tetris, IETF RFCs, NIST and Unicode. Each resource has a relevant section, a task, limitations and an offline alternative. User-supplied artwork retains its own third-party rights.
 
-## Rebuild
+The 7 November revision was assisted by Neogpt/Codex. Its important changes and actual checks are documented in the Markdown submission report and the project and personal logs. The previous guide was developed before this complete Markdown reconstruction; the report records that workflow repair honestly.
 
-Keep the original inputs in the ignored root folder `temp contents/`. On macOS with Avenir and DIN Condensed installed:
+## Rebuild and verify
+
+On macOS, with Avenir, Arial Unicode and DIN Condensed installed:
 
 ```sh
-python3 -m venv /private/tmp/blue-impulse-study-env
 /private/tmp/blue-impulse-study-env/bin/python -m pip install -r assets/study-guide/source/requirements.txt
-/private/tmp/blue-impulse-study-env/bin/python assets/study-guide/source/prepare_assets.py
 /private/tmp/blue-impulse-study-env/bin/python assets/study-guide/source/build_guide.py
+/private/tmp/blue-impulse-study-env/bin/python assets/study-guide/source/build_stage2.py
 /private/tmp/blue-impulse-study-env/bin/python assets/study-guide/source/verify_guide.py
+/private/tmp/blue-impulse-study-env/bin/python assets/study-guide/source/verify_stage2.py
 ```
 
-Anta and Smiley Sans font files and their licences are included. The macOS Avenir and DIN font files are not redistributed; the PDF embeds subsets for viewing and printing. The extracted artwork allows rebuilding the layout without re-extracting assets, while the original art PDF is needed for the unchanged-page verification.
+`build_guide.py` creates the original-art 96-page base. `build_stage2.py` builds the complete edition, Markdown snapshot/report, editable Test Bank and both submission ZIPs. It is safe to rerun: it retains the first 96 guide pages and replaces the generated appendix. The art extraction step in `prepare_assets.py` is only needed when rebuilding extracted artwork from the ignored original `temp contents/` files.
 
-`manifest.json` fixes the topic page numbers and PDF checksum. `source/page-map.json` contains the page content, `source/exercise-map.json` maps questions to their locations, and `source/verification.json` records the completed checks. Those page numbers are the reference for the companion tutorials.
+`manifest.json` records the complete PDF hash and stable original topic pages; `source/page-map.json` and `layout-audit.json` describe the original core pages. `source/verification.json` checks the complete guide, including the unchanged artwork and 65 answers. `source/stage2-review/` holds PDF, code, resource and package evidence. Revised video references use chapter number, chapter name and subtopic, so they do not depend on pagination.

@@ -1,0 +1,1249 @@
+[
+  {
+    "number": 1,
+    "chapter": 1,
+    "title": "Pip saw it. Why did Pip not stop?",
+    "kind": "hook",
+    "items": [
+      "OBSTACLE DETECTED",
+      "MESSAGE ARRIVES LATE",
+      "THE ROBOT KEEPS MOVING"
+    ],
+    "subtopic": "The stored-program computer",
+    "notes": "Open with Pip, a fictional campus delivery rover. Its sensor detects a box, but a remote stop instruction arrives late. Ask for two possible causes before defining anything. A good policy is only one part of a working system: representation, execution, hardware, communication and timing all matter. This is an imagined teaching scenario, not an accident report.",
+    "activity": "30 seconds: tell a neighbor one possible cause.",
+    "answer": null,
+    "source": "Guide",
+    "minutes": 2
+  },
+  {
+    "number": 2,
+    "chapter": 1,
+    "title": "By the end, diagnose the whole system",
+    "kind": "roadmap",
+    "items": [
+      "A · Bits → programs → actions",
+      "B · Hardware → packets → trust",
+      "C · Control → constraints → decisions"
+    ],
+    "subtopic": "The stored-program computer",
+    "notes": "Three teaching sessions of approximately 25–35 minutes are suggested. Session A uses slides 1–25, B uses 26–45, and C uses 46 to the end. Take breaks between sessions. Learners should be able to trace a program and Q update, interpret a network delay, and justify a safe division of local and remote work.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 3,
+    "chapter": 1,
+    "title": "Same bits. Different meanings.",
+    "kind": "cards",
+    "items": [
+      "01000001",
+      "65 as an unsigned integer",
+      "A in ASCII"
+    ],
+    "subtopic": "Numbers, characters & codes",
+    "notes": "Data needs an agreed interpretation. This 8-bit pattern represents unsigned integer 65; ASCII code 65 is A. Unicode is a repertoire of code points; UTF-8 is a byte encoding and does not use a fixed one-byte width for all characters. An address, a colour and an instruction also need a format. Source: Python documentation on Unicode and character encodings.",
+    "activity": null,
+    "answer": null,
+    "source": "Unicode; Guide",
+    "minutes": 1
+  },
+  {
+    "number": 4,
+    "chapter": 1,
+    "title": "Predict the value before decoding",
+    "kind": "question",
+    "items": [
+      "8 bits: 11111101",
+      "Unsigned: ?",
+      "Two’s complement: ?"
+    ],
+    "subtopic": "Represent negative values",
+    "notes": "Give 45 seconds of individual thinking, then a show of hands. Keep the answer hidden until the next slide. Ask which bit changes its weight in the signed interpretation. Fixed width is essential.",
+    "activity": "45 seconds · calculate both interpretations.",
+    "answer": "Unsigned 253. Eight-bit two’s complement −3.",
+    "source": "Guide",
+    "minutes": 2
+  },
+  {
+    "number": 5,
+    "chapter": 1,
+    "title": "The width and encoding decide the value",
+    "kind": "answer",
+    "items": [
+      "Unsigned: 128 + 64 + 32 + 16 + 8 + 4 + 1 = 253",
+      "Signed: −128 + 64 + 32 + 16 + 8 + 4 + 1 = −3"
+    ],
+    "subtopic": "Represent negative values",
+    "notes": "In eight-bit two’s complement the most significant bit has weight −128. The remaining set bits total 125, giving −3. The unsigned range is 0–255; the signed range is −128–127. Hexadecimal FD abbreviates the same eight bits but does not by itself decide signedness. BCD would instead encode each decimal digit separately.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 6,
+    "chapter": 1,
+    "title": "An image is a grid of encoded colours",
+    "kind": "equation",
+    "items": [
+      "100 × 100 pixels",
+      "24 bits per pixel",
+      "100 × 100 × 24 ÷ 8 = 30,000 bytes"
+    ],
+    "subtopic": "Build a digital image",
+    "notes": "This is raw pixel data for a 100 by 100 image with 24 bits per pixel; it excludes headers, metadata and compression. Resolution concerns the pixel grid; colour depth concerns representable colours per pixel. Lossless compression can restore the original data exactly; lossy compression discards information. File sizes are not determined by dimensions alone.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 7,
+    "chapter": 1,
+    "title": "Sampling turns a signal into numbers",
+    "kind": "flow",
+    "items": [
+      "MEASURE\nat regular times",
+      "QUANTISE\nto a finite level",
+      "ENCODE\nwith bits"
+    ],
+    "subtopic": "Sample, store & compress",
+    "notes": "Use claps as an analogy: a sampling rate counts measurements per second, while bit depth controls how many amplitude levels can be encoded. For raw mono audio, bytes = seconds × samples per second × bits per sample ÷ 8. More channels multiply the size. Sampling and quantisation are different decisions; compression is a later representation choice.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 8,
+    "chapter": 1,
+    "title": "Instructions and data share memory",
+    "kind": "architecture",
+    "items": [
+      "INPUT",
+      "MEMORY",
+      "CPU",
+      "OUTPUT"
+    ],
+    "subtopic": "The stored-program computer",
+    "notes": "The stored-program model keeps instructions and data in addressable memory. The CPU contains a control unit, arithmetic and logic unit, and registers. Address signals identify a location; data signals transfer values; control signals coordinate read/write and other operations. The diagram is a conceptual model, not the physical layout of a modern chip. Cache and separate physical instruction/data paths can exist within a stored-program system.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide; Nand2Tetris",
+    "minutes": 1
+  },
+  {
+    "number": 9,
+    "chapter": 1,
+    "title": "One instruction, three useful questions",
+    "kind": "flow",
+    "items": [
+      "FETCH\nWhich instruction?",
+      "DECODE\nWhat operation?",
+      "EXECUTE\nWhat changes?"
+    ],
+    "subtopic": "Fetch / decode / execute",
+    "notes": "In the teaching trace, PC holds the next instruction address, MAR an accessed address, MDR transferred data, CIR the current instruction, and ACC an arithmetic result. Real register sets differ. During fetch we copy the instruction to the current-instruction register and increment PC. Execution may change PC for a branch. We use one address per toy instruction for clarity.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide; Nand2Tetris",
+    "minutes": 1
+  },
+  {
+    "number": 10,
+    "chapter": 1,
+    "title": "Can you trace this tiny program?",
+    "kind": "program",
+    "items": [
+      [
+        "100",
+        "LOAD #3"
+      ],
+      [
+        "101",
+        "ADD #4"
+      ],
+      [
+        "102",
+        "STORE 200"
+      ],
+      [
+        "103",
+        "HALT"
+      ]
+    ],
+    "subtopic": "Trace a tiny program",
+    "notes": "Starting state is PC 100, ACC 0 and memory[200] unset. Explain that # means an immediate literal, while STORE 200 writes to memory address 200. Ask learners to trace ACC and the stored result. This is an invented teaching instruction set, not machine code for a particular CPU.",
+    "activity": "60 seconds · predict ACC and memory[200].",
+    "answer": "ACC becomes 3, then 7; memory[200] receives 7. PC is 104 after HALT is fetched.",
+    "source": "Guide",
+    "minutes": 2
+  },
+  {
+    "number": 11,
+    "chapter": 1,
+    "title": "The result is a state change",
+    "kind": "trace",
+    "items": [
+      [
+        "LOAD #3",
+        "0 → 3",
+        "—"
+      ],
+      [
+        "ADD #4",
+        "3 → 7",
+        "—"
+      ],
+      [
+        "STORE 200",
+        "7 → 7",
+        "7"
+      ],
+      [
+        "HALT",
+        "7 → 7",
+        "7"
+      ]
+    ],
+    "subtopic": "Trace a tiny program",
+    "notes": "Reveal the rows in order verbally. LOAD replaces ACC, ADD changes it, STORE copies it to a location, and HALT stops the trace. PC is 104 because fetch increments it even for HALT in this model. Run the supplied demonstration with --topic execution if desired; this static trace is the full offline fallback. Changing ADD #4 to ADD #9 produces 12.",
+    "activity": null,
+    "answer": null,
+    "source": "Checked Python teaching model",
+    "minutes": 2,
+    "headers": [
+      "Instruction",
+      "ACC",
+      "memory[200]"
+    ]
+  },
+  {
+    "number": 12,
+    "chapter": 1,
+    "title": "Source code is not a CPU instruction",
+    "kind": "flow",
+    "items": [
+      "SOURCE\nhuman readable",
+      "TRANSLATE / RUN\ncompiler or interpreter",
+      "MACHINE\ninstructions"
+    ],
+    "subtopic": "From source code to execution",
+    "notes": "An assembler translates assembly mnemonics into machine instructions. A compiler usually translates source ahead of execution; interpreters execute a representation at runtime. Real systems may mix compilation, interpretation and just-in-time compilation. An IDE brings editing, execution and debugging tools together; it is not itself a translator category.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 13,
+    "chapter": 1,
+    "title": "The operating system shares the machine",
+    "kind": "cards",
+    "items": [
+      "CPU time + memory",
+      "Files + devices",
+      "Protection + coordination"
+    ],
+    "subtopic": "The operating system’s jobs",
+    "notes": "Use a shared classroom as an analogy: a timetable allocates time, rooms separate activities, and a sign-out desk manages shared equipment. OS scheduling, memory management, file systems and device drivers support programs. Utilities help with tasks such as backup and diagnostics. Protection is enforced through mechanisms and policy; it is not guaranteed merely by having an OS.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide; OSTEP",
+    "minutes": 1
+  },
+  {
+    "number": 14,
+    "chapter": 1,
+    "title": "An interrupt is a request for attention",
+    "kind": "flow",
+    "items": [
+      "SAVE\nrelevant context",
+      "HANDLE\nthe event",
+      "RESUME\ninterrupted work"
+    ],
+    "subtopic": "Events, interrupts & peripherals",
+    "notes": "An interrupt can signal an I/O event, timer expiry or other condition. A handler runs after appropriate state is saved, then execution resumes. Polling repeatedly asks whether work is ready; interrupts notify. Priorities and masking may delay handling, so an interrupt does not automatically imply immediate response. Ports and buses connect peripherals using agreed electrical and protocol interfaces.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide; OSTEP",
+    "minutes": 1
+  },
+  {
+    "number": 15,
+    "chapter": 2,
+    "title": "A response can be designed or learned",
+    "kind": "comparison",
+    "items": [
+      [
+        "Reactive rule",
+        "If obstacle is near, stop."
+      ],
+      [
+        "Learned policy",
+        "Choose actions using experience."
+      ]
+    ],
+    "subtopic": "Learning from the environment",
+    "notes": "Behaviorism studies observable behavior and environment interactions. Classical conditioning associates stimuli; operant conditioning concerns consequences of actions. Behaviorist-inspired AI is not identical to psychology and is not synonymous with reinforcement learning. A reactive controller can be hand-coded with no training. Learning can produce a policy that is later executed without online updates.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide; Sutton & Barto",
+    "minutes": 1
+  },
+  {
+    "number": 16,
+    "chapter": 2,
+    "title": "Urgent behaviour can take priority",
+    "kind": "layers",
+    "items": [
+      "AVOID COLLISION",
+      "SEEK A GOAL",
+      "EXPLORE"
+    ],
+    "subtopic": "React first: behaviour-based robots",
+    "notes": "In a simplified layered robot, collision avoidance can suppress a lower-priority movement command. Subsumption architectures coordinate layers through suppression or inhibition. This diagram illustrates priority, not the complete Brooks architecture or a universal design rule. Ask why an exploration action should not override the emergency stop layer.",
+    "activity": "20 seconds · which action should win near an obstacle?",
+    "answer": "Collision avoidance should take priority in this simplified design.",
+    "source": "Brooks 1986; Guide",
+    "minutes": 1
+  },
+  {
+    "number": 17,
+    "chapter": 2,
+    "title": "Learning closes a feedback loop",
+    "kind": "rl_loop",
+    "items": [
+      "OBSERVATION / STATE",
+      "ACTION",
+      "REWARD + NEXT STATE"
+    ],
+    "subtopic": "The reinforcement-learning loop",
+    "notes": "The agent chooses an action, the environment changes, and the agent receives numerical reward and a new observation. State and observation need not be identical: a noisy sensor may not reveal the full situation. Reward is feedback, not an action and not a policy. A positive reward is not proof that the objective is safe or well specified.",
+    "activity": null,
+    "answer": null,
+    "source": "Sutton & Barto, Chapters 3–6",
+    "minutes": 1
+  },
+  {
+    "number": 18,
+    "chapter": 2,
+    "title": "Policy chooses. Value estimates.",
+    "kind": "comparison",
+    "items": [
+      [
+        "POLICY",
+        "Which action should I take?"
+      ],
+      [
+        "VALUE",
+        "How much return do I expect?"
+      ]
+    ],
+    "subtopic": "Rewards, policies & values",
+    "notes": "A policy maps a state or observation to action choices, possibly probabilistically. A value estimates expected cumulative return. An action value Q(s,a) estimates return for choosing action a in state s and following a policy thereafter. Immediate reward and long-term value are different. Discounting weights future rewards; it does not make uncertain estimates certain.",
+    "activity": null,
+    "answer": null,
+    "source": "Sutton & Barto, Chapters 3–6",
+    "minutes": 1
+  },
+  {
+    "number": 19,
+    "chapter": 2,
+    "title": "Try something new—or use what works?",
+    "kind": "question",
+    "items": [
+      "Route A: known reward estimate 3",
+      "Route B: barely explored",
+      "Which should the agent try?"
+    ],
+    "subtopic": "Explore or exploit?",
+    "notes": "Give pairs 45 seconds. There is no uniquely correct choice without the exploration strategy, risks and remaining learning budget. Debrief that exploitation uses current estimates; exploration gathers information. In epsilon-greedy behavior, a probability epsilon is assigned to an exploratory choice. Unsafe experimentation requires safeguards; do not imply every action can be tried freely.",
+    "activity": "45 seconds · justify a choice, not just A or B.",
+    "answer": "It depends on risk, uncertainty and the exploration strategy; exploration can improve future decisions.",
+    "source": "Guide",
+    "minutes": 2
+  },
+  {
+    "number": 20,
+    "chapter": 2,
+    "title": "A Q update moves partway to a target",
+    "kind": "equation",
+    "items": [
+      "Old Q = 2 · learning rate = 0.5",
+      "Reward = 1 · discount = 0.9 · next best Q = 4",
+      "Target = 1 + 0.9 × 4 = 4.6"
+    ],
+    "subtopic": "Update a Q value",
+    "notes": "Use the non-terminal Q-learning update Q ← Q + alpha[r + gamma max Q(next, action) − Q]. First compute the target 4.6. The next slide asks for the movement toward it. These numbers are illustrative estimates rather than measured robot performance. For terminal transitions, the future term is zero.",
+    "activity": null,
+    "answer": null,
+    "source": "Sutton & Barto, Chapter 6; checked Python model",
+    "minutes": 2
+  },
+  {
+    "number": 21,
+    "chapter": 2,
+    "title": "Where does the estimate move?",
+    "kind": "question",
+    "items": [
+      "Old estimate: 2",
+      "Target: 4.6",
+      "Move halfway: new Q = ?"
+    ],
+    "subtopic": "Update a Q value",
+    "notes": "Give 30 seconds and ask learners to show a value with their neighbor. Warn against adding the entire target or confusing the error 2.6 with the new value.",
+    "activity": "30 seconds · calculate the updated value.",
+    "answer": "Error 4.6 − 2 = 2.6; change 0.5 × 2.6 = 1.3; new Q = 3.3.",
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 22,
+    "chapter": 2,
+    "title": "The new estimate is 3.3",
+    "kind": "equation",
+    "items": [
+      "Error = 4.6 − 2 = 2.6",
+      "Change = 0.5 × 2.6 = 1.3",
+      "New Q = 2 + 1.3 = 3.3"
+    ],
+    "subtopic": "Update a Q value",
+    "notes": "Check the arithmetic with --topic rl. For a terminal transition using the same old Q, reward and learning rate, target is 1, so new Q is 1.5. Do not bootstrap from a terminal next state. The update changes one estimate; one update does not guarantee an optimal policy.",
+    "activity": null,
+    "answer": null,
+    "source": "Checked Python teaching model",
+    "minutes": 1
+  },
+  {
+    "number": 23,
+    "chapter": 2,
+    "title": "An MDP makes assumptions explicit",
+    "kind": "cards",
+    "items": [
+      "STATES + ACTIONS",
+      "TRANSITIONS + REWARDS",
+      "DISCOUNT + MARKOV ASSUMPTION"
+    ],
+    "subtopic": "A decision problem as an MDP",
+    "notes": "An MDP specifies states, available actions, transition probabilities, rewards and a discount factor in the formulation used here. The Markov property says the present state and action contain the information needed for the next-step distribution. It does not mean deterministic outcomes. A slippery floor can make an intended action produce several possible next states.",
+    "activity": null,
+    "answer": null,
+    "source": "Sutton & Barto, Chapter 3",
+    "minutes": 1
+  },
+  {
+    "number": 24,
+    "chapter": 2,
+    "title": "Training and deployment have different jobs",
+    "kind": "comparison",
+    "items": [
+      [
+        "TRAIN",
+        "Collect experience; update the policy."
+      ],
+      [
+        "DEPLOY",
+        "Use a policy; monitor its behavior."
+      ]
+    ],
+    "subtopic": "Training is different from using a policy",
+    "notes": "Training often uses repeated trials and more computation. Deployment executes a selected policy under actual timing and resource constraints. Some systems learn online, but that is a deliberate architecture choice. A robot using a learned policy is not necessarily training during every action. Separate logging, updates and safety decisions.",
+    "activity": null,
+    "answer": null,
+    "source": "Sutton & Barto; Guide",
+    "minutes": 1
+  },
+  {
+    "number": 25,
+    "chapter": 2,
+    "title": "Session A checkpoint: explain an action",
+    "kind": "recap",
+    "items": [
+      "Bits need an interpretation.",
+      "Programs change machine state.",
+      "A policy chooses; feedback can update it."
+    ],
+    "subtopic": "Training is different from using a policy",
+    "notes": "Ask two volunteers for a 20-second explanation: one traces data through execution, one distinguishes a reactive rule from a learned policy. Use the prepared activities in Chapters 1 and 2 after class. Video 05 revisits program execution; Video 01 revisits Q-learning. Next session asks whether the hardware and network can deliver that action in time.",
+    "activity": "60 seconds · explain the chain to a neighbor.",
+    "answer": null,
+    "source": "Guide",
+    "minutes": 2
+  },
+  {
+    "number": 26,
+    "chapter": 3,
+    "title": "A good decision still needs a body",
+    "kind": "flow",
+    "items": [
+      "SENSE\ninput device",
+      "COMPUTE\nprocessor + memory",
+      "ACT\noutput device"
+    ],
+    "subtopic": "Hardware gives software a body",
+    "notes": "Reconnect to the robot. A sensor measures a physical condition, a processor evaluates a policy, and an actuator changes the environment. Storage retains programs and records. Hardware is the physical part of the system; software defines operations. Devices may combine roles.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 27,
+    "chapter": 3,
+    "title": "Memory trades capacity against access time",
+    "kind": "memory",
+    "items": [
+      "REGISTERS",
+      "CACHE",
+      "RAM",
+      "SSD / HDD"
+    ],
+    "subtopic": "Memory: capacity versus speed",
+    "notes": "A conceptual hierarchy puts small, low-latency storage close to the CPU. Cache stores copies to exploit locality; a cache miss fetches data from a lower level. DRAM uses charge and refresh, while SRAM uses bistable cells. Both are generally volatile. The shape widths show an idea, not measured timings or prices. Increasing capacity alone does not guarantee faster software.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide; OSTEP",
+    "minutes": 1
+  },
+  {
+    "number": 28,
+    "chapter": 3,
+    "title": "Keep data after the power disappears",
+    "kind": "comparison",
+    "items": [
+      [
+        "RAM",
+        "Working state; generally volatile."
+      ],
+      [
+        "FLASH / SSD",
+        "Non-volatile electronic storage."
+      ],
+      [
+        "HDD / OPTICAL",
+        "Magnetic / laser-readable storage."
+      ]
+    ],
+    "subtopic": "Keep data when power is off",
+    "notes": "Choose storage using capacity, latency, endurance, energy, durability and cost. ROM-family devices store persistent firmware; PROM is programmed once, EPROM can be erased with ultraviolet light, and EEPROM electrically. Flash commonly erases in blocks. Non-volatile is not the same as indestructible: backups and integrity checks still matter.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 29,
+    "chapter": 3,
+    "title": "Pipelining overlaps different instructions",
+    "kind": "pipeline",
+    "items": [],
+    "subtopic": "Overlap work with a pipeline",
+    "notes": "Four one-cycle stages: Fetch, Decode, Execute, Write. Three independent instructions complete in cycles 4, 5 and 6. One instruction still takes four stages; steady-state throughput improves. Real dependencies, branches and resource conflicts can cause stalls. This is an idealized teaching pipeline, not a claim about a specific processor. The Python hardware example prints the same schedule.",
+    "activity": "30 seconds · when does instruction 3 finish?",
+    "answer": "Cycle 6, assuming no hazards or stalls.",
+    "source": "Checked Python teaching model",
+    "minutes": 2
+  },
+  {
+    "number": 30,
+    "chapter": 3,
+    "title": "Parallel hardware is useful only when work fits",
+    "kind": "comparison",
+    "items": [
+      [
+        "CPU",
+        "Flexible control and varied work."
+      ],
+      [
+        "GPU / NPU",
+        "Many suitable operations in parallel."
+      ]
+    ],
+    "subtopic": "The hardware behind an AI model",
+    "notes": "AI workloads often use tensor operations that parallel hardware can accelerate. Data movement, memory capacity, arithmetic precision and software support can become bottlenecks. RISC and CISC describe instruction-set design families; neither label alone guarantees speed or energy efficiency. Flynn categories describe instruction/data streams: SISD, SIMD, MISD and MIMD. The categories do not by themselves predict performance.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 31,
+    "chapter": 3,
+    "title": "A logic gate makes a precise choice",
+    "kind": "logic",
+    "items": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "subtopic": "Reason with logic gates",
+    "notes": "A toy actuator permission requires Enabled AND Safe. Both input conditions must be true. This truth table is complete for two binary inputs. Real safety circuits need more than one gate and require appropriate assurance. NOT reverses a bit; OR needs at least one true input. Boolean simplification should preserve every row of the truth table.",
+    "activity": "20 seconds · what happens when either input is zero?",
+    "answer": "The AND output is zero.",
+    "source": "Guide",
+    "minutes": 1,
+    "headers": [
+      "Enabled",
+      "Safe",
+      "AND output"
+    ]
+  },
+  {
+    "number": 32,
+    "chapter": 3,
+    "title": "The physical world needs an interface",
+    "kind": "flow",
+    "items": [
+      "SENSOR\nanalogue signal",
+      "ADC + CONTROLLER\ndigital decision",
+      "DRIVER + ACTUATOR\nphysical output"
+    ],
+    "subtopic": "Sense, decide, act, sense again",
+    "notes": "An ADC maps an analogue input to digital samples. A DAC can produce an analogue output; PWM instead varies pulse duty cycle and needs suitable downstream hardware. Microcontrollers integrate processor, memory and peripherals. An embedded system performs a role inside a larger device. User interfaces should show meaningful system state and permit appropriate human control.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 33,
+    "chapter": 4,
+    "title": "A message crosses several different jobs",
+    "kind": "network_path",
+    "items": [
+      "DEVICE",
+      "ACCESS POINT / SWITCH",
+      "ROUTER",
+      "SERVER"
+    ],
+    "subtopic": "The devices along a network path",
+    "notes": "A NIC attaches a device to a link. An access point provides wireless access, a switch forwards local frames, and a router forwards IP packets between networks. The diagram is a simplified path: multiple routers or combined devices may exist. A LAN covers a limited local area, WAN spans wider areas, PAN is personal scope and MAN metropolitan scope.",
+    "activity": null,
+    "answer": null,
+    "source": "IETF RFC 1122; Guide",
+    "minutes": 1
+  },
+  {
+    "number": 34,
+    "chapter": 4,
+    "title": "Who requests—and who provides?",
+    "kind": "comparison",
+    "items": [
+      [
+        "CLIENT / SERVER",
+        "Requester and service provider."
+      ],
+      [
+        "PEER TO PEER",
+        "Participants can do both jobs."
+      ]
+    ],
+    "subtopic": "Clients, servers & peers",
+    "notes": "These are roles, not necessarily different hardware types. Thin clients rely more on remote services; thick clients perform more local work. Cloud infrastructure offers shared remote resources; edge processing happens near the source. Cloud is not simply another name for the Internet. A distributed system must coordinate partial failures and concurrent work.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 35,
+    "chapter": 4,
+    "title": "Name resolution is not page delivery",
+    "kind": "flow",
+    "items": [
+      "DOMAIN NAME\nexample.org",
+      "DNS LOOKUP\nfind address data",
+      "CONNECTION\nrequest the resource"
+    ],
+    "subtopic": "Find a host with DNS",
+    "notes": "DNS resolves domain names to records such as IP addresses; caches and recursive resolvers are involved. The web is an application using the Internet, not the entire Internet. In a URL, the scheme identifies access semantics, the host names the destination, and path/query identify application resources. A fragment is interpreted by the client and is not sent as part of an HTTP request target.",
+    "activity": null,
+    "answer": null,
+    "source": "IETF RFC 1034; RFC 3986",
+    "minutes": 1
+  },
+  {
+    "number": 36,
+    "chapter": 4,
+    "title": "Layering separates responsibilities",
+    "kind": "layers",
+    "items": [
+      "APPLICATION · message meaning",
+      "TRANSPORT · process to process",
+      "INTERNET · packet routing",
+      "LINK · the local hop"
+    ],
+    "subtopic": "Give each protocol layer a job",
+    "notes": "This four-layer Internet model is a teaching organization, not the only layering convention. Encapsulation adds layer-specific metadata as data moves down the stack. Receivers interpret corresponding layers. A protocol establishes syntax and behavior between peers. The application still needs to check whether received values make sense for the task.",
+    "activity": null,
+    "answer": null,
+    "source": "IETF RFC 1122",
+    "minutes": 1
+  },
+  {
+    "number": 37,
+    "chapter": 4,
+    "title": "Reliable delivery is not a deadline guarantee",
+    "kind": "comparison",
+    "items": [
+      [
+        "TCP",
+        "Ordered reliable byte stream."
+      ],
+      [
+        "UDP",
+        "Datagrams without that guarantee."
+      ]
+    ],
+    "subtopic": "Give each protocol layer a job",
+    "notes": "TCP handles retransmission, ordering and flow/congestion control, but cannot promise application usefulness before a hard deadline. UDP preserves message datagrams without TCP-like reliable ordered delivery; the application can add checks and recovery. UDP is not automatically safe or always faster. HTTP is used for web resources; SMTP sends mail while IMAP accesses mailboxes. File transfers have protocols such as SFTP and FTP, whose security properties differ.",
+    "activity": null,
+    "answer": null,
+    "source": "IETF RFC 9293; RFC 768; Guide",
+    "minutes": 1
+  },
+  {
+    "number": 38,
+    "chapter": 4,
+    "title": "Shared capacity creates waiting",
+    "kind": "queue",
+    "items": [
+      "PACKET A",
+      "PACKET B",
+      "PACKET C"
+    ],
+    "subtopic": "Sharing a communication medium",
+    "notes": "When arrivals exceed the service opportunity, packets queue. Wireless devices also coordinate access and may face interference. Packet switching shares links; circuit switching reserves resources along a path. Fiber, copper and radio offer different capacity, distance, mobility and interference characteristics. Ethernet collision detection concerns traditional shared half-duplex links; modern switched full-duplex Ethernet does not use CSMA/CD in that way.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 39,
+    "chapter": 4,
+    "title": "Capacity is not responsiveness",
+    "kind": "cards",
+    "items": [
+      "BANDWIDTH · available capacity",
+      "THROUGHPUT · achieved transfer rate",
+      "LATENCY / JITTER · delay / variation"
+    ],
+    "subtopic": "Capacity is not responsiveness",
+    "notes": "Add packet loss as another key measure. A high-capacity link can still have large propagation or queueing delay. Jitter makes arrival times vary, which can disrupt control or media even when mean delay is acceptable. State units: capacity and throughput usually bits per second; delay usually seconds or milliseconds. Do not compare a throughput number with latency as if they were the same quantity.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 40,
+    "chapter": 4,
+    "title": "How far does the robot move while waiting?",
+    "kind": "question",
+    "items": [
+      "Speed = 30 metres / second",
+      "Delay = 200 milliseconds",
+      "Distance during delay = ?"
+    ],
+    "subtopic": "Capacity is not responsiveness",
+    "notes": "Give 45 seconds. Ask students to convert milliseconds before multiplying. This is a deliberately high-speed hypothetical vehicle/robot calculation; it is not a recommended operating speed. We calculate distance during delay only, not braking distance, sensing delay or total stopping distance.",
+    "activity": "45 seconds · convert, then multiply.",
+    "answer": "200 ms = 0.2 s; 30 × 0.2 = 6 metres.",
+    "source": "Guide",
+    "minutes": 2
+  },
+  {
+    "number": 41,
+    "chapter": 4,
+    "title": "A short delay can have a physical consequence",
+    "kind": "bars",
+    "items": [
+      [
+        "500 ms",
+        15
+      ],
+      [
+        "200 ms",
+        6
+      ],
+      [
+        "50 ms",
+        1.5
+      ],
+      [
+        "5 ms",
+        0.15
+      ]
+    ],
+    "subtopic": "Capacity is not responsiveness",
+    "notes": "All bars use one linear scale. At 30 m/s, distances are 15, 6, 1.5 and 0.15 metres. Tiny values must not be inflated visually. A shorter network delay reduces this component of travel but does not solve sensor, control, actuator or braking delays. Run --topic network for the numerical fallback.",
+    "activity": null,
+    "answer": null,
+    "source": "Checked Python teaching model",
+    "minutes": 1
+  },
+  {
+    "number": 42,
+    "chapter": 4,
+    "title": "Correct delivery is not correct meaning",
+    "kind": "comparison",
+    "items": [
+      [
+        "VALIDATION",
+        "Does this value obey the rules?"
+      ],
+      [
+        "VERIFICATION",
+        "Does it match a source or expected copy?"
+      ]
+    ],
+    "subtopic": "Protect data and its meaning",
+    "notes": "Validation might check a temperature is within a specified range or that a field uses metres. Verification might compare against a trusted source or use double entry. Neither guarantees truth: a plausible but inaccurate sensor value can pass a range check. Security protects systems and data; privacy concerns appropriate collection, use and disclosure of personal information. Integrity concerns unauthorized or accidental alteration.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 43,
+    "chapter": 4,
+    "title": "Protect secrecy, identity and integrity",
+    "kind": "cards",
+    "items": [
+      "ENCRYPTION · keep data confidential",
+      "SIGNATURE / MAC · detect changes, authenticate",
+      "CERTIFICATE · bind an identity to a key"
+    ],
+    "subtopic": "Trust, signatures & certificates",
+    "notes": "Symmetric encryption uses shared secret key material. Public-key systems use a public/private key pair. Digital signatures provide authenticity and integrity checks, not confidentiality. A certificate is an issuer-signed binding and must be validated, including identity and trust chain. MACs use a shared secret and do not provide the same public verifiability as signatures. Modern protocols normally combine mechanisms.",
+    "activity": null,
+    "answer": null,
+    "source": "IETF RFC 8446; NIST",
+    "minutes": 1
+  },
+  {
+    "number": 44,
+    "chapter": 4,
+    "title": "Secure transport still needs safe application logic",
+    "kind": "flow",
+    "items": [
+      "TLS\nprotect the channel",
+      "VALIDATE\ninterpret the data",
+      "DECIDE\nrespect the deadline"
+    ],
+    "subtopic": "Encryption modes & quantum ideas",
+    "notes": "TLS uses authenticated key establishment and symmetric authenticated encryption in modern configurations. SSL is obsolete. Block/stream encryption descriptions are not enough to assess a mode; nonce reuse and missing authentication can destroy security. QKD concerns key establishment under physical and protocol assumptions; it does not replace endpoint security, authentication or application checks. Do not implement cryptography from these teaching slides.",
+    "activity": null,
+    "answer": null,
+    "source": "IETF RFC 8446; NIST",
+    "minutes": 1
+  },
+  {
+    "number": 45,
+    "chapter": 4,
+    "title": "Session B checkpoint: useful, not merely delivered",
+    "kind": "recap",
+    "items": [
+      "Hardware limits execution.",
+      "Networks add delay and uncertainty.",
+      "A secure packet can still be stale."
+    ],
+    "subtopic": "Capacity is not responsiveness",
+    "notes": "Ask each pair for one hardware bottleneck and one reason a correctly delivered message might be unusable. Connect to Video 02 (hardware), Video 03 (network challenges), and Video 04 (networked behaviorist AI). Chapter 3 and 4 practice develops the same ideas. Next session integrates a safe local behavior with remote coordination.",
+    "activity": "60 seconds · name one bottleneck and one message risk.",
+    "answer": null,
+    "source": "Guide",
+    "minutes": 2
+  },
+  {
+    "number": 46,
+    "chapter": 5,
+    "title": "A smart system is a chain of responsibilities",
+    "kind": "flow",
+    "items": [
+      "SENSE + VALIDATE",
+      "DECIDE + ACT",
+      "OBSERVE + REVIEW"
+    ],
+    "subtopic": "A system that senses and acts",
+    "notes": "Start session C by revisiting the delayed stop message. A useful system needs valid measurements, a decision rule, executable actions, feedback and a way to detect failures. Networking and AI are options inside this chain, not definitions of intelligence or guarantees of quality. The same chain appears in irrigation, warehouse robotics and monitoring systems.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 47,
+    "chapter": 5,
+    "title": "Irrigation: what should happen when data is missing?",
+    "kind": "question",
+    "items": [
+      "Moisture report is old.",
+      "The valve can flood the bed.",
+      "Keep watering—or pause and alert?"
+    ],
+    "subtopic": "Example: an irrigation system",
+    "notes": "Give pairs 45 seconds and require one reason. In this illustrative design, pause watering and alert a person rather than treat missing data as a dry-soil reading. Explain that the correct fallback is hazard- and context-specific: other systems could require a different safe state. The goal is to make the assumption explicit, not to prescribe a universal response.",
+    "activity": "45 seconds · choose and justify a fallback.",
+    "answer": "For this flooding-risk example: pause, alert, and request a fresh reading.",
+    "source": "Guide",
+    "minutes": 2
+  },
+  {
+    "number": 48,
+    "chapter": 5,
+    "title": "A deadline is part of the result",
+    "kind": "comparison",
+    "items": [
+      [
+        "CORRECT VALUE, TOO LATE",
+        "May be unusable for control."
+      ],
+      [
+        "CORRECT VALUE, ON TIME",
+        "Can inform the intended decision."
+      ]
+    ],
+    "subtopic": "Real-time means meeting a deadline",
+    "notes": "Real-time means meeting specified timing constraints, not merely running quickly on average. Hard and soft deadline requirements have different consequences. End-to-end budgets include sensing, communication, queueing, computation and actuation. The system must state the deadline and what happens when it cannot meet it.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 49,
+    "chapter": 5,
+    "title": "A control message needs context",
+    "kind": "packet",
+    "items": [
+      [
+        "Device",
+        "robot-7"
+      ],
+      [
+        "Units / policy",
+        "metres / version 3"
+      ],
+      [
+        "Sequence / age",
+        "42 / 50 ms"
+      ]
+    ],
+    "subtopic": "Networking for a behaviour-based agent",
+    "notes": "A message should be tied to the intended device, schema, units, policy version and action or sequence. Freshness checks need a clock or protocol model; timestamps are not magically comparable across unsynchronized devices. Our toy validator uses a known now value and a 200 ms limit. Authentication is an input from a separate validated mechanism, not something a Boolean field provides.",
+    "activity": null,
+    "answer": null,
+    "source": "Checked Python teaching model",
+    "minutes": 1
+  },
+  {
+    "number": 50,
+    "chapter": 5,
+    "title": "Which messages should the robot accept?",
+    "kind": "question_table",
+    "items": [
+      [
+        "A",
+        "42",
+        "50 ms"
+      ],
+      [
+        "B",
+        "43",
+        "600 ms"
+      ],
+      [
+        "C",
+        "42",
+        "60 ms"
+      ]
+    ],
+    "subtopic": "Networking for a behaviour-based agent",
+    "notes": "Process A, then B, then C. Start with last accepted sequence 41. All messages have the correct device, units, policy version and an externally verified authentication result. Freshness limit is 200 ms. Give 60 seconds; ask pairs to update last accepted sequence only when a message is accepted.",
+    "activity": "60 seconds · accept or reject each in order.",
+    "answer": "A accepted; B stale; C duplicate. Last accepted sequence stays 42.",
+    "source": "Guide",
+    "minutes": 2,
+    "headers": [
+      "Message",
+      "Sequence",
+      "Age"
+    ]
+  },
+  {
+    "number": 51,
+    "chapter": 5,
+    "title": "Accept once. Reject stale and duplicate commands.",
+    "kind": "trace",
+    "items": [
+      [
+        "A · 42 · 50 ms",
+        "ACCEPT",
+        "41 → 42"
+      ],
+      [
+        "B · 43 · 600 ms",
+        "STALE",
+        "42 → 42"
+      ],
+      [
+        "C · 42 · 60 ms",
+        "DUPLICATE",
+        "42 → 42"
+      ]
+    ],
+    "subtopic": "Networking for a behaviour-based agent",
+    "notes": "B has a higher sequence but is too old; rejecting it must not advance the accepted sequence. C is fresh but duplicates A. The teaching validator does not handle all real distributed-systems concerns such as sequence wraparound, restarts, clock drift or malicious timestamps. Run --topic networked-ai for the exact offline trace.",
+    "activity": null,
+    "answer": null,
+    "source": "Checked Python teaching model",
+    "minutes": 2,
+    "headers": [
+      "Message",
+      "Decision",
+      "Last sequence"
+    ]
+  },
+  {
+    "number": 52,
+    "chapter": 5,
+    "title": "Delayed feedback must belong to the right action",
+    "kind": "flow",
+    "items": [
+      "ACTION ID\nwhat was chosen?",
+      "OUTCOME\nwhat happened?",
+      "MATCH + UPDATE\nwhich experience?"
+    ],
+    "subtopic": "Feedback can change a policy",
+    "notes": "A delayed reward should be associated with the experience that produced it. Missing feedback must not silently become numerical reward zero. Reordered or duplicated feedback can corrupt training data if not tracked. Logging should preserve enough context for diagnosis while respecting data minimization and privacy. Deployment and training are separate processes even when connected.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide; Sutton & Barto",
+    "minutes": 1
+  },
+  {
+    "number": 53,
+    "chapter": 5,
+    "title": "People need an understandable system state",
+    "kind": "cards",
+    "items": [
+      "SHOW · what the system knows",
+      "EXPLAIN · uncertainty and limits",
+      "ALLOW · oversight and recovery"
+    ],
+    "subtopic": "Help people understand the system",
+    "notes": "Automation can remove repetitive work and also move errors into design, configuration and monitoring. Appropriate trust depends on visible limits and feedback. Human-AI interaction includes uncertainty, delegation and changing behavior; conventional HCI still supplies useful usability principles. An override should have a clear effect and should not be an unexplained magic fix.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 54,
+    "chapter": 5,
+    "title": "A faster system can still be a worse system",
+    "kind": "comparison",
+    "items": [
+      [
+        "MEASURE PERFORMANCE",
+        "Timing, accuracy, energy, reliability."
+      ],
+      [
+        "MEASURE IMPACT",
+        "Privacy, fairness, access, accountability."
+      ]
+    ],
+    "subtopic": "Evaluate more than performance",
+    "notes": "Ask whose data is collected, who benefits, who bears errors and who can contest a decision. An accessible interface and clear accountability are part of deployment quality. Opportunities in automation do not remove social and organizational responsibility. No claims about measured user outcomes are made here; these are evaluation dimensions for a proposed system.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 55,
+    "chapter": 6,
+    "title": "Four physical budgets constrain every design",
+    "kind": "cards",
+    "items": [
+      "TIME",
+      "ENERGY + HEAT",
+      "MEMORY + COMPUTE"
+    ],
+    "subtopic": "Four physical budgets",
+    "notes": "Time, energy, memory and compute are four budgets; heat is a consequence and constraint linked to energy and packaging. Trading one budget can stress another. A larger model may improve a metric but miss the deadline or exceed memory. State operating conditions and worst-case concerns instead of quoting a single ideal benchmark.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 56,
+    "chapter": 6,
+    "title": "Bad inputs can look perfectly plausible",
+    "kind": "comparison",
+    "items": [
+      [
+        "SENSOR DRIFT",
+        "Measurements gradually change."
+      ],
+      [
+        "DISTRIBUTION SHIFT",
+        "Deployment differs from training."
+      ]
+    ],
+    "subtopic": "Reliable decisions need reliable inputs",
+    "notes": "A sensor can report a plausible value while being miscalibrated. Drift detection, calibration and redundant measurements may help depending on the task. Distribution shift concerns a change in the data-generating situation between training and deployment. Neither a successful range check nor high past accuracy guarantees correct current decisions. Include fault detection and a defined fallback.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 57,
+    "chapter": 6,
+    "title": "More devices create coordination work",
+    "kind": "cards",
+    "items": [
+      "SCALABILITY · handle growth",
+      "INTEROPERABILITY · share meaning",
+      "RESILIENCE · handle disruption"
+    ],
+    "subtopic": "Grow without losing coordination",
+    "notes": "Scaling from one robot to a fleet adds contention, identity management, version compatibility and aggregate load. Interoperability needs common semantics, not just parsable bytes. Resilience means maintaining or recovering acceptable service under disruption; it is not the absence of all failures. Test overload, restart, loss of connectivity and mixed-version behavior.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 58,
+    "chapter": 6,
+    "title": "Predicting an outcome is not explaining behavior",
+    "kind": "comparison",
+    "items": [
+      [
+        "PREDICTIVE ANALYTICS",
+        "Forecast a future outcome."
+      ],
+      [
+        "BEHAVIOURAL MODELLING",
+        "Represent actions and interactions."
+      ]
+    ],
+    "subtopic": "Predict an outcome or model behaviour?",
+    "notes": "A model can predict equipment failure without modeling an agent policy. Behavioral modeling may describe interactions or decision patterns rather than only forecast a scalar outcome. Explainability should serve a user need: diagnosis, oversight or contestability. A plausible verbal explanation is not proof of causal faithfulness. Evaluate explanation usefulness and accuracy separately.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 59,
+    "chapter": 6,
+    "title": "Final design challenge: rescue Pip",
+    "kind": "question",
+    "items": [
+      "Local control: 5 ms loop",
+      "Remote service: variable 500 ms delay",
+      "Place stop, training and fleet planning."
+    ],
+    "subtopic": "Put each computation where it fits",
+    "notes": "Give groups of two or three 90 seconds. They must place emergency obstacle response, policy training, telemetry logging and fleet route coordination. Require one failure rule for network loss and one reason the proposal could still fail. Assume the local hardware can run the selected controller; do not assume 5 ms alone proves safety. This is a design exercise, not a validated safety case.",
+    "activity": "90 seconds · choose local or remote; name a failure rule.",
+    "answer": "Local sensing/stop/controller; remote training and fleet planning where delays allow; buffer or reduce telemetry during loss. Explicit fallback and validation still required.",
+    "source": "Guide",
+    "minutes": 3
+  },
+  {
+    "number": 60,
+    "chapter": 6,
+    "title": "Keep the urgent loop local; coordinate when useful",
+    "kind": "integrated",
+    "items": [
+      "LOCAL\nSense → validate → decide → act",
+      "REMOTE\nTrain → coordinate → review",
+      "GATE\nFreshness + identity + version"
+    ],
+    "subtopic": "Put each computation where it fits",
+    "notes": "This is one defensible proposal, not the only correct architecture. Local collision response avoids dependence on remote latency. Remote infrastructure can train models and coordinate wider plans if their deadlines permit it. Versioned, validated updates pass through an explicit gate. Losing the network should invoke the defined degraded mode. Reliable local sensors, adequate hardware, tested control and human oversight remain necessary.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide; checked teaching models",
+    "minutes": 2
+  },
+  {
+    "number": 61,
+    "chapter": 6,
+    "title": "The opening mystery has five possible failure points",
+    "kind": "recap",
+    "items": [
+      "Representation + execution",
+      "Policy + hardware",
+      "Network timing + application checks"
+    ],
+    "subtopic": "Judge the whole system",
+    "notes": "Return to slide 1. The robot may fail because the observation is misinterpreted, the program or policy is wrong, the processor cannot meet the budget, or a message arrives late or is used incorrectly. The central takeaway is that useful intelligence is a property of the integrated system under stated conditions. Ask each learner to write one question they would test before deployment.",
+    "activity": "30 seconds · write your first verification question.",
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 62,
+    "chapter": 6,
+    "title": "Continue with the matching learning resources",
+    "kind": "next_steps",
+    "items": [
+      "CH 1–2 · trace a program; update a Q value",
+      "CH 3–4 · trace a pipeline; explain delay",
+      "CH 5–6 · validate a packet; justify an architecture"
+    ],
+    "subtopic": "Judge the whole system",
+    "notes": "The local Learning_Resource_Map.md lists exact chapter/subtopic titles, all five video filenames and matching demonstration commands. Videos 01 through 05 focus respectively on reinforcement learning, hardware, network challenges, networking for behaviorist AI and program execution. Use chapter exercises and solutions after attempting each task. No internet access is required for the submitted slide activities or Python demonstrations.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 1
+  },
+  {
+    "number": 63,
+    "chapter": 6,
+    "title": "Sources, scope and production credit",
+    "kind": "credits",
+    "items": [
+      "BLUE IMPULSE · Stage 2 · PPT V1.0",
+      "Original editable diagrams + checked teaching models",
+      "Full references and AI evidence included in this package"
+    ],
+    "subtopic": "Sources & acknowledgements",
+    "notes": "This classroom deck was generated with NeoGPT/Codex assistance on 7 November 2026 from the project’s six-chapter Markdown and study-guide content. AI wrote substantial teaching content, diagrams, notes and builder code; this is disclosed, not attributed to an unverified student contribution. Sources include Sutton and Barto, Brooks, OSTEP, Nand2Tetris, Unicode and relevant IETF RFCs; exact titles and locations are in Sources.md. Automated arithmetic, package and rendering checks are documented. A human teammate rehearsal and classroom projector check remain pending; do not mark them complete without evidence.",
+    "activity": null,
+    "answer": null,
+    "source": "Guide",
+    "minutes": 0.5
+  }
+]

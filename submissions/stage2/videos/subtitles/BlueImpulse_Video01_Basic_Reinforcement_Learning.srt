@@ -1,0 +1,452 @@
+1
+00:00:00,150 --> 00:00:02,177
+Pip, the coffee is getting cold!
+
+2
+00:00:02,347 --> 00:00:08,363
+Our simulated campus rover has a delivery to make, but its
+familiar route is blocked.
+
+3
+00:00:08,533 --> 00:00:14,613
+Repeating yesterday's move will not solve today's problem. Pip
+needs useful feedback,
+
+4
+00:00:14,723 --> 00:00:16,963
+and a way to change its estimates.
+
+5
+00:00:17,133 --> 00:00:21,421
+Have you ever wondered how an agent learns which action to try?
+
+6
+00:00:21,591 --> 00:00:25,559
+In Chapter two, Behaviorism and Behaviorist AI,
+
+7
+00:00:25,669 --> 00:00:30,490
+we will connect the reinforcement-learning loop to one numerical
+update.
+
+8
+00:00:32,498 --> 00:00:39,751
+Today you will identify an agent, an environment, a state, an
+action, a reward, and a policy.
+
+9
+00:00:39,921 --> 00:00:47,814
+You will compare exploration with exploitation, then calculate
+the example in the subtopic Update a Q value.
+
+10
+00:00:47,984 --> 00:00:53,168
+Welcome to the tutorial on basic reinforcement learning by Blue
+Impulse.
+
+11
+00:00:53,338 --> 00:01:01,168
+Have paper ready for one calculation. The tutorial PDF includes
+the same worked steps and practice question.
+
+12
+00:01:01,338 --> 00:01:05,988
+Treat our rover as an illustration. We are explaining a learning
+method,
+
+13
+00:01:06,098 --> 00:01:09,298
+not claiming every real rover learns this way.
+
+14
+00:01:11,628 --> 00:01:15,639
+Start with the subtopic The reinforcement-learning loop. One
+
+15
+00:01:15,749 --> 00:01:20,101
+interaction connects an observation, an action, and feedback.
+
+16
+00:01:20,271 --> 00:01:26,927
+The agent selects an action. The environment changes and returns
+the next state and a reward.
+
+17
+00:01:27,097 --> 00:01:34,798
+The learning algorithm uses that experience to improve the
+policy, which is the strategy for choosing actions.
+
+18
+00:01:34,968 --> 00:01:40,366
+For our grid, the state could be the current square, and an
+action could be moving right.
+
+19
+00:01:40,536 --> 00:01:47,768
+The reward is a number associated with the result. It is
+feedback, not a complete instruction manual.
+
+20
+00:01:47,938 --> 00:01:53,932
+Notice the return arrow. Learning depends on connecting an
+action to what happened after it.
+
+21
+00:01:54,102 --> 00:01:58,412
+For Pip, define the state before choosing an action. A location
+
+22
+00:01:58,522 --> 00:02:02,447
+alone may be insufficient if a barrier can change the route.
+
+23
+00:02:02,617 --> 00:02:09,060
+The environment includes what happens after the action. The
+reward is feedback about that outcome,
+
+24
+00:02:09,170 --> 00:02:12,050
+not a replacement for observing the next state.
+
+25
+00:02:15,280 --> 00:02:21,744
+The subtopic Rewards, policies and values separates three ideas
+that are easy to confuse.
+
+26
+00:02:21,914 --> 00:02:28,272
+Think of a journey. The reward scores an outcome now, while the
+policy chooses the next move.
+
+27
+00:02:28,442 --> 00:02:34,628
+A value estimate predicts how much return a choice may lead to,
+including later outcomes.
+
+28
+00:02:34,798 --> 00:02:41,156
+A route with a small cost now can still be worthwhile if it
+reaches a better destination.
+
+29
+00:02:41,326 --> 00:02:47,811
+That is why choosing the biggest immediate reward is not always
+the best long-term decision.
+
+30
+00:02:47,981 --> 00:02:54,146
+A poorly chosen reward can encourage a shortcut that misses the
+designer's real goal.
+
+31
+00:02:54,316 --> 00:03:01,420
+Suppose the reward gives a point for moving, regardless of
+direction. Pip could keep moving in circles
+
+32
+00:03:01,530 --> 00:03:04,538
+and collect points without completing a delivery.
+
+33
+00:03:04,708 --> 00:03:08,143
+An objective and a reward design are connected,
+
+34
+00:03:08,253 --> 00:03:12,136
+but they are not automatically identical. Test whether the
+
+35
+00:03:12,246 --> 00:03:16,171
+rewarded behaviour is the behaviour you actually wanted.
+
+36
+00:03:19,454 --> 00:03:23,870
+Use a restaurant to understand the subtopic Explore or exploit?
+
+37
+00:03:24,040 --> 00:03:31,635
+Ordering the dish you currently believe is best is exploitation.
+Trying a different dish is exploration.
+
+38
+00:03:31,805 --> 00:03:37,309
+Exploration gathers information because your current estimates
+might be wrong.
+
+39
+00:03:37,479 --> 00:03:45,586
+In our epsilon-greedy example, epsilon is zero point one, giving
+a ten percent exploration probability.
+
+40
+00:03:45,756 --> 00:03:50,598
+Otherwise, the agent chooses an action with the highest current
+Q value.
+
+41
+00:03:50,768 --> 00:03:54,800
+These percentages describe probabilities over choices,
+
+42
+00:03:54,910 --> 00:03:59,732
+not a promise that exactly one out of every ten choices
+explores.
+
+43
+00:03:59,902 --> 00:04:02,035
+In a real physical system,
+
+44
+00:04:02,145 --> 00:04:08,886
+exploration also needs safety constraints. A simulation is a
+useful place to experiment.
+
+45
+00:04:11,628 --> 00:04:17,282
+Pause and think. One route has worked twice. Another route has
+never been tried.
+
+46
+00:04:17,452 --> 00:04:23,062
+Does that prove the first route is better? Take a few seconds
+before we reveal the answer.
+
+47
+00:04:28,232 --> 00:04:34,184
+No. The evidence is incomplete, so the familiar route is not
+certainly the better one.
+
+48
+00:04:34,354 --> 00:04:42,226
+Exploration may improve the estimate, but it has a cost. The
+design must balance information and performance.
+
+49
+00:04:42,396 --> 00:04:50,780
+Write one sentence explaining why exploitation uses estimated
+future return, rather than only the next reward.
+
+50
+00:04:53,367 --> 00:05:01,538
+Now use the subtopic Update a Q value. Q associates a state and
+an action with an estimated return.
+
+51
+00:05:01,708 --> 00:05:09,132
+Q-learning is called model-free because it does not require a
+supplied model of environment transitions.
+
+52
+00:05:09,302 --> 00:05:16,555
+Model-free does not mean memory-free. The estimates still live
+in a table or another representation.
+
+53
+00:05:16,725 --> 00:05:22,187
+The update combines an old estimate with a target derived from
+new experience.
+
+54
+00:05:22,357 --> 00:05:30,165
+Alpha controls how far the estimate moves toward that target.
+Gamma discounts the future-value contribution.
+
+55
+00:05:30,335 --> 00:05:36,009
+We will keep every input visible, so you can reproduce the
+arithmetic yourself.
+
+56
+00:05:38,759 --> 00:05:44,881
+Start with an old Q value of two and a learning rate, alpha, of
+zero point five.
+
+57
+00:05:45,051 --> 00:05:50,961
+The reward is one, gamma is zero point nine, and the best next Q
+value is four.
+
+58
+00:05:51,131 --> 00:05:58,341
+First calculate the target: one plus zero point nine times four.
+The target is four point six.
+
+59
+00:05:58,511 --> 00:06:05,445
+Next subtract the old estimate. Four point six minus two gives
+an error of two point six.
+
+60
+00:06:05,615 --> 00:06:11,140
+Multiply that error by alpha. Half of two point six is one point
+three.
+
+61
+00:06:11,310 --> 00:06:17,625
+Finally add the change to the old value. Two plus one point
+three gives three point three.
+
+62
+00:06:17,795 --> 00:06:21,485
+Watch the estimate move halfway toward the target. That
+
+63
+00:06:21,595 --> 00:06:25,649
+halfway movement is what alpha equals one half means here.
+
+64
+00:06:25,819 --> 00:06:33,499
+The supporting Python file repeats this calculation and prints
+every intermediate value for you to inspect.
+
+65
+00:06:36,672 --> 00:06:44,266
+This experience raised the estimate from two to three point
+three. Now decide what that result actually means.
+
+66
+00:06:44,436 --> 00:06:51,498
+It did not prove that the action is always best. One observation
+is not a reliable policy.
+
+67
+00:06:51,668 --> 00:06:58,238
+Repeated experience, an appropriate learning schedule, and
+enough exploration are still important.
+
+68
+00:06:58,408 --> 00:07:04,851
+There is also a special case: when the next state is terminal,
+the future-value term is zero.
+
+69
+00:07:05,021 --> 00:07:11,016
+That prevents the calculation from inventing future reward after
+the episode has ended.
+
+70
+00:07:11,186 --> 00:07:18,908
+Compare these two ideas: updating an estimate from evidence, and
+guaranteeing the outcome of the next action.
+
+71
+00:07:19,078 --> 00:07:23,878
+They are different claims, and only the first follows from our
+calculation.
+
+72
+00:07:24,048 --> 00:07:29,851
+Imagine that the next trial gives different feedback. One sample
+is noisy evidence,
+
+73
+00:07:29,961 --> 00:07:32,969
+so another update can move the estimate again.
+
+74
+00:07:33,139 --> 00:07:37,363
+The learning rate controls how strongly this experience changes
+the
+
+75
+00:07:37,473 --> 00:07:42,422
+estimate. It does not turn a single successful delivery into a
+guarantee.
+
+76
+00:07:46,063 --> 00:07:51,738
+Your turn. Keep the old value at two, alpha at one half, and the
+reward at one.
+
+77
+00:07:51,908 --> 00:07:58,244
+Make the next state terminal. What is the new Q value? Pause the
+video if you need more time.
+
+78
+00:08:04,414 --> 00:08:11,944
+The future contribution is zero, so the target is one. The error
+is one minus two, or negative one.
+
+79
+00:08:12,114 --> 00:08:19,048
+Half that error is negative one half. Add it to two, giving a
+new value of one point five.
+
+80
+00:08:19,218 --> 00:08:23,463
+The estimate falls because the observed target is lower. A
+
+81
+00:08:23,573 --> 00:08:27,541
+learning update can decrease a value as well as increase it.
+
+82
+00:08:29,889 --> 00:08:37,142
+Return to Pip's blocked route. The agent acts, receives
+feedback, and learns a policy from experience.
+
+83
+00:08:37,312 --> 00:08:43,990
+Reward scores an outcome. Value estimates return. Exploration
+improves information,
+
+84
+00:08:44,100 --> 00:08:47,620
+while exploitation uses the best current estimates.
+
+85
+00:08:47,790 --> 00:08:54,851
+Our worked Q update produced three point three, and our
+terminal-state practice produced one point five.
+
+86
+00:08:55,021 --> 00:08:57,922
+The training-and-deployment distinction matters:
+
+87
+00:08:58,032 --> 00:09:03,046
+running an already learned policy is not the same as training it
+online.
+
+88
+00:09:03,216 --> 00:09:08,165
+A fixed sensor-response rule can control a machine without
+learning at all.
+
+89
+00:09:08,335 --> 00:09:16,292
+Before moving on, explain the loop to someone else and run the
+included calculation with one changed reward.
+
+90
+00:09:16,462 --> 00:09:20,430
+Pip's improvement is a change in an estimate and, possibly,
+
+91
+00:09:20,540 --> 00:09:27,516
+a later choice. It is not proof that every new street or
+unexpected obstacle has been solved.
+
+92
+00:09:30,933 --> 00:09:34,687
+Pip's small problem now has an explanation you can test.
+
+93
+00:09:34,857 --> 00:09:42,580
+Use Chapter 2, Behaviorism & Behaviorist AI, and the named
+subtopics to revisit the reasoning.
+
+94
+00:09:42,750 --> 00:09:46,163
+The tutorial guide includes the full teaching steps
+
+95
+00:09:46,273 --> 00:09:52,033
+and the checked practice answers. Run the supporting
+demonstration and change one input.
+
+96
+00:09:52,203 --> 00:09:57,537
+Blue Impulse. Follow the signal, predict the result, and check
+your explanation.

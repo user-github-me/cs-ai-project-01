@@ -1,0 +1,10 @@
+{
+  "name": "blue-impulse-stage2-teaching-slides",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Reproducible editable PowerPoint builder",
+  "dependencies": {
+    "fontkit": "2.0.4",
+    "pptxgenjs": "4.0.1"
+  }
+}

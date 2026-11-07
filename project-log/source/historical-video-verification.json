@@ -1,0 +1,41 @@
+{
+  "edition": "Historical 6 November 2026 30 fps export; these checks do not apply to replacement videos.",
+  "source_note": "Selected numeric results preserved from the original saved media-verification outputs before the video-production tree was excluded from the public index.",
+  "videos": [
+    {
+      "video": 1,
+      "duration_seconds": 515.666667,
+      "bytes": 37326183,
+      "frame_count": 15470,
+      "sampled_ssim_against_render": 0.999032
+    },
+    {
+      "video": 2,
+      "duration_seconds": 544.833333,
+      "bytes": 38161560,
+      "frame_count": 16345,
+      "sampled_ssim_against_render": 0.999076
+    },
+    {
+      "video": 3,
+      "duration_seconds": 554.066667,
+      "bytes": 39388728,
+      "frame_count": 16622,
+      "sampled_ssim_against_render": 0.999088
+    },
+    {
+      "video": 4,
+      "duration_seconds": 578.066667,
+      "bytes": 42800652,
+      "frame_count": 17342,
+      "sampled_ssim_against_render": 0.999035
+    },
+    {
+      "video": 5,
+      "duration_seconds": 572.4,
+      "bytes": 38677516,
+      "frame_count": 17172,
+      "sampled_ssim_against_render": 0.999155
+    }
+  ]
+}

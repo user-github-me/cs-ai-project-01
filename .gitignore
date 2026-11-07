@@ -1,5 +1,9 @@
 /temp contents/
+/videos/
+/assets/tutorials/stage2/source/
 /deliverables/
 __pycache__/
 *.py[cod]
 .DS_Store
+/submissions/**/*.zip
+/submissions/**/*.mp4

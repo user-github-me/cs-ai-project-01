@@ -51,12 +51,12 @@
       {
         "kind": "text",
         "title": "How to study",
-        "text": "Start with a chapter’s learning goals, then read one teaching page at a time. Follow the diagram or worked example. Pause at the question before moving on, and write an answer in your own notes. Return to the chapter’s key terms and practice pages to check your understanding."
+        "text": "Start with a chapter’s learning goals, then read one teaching page at a time. Follow the diagram or worked example. Pause at the question before moving on, and write an answer in your own notes. Then try the matching chapter mission in the activity section beginning on page 97. Explained answers follow the six missions."
       },
       {
         "kind": "text",
         "title": "Find a page quickly",
-        "text": "This PDF has bookmarks for every chapter and teaching page. Page numbers match the PDF viewer, including the unchanged cover and chapter dividers. Exercise links lead to the team’s GitHub files. The learning goals are on pages 3–4; source and production notes are at the end."
+        "text": "This PDF has bookmarks for every chapter and teaching page. Page numbers match the PDF viewer, including the unchanged cover and chapter dividers. The learning goals are on pages 3–4. Missions, optional resources and the complete answer key follow page 96; their bookmarks provide direct navigation. GitHub links are supplementary."
       }
     ],
     "page": 2
@@ -785,8 +785,8 @@
     "blocks": [
       {
         "kind": "text",
-        "title": "Work without an answer key",
-        "text": "Write your reasoning before checking the teaching pages. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. These questions come from the team’s repository, with wording clarified where needed."
+        "title": "Try first, then check feedback",
+        "text": "Write your reasoning before opening the explained answers after the six chapter missions. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. Match the question number with the answer key in this complete edition."
       },
       {
         "kind": "text",
@@ -816,8 +816,8 @@
     "blocks": [
       {
         "kind": "text",
-        "title": "Work without an answer key",
-        "text": "Write your reasoning before checking the teaching pages. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. These questions come from the team’s repository, with wording clarified where needed."
+        "title": "Try first, then check feedback",
+        "text": "Write your reasoning before opening the explained answers after the six chapter missions. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. Match the question number with the answer key in this complete edition."
       },
       {
         "kind": "text",
@@ -2068,8 +2068,8 @@
     "blocks": [
       {
         "kind": "text",
-        "title": "Work without an answer key",
-        "text": "Write your reasoning before checking the teaching pages. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. These questions come from the team’s repository, with wording clarified where needed."
+        "title": "Try first, then check feedback",
+        "text": "Write your reasoning before opening the explained answers after the six chapter missions. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. Match the question number with the answer key in this complete edition."
       },
       {
         "kind": "text",
@@ -2889,8 +2889,8 @@
     "blocks": [
       {
         "kind": "text",
-        "title": "Work without an answer key",
-        "text": "Write your reasoning before checking the teaching pages. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. These questions come from the team’s repository, with wording clarified where needed."
+        "title": "Try first, then check feedback",
+        "text": "Write your reasoning before opening the explained answers after the six chapter missions. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. Match the question number with the answer key in this complete edition."
       },
       {
         "kind": "text",
@@ -2920,8 +2920,8 @@
     "blocks": [
       {
         "kind": "text",
-        "title": "Work without an answer key",
-        "text": "Write your reasoning before checking the teaching pages. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. These questions come from the team’s repository, with wording clarified where needed."
+        "title": "Try first, then check feedback",
+        "text": "Write your reasoning before opening the explained answers after the six chapter missions. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. Match the question number with the answer key in this complete edition."
       },
       {
         "kind": "text",
@@ -3452,8 +3452,8 @@
     "blocks": [
       {
         "kind": "text",
-        "title": "Work without an answer key",
-        "text": "Write your reasoning before checking the teaching pages. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. These questions come from the team’s repository, with wording clarified where needed."
+        "title": "Try first, then check feedback",
+        "text": "Write your reasoning before opening the explained answers after the six chapter missions. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. Match the question number with the answer key in this complete edition."
       }
     ],
     "page": 83
@@ -3928,8 +3928,8 @@
     "blocks": [
       {
         "kind": "text",
-        "title": "Work without an answer key",
-        "text": "Write your reasoning before checking the teaching pages. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. These questions come from the team’s repository, with wording clarified where needed."
+        "title": "Try first, then check feedback",
+        "text": "Write your reasoning before opening the explained answers after the six chapter missions. Show units and intermediate steps for calculations. For comparisons, use the same criteria on both sides. Match the question number with the answer key in this complete edition."
       }
     ],
     "page": 95
@@ -3955,7 +3955,7 @@
       {
         "kind": "text",
         "title": "How to read this edition",
-        "text": "Page numbers refer to physical PDF pages, including the cover and dividers. Each teaching or reference page ends with a question from the team’s GitHub exercise files; no answer key is included. Wording is lightly edited for clarity and technical accuracy. Worked examples teach methods using separate examples. The original art’s printed chapter labels determine the divider order."
+        "text": "Page numbers refer to physical PDF pages, including the cover and dividers. Each teaching or reference page ends with a question from the team’s exercise files. The complete Stage 2 edition includes six missions, resources and explained answers after the core chapters. Wording is lightly edited for clarity and technical accuracy. Worked examples teach methods using separate examples. The original art’s printed chapter labels determine the divider order."
       }
     ],
     "page": 96
