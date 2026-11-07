@@ -16,10 +16,6 @@
 
 # Chapter 3: Hardware
 - Input, Processing and Output Hardware
-- Computer Memory and Storage
-- Processing Devices and CPU Architecture
-- Parallel Processing and Computer Systems
-- Logic Circuits and Boolean Algebra
 - How Hardware enables AI
 
 # Chapter 4: Networking:
