@@ -1,23 +1,71 @@
 # Chapter 3 — Hardware
-
-## Key terms
-
-| Term | Meaning |
-| --- | --- |
-| Hardware | Physical computing components. |
-| Input / output / storage | Data entry / results or action / retention of information. |
-| Volatile / non-volatile | Loses data without power / retains data without power. |
-| SRAM / DRAM | Bistable-cell memory / charge-based memory requiring refresh. |
-| ROM / PROM / EPROM | Read-only / one-time programmable / ultraviolet-erasable memory. |
-| EEPROM / flash | Electrically erasable memory / a block-erasable family. |
-| Cache | Fast storage holding copies of data near a processor. |
-| HDD / SSD / optical | Magnetic disk / solid-state storage / laser-readable media. |
-| RISC / CISC | Instruction-set design families; not direct performance guarantees. |
-| Pipeline / hazard | Overlapped instruction stages / a dependency or conflict that can stall them. |
-| SISD / SIMD / MISD / MIMD | Flynn’s categories of instruction and data streams. |
-| Sensor / actuator | Measures a physical condition / produces physical action. |
-| ADC / DAC / PWM | Analogue-to-digital conversion / digital-to-analogue conversion / pulse-width modulation. |
-| Microcontroller | An integrated processor with memory and input/output peripherals. |
-| Embedded system | A computing system with a role inside a larger product. |
-| GPU / NPU | Parallel graphics-oriented processor / specialised neural-processing hardware. |
-| Logic gate / truth table | A binary operation circuit / its outputs for every input combination. |
+Chapter 3:
+- Hardware: The physical components of a computer or electronic system that can be seen and touched.
+-	Input Device: A hardware component used to enter data or instructions into a computer or system.
+-	Sensors: Hardware components that detect changes in the environment and collect data. 
+-	Actuators: Components that carry out physical actions based on electronic instructions. 
+-	Output Device: A hardware component that presents information or results from a computer or system.
+-	Processing Device: A hardware component that processes data and executes instructions, such as a Central Processing Unit (CPU).
+-	Central Processing Unit (CPU): The main processing component of a computer that executes instructions and performs calculations.
+-	Primary Storage: Memory that provides the computer with direct access to data and instructions needed during operation.
+-	Secondary Storage: Non-volatile storage used to retain data and programs for long-term use.
+-	Random Access Memory (RAM): Volatile primary memory that temporarily stores data and instructions currently being used by the computer.
+-	Read-Only Memory (ROM): Non-volatile memory that stores instructions and data that are retained when power is turned off.
+-	Static Random Access Memory (SRAM): A type of RAM that stores data using flip-flop circuits and does not require periodic refreshing while powered.
+-	Dynamic Random Access Memory (DRAM): A type of RAM that stores data using capacitors and requires periodic refreshing to maintain stored information.
+-	Programmable Read-Only Memory (PROM): Non-volatile memory that can be programmed once after manufacturing.
+-	Erasable Programmable Read-Only Memory (EPROM): Non-volatile memory that can be erased using ultraviolet light and reprogrammed.
+-	Volatile Memory: Memory that loses its stored data when the power supply is turned off.
+-	Non-Volatile Memory: Memory that retains stored data even when the power supply is turned off.
+-	Embedded System: A computer system designed to perform specific functions within a larger device or machine.
+-	Microcontroller: A compact integrated circuit containing a processor, memory, and input/output interfaces, commonly used in embedded systems.
+-	Sensor: An input device that detects physical conditions or changes in the environment and converts them into data.
+-	Actuator: An output device that converts control signals into physical actions, such as movement or switching.
+-	Monitoring System: A system that collects and observes data about conditions or processes, often using sensors.
+-	Control System: A system that manages or regulates the operation of a device or process based on input data and predefined instructions.
+-	Feedback: Information returned by a system about its current condition or performance, which can be used to adjust its operation.
+-	Artificial Intelligence Hardware: Physical computing components, such as processors, memory, and specialized accelerators, that support the execution of AI tasks.
+-	Graphics Processing Unit (GPU): A specialized processor designed to perform many calculations simultaneously, making it useful for AI workloads such as neural network training and inference.
+-	CISC: Complex Instruction Set Computer
+-	RISC: Reduced Instruction Set Computer
+-	Pipelining: Allows several instructions to be processed simultaneously without having to wait for previous instructions to finish
+-	Parallel processing: operation which allows a process to be split up and for each part to be executed by a different processor at the same time
+-	SISD: Single instruction Set Data computer architecture which uses a single processor and one data source
+-	SIMD: SIngle instruction Multiple Data which uses many processors and different data inputs
+-	MISD: Multiple Instruction Single Data, uses many processors but the same shared data source
+-	MIMD: Multiple Instruction Multiple Data, which uses many processors each of which can use a separate data source
+-	Cluster: A number of computers containing SIMD processors networked together
+-	Super COmputer: A powerful mainframe computer
+-	Massively Parallel Computers: the linking together of several computers effectively forming one machine with thousands of processors
+-	Memory cache: high speed memory external to processor
+- which stores data which the processor will need again.
+- Random access memory (RAM) – primary memory unit that can be written to and read from.
+- Read-only memory (ROM) – primary memory unit that can only be read from.
+- Dynamic RAM (DRAM) – type of RAM chip that needs to be constantly refreshed.
+- Static RAM (SRAM) – type of RAM chip that uses flip-flops and does not need refreshing.
+- Refreshed – requirement to charge a component to retain its electronic state.
+- Programmable ROM (PROM) – type of ROM chip that can be programmed once.
+- Erasable PROM (EPROM) – type of ROM that can be programmed more than once using ultraviolet (UV) light.
+- Hard disk drive (HDD) – type of magnetic storage device that uses spinning disks.
+- Latency – the lag in a system; for example, the time to find a track on a hard disk, which depends on the time taken for the disk to rotate around to its read-write head.
+- Fragmented – storage of data in non-consecutive sectors; for example, due to editing and deletion of old data.
+- Removable hard disk drive – portable hard disk drive that is external to the computer; it can be connected via a USB part when required; often used as a device to back up files and data.
+- Solid state drive (SSD) – storage media with no moving parts that relies on movement of electrons.
+- Electronically erasable programmable read-only memory (EEPROM) – read-only (ROM) chip that can be modified by the user, which can then be erased and written to repeatedly using pulsed voltages.
+- Flash memory – a type of EEPROM, particularly suited to use in drives such as SSDs, memory cards and memory sticks.
+- Optical storage – CDs, DVDs and Blu-rayTM discs that use laser light to read and write data.
+- Dual layering – used in DVDs; uses two recording layers. Birefringence – a reading problem with DVDs caused
+by refraction of laser light into two beams.
+- Binder 3D printing – 3D printing method that uses a two-stage pass; the first stage uses dry powder and the second stage uses a binding agent.
+- Direct 3D printing – 3D printing technique where print head moves in the x, y and z directions. Layers of melted material are built up using nozzles like an inkjet printer.
+- Digital to analogue converter (DAC) – needed to convert digital data into electric currents that can drive motors, actuators and relays, for example.
+- Analogue to digital converter (ADC) – needed to convert analogue data (read from sensors, for example) into a form understood by a computer.
+- Organic LED (OLED) – uses movement of electrons between cathode and anode to produce an on-screen image. It generates its own light so no back lighting required.
+- Screen resolution – number of pixels in the horizontal and vertical directions on a television/computer screen.
+- Touch screen – screen on which the touch of a finger or stylus allows selection or manipulation of a screen image; they usually use capacitive or resistive technology.
+- Capacitive – type of touch screen technology based
+on glass layers forming a capacitor, where fingers touching the screen cause a change in the electric field.
+- Resistive – type of touch screen technology. When
+a finger touches the screen, the glass layer touches the plastic layer, completing the circuit and causing a current to flow at that point.
+- Virtual reality headset – apparatus worn on the head that covers the eyes like a pair of goggles. It gives the user the ‘feeling of being there’ by immersing them totally in the virtual reality experience.
+- Sensor – input device that reads physical data from its surroundings.
