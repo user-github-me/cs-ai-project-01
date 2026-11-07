@@ -2,6 +2,8 @@
 
 **Interactive companion:** [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app)
 
+**Access from China:** connect to your VPN before opening the hosted game; it is needed on our university network. For a short walkthrough, see the [quick-start tutorial](../../../../apps/roverlab/TUTORIAL.md) or [one-page PDF](../../../../apps/roverlab/BlueImpulse_ROVERLAB_Quick_Start.pdf).
+
 **Provider:** Blue Impulse. **Time:** approximately 5–10 minutes per experiment. **Preparation:** read Chapter 2 — Behaviorism & Behaviorist AI, Chapter 3 — Hardware, and Chapter 4 — Networking; use Chapter 5 — Applications to connect the systems. No programming experience or account is required.
 
 ## Your challenge

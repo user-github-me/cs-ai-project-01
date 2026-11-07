@@ -85,6 +85,7 @@
 - [x] Create the Vercel project in the Hobby workspace and connect the GitHub repository.
 - [x] Verify the public deployment and a GitHub-triggered production update.
 - [x] Publish the completed game source and downloadable ZIP.
+- [x] Add a concise game tutorial in Markdown and a one-page PDF, with the VPN access note for China and links in the game, repository and submission documentation.
 
 ## Evidence and submission by the team
 

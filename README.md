@@ -6,6 +6,8 @@ The repository is **public**, as requested for the professor’s submitted link.
 
 **Play [ROVERLAB: Build, Connect, Train](https://roverlab-blue-impulse.vercel.app)** — assemble a machine, connect its network, train its responses and test a mission. The game runs on Vercel's Hobby plan, with GitHub updates deploying automatically. [Game source and setup](apps/roverlab/README.md) · [guided learning activity](assets/tutorials/stage2/supporting/ROVERLAB_Activity.md).
 
+**Access from China:** connect to your VPN before opening the hosted game; it is needed on our university network. [Brief game tutorial](apps/roverlab/TUTORIAL.md) · [one-page PDF for submission](apps/roverlab/BlueImpulse_ROVERLAB_Quick_Start.pdf).
+
 ## Current Stage 2 materials
 
 The chapter files in `content/` have been restored at Nazif’s request. The study guide, Test Bank, slides, videos and published packages remain the previously generated editions and may differ from the restored source. See [what was reverted](project-log/CHAPTER_ROLLBACK.md).

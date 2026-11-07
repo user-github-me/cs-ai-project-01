@@ -5,6 +5,8 @@ An interactive Blue Impulse study-guide companion. Build a machine from componen
 **Play:** https://roverlab-blue-impulse.vercel.app  
 **Download:** [Complete application ZIP](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_ROVERLAB_Source.zip)
 
+**Access from China:** connect to your VPN before opening the hosted game; it is needed on our university network. Start with the [brief tutorial](TUTORIAL.md) or its [one-page PDF for submission](BlueImpulse_ROVERLAB_Quick_Start.pdf).
+
 ## Play locally
 
 Download and extract the ZIP, then open `public/index.html` in a modern browser. All game code, illustrations and the font are local. No installation, account, API key, build tool or internet connection is required for this mode. Browser support for saving progress from `file://` differs; use local HTTP for consistent saving and offline caching:
