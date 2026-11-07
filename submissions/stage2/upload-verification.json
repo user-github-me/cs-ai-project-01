@@ -1,0 +1,273 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-07T09:37:39.247781+00:00",
+  "source_commit": "d9ae5f8d0338afbb264307849891083bc6e40420",
+  "repository": "https://github.com/user-github-me/cs-ai-project-01",
+  "visibility": "PUBLIC",
+  "anonymous_repository_status": 200,
+  "release": "https://github.com/user-github-me/cs-ai-project-01/releases/tag/blue-impulse-stage2-2026-11-07",
+  "assets_checked": 21,
+  "assets": [
+    {
+      "file": "submissions/stage2/markdown/BlueImpulse_Stage2_Markdown_V2.zip",
+      "name": "BlueImpulse_Stage2_Markdown_V2.zip",
+      "bytes": 553146,
+      "sha256": "a08b9577b491438b12315685c86825b2d2e3d1cdb2c8a40733665f3726d79268",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_Markdown_V2.zip",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "553146"
+      }
+    },
+    {
+      "file": "submissions/stage2/study-guide/BlueImpulse_Stage2_StudyGuide_TestBank_V1.zip",
+      "name": "BlueImpulse_Stage2_StudyGuide_TestBank_V1.zip",
+      "bytes": 30739715,
+      "sha256": "9f20cf74c4291fae645c661bc06b44a3c11d8aa69cad4b2a3af9db2f6ad289c8",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_StudyGuide_TestBank_V1.zip",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "30739715"
+      }
+    },
+    {
+      "file": "submissions/stage2/slides/BlueImpulse_Stage2_PPT_V1.zip",
+      "name": "BlueImpulse_Stage2_PPT_V1.zip",
+      "bytes": 7193610,
+      "sha256": "8b97a17877cf956653ccc4c1c9a1a8e9c4dc462cc1cb4b1f38bc5dd5d871a29a",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_PPT_V1.zip",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "7193610"
+      }
+    },
+    {
+      "file": "deliverables/stage2/BlueImpulse_Stage2_Tutorial_Documents.zip",
+      "name": "BlueImpulse_Stage2_Tutorial_Documents.zip",
+      "bytes": 3515046,
+      "sha256": "6b9d295929b1bb360c550a724c1e71047993c694d6a1b8d3c1bd3837dec3b851",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_Tutorial_Documents.zip",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "3515046"
+      }
+    },
+    {
+      "file": "deliverables/stage2/BlueImpulse_Stage2_Tutorial_Package.zip",
+      "name": "BlueImpulse_Stage2_Tutorial_Package.zip",
+      "bytes": 274531386,
+      "sha256": "a17274071699d4d4dee31a49306dcc3c2929b0e89c4c7c5f735fc273d60256f9",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_Tutorial_Package.zip",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "274531386"
+      }
+    },
+    {
+      "file": "assets/tutorials/stage2/videos/BlueImpulse_Video01_Basic_Reinforcement_Learning.mp4",
+      "name": "BlueImpulse_Video01_Basic_Reinforcement_Learning.mp4",
+      "bytes": 47425849,
+      "sha256": "95f891130387b6ede69a6f6e0dbf0522971948bfcb201f03d9ae5ac681a137a7",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Video01_Basic_Reinforcement_Learning.mp4",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "47425849"
+      }
+    },
+    {
+      "file": "assets/tutorials/stage2/videos/BlueImpulse_Video02_How_Hardware_Enables_AI.mp4",
+      "name": "BlueImpulse_Video02_How_Hardware_Enables_AI.mp4",
+      "bytes": 48161007,
+      "sha256": "bd0572e066c05982caf99dab5d0e0eec660619803e370beefca4bf7e1839ceea",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Video02_How_Hardware_Enables_AI.mp4",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "48161007"
+      }
+    },
+    {
+      "file": "assets/tutorials/stage2/videos/BlueImpulse_Video03_Network_Challenges.mp4",
+      "name": "BlueImpulse_Video03_Network_Challenges.mp4",
+      "bytes": 48902815,
+      "sha256": "cd7b27582950e5fef6c2a4184375fd1d20515d40d5698b95f12fdde71246998b",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Video03_Network_Challenges.mp4",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "48902815"
+      }
+    },
+    {
+      "file": "assets/tutorials/stage2/videos/BlueImpulse_Video04_Networking_for_Behaviorist_AI.mp4",
+      "name": "BlueImpulse_Video04_Networking_for_Behaviorist_AI.mp4",
+      "bytes": 50061875,
+      "sha256": "a2c3fd1e8f6d21345d75b1b397cc72cedb4073465fe1b3153ad53b6ebb466673",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Video04_Networking_for_Behaviorist_AI.mp4",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "50061875"
+      }
+    },
+    {
+      "file": "assets/tutorials/stage2/videos/BlueImpulse_Video05_Program_Execution.mp4",
+      "name": "BlueImpulse_Video05_Program_Execution.mp4",
+      "bytes": 45852242,
+      "sha256": "db186cf7091ac0adba212616d407b0c81218c2de97b0adb77c081721b86d1d0b",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Video05_Program_Execution.mp4",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "45852242"
+      }
+    },
+    {
+      "file": "assets/study-guide/BlueImpulse_Study_Guide.pdf",
+      "name": "BlueImpulse_Study_Guide.pdf",
+      "bytes": 31490602,
+      "sha256": "c7643b0dbcc020e2c8e1706bb3cb980bd6f86e91e0898e5d834f10bace70cb92",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Study_Guide.pdf",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "31490602"
+      }
+    },
+    {
+      "file": "assets/study-guide/BlueImpulse_Stage2_TestBank_V1.docx",
+      "name": "BlueImpulse_Stage2_TestBank_V1.docx",
+      "bytes": 49226,
+      "sha256": "dbc36f06aa162a9cddb80cab4800b61b13ab994f9ce3ced74fda1c1659fa5e57",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_TestBank_V1.docx",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "49226"
+      }
+    },
+    {
+      "file": "assets/presentations/stage2-teaching/BlueImpulse_Stage2_PPT_V1.pptx",
+      "name": "BlueImpulse_Stage2_PPT_V1.pptx",
+      "bytes": 289336,
+      "sha256": "48124e50a1f7e6acfe7f62a60f43cd220b47d27ea6138d3aec96ed850b9332f2",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_PPT_V1.pptx",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "289336"
+      }
+    },
+    {
+      "file": "assets/tutorials/stage2/BlueImpulse_Stage2_VideoGuide.pdf",
+      "name": "BlueImpulse_Stage2_VideoGuide.pdf",
+      "bytes": 136370,
+      "sha256": "3321b039b7eb68c9a49f9041a312497c3405cf54c16f38e2dbad650f7b502b2c",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_VideoGuide.pdf",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "136370"
+      }
+    },
+    {
+      "file": "project-log/BlueImpulse_Stage2_ProjectLog.docx",
+      "name": "BlueImpulse_Stage2_ProjectLog.docx",
+      "bytes": 58936,
+      "sha256": "96c178636666758f21ba098328e6df3dfd0e297aed92a5a9e6e9ad030a6763ef",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_ProjectLog.docx",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "58936"
+      }
+    },
+    {
+      "file": "project-log/BlueImpulse_Stage2_ProjectLog.pdf",
+      "name": "BlueImpulse_Stage2_ProjectLog.pdf",
+      "bytes": 87806,
+      "sha256": "f0fc6e15037ac6d126bdc355e568a25293fc63cce3b8b2055e4cf3f0b95b0154",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_ProjectLog.pdf",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "87806"
+      }
+    },
+    {
+      "file": "private-submissions/stage2/BlueImpulse_Stage2_PersonalLogs.docx",
+      "name": "BlueImpulse_Stage2_PersonalLogs.docx",
+      "bytes": 45917,
+      "sha256": "fed183985b4c4443f40690655f16f16cfe7deb62de5bb6da68733573e8a353b1",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_PersonalLogs.docx",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "45917"
+      }
+    },
+    {
+      "file": "private-submissions/stage2/BlueImpulse_Stage2_PersonalLogs.pdf",
+      "name": "BlueImpulse_Stage2_PersonalLogs.pdf",
+      "bytes": 60225,
+      "sha256": "c08fbed124a6913fa6454ce2d4241b392356d5116dc4a1816fd97990b12a759b",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_PersonalLogs.pdf",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "60225"
+      }
+    },
+    {
+      "file": "deliverables/stage2/BlueImpulse_ROVERLAB_Source.zip",
+      "name": "BlueImpulse_ROVERLAB_Source.zip",
+      "bytes": 433639,
+      "sha256": "6132d8d207917462fda118f0b588ce17818a8725d8181a475c82874bb9c2052f",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_ROVERLAB_Source.zip",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "433639"
+      }
+    },
+    {
+      "file": "deliverables/stage2/BlueImpulse_Video_Recording_Scripts.zip",
+      "name": "BlueImpulse_Video_Recording_Scripts.zip",
+      "bytes": 184337,
+      "sha256": "780862745f5f750214c1506df878fb9a4ea20f5d8eb567f5dbd976720a17984e",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Video_Recording_Scripts.zip",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "184337"
+      }
+    },
+    {
+      "file": "deliverables/stage2/SHA256SUMS.txt",
+      "name": "SHA256SUMS.txt",
+      "bytes": 2096,
+      "sha256": "cdeb59dab407e45a8307a66cc829d7d1fbc0e3ce0731b374f07ba600210cf677",
+      "server_digest_matches": true,
+      "download_url": "https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/SHA256SUMS.txt",
+      "anonymous_download_check": {
+        "status": 200,
+        "content_length": "2096"
+      }
+    }
+  ],
+  "current_tree": {
+    "final_mp4s": 5,
+    "personal_log_present": true,
+    "roverlab_source_present": true,
+    "recording_scripts_present": true,
+    "video_production_projects_present": false,
+    "temp_contents_present": false
+  },
+  "scope": "Server SHA-256 and byte counts match local outputs; unauthenticated HEAD requests reach every public download. This is not a professor viewing or course-channel submission receipt."
+}

@@ -1,7 +1,7 @@
 {
   "file": "deliverables/stage2/BlueImpulse_ROVERLAB_Source.zip",
-  "bytes": 433407,
-  "sha256": "f0ebc865464d8a308dd0fe9e89998875430db3bbca0c39207397f96fae2d87da",
+  "bytes": 433639,
+  "sha256": "6132d8d207917462fda118f0b588ce17818a8725d8181a475c82874bb9c2052f",
   "files": 26,
   "crc_and_hashes": "passed",
   "contains": "Local game, font/license, README, Vercel config, tests and text verification records. Screenshots are in the repository."

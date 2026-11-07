@@ -1,11 +1,18 @@
 {
-  "checked_at_utc": "2026-11-07T09:18:49.186284+00:00",
   "status": "passed",
+  "checked_at_utc": "2026-11-07T09:29:59.487748+00:00",
   "url": "https://roverlab-blue-impulse.vercel.app/",
   "plan": "hobby",
   "workspace": "usergithubmes-projects",
-  "deployment_id": "dpl_GLUVXn5EYpgHeEtHAvARB5rzJPwd",
-  "deployment_source": "CLI; Git automatic deployment verification pending",
+  "deployment_id": "dpl_HhB3h9xKU5U1gaPTn414VRdGgLvF",
+  "deployment_source": "git",
+  "github_commit": "d9ae5f8d0338afbb264307849891083bc6e40420",
+  "production_branch": "main",
+  "root_directory": "apps/roverlab",
+  "output_directory": "public",
+  "github_repository": "user-github-me/cs-ai-project-01",
+  "ready_state": "READY",
+  "deployment_protection": null,
   "assets": [
     {
       "path": "index.html",
@@ -77,5 +84,6 @@
       "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
       "matches_local": true
     }
-  ]
+  ],
+  "scope": "A push to main triggered this ready production deployment. Every public asset was fetched without authentication and matched local SHA-256. Browser journey results are recorded separately."
 }

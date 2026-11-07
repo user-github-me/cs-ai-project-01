@@ -72,7 +72,7 @@
 - [x] Add measured final MP4 metadata to the VideoGuide.
 - [x] Verify final video sizes, all 180,000 decoded frames, copied audio and 489 captions.
 - [x] Package the verified tutorial outputs.
-- [ ] Check the published tutorial downloads.
+- [x] Check the published tutorial downloads.
 - [x] Keep video production projects and render code local; publish finished videos and requested learning materials.
 
 ## ROVERLAB companion game
@@ -83,8 +83,8 @@
 - [x] Verify all 12 local/hosted Chromium checks and 11 WebKit checks; document the unverified WebKit offline case.
 - [x] Add a guided experiment and game links to the learning materials.
 - [x] Create the Vercel project in the Hobby workspace and connect the GitHub repository.
-- [ ] Verify the public deployment and a GitHub-triggered production update.
-- [ ] Publish the completed game source and downloadable ZIP.
+- [x] Verify the public deployment and a GitHub-triggered production update.
+- [x] Publish the completed game source and downloadable ZIP.
 
 ## Evidence and submission by the team
 
@@ -95,6 +95,11 @@
 - [ ] Another teammate views each final compressed video; a beginner tries the explanations and tasks; record actual findings.
 - [ ] Rehearse representative teaching sections and check the classroom display.
 - [ ] Upload the named packages, individual MP4s and standalone log documents to the designated course channel; save receipts.
-- [ ] Push the verified Stage 2 files and publish/check the new release downloads.
+- [x] Push the verified Stage 2 files and publish/check the new release downloads.
 
 See [submission index](submissions/stage2/README.md) and [requirements/readiness](project-log/REQUIREMENTS_AND_READINESS.md). A generated file or public repository link does not establish a completed human review or course submission.
+
+## Human narration update
+
+- [x] Supply five clean narration PDFs and TXT files plus a ZIP; verify all 368 spoken cues.
+- [ ] Receive Nazif’s five audio recordings, retime visuals/captions and render new human-voice MP4s. Current videos retain their disclosed synthetic narration.

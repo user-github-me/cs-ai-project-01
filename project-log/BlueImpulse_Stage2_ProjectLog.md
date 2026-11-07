@@ -384,6 +384,27 @@ Nazif requested the five video scripts to record his own narration and return th
 
 No replacement recording has been supplied yet. The existing five finished videos still use the disclosed synthetic narration. Future retiming, caption alignment and rendering with Nazif’s voice remain pending receipt of his recordings; they have not been marked complete.
 
+### 7 November — verified GitHub release and Git-triggered ROVERLAB deployment
+
+The coordinating assistant verified the publication requested by Nazif. Git push 8ab3108 → d9ae5f8d0338afbb264307849891083bc6e40420 succeeded, publishing the earlier f567ff9 Stage 2 outputs together with ROVERLAB and the clean narration-recording scripts. Original teammate commits and attribution remain intact. This entry supersedes the earlier pending-upload and pending-automatic-deployment states without deleting that history.
+
+| Published system or check | Verified result |
+| --- | --- |
+| GitHub / Vercel status | GitHub’s Vercel status is success. Deployment dpl_HhB3h9xKU5U1gaPTn414VRdGgLvF is READY; source git; source commit d9ae5f8. |
+| Public game and hosting plan | https://roverlab-blue-impulse.vercel.app; no authentication required. Project roverlab-blue-impulse in the usergithubmes-projects Hobby workspace. |
+| Deployed application integrity | All ten public deployed assets matched their local counterparts by SHA-256. The completed Git-triggered deployment establishes automatic deployment for the verified commit. |
+| Engine and Chromium verification | 21 engine tests passed; local Chromium 12/12 passed; hosted Chromium 12/12 passed; zero recorded browser errors. |
+| WebKit verification | 11 checks passed; one offline-reload check explicitly skipped as unverified. This is not presented as a verified WebKit offline result. |
+| Meaningful mission outcomes | All three correct mission configurations scored 100. High temperature → move caused an actual failed industrial mission with overall score 45. |
+
+The published release is https://github.com/user-github-me/cs-ai-project-01/releases/tag/blue-impulse-stage2-2026-11-07. Its 21 assets include the five completed MP4s, course ZIPs and documents, log documents, the ROVERLAB source ZIP and the narration-recording-script ZIP. All 21 server SHA-256 digests and byte counts matched the checked files, and each asset returned anonymous HTTP 200.
+
+> Saved publication evidence: submissions/stage2/upload-verification.json — status passed; source commit d9ae5f8d0338afbb264307849891083bc6e40420; assets_checked 21. The independently inspected asset list contains 21 successful server-digest matches and 21 anonymous HTTP 200 results. This verifies the recorded release snapshot, not a course-platform submission receipt.
+
+The recording pack preserves all 368 spoken cues across 60 sections in five PDFs and five TXT files. Nazif has not supplied replacement audio yet. The published videos retain their disclosed synthetic narration; human-voice alignment, subtitle retiming, rerendering and validation remain pending receipt of his recordings. No human-voice output is claimed.
+
+Nazif’s personal log now records these verified publication results, and the project, combined-personal and Nazif-only Word/PDF records are rebuilt from the preserved source text and roster IDs. The coordinating assistant will push this final evidence update and replace the four affected release log assets afterward; this entry does not claim its own follow-up upload is already complete. Browser tests and public downloads do not establish teacher approval, professor access as a named user, course-platform receipt, missing student entries, independent personal reflections or team-agreed contribution scores.
+
 ## Follow-up and submission status
 
 | Owner | Required follow-up | Status / intended deadline |

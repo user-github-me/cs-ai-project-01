@@ -174,6 +174,20 @@ Nazif requested clean video scripts so he can record his own narration and retur
 
 The five existing MP4s still use the disclosed synthetic voice. Nazif has not yet supplied his recorded audio, so no human-voice version is claimed. The next audio step is to receive one recording per video, align the captions and visual timing to those recordings, then render and verify the revised MP4s. The existing narration and finished videos have been preserved.
 
+### Verified GitHub publication and automatic ROVERLAB deployment — 7 November 2026
+
+- Neogpt completed the Git push from 8ab3108 to d9ae5f8d0338afbb264307849891083bc6e40420. It includes the earlier f567ff9 Stage 2 work, the ROVERLAB application and the clean narration-recording scripts, while retaining the original teammate commits and attribution. This verified result supersedes the earlier pending-upload entries, which remain as historical records.
+
+- GitHub reported a successful Vercel check. The Git-triggered deployment dpl_HhB3h9xKU5U1gaPTn414VRdGgLvF reached READY from commit d9ae5f8 with source git. ROVERLAB is available without authentication in the usergithubmes-projects Hobby workspace. All ten served public assets matched the local files by SHA-256.
+
+- Final automated checks passed: 21 engine tests, 12 of 12 local Chromium checks and 12 of 12 hosted Chromium checks. WebKit passed 11 checks, with its offline-reload check explicitly skipped as unverified. No browser errors were recorded. All three correct mission setups scored 100; changing the high-temperature response to move caused a failed mission with a score of 45. These are software checks, not evidence of student or teacher review.
+
+- Neogpt published the Stage 2 release. All 21 assets passed server SHA-256 and byte-count verification and anonymous HTTP 200 download checks. The release includes the five finished MP4s, course packages and documents, log documents, the ROVERLAB source ZIP and the recording-script ZIP. The saved upload verification records the published revision and asset checks.
+
+- I have not yet supplied my own recordings. The released videos still use the disclosed synthetic narration; alignment, caption retiming and rerendering with my voice remain pending receipt of those files. The final publication entry and regenerated log documents will be uploaded as a follow-up; this entry does not claim that its own subsequent upload has already happened.
+
+Neogpt assisted with this entry and the document rebuild. GitHub publication and anonymous downloads do not establish course-platform submission receipt, professor or teacher review, missing teammates' Stage 2 entries, authentic personal reflections or team-agreed contribution scores.
+
 ### 7 November — Stage 2 audit and revised tutorials (AI-assisted draft)
 
 Recorded personal action: I asked Neogpt to follow rules/Stage2_All_Instructions.md across the repository and to record the work. I supplied a new video direction: replace study-guide screenshots/page numbers with chapter and subtopic citations, use a story hook, make the existing palette more vibrant, and use readable dynamic motion with sound effects below the narration.
