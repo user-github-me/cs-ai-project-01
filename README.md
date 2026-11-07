@@ -4,18 +4,20 @@ A six-chapter learning module for the CS & AI course. Start with the chapter mat
 
 The repository is **public**, as requested for the professor’s submitted link. The current Stage 2 materials are listed below. Earlier presentation drafts and first-edition tutorials remain available as historical work.
 
-**Play [ROVERLAB: Build, Connect, Train](https://roverlab-blue-impulse.vercel.app)** — assemble a machine, connect its network, train its responses and test a mission. The game runs on Vercel's Hobby plan, with GitHub updates deploying automatically. [Game source and setup](apps/roverlab/README.md) · [guided learning activity](content/supporting/ROVERLAB_Activity.md).
+**Play [ROVERLAB: Build, Connect, Train](https://roverlab-blue-impulse.vercel.app)** — assemble a machine, connect its network, train its responses and test a mission. The game runs on Vercel's Hobby plan, with GitHub updates deploying automatically. [Game source and setup](apps/roverlab/README.md) · [guided learning activity](assets/tutorials/stage2/supporting/ROVERLAB_Activity.md).
 
 ## Current Stage 2 materials
 
+The chapter files in `content/` have been restored at Nazif’s request. The study guide, Test Bank, slides, videos and published packages remain the previously generated editions and may differ from the restored source. See [what was reverted](project-log/CHAPTER_ROLLBACK.md).
+
 | Material | Open here | Contents |
 | --- | --- | --- |
-| Complete Markdown | [Chapter index](content/README.md) · [full content](content/BlueImpulse_Complete_Content_V2.md) | Six chapters, 67 topics, worked examples, exercises and explained answers. |
+| Chapter source | [Original chapter files](content/) | Team versions restored before the Stage 2 rewrite; Safa’s newer chapter restorations are preserved. |
 | Study guide | [Complete PDF](assets/study-guide/BlueImpulse_Study_Guide.pdf) | 123 pages; original artwork and teaching sequence, guided missions and feedback. |
 | Test Bank | [Editable Word](assets/study-guide/BlueImpulse_Stage2_TestBank_V1.docx) · [PDF](assets/study-guide/BlueImpulse_Stage2_TestBank_V1.pdf) | 24 True/False, 24 single-choice and six open-response questions, with explained answers. |
 | Teaching slides | [PPTX and supporting materials](assets/presentations/stage2-teaching/README.md) | 63 editable slides across all six chapters, native presenter notes and 15 audience tasks. |
 | Tutorials | [Videos, PDFs and scripts](assets/tutorials/stage2/README.md) | Five ten-minute MP4s at 1080p/60 fps, chapter/subtopic citations, narrated demonstrations, captions, tutorial PDFs, full scripts and [clean recording copies](assets/tutorials/stage2/recording-scripts/README.md). |
-| Runnable examples | [Python and checked outputs](content/supporting/README.md) | Q-learning, pipelines, network delay, message validation and a toy CPU. |
+| Runnable examples | [Python and checked outputs](assets/tutorials/stage2/supporting/README.md) | Q-learning, pipelines, network delay, message validation and a toy CPU. |
 | Interactive game | [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) · [source / ZIP / instructions](apps/roverlab/README.md) | Three playable machines and missions, hardware/network/rule checks, animated playback, scoring, local saves and offline support. |
 | Project log | [Word](project-log/BlueImpulse_Stage2_ProjectLog.docx) · [PDF](project-log/BlueImpulse_Stage2_ProjectLog.pdf) | Dated Stage 2 work, meeting evidence, AI use and contribution records. |
 | Personal logs | [Individual Markdown](Personal_logs/) · [combined Word](private-submissions/stage2/BlueImpulse_Stage2_PersonalLogs.docx) · [combined PDF](private-submissions/stage2/BlueImpulse_Stage2_PersonalLogs.pdf) | Authentic available entries; missing member writing is identified. |

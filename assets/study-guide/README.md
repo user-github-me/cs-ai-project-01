@@ -17,11 +17,11 @@ The active learning and feedback section begins on page 97. Bookmarks navigate e
 
 The original cover and all six chapter dividers are preserved as PDF pages without overlays. The original art's printed labels identify its cover on page 16 and dividers on pages 17–22. Existing window panels, diagrams and photographs retain the supplied artwork and font brief. The user-created `BlueImpulse_Study_Guide_compressed.pdf` has not been modified by this revision.
 
-**Interactive companion:** [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) · [guided experiment](../../content/supporting/ROVERLAB_Activity.md) · [source and offline setup](../../apps/roverlab/README.md). The complete guide includes the experiment and paper alternative.
+**Interactive companion:** [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) · [guided experiment](../../assets/tutorials/stage2/supporting/ROVERLAB_Activity.md) · [source and offline setup](../../apps/roverlab/README.md). The complete guide includes the experiment and paper alternative.
 
 ## Source, review and remaining human evidence
 
-[Complete Markdown V2](../../content/README.md) contains all 67 developed topics, 67 application checkpoints with feedback, six missions, 65 exercises and answers, glossaries and full resource introductions. [Review status](../../content/REVIEW.md) distinguishes completed automated/AI-assisted checks from the mandatory independent teammate attempts that are still pending. No human test, feedback, contribution or reflection has been invented.
+The [chapter source](../../content/) was restored to the team’s earlier versions at Nazif’s request. This PDF and the [retained Markdown submission snapshot](../../submissions/stage2/markdown/source-snapshot/content/README.md) still represent the expanded edition generated before that rollback. Their content can differ from the current chapter files. [Rollback details](../../project-log/CHAPTER_ROLLBACK.md) record the scope; independent human review remains pending.
 
 The six supplied chapter PDFs define scope. Their notes credit *Cambridge International AS & A Level Computer Science* but do not identify a full edition or bibliography; this provenance limitation is explicit. Six traceable references and optional learning resources support the revision, including Sutton and Barto, Nand to Tetris, IETF RFCs, NIST and Unicode. Each resource has a relevant section, a task, limitations and an offline alternative. User-supplied artwork retains its own third-party rights.
 
@@ -39,6 +39,6 @@ On macOS, with Avenir, Arial Unicode and DIN Condensed installed:
 /private/tmp/blue-impulse-study-env/bin/python assets/study-guide/source/verify_stage2.py
 ```
 
-`build_guide.py` creates the original-art 96-page base. `build_stage2.py` builds the complete edition, Markdown snapshot/report, editable Test Bank and both submission ZIPs. It is safe to rerun: it retains the first 96 guide pages and replaces the generated appendix. The art extraction step in `prepare_assets.py` is only needed when rebuilding extracted artwork from the ignored original `temp contents/` files.
+`build_guide.py` creates the original-art 96-page base. `build_stage2.py` builds the complete edition, Markdown snapshot/report, editable Test Bank and both submission ZIPs. It also rewrites `content/`, so running it would recreate the chapter changes that Nazif asked to undo. The commands above document the earlier build; they are not a procedure for updating the restored team source. It retains the first 96 guide pages and replaces the generated appendix. The art extraction step in `prepare_assets.py` is only needed when rebuilding extracted artwork from the ignored original `temp contents/` files.
 
 `manifest.json` records the complete PDF hash and stable original topic pages; `source/page-map.json` and `layout-audit.json` describe the original core pages. `source/verification.json` checks the complete guide, including the unchanged artwork and 65 answers. `source/stage2-review/` holds PDF, code, resource and package evidence. Revised video references use chapter number, chapter name and subtopic, so they do not depend on pagination.

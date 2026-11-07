@@ -79,7 +79,7 @@ What I did:
 - I asked to see the changes before they are pushed to GitHub. I also clarified that the professor needs the finished videos, not the HyperFrames/HTML video production projects. Neogpt kept the production projects locally and excluded them from the next GitHub revision, while retaining the finished MP4s, requested PDFs, scripts, subtitles and learning examples for publication.
 - The project and personal-log documents distinguish actual available records from missing teammate entries, personal learning reflections, agreed contribution scores, rehearsal and learner-review evidence. My own reflection and the team's reviews still need to be supplied by the people involved.
 
-Evidence: [Stage 2 output index](../submissions/stage2/README.md), [tutorial documents](../assets/tutorials/stage2/README.md), [chapter review](../content/REVIEW.md), and [project log](../project-log/BlueImpulse_Stage2_ProjectLog.pdf). Neogpt assisted with this entry; it records the requests and observed production work rather than inventing personal learning.
+Evidence: [Stage 2 output index](../submissions/stage2/README.md), [tutorial documents](../assets/tutorials/stage2/README.md), [chapter review](https://github.com/user-github-me/cs-ai-project-01/blob/32b112f/content/REVIEW.md), and [project log](../project-log/BlueImpulse_Stage2_ProjectLog.pdf). Neogpt assisted with this entry; it records the requests and observed production work rather than inventing personal learning.
 
 ### Finished tutorial outputs — 7 November 2026
 
@@ -102,7 +102,7 @@ Evidence: [Stage 2 output index](../submissions/stage2/README.md), [tutorial doc
 - Neogpt configured the static Vercel project `roverlab-blue-impulse` in the `usergithubmes-projects` Hobby workspace. The initial manual deployment is live at [ROVERLAB](https://roverlab-blue-impulse.vercel.app), and an anonymous HTTP request returned 200. The verified Git connection uses `user-github-me/cs-ai-project-01`, production branch `main`, root `apps/roverlab`, and output directory `public`.
 - At this entry, the new game revision had not yet been pushed, a Git-triggered deployment had not been verified, and the new source-release asset had not been published. Those outcomes must be recorded after they are observed. My own reflection, a student or teacher review, team-agreed contribution scores and course-channel submission evidence are not supplied by these production checks.
 
-Evidence: [application source and instructions](../apps/roverlab/README.md), [engine test record](../apps/roverlab/review/engine-report.md), [browser verification record](../apps/roverlab/review/qa-report.md), and [optional activity](../content/supporting/ROVERLAB_Activity.md). Neogpt assisted with this entry and the generated project/personal-log documents; the entry records my instructions and observed AI-assisted production, not invented independent work or learning.
+Evidence: [application source and instructions](../apps/roverlab/README.md), [engine test record](../apps/roverlab/review/engine-report.md), [browser verification record](../apps/roverlab/review/qa-report.md), and [optional activity](../assets/tutorials/stage2/supporting/ROVERLAB_Activity.md). Neogpt assisted with this entry and the generated project/personal-log documents; the entry records my instructions and observed AI-assisted production, not invented independent work or learning.
 
 
 ### Human voice recording scripts — 7 November 2026
@@ -120,3 +120,9 @@ The five existing MP4s still use the disclosed synthetic voice. Nazif has not ye
 - I have not yet supplied my own recordings. The released videos still use the disclosed synthetic narration; alignment, caption retiming and rerendering with my voice remain pending receipt of those files. The final publication entry and regenerated log documents will be uploaded as a follow-up; this entry does not claim that its own subsequent upload has already happened.
 
 Neogpt assisted with this entry and the document rebuild. GitHub publication and anonymous downloads do not establish course-platform submission receipt, professor or teacher review, missing teammates' Stage 2 entries, authentic personal reflections or team-agreed contribution scores.
+
+### Restore the team’s chapter files — 7 November 2026
+
+Nazif asked to rewind the chapter files and explicitly selected restoration of `content/` only. Neogpt restored 28 files byte-for-byte from `8ab3108` and preserved 15 newer files exactly as Safa had restored them in `fca207e`. Further teammate restorations arrived during the work, so the rollback was rebased on them before publishing. It removed the 17 files added under `content/` by the Stage 2 expansion. The earlier rewrite had replaced existing outcomes, glossaries and exercise wording as well as supplying new explanations, answers and activities; those original team-authored sections were not empty.
+
+The guide, Test Bank, slides, videos, clean recording scripts, game and released packages were retained. README navigation now points to retained supporting materials, and the earlier exports are clearly identified as preceding the source rollback. [The rollback report](../project-log/CHAPTER_ROLLBACK.md) records the file counts and preserved teammate work. This entry records the requested file restoration and AI assistance, not a new student learning reflection.

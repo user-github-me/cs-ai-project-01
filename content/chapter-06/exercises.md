@@ -1,33 +1,12 @@
-# Chapter 6 — Strengths & Limitations
+# Chapter 06: 
 
-## Exercises
+- 1-Explain how hardware constraints (such as thermal limits, power consumption, memory boundaries, and processing speed) limit the deployment of complex AI models on small embedded devices.
+- 2-Define scalability and interoperability, explaining why both are critical when expanding a local network to support hundreds of new IoT devices from different manufacturers.
+- 3-Define adaptive intelligence and explain how it allows an autonomous agent to perform effectively in unpredictable or changing environments.
+- 4-Compare predictive analytics with behavioral modeling in terms of how each technique uses historical data to inform future decisions or system actions.
+- 5-Explain the concept of resource optimization when balancing local hardware processing capabilities against network transmission costs.
+- 6-Define explainability (XAI) and discuss why behaviorist AI models (such as deep reinforcement learning agents) often struggle with explainability—creating the "black box" problem.
+- 7-Identify two security concerns and two ethical implications that arise when an autonomous network of smart devices makes high-stakes decisions without human oversight.
 
-Write reasoning, units and intermediate steps. All necessary concepts are explained in draft.md; the answer key is in solutions.md. The numbering preserves the source questions used throughout the guide.
 
-### Exercise 6.1
 
-Explain how thermal limits, power consumption, memory capacity and processing speed constrain complex AI models on small embedded devices.
-
-### Exercise 6.2
-
-Define scalability and interoperability. Explain why both matter when adding hundreds of IoT devices from different manufacturers.
-
-### Exercise 6.3
-
-Define adaptive intelligence and explain how it can help an agent respond to changing conditions, without assuming that adaptation guarantees success.
-
-### Exercise 6.4
-
-Compare predictive analytics and behavioural modelling in how they use evidence to inform future decisions or actions.
-
-### Exercise 6.5
-
-Explain resource optimisation when balancing local hardware processing against network transmission costs.
-
-### Exercise 6.6
-
-Define explainability and explain why some deep reinforcement-learning models are difficult to interpret.
-
-### Exercise 6.7
-
-Identify two security concerns and two ethical implications when a network of smart devices makes high-stakes decisions with limited human oversight.

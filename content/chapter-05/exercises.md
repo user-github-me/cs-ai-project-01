@@ -1,41 +1,15 @@
-# Chapter 5 — Applications
+# Chapter 05:
 
-## Exercises
+- 1-Define a Smart System and explain how it integrates physical hardware, network connectivity, and software into a unified workflow.
 
-Write reasoning, units and intermediate steps. All necessary concepts are explained in draft.md; the answer key is in solutions.md. The numbering preserves the source questions used throughout the guide.
+- 2-a) Define real-time processing and explain why low network latency and high-speed hardware are critical for systems like autonomous vehicle collision avoidance.
+- b) What is automation, and how does moving from human-operated control to fully automated smart systems alter operational efficiency and error rates?
 
-### Exercise 5.1
+- 3-a) Explain how a behaviorist AI system uses performance feedback or reward signals from its environment to modify its behavioral policy.
+- b) Describe the role of actuators in translating an AI model's computed decision into physical changes within the real world.
 
-Define a smart system and explain how it integrates physical hardware, network connectivity and software into one workflow.
+- 4-a) Define Human-AI interaction (HAI) and explain how it differs from traditional human-computer interaction (HCI).
+- b) Identify a major usability or safety challenge that occurs when a smart system's autonomous behavior lacks transparency, leaving the human user confused about its next action.
 
-### Exercise 5.2a
-
-Define real-time processing and explain why communication delay and hardware performance matter for tasks such as collision avoidance.
-
-### Exercise 5.2b
-
-What is automation, and how can moving from manual operation to automated systems change efficiency and error patterns?
-
-### Exercise 5.3a
-
-Explain how an RL-based system uses feedback or reward signals from its environment to update its behavioural policy or value estimates.
-
-### Exercise 5.3b
-
-Describe the role of actuators in translating a computed decision into a physical change.
-
-### Exercise 5.4a
-
-Define human-AI interaction and explain the additional challenges it introduces within human-computer interaction.
-
-### Exercise 5.4b
-
-Identify a usability or safety challenge that can occur when a smart system’s autonomous behaviour lacks transparency.
-
-### Exercise 5.5a
-
-Define ethical AI and discuss the challenges of maintaining transparency, fairness and accountability in smart systems.
-
-### Exercise 5.5b
-
-Identify one opportunity and one security or privacy risk associated with connecting everyday physical devices to networks.
+- 5-a) Define Ethical AI and discuss why transparency, fairness, and accountability are difficult to maintain in complex smart systems.
+- b) Identify one major opportunity (e.g., resource optimization in smart cities) and one major security/privacy risk associated with connecting everyday physical devices to public networks.

@@ -53,7 +53,7 @@
 - [x] Read and audit `rules/Stage2_All_Instructions.md`.
 - [x] Keep `temp contents/` ignored; keep personal logs tracked and restore the repository to public at Nazif’s explicit instruction.
 - [x] Verify the public repository responds without authentication (HTTP 200).
-- [x] Complete six chapter folders with 67 topics, examples, activities and 65 explained exercise answers.
+- [x] Produce the expanded chapter material for the earlier Stage 2 exports. The current `content/` files were subsequently restored at Nazif’s request; see the rollback entry below.
 - [x] Create the complete 118-page Markdown content PDF, report and source-snapshot ZIP.
 - [x] Extend the study guide to 123 pages while preserving the original cover and dividers.
 - [x] Create the balanced 54-question Test Bank in editable Word and PDF.
@@ -103,3 +103,12 @@ See [submission index](submissions/stage2/README.md) and [requirements/readiness
 
 - [x] Supply five clean narration PDFs and TXT files plus a ZIP; verify all 368 spoken cues.
 - [ ] Receive Nazif’s five audio recordings, retime visuals/captions and render new human-voice MP4s. Current videos retain their disclosed synthetic narration.
+
+## Chapter source rollback — 7 November 2026
+
+- [x] Restore `content/` to the pre-rewrite team versions, preserving all of Safa’s newer chapter restorations.
+- [x] Remove the 17 files added under `content/` by the Stage 2 rewrite.
+- [x] Verify all 43 remaining files against the selected Git versions and repair active navigation links.
+- [x] Preserve the generated guide, Test Bank, slides, videos, recording scripts, game and released packages.
+
+[Detailed changes and preserved teammate work](project-log/CHAPTER_ROLLBACK.md).
