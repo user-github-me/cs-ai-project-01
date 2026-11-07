@@ -1,24 +1,70 @@
 # Chapter 4 — Networking
 
-## Key terms
-
-| Term | Meaning |
-| --- | --- |
-| LAN / WAN / MAN / PAN | Local / wide-area / metropolitan / personal network scopes. |
-| Client / server / peer | Service requester / provider / participant that can perform both roles. |
-| Thin / thick client | Relies more on remote resources / performs substantial local work. |
-| Switch / router | Forwards local frames / forwards IP packets between networks. |
-| NIC / access point | A network interface / a wireless network access device. |
-| Protocol / stack | Communication rules / a layered organisation of those rules. |
-| Frame / IP packet | A link-layer unit / a routed Internet-layer unit. |
-| URL / DNS | A resource locator / a distributed name-resolution system. |
-| TCP / UDP | Ordered reliable byte-stream transport / datagram transport. |
-| Bandwidth / throughput | Link capacity / achieved successful transfer rate. |
-| Latency / jitter | Delay / variation in delay. |
-| Security / privacy / integrity | Protection / appropriate personal-data use / accuracy and resistance to alteration. |
-| Validation / verification | Checking rules / checking agreement with a source or expected copy. |
-| Plaintext / ciphertext | Readable original data / encrypted data. |
-| Symmetric / asymmetric | Shared-secret mechanisms / public–private key mechanisms. |
-| Signature / certificate | An authenticity-and-integrity check / an issuer-signed identity-to-key binding. |
-| TLS / SSL | Current secure-transport protocol family / obsolete predecessor. |
-| QKD | Key establishment using quantum communication with specific assumptions and infrastructure. |
+Chapter 4: 
+-	ARPAnet – Advanced Research Projects Agency Network.
+-	WAN – wide area network (network covering a very large geographical area).
+-	LAN – local area network (network covering a small area such as a single building).
+-	MAN – metropolitan area network (network which
+-s larger than a LAN but smaller than a WAN, which can cover several buildings in a single city, such as a university campus).
+-	File server – a server on a network where central files and other data are stored. They can be accessed by a user logged onto the network.
+-	Hub – hardware used to connect together a number of devices to form a LAN that directs incoming data packets to all devices on the network (LAN).
+-	Switch – hardware used to connect together a number of devices to form a LAN that directs incoming data packets to a specific destination address only.
+-	Router – device which enables data packets to be routed between different networks (for example, can join LANs to form a WAN).
+-	Modem – modulator demodulator. A device that converts digital data to analogue data (to be sent down a telephone wire); conversely it also converts analogue data to digital data (which a computer can process).
+-	WLAN – wireless LAN.
+-	(W)AP – (wireless) access point which allows a device
+to access a LAN without a wired connection.
+-	PAN – network that is centred around a person or their workspace.
+-	Client-server – network that uses separate dedicated servers and specific client workstations. All client computers are connected to the dedicated servers.
+-	Spread spectrum technology – wideband radio frequency with a range of 30 to 50 metres.
+-	Node – device connected to a network (it can be a computer, storage device or peripheral device).
+-	Peer-to-peer – network in which each node can share its files with all the other nodes. Each node has its own data and there is no central server.
+-	Thin client – device that needs access to the internet for it to work and depends on a more powerful computer for processing.
+-	Thick client – device which can work both off line and on line and is able to do some processing even if not connected to a network/internet.
+-	Packet – message/data sent over a network from node to node (packets include the address of the node sending the packet, the address of the packet recipient and the actual data.
+-	Cloud storage – method of data storage where data is stored on off-site servers.
+-	Data redundancy – situation in which the same data is stored on several servers in case of maintenance or repair. Wi-Fi – wireless connectivity that uses radio waves, microwaves. Implements IEEE 802.11 protocols.
+-	Bluetooth – wireless connectivity that uses radio waves in the 2.45 GHz frequency band.
+-	Spread spectrum frequency hopping – a method of transmitting radio signals in which a device picks one of 79 channels at random. If the chosen channel is already in use, it randomly chooses another channel. It has a range up to 100 metres.
+-	WPAN – wireless personal area network. A local wireless network which connects together devices in very close proximity (such as in a user’s house); typical devices would be a laptop, smartphone, tablet and printer. Twisted pair cable – type of cable in which two wires
+of a single circuit are twisted together. Several twisted pairs make up a single cable.
+-	Gateway :device that connects LANs which use different protocols.
+-	Repeater : device used to boost a signal on both wired and wireless networks.
+-	Repeating hubs : network devices which are a hybrid of hub and repeater unit.
+-	Bridge : device that connects LANs which use the same protocols.
+-	Softmodem : abbreviation for software modem; a software-based modem that uses minimal hardware. 
+-	NIC : network interface card. These cards allow devices to connect to a network/internet (usually associated with a MAC address set at the factory).
+-	Eavesdropper – a person who intercepts data being transmitted.
+- Plaintext – the original text/document/message before it is put through an encryption algorithm.
+- Ciphertext – the product when plaintext is put through an encryption algorithm.
+- Block cipher – the encryption of a number of contiguous bits in one go rather than one bit at a time.
+- Stream cipher – the encryption of bits in sequence as they arrive at the encryption algorithm.
+- Block chaining – form of encryption, in which the previous block of ciphertext is XORed with the block of
+plaintext and then encrypted thus preventing identical plaintext blocks producing identical ciphertext.
+- Symmetric encryption – encryption in which the same secret key is used to encrypt and decrypt messages. Key distribution problem – security issue inherent in symmetric encryption arising from the fact that, when sending the secret key to a recipient, there is the risk that the key can be intercepted by an eavesdropper/ hacker.
+- Asymmetric encryption – encryption that uses public keys (known to everyone) and private keys (secret keys). Public key – encryption/decryption key known to all users.
+- Private key – encryption/decryption key which is known only to a single user/computer.
+- Protocol – a set of rules governing communication across a network: the rules are agreed by both sender and recipient.
+- HTTP – hypertext transfer protocol.
+- Packet – a message/data is split up into smaller groups
+of bits for transmission over a network.
+- Segment (transport layer) – this is a unit of data (packet) associated with the transport layer protocols.
+- FTP – file transfer protocol.
+- SMTP – simple mail transfer protocol.
+- Push protocol – protocol used when sending emails, in which the client opens the connection to the server and keeps the connection active all the time, then uploads new emails to the server.
+- Binary file – a file that does not contain text only. The file is machine-readable but not human-readable.
+- MIME – multi-purpose internet mail extension. A protocol that allows email attachments containing media files as well as text to be sent.
+- POP – post office protocol.
+- IMAP – internet message access protocol. TCP – transmission control protocol.
+- Pull protocol – protocol used when receiving emails, in which the client periodically connects to a server
+- Host-to-host – a protocol used by TCP when communicating between two devices.
+- Host – a computer or device that can communicate with other computers or devices on a network.
+- BitTorrent – protocol used in peer-to-peer networks when sharing files between peers.
+- Peer – a client who is part of a peer-to-peer network/file sharing community.
+- Metadata – a set of data that describes and gives information about other data.
+- Pieces – splitting up of a file when using peer-to-peer file sharing.
+- Tracker – central server that stores details of all other computers in the swarm.
+- Swarm – connected peers (clients) that share a torrent/tracker.
+- Seed – a peer that has downloaded a file (or pieces of a file) and has then made it available to other peers in the swarm.
+- Leech – a peer with negative feedback from swarm members.
+- Lurker – user/client that downloads files but does not supply any new content to the community.
