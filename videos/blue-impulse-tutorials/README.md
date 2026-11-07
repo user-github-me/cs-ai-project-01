@@ -47,6 +47,8 @@ Rebuild and recheck the films after changing narration; new speech changes timin
 
 The tutorial PDFs are built with `source/build_tutorial_pdfs.py` using ReportLab, PyMuPDF, FontTools, Brotli, and Pillow. In the repository they are saved in `assets/tutorials/`. The main study guide's source and original artwork references are in `assets/study-guide/`; input files under `temp contents/` remain ignored by Git.
 
+Run `python3 source/build_script_pdfs.py` to build printable narration and teaching-outline PDFs in `assets/tutorials/scripts/`. Then run `python3 source/package_tutorial_documents.py` to collect the tutorial PDFs, script PDFs, and editable Markdown into `deliverables/BlueImpulse_Tutorial_Documents.zip` with a checksum. The [tutorial index](../../assets/tutorials/README.md) links every document and the GitHub download.
+
 The PDF builder accepts `--output /path/to/folder`; outside the repository its default is `generated-tutorials/` inside this project. Book references and measured narration must be checked again after changing the teaching content.
 
 ## Sources and teaching limits

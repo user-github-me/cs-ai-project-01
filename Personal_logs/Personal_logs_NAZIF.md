@@ -55,3 +55,9 @@ What I did:
 - I checked that the six-chapter study guide, all five tutorial videos, matching PDFs, narration scripts, teaching outlines, subtitles, supporting Python examples, and editable source files were available on GitHub.
 - I added a [GitHub release for the complete project deliverables](https://github.com/user-github-me/cs-ai-project-01/releases/tag/blue-impulse-delivery-2026-11-06), including the full tutorial ZIP and checksum, with separate study-guide and presentation downloads. I used a release asset for the ZIP because it exceeds GitHub's regular file-size limit.
 - I verified the presentation and ZIP file integrity, added download links to the repository documentation, and recorded these completed tasks in my personal log. I kept `temp contents/`, generated intermediates, and macOS metadata excluded from Git.
+
+### Tutorial PDFs, scripts, and teaching outlines — 7 November 2026
+
+- I organised the five existing tutorial PDFs and used Neogpt to prepare printable PDFs of each video's complete narration script and teaching outline, including learning objectives, timestamps, teaching steps, and study-guide page references.
+- I kept the editable Markdown scripts and outlines alongside the printable versions and checked that the narration and teaching sections were complete.
+- I created a separate tutorial-documents ZIP, added direct links for each video's materials, and uploaded the documents to GitHub so the team can download them together.

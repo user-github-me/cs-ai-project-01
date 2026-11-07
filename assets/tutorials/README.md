@@ -14,6 +14,20 @@ All five videos are 1080p at 30 fps, with narration, burned-in English subtitles
 
 Each 13-page PDF contains the complete explanation, timestamps, book excerpts, and practice questions. The [combined edition](BlueImpulse_All_Video_Tutorials.pdf) contains all five tutorials in 65 pages.
 
+## Scripts and teaching outlines
+
+Each script PDF contains the learning objectives, teaching steps, complete narration, section timestamps, and study-guide page references. The Markdown versions are editable.
+
+| Video | Script and teaching outline PDF | Editable narration | Editable teaching outline |
+|---|---|---|---|
+| 01 | [Reinforcement learning PDF](scripts/BlueImpulse_Video01_Basic_Reinforcement_Learning_Script_and_Teaching_Outline.pdf) | [Script](../../videos/blue-impulse-tutorials/scripts/BlueImpulse_Video01_Basic_Reinforcement_Learning_Narration.md) | [Outline](../../videos/blue-impulse-tutorials/scripts/BlueImpulse_Video01_Basic_Reinforcement_Learning_Teaching_Outline.md) |
+| 02 | [AI hardware PDF](scripts/BlueImpulse_Video02_How_Hardware_Enables_AI_Script_and_Teaching_Outline.pdf) | [Script](../../videos/blue-impulse-tutorials/scripts/BlueImpulse_Video02_How_Hardware_Enables_AI_Narration.md) | [Outline](../../videos/blue-impulse-tutorials/scripts/BlueImpulse_Video02_How_Hardware_Enables_AI_Teaching_Outline.md) |
+| 03 | [Network challenges PDF](scripts/BlueImpulse_Video03_Network_Challenges_Script_and_Teaching_Outline.pdf) | [Script](../../videos/blue-impulse-tutorials/scripts/BlueImpulse_Video03_Network_Challenges_Narration.md) | [Outline](../../videos/blue-impulse-tutorials/scripts/BlueImpulse_Video03_Network_Challenges_Teaching_Outline.md) |
+| 04 | [Networking for behaviorist AI PDF](scripts/BlueImpulse_Video04_Networking_for_Behaviorist_AI_Script_and_Teaching_Outline.pdf) | [Script](../../videos/blue-impulse-tutorials/scripts/BlueImpulse_Video04_Networking_for_Behaviorist_AI_Narration.md) | [Outline](../../videos/blue-impulse-tutorials/scripts/BlueImpulse_Video04_Networking_for_Behaviorist_AI_Teaching_Outline.md) |
+| 05 | [Program execution PDF](scripts/BlueImpulse_Video05_Program_Execution_Script_and_Teaching_Outline.pdf) | [Script](../../videos/blue-impulse-tutorials/scripts/BlueImpulse_Video05_Program_Execution_Narration.md) | [Outline](../../videos/blue-impulse-tutorials/scripts/BlueImpulse_Video05_Program_Execution_Teaching_Outline.md) |
+
+Download the [tutorial documents ZIP](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-delivery-2026-11-06/BlueImpulse_Tutorial_Documents.zip) for all tutorial PDFs, printable script/outline PDFs, and editable scripts in one small package. A [SHA-256 checksum](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-delivery-2026-11-06/BlueImpulse_Tutorial_Documents.sha256) is also available.
+
 The [editable project](../../videos/blue-impulse-tutorials/README.md) includes the measured narration, SRT/VTT subtitles, animated diagrams, source assets, and build instructions. The [supporting Python demonstrations](../../videos/blue-impulse-tutorials/supporting/README.md) reproduce the numerical examples without extra packages.
 
 Download the [complete tutorial ZIP](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-delivery-2026-11-06/BlueImpulse_Tutorial_Package.zip) and its [SHA-256 checksum](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-delivery-2026-11-06/BlueImpulse_Tutorial_Package.sha256) from the [GitHub release](https://github.com/user-github-me/cs-ai-project-01/releases/tag/blue-impulse-delivery-2026-11-06). The ZIP includes the MP4s, study guide, written tutorials, scripts, subtitles, supporting examples, editable source, and verification records. Its local copy remains in the ignored `deliverables/` directory.

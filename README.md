@@ -111,6 +111,7 @@ cs-ai-project-01/
     │   ├── README.md
     │   ├── BlueImpulse_All_Video_Tutorials.pdf
     │   ├── BlueImpulse_Video01_Basic_Reinforcement_Learning_Tutorial.pdf
+    │   ├── scripts/
     │   └── videos/
     │       ├── BlueImpulse_Video01_Basic_Reinforcement_Learning.mp4
     │       ├── BlueImpulse_Video02_How_Hardware_Enables_AI.mp4
@@ -142,7 +143,7 @@ cs-ai-project-01/
 - [drafts/](drafts/): Early ideas, outlines, research notes, and development plans. Stage 1 Markdown files are in [drafts/stage 1/](drafts/stage%201/).
 - [assets/](assets/): Images, diagrams, and reference material used in the chapters.
 - [Study guide](assets/study-guide/README.md): The complete six-chapter PDF, page overview, source files and page references for the companion tutorials.
-- [Video tutorials](assets/tutorials/README.md): Five narrated, subtitled MP4s lasting 8–10 minutes, with matching written tutorials, book excerpts, timestamps, and a combined PDF.
+- [Video tutorials](assets/tutorials/README.md): Five narrated, subtitled MP4s lasting 8–10 minutes, matching written tutorials, printable scripts and teaching outlines, editable Markdown, and a documents-only ZIP.
 - [Download the complete project deliverables](https://github.com/user-github-me/cs-ai-project-01/releases/tag/blue-impulse-delivery-2026-11-06): The full tutorial ZIP and checksum, study guide PDF, and Stage 2 PowerPoint.
 - [Editable video project](videos/blue-impulse-tutorials/README.md): Narration, subtitles, animated demonstrations, supporting Python, and rendering instructions for the five book tutorials.
 - [assets/presentations/slides-draft/](assets/presentations/slides-draft/): Draft presentations, including the [Blue Impulse Stage 1 status-report template](assets/presentations/slides-draft/BlueImpulse_Stage1_StatusReport.pptx). The template contains placeholders for the team to complete.
