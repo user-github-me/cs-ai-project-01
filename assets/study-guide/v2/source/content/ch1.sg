@@ -63,7 +63,7 @@ Status register: Records the outcome of an arithmetic or logic operation using f
 Flag: A single bit in the status register, e.g. N = 1 shows that a result is negative.
 Address bus: Carries memory addresses; unidirectional (one way only).
 Data bus: Carries data between processor, memory and input/output devices; bidirectional (both ways).
-Control bus: Carries signals from the control unit to all other components.
+Control bus: Carries control signals from the control unit to all other components, and status signals back (so it is bidirectional).
 Word: A group of bits treated as a single unit by the processor.
 Clock cycle: One pulse of the system clock; 3.5 GHz means 3.5 billion cycles every second.
 Overclocking: Running the system clock faster than the factory setting.
@@ -1476,9 +1476,7 @@ A games company is about to sell a finished game, and a student is learning to p
 @page Assembly and machine code
 @plane none
 
-Machine code is what the CPU executes. Each instruction has an **opcode** (*what to do*) and an **operand** (*what to use*: a number or a memory address). Binary is hard for people to write, so programmers use **assembly language**, where each opcode becomes a **mnemonic** such as LOAD or ADD, and **labels** can replace addresses.
-
-**Each assembly instruction becomes exactly one machine-code instruction** (one-to-one); a high-level statement often becomes many. Assembly is tied to one processor family's instruction set.
+Machine code is what the CPU executes. Each instruction has an **opcode** (*what to do*) and an **operand** (*what to use*: a number or a memory address). Binary is hard to write, so programmers use **assembly language**: each opcode becomes a **mnemonic** such as LOAD or ADD, and **labels** can replace addresses. **Each assembly instruction becomes exactly one machine-code instruction** (one-to-one), while a high-level statement often becomes many; assembly is tied to one processor family.
 
 @box dark | Our teaching instruction set
 | Mnemonic | Opcode | What it does |
@@ -1486,6 +1484,7 @@ Machine code is what the CPU executes. Each instruction has an **opcode** (*what
 | LOAD #n | 0001 | put the number n into ACC |
 | LOAD a | 0010 | copy the value stored at address a into ACC |
 | ADD #n | 0011 | add the number n to ACC |
+| ADD a | 1001 | add the value stored at address a to ACC |
 | SUB #n | 0100 | subtract the number n from ACC |
 | STORE a | 0101 | copy ACC into address a |
 | OUT | 0110 | output the value in ACC |

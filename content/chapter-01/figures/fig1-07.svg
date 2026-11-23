@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="596" height="68" viewBox="0 0 596 68" xmlns="http://www.w3.org/2000/svg" font-family="Avenir, 'Avenir Next', sans-serif"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#D9C9E8"/>
+<rect x="4" y="4" width="34" height="30" rx="4" fill="#FFFFFF" stroke="#2A2F5E" stroke-width="1"/>
+<rect x="41" y="4" width="34" height="30" rx="4" fill="#FFFFFF" stroke="#2A2F5E" stroke-width="1"/>
+<rect x="78" y="4" width="34" height="30" rx="4" fill="#FFFFFF" stroke="#2A2F5E" stroke-width="1"/>
+<rect x="115" y="4" width="34" height="30" rx="4" fill="#FFFFFF" stroke="#2A2F5E" stroke-width="1"/>
+<rect x="152" y="4" width="34" height="30" rx="4" fill="#FFFFFF" stroke="#2A2F5E" stroke-width="1"/>
+<line x1="6" y1="44" x2="184" y2="44" stroke="#466BAA" stroke-width="2"/>
+<line x1="6" y1="39" x2="6" y2="44" stroke="#466BAA" stroke-width="2"/>
+<line x1="184" y1="39" x2="184" y2="44" stroke="#466BAA" stroke-width="2"/>
+<text x="95" y="62" font-size="13" fill="#2A2F5E" text-anchor="middle" font-weight="800">5 white</text>
+<rect x="189" y="4" width="34" height="30" rx="4" fill="#466BAA"/>
+<rect x="226" y="4" width="34" height="30" rx="4" fill="#466BAA"/>
+<rect x="263" y="4" width="34" height="30" rx="4" fill="#466BAA"/>
+<rect x="300" y="4" width="34" height="30" rx="4" fill="#466BAA"/>
+<rect x="337" y="4" width="34" height="30" rx="4" fill="#466BAA"/>
+<rect x="374" y="4" width="34" height="30" rx="4" fill="#466BAA"/>
+<line x1="191" y1="44" x2="406" y2="44" stroke="#466BAA" stroke-width="2"/>
+<line x1="191" y1="39" x2="191" y2="44" stroke="#466BAA" stroke-width="2"/>
+<line x1="406" y1="39" x2="406" y2="44" stroke="#466BAA" stroke-width="2"/>
+<text x="298.5" y="62" font-size="13" fill="#2A2F5E" text-anchor="middle" font-weight="800">6 blue</text>
+<rect x="411" y="4" width="34" height="30" rx="4" fill="#FFFFFF" stroke="#2A2F5E" stroke-width="1"/>
+<rect x="448" y="4" width="34" height="30" rx="4" fill="#FFFFFF" stroke="#2A2F5E" stroke-width="1"/>
+<rect x="485" y="4" width="34" height="30" rx="4" fill="#FFFFFF" stroke="#2A2F5E" stroke-width="1"/>
+<rect x="522" y="4" width="34" height="30" rx="4" fill="#FFFFFF" stroke="#2A2F5E" stroke-width="1"/>
+<rect x="559" y="4" width="34" height="30" rx="4" fill="#FFFFFF" stroke="#2A2F5E" stroke-width="1"/>
+<line x1="413" y1="44" x2="591" y2="44" stroke="#466BAA" stroke-width="2"/>
+<line x1="413" y1="39" x2="413" y2="44" stroke="#466BAA" stroke-width="2"/>
+<line x1="591" y1="39" x2="591" y2="44" stroke="#466BAA" stroke-width="2"/>
+<text x="502" y="62" font-size="13" fill="#2A2F5E" text-anchor="middle" font-weight="800">5 white</text>
+</svg>

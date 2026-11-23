@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="160" viewBox="0 0 620 160" font-family="Avenir, 'Avenir Next', sans-serif" role="img" aria-label="A hub sends to every node; a switch sends only to B"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#D6E8F9"/>
+<defs><marker id="c4hubA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ED4D82"/></marker></defs>
+<g stroke="#ED4D82" stroke-width="3" marker-end="url(#c4hubA)"><line x1="150" y1="88" x2="193" y2="88"/><line x1="150" y1="88" x2="180.4" y2="118.4"/><line x1="150" y1="88" x2="150" y2="131"/><line x1="150" y1="88" x2="119.6" y2="118.4"/><line x1="150" y1="88" x2="119.6" y2="57.6"/><line x1="150" y1="88" x2="150" y2="45"/><line x1="150" y1="88" x2="180.4" y2="57.6"/><line x1="106" y1="88" x2="125" y2="88"/></g>
+<g stroke="#9DB8DA" stroke-width="2.5"><line x1="470" y1="88" x2="511" y2="129"/><line x1="470" y1="88" x2="470" y2="146"/><line x1="470" y1="88" x2="429" y2="129"/><line x1="470" y1="88" x2="429" y2="47"/><line x1="470" y1="88" x2="470" y2="30"/><line x1="470" y1="88" x2="511" y2="47"/></g>
+<g stroke="#ED4D82" stroke-width="3" marker-end="url(#c4hubA)"><line x1="426" y1="88" x2="445" y2="88"/><line x1="492" y1="88" x2="513" y2="88"/></g>
+<rect x="128" y="76" width="44" height="24" rx="4" fill="#163A73"/><rect x="448" y="76" width="44" height="24" rx="4" fill="#163A73"/>
+<g fill="#216ABF"><circle cx="191" cy="129" r="12"/><circle cx="150" cy="146" r="12"/><circle cx="109" cy="129" r="12"/><circle cx="109" cy="47" r="12"/><circle cx="150" cy="30" r="12"/><circle cx="191" cy="47" r="12"/><circle cx="511" cy="129" r="12"/><circle cx="470" cy="146" r="12"/><circle cx="429" cy="129" r="12"/><circle cx="429" cy="47" r="12"/><circle cx="470" cy="30" r="12"/><circle cx="511" cy="47" r="12"/></g>
+<g fill="#ED4D82"><circle cx="92" cy="88" r="12"/><circle cx="208" cy="88" r="12"/><circle cx="412" cy="88" r="12"/><circle cx="528" cy="88" r="12"/></g>
+<g font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle"><text x="150" y="92">Hub</text><text x="470" y="92">Switch</text>
+<text x="92" y="92">A</text><text x="208" y="92">B</text><text x="191" y="133">C</text><text x="150" y="150">D</text><text x="109" y="133">E</text><text x="109" y="51">F</text><text x="150" y="34">G</text><text x="191" y="51">H</text>
+<text x="412" y="92">A</text><text x="528" y="92">B</text><text x="511" y="133">C</text><text x="470" y="150">D</text><text x="429" y="133">E</text><text x="429" y="51">F</text><text x="470" y="34">G</text><text x="511" y="51">H</text></g>
+<g font-size="13" font-weight="800" fill="#1E5BAF"><text x="0" y="13">Hub: copies to every port</text><text x="330" y="13">Switch: only to B</text></g>
+</svg>

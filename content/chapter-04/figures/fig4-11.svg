@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="160" viewBox="0 0 620 160" font-family="Avenir, 'Avenir Next', sans-serif" role="img" aria-label="Four packets take two routes and are put back in order"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#D6E8F9"/>
+<g stroke="#163A73" stroke-width="2.5">
+<line x1="88" y1="82" x2="131" y2="82"/><line x1="150" y1="82" x2="300" y2="30"/><line x1="150" y1="82" x2="300" y2="134"/><line x1="300" y1="30" x2="450" y2="82"/><line x1="300" y1="134" x2="450" y2="82"/><line x1="300" y1="49" x2="300" y2="115"/><line x1="469" y1="82" x2="532" y2="82"/>
+</g>
+<rect x="4" y="62" width="84" height="40" rx="6" fill="#163A73"/><rect x="532" y="62" width="84" height="40" rx="6" fill="#163A73"/>
+<g fill="#216ABF"><circle cx="150" cy="82" r="19"/><circle cx="300" cy="30" r="19"/><circle cx="300" cy="134" r="19"/><circle cx="450" cy="82" r="19"/></g>
+<g fill="#ED4D82"><rect x="205" y="49.5" width="20" height="20" rx="4"/><rect x="375" y="49.5" width="20" height="20" rx="4"/></g>
+<g fill="#2EB8FF"><rect x="205" y="94.5" width="20" height="20" rx="4"/><rect x="375" y="94.5" width="20" height="20" rx="4"/></g>
+<g font-size="12.5" font-weight="800" fill="#fff" text-anchor="middle"><text x="46" y="87">Sender</text><text x="574" y="87">Receiver</text><text x="150" y="87">R1</text><text x="300" y="35">R2</text><text x="300" y="139">R3</text><text x="450" y="87">R4</text><text x="215" y="64">3</text><text x="385" y="64">1</text></g>
+<g font-size="12.5" font-weight="800" fill="#163A73" text-anchor="middle"><text x="215" y="109">4</text><text x="385" y="109">2</text></g>
+<g font-size="11.5" text-anchor="end"><text x="616" y="126" fill="#163A73">arrive: 1, 2, 4, 3</text><text x="616" y="142" fill="#ED4D82" font-weight="800">rebuilt: 1, 2, 3, 4</text></g>
+</svg>

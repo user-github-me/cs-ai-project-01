@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="116" viewBox="0 0 620 116" font-family="Avenir, 'Avenir Next', sans-serif" role="img" aria-label="A reserved path through telephone exchanges"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#D6E8F9"/>
+<g stroke="#9DB8DA" stroke-width="2.5"><line x1="170" y1="62" x2="310" y2="98"/><line x1="310" y1="98" x2="450" y2="62"/></g>
+<g stroke="#ED4D82" stroke-width="5"><line x1="90" y1="62" x2="530" y2="62"/></g>
+<rect x="4" y="45" width="86" height="34" rx="6" fill="#163A73"/><rect x="530" y="45" width="86" height="34" rx="6" fill="#163A73"/>
+<g fill="#216ABF"><circle cx="170" cy="62" r="18"/><circle cx="310" cy="62" r="18"/><circle cx="450" cy="62" r="18"/></g>
+<circle cx="310" cy="98" r="15" fill="#9DB8DA"/>
+<g font-size="12" font-weight="800" fill="#fff" text-anchor="middle"><text x="47" y="66">Caller</text><text x="573" y="66">Receiver</text><text x="170" y="66">A</text><text x="310" y="66">B</text><text x="450" y="66">C</text><text x="310" y="102">D</text></g>
+<text x="310" y="26" font-size="12" font-weight="800" fill="#ED4D82" text-anchor="middle">one circuit through exchanges A, B and C, reserved for the whole call</text>
+<text x="400" y="108" font-size="11" fill="#163A73">other links stay free for other calls</text>
+</svg>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="620" height="172" viewBox="0 0 620 172" xmlns="http://www.w3.org/2000/svg" font-family="Avenir, Avenir Next, sans-serif"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#483278"/>
+<path d="M44 36 Q80 6 116 36 Q80 66 44 36 Z" fill="#fff"/>
+<circle cx="80" cy="36" r="12" fill="#ED4D82"/>
+<circle cx="80" cy="36" r="5.5" fill="#35265E"/>
+<circle cx="84.5" cy="31.5" r="2.6" fill="#fff"/>
+<path d="M197 36 C209 16 221 56 233 36 C245 16 257 56 269 36" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+<path d="M233 36 L246 58 M221 45 L212 60" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<circle cx="197" cy="36" r="6.5" fill="#EC9C6B"/>
+<circle cx="269" cy="36" r="6.5" fill="#EC9C6B"/>
+<path d="M362 50 C350 49 348 32 360 29 C358 16 374 10 384 18 C392 9 410 13 410 26 C422 28 424 46 412 49 C410 60 392 63 386 55 C378 63 364 60 362 50 Z" fill="#D9C9E8" stroke="#fff" stroke-width="2.5"/>
+<path d="M386 19 C379 30 393 40 386 55 M364 37 C371 31 377 41 384 36 M392 31 C399 26 404 36 410 31" fill="none" stroke="#483278" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M506 60 H550 L557 26" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="527" cy="49" rx="19" ry="13" fill="#fff"/>
+<path d="M515 51 Q526 41 538 49" fill="none" stroke="#483278" stroke-width="2.2" stroke-linecap="round"/>
+<rect x="546" y="6" width="23" height="20" rx="8" fill="#fff"/>
+<path d="M552 12 H563 M552 18 H563" stroke="#483278" stroke-width="1.8" stroke-linecap="round"/>
+<g font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle">
+<text x="80" y="86">Eyes, ears, skin</text>
+<text x="233" y="86">Nerves</text>
+<text x="386" y="86">Brain</text>
+<text x="539" y="86">Muscles</text>
+</g>
+<g fill="none" stroke="#EC9C6B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M80 93 V103 M75 98 L80 103 L85 98"/>
+<path d="M233 93 V103 M228 98 L233 103 L238 98"/>
+<path d="M386 93 V103 M381 98 L386 103 L391 98"/>
+<path d="M539 93 V103 M534 98 L539 103 L544 98"/>
+</g>
+<g fill="#D9C9E8">
+<rect x="15" y="109" width="130" height="30" rx="15"/>
+<rect x="168" y="109" width="130" height="30" rx="15"/>
+<rect x="321" y="109" width="130" height="30" rx="15"/>
+<rect x="474" y="109" width="130" height="30" rx="15"/>
+</g>
+<g font-size="13.5" font-weight="800" fill="#35265E" text-anchor="middle">
+<text x="80" y="129">Sensors</text>
+<text x="233" y="129">Network</text>
+<text x="386" y="129">AI processor</text>
+<text x="539" y="129">Actuators</text>
+</g>
+<g fill="none" stroke="#ED4D82" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M149 124 H163 M158 119 L163 124 L158 129"/>
+<path d="M302 124 H316 M311 119 L316 124 L311 129"/>
+<path d="M455 124 H469 M464 119 L469 124 L464 129"/>
+</g>
+<g font-size="11.5" fill="#fff" text-anchor="middle">
+<text x="80" y="160">camera, thermometer</text>
+<text x="233" y="160">Wi-Fi, 5G, cables</text>
+<text x="386" y="160">chooses the action</text>
+<text x="539" y="160">motors, valves, heaters</text>
+</g>
+</svg>

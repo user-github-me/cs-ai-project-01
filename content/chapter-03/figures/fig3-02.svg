@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640" height="214" viewBox="0 0 640 214" xmlns="http://www.w3.org/2000/svg" font-family="Avenir, sans-serif"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#77E0F5"/>
+<defs>
+<marker id="ch3-bus-d" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#0B3B57"/></marker>
+<marker id="ch3-bus-w" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#FFFFFF"/></marker>
+</defs>
+<rect x="0" y="0" width="640" height="214" rx="10" fill="#FFFFFF"/>
+<rect x="6" y="6" width="222" height="202" rx="10" fill="#0C5E86"/>
+<text x="18" y="29" font-size="16" font-weight="800" fill="#FFFFFF">CPU</text>
+<g font-size="14" font-weight="800" fill="#0B3B57" text-anchor="middle">
+<rect x="18" y="44" width="70" height="34" rx="6" fill="#FFFFFF"/><text x="53" y="66">PC</text>
+<rect x="140" y="44" width="74" height="34" rx="6" fill="#FFFFFF"/><text x="177" y="66">MAR</text>
+<rect x="18" y="104" width="70" height="34" rx="6" fill="#FFFFFF"/><text x="53" y="126">CIR</text>
+<rect x="140" y="104" width="74" height="34" rx="6" fill="#FFFFFF"/><text x="177" y="126">MDR</text>
+<rect x="18" y="164" width="70" height="34" rx="6" fill="#FFFFFF"/><text x="53" y="186">ACC</text>
+<rect x="140" y="164" width="74" height="34" rx="6" fill="#FFFFFF"/><text x="177" y="186">CU</text>
+</g>
+<g stroke="#FFFFFF" stroke-width="3">
+<line x1="90" y1="61" x2="134" y2="61" marker-end="url(#ch3-bus-w)"/>
+<line x1="138" y1="121" x2="94" y2="121" marker-end="url(#ch3-bus-w)"/>
+<line x1="146" y1="141" x2="86" y2="161" marker-start="url(#ch3-bus-w)" marker-end="url(#ch3-bus-w)"/>
+</g>
+<rect x="412" y="6" width="222" height="202" rx="10" fill="#2CABBE"/>
+<text x="424" y="29" font-size="15" font-weight="800" fill="#FFFFFF">Main memory (RAM)</text>
+<g font-size="12" font-weight="800" fill="#FFFFFF"><text x="432" y="50">Address</text><text x="520" y="50">Contents</text></g>
+<g font-size="13" fill="#0B3B57">
+<rect x="424" y="58" width="198" height="28" rx="5" fill="#FFFFFF"/><text x="440" y="77">20</text><text x="520" y="77">ADD 51</text>
+<rect x="424" y="92" width="198" height="28" rx="5" fill="#FFFFFF"/><text x="440" y="111">21</text><text x="520" y="111">STO 52</text>
+<rect x="424" y="126" width="198" height="28" rx="5" fill="#FFFFFF"/><text x="440" y="145">51</text><text x="520" y="145">7</text>
+<rect x="424" y="160" width="198" height="28" rx="5" fill="#FFFFFF"/><text x="440" y="179">52</text><text x="520" y="179">0</text>
+</g>
+<g stroke="#0B3B57" stroke-width="5">
+<line x1="232" y1="61" x2="404" y2="61" marker-end="url(#ch3-bus-d)"/>
+<line x1="236" y1="121" x2="404" y2="121" marker-start="url(#ch3-bus-d)" marker-end="url(#ch3-bus-d)"/>
+<line x1="236" y1="181" x2="404" y2="181" marker-start="url(#ch3-bus-d)" marker-end="url(#ch3-bus-d)"/>
+</g>
+<g font-size="13" font-weight="800" fill="#0B3B57" text-anchor="middle">
+<text x="320" y="50">Address bus</text><text x="320" y="110">Data bus</text><text x="320" y="170">Control bus</text>
+</g>
+<g font-size="11.5" fill="#0B3B57" text-anchor="middle">
+<text x="320" y="82">one-way: CPU to memory</text><text x="320" y="142">two-way: read and write</text><text x="320" y="202">two-way: control signals</text>
+</g>
+</svg>

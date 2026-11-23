@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="278" height="60" viewBox="0 0 278 60" xmlns="http://www.w3.org/2000/svg" font-family="Avenir, 'Avenir Next', sans-serif"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#E5D9E7"/>
+<rect x="0" y="0" width="33" height="22" rx="5" fill="#EAE6EE"/>
+<text x="16.5" y="15.5" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700">128</text>
+<rect x="0" y="26" width="33" height="32" rx="6" fill="#FFFFFF"/>
+<text x="16.5" y="48" font-size="17" fill="#2A2F5E" text-anchor="middle" font-weight="800" font-family="Menlo, monospace">0</text>
+<rect x="35" y="0" width="33" height="22" rx="5" fill="#EAE6EE"/>
+<text x="51.5" y="15.5" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700">64</text>
+<rect x="35" y="26" width="33" height="32" rx="6" fill="#FFFFFF"/>
+<text x="51.5" y="48" font-size="17" fill="#2A2F5E" text-anchor="middle" font-weight="800" font-family="Menlo, monospace">0</text>
+<rect x="70" y="0" width="33" height="22" rx="5" fill="#EAE6EE"/>
+<text x="86.5" y="15.5" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700">32</text>
+<rect x="70" y="26" width="33" height="32" rx="6" fill="#466BAA"/>
+<text x="86.5" y="48" font-size="17" fill="#FFFFFF" text-anchor="middle" font-weight="800" font-family="Menlo, monospace">1</text>
+<rect x="105" y="0" width="33" height="22" rx="5" fill="#EAE6EE"/>
+<text x="121.5" y="15.5" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700">16</text>
+<rect x="105" y="26" width="33" height="32" rx="6" fill="#FFFFFF"/>
+<text x="121.5" y="48" font-size="17" fill="#2A2F5E" text-anchor="middle" font-weight="800" font-family="Menlo, monospace">0</text>
+<rect x="140" y="0" width="33" height="22" rx="5" fill="#EAE6EE"/>
+<text x="156.5" y="15.5" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700">8</text>
+<rect x="140" y="26" width="33" height="32" rx="6" fill="#466BAA"/>
+<text x="156.5" y="48" font-size="17" fill="#FFFFFF" text-anchor="middle" font-weight="800" font-family="Menlo, monospace">1</text>
+<rect x="175" y="0" width="33" height="22" rx="5" fill="#EAE6EE"/>
+<text x="191.5" y="15.5" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700">4</text>
+<rect x="175" y="26" width="33" height="32" rx="6" fill="#466BAA"/>
+<text x="191.5" y="48" font-size="17" fill="#FFFFFF" text-anchor="middle" font-weight="800" font-family="Menlo, monospace">1</text>
+<rect x="210" y="0" width="33" height="22" rx="5" fill="#EAE6EE"/>
+<text x="226.5" y="15.5" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700">2</text>
+<rect x="210" y="26" width="33" height="32" rx="6" fill="#FFFFFF"/>
+<text x="226.5" y="48" font-size="17" fill="#2A2F5E" text-anchor="middle" font-weight="800" font-family="Menlo, monospace">0</text>
+<rect x="245" y="0" width="33" height="22" rx="5" fill="#EAE6EE"/>
+<text x="261.5" y="15.5" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700">1</text>
+<rect x="245" y="26" width="33" height="32" rx="6" fill="#466BAA"/>
+<text x="261.5" y="48" font-size="17" fill="#FFFFFF" text-anchor="middle" font-weight="800" font-family="Menlo, monospace">1</text>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="636" height="112" viewBox="0 0 636 112" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#E6E4E5"/>
+<rect x="28" y="4" width="384" height="78" rx="4" fill="#545454"/>
+<line x1="28" y1="30" x2="412" y2="30" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="12 9"/>
+<line x1="28" y1="56" x2="412" y2="56" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="12 9"/>
+<rect x="58" y="10" width="34" height="14" rx="5" fill="#AFC6F0"/><rect x="170" y="10" width="34" height="14" rx="5" fill="#F6F6F5"/><rect x="300" y="10" width="34" height="14" rx="5" fill="#8FB4F0"/>
+<rect x="110" y="36" width="34" height="14" rx="5" fill="#F6F6F5"/><rect x="250" y="36" width="34" height="14" rx="5" fill="#AFC6F0"/>
+<rect x="200" y="62" width="34" height="14" rx="5" fill="#8FB4F0"/>
+<g font-size="15" font-weight="800" fill="#042D62" text-anchor="middle"><text x="13" y="48">A</text><text x="426" y="48">B</text></g>
+<line x1="34" y1="92" x2="404" y2="92" stroke="#215096" stroke-width="2.5"/><path d="M404 86 L414 92 L404 98 Z" fill="#215096"/>
+<text x="220" y="109" font-size="11" fill="#1B2340" text-anchor="middle">one car's journey from A to B</text>
+<g font-size="12" fill="#1B2340"><text x="446" y="20"><tspan font-weight="800">Lanes = bandwidth</tspan></text><text x="446" y="35">maximum capacity</text><text x="446" y="56"><tspan font-weight="800">Cars arriving = throughput</tspan></text><text x="446" y="71">what actually gets through</text><text x="446" y="92"><tspan font-weight="800">Journey time = latency</tspan></text><text x="446" y="107">the delay, in ms</text></g>
+</svg>

@@ -1,1 +1,1116 @@
-put your draft here la!!!!!
+# Chapter 3 — Hardware
+
+> This is the complete Stage 2 (V2.0) chapter text. It is the same content as Chapter 3 of the [Blue Impulse Study Guide V2](../../assets/study-guide/v2/BlueImpulse_Study_Guide_V2.pdf), exported from `assets/study-guide/v2/source/content/ch3.sg`. Answers to every *Pause & Try* and *Practice* question are in [solutions.md](solutions.md). If you correct one copy, correct the other.
+
+## Learning goals
+
+Hardware is the physical side of computing: the devices that sense the world, the memory that holds data, the processors that do the work and the tiny logic circuits they are built from. In this chapter you will follow data from input devices and sensors, through memory and the CPU, to output devices and actuators, and then look inside the processor at pipelines, parallel processing and logic gates. The chapter ends by showing how all of this hardware makes artificial intelligence possible.
+
+You will learn about:
+
+- Differences between RAM, ROM, SRAM, DRAM, PROM and EPROM
+- The use of RAM, ROM, SRAM and DRAM in a range of devices
+- Monitoring and control systems
+- Sensors and actuators
+- The difference between RISC and CISC processors
+- The importance of pipelining and registers in RISC processors
+- SISD, SIMD, MISD, MIMD basic computer architecture
+- Characteristics of massively parallel computers
+- Interrupt handling on CISC and RISC computers
+- Basics of logic circuits
+- Truth tables in logic circuits
+- Simplification of logic circuits and expressions using Boolean algebra
+
+#### How this chapter is organised
+
+**3.1** (Input, processing and output hardware) → **3.2** (Computer memory and storage) → **3.3** (Processing devices and CPU architecture) → **3.4** (Parallel processing and computer systems) → **3.5** (Logic circuits and Boolean algebra) → **3.6** (How hardware enables AI)
+
+## Key terms
+
+- **Hardware:** The physical parts of a computer system that you can see and touch.
+- **Input device:** Captures data or instructions and sends them into a computer.
+- **Output device:** Presents results as images, sound, print or movement.
+- **Processing device:** Carries out instructions and calculations, e.g. a CPU.
+- **Screen resolution:** Pixels across × pixels down.
+- **Organic LED (OLED):** A display whose pixels give out their own light; no backlight is needed.
+- **Touchscreen:** A display that also senses touch.
+- **Capacitive touchscreen:** A finger changes the electric field on a charged glass layer.
+- **Resistive touchscreen:** Pressure pushes a plastic layer onto glass, completing a circuit.
+- **Virtual reality (VR) headset:** Goggles with a screen for each eye and motion sensors.
+- **Direct 3D printing:** A print head moving in x, y and z builds layers of melted material.
+- **Binder 3D printing:** Spreads a layer of dry powder, then sprays a binding agent onto it.
+- **Sensor:** An input device that measures a physical quantity, e.g. temperature.
+- **Actuator:** An output device that turns a signal into physical action, e.g. movement.
+- **Analogue-to-digital converter (ADC):** Turns an analogue signal into binary numbers.
+- **Digital-to-analogue converter (DAC):** Turns digital values into an analogue signal.
+- **Monitoring system:** Observes and records conditions without changing them.
+- **Control system:** Uses sensor data to drive actuators that change the conditions.
+- **Feedback:** The result of an action is measured and used to decide the next action.
+- **Embedded system:** A computer built into a larger device to do one dedicated job.
+- **Microcontroller:** One chip with a processor, memory and input/output pins.
+- **Primary storage:** Memory the CPU accesses directly: RAM, ROM and cache.
+- **Secondary storage:** Non-volatile, long-term storage that the CPU cannot access directly.
+- **Volatile memory:** Loses its data without power.
+- **Non-volatile memory:** Keeps its data without power.
+- **Random access memory (RAM):** Volatile primary memory that can be read and written.
+- **Read-only memory (ROM):** Non-volatile primary memory that is read but not normally changed.
+- **Static RAM (SRAM):** Stores bits in flip-flops; needs no refreshing; used for cache.
+- **Dynamic RAM (DRAM):** Stores bits as charge on capacitors; must be constantly refreshed.
+- **Refreshed:** Recharged regularly to keep its data.
+- **Cache memory:** Small, fast SRAM near the processor, holding data it will need again.
+- **Programmable ROM (PROM):** ROM bought blank that can be programmed only once.
+- **Erasable PROM (EPROM):** ROM that can be erased with ultraviolet light and reprogrammed.
+- **Electrically erasable PROM (EEPROM):** ROM erased and rewritten electrically, inside the circuit.
+- **Flash memory:** EEPROM erased in blocks; used in SSDs, memory cards and USB sticks.
+- **Hard disk drive (HDD):** Magnetic storage with spinning platters and moving read-write heads.
+- **Latency:** The lag in a system, e.g. waiting for a disk sector to reach the read-write head.
+- **Fragmented:** Stored in non-consecutive sectors, e.g. after editing and deleting data.
+- **Removable hard disk drive:** A portable HDD plugged in by USB, often used for back-ups.
+- **Solid-state drive (SSD):** Storage with no moving parts that keeps data in flash memory.
+
+## Key terms
+
+#### Key terms (continued)
+
+- **Optical storage:** CDs, DVDs and Blu-ray discs, read and written with laser light.
+- **Dual layering:** Two recording layers on one disc, nearly doubling its capacity.
+- **Birefringence:** A DVD reading problem: the laser light is refracted into two beams.
+- **Central processing unit (CPU):** The main processor; it fetches, decodes and executes instructions.
+- **Control unit (CU):** Decodes instructions and sends control signals to the other components.
+- **Arithmetic logic unit (ALU):** Carries out arithmetic and logic operations.
+- **Register:** A tiny, very fast storage location inside the CPU.
+- **Program counter (PC):** Holds the address of the next instruction to be fetched.
+- **Memory address register (MAR):** Holds the address of the memory location being read or written.
+- **Memory data register (MDR):** Holds data just read from memory, or about to be written to it.
+- **Current instruction register (CIR):** Holds the instruction being decoded and executed.
+- **Accumulator (ACC):** Holds the value being processed and the results from the ALU.
+- **Address bus:** Carries addresses from the CPU to memory and devices; one-way.
+- **Data bus:** Carries data and instructions between components; two-way.
+- **Control bus:** Carries signals such as read, write and interrupt requests; two-way.
+- **CISC:** Complex instruction set computer: many complex, variable-length instructions.
+- **RISC:** Reduced instruction set computer: few, simple, fixed-length instructions.
+- **Pipelining:** Overlapping the stages of several instructions to process them at the same time.
+- **Hazard:** Anything that stops the next instruction entering the pipeline on time.
+- **Interrupt:** A signal that asks the CPU to stop and deal with an event.
+- **Interrupt service routine (ISR):** The code the CPU runs to deal with an interrupt.
+- **Parallel processing:** Splitting a task so that different processors execute its parts at the same time.
+- **SISD:** Single instruction, single data: one processor, one data item at a time.
+- **SIMD:** Single instruction, multiple data: one instruction is applied to many data items at once.
+- **MISD:** Multiple instruction, single data: several processors work on the same data.
+- **MIMD:** Multiple instruction, multiple data: processors each run their own instructions on their own data.
+- **Cluster:** Several computers networked together to work as one resource.
+- **Supercomputer:** An extremely powerful computer with many processors, built for huge scientific calculations.
+- **Massively parallel computer:** Thousands of processors linked together to work as one machine.
+- **Logic gate:** A circuit that gives one binary output from one or more binary inputs.
+- **Truth table:** Shows the output for every possible combination of inputs.
+- **Logic circuit:** Logic gates connected so that the outputs of some become inputs of others.
+- **Boolean algebra:** The algebra of 1s and 0s, used to write and simplify logic expressions.
+- **AI hardware:** Processors, memory and accelerators that run AI tasks.
+- **Graphics processing unit (GPU):** A processor whose thousands of small cores work in parallel.
+- **Video RAM (VRAM):** Fast memory on a graphics card that holds the data the GPU is working on.
+- **AI accelerator (NPU, TPU):** A chip designed to speed up the maths of neural networks.
+- **Memory bandwidth:** How much data can move between memory and a processor each second.
+- **Edge AI:** Running an AI model on the device itself instead of in the cloud.
+
+## 3.1 Input, Processing and Output Hardware
+
+### What is hardware?
+
+**Hardware** is every physical part of a computer system: the parts you can see and touch, from the chips on a circuit board to the keyboard, the screen and the cables in between. **Software** is the set of programs that tells the hardware what to do. Each needs the other. A laptop without software is a box of silent electronics, and a program without hardware has nothing to run on.
+
+Every computer, from a games console to the controller in a washing machine, uses its hardware for the same four jobs: it takes data **in**, **processes** it, **stores** it and sends results **out**.
+
+**Input** (keyboard, microphone, sensor) → **Processing** (the CPU follows the program) → **Output** (screen, speaker, motor)
+
+#### The four jobs of hardware
+
+- **Input devices** capture data from people or the world: keyboard, camera, temperature sensor.
+- **Processing devices** carry out instructions and calculations: the CPU, a graphics processor (GPU), a microcontroller.
+- **Storage devices** keep programs and data: RAM while you work, an SSD for the long term.
+- **Output devices** present results or act on them: monitor, headphones, printer, motor.
+
+#### One device, many jobs
+
+A smartphone contains all four kinds:
+- touchscreen: **input** and **output**
+- camera, microphone, GPS: **input**
+- processor chip: **processing**
+- flash memory: **storage**
+- speaker, vibration motor: **output**
+
+Hardware is also either **internal**, inside the case (motherboard, processor, memory, power supply), or a **peripheral** connected from outside (mouse, printer, external drive) through ports such as USB and HDMI, which you met in Chapter 1.
+
+The hardware also sets the limits of what a computer can do: the processor decides how fast it works, the memory how much it can work on at once, and the storage how much it can keep. Better hardware runs the same program faster, but no hardware can do anything useful without a program to follow.
+
+> **Pause & Try 3.1**
+>
+> A smart speaker contains a microphone, a processor, flash memory, a loudspeaker and a ring of lights. Classify each part as input, processing, storage or output. Then explain why the speaker needs both hardware and software to answer a spoken question.
+
+### Input and Output
+
+An **input device** turns something from the outside world (a key press, a movement, a sound, light or a printed code) into digital data that the processor can use. An **output device** does the opposite: it turns digital data back into something people can see, hear or feel, or into a physical action. Look at a typical desk set-up and you can spot both kinds. Touchscreens and sensors are input devices too; you will meet them over the next pages.
+
+![In: keyboard, mouse and microphone. Out: monitor, speakers and headphones.](images/3-3-input-hardware.jpg)
+*In: keyboard, mouse and microphone. Out: monitor, speakers and headphones.*
+
+#### What every input device does
+
+1. **Detect** — a switch, light sensor or diaphragm reacts
+2. **Convert** — the reaction becomes an electrical signal
+3. **Digitise and send** — binary data travels to the computer, e.g. over USB
+
+#### Common input devices
+
+| Device | Captures | How it becomes data |
+|---|---|---|
+| Keyboard | key presses | each key closes a switch; a chip sends that key's code |
+| Mouse | movement, clicks | a light and a tiny camera track the desk surface to measure movement |
+| Microphone | sound | a thin diaphragm vibrates, making a changing voltage that an ADC samples |
+| Camera | light | millions of light-sensitive pixels each measure the light falling on them |
+| Barcode reader | printed codes | dark bars reflect less light; the pattern is decoded into a number |
+
+> **Pause & Try 3.2**
+>
+> At a supermarket self-checkout you scan each item, place it on a weighing scale, tap the screen and pay with a contactless card. List the input devices you use and say what data each one captures.
+
+### Output devices
+
+An **output device** converts the computer's digital results into light, sound, print or motion. The most common ones present information to people.
+
+#### Screens
+
+A screen is a grid of **pixels**; each pixel has red, green and blue parts that mix to make any colour. **Screen resolution** is the number of pixels across and down: a 1920 × 1080 (Full HD) screen has 1920 × 1080 = **2 073 600** pixels.
+- In an **LCD** screen, each pixel is a liquid-crystal cell that blocks or lets through light from a white **backlight** behind it. A little light always leaks through, so black looks dark grey.
+- In an **OLED** (organic LED) screen, each pixel **gives out its own light**. No backlight is needed, so the screen can be thinner, even flexible, and a black pixel is simply switched off: true black.
+
+#### Speakers and headphones
+
+Sound is stored as numbers, but a speaker needs a smoothly changing electric current:
+
+**Digital sound** (numbers) → **DAC** (to analogue) → **Amplifier** (stronger signal) → **Speaker** (coil moves a cone)
+
+The moving cone pushes the air back and forth, creating sound waves. **Headphones** work in the same way, with tiny speakers next to your ears so only you hear the sound.
+
+#### Printers
+
+- An **inkjet printer** fires tiny droplets of ink through nozzles onto the paper.
+- A **laser printer** uses a laser to draw the page as a pattern of static charge on a drum; powdered **toner** sticks to the charged areas and is melted onto the paper.
+- A **3D printer** builds a solid object layer by layer (next page).
+
+> **Pause & Try 3.3**
+>
+> A 4K screen has a resolution of 3840 × 2160. Calculate how many pixels it has, and how many times more that is than a 1920 × 1080 screen. Then explain why an OLED screen can show a deeper black than an LCD.
+
+### Touchscreens, VR and 3D printing
+
+Some devices do two jobs at once. A **touchscreen** is an output device (the display) and an input device (the touch sensor) in one. There are two main technologies.
+
+#### Capacitive or resistive?
+
+| | Capacitive | Resistive |
+|---|---|---|
+| How it detects a touch | a glass layer holds an electric charge; your finger changes the electric field at that point | pressing pushes a flexible plastic layer onto a glass layer, so their coatings touch and complete a circuit |
+| What can touch it | a bare finger or a special stylus; supports multi-touch | anything, even a gloved finger or a pen; usually one touch at a time |
+| Clarity and durability | very clear, tough glass | less clear; the plastic scratches |
+| Typical use | phones, tablets | factory controls, some medical equipment |
+
+#### VR headsets
+
+A **virtual reality headset** has a small screen for each eye, showing slightly different images so the scene looks 3D. Motion sensors (a gyroscope and an accelerometer) track your head, and the picture changes as you look around. The headset is **output** (screens, sound) and **input** (head and hand movements) at the same time.
+
+#### 3D printers
+
+A 3D printer builds a solid object **layer by layer** from a 3D design file.
+- **Direct 3D printing:** a print head moves in the x, y and z directions, pushing melted material out through nozzles to build each layer.
+- **Binder 3D printing:** two stages for every layer: spread a thin layer of dry powder, then spray a liquid **binding agent** where the object should be solid. At the end the loose powder is brushed away.
+
+> **Pause & Try 3.4**
+>
+> A hospital wants touchscreens that nurses can use while wearing gloves. Which touchscreen technology should it choose? Give one advantage and one disadvantage of your choice.
+
+### Sensors
+
+A **sensor** is an input device that measures a physical quantity, such as temperature, light, pressure or distance, and turns it into an electrical signal. Sensors are how a phone knows to dim its screen in the dark, or a car knows there is a wall behind it.
+
+#### Example: an ultrasonic distance sensor
+
+![T sends; R hears the echo.](images/3-3-input-hardware-sensor.jpg)
+*T sends; R hears the echo.*
+This sensor sends out a burst of sound at 40 kHz, too high for humans to hear, and times how long the echo takes to come back. The sound travels to the object **and back**, so distance = speed of sound × time ÷ 2.
+
+**Worked example:** the echo returns after 5.8 ms. At 343 m/s, distance = 343 × 0.0058 ÷ 2 ≈ **0.99 m**.
+
+#### Common sensors
+
+| Sensor | Example use |
+|---|---|
+| Temperature | central heating, greenhouses |
+| Light | street lights, screen brightness |
+| Pressure | burglar-alarm mats, tyres |
+| Moisture | greenhouses, irrigation |
+| Infrared (PIR): body heat | security lights, automatic doors |
+
+#### From sensor to binary: the ADC
+
+Most sensors produce an **analogue** signal: a voltage that can take any value in a range. An **analogue-to-digital converter (ADC)** measures it many times a second and turns each measurement into a binary number. An 8-bit ADC splits 0–5 V into 256 levels (0 to 255), so 3.0 V becomes 3.0 ÷ 5 × 255 = **153**, or 1001 1001. Some sensors have a built-in ADC.
+
+> **Pause & Try 3.5**
+>
+> A car's parking sensor hears the echo of its pulse 2.9 ms after sending it. Using 343 m/s for the speed of sound, calculate the distance to the wall. Then explain why an ADC is needed between a temperature sensor and a processor.
+
+### Actuators, monitoring and control
+
+An **actuator** is an output device that turns an electrical signal into physical action. **Motors** spin fans, wheels and pumps; **solenoids** push or pull a rod to open a valve or a door lock; **relays** let a small signal switch a large current, for example to a heater. The processor's own signal is far too weak to move anything: a **digital-to-analogue converter (DAC)** turns its digital values into a varying voltage (for example to set a motor's speed), and a driver circuit or relay supplies the larger current.
+
+#### Monitoring system
+
+Collects sensor readings and **displays, records or warns**, but does not change the conditions itself.
+- patient monitor in a hospital
+- weather station
+- burglar alarm
+
+#### Control system
+
+Uses sensor readings to **decide and act**, driving actuators that change the conditions.
+- central heating
+- greenhouse
+- traffic lights
+
+#### The feedback loop
+
+**Sensor** (reads 20 °C) → **ADC** (to binary) → **Processor** (checks rules) → **Actuator** (heater on) → **Greenhouse** (warms up) → *(back to the start)*
+
+#### Worked example: a greenhouse controller
+
+The program follows two rules: **if** the temperature is below 22 °C, switch the heater on; **if** it is above 27 °C, open the roof window. The loop repeats every few seconds, and each new reading is **feedback**: it shows the result of the last action.
+
+| Reading | Heater | Roof window |
+|---|---|---|
+| 20 °C | on | closed |
+| 24 °C | off | closed |
+| 29 °C | off | opened by a motor |
+
+> **Pause & Try 3.6**
+>
+> Outline a simple scenario for an automated environmental control system, such as a greenhouse or a smart thermostat. Specify the sensor used, the processing condition and the resulting actuator action.
+
+### Embedded systems
+
+An **embedded system** is a computer built into a larger device to do one dedicated job. You use dozens every day without noticing them: in washing machines, microwave ovens, digital cameras, smart thermostats, fitness bands and a car's engine and brakes. Unlike a laptop, an embedded system runs a single program, often for years, and you cannot install new software on it.
+
+Most embedded systems are built around a **microcontroller**: a single chip that contains a whole small computer.
+
+**Sensors** (door, water level, heat) → **Microcontroller** (CPU, RAM, ROM, I/O pins) → **Actuators** (valves, heater, motor)
+
+#### Inside a washing machine
+
+1. **Fill** — a valve opens until the water-level sensor reads full
+2. **Heat** — the heater stays on until the water reaches 40 °C
+3. **Wash** — the motor turns the drum back and forth
+4. **Drain and spin** — the pump empties the drum, then it spins fast
+
+The control program lives in the chip's **ROM or flash**, so it is ready the moment the power comes on. A little **SRAM** holds the chosen programme, the timer and the latest sensor readings.
+
+#### Benefits and drawbacks
+
+**Benefits**
+- small, light and cheap to mass-produce
+- uses very little power
+- starts instantly and responds in real time
+- reliable, because it does one job
+
+**Drawbacks**
+- hard or impossible to upgrade
+- limited memory and processing power
+- a fault often means replacing the whole board
+- "smart", connected devices can be hacked
+
+> **Pause & Try 3.7**
+>
+> Explain why a microwave oven uses an embedded microcontroller instead of a general-purpose computer. Give two benefits and one drawback.
+
+## 3.2 Computer Memory and Storage
+
+### Primary and secondary storage
+
+A computer keeps two kinds of things: the program and data it is working on **right now**, and everything it might need **later**. No single technology is fast, big and cheap enough to do both jobs, so computers use two kinds of storage.
+
+#### Primary storage
+
+**Primary storage** is memory the CPU can access **directly**: RAM, ROM and cache. It is very fast but small and expensive per byte, and most of it (RAM and cache) is **volatile**: it loses its contents when the power is switched off.
+
+#### Secondary storage
+
+**Secondary storage** keeps programs and files when the power is off: it is **non-volatile**. Hard disks, SSDs, USB flash drives, memory cards and optical discs are all secondary storage. The CPU **cannot access it directly**. When you open a game, its program is first copied from the SSD into RAM, and only then can the CPU run it.
+
+#### Primary and secondary storage compared
+
+| | Primary storage | Secondary storage |
+|---|---|---|
+| Examples | RAM, ROM, cache | HDD, SSD, flash drive, DVD |
+| Volatile? | RAM and cache: yes; ROM: no | no |
+| Access time | nanoseconds | microseconds to milliseconds |
+| CPU access | direct | only after copying into RAM |
+| Capacity and cost | gigabytes; expensive per GB | terabytes; cheap per GB |
+
+#### The memory hierarchy
+
+**Registers** (under 1 ns) → **Cache** (about 1–10 ns) → **RAM** (about 100 ns) → **SSD** (about 0.1 ms) → **Hard disk** (about 10 ms)
+
+The closer a memory is to the processor, the faster, smaller and more expensive it is. Reading from RAM (about 100 ns) is roughly **100 000 times** faster than waiting for a hard disk (about 10 ms).
+
+> **Pause & Try 3.8**
+>
+> Differentiate between primary storage and secondary storage in terms of volatility, speed and CPU accessibility.
+
+### RAM: SRAM and DRAM
+
+#### What RAM does
+
+![A RAM module.](images/3-2-ram.jpg)
+*A RAM module.*
+**Random access memory (RAM)** is the computer's working memory: it holds the operating system, the open programs and their data. "Random access" means the CPU can go straight to any location in the same short time. RAM can be **read from and written to**, and it is **volatile**: switch off without saving and your work is gone. A typical laptop has 8–32 GB; if the programs need more, data has to be swapped out to secondary storage, which is far slower.
+
+#### Two ways to build RAM
+
+#### Static RAM (SRAM)
+
+Each bit is held by a **flip-flop**: a tiny circuit of about six transistors that stays in one of two states while it has power. Nothing leaks away, so SRAM **never needs refreshing**.
+
+#### Dynamic RAM (DRAM)
+
+Each bit is a charge on a tiny **capacitor**, switched by one transistor. The charge leaks away, so every cell must be **refreshed** (read and recharged) about every 64 ms.
+
+#### SRAM and DRAM compared
+
+| | SRAM | DRAM |
+|---|---|---|
+| Stores a bit in | a flip-flop (about 6 transistors) | a capacitor and 1 transistor |
+| Refreshing | not needed | constantly, about every 64 ms |
+| Speed | very fast (a few ns) | slower (tens of ns) |
+| Cost and density | expensive; fewer bits per chip | cheap; many bits per chip |
+| Typical use | CPU cache | main memory |
+
+> **Pause & Try 3.9**
+>
+> Explain the structural difference between SRAM and DRAM in how they store data and in their need for refreshing. Which would you use for a CPU's cache, and why?
+
+### ROM, PROM, EPROM and flash
+
+#### What ROM does
+
+**Read-only memory (ROM)** is primary memory that is **non-volatile** and **not normally changed** while the device runs. It stores instructions that must be ready the instant the power comes on, such as the start-up firmware (BIOS or UEFI) that checks the hardware and loads the operating system, or the whole program of a microwave oven.
+
+#### From fixed to rewritable
+
+Ordinary ROM is fixed for ever when the chip is made. Engineers wanted ROM they could program themselves, and later change, so a family of types developed, from fixed for ever to rewritable inside the circuit.
+
+#### The ROM family
+
+| Type | How data is written | Can it be erased? | Typical use |
+|---|---|---|---|
+| ROM | built in during manufacture | no | toys, calculators |
+| PROM | bought blank; a programmer burns tiny fuses, once | no: one time only | fixed firmware, small batches |
+| EPROM | electrically, by a programmer | yes: by strong UV light through a quartz window, out of the circuit | developing and testing firmware |
+| EEPROM | electrically | yes: electrically, byte by byte, in the circuit | saved settings |
+| Flash | electrically | yes: electrically, in whole blocks | SSDs, USB sticks, BIOS chips |
+
+#### Flash: the ROM that became storage
+
+Erasing a whole block at once keeps each flash cell small and simple, so flash is cheap and dense enough to be used as storage, from memory cards to SSDs. It also shows that ROM is not always read-only: a PC's start-up firmware sits in a flash chip, so the maker can send an update and you can "flash the BIOS". It is still called ROM because the computer only reads it in normal use.
+
+> **Pause & Try 3.10**
+>
+> Contrast ROM, PROM and EPROM in terms of how data is written and erased.
+
+### Memory in everyday devices
+
+Almost every device uses the same building blocks in amounts that suit the job. Fast but expensive SRAM is used in small amounts where speed matters most; cheap, dense DRAM provides the large working memory; ROM and flash keep whatever must survive power-off.
+
+#### Where each type of memory is used
+
+| Device | RAM is used for | ROM or flash holds |
+|---|---|---|
+| Laptop or PC | 8–32 GB of **DRAM** for the OS and open programs; a few MB of **SRAM** cache in the CPU | **flash ROM**: the BIOS/UEFI start-up firmware |
+| Smartphone | several GB of low-power **DRAM** for apps; **SRAM** cache in the processor | **flash**: the operating system, apps and photos |
+| Washing machine or microwave | a few KB of **SRAM** in the microcontroller for the timer and readings | **ROM or flash**: the fixed control program |
+| Games console | fast **DRAM** shared by the CPU and GPU | **flash**: firmware and games |
+| Wi-Fi router | **DRAM** for data packets passing through | **flash**: firmware, settings |
+
+#### RAM, ROM, SRAM, DRAM, PROM and EPROM at a glance
+
+| Memory | Volatile? | Can the contents be changed? | Main use |
+|---|---|---|---|
+| RAM | yes | yes: read and write | working memory for programs in use |
+| SRAM | yes | yes: no refreshing needed | CPU cache |
+| DRAM | yes | yes: must be refreshed | main memory |
+| ROM | no | no: fixed when made | permanent start-up and device programs |
+| PROM | no | once only, after manufacture | fixed firmware in small batches |
+| EPROM | no | yes: after erasing with UV light | developing and updating firmware |
+
+> **Pause & Try 3.11**
+>
+> A smart thermostat contains a microcontroller. State which type of memory would store: a) its control program; b) the current temperature reading; c) the user's heating schedule, which must survive a power cut. Explain each choice.
+
+### Magnetic storage: hard disk drives
+
+A **hard disk drive (HDD)** stores data magnetically on **platters**: rigid discs coated with a magnetic material, spinning at a constant speed such as 7200 revolutions per minute (rpm). Each surface is divided into circular **tracks**, and each track into **sectors**. A **read-write head** on a moving arm floats just above the surface: to write, it magnetises tiny areas in one of two directions (0 or 1); to read, it senses those directions.
+
+#### Inside a hard disk
+
+![Inside a hard disk](figures/fig3-01.svg)
+
+#### Why a hard disk has to wait
+
+To read a sector, the drive must:
+1. move the head to the right track (the **seek time**);
+2. wait for the sector to spin round under the head (the **rotational latency**);
+3. read the data as it passes.
+
+**Worked example:** at 7200 rpm the platter turns 7200 ÷ 60 = 120 times a second, so one turn takes 1 ÷ 120 s ≈ 8.3 ms. On average the sector is half a turn away, so the latency is about **4.2 ms**: roughly 40 000 times longer than a RAM access.
+
+#### Fragmentation
+
+When files are edited and deleted, free space is left in scattered gaps, and a new file may be split across **non-consecutive sectors**: it becomes **fragmented**. The head must then jump between tracks to read it, adding seek time. A defragmentation utility (Chapter 1) moves the pieces back together.
+
+#### Strengths and weaknesses
+
+Hard disks are cheap per terabyte and come in huge capacities, so they suit servers and back-ups. A **removable hard disk** plugs in by USB when it is needed, which makes it a popular back-up device. But the moving parts make HDDs slower, noisier and more power-hungry than SSDs, and a drop can damage the head or platters.
+
+> **Pause & Try 3.12**
+>
+> A hard disk spins at 5400 rpm. Calculate the time for one revolution and the average rotational latency. Explain why a fragmented file takes longer to read.
+
+### Solid-state and optical storage
+
+#### Solid-state drives
+
+A **solid-state drive (SSD)** stores data in **flash memory** and has **no moving parts**. Each cell is a transistor that can trap electrons in an insulated "floating gate"; cells with and without trapped electrons stand for 0 and 1, and stay that way without power. With nothing to move or spin, an SSD finds data in about 0.1 ms, roughly 100 times faster than a hard disk. USB sticks and memory cards use the same technology.
+
+#### SSD strengths
+
+- very fast start-up and file loading
+- silent, light and survives being dropped
+- uses less power, so batteries last longer
+
+#### SSD weaknesses
+
+- costs more per terabyte than an HDD
+- each block can only be erased a few thousand times, so the drive spreads its writes evenly
+
+#### Optical storage: CDs, DVDs and Blu-ray discs
+
+![Data sits on one long spiral track.](images/3-2-cd.jpg)
+*Data sits on one long spiral track.*
+An optical disc stores data along a spiral track of microscopic **pits** and flat **lands**. A laser shines on the spinning disc, and the changes in reflected light are read as 1s and 0s.
+
+**Dual layering:** a second recording layer, which the laser can focus on instead, nearly doubles the capacity. **Birefringence** is a DVD reading problem: the plastic splits the laser into two beams, causing read errors. Blu-ray keeps its data just 0.1 mm below the surface to reduce it.
+A shorter laser wavelength makes a smaller spot, so the pits can be smaller and closer together:
+
+| Disc | Laser | Capacity per layer |
+|---|---|---|
+| CD | infrared, 780 nm | 700 MB |
+| DVD | red, 650 nm | 4.7 GB |
+| Blu-ray | blue-violet, 405 nm | 25 GB |
+
+> **Pause & Try 3.13**
+>
+> Give an example of a secondary storage technology for each of the three main categories: magnetic, optical and solid-state (flash). For each one, describe a situation where it would be the best choice.
+
+## 3.3 Processing Devices and CPU Architecture
+
+### Inside the CPU
+
+A **processing device** carries out instructions and calculations. The most important one is the **central processing unit (CPU)**, the chip that runs every program on a computer. A modern CPU is a slab of silicon smaller than a postage stamp containing billions of transistors, sealed in a package that plugs into the motherboard.
+
+![A desktop CPU locked into its socket on the motherboard.](images/3-1-cpu.jpg)
+*A desktop CPU locked into its socket on the motherboard.*
+
+#### The main parts of a CPU
+
+- **Control unit (CU):** decodes instructions and sends control signals to the other parts.
+- **Arithmetic logic unit (ALU):** does arithmetic (add, subtract) and logic (AND, OR, compare).
+- **Registers:** tiny, ultra-fast storage inside the CPU.
+- **Cache:** fast SRAM on the chip for data needed again.
+- **Clock:** regular pulses that keep every step in time.
+
+#### How fast is fast?
+
+Clock speed is measured in hertz (pulses per second). A 3 GHz CPU receives 3 000 000 000 pulses every second, so one clock cycle lasts 1 ÷ (3 × 10<sup>9</sup>) s ≈ **0.33 nanoseconds**; in that time light travels only about 10 cm. Most CPUs also have several **cores**: complete processing units on one chip, each able to work on a different instruction at the same moment (section 3.4).
+
+#### Other processing devices
+
+- A **GPU** (graphics processing unit) has thousands of small cores for graphics and AI (section 3.6).
+- A **microcontroller** is a tiny, cheap processor with its own memory, inside embedded systems.
+- An **NPU** (neural processing unit) in phones and laptops is built to run AI models efficiently.
+
+> **Pause & Try 3.14**
+>
+> Name three main parts inside a CPU and describe the job of each. A CPU runs at 2.5 GHz: how long does one clock cycle last?
+
+### Registers
+
+A **register** is a tiny storage location inside the CPU. It holds one **word** (e.g. 64 bits) and can be read or written within a clock cycle, far faster than RAM. **General-purpose registers** hold whatever data a program is using; **special-purpose registers** each have a fixed job in the fetch–execute cycle (Chapter 1).
+
+#### The special-purpose registers
+
+| Register | What it holds |
+|---|---|
+| **PC**: program counter | the address of the **next** instruction to fetch |
+| **MAR**: memory address register | the address of the memory location being read from or written to |
+| **MDR**: memory data register | data or an instruction just read from memory, or about to be written to it |
+| **CIR**: current instruction register | the instruction being decoded and executed |
+| **ACC**: accumulator | the value being worked on, and the results from the ALU |
+
+Also: the **status register** holds flags such as "the last result was negative"; the **index register (IX)** holds a number added to an address to step through a list.
+
+#### Worked example: one instruction, step by step
+
+Address 20 holds the instruction **ADD 51** ("add the number at address 51 to the accumulator"); address 51 holds **7**. At the start PC = 20 and ACC = 5. The arrow ← means "is copied into".
+
+| Step | Register transfer | Result |
+|---|---|---|
+| 1 | MAR ← PC | MAR = 20 |
+| 2 | MDR ← contents of address 20 | MDR = ADD 51 |
+| 3 | PC ← PC + 1 | PC = 21, ready for the next instruction |
+| 4 | CIR ← MDR, then the CU decodes it | CIR = ADD 51 |
+| 5 | MAR ← 51, then MDR ← contents of address 51 | MDR = 7 |
+| 6 | ACC ← ACC + MDR (the ALU adds) | ACC = 5 + 7 = 12 |
+
+> **Pause & Try 3.15**
+>
+> State the function of the program counter (PC), the accumulator (ACC) and the memory data register (MDR) during the execution of an instruction.
+
+### Buses and their directions
+
+The CPU, memory and input/output (I/O) devices are linked by **buses**: sets of parallel wires, each wire carrying one bit at a time. A 64-bit data bus has 64 wires, so it can move 64 bits (8 bytes) at once. There are three **system buses**, and the direction in which each one carries signals matters.
+
+#### The three buses between the CPU and memory
+
+![The three buses between the CPU and memory](figures/fig3-02.svg)
+
+The white arrows inside the CPU are the register transfers from the previous page: PC → MAR, MDR → CIR and MDR ↔ ACC. The same three buses also link the CPU to the input and output devices.
+
+#### Address bus
+
+Carries the **address** of the location the CPU wants. Only the CPU sends addresses, so it is **unidirectional**: from the MAR to memory and I/O.
+
+#### Data bus
+
+Carries the **data and instructions**. Data travels into the CPU when reading and out when writing, so it is **bidirectional**.
+
+#### Control bus
+
+Carries **signals** such as "memory read", "memory write" and clock pulses, and interrupt requests back to the CPU, so it is **bidirectional**.
+
+**Bus width matters.** An address bus with n wires can carry 2<sup>n</sup> different addresses. A 32-bit address bus gives 2<sup>32</sup> = 4 294 967 296 addresses; with one byte at each address, that is 4 GiB. That is why old 32-bit computers could use at most 4 GiB of RAM.
+
+> **Pause & Try 3.16**
+>
+> Explain why the address bus is unidirectional but the data bus is bidirectional. How many memory locations can a 24-bit address bus address?
+
+## 3.4 Parallel Processing and Computer Systems
+
+### RISC and CISC processors
+
+Every processor understands a fixed list of machine-code instructions: its **instruction set**. A **CISC** (complex instruction set computer) offers many powerful instructions, so programs need fewer of them; a **RISC** (reduced instruction set computer) offers fewer, simpler instructions that each do one small step quickly.
+
+#### Worked example: multiply two numbers stored in memory
+
+**Task:** multiply the values at addresses 200 and 201, and store the result back at address 200.
+
+**CISC, one instruction:** `MULT 200, 201`. The hardware loads, multiplies and stores, taking several clock cycles.
+
+**RISC, four simple instructions:** `LOAD R1, 200` · `LOAD R2, 201` · `MUL R1, R2` · `STORE R1, 200`. Each is designed to take about one clock cycle.
+
+#### Comparing the two designs
+
+| Feature | CISC | RISC |
+|---|---|---|
+| Instructions | many, some very complex | fewer and simple |
+| Instruction length | variable | fixed, e.g. 32 bits |
+| Clock cycles per instruction | often several | usually one |
+| Memory access | many instructions use memory | only LOAD and STORE |
+| Registers | fewer | many general-purpose ones |
+| Control unit | microprogrammed | hard-wired |
+| Pipelining | harder | easier and more efficient |
+| Program length | shorter: more work for the hardware | longer: more work for the compiler |
+| Examples | Intel and AMD x86 chips in PCs | ARM chips in phones and Apple Macs |
+
+Neither design always wins. RISC chips are simpler and use less power, so almost every smartphone has one. Modern x86 chips blend the two, breaking complex instructions into simpler steps inside the chip.
+
+> **Pause & Try 3.17**
+>
+> Define the core difference between RISC and CISC architectures regarding instruction size and decoding complexity.
+
+### Pipelining: the laundry analogy
+
+Imagine you have three loads of laundry. Each load goes through three stages: **wash** (1 hour), **dry** (1 hour) and **fold** (1 hour). If you finish one load completely before starting the next, the washing machine stands idle while you dry and fold.
+
+#### One load at a time, or a pipeline?
+
+![One load at a time, or a pipeline?](figures/fig3-03.svg)
+
+**Without a pipeline:** 3 loads × 3 hours = **9 hours**. **With a pipeline:** as soon as load 1 moves to the dryer, load 2 goes into the washer. Once the pipeline is full, one load is finished **every hour**, so the total is 3 + (3 − 1) = **5 hours**. Each load still takes 3 hours from start to finish (its **latency**), but more loads are finished per hour (the **throughput** rises).
+
+#### The same idea inside a CPU
+
+Executing an instruction also happens in stages, and each stage uses a different part of the processor:
+
+**Fetch** (get the instruction) → **Decode** (work out what it means) → **Execute** (the ALU does the work) → **Write back** (store the result)
+
+A **pipelined** processor fetches the next instruction while the current one is being decoded, just as the washer takes a new load while the dryer is busy. One load is one instruction, each machine is one stage, and each hour is one clock cycle. With k stages, n instructions take k + (n − 1) clock cycles instead of n × k.
+
+> **Pause & Try 3.18**
+>
+> Using the laundry example, how long would 6 loads take with and without a pipeline? Explain the difference between latency and throughput.
+
+### Pipelining and registers in RISC
+
+RISC processors were designed with pipelining in mind. A typical RISC pipeline has five stages, each taking **one clock cycle**: instruction fetch (**IF**), instruction decode (**ID**), operand fetch (**OF**), instruction execute (**IE**) and write back (**WB**).
+
+#### Five instructions in a five-stage pipeline
+
+![Five instructions in a five-stage pipeline](figures/fig3-04.svg)
+
+In cycle 5 (dashed) all five stages are busy. Without pipelining, 5 instructions take 5 × 5 = 25 cycles; with it, 5 + (5 − 1) = **9 cycles**. For 100 instructions: 104 cycles instead of 500.
+
+#### Why RISC suits pipelining
+
+- **Fixed length:** the next instruction always starts in a known place.
+- **Simple instructions:** each stage takes one cycle, so the pipeline moves in step.
+- **Load/store:** only LOAD and STORE use slow memory.
+
+#### Why registers matter
+
+A RISC processor has many general-purpose registers (32 is common). Values stay **inside the CPU**, where any stage can use them in one cycle. Fewer trips to memory mean fewer delays, so the pipeline stays full.
+
+#### When the pipeline stalls
+
+A **hazard** stops the next instruction entering the pipeline on time: a **data hazard** (it needs a result not yet written back), a **control hazard** (after a branch, the instructions already fetched are wrong and are thrown away) or a **structural hazard** (two stages need the same hardware at once).
+
+> **Pause & Try 3.19**
+>
+> Explain the role of pipelining in executing instructions concurrently within a RISC processor, and name one hazard that can stall the pipeline.
+
+### Interrupt handling on CISC and RISC
+
+An **interrupt** is a signal from hardware (a key press, a printer that has run out of paper, a timer) or from software (an error such as dividing by zero) that asks the CPU to stop what it is doing and deal with an event. The CPU checks for interrupts at the end of every fetch–execute cycle.
+
+#### What happens when an interrupt arrives
+
+1. **Finish the current instruction, then check for interrupt signals**
+2. **Check the priority: a lower-priority interrupt has to wait**
+3. **Save the context: push the PC and other registers onto the stack**
+4. **Load the address of the interrupt service routine (ISR) into the PC**
+5. **Run the ISR to deal with the event**
+6. **Restore the saved registers from the stack and carry on**
+
+#### On a CISC processor
+
+One complex instruction can take **many clock cycles**, and the CPU normally lets it finish before responding, so the wait can be longer. A few very long instructions, such as copying a whole block of memory, can be paused part-way; the CPU must then save extra information so that it can restart them later.
+
+#### On a RISC processor
+
+Instructions are short, so the CPU can respond quickly. But the pipeline may hold up to five partly finished instructions. The usual solution is to **discard** them, except the one in the write-back stage, service the interrupt, then **restart** from the next instruction. Less often, the contents of all five stages are saved in registers so no work is lost.
+
+Some RISC processors keep a spare set of registers just for interrupt routines, so less has to be saved.
+
+> **Pause & Try 3.20**
+>
+> What is a hardware interrupt, and what happens, step by step, when the CPU receives one? Explain why a pipelined RISC processor needs an extra step.
+
+### SISD, SIMD, MISD and MIMD
+
+**Parallel processing** means splitting work so that different processors carry out parts of it **at the same time**. In 1966 Michael Flynn sorted computer architectures by two questions: how many **instruction streams** run at once, and how many **data streams** are processed at once?
+
+#### Flynn's four classes
+
+| | Single instruction stream | Multiple instruction streams |
+|---|---|---|
+| **Single data stream** | **SISD** | **MISD** |
+| **Multiple data streams** | **SIMD** | **MIMD** |
+
+#### SISD
+
+**Single instruction, single data.** One processor carries out one instruction on one data item at a time: the classic Von Neumann computer, such as an early single-core PC.
+
+#### SIMD
+
+**Single instruction, multiple data.** Many processing units carry out the **same** instruction on different data at the same moment. Ideal for images, sound and AI: GPUs and the vector units in modern CPUs work this way.
+
+#### MISD
+
+**Multiple instruction, single data.** Several processors carry out different instructions on the same data. It is rare: used where results must be cross-checked, e.g. some fault-tolerant flight-control computers.
+
+#### MIMD
+
+**Multiple instruction, multiple data.** Several processors each run their own instructions on their own data. Multi-core CPUs, clusters and supercomputers are MIMD.
+
+**Worked example.** Brightening a 1 000 000-pixel photo (add 20 to every pixel) takes an SISD processor one million ADD instructions; a SIMD unit that adds to 16 pixels at once needs 1 000 000 ÷ 16 = **62 500**.
+
+> **Pause & Try 3.21**
+>
+> Describe the difference between SIMD and MIMD, giving an example of each. To which class does a quad-core laptop running four different programs belong?
+
+### Massively parallel computers
+
+Some problems are too big for any single processor: forecasting the weather for a whole continent, simulating how a new medicine works in the body, or training a large AI model. They are tackled by splitting the work across many processors, from a few dozen to millions.
+
+#### Clusters
+
+A **cluster** is a number of ordinary computers (**nodes**) linked by a fast network so that they work as one resource. Each node is a complete computer, often with SIMD processors. Clusters are cheap to build and easy to expand: just add more nodes.
+
+#### Supercomputers
+
+A **supercomputer** is an extremely powerful system built for huge scientific and engineering calculations. The fastest ones contain millions of processor cores and carry out more than 10<sup>18</sup> calculations every second.
+
+#### Characteristics of massively parallel computers
+
+A **massively parallel computer** links thousands of processors together so that they effectively form one machine. Its main characteristics:
+- **thousands of processors** work on parts of the same problem at the same time (MIMD);
+- each processor usually has **its own memory** and works on its own share of the data;
+- the processors are joined by a **high-speed interconnect** and coordinate by **passing messages** to each other;
+- the software must **split the task** into parts that can run independently, then combine the results.
+
+#### The limits of parallel processing
+
+Adding processors only speeds up the part of a job that can be split. **Worked example:** a job takes 100 s on one processor; 90 s of it can be shared out, but 10 s must run in sequence. With 10 processors it takes 10 + 90 ÷ 10 = **19 s**: about 5 times faster, not 10 times. Even with a million processors it can never take less than 10 s. Passing messages between processors also costs time, so massively parallel computers suit problems that split into many independent pieces.
+
+> **Pause & Try 3.22**
+>
+> Describe two characteristics of massively parallel computers. A job takes 200 s on one processor, and 50 s of it cannot be split. How long would it take on 5 processors?
+
+## 3.5 Logic Circuits and Boolean Algebra
+
+### Logic gates: AND, OR and NOT
+
+Deep inside every CPU, the ALU and the control unit are built from **logic gates**. A logic gate is a tiny electronic circuit, made from a few transistors, that takes one or more binary inputs and produces one binary output. A high voltage stands for **1** (true) and a low voltage for **0** (false).
+
+To describe exactly what a gate does, we use a **truth table**: it lists **every** possible combination of inputs and the output for each one. With n inputs there are 2<sup>n</sup> combinations, so a gate with two inputs needs 4 rows.
+
+#### AND
+
+![AND](figures/fig3-05.svg)
+
+The output is 1 **only if both** inputs are 1.
+
+X = A AND B, written **A.B**
+
+*Example:* a car starts only if the key is turned AND the brake is pressed.
+
+| A | B | X |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+#### OR
+
+![OR](figures/fig3-06.svg)
+
+The output is 1 if **at least one** input is 1.
+
+X = A OR B, written **A + B**
+
+*Example:* a car's interior light comes on if the driver's door OR a passenger door is open.
+
+| A | B | X |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+#### NOT
+
+![NOT](figures/fig3-07.svg)
+
+The output is the **opposite** of the input. It has only one input.
+
+X = NOT A, written A̅
+
+*Example:* a night light is on when it is NOT light outside.
+
+| A | X |
+|---|---|
+| 0 | 1 |
+| 1 | 0 |
+
+**Reading the symbols:** inputs come in on the left and the output leaves on the right. AND has a flat back and a round front; OR has a curved back and a pointed front; NOT is a triangle with a small circle. That small circle always means "invert the output".
+
+> **Pause & Try 3.23**
+>
+> Draw or describe the logic gate symbols and write out the truth tables for the three basic operations: AND, OR and NOT.
+
+### NAND, NOR and XOR
+
+The next three gates are built by combining the first three. Remember the small circle on an output: it always means "followed by NOT".
+
+#### NAND (NOT AND)
+
+![NAND (NOT AND)](figures/fig3-08.svg)
+
+An AND gate followed by NOT: the output is 0 **only if both** inputs are 1.
+
+X = A̅.̅B̅
+
+| A | B | X |
+|---|---|---|
+| 0 | 0 | 1 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+#### NOR (NOT OR)
+
+![NOR (NOT OR)](figures/fig3-09.svg)
+
+An OR gate followed by NOT: the output is 1 **only if both** inputs are 0.
+
+X = A̅ ̅+̅ ̅B̅
+
+| A | B | X |
+|---|---|---|
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 0 |
+
+#### XOR (exclusive OR)
+
+![XOR (exclusive OR)](figures/fig3-10.svg)
+
+The output is 1 if the inputs are **different**.
+
+X = A ⊕ B
+
+*Example:* a stair light with a switch at the top and the bottom: flicking either switch changes the light.
+
+| A | B | X |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+#### Why these gates matter
+
+NAND and NOR are called **universal gates**: any logic circuit can be built from NAND gates alone, or from NOR gates alone. For example, joining both inputs of a NAND gate turns it into a NOT gate. Chip makers can therefore build complex circuits by repeating one simple design millions of times.
+
+XOR is how a computer adds. When the ALU adds two bits, the **sum** bit is A XOR B and the **carry** bit is A AND B: 1 + 1 = 10 in binary (sum 0, carry 1).
+
+> **Pause & Try 3.24**
+>
+> Write the truth tables for NAND and NOR from memory. Then use a truth table to show that a NAND gate with both of its inputs joined together behaves like a NOT gate.
+
+### Logic circuits
+
+A **logic circuit** joins several gates so that the output of one becomes an input of the next. You can design one in three steps: describe the problem in words, write it as a **logic expression**, then draw the **circuit**.
+
+#### From a problem to a circuit
+
+**The problem:** a greenhouse fan F must switch on when it is hot (T = 1) and the window is **not** open (W = 0), or whenever the humidity is high (H = 1).
+
+**Step 1: name the inputs and the output.** Inputs: T (too hot), W (window open), H (humidity high). Output: F (fan on).
+
+**Step 2: turn the words into an expression.** "and" becomes AND, "or" becomes OR, "not" becomes NOT:
+F = (T AND NOT W) OR H, written F = T.W̅ + H
+
+**Step 3: draw one gate for each operation**, working from the inputs towards the output:
+
+![From a problem to a circuit](figures/fig3-11.svg)
+
+#### Tracing one case through the circuit
+
+It is hot (T = 1), the window is shut (W = 0) and the air is dry (H = 0):
+
+**NOT gate** (NOT 0 = 1) → **AND gate** (1 AND 1 = 1) → **OR gate** (1 OR 0 = 1) → **Fan** (on)
+
+> **Pause & Try 3.25**
+>
+> Draw the logic circuit for X = (A AND B) OR (NOT C). Then trace the output when A = 1, B = 0 and C = 0.
+
+### Building a truth table
+
+A truth table shows how a circuit behaves for **every** possible input. Let's build one for the greenhouse fan circuit, F = T.W̅ + H, one column at a time.
+
+#### Step by step
+
+**Step 1: count the rows.** There are 3 inputs, so there are 2<sup>3</sup> = **8** combinations.
+
+**Step 2: fill in the inputs.** Count in binary from 000 to 111. The H column alternates 0, 1; the W column goes in pairs; the T column is four 0s then four 1s. This way no combination is missed or repeated.
+
+**Step 3: add a column for each gate**, in the order the signal passes through them. First the NOT gate: flip every value in the W column to get W̅.
+
+**Step 4: the AND gate.** T.W̅ is 1 only in the rows where T = 1 **and** W̅ = 1.
+
+**Step 5: the OR gate.** F is 1 if T.W̅ is 1 **or** H is 1.
+
+**Step 6: read and check the result.** The fan is on in 5 of the 8 cases. Check one row against the words: in row 5 (hot, window shut, dry air) F = 1, just as the problem says.
+
+#### Truth table for F = T.W̅ + H
+
+| T W H | W̅ | T.W̅ | F |
+|---|---|---|---|
+| 0 0 0 | 1 | 0 | 0 |
+| 0 0 1 | 1 | 0 | 1 |
+| 0 1 0 | 0 | 0 | 0 |
+| 0 1 1 | 0 | 0 | 1 |
+| 1 0 0 | 1 | 1 | 1 |
+| 1 0 1 | 1 | 1 | 1 |
+| 1 1 0 | 0 | 0 | 0 |
+| 1 1 1 | 0 | 0 | 1 |
+
+Read each row from left to right: the inputs first, then each gate's output in turn, until you reach F.
+
+#### Three mistakes to avoid
+
+- **Missing rows:** n inputs always need 2<sup>n</sup> rows; counting in binary makes sure none is missed.
+- **Treating OR as addition:** in logic, 1 + 1 = 1, not 2.
+- **Wrong order:** work from the inputs to the output, brackets and NOT gates first.
+
+> **Pause & Try 3.26**
+>
+> Build a full truth table for X = (A AND B) OR (NOT C), with a column for each gate. In how many of the 8 rows is X = 1?
+
+### Boolean algebra
+
+**Boolean algebra** is the algebra of 1s and 0s. It lets you write any logic circuit as an expression and then **simplify** it: a simpler expression needs fewer gates, so the circuit is cheaper, faster and uses less power. **Notation:** A.B means A AND B; A + B means A OR B; A̅ means NOT A. Careful: + means OR, not addition, so 1 + 1 = 1.
+
+#### Laws you can use
+
+| Law | AND form | OR form |
+|---|---|---|
+| Identity | A.1 = A | A + 0 = A |
+| Null | A.0 = 0 | A + 1 = 1 |
+| Idempotent | A.A = A | A + A = A |
+| Inverse | A.A̅ = 0 | A + A̅ = 1 |
+| Absorption | A.(A + B) = A | A + A.B = A |
+| Distributive | A.(B + C) = A.B + A.C | A + B.C = (A + B).(A + C) |
+| De Morgan | A̅.̅B̅ = A̅ + B̅ | A̅ ̅+̅ ̅B̅ = A̅.B̅ |
+
+Also: NOT NOT A = A (double negation), and A.B = B.A, A + B = B + A (the order does not matter).
+
+#### Worked example: simplify X = A.B + A.B̅
+
+1. **Distributive law, take out the common factor A: X = A.(B + B̅)**
+2. **Inverse law, B + B̅ = 1: X = A.1**
+3. **Identity law, A.1 = A: X = A**
+
+**Check with a truth table:** for A B = 00, 01, 10 and 11 the original expression gives X = 0, 0, 1, 1: exactly the values of A. The original circuit needed two AND gates, a NOT gate and an OR gate; the simplified one is just a wire from A.
+
+> **Pause & Try 3.27**
+>
+> Simplify Z = A.B.C + A.B.C̅ using Boolean algebra, naming the law used at each step. Then check your answer with a truth table.
+
+## 3.6 How Hardware Enables AI
+
+### Software needs hardware
+
+#### An AI model is maths that has to run somewhere
+
+An AI model, such as one that recognises cats in photos, is a program plus millions or billions of numbers called **weights**, learned during training. Using the model means multiplying the input data by those weights, layer after layer, and every one of those calculations must be carried out by a processor using data held in memory. The hardware decides how big a model can be and how fast it answers.
+
+#### Who does what
+
+#### The hardware behind an AI model
+
+| Hardware | Its role in AI |
+|---|---|
+| **CPU** | runs the program, prepares the data and makes decisions: varied, step-by-step tasks |
+| **GPU** | thousands of small cores carry out the same maths on lots of data at once (SIMD style) |
+| **RAM** | holds the program and the data set while they are in use |
+| **VRAM** | the GPU's own fast memory: holds the model's weights and the data being processed |
+| **SSD** | stores data sets and trained models, and loads them quickly into memory |
+
+#### Matrix maths
+
+A network layer multiplies its inputs by a grid of weights called a **matrix**, then adds up the results.
+
+#### A tiny layer, worked out
+
+Two inputs, 2 and 3, feed two outputs. Output 1 has the weights 1 and 2: 2 × 1 + 3 × 2 = **8**. Output 2 has the weights 3 and −1: 2 × 3 + 3 × (−1) = **3**. No multiplication waits for another, so all four can be done at the same moment.
+
+A real layer with 1000 inputs and 1000 outputs needs 1000 × 1000 = **1 000 000** multiplications for every input example. Because they are independent, a GPU can carry out thousands of them at once, which is why GPUs train neural networks many times faster than CPUs.
+
+> **Pause & Try 3.28**
+>
+> Explain why a GPU is better suited than a CPU to training a neural network. Use the words "matrix", "parallel" and "cores" in your answer.
+
+### Memory, sensors and limits
+
+#### Memory bandwidth
+
+Capacity answers "does the model fit?"; **memory bandwidth** answers "how fast can the data move?". A language model with 7 billion weights, each stored in 2 bytes, needs 7 × 10<sup>9</sup> × 2 = **14 GB** of VRAM. To produce each word (or part of a word) it must read every weight once: at 1 TB/s that takes 14 GB ÷ 1000 GB/s = **14 ms**, so it can produce at most about 70 words a second, however fast its cores are. Often the processor is waiting for memory, not the other way round.
+
+#### Sensors and edge AI
+
+A robot or a phone senses the world through cameras, microphones, LiDAR and motion sensors. Running the model **on the device itself** is called **edge AI**: on many phones, face unlock runs on the phone's own neural processing unit. Edge AI responds quickly, works without a network and keeps data private, but the model must fit the device's small memory, battery and cooling. Every step from sensor to action takes time, and a delay anywhere slows the reaction:
+
+**Camera** (takes a frame) → **Memory** (holds it) → **NPU** (runs the model) → **CPU** (picks an action) → **Motor** (moves)
+
+#### Limits and accelerators
+
+More powerful hardware lets a model be bigger or faster, but it does not create the learning algorithm. Every chip is limited by heat, power use, memory and cost, so engineers build **accelerators** just for AI maths: Google's **TPUs** in data centres and **NPUs** in phones and laptops. Training a large model may need thousands of GPUs for weeks, but running the trained model (**inference**) can then happen on much smaller hardware.
+
+▶ **Video tutorial:** [Watch the tutorial: How hardware enables AI (Video 02)](https://github.com/user-github-me/cs-ai-project-01/blob/main/assets/tutorials/v2/BlueImpulse_v2_Video02_How_Hardware_Enables_AI.mp4)
+
+> **Pause & Try 3.29**
+>
+> Explain how memory capacity, memory bandwidth, power and heat limit running a large AI model on a small device such as a drone.
+
+## Practice
+
+#### Practice · Chapter 3
+
+1. Classify the following hardware components as input, output or storage devices, noting dual roles where they apply:
+    1. touchscreen display (consider both perspectives) [2 marks]
+    2. solid-state drive (SSD) [1 mark]
+    3. barcode reader [1 mark]
+2. Output devices
+    1. Explain why an OLED screen does not need a backlight. [1 mark]
+    2. Describe how a speaker produces sound from digital data, naming the component that converts the data into an analogue signal. [3 marks]
+3. Outline a simple scenario for an automated environmental control system, for example an automated greenhouse or a smart thermostat, specifying:
+    1. the sensor used [1 mark]
+    2. the processing threshold condition [1 mark]
+    3. the resulting actuator action [1 mark]
+4. A washing machine is controlled by an embedded microcontroller.
+    1. State what is meant by an embedded system. [1 mark]
+    2. Give two benefits and one drawback of using an embedded microcontroller in a washing machine. [3 marks]
+5. Storage classification
+    1. Differentiate between primary storage and secondary storage in terms of volatility, access speed and direct CPU accessibility. [3 marks]
+    2. Give one example of a secondary storage technology for each of the three main categories: magnetic, optical and solid-state (flash). [3 marks]
+6. Memory technologies
+    1. Explain the structural difference between SRAM (static RAM) and DRAM (dynamic RAM) regarding how data bits are stored and their need for periodic refreshing. [4 marks]
+    2. Contrast ROM (read-only memory) with PROM (programmable ROM) and EPROM (erasable programmable ROM) in terms of how data is written and erased. [4 marks]
+    3. A smartphone contains DRAM, SRAM and flash memory. State what each type of memory is used for in the phone. [3 marks]
+
+## Practice
+
+#### Practice · Chapter 3 (continued)
+
+7. Registers and buses
+    1. State the function of the following registers during the instruction cycle: program counter (PC), accumulator (ACC) and memory data register (MDR). [3 marks]
+    2. Explain why the address bus is unidirectional. [1 mark]
+    3. Calculate how many memory locations can be addressed using a 20-bit address bus. [1 mark]
+8. Processor design
+    1. Define the core difference between RISC (reduced instruction set computer) and CISC (complex instruction set computer) architectures regarding instruction size and decoding complexity. [3 marks]
+    2. Explain the role of pipelining in executing instructions concurrently within a RISC processor, and name one hazard that can stall the pipeline. [3 marks]
+9. What is a hardware interrupt, and what step-by-step sequence occurs at the machine-code level when an interrupt signal is received by the CPU? [4 marks]
+10. Parallel processing
+    1. Describe the difference between SIMD and MIMD architectures, giving an example of each. [4 marks]
+    2. Describe two characteristics of massively parallel computers. [2 marks]
+11. Draw or describe the logic gate symbols and write out the full truth tables for the three basic logic operations: AND, OR and NOT. [6 marks]
+12. A logic circuit has three inputs, A, B and C. Its output X is 1 when A is 1 and B is 0, or when B and C are both 1.
+    1. Write the Boolean expression for X. [1 mark]
+    2. Draw the logic circuit. [2 marks]
+    3. Complete the truth table for the circuit. [4 marks]
+13. Simplify Q = A.B.C + A.B.C̅ + A.B̅ using Boolean algebra, naming the law used at each step. [3 marks]
+14. Explain why a GPU with a large amount of VRAM is used to train neural networks, and give one reason why a phone might run an AI model on its own NPU instead of sending the data to the cloud. [4 marks]
+15. Calculations
+    1. An ultrasonic sensor's echo returns after 11.6 ms. Calculate the distance to the object (speed of sound 343 m/s). [2 marks]
+    2. A hard disk spins at 10 000 rpm. Calculate its average rotational latency. [2 marks]
+    3. A five-stage pipeline runs 20 instructions. Calculate the clock cycles needed with and without pipelining. [2 marks]
+    4. A 60 s job has 12 s that cannot be split. Calculate how long it takes on 4 processors. [2 marks]

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="232" viewBox="0 0 620 232" font-family="Avenir, 'Avenir Next', sans-serif" role="img" aria-label="A complete DNS lookup"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#D6E8F9"/>
+<defs><marker id="c4dnsA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#163A73"/></marker></defs>
+<g stroke="#163A73" stroke-width="2.5" fill="none">
+<line x1="140" y1="86" x2="234" y2="86" marker-end="url(#c4dnsA)"/>
+<line x1="236" y1="112" x2="142" y2="112" marker-end="url(#c4dnsA)"/>
+<line x1="380" y1="78" x2="462" y2="37" marker-start="url(#c4dnsA)" marker-end="url(#c4dnsA)"/>
+<line x1="380" y1="100" x2="462" y2="100" marker-start="url(#c4dnsA)" marker-end="url(#c4dnsA)"/>
+<line x1="380" y1="122" x2="462" y2="170" marker-start="url(#c4dnsA)" marker-end="url(#c4dnsA)"/>
+<line x1="73" y1="128" x2="73" y2="172" marker-end="url(#c4dnsA)"/>
+</g>
+<rect x="6" y="68" width="134" height="60" rx="8" fill="#163A73"/>
+<rect x="236" y="68" width="144" height="60" rx="8" fill="#2EB8FF"/>
+<rect x="464" y="8" width="150" height="48" rx="8" fill="#216ABF"/>
+<rect x="464" y="76" width="150" height="48" rx="8" fill="#216ABF"/>
+<rect x="464" y="146" width="150" height="62" rx="8" fill="#216ABF"/>
+<rect x="6" y="174" width="134" height="50" rx="8" fill="#163A73"/>
+<g text-anchor="middle" fill="#fff">
+<text x="73" y="93" font-size="12.5" font-weight="800">Your computer</text><text x="73" y="110" font-size="11">browser + OS cache</text>
+<text x="539" y="28" font-size="12.5" font-weight="800">Root server</text><text x="539" y="45" font-size="11">"ask the .org server"</text>
+<text x="539" y="96" font-size="12.5" font-weight="800">.org TLD server</text><text x="539" y="113" font-size="11">"ask example.org's server"</text>
+<text x="539" y="166" font-size="12" font-weight="800">Authoritative server</text><text x="539" y="182" font-size="11">for example.org</text><text x="539" y="198" font-size="11" font-weight="800">"203.0.113.25"</text>
+<text x="73" y="195" font-size="12.5" font-weight="800">Web server</text><text x="73" y="212" font-size="11">203.0.113.25</text>
+</g>
+<g text-anchor="middle" fill="#163A73"><text x="308" y="93" font-size="12.5" font-weight="800">Recursive resolver</text><text x="308" y="110" font-size="11">(your ISP or school)</text></g>
+<g font-size="11" fill="#163A73" text-anchor="middle"><text x="188" y="64">www.example.org?</text><text x="188" y="140">203.0.113.25</text></g>
+<g fill="#ED4D82" stroke="#fff" stroke-width="2"><circle cx="18" cy="68" r="10"/><circle cx="188" cy="86" r="10"/><circle cx="421" cy="57" r="10"/><circle cx="421" cy="100" r="10"/><circle cx="421" cy="146" r="10"/><circle cx="188" cy="112" r="10"/><circle cx="73" cy="150" r="10"/></g>
+<g font-size="12" font-weight="800" fill="#fff" text-anchor="middle"><text x="18" y="72">1</text><text x="188" y="90">2</text><text x="421" y="61">3</text><text x="421" y="104">4</text><text x="421" y="150">5</text><text x="188" y="116">6</text><text x="73" y="154">7</text></g>
+</svg>

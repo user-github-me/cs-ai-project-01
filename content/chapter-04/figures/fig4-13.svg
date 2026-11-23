@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="132" viewBox="0 0 620 132" font-family="Avenir, 'Avenir Next', sans-serif" role="img" aria-label="Alice sends polarised photons to Bob; Eve listening in changes them"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#D6E8F9"/>
+<defs><marker id="c4qkdA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2EB8FF"/></marker></defs>
+<line x1="94" y1="62" x2="522" y2="62" stroke="#2EB8FF" stroke-width="3" marker-end="url(#c4qkdA)"/>
+<line x1="330" y1="64" x2="330" y2="98" stroke="#ED4D82" stroke-width="2.5" stroke-dasharray="5 4"/>
+<rect x="4" y="40" width="90" height="44" rx="6" fill="#163A73"/><rect x="526" y="40" width="90" height="44" rx="6" fill="#163A73"/><rect x="290" y="98" width="80" height="30" rx="6" fill="#ED4D82"/>
+<g fill="#fff" stroke="#216ABF" stroke-width="2"><circle cx="150" cy="62" r="12"/><circle cx="210" cy="62" r="12"/><circle cx="270" cy="62" r="12"/><circle cx="390" cy="62" r="12"/><circle cx="450" cy="62" r="12"/></g>
+<g stroke="#ED4D82" stroke-width="2.5"><line x1="150" y1="54" x2="150" y2="70"/><line x1="202" y1="62" x2="218" y2="62"/><line x1="264.3" y1="67.7" x2="275.7" y2="56.3"/><line x1="384.3" y1="56.3" x2="395.7" y2="67.7"/><line x1="450" y1="54" x2="450" y2="70"/></g>
+<g font-size="13" font-weight="800" fill="#fff" text-anchor="middle"><text x="49" y="67">Alice</text><text x="571" y="67">Bob</text><text x="330" y="118">Eve</text></g>
+<text x="310" y="30" font-size="11.5" fill="#163A73" text-anchor="middle">single photons: each one's polarisation stands for a 0 or a 1</text>
+<text x="380" y="118" font-size="11.5" font-weight="800" fill="#ED4D82">measuring a photon changes it</text>
+</svg>

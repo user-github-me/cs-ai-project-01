@@ -366,7 +366,7 @@ In a **peer-to-peer (P2P)** network there is no central server. Every node, call
 - **Cryptocurrency networks** such as Bitcoin: thousands of peers each keep a copy of the record of payments.
 @end
 @box dark | How BitTorrent shares a file
-The file is split into small **pieces**. A **tracker** server keeps metadata, such as which computers are in the **swarm** (the peers sharing this torrent), but not the file itself. Each peer downloads pieces from several others while uploading the pieces it already has. A **seed** has the whole file and keeps uploading it; a **leech** downloads far more than it uploads and gets negative feedback; a **lurker** downloads but never adds new content.
+The file is split into small **pieces**. A **tracker** server keeps metadata, such as which computers are in the **swarm** (the peers sharing this torrent), but not the file itself. Each peer downloads pieces from several others while uploading the pieces it already has. A **seed** is a peer that has downloaded the file (usually all of it) and keeps uploading pieces to others; a **leech** downloads far more than it uploads and gets negative feedback; a **lurker** downloads but never adds new content.
 @end
 @endrow
 
@@ -1423,7 +1423,7 @@ First, a **hash function** turns a message of any length into a short, fixed-len
 @endrow
 
 @box alt | Why it works, with the toy keys
-Alice's toy key pair: public n = 33, e = 3; private d = 7. Her message hashes to **5**. She signs: 5<sup>7</sup> mod 33 = **14**, and sends the message with the signature 14. Bob checks: 14<sup>3</sup> mod 33 = **5**, which matches the hash he calculates himself, so the message is genuine. If Eve changes the message, its hash changes and no longer matches, and she cannot make a new signature without Alice's **private** key.
+Alice's toy key pair uses the same small numbers as Bob's, only to keep the arithmetic short (real key pairs are different for every person): public n = 33, e = 3; private d = 7. Her message hashes to **5**. She signs: 5<sup>7</sup> mod 33 = **14**, and sends the message with the signature 14. Bob checks: 14<sup>3</sup> mod 33 = **5**, which matches the hash he calculates himself, so the message is genuine. If Eve changes the message, its hash changes and no longer matches, and she cannot make a new signature without Alice's **private** key.
 
 A signature does not hide the message. To keep it secret as well, Alice also encrypts it with **Bob's** public key.
 @end
@@ -1543,7 +1543,7 @@ Explain how QKD lets Alice and Bob detect an eavesdropper. In a sample of 200 co
     2. Explain why Wi-Fi networks use collision avoidance (CSMA/CA) instead of collision detection. [2 marks]
 3. Web infrastructure and addressing
     1. Break down the distinct parts of a uniform resource locator (URL) (e.g. protocol, domain, path) and explain how it locates a specific resource. [3 marks]
-    2. Describe the step-by-step role of the Domain Name Service (DNS) when translating a human-readable URL into an IP address. [4 marks]
+    2. Describe the step-by-step role of the Domain Name Service (DNS) when translating the domain name in a human-readable URL into an IP address. [4 marks]
     3. State two differences between an IPv4 address and an IPv6 address, and give an example of each. [4 marks]
     4. Explain the difference between the Internet and the World Wide Web. [2 marks]
 4. Protocol stacks and applications

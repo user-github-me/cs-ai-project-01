@@ -10,15 +10,15 @@ The repository is **public**, as requested for the professor’s submitted link.
 
 ## Current Stage 2 materials
 
-The chapter files in `content/` have been restored at Nazif’s request. The study guide, Test Bank, slides, videos and published packages remain the previously generated editions and may differ from the restored source. See [what was reverted](project-log/CHAPTER_ROLLBACK.md).
+Markdown V2.0 (23 November 2026): each `content/chapter-0N/draft.md` now holds the complete chapter text of Study Guide V2, with checked answers in `solutions.md`. The team's learning outcomes, key terms, exercises and AI-use files are unchanged. The earlier rollback of the AI-expanded chapter files is recorded in [CHAPTER_ROLLBACK.md](project-log/CHAPTER_ROLLBACK.md).
 
 | Material | Open here | Contents |
 | --- | --- | --- |
-| Chapter source | [Original chapter files](content/) | Team versions restored before the Stage 2 rewrite; Safa’s newer chapter restorations are preserved. |
-| Study guide | [Complete PDF](assets/study-guide/BlueImpulse_Study_Guide.pdf) | 123 pages; original artwork and teaching sequence, guided missions and feedback. |
+| Chapter content (Markdown V2.0) | [Module overview](content/README.md) · [chapter folders](content/) · [references](content/references.md) | Six complete chapters: explanations, worked examples, diagrams, 159 Pause & Try activities, Practice questions and checked answers. |
+| Study guide | [V2 PDF](assets/study-guide/v2/BlueImpulse_Study_Guide_V2.pdf) · [V1 PDF](assets/study-guide/BlueImpulse_Study_Guide.pdf) | V2: redesigned 209-page guide with the same text as the Markdown chapters, applying the team's revision notes. V1: the earlier 123-page edition. |
 | Test Bank | [Editable Word](assets/study-guide/BlueImpulse_Stage2_TestBank_V1.docx) · [PDF](assets/study-guide/BlueImpulse_Stage2_TestBank_V1.pdf) | 24 True/False, 24 single-choice and six open-response questions, with explained answers. |
 | Teaching slides | [PPTX and supporting materials](assets/presentations/stage2-teaching/README.md) | 63 editable slides across all six chapters, native presenter notes and 15 audience tasks. |
-| Tutorials | [Videos, PDFs and scripts](assets/tutorials/stage2/README.md) | Five ten-minute MP4s at 1080p/60 fps, chapter/subtopic citations, narrated demonstrations, captions, tutorial PDFs, full scripts and [clean recording copies](assets/tutorials/stage2/recording-scripts/README.md). |
+| Tutorials | [Videos, PDFs and scripts](assets/tutorials/stage2/README.md) · [Video 02, version 2](assets/tutorials/v2/README.md) | Five ten-minute MP4s at 1080p/60 fps, chapter/subtopic citations, narrated demonstrations, captions, tutorial PDFs, full scripts and [clean recording copies](assets/tutorials/stage2/recording-scripts/README.md). |
 | Runnable examples | [Python and checked outputs](assets/tutorials/stage2/supporting/README.md) | Q-learning, pipelines, network delay, message validation and a toy CPU. |
 | Interactive game | [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) · [source / ZIP / instructions](apps/roverlab/README.md) | Three playable machines and missions, hardware/network/rule checks, animated playback, scoring, local saves and offline support. |
 | Project log | [Word](project-log/BlueImpulse_Stage2_ProjectLog.docx) · [PDF](project-log/BlueImpulse_Stage2_ProjectLog.pdf) | Dated Stage 2 work, meeting evidence, AI use and contribution records. |

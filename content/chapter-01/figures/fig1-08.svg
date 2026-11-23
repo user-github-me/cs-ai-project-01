@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="627" height="254" viewBox="0 0 627 254" xmlns="http://www.w3.org/2000/svg" font-family="Avenir, 'Avenir Next', sans-serif"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#D9C9E8"/>
+<rect x="0" y="0" width="268" height="138" rx="12" fill="#466BAA"/>
+<text x="14" y="24" font-size="16" fill="#FFFFFF" text-anchor="start" font-weight="800">CPU</text>
+<rect x="150" y="8" width="108" height="24" rx="12" fill="#BDE5F9"/>
+<text x="204" y="24.5" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700">System clock</text>
+<rect x="10" y="40" width="120" height="42" rx="8" fill="#D9C9E8"/>
+<text x="70" y="66" font-size="13" fill="#2A2F5E" text-anchor="middle" font-weight="800">Control unit</text>
+<rect x="138" y="40" width="120" height="42" rx="8" fill="#D9C9E8"/>
+<text x="198" y="66" font-size="13" fill="#2A2F5E" text-anchor="middle" font-weight="800">ALU</text>
+<rect x="10" y="90" width="248" height="40" rx="8" fill="#FFFFFF"/>
+<text x="134" y="106" font-size="12" fill="#2A2F5E" text-anchor="middle" font-weight="800">Registers</text>
+<text x="134" y="122" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="400">PC · MAR · MDR · CIR · ACC</text>
+<rect x="290" y="0" width="186" height="138" rx="12" fill="#FFFFFF"/>
+<text x="383" y="22" font-size="13" fill="#466BAA" text-anchor="middle" font-weight="800">Main memory (RAM)</text>
+<rect x="300" y="32" width="42" height="21" rx="4" fill="#EAE6EE"/>
+<text x="321" y="47" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700" font-family="Menlo, monospace">100</text>
+<rect x="346" y="32" width="120" height="21" rx="4" fill="#D9C9E8"/>
+<text x="352" y="47" font-size="11.5" fill="#2A2F5E" text-anchor="start" font-weight="600" font-family="Menlo, monospace">LOAD #3</text>
+<rect x="300" y="57" width="42" height="21" rx="4" fill="#EAE6EE"/>
+<text x="321" y="72" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700" font-family="Menlo, monospace">101</text>
+<rect x="346" y="57" width="120" height="21" rx="4" fill="#D9C9E8"/>
+<text x="352" y="72" font-size="11.5" fill="#2A2F5E" text-anchor="start" font-weight="600" font-family="Menlo, monospace">ADD #4</text>
+<rect x="300" y="82" width="42" height="21" rx="4" fill="#EAE6EE"/>
+<text x="321" y="97" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700" font-family="Menlo, monospace">102</text>
+<rect x="346" y="82" width="120" height="21" rx="4" fill="#D9C9E8"/>
+<text x="352" y="97" font-size="11.5" fill="#2A2F5E" text-anchor="start" font-weight="600" font-family="Menlo, monospace">STORE 200</text>
+<rect x="300" y="107" width="42" height="21" rx="4" fill="#EAE6EE"/>
+<text x="321" y="122" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="700" font-family="Menlo, monospace">200</text>
+<rect x="346" y="107" width="120" height="21" rx="4" fill="#BDE5F9"/>
+<text x="352" y="122" font-size="11.5" fill="#2A2F5E" text-anchor="start" font-weight="600" font-family="Menlo, monospace">7</text>
+<rect x="498" y="0" width="129" height="138" rx="12" fill="#D9C9E8"/>
+<text x="562" y="26" font-size="13" fill="#2A2F5E" text-anchor="middle" font-weight="800">Input and</text>
+<text x="562" y="43" font-size="13" fill="#2A2F5E" text-anchor="middle" font-weight="800">output devices</text>
+<text x="562" y="68" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="400">keyboard</text>
+<text x="562" y="85" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="400">screen</text>
+<text x="562" y="102" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="400">disk drive</text>
+<text x="562" y="119" font-size="11.5" fill="#2A2F5E" text-anchor="middle" font-weight="400">network</text>
+<line x1="104" y1="172" x2="627" y2="172" stroke="#466BAA" stroke-width="6"/>
+<text x="0" y="170" font-size="12" fill="#2A2F5E" text-anchor="start" font-weight="800">Address bus</text>
+<text x="0" y="184" font-size="11" fill="#2A2F5E" text-anchor="start" font-weight="400" font-style="italic">one way</text>
+<line x1="104" y1="206" x2="627" y2="206" stroke="#2A2F5E" stroke-width="6"/>
+<text x="0" y="204" font-size="12" fill="#2A2F5E" text-anchor="start" font-weight="800">Data bus</text>
+<text x="0" y="218" font-size="11" fill="#2A2F5E" text-anchor="start" font-weight="400" font-style="italic">both ways</text>
+<line x1="104" y1="240" x2="627" y2="240" stroke="#DF8F9C" stroke-width="6"/>
+<text x="0" y="238" font-size="12" fill="#2A2F5E" text-anchor="start" font-weight="800">Control bus</text>
+<text x="0" y="252" font-size="11" fill="#2A2F5E" text-anchor="start" font-weight="400" font-style="italic">both ways</text>
+<line x1="150" y1="138" x2="150" y2="169" stroke="#466BAA" stroke-width="3"/>
+<polygon points="150,169 144.5,161.85 155.5,161.85" fill="#466BAA"/>
+<line x1="336" y1="138" x2="336" y2="169" stroke="#466BAA" stroke-width="3"/>
+<polygon points="336,139 330.5,146.15 341.5,146.15" fill="#466BAA"/>
+<line x1="528" y1="138" x2="528" y2="169" stroke="#466BAA" stroke-width="3"/>
+<polygon points="528,139 522.5,146.15 533.5,146.15" fill="#466BAA"/>
+<line x1="190" y1="138" x2="190" y2="203" stroke="#2A2F5E" stroke-width="3"/>
+<polygon points="190,139 184.5,146.15 195.5,146.15" fill="#2A2F5E"/>
+<polygon points="190,203 184.5,195.85 195.5,195.85" fill="#2A2F5E"/>
+<line x1="383" y1="138" x2="383" y2="203" stroke="#2A2F5E" stroke-width="3"/>
+<polygon points="383,139 377.5,146.15 388.5,146.15" fill="#2A2F5E"/>
+<polygon points="383,203 377.5,195.85 388.5,195.85" fill="#2A2F5E"/>
+<line x1="562" y1="138" x2="562" y2="203" stroke="#2A2F5E" stroke-width="3"/>
+<polygon points="562,139 556.5,146.15 567.5,146.15" fill="#2A2F5E"/>
+<polygon points="562,203 556.5,195.85 567.5,195.85" fill="#2A2F5E"/>
+<line x1="230" y1="138" x2="230" y2="237" stroke="#DF8F9C" stroke-width="3"/>
+<polygon points="230,139 224.5,146.15 235.5,146.15" fill="#DF8F9C"/>
+<polygon points="230,237 224.5,229.85 235.5,229.85" fill="#DF8F9C"/>
+<line x1="430" y1="138" x2="430" y2="237" stroke="#DF8F9C" stroke-width="3"/>
+<polygon points="430,139 424.5,146.15 435.5,146.15" fill="#DF8F9C"/>
+<polygon points="430,237 424.5,229.85 435.5,229.85" fill="#DF8F9C"/>
+<line x1="596" y1="138" x2="596" y2="237" stroke="#DF8F9C" stroke-width="3"/>
+<polygon points="596,139 590.5,146.15 601.5,146.15" fill="#DF8F9C"/>
+<polygon points="596,237 590.5,229.85 601.5,229.85" fill="#DF8F9C"/>
+</svg>

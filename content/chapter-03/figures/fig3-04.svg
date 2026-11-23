@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="170" viewBox="0 0 600 170" xmlns="http://www.w3.org/2000/svg" font-family="Avenir, sans-serif" font-size="12"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#77E0F5"/>
+<rect width="600" height="170" rx="10" fill="#FFFFFF"/>
+<g fill="#0B3B57" text-anchor="middle" font-size="11.5"><text x="68" y="15" text-anchor="end">cycle</text><text x="104" y="15">1</text><text x="160" y="15">2</text><text x="216" y="15">3</text><text x="272" y="15">4</text><text x="328" y="15">5</text><text x="384" y="15">6</text><text x="440" y="15">7</text><text x="496" y="15">8</text><text x="552" y="15">9</text></g>
+<g fill="#0B3B57" font-weight="800" text-anchor="end"><text x="68" y="39">Instr 1</text><text x="68" y="68">Instr 2</text><text x="68" y="97">Instr 3</text><text x="68" y="126">Instr 4</text><text x="68" y="155">Instr 5</text></g>
+<g font-weight="800" text-anchor="middle">
+<rect x="77" y="22" width="54" height="25" rx="5" fill="#BDE5F9"/><text x="104" y="39" fill="#0B3B57">IF</text>
+<rect x="133" y="22" width="54" height="25" rx="5" fill="#77E0F5"/><text x="160" y="39" fill="#0B3B57">ID</text>
+<rect x="189" y="22" width="54" height="25" rx="5" fill="#4FCADD"/><text x="216" y="39" fill="#0B3B57">OF</text>
+<rect x="245" y="22" width="54" height="25" rx="5" fill="#2CABBE"/><text x="272" y="39" fill="#FFFFFF">IE</text>
+<rect x="301" y="22" width="54" height="25" rx="5" fill="#0C5E86"/><text x="328" y="39" fill="#FFFFFF">WB</text>
+<rect x="133" y="51" width="54" height="25" rx="5" fill="#BDE5F9"/><text x="160" y="68" fill="#0B3B57">IF</text>
+<rect x="189" y="51" width="54" height="25" rx="5" fill="#77E0F5"/><text x="216" y="68" fill="#0B3B57">ID</text>
+<rect x="245" y="51" width="54" height="25" rx="5" fill="#4FCADD"/><text x="272" y="68" fill="#0B3B57">OF</text>
+<rect x="301" y="51" width="54" height="25" rx="5" fill="#2CABBE"/><text x="328" y="68" fill="#FFFFFF">IE</text>
+<rect x="357" y="51" width="54" height="25" rx="5" fill="#0C5E86"/><text x="384" y="68" fill="#FFFFFF">WB</text>
+<rect x="189" y="80" width="54" height="25" rx="5" fill="#BDE5F9"/><text x="216" y="97" fill="#0B3B57">IF</text>
+<rect x="245" y="80" width="54" height="25" rx="5" fill="#77E0F5"/><text x="272" y="97" fill="#0B3B57">ID</text>
+<rect x="301" y="80" width="54" height="25" rx="5" fill="#4FCADD"/><text x="328" y="97" fill="#0B3B57">OF</text>
+<rect x="357" y="80" width="54" height="25" rx="5" fill="#2CABBE"/><text x="384" y="97" fill="#FFFFFF">IE</text>
+<rect x="413" y="80" width="54" height="25" rx="5" fill="#0C5E86"/><text x="440" y="97" fill="#FFFFFF">WB</text>
+<rect x="245" y="109" width="54" height="25" rx="5" fill="#BDE5F9"/><text x="272" y="126" fill="#0B3B57">IF</text>
+<rect x="301" y="109" width="54" height="25" rx="5" fill="#77E0F5"/><text x="328" y="126" fill="#0B3B57">ID</text>
+<rect x="357" y="109" width="54" height="25" rx="5" fill="#4FCADD"/><text x="384" y="126" fill="#0B3B57">OF</text>
+<rect x="413" y="109" width="54" height="25" rx="5" fill="#2CABBE"/><text x="440" y="126" fill="#FFFFFF">IE</text>
+<rect x="469" y="109" width="54" height="25" rx="5" fill="#0C5E86"/><text x="496" y="126" fill="#FFFFFF">WB</text>
+<rect x="301" y="138" width="54" height="25" rx="5" fill="#BDE5F9"/><text x="328" y="155" fill="#0B3B57">IF</text>
+<rect x="357" y="138" width="54" height="25" rx="5" fill="#77E0F5"/><text x="384" y="155" fill="#0B3B57">ID</text>
+<rect x="413" y="138" width="54" height="25" rx="5" fill="#4FCADD"/><text x="440" y="155" fill="#0B3B57">OF</text>
+<rect x="469" y="138" width="54" height="25" rx="5" fill="#2CABBE"/><text x="496" y="155" fill="#FFFFFF">IE</text>
+<rect x="525" y="138" width="54" height="25" rx="5" fill="#0C5E86"/><text x="552" y="155" fill="#FFFFFF">WB</text>
+</g>
+<rect x="298" y="18" width="60" height="148" rx="6" fill="none" stroke="#0B3B57" stroke-width="2" stroke-dasharray="5 4"/>
+</svg>

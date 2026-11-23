@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="636" height="90" viewBox="0 0 636 90" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#F6F6F5"/>
+<g text-anchor="middle">
+<rect x="7" y="7" width="150" height="76" rx="14" fill="#CDCDCD"/><rect x="4" y="4" width="150" height="76" rx="14" fill="#868686"/><rect x="0" y="0" width="150" height="76" rx="14" fill="#042D62"/>
+<text x="75" y="29" font-size="16" font-weight="800" fill="#FFFFFF" letter-spacing="1">THERMAL</text><text x="75" y="49" font-size="12" fill="#AFC6F0">heat must escape</text><text x="75" y="65" font-size="12" fill="#AFC6F0">or the chip slows</text>
+<rect x="167" y="7" width="150" height="76" rx="14" fill="#CDCDCD"/><rect x="164" y="4" width="150" height="76" rx="14" fill="#868686"/><rect x="160" y="0" width="150" height="76" rx="14" fill="#042D62"/>
+<text x="235" y="29" font-size="16" font-weight="800" fill="#FFFFFF" letter-spacing="1">POWER</text><text x="235" y="49" font-size="12" fill="#AFC6F0">battery budget</text><text x="235" y="65" font-size="12" fill="#AFC6F0">and energy draw</text>
+<rect x="327" y="7" width="150" height="76" rx="14" fill="#CDCDCD"/><rect x="324" y="4" width="150" height="76" rx="14" fill="#868686"/><rect x="320" y="0" width="150" height="76" rx="14" fill="#042D62"/>
+<text x="395" y="29" font-size="16" font-weight="800" fill="#FFFFFF" letter-spacing="1">MEMORY</text><text x="395" y="49" font-size="12" fill="#AFC6F0">RAM boundaries</text><text x="395" y="65" font-size="12" fill="#AFC6F0">and flash storage</text>
+<rect x="487" y="7" width="150" height="76" rx="14" fill="#CDCDCD"/><rect x="484" y="4" width="150" height="76" rx="14" fill="#868686"/><rect x="480" y="0" width="150" height="76" rx="14" fill="#042D62"/>
+<text x="555" y="29" font-size="16" font-weight="800" fill="#FFFFFF" letter-spacing="1">SPEED</text><text x="555" y="49" font-size="12" fill="#AFC6F0">clock rate and</text><text x="555" y="65" font-size="12" fill="#AFC6F0">operations per second</text>
+</g>
+</svg>

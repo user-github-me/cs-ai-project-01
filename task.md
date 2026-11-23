@@ -113,3 +113,13 @@ See [submission index](submissions/stage2/README.md) and [requirements/readiness
 - [x] Preserve the generated guide, Test Bank, slides, videos, recording scripts, game and released packages.
 
 [Detailed changes and preserved teammate work](project-log/CHAPTER_ROLLBACK.md).
+
+## Markdown V2.0 completion — 23 November 2026
+
+- [x] Fill the six placeholder `content/chapter-0N/draft.md` files with the complete chapter text (exported from Study Guide V2, which was built from the team's chapter outlines and revision notes). The team's `Learning_Outcomes`, `Key_Terms`, `exercises` and `UseOfAI` files are unchanged.
+- [x] Add checked answers in `content/chapter-0N/solutions.md` for every Pause & Try and Practice question.
+- [x] Replace the placeholder chapter READMEs with an overview, subtopic links, a file guide and the resource mapping.
+- [x] Add the module overview (`content/README.md`) and sources (`content/references.md`).
+- [x] Render the complete content PDF and build `BlueImpulse_Stage2_Markdown_V2.zip` with the revised submission report (`submissions/stage2/markdown/`).
+- [ ] A teammate who did not write a chapter follows one explanation and one activity from it as a learner, and records what they understood, where they were confused and what was changed (project and personal logs).
+- [ ] Record the full citation of the coursebook credited in the chapter outlines and the original sources of the supplied photographs (`content/references.md`, "Known attribution gaps").

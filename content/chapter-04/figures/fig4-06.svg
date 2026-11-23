@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="160" viewBox="0 0 300 160" font-family="Avenir, 'Avenir Next', sans-serif" role="img" aria-label="Laptops A and B cannot hear each other but both reach the access point"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#D6E8F9"/>
+<defs><marker id="c4hidA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ED4D82"/></marker><marker id="c4hidB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2EB8FF"/></marker></defs>
+<path d="M38,92 Q150,10 262,92" fill="none" stroke="#163A73" stroke-width="2" stroke-dasharray="5 4"/>
+<g stroke="#ED4D82" stroke-width="3"><line x1="143" y1="44" x2="157" y2="58"/><line x1="157" y1="44" x2="143" y2="58"/></g>
+<text x="150" y="33" font-size="11.5" font-weight="800" fill="#163A73" text-anchor="middle">can't hear each other</text>
+<line x1="68" y1="111" x2="114" y2="111" stroke="#ED4D82" stroke-width="3" marker-end="url(#c4hidA)"/>
+<line x1="232" y1="111" x2="186" y2="111" stroke="#2EB8FF" stroke-width="3" marker-end="url(#c4hidB)"/>
+<rect x="8" y="96" width="60" height="30" rx="5" fill="#216ABF"/><rect x="120" y="96" width="60" height="30" rx="5" fill="#163A73"/><rect x="232" y="96" width="60" height="30" rx="5" fill="#216ABF"/>
+<g font-size="11.5" font-weight="800" fill="#fff" text-anchor="middle"><text x="38" y="115">Laptop A</text><text x="150" y="115">AP</text><text x="262" y="115">Laptop B</text></g>
+<text x="150" y="148" font-size="11.5" font-weight="800" fill="#ED4D82" text-anchor="middle">both frames clash at the AP</text>
+</svg>
