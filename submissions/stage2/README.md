@@ -6,7 +6,7 @@ Use these exact formats for the course submission. The repository is the source 
 
 | Assignment | Required item | Local source |
 | --- | --- | --- |
-| Markdown | `BlueImpulse_Stage2_Markdown_V2.zip` | [Download ZIP](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_Markdown_V2.zip) · [contents](markdown/) |
+| Markdown | `BlueImpulse_Stage2_Markdown_V2.zip` | V2.0 package of 23 November 2026 (snapshot `94ceecd`): [submission report](markdown/BlueImpulse_Stage2_Markdown_Submission_Report.pdf) · [Word](markdown/BlueImpulse_Stage2_Markdown_Submission_Report.docx) · [complete content PDF](markdown/BlueImpulse_Stage2_Markdown_V2_Content.pdf). The ZIP is built by [build_package.py](markdown/build_package.py) for upload to the course platform and is not stored in Git. The 7 November package is [archived](markdown/archive-2026-11-07-pre-rollback/README.md). |
 | Study guide and Test Bank | `BlueImpulse_Stage2_StudyGuide_TestBank_V1.zip` | [Download ZIP](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_StudyGuide_TestBank_V1.zip) · [contents](study-guide/) |
 | Teaching slides | `BlueImpulse_Stage2_PPT_V1.zip` | [Download ZIP](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_PPT_V1.zip) · [deck and notes](../../assets/presentations/stage2-teaching/README.md) |
 | Tutorials | Five individual `BlueImpulse_Video0N_Topic.mp4` files, each at most 250 MB, plus `BlueImpulse_Stage2_VideoGuide.pdf` | [Tutorial outputs](../../assets/tutorials/stage2/README.md) |
