@@ -13,11 +13,6 @@ Use these exact formats for the course submission. The repository is the source 
 | Project log | `BlueImpulse_Stage2_ProjectLog.docx` or `.pdf` | [Word](../../project-log/BlueImpulse_Stage2_ProjectLog.docx) · [PDF](../../project-log/BlueImpulse_Stage2_ProjectLog.pdf) |
 | Combined personal logs | `BlueImpulse_Stage2_PersonalLogs.docx` or `.pdf` | [Word](../../private-submissions/stage2/BlueImpulse_Stage2_PersonalLogs.docx) · [PDF](../../private-submissions/stage2/BlueImpulse_Stage2_PersonalLogs.pdf) |
 
-All five tutorials are 10:00 at 1920×1080 and 60 fps; their sizes are 45.85–50.06 MB. Open the tutorial index for each MP4, tutorial PDF, complete script/teaching outline, captions and learning examples.
-
-The [Stage 2 release](https://github.com/user-github-me/cs-ai-project-01/releases/tag/blue-impulse-stage2-2026-11-07) also provides a [tutorial-documents ZIP](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_Tutorial_Documents.zip) and a [complete tutorial-output ZIP](https://github.com/user-github-me/cs-ai-project-01/releases/download/blue-impulse-stage2-2026-11-07/BlueImpulse_Stage2_Tutorial_Package.zip). The latter contains all five videos and the study guide for convenient downloading; the course requires individual MP4 submissions. ZIPs include member checksums and contain no video production project. Generated ZIPs are release downloads rather than duplicate Git blobs.
-
-Video HTML, HyperFrames/renderer code, raw audio and render caches stay local at Nazif’s request. The public files are the finished learning materials and compact verification records.
 
 ## Interactive companion
 
