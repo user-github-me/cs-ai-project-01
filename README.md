@@ -4,7 +4,7 @@ A six-chapter learning module for the CS & AI course. Start with the chapter mat
 
 The repository is **public**, as requested for the professor’s submitted link. The current Stage 2 materials are listed below. Earlier presentation drafts and first-edition tutorials remain available as historical work.
 
-**Play [ROVERLAB: Build, Connect, Train](https://roverlab-blue-impulse.vercel.app)** — assemble a machine, connect its network, train its responses and test a mission. The game runs on Vercel's Hobby plan, with GitHub updates deploying automatically. [Game source and setup](apps/roverlab/README.md) · [guided learning activity](assets/tutorials/stage2/supporting/ROVERLAB_Activity.md).
+**Play [ROVERLAB: Build, Connect, Train](https://roverlab-blue-impulse.vercel.app)** — assemble a machine, connect its network, train its responses and test a mission. The game runs on Vercel's Hobby plan, with GitHub updates deploying automatically. [Game source and setup](apps/roverlab/README.md) · [guided learning activity](submissions/stage2/study-guide/supporting/ROVERLAB_Activity.md).
 
 **Access from China:** connect to your VPN before opening the hosted game; it is needed on our university network. [Brief game tutorial](apps/roverlab/TUTORIAL.md) · [one-page PDF for submission](apps/roverlab/BlueImpulse_ROVERLAB_Quick_Start.pdf).
 
@@ -18,8 +18,8 @@ Markdown V2.0 (23 November 2026): each `content/chapter-0N/draft.md` now holds t
 | Study guide | [V2 PDF](assets/study-guide/v2/BlueImpulse_Study_Guide_V2.pdf) · [V1 PDF](assets/study-guide/BlueImpulse_Study_Guide.pdf) | V2: redesigned 209-page guide with the same text as the Markdown chapters, applying the team's revision notes. V1: the earlier 123-page edition. |
 | Test Bank | [Editable Word](assets/study-guide/BlueImpulse_Stage2_TestBank_V1.docx) · [PDF](assets/study-guide/BlueImpulse_Stage2_TestBank_V1.pdf) | 24 True/False, 24 single-choice and six open-response questions, with explained answers. |
 | Teaching slides | [Sojourner presentation](assets/presentations/final-presentation/BlueImpulse_Stage2_Sojourner.pptx) · [presenter notes](assets/presentations/final-presentation/ScriptPPT.pdf) | The current Stage 2 classroom presentation (Sojourner) with its presenter notes. |
-| Tutorials | [Videos, PDFs and scripts](assets/tutorials/stage2/README.md) · [Video 02, version 2](assets/tutorials/v2/README.md) | Five ten-minute MP4s at 1080p/60 fps, chapter/subtopic citations, narrated demonstrations, captions, tutorial PDFs, full scripts and [clean recording copies](assets/tutorials/stage2/recording-scripts/README.md). |
-| Runnable examples | [Python and checked outputs](assets/tutorials/stage2/supporting/README.md) | Q-learning, pipelines, network delay, message validation and a toy CPU. |
+| Tutorials | [Video 01 and Video 02](assets/tutorials/README.md) | Two narrated 1080p videos: Basic reinforcement learning (10:00) and How hardware enables AI (6:42). |
+| Runnable examples | [Python and checked outputs](assets/tutorials/supporting/README.md) | Q-learning, pipelines, network delay, message validation and a toy CPU. |
 | Interactive game | [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) · [source / ZIP / instructions](apps/roverlab/README.md) | Three playable machines and missions, hardware/network/rule checks, animated playback, scoring, local saves and offline support. |
 | Project log | [Word](submissions/stage2/BlueImpulse_Stage2_ProjectLog.docx) | Dated Stage 2 work, meeting evidence, AI use and contribution records. |
 | Personal logs | [Individual Markdown](Personal_logs/) · [combined Word](submissions/stage2/BlueImpulse_Stage2_PersonalLogs.docx) | Authentic available entries; missing member writing is identified. |
@@ -38,9 +38,9 @@ Predict an outcome, attempt the activity, compare your reasoning with the explai
 
 ## Review and submission status
 
-[task.md](task.md) records completed production work and remaining tasks. The [requirements audit](project-log/REQUIREMENTS_AND_READINESS.md) distinguishes verified files from evidence that must come from the team: four members’ Stage 2 personal entries, contribution scores, actual learner/teammate review, rehearsal and course-platform submission. Those events have not been invented or marked complete.
+[task.md](task.md) records completed production work and remaining tasks.
 
-The current source of assignment requirements is [Stage2_All_Instructions.md](rules/Stage2_All_Instructions.md). Later user instructions govern the revised tutorial style and the repository’s public visibility. The supplied assignment’s private-personal-log rule and the user’s public-access exception are recorded in the project log.
+Later user instructions govern the revised tutorial style and the repository’s public visibility. The supplied assignment’s private-personal-log rule and the user’s public-access exception are recorded in the project log.
 
 ### Members
 

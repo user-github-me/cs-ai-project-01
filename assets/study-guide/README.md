@@ -17,11 +17,11 @@ The active learning and feedback section begins on page 97. Bookmarks navigate e
 
 The original cover and all six chapter dividers are preserved as PDF pages without overlays. The original art's printed labels identify its cover on page 16 and dividers on pages 17–22. Existing window panels, diagrams and photographs retain the supplied artwork and font brief. The user-created `BlueImpulse_Study_Guide_compressed.pdf` has not been modified by this revision.
 
-**Interactive companion:** [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) · [guided experiment](../../assets/tutorials/stage2/supporting/ROVERLAB_Activity.md) · [source and offline setup](../../apps/roverlab/README.md). The complete guide includes the experiment and paper alternative.
+**Interactive companion:** [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) · [guided experiment](../../submissions/stage2/study-guide/supporting/ROVERLAB_Activity.md) · [source and offline setup](../../apps/roverlab/README.md). The complete guide includes the experiment and paper alternative.
 
 ## Source, review and remaining human evidence
 
-The [chapter source](../../content/) was restored to the team’s earlier versions at Nazif’s request. This PDF and the [retained Markdown submission snapshot](../../submissions/stage2/markdown/source-snapshot/content/README.md) still represent the expanded edition generated before that rollback. Their content can differ from the current chapter files. [Rollback details](../../project-log/CHAPTER_ROLLBACK.md) record the scope; independent human review remains pending.
+The [chapter source](../../content/) was restored to the team’s earlier versions at Nazif’s request. This PDF and the [retained Markdown submission snapshot](../../submissions/stage2/markdown/archive-2026-11-07-pre-rollback/source-snapshot/content/README.md) still represent the expanded edition generated before that rollback. Their content can differ from the current chapter files. [Rollback details](../../project-log/CHAPTER_ROLLBACK.md) record the scope; independent human review remains pending.
 
 The six supplied chapter PDFs define scope. Their notes credit *Cambridge International AS & A Level Computer Science* but do not identify a full edition or bibliography; this provenance limitation is explicit. Six traceable references and optional learning resources support the revision, including Sutton and Barto, Nand to Tetris, IETF RFCs, NIST and Unicode. Each resource has a relevant section, a task, limitations and an offline alternative. User-supplied artwork retains its own third-party rights.
 
