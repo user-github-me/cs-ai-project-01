@@ -21,7 +21,7 @@ Markdown V2.0 (23 November 2026): each `content/chapter-0N/draft.md` now holds t
 | Tutorials | [Videos, PDFs and scripts](assets/tutorials/stage2/README.md) · [Video 02, version 2](assets/tutorials/v2/README.md) | Five ten-minute MP4s at 1080p/60 fps, chapter/subtopic citations, narrated demonstrations, captions, tutorial PDFs, full scripts and [clean recording copies](assets/tutorials/stage2/recording-scripts/README.md). |
 | Runnable examples | [Python and checked outputs](assets/tutorials/stage2/supporting/README.md) | Q-learning, pipelines, network delay, message validation and a toy CPU. |
 | Interactive game | [Play ROVERLAB](https://roverlab-blue-impulse.vercel.app) · [source / ZIP / instructions](apps/roverlab/README.md) | Three playable machines and missions, hardware/network/rule checks, animated playback, scoring, local saves and offline support. |
-| Project log | [Word](project-log/BlueImpulse_Stage2_ProjectLog.docx) · [PDF](project-log/BlueImpulse_Stage2_ProjectLog.pdf) | Dated Stage 2 work, meeting evidence, AI use and contribution records. |
+| Project log | [Word](submissions/stage2/BlueImpulse_Stage2_ProjectLog.docx) | Dated Stage 2 work, meeting evidence, AI use and contribution records. |
 | Personal logs | [Individual Markdown](Personal_logs/) · [combined Word](submissions/stage2/BlueImpulse_Stage2_PersonalLogs.docx) | Authentic available entries; missing member writing is identified. |
 | Submission files | [Stage 2 index](submissions/stage2/README.md) | Exact assignment filenames, downloadable packages and remaining human steps. |
 
