@@ -7,9 +7,9 @@
 | Cover · Meet the team (supplied, unchanged) | 
 | About this guide · Contents | 
 | Ch. 1 The Fundamentals (Dawn) | 
-| Ch. 2 Behaviorism & Behaviorist AI (Morning) |
-| Ch. 3 Hardware (Midday) | 
-| Ch. 4 Networking (Afternoon) | 
+| Ch. 2 Hardware (Morning) |
+| Ch. 3  Networking (Midday) | 
+| Ch. 4 Behaviorism & Behaviorist AI (Afternoon) | 
 | Ch. 5 Applications (Dusk) | 
 | Ch. 6 Strengths & Limitations (Midnight) | 
 | Appendix · RoverLab: Build, Connect, Train |
