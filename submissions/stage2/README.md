@@ -24,4 +24,4 @@ Use these exact formats for the course submission. The repository is the source 
 
 Complete the four missing members’ Stage 2 logs and actual learning reflections, agree contribution scores, record teammate/learner reviews, rehearse, and submit the required files through the course platform. The documents explicitly flag these missing human records. Do not convert an AI check into a claimed student experience.
 
-Nazif explicitly requested the complete repository remain public for professor access. The folder named `private-submissions/` is historical naming, not access control; its linked documents are part of the public repository as requested.
+Nazif explicitly requested the complete repository remain public for professor access.
