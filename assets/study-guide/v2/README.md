@@ -2,17 +2,17 @@
 
 **[BlueImpulse_Study_Guide_V2.pdf](BlueImpulse_Study_Guide_V2.pdf)** — 209 pages, A4, with bookmarks for every chapter and subtopic.
 
-| Part | Pages |
-| --- | --- |
-| Cover · Meet the team (supplied, unchanged) | 1–5 |
-| About this guide · Contents | 6–8 |
-| Ch. 1 The Fundamentals (Dawn) | 9–41 |
-| Ch. 2 Behaviorism & Behaviorist AI (Morning) | 42–71 |
-| Ch. 3 Hardware (Midday) | 72–106 |
-| Ch. 4 Networking (Afternoon) | 107–153 |
-| Ch. 5 Applications (Dusk) | 154–176 |
-| Ch. 6 Strengths & Limitations (Midnight) | 177–204 |
-| Appendix · RoverLab: Build, Connect, Train | 205–209 |
+| Part |
+| --- | 
+| Cover · Meet the team (supplied, unchanged) | 
+| About this guide · Contents | 
+| Ch. 1 The Fundamentals (Dawn) | 
+| Ch. 2 Behaviorism & Behaviorist AI (Morning) |
+| Ch. 3 Hardware (Midday) | 
+| Ch. 4 Networking (Afternoon) | 
+| Ch. 5 Applications (Dusk) | 
+| Ch. 6 Strengths & Limitations (Midnight) | 
+| Appendix · RoverLab: Build, Connect, Train |
 
 Each chapter: supplied divider → learning goals (verbatim) → key terms → numbered subtopics, every content page ending with a Pause & Try (no solutions printed) → Practice. The design follows the team's art brief: chapter palettes, window boxes / folder boxes / diagram pills recreated with colours sampled from `study guide art.pdf` pages 4–8, page backgrounds from the page-28 photos at ~30% over the chapter colour with page-12 depth shapes and page-11 airliners, DIN Condensed headings, Smiley Sans box headings and Avenir text. The content applies the team's revision notes (`STUDY GUIDE FIX FIX.md`, `Chapter3Improvements.docx`).
 
